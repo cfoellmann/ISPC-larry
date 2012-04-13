@@ -1,0 +1,38 @@
+ +--------------------------------------------------------------------------+
+ | ispc-larry for ISPConfig 3.0.4.x                                         |
+ +--------------------------------------------------------------------------+ 
+
+ 1. About
+    The aim of this project is the conversion of the new 
+    Roundcube Webmail Skin 'Larry' into a theme for ISPConfig
+
+ 2. Resources/Basis
+    ispc-larry is a direct derivate of 
+        Roundcube Webmail Skin 'Larry' by FLINT / Büro für Gestaltung, 
+        Bern, Switzerland / http://bueroflint.com
+    ispc-larry may be using structures, elements and code from the ISPConfig
+    default theme created by Martin Henne (red-ray.de) which is based on:
+        Templates: http://www.yaml.de
+        Web-Forms: http://www.sprawsm.com/uni-form/
+        Icons: http://www.pinvoke.com and http://www.randomjabber.com/static/sizcons
+        Know-How: http://particletree.com/features/rediscovering-the-button-element
+
+    ispc-larry-specific resources:
+        TBD
+
+ 3. Roadmap
+    v0.1    - First usable release of ispc-larry for ISPConfig 3.0.4.4; 
+              Date: TBD
+    v0.2    - TBD; 
+              Date: TBD
+
+    v1.0    - Stable release; 
+              Date: TBD         
+
+ 4. Developers
+    Christian Foellmann
+        Github: https://github.com/cfoellmann
+        SourceForge: https://sourceforge.net/users/cfoellmann
+        Mail: foellmann@foe-services.de
+
+    Contributations are always welcome
