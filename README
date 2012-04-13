@@ -27,9 +27,14 @@
               Date: TBD
 
     v1.0    - Stable release; 
-              Date: TBD         
+              Date: TBD 
 
- 4. Developers
+ 4. Limitations
+    v0.1    - Tested only in Firefox (newest Version, currently 11.0)
+            - non "responsive" design -> not suitable for different platforms
+              like smartphones or tablets
+
+ 5. Developers
     Christian Foellmann
         Github: https://github.com/cfoellmann
         SourceForge: https://sourceforge.net/users/cfoellmann
