@@ -33,6 +33,7 @@
     v0.1    - Tested only in Firefox (newest Version, currently 11.0)
             - non "responsive" design -> not suitable for different platforms
               like smartphones or tablets
+    v1.0    - no IE6 support, http://www.ie6countdown.com/
 
  5. Developers
     Christian Foellmann
