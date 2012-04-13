@@ -6,7 +6,7 @@ body {
 	font-family: "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
 	font-size: 11px;
 	color: #333;
-	background: url(images/linen.jpg) repeat #d1d5d8;
+	background: url(images/bg_linen.jpg) repeat #d1d5d8;
 	margin: 0;
 }
 
@@ -483,7 +483,7 @@ a.iconlink.upload {
 
 #topline {
 	height: 18px;
-	background: url(images/linen_header.jpg) repeat #666;
+	background: url(images/bg_linen_dark.jpg) repeat #666;
 	border-bottom: 1px solid #4f4f4f;
 	padding: 2px 0 2px 10px;
 	color: #aaa;

@@ -1,63 +1,13 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-    <title><tmpl_var name="app_title"> <tmpl_var name="app_version"></title>
-    <meta http-equiv="Content-Type" content="text/html; charset=<tmpl_var name="html_content_encoding">"/>
-	<meta http-equiv="X-UA-Compatible" content="IE=8"/>
-    <link href="themes/default/css/central.css" rel="stylesheet" type="text/css"/>
-    <!--[if lte IE 7]>
-	    <link href="themes/default/css/patches/central.css" rel="stylesheet" type="text/css" />
-    <![endif]-->
-    <!--[if lte ie 6]>
-      <style type="text/css" media="screen">
-        /*
-        Move these to your IE specific stylesheet if possible
-        */
-        .uniForm,
-        .uniForm fieldset,
-        .uniForm .ctrlHolder,
-        .uniForm .formHint,
-        .uniForm .buttonHolder, 
-        .uniForm .ctrlHolder .multiField,
-        .uniForm .inlineLabel{ zoom:1; }
+<!DOCTYPE html>
+<html dir="ltr" lang="de-DE">
+    <head>
+        <meta charset="<tmpl_var name="html_content_encoding">" />
+        <title><tmpl_var name="app_title"> <tmpl_var name="app_version"></title>
+        <link rel="shortcut icon" href="/themes/ispc-larry/images/favicon.ico" type="image/x-icon" />
+        <link href="themes/ispc-larry/css/central.css" rel="stylesheet" type="text/css"/>
 
-        .uniForm .inlineLabels label, .uniForm .inlineLabels .label,
-        .uniForm .blockLabels label, .uniForm .blockLabels .label,
-        .uniForm .inlineLabel span{ padding-bottom: .2em; }
-
-        .uniForm .inlineLabel input,
-        .uniForm .inlineLabels .inlineLabel input,
-        .uniForm .blockLabels .inlineLabel input{ margin-top: -.3em; }
-      </style>
-    <![endif]-->
-    <!--[if gt ie 6]>
-      <style type="text/css" media="screen">
-        /*
-        Move these to your IE specific stylesheet if possible
-        */
-        .uniForm,
-        .uniForm fieldset,
-        .uniForm .ctrlHolder,
-        .uniForm .formHint,
-        .uniForm .buttonHolder, 
-        .uniForm .ctrlHolder .multiField,
-        .uniForm .inlineLabel{ zoom:1; }
-
-        .uniForm .inlineLabels label, .uniForm .inlineLabels .label,
-        .uniForm .blockLabels label, .uniForm .blockLabels .label,
-        .uniForm .inlineLabel span{ padding-bottom: .2em; }
-
-        .uniForm .inlineLabel input,
-        .uniForm .inlineLabels .inlineLabel input,
-        .uniForm .blockLabels .inlineLabel input{ margin-top: -.3em; }
-      </style>
-    <![endif]-->
-	<link href="themes/default/css/screen/redmond/jquery-ui-1.8.16.custom.css" rel="stylesheet" type="text/css"/>
-	<link href="themes/default/css/screen/jquery-ui-custom.css" rel="stylesheet" type="text/css"/>
-    <link rel="shortcut icon" href="/themes/default/images/favicon.ico" />
     <script type="text/javascript" src="js/jquery-1.6.3.min.js"></script>
-	<script type="text/javascript" src="js/jquery-ui-1.8.16.custom.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.8.16.custom.min.js"></script>
     <script type="text/javascript" src="js/scrigo.js.php"></script>
     <script type="text/javascript" src="js/uni-form/uni-form.jquery.js"></script>
 	<script language="JavaScript" type="text/javascript">
@@ -96,29 +46,58 @@
 	</script>
 </head>
 <body>
+    <header>
+        <div id="topline">
+            <div class="topleft">
+                <!-- | <a href="#" onclick="capp('help')">Help</a> | <a href="#">Imprint</a>-->
+            </div>
+            <div class="topright">
+                <tmpl_if name="cpuser">
+                    <span class="username"><a href="#logout" onclick="loadContent('login/logout.php');"><tmpl_var name="logout_txt"> <tmpl_var format="strtoupper" name="cpuser"></a></span>
+		</tmpl_if>
+            </div>
+        </div>
+    
+        <div id="topnav">
+            <div id="taskbar" class="topright">
+                <!-- Some menu elements possible -->
+            </div>
+            <h1 id="ir-HeaderLogo" class="swap"><span>ISPConfig 3</span></h1>
+                <span>hosting control panel</span>
+        </div>
+    
+        <br style="clear:both" />
+    </header>
+    
+    <div id="mainscreen" class="offset">
+    
+    <div id="settings-sections" class="uibox listbox">
+        <h2 class="boxtitle">Main Menu</h2>
+        <div id="settings-tabs" class="scroller">
+        
+            
+            
+        </div>
+                
+    </div>    
+        
+    </div><!-- end: #main -->
+    <footer>
+            Powered by <a href="<tmpl_var name="app_link">" target="_blank"><tmpl_var name="app_title"></a>
+    </footer><!-- end: footer -->
+    
+    
     <div id="page_margins">
         <div id="page">
-            <div id="header">
-                <div id="topsubnav">
-                    <!-- start: skip link navigation -->
-                    <a class="skip" href="#navigation" title="skip link">Skip to the navigation</a><span class="hideme">.</span>
-                    <a class="skip" href="#content" title="skip link">Skip to the content</a><span class="hideme">.</span>
-                    <!-- end: skip link navigation -->
-			        <tmpl_if name="cpuser">
-                    <span><a href="#logout" onclick="loadContent('login/logout.php');"><tmpl_var name="logout_txt"> <tmpl_var format="strtoupper" name="cpuser"></a><!-- | <a href="#" onclick="capp('help')">Help</a> | <a href="#">Imprint</a>--></span>
-			        </tmpl_if>
-                </div>
-                <h1 id="ir-HeaderLogo" class="swap"><span>ISPConfig 3</span></h1>
-                <span>hosting control panel</span>
-            </div>
+
             <!-- begin: main navigation #nav -->
-            <div id="nav">
+            <nav>
                 <a id="navigation" name="navigation"></a>
                 <!-- skiplink anchor: navigation -->
                 <div id="nav_main">
                     <div id="topNav">&nbsp;</div>
                 </div>
-            </div>
+            <nav>
             <!-- end: main navigation -->
             <!-- begin: main content area #main -->
             <div id="main">
@@ -143,11 +122,9 @@
                 </div>
                 <!-- end: #col3 -->
             </div>
-            <!-- end: #main -->
+            
             <!-- begin: #footer -->
-            <div id="footer">
-            Powered by <a href="<tmpl_var name="app_link">" target="_blank"><tmpl_var name="app_title"></a>
-            </div><!-- end: #footer -->
+            
         </div>
     </div>
 </body>
