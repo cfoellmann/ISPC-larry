@@ -1,0 +1,37 @@
+@charset "UTF-8";
+/**
+ * "Yet Another Multicolumn Layout" - (X)HTML/CSS Framework
+ *
+ * (en) IE-Patch stylesheet - ISPConfig 3: default theme
+ * (de) IE-Korrektur-Stylesheet - ISPConfig 3: default theme
+ *
+ * @copyright       Copyright 2005-2008, Dirk Jesse
+ * @license         CC-A 2.0 (http://creativecommons.org/licenses/by/2.0/),
+ *                  YAML-C (http://www.yaml.de/en/license/license-conditions.html)
+ * @link            http://www.yaml.de
+ * @package         yaml
+ * @version         3.0.6
+ * @revision        $Revision: 202 $
+ * @lastmodified    $Date: 2008-06-07 14:29:18 +0200 (Sa, 07 Jun 2008) $
+ */
+
+/* Layout-independent adjustments | Layout-unabhängige Anpassungen ----------------------------------- */
+@import url(../yaml/core/iehacks.css);
+
+/* Layout-dependent adjustments | Layout-abhängige Anpassungen --------------------------------------- */
+@media screen, projection
+{
+ /**
+  * min-width/max-width workaround for IE5.x & IE6
+  *
+  * @workaround
+  * @affected   IE 5.x/Win, IE6
+  * @css-for    IE 5.x/Win, IE6
+  * @valid      no
+  */
+
+  * html #page_margins {
+    /* Fallback if JavaScript is disabled */
+    width: 80%;
+  }
+}

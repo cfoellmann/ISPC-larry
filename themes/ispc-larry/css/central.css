@@ -1,0 +1,32 @@
+@charset "UTF-8";
+/**
+ * "Yet Another Multicolumn Layout" - (X)HTML/CSS Framework
+ *
+ * (en) central stylesheet - ISPConfig 3: default theme
+ * (de) Zentrales Stylesheet - ISPConfig 3: default theme
+ *
+ * @copyright       Copyright 2005-2008, Dirk Jesse
+ * @license         CC-A 2.0 (http://creativecommons.org/licenses/by/2.0/),
+ *                  YAML-C (http://www.yaml.de/en/license/license-conditions.html)
+ * @link            http://www.yaml.de
+ * @package         yaml
+ * @version         3.0.6
+ * @revision        $Revision: 202 $
+ * @lastmodified    $Date: 2008-06-07 14:29:18 +0200 (Sa, 07 Jun 2008) $
+ */
+
+/* import core styles | Basis-Stylesheets einbinden */
+@import url(../yaml/core/base.css);
+
+/* import screen layout | Screen-Layout einbinden */
+@import url(navigation/nav_top.css);
+@import url(navigation/nav_side.css);
+@import url(screen/basemod.css);
+@import url(screen/basemod_2col_left_seo.css);
+@import url(screen/content.css);
+@import url(screen/uni-form-generic.css);
+@import url(screen/uni-form.css);
+@import url(screen/content_ispc.css);
+
+/* import print layout | Druck-Layout einbinden */
+@import url(print/print_100.css);
