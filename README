@@ -5,6 +5,7 @@
  1. About
     The aim of this project is the conversion of the new 
     Roundcube Webmail Skin 'Larry' into a theme for ISPConfig
+    For discussions please go to http://www.howtoforge.com/forums/showthread.php?p=278359
 
  2. Resources/Basis
     ispc-larry is a direct derivate of 
@@ -20,14 +21,35 @@
     ispc-larry-specific resources:
         TBD
 
- 3. Roadmap
-    v0.1    - First usable release of ispc-larry for ISPConfig 3.0.4.4; 
-              Date: TBD
-    v0.2    - TBD; 
-              Date: TBD
+ 3. Main characteristics:
+        - HTML5
+        - Deployment via ISPC repository feature (ispc.foe-services.de/public coming soon)
+        - Look and feel of "Roundcube larry" in desktop browsers
+        - Responsive design OR native iPhone support as web-app
 
-    v1.0    - Stable release; 
-              Date: TBD 
+    Roadmap: (to be updated/changed)
+    Timeline: TBD
+    v0.1
+        - First usable release of ispc-larry for ISPConfig 3.0.4.4
+        - Firefox support (my main production browser)
+    
+    v0.2
+        - Chrome support
+        - IE9 support
+    
+    v0.3
+        - Safari support
+        - Opera support
+        - IE8, IE7 support
+
+    v1.0
+        - first stable release of ispc-larry 
+
+    v1.1
+        - form-only login-page
+
+    v2.0
+        - form-only login-page
 
  4. Limitations
     v0.1    - Tested only in Firefox (newest Version, currently 11.0)
