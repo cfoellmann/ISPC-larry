@@ -511,6 +511,11 @@ a.iconlink.upload {
 	text-decoration: underline;
 }
 
+#topnav h1 {
+    color:#FFF;
+    margin:0;
+}
+
 #toplogo {
 	padding-top: 2px;
 }
