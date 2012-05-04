@@ -1,7 +1,8 @@
 /*
  +--------------------------------------------------------------------------+
  | ispc-larry for ISPConfig 3.0.4.x                                         |
- +--------------------------------------------------------------------------+                           
+ +--------------------------------------------------------------------------+  
+ |                                                                          |                         
  | https://github.com/foe-services/ispc-larry                               |
  | Version information can be found in the README file                      |
  |                                                                          |
@@ -10,11 +11,12 @@
  | transmit and to adapt the work by keeping credits to the original        |
  | autors in the README file.                                               |
  | See http://creativecommons.org/licenses/by-sa/3.0/ for details.          |
+ |                                                                          |
  +--------------------------------------------------------------------------+
- +                                                                          +
-    Derivate of "Roundcube Webmail Skin 'Larry'" by                         +
-    Screendesign by FLINT / Büro für Gestaltung, Bern, Switzerland          +
-    http://bueroflint.com                                                   +
- + 
-                                                                         +
+ |                                                                          |
+ | Derivate of "Roundcube Webmail Skin 'Larry'":                            |
+ | Screendesign by FLINT / Büro für Gestaltung, Bern, Switzerland           |
+ | http://bueroflint.com                                                    |
+ |                                                                          |
+ +--------------------------------------------------------------------------+
 */
