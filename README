@@ -1,5 +1,6 @@
  +--------------------------------------------------------------------------+
  | ispc-larry for ISPConfig 3.0.4.x                                         |
+ | https://github.com/foe-services/ispc-larry                               |
  +--------------------------------------------------------------------------+ 
 
  1. About
@@ -7,6 +8,9 @@
     Roundcube Webmail Skin 'Larry' into a theme for ISPConfig
     For discussions please go to 
     http://www.howtoforge.com/forums/showthread.php?p=278359
+
+    Issue-Tracker:
+    https://github.com/foe-services/ispc-larry/issues
 
  2. Resources/Basis
     ispc-larry is a direct derivate of 
