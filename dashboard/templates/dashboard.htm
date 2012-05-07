@@ -1,0 +1,57 @@
+<!-- begin: toolbar -->
+<div id="moduletoolbar">
+    <div class="toolbar" id="optiontoolbar">
+        <a href="#" onClick="loadContent('sites/web_domain_edit.php');" title="{tmpl_var name="add_new_record_txt"}" class="button compose" >{tmpl_var name="add_new_record_txt"}</a>
+    </div>
+</div>
+<!-- end: toolbar -->
+
+<!-- begin: modulebody -->
+<div class="uibox boxlistcontent" id="modulecontainer">
+    <h1 class="module-title"><tmpl_var name="welcome_user"></h1>
+    <div class="panel panel_dashboard">
+        <div>
+            <tmpl_if name='error'>
+                <div class="systemmonitor-state state-error">
+                    <tmpl_loop name="error">
+                        <p>{tmpl_var name='error_msg'}</p>
+                    </tmpl_loop>
+                </div>
+            </tmpl_if>
+            <tmpl_if name='warning'>
+                <div class="systemmonitor-state state-warning">
+                    <tmpl_loop name="warning">
+                        <p>{tmpl_var name='warning_msg'}</p>
+                    </tmpl_loop>
+                </div>
+            </tmpl_if>
+            <tmpl_if name='info'>
+                <div class="systemmonitor-state state-info">
+                    <tmpl_loop name="info">
+                        <p>{tmpl_var name='info_msg'}</p>
+                    </tmpl_loop>
+                </div>
+            </tmpl_if>
+        </div>
+        <div style="float:left; width:350px;">
+            <tmpl_loop name='leftcol'>
+                {tmpl_var name='content'}
+                <p>&nbsp;</p>
+            </tmpl_loop>
+        </div>
+        <div style="float:left; width:350px;">
+            <tmpl_loop name='rightcol'>
+                {tmpl_var name='content'}
+                <p>&nbsp;</p>
+            </tmpl_loop>
+        </div>
+    </div>
+</div>
+<!-- end: modulebody -->
+<!-- begin:footer -->
+<footer>
+    <div class="statusbar" id="message">
+        <p>Powered by <a href="<tmpl_var name="app_link">" target="_blank"><tmpl_var name="app_title"></a></p>
+        <div class="loading" style="display: none;">Lädt…</div></div>
+</footer>
+<!-- end: footer -->  
