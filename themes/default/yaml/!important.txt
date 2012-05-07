@@ -1,4 +1,0 @@
-DON'T EDIT ANYTHING INSIDE THIS DIRECTORY!
-
-This theme is based on YAML V3.0.6, Build: 080609 (http://www.yaml.de/)
-CSS-Styles can be changed in the /themes/default/css/ directory
