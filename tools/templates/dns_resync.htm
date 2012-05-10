@@ -1,0 +1,39 @@
+<!--    TODO: language string (Resync DNS Records) -->
+<!-- beginn: toolbar -->
+<div id="moduletoolbar">
+    <div class="toolbar" id="optiontoolbar">
+       <a id="rcmbtn105" class="button checkmail" onClick="loadContent('tools/index.php');" href="#" title="{tmpl_var name='btn_cancel_txt'}">Cancel</a>
+    </div>
+</div>
+<!-- end: toolbar -->
+
+<!-- beginn: modulebody -->
+<div class="uibox boxlistcontent" id="modulecontainer">
+
+    <h2 class="module-title">DNS Resync</h2>
+    <p class="module-desc"><tmpl_var name="list_desc_txt"></p>
+    
+    <!-- beginn: modulecontent -->
+    <div class="panel panel_language_import">
+        <div class="ctrlHolder">
+            <p class="label">Resync DNS Records</p>
+            <div class="multiField">
+                <input id="resync" type="checkbox" value="1" name="resync" checked/>
+            </div>
+        </div>
+
+        <tmpl_if name="msg">
+            <div id="OKMsg"><p><tmpl_var name="msg"></p></div>
+        </tmpl_if>
+        <tmpl_if name="error">
+            <div id="errorMsg"><h3>ERROR</h3><ol><tmpl_var name="error"></ol></div>
+        </tmpl_if>
+            
+        <input type="hidden" name="id" value="{tmpl_var name='id'}">
+            
+        <div class="buttonHolder buttons">
+            <button class="positive iconstxt icoPositive" type="button" value="Import" onClick="submitForm('pageForm','tools/dns_resync.php');"><span>Start</span></button>
+            <button class="negative iconstxt icoNegative" type="button" value="Cancel" onClick="loadContent('tools/index.php');"><span>Cancel</span></button>
+        </div>
+    </div><!-- end: modulecontent -->
+</div><!-- end: modulebody -->
