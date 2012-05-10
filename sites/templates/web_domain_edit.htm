@@ -8,170 +8,159 @@
 
 <!-- beginn: modulebody -->
 <div class="uibox boxlistcontent" id="modulecontainer">
-    <h2 class="module-title"><tmpl_var name="list_head_txt"></h2>
-    <p class="module-desc"><tmpl_var name="list_desc_txt"></p>
-        <div class="module-body">
-            <div class="panel panel_web_domain">
-                <div class="pnl_formsarea">
-                    <fieldset class="inlineLabels">
-                        <tmpl_if name="is_admin">
-                            <div class="ctrlHolder">
-                                <tmpl_if name="edit_disabled">
-                                    <label for="server_id_disabled">{tmpl_var name='server_id_txt'}</label>
-                                    <select name="server_id_disabled" id="server_id_disabled" class="selectInput" disabled="disabled">
-                                        {tmpl_var name='server_id'}
-                                    </select>
-                                    <input type="hidden" name="server_id" value="{tmpl_var name='server_id_value'}" />
-                                    <tmpl_else>
-                                        <label for="server_id">{tmpl_var name='server_id_txt'}</label>
-                                        <select name="server_id" id="server_id" class="selectInput">
-                                            {tmpl_var name='server_id'}
-                                        </select>
-                                </tmpl_if>
-                            </div>
-                            <div class="ctrlHolder">
-                                <label for="client_group_id">{tmpl_var name='client_group_id_txt'}</label>
-                                <select name="client_group_id" id="client_group_id" class="selectInput">
-                                    {tmpl_var name='client_group_id'}
-                                </select>
-                            </div>
-                            <tmpl_else>
-                                <input type="hidden" id="server_id" name="server_id" value="{tmpl_var name='server_id_value'}" />
-                        </tmpl_if>
-                        <tmpl_if name="is_reseller">
-                            <div class="ctrlHolder">
-                                <label for="client_group_id">{tmpl_var name='client_group_id_txt'}</label>
-                                <select name="client_group_id" id="client_group_id" class="selectInput">
-                                    {tmpl_var name='client_group_id'}
-                                </select>
-                            </div>
-                        </tmpl_if>
-                        <div class="ctrlHolder">
-                            <label for="ip_address">{tmpl_var name='ip_address_txt'}</label>
-                            <select name="ip_address" id="ip_address" class="selectInput formLengthIPv4">
-                                {tmpl_var name='ip_address'}
-                            </select>
-                        </div>
-                        <div class="ctrlHolder">
-                            <label for="ipv6_address">{tmpl_var name='ipv6_address_txt'}</label>
-                            <select name="ipv6_address" id="ipv6_address" class="selectInput formLengthIPv4">
-                                {tmpl_var name='ipv6_address'}
-                            </select>
-                        </div>
-                        <div class="ctrlHolder">
-                            <label for="domain">{tmpl_var name='domain_txt'}</label>
-                            <tmpl_if name="domain_option">
-                                <select name="domain" id="domain" class="selectInput">
-                                    {tmpl_var name='domain_option'}
-                                </select>
-                                <tmpl_else>
-                                    <input name="domain" id="domain" value="{tmpl_var name='domain'}" size="30" maxlength="255" type="text" class="textInput" />
-                            </tmpl_if>
-                        </div>
-                        <div class="ctrlHolder">
-                            <label for="hd_quota">{tmpl_var name='hd_quota_txt'}</label>
-                            <input name="hd_quota" id="hd_quota" value="{tmpl_var name='hd_quota'}" size="7" maxlength="7" type="text" class="textInput formLengthLimit" />&nbsp;MB
-                        </div>
-                        <div class="ctrlHolder">
-                            <label for="traffic_quota">{tmpl_var name='traffic_quota_txt'}</label>
-                            <input name="traffic_quota" id="traffic_quota" value="{tmpl_var name='traffic_quota'}" size="7" maxlength="7" type="text" class="textInput formLengthLimit" />&nbsp;MB <tmpl_var name='traffic_quota_exceeded_txt'>
-                        </div>
-                        <div class="ctrlHolder">
-                            <p class="label">{tmpl_var name='cgi_txt'}</p>
-                            <div class="multiField">
-                                {tmpl_var name='cgi'}
-                            </div>
-                        </div>
-                        <div class="ctrlHolder">
-                            <p class="label">{tmpl_var name='ssi_txt'}</p>
-                            <div class="multiField">
-                                {tmpl_var name='ssi'}
-                            </div>
-                        </div>
-                        <div class="ctrlHolder apache">
-                            <p class="label">{tmpl_var name='ruby_txt'}</p>
-                            <div class="multiField">
-                                {tmpl_var name='ruby'}
-                            </div>
-                        </div>
-                        <div class="ctrlHolder apache">
-                            <p class="label">{tmpl_var name='python_txt'}</p>
-                            <div class="multiField">
-                                {tmpl_var name='python'}
-                            </div>
-                        </div>
-                        <div class="ctrlHolder apache">
-                            <p class="label">{tmpl_var name='suexec_txt'}</p>
-                            <div class="multiField">
-                                {tmpl_var name='suexec'}
-                            </div>
-                        </div>
-                        <div class="ctrlHolder">
-                            <p class="label">{tmpl_var name='errordocs_txt'}</p>
-                            <div class="multiField">
-                                {tmpl_var name='errordocs'}
-                            </div>
-                        </div>
-
-                        <div class="ctrlHolder">
-                            <label for="subdomain">{tmpl_var name='subdomain_txt'}</label>
-                            <select name="subdomain" id="subdomain" class="selectInput formLengthHalf">
-                                {tmpl_var name='subdomain'}
-                            </select>
-                        </div>
-                        <div class="ctrlHolder">
-                            <p class="label">{tmpl_var name='ssl_txt'}</p>
-                            <div class="multiField">
-                                {tmpl_var name='ssl'}
-                            </div>
-                        </div>
-                        <div class="ctrlHolder">
-                            <label for="php">{tmpl_var name='php_txt'}</label>
-                            <select name="php" id="php" class="selectInput formLengthHalf">
-                                {tmpl_var name='php'}
-                            </select>
-                        </div>
-                        <div class="ctrlHolder">
-                            <p class="label">{tmpl_var name='active_txt'}</p>
-                            <div class="multiField">
-                                {tmpl_var name='active'}
-                            </div>
-                        </div>
-                    </fieldset>
-
-                    <input type="hidden" name="id" value="{tmpl_var name='id'}">
-
-                    <div class="buttonHolder buttons">
-                        <button class="positive iconstxt icoPositive" type="button" value="{tmpl_var name='btn_save_txt'}" onClick="submitForm('pageForm','sites/web_domain_edit.php');"><span>{tmpl_var name='btn_save_txt'}</span></button>
-                        <button class="negative iconstxt icoNegative" type="button" value="{tmpl_var name='btn_cancel_txt'}" onClick="loadContent('sites/web_domain_list.php');"><span>{tmpl_var name='btn_cancel_txt'}</span></button>
-                    </div>
-                </div>
-
+    <h2 class="module-title"><tmpl_var name="form_hint"></h2>
+    <!-- tabs -->
+    <ul class="tabsbar">
+        <tmpl_loop name="formTab">
+            <tmpl_if name="active">
+                <li class="active"><a href="javascript:changeTab('<tmpl_var name='name'>','<tmpl_var name='app_module'>/<tmpl_var name='form_action'>')"><tmpl_var name='title'></a></li>
+                <tmpl_else>
+                    <li><a href="javascript:changeTab('<tmpl_var name='name'>','<tmpl_var name='app_module'>/<tmpl_var name='form_action'>')"><tmpl_var name='title'></a></li>
+            </tmpl_if>
+        </tmpl_loop>
+    </ul>
+    <!-- messages/erros -->  
+    <tmpl_if name="msg">
+        <div id="OKMsg"><p><tmpl_var name="msg"></p></div>
+    </tmpl_if>
+    <tmpl_if name="error">
+        <div id="errorMsg"><h3>ERROR</h3><ol><tmpl_var name="error"></ol></div>
+    </tmpl_if>
+        
+    <!-- beginn: modulecontent -->
+    <div class="panel panel_web_domain">
+        <tmpl_if name="is_admin">
+            <div class="ctrlHolder">
+                <tmpl_if name="edit_disabled">
+                    <label for="server_id_disabled">{tmpl_var name='server_id_txt'}</label>
+                    <select name="server_id_disabled" id="server_id_disabled" class="selectInput" disabled="disabled">
+                        {tmpl_var name='server_id'}
+                    </select>
+                    <input type="hidden" name="server_id" value="{tmpl_var name='server_id_value'}" />
+                    <tmpl_else>
+                        <label for="server_id">{tmpl_var name='server_id_txt'}</label>
+                        <select name="server_id" id="server_id" class="selectInput">
+                            {tmpl_var name='server_id'}
+                        </select>
+                </tmpl_if>
             </div>
-
+            <div class="ctrlHolder">
+                <label for="client_group_id">{tmpl_var name='client_group_id_txt'}</label>
+                <select name="client_group_id" id="client_group_id" class="selectInput">
+                    {tmpl_var name='client_group_id'}
+                </select>
+            </div>
+            <tmpl_else>
+                <input type="hidden" id="server_id" name="server_id" value="{tmpl_var name='server_id_value'}" />
+        </tmpl_if>
+        <tmpl_if name="is_reseller">
+            <div class="ctrlHolder">
+                <label for="client_group_id">{tmpl_var name='client_group_id_txt'}</label>
+                <select name="client_group_id" id="client_group_id" class="selectInput">
+                    {tmpl_var name='client_group_id'}
+                </select>
+            </div>
+        </tmpl_if>
+        <div class="ctrlHolder">
+            <label for="ip_address">{tmpl_var name='ip_address_txt'}</label>
+            <select name="ip_address" id="ip_address" class="selectInput formLengthIPv4">
+                {tmpl_var name='ip_address'}
+            </select>
         </div>
-</div>
-<!-- end: modulebody -->
-<!-- begin:footer -->
-<footer>
-    <div class="statusbar" id="message">
-        <p>Powered by <a href="<tmpl_var name="app_link">" target="_blank"><tmpl_var name="app_title"></a></p>
-        <div class="loading" style="display: none;">Lädt…</div></div>
-</footer>
-<!-- end: footer -->
-
-
-
-
-
-
-
-
-
-
-
-
-
+        <div class="ctrlHolder">
+            <label for="ipv6_address">{tmpl_var name='ipv6_address_txt'}</label>
+            <select name="ipv6_address" id="ipv6_address" class="selectInput formLengthIPv4">
+                {tmpl_var name='ipv6_address'}
+            </select>
+        </div>
+        <div class="ctrlHolder">
+            <label for="domain">{tmpl_var name='domain_txt'}</label>
+            <tmpl_if name="domain_option">
+                <select name="domain" id="domain" class="selectInput">
+                    {tmpl_var name='domain_option'}
+                </select>
+                <tmpl_else>
+                    <input name="domain" id="domain" value="{tmpl_var name='domain'}" size="30" maxlength="255" type="text" class="textInput" />
+            </tmpl_if>
+        </div>
+        <div class="ctrlHolder">
+            <label for="hd_quota">{tmpl_var name='hd_quota_txt'}</label>
+            <input name="hd_quota" id="hd_quota" value="{tmpl_var name='hd_quota'}" size="7" maxlength="7" type="text" class="textInput formLengthLimit" />&nbsp;MB
+        </div>
+        <div class="ctrlHolder">
+            <label for="traffic_quota">{tmpl_var name='traffic_quota_txt'}</label>
+            <input name="traffic_quota" id="traffic_quota" value="{tmpl_var name='traffic_quota'}" size="7" maxlength="7" type="text" class="textInput formLengthLimit" />&nbsp;MB <tmpl_var name='traffic_quota_exceeded_txt'>
+        </div>
+        <div class="ctrlHolder">
+            <p class="label">{tmpl_var name='cgi_txt'}</p>
+            <div class="multiField">
+                {tmpl_var name='cgi'}
+            </div>
+        </div>
+        <div class="ctrlHolder">
+            <p class="label">{tmpl_var name='ssi_txt'}</p>
+            <div class="multiField">
+                {tmpl_var name='ssi'}
+            </div>
+        </div>
+        <div class="ctrlHolder apache">
+            <p class="label">{tmpl_var name='ruby_txt'}</p>
+            <div class="multiField">
+                {tmpl_var name='ruby'}
+            </div>
+        </div>
+        <div class="ctrlHolder apache">
+            <p class="label">{tmpl_var name='python_txt'}</p>
+            <div class="multiField">
+                {tmpl_var name='python'}
+            </div>
+        </div>
+        <div class="ctrlHolder apache">
+            <p class="label">{tmpl_var name='suexec_txt'}</p>
+            <div class="multiField">
+                {tmpl_var name='suexec'}
+            </div>
+        </div>
+        <div class="ctrlHolder">
+            <p class="label">{tmpl_var name='errordocs_txt'}</p>
+            <div class="multiField">
+                {tmpl_var name='errordocs'}
+            </div>
+        </div>
+            
+        <div class="ctrlHolder">
+            <label for="subdomain">{tmpl_var name='subdomain_txt'}</label>
+            <select name="subdomain" id="subdomain" class="selectInput formLengthHalf">
+                {tmpl_var name='subdomain'}
+            </select>
+        </div>
+        <div class="ctrlHolder">
+            <p class="label">{tmpl_var name='ssl_txt'}</p>
+            <div class="multiField">
+                {tmpl_var name='ssl'}
+            </div>
+        </div>
+        <div class="ctrlHolder">
+            <label for="php">{tmpl_var name='php_txt'}</label>
+            <select name="php" id="php" class="selectInput formLengthHalf">
+                {tmpl_var name='php'}
+            </select>
+        </div>
+        <div class="ctrlHolder">
+            <p class="label">{tmpl_var name='active_txt'}</p>
+            <div class="multiField">
+                {tmpl_var name='active'}
+            </div>
+        </div>
+            
+        <input type="hidden" name="id" value="{tmpl_var name='id'}">
+            
+        <div class="buttonHolder buttons">
+            <button class="positive iconstxt icoPositive" type="button" value="{tmpl_var name='btn_save_txt'}" onClick="submitForm('pageForm','sites/web_domain_edit.php');"><span>{tmpl_var name='btn_save_txt'}</span></button>
+            <button class="negative iconstxt icoNegative" type="button" value="{tmpl_var name='btn_cancel_txt'}" onClick="loadContent('sites/web_domain_list.php');"><span>{tmpl_var name='btn_cancel_txt'}</span></button>
+        </div> 
+    </div><!-- end: modulecontent -->
+</div><!-- end: modulebody -->
 
 <script language="JavaScript" type="text/javascript">
     var serverId;

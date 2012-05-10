@@ -1,0 +1,98 @@
+<!-- beginn: toolbar -->
+<div id="moduletoolbar">
+    <div class="toolbar" id="optiontoolbar">
+        <a id="rcmbtn105" class="button checkmail" onClick="loadContent('sites/web_domain_list.php');" href="#" title="{tmpl_var name='btn_cancel_txt'}">{tmpl_var name='btn_cancel_txt'}</a>
+    </div>
+</div>
+<!-- end: toolbar -->
+
+<!-- beginn: modulebody -->
+<div class="uibox boxlistcontent" id="modulecontainer">
+    <h2 class="module-title"><tmpl_var name="form_hint"></h2>
+    <!-- tabs -->
+    <ul class="tabsbar">
+        <tmpl_loop name="formTab">
+            <tmpl_if name="active">
+                <li class="active"><a href="javascript:changeTab('<tmpl_var name='name'>','<tmpl_var name='app_module'>/<tmpl_var name='form_action'>')"><tmpl_var name='title'></a></li>
+                <tmpl_else>
+                    <li><a href="javascript:changeTab('<tmpl_var name='name'>','<tmpl_var name='app_module'>/<tmpl_var name='form_action'>')"><tmpl_var name='title'></a></li>
+            </tmpl_if>
+        </tmpl_loop>
+    </ul>
+    <!-- messages/erros -->  
+    <tmpl_if name="msg">
+        <div id="OKMsg"><p><tmpl_var name="msg"></p></div>
+    </tmpl_if>
+    <tmpl_if name="error">
+        <div id="errorMsg"><h3>ERROR</h3><ol><tmpl_var name="error"></ol></div>
+    </tmpl_if>
+        
+    <!-- beginn: modulecontent -->
+    <div class="panel panel_web_domain">
+        <div class="ctrlHolder">
+            <label for="redirect_type">{tmpl_var name='redirect_type_txt'}</label>
+            <select name="redirect_type" id="redirect_type" class="selectInput formLengthHalf">
+                {tmpl_var name='redirect_type'}
+            </select>
+        </div>
+        <div class="ctrlHolder">
+            <label for="redirect_path">{tmpl_var name='redirect_path_txt'}</label>
+            <input name="redirect_path" id="redirect_path" value="{tmpl_var name='redirect_path'}" size="30" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="seo_redirect">{tmpl_var name='seo_redirect_txt'}</label>
+            <select name="seo_redirect" id="seo_redirect" class="selectInput formLengthHalf">
+                {tmpl_var name='seo_redirect'}
+            </select>
+        </div>
+            
+        <input type="hidden" name="id" value="{tmpl_var name='id'}">
+            
+        <div class="buttonHolder buttons">
+            <button class="positive iconstxt icoPositive" type="button" value="{tmpl_var name='btn_save_txt'}" onClick="submitForm('pageForm','sites/web_domain_edit.php');"><span>{tmpl_var name='btn_save_txt'}</span></button>
+            <button class="negative iconstxt icoNegative" type="button" value="{tmpl_var name='btn_cancel_txt'}" onClick="loadContent('sites/web_domain_list.php');"><span>{tmpl_var name='btn_cancel_txt'}</span></button>
+        </div>
+    </div><!-- end: modulecontent -->
+</div><!-- end: modulebody -->
+<script language="JavaScript" type="text/javascript">
+		var webId = jQuery('input[name="id"]').val();
+		var serverId;
+		getServerId(webId);
+		
+		function getServerId(webId){
+			jQuery.getJSON('sites/ajax_get_json.php'+ '?' + Math.round(new Date().getTime()), {web_id : webId, type : "getserverid"}, function(data) {
+				serverId = data.serverid;
+				adjustForm(serverId);
+			});
+		}
+		
+		function adjustForm(serverId){
+			jQuery.getJSON('sites/ajax_get_json.php'+ '?' + Math.round(new Date().getTime()), {server_id : serverId, type : "getservertype"}, function(data) {
+				var selected = jQuery('#redirect_type').val();
+				if(data.servertype == "nginx"){
+				jQuery("#redirect_type option[value='R']").attr('disabled','disabled');
+					jQuery('#redirect_type option[value="L"]').attr('disabled','disabled');
+					jQuery('#redirect_type option[value="R,L"]').attr('disabled','disabled');
+					jQuery('#redirect_type option[value="R=301,L"]').attr('disabled','disabled');
+
+					jQuery('#redirect_type option[value="R"]').hide();
+					jQuery('#redirect_type option[value="L"]').hide();
+					jQuery('#redirect_type option[value="R,L"]').hide();
+					jQuery('#redirect_type option[value="R=301,L"]').hide();
+					if(selected != "no" && selected != "" && selected != "last"  && selected != "break"  && selected != "redirect"  && selected != "permanent") jQuery('#redirect_type option[value="no"]').attr('selected', 'selected');
+				} else {
+				jQuery('#redirect_type option[value="last"]').attr('disabled','disabled');
+					jQuery('#redirect_type option[value="break"]').attr('disabled','disabled');
+					jQuery('#redirect_type option[value="redirect"]').attr('disabled','disabled');
+					jQuery('#redirect_type option[value="permanent"]').attr('disabled','disabled');
+					
+					jQuery('#redirect_type option[value="last"]').hide();
+					jQuery('#redirect_type option[value="break"]').hide();
+					jQuery('#redirect_type option[value="redirect"]').hide();
+					jQuery('#redirect_type option[value="permanent"]').hide();
+					if(selected != "no" && selected != "" && selected != "R"  && selected != "L"  && selected != "R,L" && selected != "R=301,L") jQuery('#redirect_type option[value="no"]').attr('selected', 'selected');
+				}
+			});
+		}
+			
+</script>
