@@ -46,68 +46,80 @@
                     </script>
                     </head>
                     <body>
+                        <!-- begin: header -->
                         <header>
-                            <div id="topline">
+                            <div id="topline"><!-- TODO: change ID #topline -> #top-line -->
                                 <div class="topleft">
-                                    Text
+<!--                                    TODO: Add functionality for links to customer OR user support and more-->
+                                    <a href="#">Support-Link</a>
                                 </div>
                                 <div class="topright">
                                     <tmpl_if name="cpuser">
                                         <span class="username"><a href="#logout" onclick="loadContent('login/logout.php');" class="button-logout"><tmpl_var name="logout_txt"> <tmpl_var format="strtoupper" name="cpuser"></a></span>
-                                                        </tmpl_if>
-                                                        </div>
-                                                        </div>
-
-                                                        <div id="topnav">
-                                                            <!-- begin: main navigation #nav -->
-                                                            <!-- skiplink anchor: navigation -->
-                                                            <div id="topNav" class="topright">
-                                                                <a id="navigation" name="navigation"></a>
-                                                                &nbsp;
-                                                            </div>
-                                                            <!-- end: main navigation -->
-                                                            <a href="<tmpl_var name="app_link">"><img width="152" height="32" title="<tmpl_var name="app_title">" alt="<tmpl_var name="app_title">" src="themes/ispc-larry/images/header_logo.png"></a>
-                                                            <span>hosting control panel</span>
-                                                        </div>
-                                                        <br style="clear:both" />
-                                                        </header>
-
-                                                        <!-- begin: main content area #main -->
-                                                        <div id="mainscreen">
-                                                            <div id="mainscreen-left" style="width: 250px;">
-                                                                <!-- search box -->
-                                                                <div id="quicksearchbar">
-                                                                    <form method="get" action="./" style="display:inline" onsubmit="rcmail.command('search');return false;" name="rcmqsearchform"><input type="text" id="quicksearchbox" name="_q" style="width: 186px;"></form>
-
-                                                                    <a href="#" title="Suchkriterien ändern" onclick="UI.show_popup('searchmenu');return false" class="iconbutton searchoptions" id="searchmenulink"> </a>
-                                                                    <a onclick="return rcmail.command('reset-search','',this)" href="#" title="Suche zurücksetzen" class="iconbutton reset" id="searchreset"> </a>
-                                                                </div>
-
-                                                                <!-- folders list -->
-                                                                <div class="uibox listbox" id="sideNav-container">
-                                                                    <!-- begin: #col1 - first float column -->
-                                                                    <div id="sideNav" class="scroller withfooter">&nbsp;</div>
-                                                                    <!-- end: #col1 -->
-
-                                                                    <div class="boxfooter">
-                                                                        <a href="#" onclick="UI.show_popup('mailboxmenu');return false" class="listbutton groupactions" title="Ordneraktionen..." id="mailboxmenulink"><span class="inner">⚙</span></a>
-                                                                        <span class="countdisplay" id="quotadisplay" title="unbekannt" style="background-position: 0pt 0px;">0%</span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div id="mainscreen-splitterv" unselectable="on" class="splitter splitter-v"></div>
-
-
-                                                            <div id="mainscreen-right">
-                                                                <!-- skiplink anchor: Content -->
-                                                                <form method="post" action="" id="pageForm" name="pageForm" enctype="multipart/form-data" class="uniForm">
-                                                                    <div id="pageContent"><!-- AJAX CONTENT --></div>
-                                                                </form>
-                                                            </div>
-
-
-
-                                                        </div>
-                                                        <!-- end: #main -->
-                                                        </body>
-                                                        </html>
+                                    </tmpl_if>
+                                </div>
+                            </div>
+                            <div id="topnav"><!-- TODO: change ID #topnav -> #middle-line -->
+                                <!-- begin: main navigation -->
+                                <!-- skiplink anchor: navigation -->
+                                <div id="topNav" class="topright">
+                                    <a id="navigation" name="navigation"></a>
+                                </div><!-- end: main navigation -->
+                                <!-- logo + slogan -->
+                                <a href="<tmpl_var name="app_link">"><img width="152" height="32" title="<tmpl_var name="app_title">" alt="<tmpl_var name="app_title">" src="themes/ispc-larry/images/header_logo.png"></a>
+                                <span>hosting control panel</span>
+                            </div>
+                            <br style="clear:both" />
+                        </header><!-- end: footer -->
+                        <!-- begin: #mainscreen -->
+                        <div id="mainscreen">
+                            <!-- begin:  -->
+                            <div id="mainscreen-left">
+                                <!-- app switcher -->
+                                <div id="searchfilter" style="position: relative;">
+                                    <select onchange="rcmail.filter_mailbox(this.value)" id="rcmlistfilter" class="searchfilter decorated" name="searchfilter">
+                                        <option value="ALL">Alle</option>
+                                        <option value="UNSEEN">Ungelesene</option>
+                                        <option value="FLAGGED">Markierte</option>
+                                        <option value="UNANSWERED">Unbeantwortete</option>
+                                        <option value="DELETED">Gelöschte</option>
+                                        <option value="HEADER X-PRIORITY 1">Priorität: Höchste</option>
+                                        <option value="HEADER X-PRIORITY 2">Priorität: Hoch</option>
+                                        <option value="NOT HEADER X-PRIORITY 1 NOT HEADER X-PRIORITY 2 NOT HEADER X-PRIORITY 4 NOT HEADER X-PRIORITY 5">Priorität: Normal</option>
+                                        <option value="HEADER X-PRIORITY 4">Priorität: Niedrig</option>
+                                        <option value="HEADER X-PRIORITY 5">Priorität: Niedrigste</option>
+                                    </select><a class="menuselector dropdownselector" style="position: absolute; top: 0px; left: 0px;"><span class="handle" style="width: 112px;">Alle</span></a>    
+                                </div>
+                                    
+                                <!-- folders list -->
+                                <div class="uibox listbox" id="sideNav-container">
+                                    <!-- begin: #col1 - first float column -->
+                                    <div id="sideNav" class="scroller withfooter">&nbsp;</div>
+                                    <!-- end: #col1 -->
+                                        
+                                    <div class="boxfooter">
+                                        <a href="#" onclick="UI.show_popup('mailboxmenu');return false" class="listbutton groupactions" title="Hilfe anzeigen" id="mailboxmenulink"><span class="inner">&nbsp;</span></a>
+                                        <!-- TODO: Add on-site help dialogs -->
+                                        <span class="countdisplay" id="quotadisplay" title="unbekannt" style="background-position: 0pt 0px;">&nbsp;</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="mainscreen-splitterv" class="splitter splitter-v"></div>
+                            <div id="mainscreen-right">
+                                <!-- skiplink anchor: Content -->
+                                <form method="post" action="" id="pageForm" name="pageForm" enctype="multipart/form-data" class="uniForm">
+                                    <div id="pageContent"><!-- AJAX CONTENT --></div>
+                                </form>
+                                <!-- begin:footer -->
+                                <footer>
+                                    <div class="statusbar" id="message">
+                                        <!--                                                                        TODO: CSS make div height flexible for help text display + #pageContent must be pressed upward by footer/div-->
+                                        <p>Powered by <a href="<tmpl_var name="app_link">" target="_blank"><tmpl_var name="app_title"></a></p>
+                                        <div class="loading" style="display: none;">Lädt…</div>
+                                    </div>
+                                </footer>
+                                <!-- end: footer -->
+                            </div>
+                        </div><!-- end: #mainscreen -->
+                    </body>
+</html>
