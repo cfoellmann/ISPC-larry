@@ -449,7 +449,6 @@ a.iconlink.upload {
 	bottom: 0;
 	left: 0;
 	right: 0;
-	height: 27px;
         text-align: right;
 	border-top: 1px solid #ddd;
 	border-radius: 0 0 4px 4px;
@@ -634,7 +633,7 @@ a.iconlink.upload {
     left: 0;
     position: absolute;
     top: 0;
-    width: 240px;
+    width: 250px;
 }
 
 #mainscreen-right {
@@ -646,11 +645,11 @@ a.iconlink.upload {
 }
 
 footer {
-    height: 26px;
+/*    height: 26px;
     bottom: 0;
     left: 264px;
     right: 0;
-    top: 0;
+    top: 0; */
 }
 footer p {
     margin: 5px 15px;
@@ -665,7 +664,6 @@ footer p {
 	color: #376572;
 	text-shadow: 0px 1px 1px #fff;
 	text-decoration: none;
-	cursor: default;
 	height: 17px; /* doesn't affect table-cells in FF */
 	white-space: nowrap;
 }
@@ -717,10 +715,33 @@ footer p {
     font-weight: bold;
     height: 20px;
     margin: 0;
-    margin-bottom: 10px;
     padding: 10px 8px 3px;
     text-shadow: 0 1px 1px #FFFFFF;
     white-space: nowrap;
+}
+
+
+
+/*** tabsbar ***/
+
+ul.tabsbar {
+    margin: 0 0 15px 25px;
+    padding: 0;
+    list-style: none;
+    display: block;
+}
+.tabsbar li {
+    display: inline;
+    background: #EEEEEE;
+    border-radius: 0 0 5px 5px;
+}
+.tabsbar li.active {
+    background: red;
+    
+}
+.tabsbar li a {
+    padding: 5px;
+    text-decoration: none;
 }
 
 .module-body {
@@ -2006,52 +2027,7 @@ ul.toolbarmenu li span.conversation {
 }
 
 
-/*** fieldset tabs ***/
 
-.tabsbar {
-	margin-bottom: 12px;
-	padding-top: 15px;
-	height: 27px;
-}
-
-.tabsbar .tablink {
-	padding: 15px 1px 15px 0;
-	background: #f8f8f8;
-	background: -moz-linear-gradient(top, #f8f8f8 0%, #d3d3d3 50%, #f8f8f8 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f8f8f8), color-stop(50%,#d3d3d3), color-stop(100%,#f8f8f8));
-	background: -webkit-linear-gradient(top, #f8f8f8 0%, #d3d3d3 50%, #f8f8f8 100%);
-	background: -o-linear-gradient(top, #f8f8f8 0%, #d3d3d3 50%, #f8f8f8 100%);
-	background: -ms-linear-gradient(top, #f8f8f8 0%, #d3d3d3 50%, #f8f8f8 100%);
-	background: linear-gradient(top, #f8f8f8 0%, #d3d3d3 50%, #f8f8f8 100%);
-}
-
-.tabsbar .tablink:last-child {
-	background: none;
-}
-
-.tabsbar .tablink:last-child a {
-	border-right: 0;
-}
-
-.tabsbar .tablink a {
-	padding: 15px;
-	color: #999;
-	font-size: 12px;
-	font-weight: bold;
-	text-decoration: none;
-	background: #fff;
-	border-right: 1px solid #fafafa;
-}
-
-.tabsbar .tablink.selected a {
-	color: #004458;
-	background: #f6f6f6;
-	background: -moz-linear-gradient(top, #fff 40%, #efefef 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(40%,#fff), color-stop(100%,#efefef));
-	background: -o-linear-gradient(top, #fff 40%, #efefef 100%);
-	background: -ms-linear-gradient(top, #fff 40%, #efefef 100%);
-	background: linear-gradient(top, #fff 40%, #efefef 100%);
-}
 
 fieldset.tab {
 	border: 0;
