@@ -8,9 +8,25 @@
 
 <!-- beginn: modulebody -->
 <div class="uibox boxlistcontent" id="modulecontainer">
-    <h2 class="module-title"><tmpl_var name="list_head_txt"></h2>
-    <p class="module-desc"><tmpl_var name="list_desc_txt"></p>
-    
+    <h2 class="module-title"><tmpl_var name="form_hint"></h2>
+    <!-- tabs -->
+    <ul class="tabsbar">
+        <tmpl_loop name="formTab">
+            <tmpl_if name="active">
+                <li class="active"><a href="javascript:changeTab('<tmpl_var name='name'>','<tmpl_var name='app_module'>/<tmpl_var name='form_action'>')"><tmpl_var name='title'></a></li>
+                <tmpl_else>
+                    <li><a href="javascript:changeTab('<tmpl_var name='name'>','<tmpl_var name='app_module'>/<tmpl_var name='form_action'>')"><tmpl_var name='title'></a></li>
+            </tmpl_if>
+        </tmpl_loop>
+    </ul>
+    <!-- messages/erros -->  
+    <tmpl_if name="msg">
+        <div id="OKMsg"><p><tmpl_var name="msg"></p></div>
+    </tmpl_if>
+    <tmpl_if name="error">
+        <div id="errorMsg"><h3>ERROR</h3><ol><tmpl_var name="error"></ol></div>
+    </tmpl_if>
+        
     <!-- beginn: modulecontent -->
     <div class="panel panel_usersettings">
         <div class="ctrlHolder">
