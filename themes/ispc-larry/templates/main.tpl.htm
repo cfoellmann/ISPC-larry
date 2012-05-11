@@ -76,7 +76,7 @@
                             <!-- begin:  -->
                             <div id="mainscreen-left">
                                 <!-- app switcher -->
-                                <div id="searchfilter" style="position: relative;">
+                                <div id="app-switcher" style="position: relative;">
                                     <select onchange="rcmail.filter_mailbox(this.value)" id="rcmlistfilter" class="searchfilter decorated" name="searchfilter">
                                         <option value="ALL">Alle</option>
                                         <option value="UNSEEN">Ungelesene</option>
@@ -91,14 +91,13 @@
                                     </select><a class="menuselector dropdownselector" style="position: absolute; top: 0px; left: 0px;"><span class="handle" style="width: 112px;">Alle</span></a>    
                                 </div>
                                     
-                                <!-- folders list -->
                                 <div class="uibox listbox" id="sideNav-container">
                                     <!-- begin: #col1 - first float column -->
                                     <div id="sideNav" class="scroller withfooter">&nbsp;</div>
                                     <!-- end: #col1 -->
                                         
                                     <div class="boxfooter">
-                                        <a href="#" onclick="UI.show_popup('mailboxmenu');return false" class="listbutton groupactions" title="Hilfe anzeigen" id="mailboxmenulink"><span class="inner">&nbsp;</span></a>
+                                        <a href="#" class="listbutton groupactions" title="Hilfe anzeigen" id="mailboxmenulink"><span class="inner">&nbsp;</span></a>
                                         <!-- TODO: Add on-site help dialogs -->
                                         <span class="countdisplay" id="quotadisplay" title="unbekannt" style="background-position: 0pt 0px;">&nbsp;</span>
                                     </div>
@@ -113,7 +112,7 @@
                                 <!-- begin:footer -->
                                 <footer>
                                     <div class="statusbar" id="message">
-                                        <!--                                                                        TODO: CSS make div height flexible for help text display + #pageContent must be pressed upward by footer/div-->
+                                        <!-- TODO: CSS make div height flexible for help text display + #pageContent must be pressed upward by footer/div -->
                                         <p>Powered by <a href="<tmpl_var name="app_link">" target="_blank"><tmpl_var name="app_title"></a></p>
                                         <div class="loading" style="display: none;">Lädt…</div>
                                     </div>
