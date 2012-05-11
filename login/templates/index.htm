@@ -1,0 +1,38 @@
+<!-- beginn: toolbar -->
+<div id="moduletoolbar">
+    <div class="toolbar" id="optiontoolbar">
+        &nbsp;
+    </div>
+</div>
+<!-- end: toolbar -->
+
+<!-- beginn: modulebody -->
+<div class="uibox boxlistcontent" id="modulecontainer">
+    <h2 class="module-title">Login</h2>
+    <p class="module-desc"><tmpl_var name="list_desc_txt"></p>
+    
+    <!-- beginn: modulecontent -->
+    <div class="panel panel_login">
+        <tmpl_if name="msg">
+            <div id="OKMsg"><p><tmpl_var name="msg"></p></div>
+        </tmpl_if>
+        <tmpl_if name="error">
+            <div id="errorMsg"><h3>ERROR</h3><ol><li><tmpl_var name="error"></li></ol><br /><a href="#" onclick="loadContent('login/password_reset.php');">Password lost?</a></div><!--TODO: Language string for "Password lost"-->
+        </tmpl_if>
+        <div class="ctrlHolder">
+            <label for="username">{tmpl_var name='username_txt'}</label>
+            <input name="username" id="username" value="" size="30" maxlength="255" type="text" class="textInput"  onkeypress="if (event.keyCode && event.keyCode == 13) {submitLoginForm('pageForm'); return false;};" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="passwort">{tmpl_var name='password_txt'}</label>
+            <input name="passwort" id="passwort" value="" size="30" maxlength="255" type="password" class="textInput"  onkeypress="if (event.keyCode && event.keyCode == 13) {submitLoginForm('pageForm'); return false;};" />
+        </div>			
+            
+        <input type="hidden" name="s_mod" value="login" />
+        <input type="hidden" name="s_pg" value="index" />
+            
+        <div class="buttonHolder buttons">
+            <button class="positive iconstxt icoKey" type="button" value="{tmpl_var name="add_new_record_txt"}" onClick="submitLoginForm('pageForm');"><span>{tmpl_var name='login_button_txt'}</span></button>
+        </div>
+    </div><!-- end: modulecontent -->
+</div><!-- end: modulebody -->
