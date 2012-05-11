@@ -1,7 +1,9 @@
 /**
  * ispc-larry main css styles
  */
-
+ 
+/* Global Elements
+-------------------------------------------------------------- */
 body {
 	font-family: "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
 	font-size: 11px;
@@ -20,7 +22,14 @@ a { color: #0069a6; }
 a:visited { color: #0186ba; }
 
 img { border: 0; }
-
+.bold { font-weight: bold; }
+div.clear {
+    clear: both;
+    font-size: 0;
+    height: 0;
+}
+/* Input
+-------------------------------------------------------------- */
 input[type="text"],
 input[type="password"],
 textarea {
@@ -49,11 +58,8 @@ input.placeholder,
 textarea.placeholder {
 	color: #aaa;
 }
-
-.bold { font-weight: bold; }
-
-/*** buttons ***/
-
+/* Input/buttons
+-------------------------------------------------------------- */
 input.button {
 	display: inline-block;
 	margin: 0 2px;
@@ -150,8 +156,8 @@ input.button.mainaction[disabled] {
 
 input.mainaction { font-weight: bold; }
 
-/** link buttons **/
-
+/* link buttons
+-------------------------------------------------------------- */
 a.button {
 	display: inline-block;
 	margin: 0 2px;
@@ -369,8 +375,8 @@ a.iconlink.upload {
 }
 
 
-/*** message bar ***/
-
+/* message bar
+-------------------------------------------------------------- */
 #message div.loading,
 #message div.warning,
 #message div.error,
@@ -467,9 +473,8 @@ a.iconlink.upload {
 	background: linear-gradient(top, #eee 0%, #dcdcdc 100%);
 }
 
-
-/*** basic page layout ***/
-
+/* basic page layout
+-------------------------------------------------------------- */
 #topline {
 	height: 18px;
 	background: url(images/bg_linen_dark.jpg) repeat #666;
@@ -539,8 +544,8 @@ a.iconlink.upload {
 	color: #fff;
 }
 
-
-/*** topnav ***/
+/* basic page layout/topnav
+-------------------------------------------------------------- */
 #topNav a {
     display: inline-block;
     height: 34px;
@@ -619,7 +624,9 @@ ul#submenu {
 .menu li {
     white-space: nowrap;
 }
-/*** Main Field ***/
+
+/* basic page layout/mainscreen
+-------------------------------------------------------------- */
 #mainscreen {
 	position: absolute;
 	top: 88px;
@@ -664,8 +671,8 @@ footer p {
 }
 
 
-    /*** Modules ***/
-
+/* Modules
+-------------------------------------------------------------- */
 #moduletoolbar {
     height: 40px;
     left: 0;
@@ -674,7 +681,6 @@ footer p {
     top: -6px;
     white-space: nowrap;
 }
-
 #module-view {
     bottom: 28px;
     left: 0;
@@ -682,7 +688,6 @@ footer p {
     top: 42px;
     width: 100%;
 }
-
 #modulecontainer {
     bottom: 32px;
     overflow: auto;
@@ -690,8 +695,8 @@ footer p {
     left: 0;
     position: absolute;
     width: 100%;
+    background: url('images/bg_module.png') repeat;
 }
-
 .module-title {
     left: 0;
     top: 0;
@@ -708,8 +713,28 @@ footer p {
     text-shadow: 0 1px 1px #FFFFFF;
     white-space: nowrap;
 }
-
-/*** tabsbar ***/
+/* Modules/Dashboard
+-------------------------------------------------------------- */
+h3.welcome {
+    font-size: 20px;
+    padding-left: 25px;
+}
+.errorbox {
+    
+}
+.systemmonitor-state {
+    float: left;
+    margin-left: 25px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #fff;
+}
+.systemmonitor-state p {
+    float:left;
+    margin: 10px;
+}
+/* Modules/tabsbar
+-------------------------------------------------------------- */
 ul.tabsbar {
     margin: 0 0 15px 25px;
     padding: 0;
@@ -732,12 +757,12 @@ ul.tabsbar {
 .module-body {
     padding: 15px;
 }
+/* Tables
+-------------------------------------------------------------- */
 table.list {
     border: 1px solid #D3D3D3 !important;
     width: 100%;
 }
-
-/*** Tables ***/
 table {
     background: -moz-linear-gradient(center top , #F7F7F7 0%, #EEEEEE 100%) repeat scroll 0 0 transparent;
     border: 0 none;
@@ -775,18 +800,15 @@ table.list tfoot td {
 	-moz-box-shadow: 0 0 2px #999;
 	background: #fff;
 }
-
 .scroller {
 	overflow: auto;
 }
-
-/*** Lists ***/
-
+/* Lists
+-------------------------------------------------------------- */
 .listbox {
 	background: #d9ecf4;
 	overflow: hidden;
 }
-
 .listbox .scroller {
 	position: absolute;
 	top: 0;
@@ -795,11 +817,9 @@ table.list tfoot td {
 	bottom: 0;
 	overflow: auto;
 }
-
 .listbox .scroller.withfooter {
 	bottom: 42px;
 }
-
 .listbox .boxtitle + .scroller {
 	top: 34px;
 }
@@ -1020,17 +1040,6 @@ select.decorated {
 	width: 40em;
 	margin: 16px auto;
 }
-
-.errorbox {
-	width: 40em;
-	padding: 20px;
-}
-
-.errorbox h3 {
-	font-size: 16px;
-	margin-top: 0;
-}
-
 .boxcontent {
 	padding: 10px;
 }
@@ -1079,8 +1088,8 @@ table.propform {
 	border-collapse: collapse;
 }
 
-/*** Login form ***/
-
+/* Login form
+-------------------------------------------------------------- */
 #login-form {
 	position: relative;
 	width: 580px;
@@ -1595,7 +1604,8 @@ ul.toolbarmenu li span.conversation {
 	color: #999;
 	text-shadow: 0px 1px 1px #fff;
 }
-
+/* Splitter
+-------------------------------------------------------------- */
 .splitter {
 	user-select: none;
 	-moz-user-select: none;
@@ -1618,58 +1628,8 @@ ul.toolbarmenu li span.conversation {
 	background-position: 0 center;
 }
 
-#rcmdraglayer {
-	min-width: 260px;
-	width: auto !important;
-	width: 260px;
-	padding: 6px 8px;
-	background: #444;
-	border: 1px solid #555;
-	border-radius: 4px;
-	box-shadow: 0 2px 6px 0 #333;
-	-moz-box-shadow: 0 2px 6px 0 #333;
-	-webkit-box-shadow: 0 2px 6px 0 #333;
-	-o-box-shadow: 0 2px 6px 0 #333;
-	z-index: 250;
-	color: #ccc;
-	white-space: nowrap;
-	opacity: 0.92;
-	filter: alpha(opacity=92);
-	text-shadow: 0px 1px 1px #333;
-}
-
-#rcmdraglayer:after {
-	content: "";
-	position: absolute;
-	top: 6px;
-	left: -6px;
-	border-style: solid;
-	border-width: 6px 6px 6px 0;
-	border-color: transparent #444;
-	/* reduce the damage in FF3.0 */
-	display: block; 
-	width: 0;
-	z-index: 251;
-}
-
-.draglayercopy:before {
-	position: absolute;
-	bottom: -6px;
-	left: -6px;
-	content: " ";
-	width: 16px;
-	height: 16px;
-	background: url(images/buttons.png) -7px -358px no-repeat;
-	z-index: 255;
-}
-
-fieldset.tab {
-	border: 0;
-	padding: 0;
-	margin-left: 0;
-}
-
-
+/* ??
+-------------------------------------------------------------- */
 .buttons button[type] {
     line-height: 17px;
     padding: 5px 10px 5px 7px;
