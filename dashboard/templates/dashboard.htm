@@ -11,9 +11,10 @@
     <h2 class="module-title"><tmpl_var name="app_title"> <tmpl_var name="app_version"></h2>
     <div class="panel panel_dashboard">
         <h3 class="welcome"><tmpl_var name="welcome_user"></h3>
-        <div>
+
             <tmpl_if name='error'>
                 <div class="systemmonitor-state state-error">
+                    <div class="icon32">&nbsp;</div>
                     <tmpl_loop name="error">
                         <p>{tmpl_var name='error_msg'}</p>
                     </tmpl_loop>
@@ -21,6 +22,7 @@
             </tmpl_if>
             <tmpl_if name='warning'>
                 <div class="systemmonitor-state state-warning">
+                    <div class="icon32">&nbsp;</div>
                     <tmpl_loop name="warning">
                         <p>{tmpl_var name='warning_msg'}</p>
                     </tmpl_loop>
@@ -28,19 +30,21 @@
             </tmpl_if>
             <tmpl_if name='info'>
                 <div class="systemmonitor-state state-info">
+                    <div class="icon32">&nbsp;</div>
                     <tmpl_loop name="info">
                         <p>{tmpl_var name='info_msg'}</p>
                     </tmpl_loop>
                 </div>
             </tmpl_if>
-        </div>
-        <div style="float:left; width:350px;">
+            <br style="clear:both" />
+
+        <div class="dash-mods">
             <tmpl_loop name='leftcol'>
                 {tmpl_var name='content'}
                 <p>&nbsp;</p>
             </tmpl_loop>
         </div>
-        <div style="float:left; width:350px;">
+        <div class="dash-limits">
             <tmpl_loop name='rightcol'>
                 {tmpl_var name='content'}
                 <p>&nbsp;</p>
