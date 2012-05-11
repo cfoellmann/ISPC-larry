@@ -1,0 +1,57 @@
+<!-- beginn: toolbar -->
+<div id="moduletoolbar">
+    <div class="toolbar" id="optiontoolbar">
+        &nbsp;
+    </div>
+</div>
+<!-- end: toolbar -->
+
+<!-- beginn: modulebody -->
+<div class="uibox boxlistcontent" id="modulecontainer">
+    <h2 class="module-title"><tmpl_var name="list_head_txt"></h2>
+    <p class="module-desc"><tmpl_var name="list_desc_txt"></p>
+    
+    <!-- beginn: modulecontent -->
+    <div class="panel panel_list_mail_user_stats">
+        <table class="list">
+            <thead>
+                <tr>
+                    <th class="tbl_col_email" scope="col"><tmpl_var name="email_txt"></th>
+                    <th class="tbl_col_this_month" scope="col"><tmpl_var name="this_month_txt"></th>
+                    <th class="tbl_col_last_month" scope="col"><tmpl_var name="last_month_txt"></th>
+                    <th class="tbl_col_this_year" scope="col"><tmpl_var name="this_year_txt"></th>
+                    <th class="tbl_col_last_year" scope="col"><tmpl_var name="last_year_txt"></th>
+                    <th class="tbl_col_buttons" scope="col">&nbsp;</th>
+                </tr>
+                <tr>
+                    <td class="tbl_col_email"><input type="text" name="search_email" value="{tmpl_var name='search_email'}" /></td>
+                    <td class="tbl_col_this_month"></td>
+                    <td class="tbl_col_last_month"></td>
+                    <td class="tbl_col_this_year"></td>
+                    <td class="tbl_col_last_year"></td>
+                    <td class="tbl_col_buttons"><div class="buttons"><button type="button" class="icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="submitForm('pageForm','mail/mail_user_stats.php');"><span>{tmpl_var name="filter_txt"}</span></button></div></td>
+                </tr>
+            </thead>
+            <tbody>
+            <tmpl_loop name="records">
+                <tr class="tbl_row_<tmpl_if name='__EVEN__'}even<tmpl_else>uneven</tmpl_if>">
+                    <td class="tbl_col_email"><a href="#" onClick="loadContent('mail/mail_user_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="email"}</a></td>
+                    <td class="tbl_col_this_month"><a href="#" onClick="loadContent('mail/mail_user_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="this_month"} MB</a></td>
+                    <td class="tbl_col_last_month"><a href="#" onClick="loadContent('mail/mail_user_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="last_month"} MB</a></td>
+                    <td class="tbl_col_this_year"><a href="#" onClick="loadContent('mail/mail_user_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="this_year"} MB</a></td>
+                    <td class="tbl_col_last_year"><a href="#" onClick="loadContent('mail/mail_user_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="last_year"} MB</a></td>
+                    <td class="tbl_col_buttons">
+                    <div class="buttons icons16">    
+                    </div>
+                    </td>
+                </tr>
+            </tmpl_loop>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td class="tbl_footer tbl_paging" colspan="6"><tmpl_var name="paging"></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div><!-- end: modulecontent -->
+</div><!-- end: modulebody -->

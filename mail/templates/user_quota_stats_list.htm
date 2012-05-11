@@ -1,0 +1,55 @@
+<!-- beginn: toolbar -->
+<div id="moduletoolbar">
+    <div class="toolbar" id="optiontoolbar">
+        &nbsp;
+    </div>
+</div>
+<!-- end: toolbar -->
+
+<!-- beginn: modulebody -->
+<div class="uibox boxlistcontent" id="modulecontainer">
+    <h2 class="module-title"><tmpl_var name="list_head_txt"></h2>
+    <p class="module-desc"><tmpl_var name="list_desc_txt"></p>
+    
+    <!-- beginn: modulecontent -->
+    <div class="panel panel_list_user_quota_stats">
+        <table class="list">
+            <thead>
+                <tr>
+                    <th class="tbl_col_email" scope="col"><tmpl_var name="email_txt"></th>
+                    <th class="tbl_col_name" scope="col"><tmpl_var name="name_txt"></th>
+                    <th class="tbl_col_system_user" scope="col" style="text-align:right;"><tmpl_var name="used_txt"></th>
+                    <th class="tbl_col_system_user" scope="col" style="text-align:right;"><tmpl_var name="quota_txt"></th>
+                    <th class="tbl_col_buttons" scope="col">&nbsp;</th>
+                </tr>
+                <tr>
+                    <td class="tbl_col_domain"><input type="text" name="search_email" value="{tmpl_var name='search_email'}" /></td>
+                    <td class="tbl_col_system_user"><input type="text" name="search_system_user" value="{tmpl_var name='search_name'}" /></td>
+                    <td class="tbl_col_system_user">&nbsp;</td>
+                    <td class="tbl_col_system_user">&nbsp;</td>
+                    <td class="tbl_col_buttons"><div class="buttons"><button type="button" class="icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="submitForm('pageForm','mail/user_quota_stats.php');"><span>{tmpl_var name="filter_txt"}</span></button></div></td>
+                </tr>
+            </thead>
+            <tbody>
+            <tmpl_loop name="records">
+                <tr class="tbl_row_<tmpl_if name='__EVEN__'}even<tmpl_else>uneven</tmpl_if>">
+                    <td class="tbl_col_email"><a href="#" onClick="loadContent('mail/mail_user_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="email"}</a></td>
+                    <td class="tbl_col_name"><a href="#" onClick="loadContent('mail/mail_user_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="name"}</a></td>
+                    <td class="tbl_col_used" style="text-align:right;"><a href="#" onClick="loadContent('mail/mail_user_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="used"}</a></td>
+                    <td class="tbl_col_limit" style="text-align:right;"><a href="#" onClick="loadContent('mail/mail_user_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="quota"}</a></td>
+                    <td class="tbl_col_buttons">
+                    <div class="buttons icons16">    
+                        &nbsp;
+                    </div>
+                    </td>
+                </tr>
+            </tmpl_loop>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td class="tbl_footer tbl_paging" colspan="5"><tmpl_var name="paging"></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div><!-- end: modulecontent -->
+</div><!-- end: modulebody -->

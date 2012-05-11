@@ -1,0 +1,50 @@
+<!-- beginn: toolbar -->
+<div id="moduletoolbar">
+    <div class="toolbar" id="optiontoolbar">
+        <a id="rcmbtn105" class="button checkmail" onClick="loadContent('mail/mail_mailinglist_edit.php');" href="#" title="{tmpl_var name="add_new_record_txt"}">{tmpl_var name="add_new_record_txt"}</a>
+    </div>
+</div>
+<!-- end: toolbar -->
+
+<!-- beginn: modulebody -->
+<div class="uibox boxlistcontent" id="modulecontainer">
+    <h2 class="module-title"><tmpl_var name="list_head_txt"></h2>
+    <p class="module-desc"><tmpl_var name="list_desc_txt"></p>
+    
+    <!-- beginn: modulecontent -->
+    <div class="panel panel_list_mail_mailinglist">
+        <table class="list">
+            <thead>
+                <tr>
+                    <th class="tbl_col_listname" scope="col"><tmpl_var name="listname_txt"></th>
+                    <th class="tbl_col_domain" scope="col"><tmpl_var name="domain_txt"></th>
+                    <th class="tbl_col_buttons" scope="col">&nbsp;</th>
+                </tr>
+                <tr>
+                    <td class="tbl_col_listname"><input type="text" name="search_listname" value="{tmpl_var name='search_listname'}" /></td>
+                    <td class="tbl_col_domain"><input type="text" name="search_domain" value="{tmpl_var name='search_domain'}" /></td>
+                    <td class="tbl_col_buttons"><div class="buttons"><button type="button" class="icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="submitForm('pageForm','mail/mail_mailinglist_list.php');"><span>{tmpl_var name="filter_txt"}</span></button></div></td>
+                </tr>
+            </thead>
+            <tbody>
+            <tmpl_loop name="records">
+                <tr class="tbl_row_<tmpl_if name='__EVEN__'}even<tmpl_else>uneven</tmpl_if>">
+                    <td class="tbl_col_listname"><a href="#" onClick="loadContent('mail/mail_mailinglist_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="listname"}</a></td>
+                    <td class="tbl_col_domain"><a href="#" onClick="loadContent('mail/mail_mailinglist_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="domain"}</a></td>
+                    <td class="tbl_col_buttons">
+                    <div class="buttons icons16">
+                                        <tmpl_if name="mailmailinglist_link"><a class="icons16 icoWebmailer" href="mail/mailinglist.php?id={tmpl_var name='id'}" target="mailmailinglist"><span>{tmpl_var name='delete_txt'}</span></a></tmpl_if>
+                        <a class="icons16 icoDelete" href="javascript: del_record('mail/mail_mailinglist_del.php?id={tmpl_var name='id'}&phpsessid={tmpl_var name='phpsessid'}','{tmpl_var name='delete_confirmation'}');"><span>{tmpl_var name='delete_txt'}</span></a>
+                    </div>
+                    </td>
+                </tr>
+            </tmpl_loop>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td class="tbl_footer tbl_paging" colspan="3"><tmpl_var name="paging"></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div><!-- end: modulecontent -->
+</div><!-- end: modulebody -->

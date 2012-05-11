@@ -1,0 +1,74 @@
+<!-- beginn: toolbar -->
+<div id="moduletoolbar">
+    <div class="toolbar" id="optiontoolbar">
+        <a id="rcmbtn105" class="button checkmail" onClick="loadContent('mail/spamfilter_policy_list.php');" href="#" title="{tmpl_var name='btn_cancel_txt'}">{tmpl_var name='btn_cancel_txt'}</a>
+    </div>
+</div>
+<!-- end: toolbar -->
+
+<!-- beginn: modulebody -->
+<div class="uibox boxlistcontent" id="modulecontainer">
+    <h2 class="module-title"><tmpl_var name="list_head_txt"></h2>
+    <!-- tabs -->
+    <ul class="tabsbar">
+        <tmpl_loop name="formTab">
+            <tmpl_if name="active">
+                <li class="active"><a href="javascript:changeTab('<tmpl_var name='name'>','<tmpl_var name='app_module'>/<tmpl_var name='form_action'>')"><tmpl_var name='title'></a></li>
+                <tmpl_else>
+                    <li><a href="javascript:changeTab('<tmpl_var name='name'>','<tmpl_var name='app_module'>/<tmpl_var name='form_action'>')"><tmpl_var name='title'></a></li>
+            </tmpl_if>
+        </tmpl_loop>
+    </ul>
+    <!-- messages/erros -->  
+    <tmpl_if name="msg">
+        <div id="OKMsg"><p><tmpl_var name="msg"></p></div>
+    </tmpl_if>
+    <tmpl_if name="error">
+        <div id="errorMsg"><h3>ERROR</h3><ol><tmpl_var name="error"></ol></div>
+    </tmpl_if>
+    
+    <!-- beginn: modulecontent -->
+    <div class="panel panel_spamfilter_policy">
+        <div class="ctrlHolder">
+            <label for="spam_tag_level">{tmpl_var name='spam_tag_level_txt'}</label>
+            <input name="spam_tag_level" id="spam_tag_level" value="{tmpl_var name='spam_tag_level'}" size="10" maxlength="255" type="text" class="textInput formLengthLimit" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="spam_tag2_level">{tmpl_var name='spam_tag2_level_txt'}</label>
+            <input name="spam_tag2_level" id="spam_tag2_level" value="{tmpl_var name='spam_tag2_level'}" size="10" maxlength="255" type="text" class="textInput formLengthLimit" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="spam_kill_level">{tmpl_var name='spam_kill_level_txt'}</label>
+            <input name="spam_kill_level" id="spam_kill_level" value="{tmpl_var name='spam_kill_level'}" size="10" maxlength="255" type="text" class="textInput formLengthLimit" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="spam_dsn_cutoff_level">{tmpl_var name='spam_dsn_cutoff_level_txt'}</label>
+            <input name="spam_dsn_cutoff_level" id="spam_dsn_cutoff_level" value="{tmpl_var name='spam_dsn_cutoff_level'}" size="10" maxlength="255" type="text" class="textInput formLengthLimit" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="spam_quarantine_cutoff_level">{tmpl_var name='spam_quarantine_cutoff_level_txt'}</label>
+            <input name="spam_quarantine_cutoff_level" id="spam_quarantine_cutoff_level" value="{tmpl_var name='spam_quarantine_cutoff_level'}" size="10" maxlength="255" type="text" class="textInput formLengthLimit" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="spam_modifies_subj">{tmpl_var name='spam_modifies_subj_txt'}</label>
+            <select name="spam_modifies_subj" id="spam_modifies_subj" class="selectInput formLengthBool">
+                {tmpl_var name='spam_modifies_subj'}
+            </select>
+        </div>
+        <div class="ctrlHolder">
+            <label for="spam_subject_tag">{tmpl_var name='spam_subject_tag_txt'}</label>
+            <input name="spam_subject_tag" id="spam_subject_tag" value="{tmpl_var name='spam_subject_tag'}" size="30" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="spam_subject_tag2">{tmpl_var name='spam_subject_tag2_txt'}</label>
+            <input name="spam_subject_tag2" id="spam_subject_tag2" value="{tmpl_var name='spam_subject_tag2'}" size="30" maxlength="255" type="text" class="textInput" />
+        </div>
+            
+        <input type="hidden" name="id" value="{tmpl_var name='id'}">
+            
+        <div class="buttonHolder buttons">
+            <button class="positive iconstxt icoPositive" type="button" value="{tmpl_var name='btn_save_txt'}" onClick="submitForm('pageForm','mail/spamfilter_policy_edit.php');"><span>{tmpl_var name='btn_save_txt'}</span></button>
+            <button class="negative iconstxt icoNegative" type="button" value="{tmpl_var name='btn_cancel_txt'}" onClick="loadContent('mail/spamfilter_policy_list.php');"><span>{tmpl_var name='btn_cancel_txt'}</span></button>
+        </div>
+    </div><!-- end: modulecontent -->
+</div><!-- end: modulebody -->

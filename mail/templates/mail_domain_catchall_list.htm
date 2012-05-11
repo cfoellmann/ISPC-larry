@@ -1,0 +1,52 @@
+<!-- beginn: toolbar -->
+<div id="moduletoolbar">
+    <div class="toolbar" id="optiontoolbar">
+        <a id="rcmbtn105" class="button checkmail" onClick="loadContent('mail/mail_domain_catchall_edit.php');" href="#" title="{tmpl_var name="add_new_record_txt"}">{tmpl_var name="add_new_record_txt"}</a>
+    </div>
+</div>
+<!-- end: toolbar -->
+
+<!-- beginn: modulebody -->
+<div class="uibox boxlistcontent" id="modulecontainer">
+    <h2 class="module-title"><tmpl_var name="list_head_txt"></h2>
+    <p class="module-desc"><tmpl_var name="list_desc_txt"></p>
+    
+    <!-- beginn: modulecontent -->
+    <div class="panel panel_list_mail_domain_catchall">
+        <table class="list">
+            <thead>
+                <tr>
+                    <th class="tbl_col_active" scope="col"><tmpl_var name="active_txt"></th>
+                    <th class="tbl_col_source" scope="col"><tmpl_var name="source_txt"></th>
+                    <th class="tbl_col_destination" scope="col"><tmpl_var name="destination_txt"></th>
+                    <th class="tbl_col_buttons" scope="col">&nbsp;</th>
+                </tr>
+                <tr>
+                    <td class="tbl_col_active"><select name="search_active">{tmpl_var name='search_active'}</select></td>
+                    <td class="tbl_col_source"><input type="text" name="search_source" value="{tmpl_var name='search_source'}" /></td>
+                    <td class="tbl_col_destination"><input type="text" name="search_destination" value="{tmpl_var name='search_destination'}" /></td>
+                    <td class="tbl_col_buttons"><div class="buttons"><button type="button" class="icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="submitForm('pageForm','mail/mail_domain_catchall_list.php');"><span>{tmpl_var name="filter_txt"}</span></button></div></td>
+                </tr>
+            </thead>
+            <tbody>
+            <tmpl_loop name="records">
+                <tr class="tbl_row_<tmpl_if name='__EVEN__'}even<tmpl_else>uneven</tmpl_if>">
+                    <td class="tbl_col_active"><a href="#" onClick="loadContent('mail/mail_domain_catchall_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="active"}</a></td>
+                    <td class="tbl_col_source"><a href="#" onClick="loadContent('mail/mail_domain_catchall_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="source"}</a></td>
+                    <td class="tbl_col_destination"><a href="#" onClick="loadContent('mail/mail_domain_catchall_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="destination"}</a></td>
+                    <td class="tbl_col_buttons">
+                    <div class="buttons icons16">    
+                        <a class="icons16 icoDelete" href="javascript: del_record('mail/mail_domain_catchall_del.php?id={tmpl_var name='id'}&phpsessid={tmpl_var name='phpsessid'}','{tmpl_var name='delete_confirmation'}');"><span>{tmpl_var name='delete_txt'}</span></a>
+                    </div>
+                    </td>
+                </tr>
+            </tmpl_loop>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td class="tbl_footer tbl_paging" colspan="4"><tmpl_var name="paging"></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div><!-- end: modulecontent -->
+</div><!-- end: modulebody -->
