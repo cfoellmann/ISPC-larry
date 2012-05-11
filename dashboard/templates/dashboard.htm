@@ -1,15 +1,16 @@
 <!-- begin: toolbar -->
 <div id="moduletoolbar">
     <div class="toolbar" id="optiontoolbar">
-        <a href="#" onClick="loadContent('sites/web_domain_edit.php');" title="{tmpl_var name="add_new_record_txt"}" class="button compose" >{tmpl_var name="add_new_record_txt"}</a>
+        &nbsp;
     </div>
 </div>
 <!-- end: toolbar -->
 
 <!-- begin: modulebody -->
 <div class="uibox boxlistcontent" id="modulecontainer">
-    <h1 class="module-title"><tmpl_var name="welcome_user"></h1>
+    <h2 class="module-title"><tmpl_var name="app_title"> <tmpl_var name="app_version"></h2>
     <div class="panel panel_dashboard">
+        <h3 class="welcome"><tmpl_var name="welcome_user"></h3>
         <div>
             <tmpl_if name='error'>
                 <div class="systemmonitor-state state-error">
@@ -45,13 +46,5 @@
                 <p>&nbsp;</p>
             </tmpl_loop>
         </div>
-    </div>
-</div>
-<!-- end: modulebody -->
-<!-- begin:footer -->
-<footer>
-    <div class="statusbar" id="message">
-        <p>Powered by <a href="<tmpl_var name="app_link">" target="_blank"><tmpl_var name="app_title"></a></p>
-        <div class="loading" style="display: none;">Lädt…</div></div>
-</footer>
-<!-- end: footer -->  
+    </div><!-- end: modulecontent -->
+</div><!-- end: modulebody -->
