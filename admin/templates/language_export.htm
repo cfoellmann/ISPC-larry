@@ -1,0 +1,35 @@
+<!-- beginn: toolbar -->
+<div id="moduletoolbar">
+    <div class="toolbar" id="optiontoolbar">
+        <a id="rcmbtn105" class="button checkmail" onClick="loadContent('admin/language_list.php');" href="#" title="{tmpl_var name='btn_cancel_txt'}">{tmpl_var name='btn_cancel_txt'}</a>
+    </div>
+</div>
+<!-- end: toolbar -->
+
+<!-- beginn: modulebody -->
+<div class="uibox boxlistcontent" id="modulecontainer">
+    <h2 class="module-title"><tmpl_var name="list_head_txt"></h2>
+    <p class="module-desc"><tmpl_var name="list_desc_txt"></p>
+    
+    <!-- beginn: modulecontent -->
+    <div class="panel panel_language_export">
+        <div class="ctrlHolder">
+            <label for="lng_select">{tmpl_var name='language_select_txt'}</label>
+            <select name="lng_select" id="lng_select" class="selectInput withicons">
+                {tmpl_var name='language_option'}
+            </select>
+        </div>
+            
+        <tmpl_if name="msg">
+            <div id="OKMsg"><p><tmpl_var name="msg"></p></div>
+        </tmpl_if>
+            
+        <input type="hidden" name="id" value="{tmpl_var name='id'}">
+            
+        <div class="buttonHolder buttons">
+            <button class="positive iconstxt icoPositive" type="button" value="{tmpl_var name='btn_save_txt'}" onClick="submitForm('pageForm','admin/language_export.php');"><span>{tmpl_var name='btn_save_txt'}</span></button>
+            <button class="negative iconstxt icoNegative" type="button" value="{tmpl_var name='btn_cancel_txt'}" onClick="loadContent('admin/language_list.php');"><span>{tmpl_var name='btn_cancel_txt'}</span></button>
+        </div>
+            
+    </div><!-- end: modulecontent -->
+</div><!-- end: modulebody -->

@@ -1,0 +1,61 @@
+<!-- beginn: toolbar -->
+<div id="moduletoolbar">
+    <div class="toolbar" id="optiontoolbar">
+        <a id="rcmbtn105" class="button checkmail" onClick="loadContent('admin/server_ip_edit.php');" href="#" title="{tmpl_var name="add_new_record_txt"}">{tmpl_var name="add_new_record_txt"}</a>
+    </div>
+</div>
+<!-- end: toolbar -->
+
+<!-- beginn: modulebody -->
+<div class="uibox boxlistcontent" id="modulecontainer">
+    <h2 class="module-title"><tmpl_var name="list_head_txt"></h2>
+    <p class="module-desc"><tmpl_var name="list_desc_txt"></p>
+    
+    <!-- beginn: modulecontent -->
+    <div class="panel panel_list_server_ip">
+        <table class="list">
+            <thead>
+                <tr>
+                    <th class="tbl_col_server_id" scope="col"><tmpl_var name="server_id_txt"></th>
+                    <th class="tbl_col_client_id" scope="col"><tmpl_var name="client_id_txt"></th>
+                    <th class="tbl_col_ip_type" scope="col"><tmpl_var name="ip_type_txt"></th>
+                    <th class="tbl_col_ip_address" scope="col"><tmpl_var name="ip_address_txt"></th>
+                    <th class="tbl_col_virtualhost" scope="col"><tmpl_var name="virtualhost_txt"></th>
+                    <th class="tbl_col_virtualhost_port" scope="col"><tmpl_var name="virtualhost_port_txt"></th>
+                    <th class="tbl_col_buttons" scope="col">&nbsp;</th>
+                </tr>
+                <tr>
+                    <td class="tbl_col_server_id"><select name="search_server_id">{tmpl_var name='search_server_id'}</select></td>
+                    <td class="tbl_col_client_id"><select name="search_client_id">{tmpl_var name='search_client_id'}</select></td>
+                    <td class="tbl_col_ip_type"><select name="search_ip_type">{tmpl_var name='search_ip_type'}</select></td>
+                    <td class="tbl_col_ip_address"><input type="text" name="search_ip_address" value="{tmpl_var name='search_ip_address'}" /></td>
+                    <td class="tbl_col_virtualhost"><select name="search_virtualhost">{tmpl_var name='search_virtualhost'}</select></td>
+                    <td class="tbl_col_virtualhost_port"><input type="text" name="search_virtualhost_port" value="{tmpl_var name='search_virtualhost_port'}" /></td>
+                    <td class="tbl_col_buttons"><div class="buttons"><button type="button" class="icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="submitForm('pageForm','admin/server_ip_list.php');"><span>{tmpl_var name="filter_txt"}</span></button></div></td>
+                </tr>
+            </thead>
+            <tbody>
+            <tmpl_loop name="records">
+                <tr class="tbl_row_<tmpl_if name='__EVEN__'}even<tmpl_else>uneven</tmpl_if>">
+                    <td class="tbl_col_server_id"><a href="#" onClick="loadContent('admin/server_ip_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="server_id"}</a></td>
+                    <td class="tbl_col_client_id"><a href="#" onClick="loadContent('admin/server_ip_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="client_id"}</a></td>
+                    <td class="tbl_col_ip_type"><a href="#" onClick="loadContent('admin/server_ip_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="ip_type"}</a></td>
+                    <td class="tbl_col_ip_address"><a href="#" onClick="loadContent('admin/server_ip_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="ip_address"}</a></td>
+                    <td class="tbl_col_virtualhost"><a href="#" onClick="loadContent('admin/server_ip_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="virtualhost"}</a></td>
+                    <td class="tbl_col_virtualhost_port"><a href="#" onClick="loadContent('admin/server_ip_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="virtualhost_port"}</a></td>
+                    <td class="tbl_col_buttons">
+                    <div class="buttons icons16">    
+                        <a class="icons16 icoDelete" href="javascript: del_record('admin/server_ip_del.php?id={tmpl_var name='id'}&phpsessid={tmpl_var name='phpsessid'}','{tmpl_var name='delete_confirmation'}');"><span>{tmpl_var name='delete_txt'}</span></a>
+                    </div>
+                    </td>
+                </tr>
+            </tmpl_loop>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td class="tbl_footer tbl_paging" colspan="7"><tmpl_var name="paging"></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div><!-- end: modulecontent -->
+</div><!-- end: modulebody -->

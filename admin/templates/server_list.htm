@@ -1,0 +1,64 @@
+<!-- beginn: toolbar -->
+<div id="moduletoolbar">
+    <div class="toolbar" id="optiontoolbar">
+        &nbsp;
+    </div>
+</div>
+<!-- end: toolbar -->
+
+<!-- beginn: modulebody -->
+<div class="uibox boxlistcontent" id="modulecontainer">
+    <h2 class="module-title"><tmpl_var name="list_head_txt"></h2>
+    <p class="module-desc"><tmpl_var name="list_desc_txt"></p>
+    
+    <!-- beginn: modulecontent -->
+    <div class="panel panel_list_server">
+        <table class="list">
+            <thead>
+                <tr>
+                    <th class="tbl_col_server_name" scope="col"><tmpl_var name="server_name_txt"></th>
+                    <th class="tbl_col_mail_server" scope="col"><tmpl_var name="mail_server_txt"></th>
+                    <th class="tbl_col_web_server" scope="col"><tmpl_var name="web_server_txt"></th>
+                    <th class="tbl_col_dns_server" scope="col"><tmpl_var name="dns_server_txt"></th>
+                    <th class="tbl_col_file_server" scope="col"><tmpl_var name="file_server_txt"></th>
+                    <th class="tbl_col_db_server" scope="col"><tmpl_var name="db_server_txt"></th>
+                    <th class="tbl_col_vserver_server" scope="col"><tmpl_var name="vserver_server_txt"></th>
+                    <th class="tbl_col_buttons" scope="col">&nbsp;</th>
+                </tr>
+                <tr>
+                    <td class="tbl_col_server_name"><input type="text" name="search_server_name" value="{tmpl_var name='search_server_name'}" /></td>
+                    <td class="tbl_col_mail_server"><select name="search_active">{tmpl_var name='search_mail_server'}</select></td>
+                    <td class="tbl_col_web_server"><select name="search_active">{tmpl_var name='search_web_server'}</select></td>
+                    <td class="tbl_col_dns_server"><select name="search_active">{tmpl_var name='search_dns_server'}</select></td>
+                    <td class="tbl_col_file_server"><select name="search_active">{tmpl_var name='search_file_server'}</select></td>
+                    <td class="tbl_col_db_server"><select name="search_active">{tmpl_var name='search_db_server'}</select></td>
+                    <td class="tbl_col_vserver_server"><select name="search_active">{tmpl_var name='search_vserver_server'}</select></td>
+                                <td class="tbl_col_buttons"><div class="buttons"><button type="button" class="icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="submitForm('pageForm','admin/server_list.php');"><span>{tmpl_var name="filter_txt"}</span></button></div></td>
+                </tr>
+            </thead>
+            <tbody>
+            <tmpl_loop name="records">
+                <tr class="tbl_row_<tmpl_if name='__EVEN__'}even<tmpl_else>uneven</tmpl_if>">
+                    <td class="tbl_col_server_name"><a href="#" onClick="loadContent('admin/server_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="server_name"}</a></td>
+                    <td class="tbl_col_mail_server">{tmpl_var name="mail_server"}</td>
+                    <td class="tbl_col_web_server">{tmpl_var name="web_server"}</td>
+                    <td class="tbl_col_dns_server">{tmpl_var name="dns_server"}</td>
+                    <td class="tbl_col_file_server">{tmpl_var name="file_server"}</td>
+                    <td class="tbl_col_db_server">{tmpl_var name="db_server"}</td>
+                    <td class="tbl_col_vserver_server">{tmpl_var name="vserver_server"}</td>
+                    <td class="tbl_col_buttons">
+                    <div class="buttons icons16">    
+                        <a class="icons16 icoDelete" href="javascript: del_record('admin/server_del.php?id={tmpl_var name='id'}&phpsessid={tmpl_var name='phpsessid'}','{tmpl_var name='delete_confirmation'}');"><span>{tmpl_var name='delete_txt'}</span></a>
+                    </div>
+                    </td>
+                </tr>
+            </tmpl_loop>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td class="tbl_footer tbl_paging" colspan="8"><tmpl_var name="paging"></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div><!-- end: modulecontent -->
+</div><!-- end: modulebody -->

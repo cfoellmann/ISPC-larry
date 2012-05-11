@@ -1,0 +1,48 @@
+<!-- beginn: toolbar -->
+<div id="moduletoolbar">
+    <div class="toolbar" id="optiontoolbar">
+        &nbsp;
+    </div>
+</div>
+<!-- end: toolbar -->
+
+<!-- beginn: modulebody -->
+<div class="uibox boxlistcontent" id="modulecontainer">
+    <h2 class="module-title"><tmpl_var name="list_head_txt"></h2>
+    <p class="module-desc"><tmpl_var name="list_desc_txt"></p>
+    
+    <!-- beginn: modulecontent -->
+    <div class="panel panel_language_groups">
+        <div class="buttons">
+            <div class="ctrlHolder">
+                <label for="lng_select">{tmpl_var name='language_select_txt'}</label>
+                <select name="lng_select" id="language" class="selectInput withicons" onChange="submitForm('pageForm','admin/language_list.php');">
+                                                {tmpl_var name='language_option'}
+                                        </select>
+            </div>
+        </div>
+        <table class="list">
+            <thead>
+            <tr>
+                <th class="tbl_col_module" scope="col"><tmpl_var name="module_txt"></th>
+                <th class="tbl_col_lang_file" scope="col"><tmpl_var name="lang_file_txt"></th>
+                <th scope="col"><tmpl_var name="lang_file_date_txt"></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tmpl_loop name="records">
+            <tr class="tbl_row_<tmpl_if name='__EVEN__'}even<tmpl_else>uneven</tmpl_if>">
+                <td class="tbl_col_module"><a href="#" onClick="loadContent('admin/language_edit.php?lang_file={tmpl_var name="lang_file"}&module={tmpl_var name="module"}&lang={tmpl_var name="lang"}');">{tmpl_var name="module"}</a></td>
+                <td class="tbl_col_lang_file"><a href="#" onClick="loadContent('admin/language_edit.php?lang_file={tmpl_var name="lang_file"}&module={tmpl_var name="module"}&lang={tmpl_var name="lang"}');">{tmpl_var name="lang_file"}</a></td>
+                <td><a href="#" onClick="loadContent('admin/language_edit.php?lang_file={tmpl_var name="lang_file"}&module={tmpl_var name="module"}&lang={tmpl_var name="lang"}');">{tmpl_var name="lang_file_date"}</a></td>
+            </tr>
+            </tmpl_loop>
+            </tbody>
+            <tfoot>
+            <tr>
+                <td class="tbl_footer tbl_paging" colspan="3"><tmpl_var name="paging"></td>
+            </tr>
+            </tfoot>
+        </table>
+    </div><!-- end: modulecontent -->
+</div><!-- end: modulebody -->
