@@ -1,0 +1,21 @@
+<!-- beginn: toolbar -->
+<div id="moduletoolbar">
+    <div class="toolbar" id="optiontoolbar">
+        &nbsp;
+    </div>
+</div>
+<!-- end: toolbar -->
+
+<!-- beginn: modulebody -->
+<div class="uibox boxlistcontent" id="modulecontainer">
+    <h2 class="module-title"><tmpl_var name="list_head_txt"></h2>
+    <p class="module-desc"><tmpl_var name="list_desc_txt"></p>
+    
+    <!-- beginn: modulecontent -->
+    <div class="panel panel_system">
+
+    <fieldset><legend><tmpl_var name="monTransDate"><tmpl_var name="time"></legend>
+      <div class="systemmonitor"><tmpl_var name="output"></div>
+    </fieldset>
+    </div><!-- end: modulecontent -->
+</div><!-- end: modulebody -->
