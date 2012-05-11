@@ -1,0 +1,28 @@
+<!-- beginn: toolbar -->
+<div id="moduletoolbar">
+    <div class="toolbar" id="optiontoolbar">
+        <a id="rcmbtn105" class="button checkmail" onClick="loadContent('help/support_message_edit.php?reply={tmpl_var name='id'}');" href="#" title="{tmpl_var name="add_new_record_txt"}">{tmpl_var name='reply_txt'}</a>
+    </div>
+</div>
+<!-- end: toolbar -->
+
+<!-- beginn: modulebody -->
+<div class="uibox boxlistcontent" id="modulecontainer">
+    <h2 class="module-title"><tmpl_var name="list_head_txt"></h2>
+    <p class="module-desc"><tmpl_var name="list_desc_txt"></p>
+    
+    <!-- beginn: modulecontent -->
+    <div class="panel panel_support_message">
+        <div class="ctrlHolder">
+            <label for="subject">{tmpl_var name='subject_txt'}</label>
+            <p>{tmpl_var name='subject'}</p>
+        </div>
+        <div class="ctrlHolder">
+            <label for="message">{tmpl_var name='message_txt'}</label>
+            <p>{tmpl_var name='message'}</p>
+        </div>
+        <div class="buttonHolder buttons">
+            <button class="positive iconstxt icoPositive" type="button" value="{tmpl_var name='reply_txt'}" onClick="loadContent('help/support_message_edit.php?reply={tmpl_var name='id'}');"><span>{tmpl_var name='reply_txt'}</span></button>
+        </div>
+    </div><!-- end: modulecontent -->
+</div><!-- end: modulebody -->
