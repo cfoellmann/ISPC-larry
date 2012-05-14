@@ -7,8 +7,8 @@
 <!-- end: toolbar -->
 
 <!-- beginn: modulebody -->
-<div class="uibox boxlistcontent" id="modulecontainer">
-    <h2 class="module-title"><tmpl_var name="form_hint"></h2>
+<div class="module-title"><h1><tmpl_var name="form_hint"> &gt; Erweiterte Optionen</h1></div>
+<div class="module-box boxlistcontent" id="modulecontainer">
     <!-- tabs -->
     <ul class="tabsbar">
         <tmpl_loop name="formTab">
@@ -32,12 +32,12 @@
         <input name="document_root" id="document_root" value="{tmpl_var name='document_root'}" size="30" maxlength="255" type="hidden" class="textInput" />
         <div class="ctrlHolder">
             <label for="system_user">{tmpl_var name='system_user_txt'}</label>
-            <label for="system_user">{tmpl_var name='system_user'}</label>
+            <p>{tmpl_var name='system_user'}</p>
             <input name="system_user" id="system_user" value="{tmpl_var name='system_user'}" type="hidden" />
         </div>
         <div class="ctrlHolder">
             <label for="system_group">{tmpl_var name='system_group_txt'}</label>
-            <label for="system_group">{tmpl_var name='system_group'}</label>
+            <p>{tmpl_var name='system_group'}</p>
             <input name="system_group" id="system_group" value="{tmpl_var name='system_group'}" type="hidden" />
         </div>
         <div class="ctrlHolder apache">

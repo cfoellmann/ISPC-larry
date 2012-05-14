@@ -11,33 +11,31 @@
 <!-- end: toolbar -->
 
 <!-- beginn: modulebody -->
-<div class="uibox boxlistcontent" id="modulecontainer">
-    <h2 class="module-title"><tmpl_var name="ispconfig_update_title"></h2>
-    <p class="module-desc"><tmpl_var name="ispconfig_update_text"></p>
+<div class="module-title"><h1><tmpl_var name="ispconfig_update_title"></h1></div>
+<div class="module-box boxlistcontent" id="modulecontainer">
+    <div class="module-desc"><tmpl_var name="ispconfig_update_text"></div>
     
     <!-- beginn: modulecontent -->
-<div class="panel panel_language_add">
-  
-  <div class="pnl_formsarea">
-  <!--
-    <fieldset class="inlineLabels"><legend>{tmpl_var name='do_ispcupdate_caption'}</legend>
-      <div class="ctrlHolder">
-      	<label for="server_select">{tmpl_var name='select_server_txt'}</label>
-        <select name="server_select" id="server" class="selectInput" onchange="document.getElementById('OKMsg').style.visibility = 'hidden'; ">
-					{tmpl_var name='server_option'}
-				</select>
-      </div>
-    </fieldset>
+    <div class="panel panel_language_add">
 
-	<tmpl_if name="msg">
-	<div id="OKMsg"><p><tmpl_var name="msg"></p></div>
-  </tmpl_if>
-
-
-	  <div class="buttonHolder buttons">
-      <button class="positive iconstxt icoPositive" type="button" value="{tmpl_var name='btn_do_txt'}" onClick="submitForm('pageForm','admin/remote_action_ispcupdate.php');"><span>{tmpl_var name='btn_do_txt'}</span></button>
-    </div>
-	-->
-  </div>
-  
-</div>
+        <!--
+          <fieldset class="inlineLabels"><legend>{tmpl_var name='do_ispcupdate_caption'}</legend>
+            <div class="ctrlHolder">
+              <label for="server_select">{tmpl_var name='select_server_txt'}</label>
+              <select name="server_select" id="server" class="selectInput" onchange="document.getElementById('OKMsg').style.visibility = 'hidden'; ">
+                                              {tmpl_var name='server_option'}
+                                      </select>
+            </div>
+          </fieldset>
+      
+              <tmpl_if name="msg">
+              <div id="OKMsg"><p><tmpl_var name="msg"></p></div>
+        </tmpl_if>
+      
+      
+                <div class="buttonHolder buttons">
+            <button class="positive iconstxt icoPositive" type="button" value="{tmpl_var name='btn_do_txt'}" onClick="submitForm('pageForm','admin/remote_action_ispcupdate.php');"><span>{tmpl_var name='btn_do_txt'}</span></button>
+          </div>
+        -->
+    </div><!-- end: modulecontent -->
+</div><!-- end: modulebody -->

@@ -7,8 +7,8 @@
 <!-- end: toolbar -->
 
 <!-- beginn: modulebody -->
-<div class="uibox boxlistcontent" id="modulecontainer">
-    <h2 class="module-title"><tmpl_var name="form_hint"></h2>
+<div class="module-title"><h1><tmpl_var name="form_hint"> &gt; Webstatistiken</h1></div>
+<div class="module-box boxlistcontent" id="modulecontainer">
     <!-- tabs -->
     <ul class="tabsbar">
         <tmpl_loop name="formTab">
@@ -30,7 +30,7 @@
     <!-- beginn: modulecontent -->
     <div class="panel panel_web_domain">
         <div class="ctrlHolder">
-            <p>{tmpl_var name='stats_user_txt'}: &nbsp; &nbsp; admin</p>
+            <label>{tmpl_var name='stats_user_txt'}</label><p>admin</p>
         </div>
         <div class="ctrlHolder">
             <label for="stats_password">{tmpl_var name='stats_password_txt'}</label>

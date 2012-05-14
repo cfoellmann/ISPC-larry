@@ -7,8 +7,8 @@
 <!-- end: toolbar -->
 
 <!-- beginn: modulebody -->
-<div class="uibox boxlistcontent" id="modulecontainer">
-    <h2 class="module-title"><tmpl_var name="form_hint"></h2>
+<div class="module-title"><h1><tmpl_var name="form_hint"></h1></div>
+<div class="module-box boxlistcontent" id="modulecontainer">
     <!-- tabs -->
     <ul class="tabsbar">
         <tmpl_loop name="formTab">
@@ -28,45 +28,40 @@
     </tmpl_if>
     <!-- beginn: modulecontent -->
     <div class="panel panel_web_subdomain">
-        
-        <div class="pnl_formsarea">
-            <fieldset class="inlineLabels">
-                <div class="ctrlHolder">
-                    <label for="domain">{tmpl_var name='host_txt'}</label>
-                    <input name="domain" id="domain" value="{tmpl_var name='domain'}" size="30" maxlength="255" type="text" class="textInput formLengthHalf" />
-                </div>
-                <div class="ctrlHolder">
-                    <label for="parent_domain_id">{tmpl_var name='domain_txt'}</label>
-                    <select id="parent_domain_id" name="parent_domain_id" class="selectInput formLengthHalf">{tmpl_var name='parent_domain_id'}</select>
-                </div>
-                <div class="ctrlHolder">
-                    <label for="redirect_type">{tmpl_var name='redirect_type_txt'}</label>
-                    <select name="redirect_type" id="redirect_type" class="selectInput formLengthHalf">
-                        {tmpl_var name='redirect_type'}
-                    </select>
-                </div>
-                <div class="ctrlHolder">
-                    <label for="redirect_path">{tmpl_var name='redirect_path_txt'}</label>
-                    <input name="redirect_path" id="redirect_path" value="{tmpl_var name='redirect_path'}" size="30" maxlength="255" type="text" class="textInput" />
-                </div>
-                <div class="ctrlHolder">
-                    <p class="label">{tmpl_var name='active_txt'}</p>
-                    <div class="multiField">
-                        {tmpl_var name='active'}
-                    </div>
-                </div>
-            </fieldset>
-                
-            <input type="hidden" name="id" value="{tmpl_var name='id'}">
-                
-            <div class="buttonHolder buttons">
-                <button class="positive iconstxt icoPositive" type="button" value="{tmpl_var name='btn_save_txt'}" onClick="submitForm('pageForm','sites/web_subdomain_edit.php');"><span>{tmpl_var name='btn_save_txt'}</span></button>
-                <button class="negative iconstxt icoNegative" type="button" value="{tmpl_var name='btn_cancel_txt'}" onClick="loadContent('sites/web_subdomain_list.php');"><span>{tmpl_var name='btn_cancel_txt'}</span></button>
+        <div class="ctrlHolder">
+            <label for="domain">{tmpl_var name='host_txt'}</label>
+            <input name="domain" id="domain" value="{tmpl_var name='domain'}" size="30" maxlength="255" type="text" class="textInput formLengthHalf" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="parent_domain_id">{tmpl_var name='domain_txt'}</label>
+            <select id="parent_domain_id" name="parent_domain_id" class="selectInput formLengthHalf">{tmpl_var name='parent_domain_id'}</select>
+        </div>
+        <div class="ctrlHolder">
+            <label for="redirect_type">{tmpl_var name='redirect_type_txt'}</label>
+            <select name="redirect_type" id="redirect_type" class="selectInput formLengthHalf">
+                {tmpl_var name='redirect_type'}
+            </select>
+        </div>
+        <div class="ctrlHolder">
+            <label for="redirect_path">{tmpl_var name='redirect_path_txt'}</label>
+            <input name="redirect_path" id="redirect_path" value="{tmpl_var name='redirect_path'}" size="30" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="active">{tmpl_var name='active_txt'}</label>
+            <div class="multiField">
+                {tmpl_var name='active'}
             </div>
         </div>
-            
-    </div>
+                    
+        <input type="hidden" name="id" value="{tmpl_var name='id'}">
+
+        <div class="buttonHolder buttons">
+            <button class="positive iconstxt icoPositive" type="button" value="{tmpl_var name='btn_save_txt'}" onClick="submitForm('pageForm','sites/web_subdomain_edit.php');"><span>{tmpl_var name='btn_save_txt'}</span></button>
+            <button class="negative iconstxt icoNegative" type="button" value="{tmpl_var name='btn_cancel_txt'}" onClick="loadContent('sites/web_subdomain_list.php');"><span>{tmpl_var name='btn_cancel_txt'}</span></button>
+        </div>
+    </div><!-- end: modulecontent -->
 </div><!-- end: modulebody -->
+
 <script language="JavaScript" type="text/javascript">
 		//var webId = jQuery('input[name="id"]').val();
 		var webId = jQuery('#parent_domain_id').val();

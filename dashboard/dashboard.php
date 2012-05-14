@@ -109,10 +109,10 @@ if($_SESSION["s"]["user"]["typ"] == 'admin') {
 			    ((isset($new_version[2]) && $new_version[2] < 10) ? '0'.$new_version[2] : $new_version[2]) .
 			    ((isset($new_version[3]) && $new_version[3] < 10) ? (($new_version[3] < 1) ? '00' : '0'.$new_version[3]) : @$new_version[3]);
 	if($new_fullversion > $this_fullversion) {
-		$info[] = array('info_msg' => 'There is a new Version of ISPConfig 3 available!<br>' . 
-			'This Version: ' . $v1 . '<br>' . 
-			'New Version : ' . $v2 . 
-			'<br><br><a href="http://www.ispconfig.org/ispconfig-3/download" target="ISPC">See more...</a>');
+		$info[] = array('info_msg' => '<p>There is a new Version of ISPConfig 3 available!</p>' . 
+			'<p>This Version: <b>' . $v1 . '</b></p>' . 
+			'<p>New Version : <b>' . $v2 .  '</b></p>' .
+			'<p><a href="http://www.ispconfig.org/ispconfig-3/download" target="ISPC">See more...</a></p>');
 	}
 }
 

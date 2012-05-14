@@ -1,4 +1,3 @@
-<!--    TODO: language string (Resync DNS Records) -->
 <!-- beginn: toolbar -->
 <div id="moduletoolbar">
     <div class="toolbar" id="optiontoolbar">
@@ -8,17 +7,16 @@
 <!-- end: toolbar -->
 
 <!-- beginn: modulebody -->
-<div class="uibox boxlistcontent" id="modulecontainer">
-
-    <h2 class="module-title">DNS Resync</h2>
-    <p class="module-desc"><tmpl_var name="list_desc_txt"></p>
+<div class="module-title"><h1>DNS Resync</h1></div>    
+<div class="module-box boxlistcontent" id="modulecontainer">
+    <div class="module-desc"><tmpl_var name="list_desc_txt"></div>
     
     <!-- beginn: modulecontent -->
     <div class="panel panel_language_import">
         <div class="ctrlHolder">
-            <p class="label">Resync DNS Records</p>
+            <label>Resync DNS Records</label>
             <div class="multiField">
-                <input id="resync" type="checkbox" value="1" name="resync" checked/>
+                <input id="resync" type="checkbox" value="1" name="resync" s/>
             </div>
         </div>
 

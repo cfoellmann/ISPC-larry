@@ -730,21 +730,38 @@ footer p {
     -moz-box-shadow: 0 0 2px #999;
     background: #fff;
 }
+.module-desc {
+    
+}
 
 /* forms/fields
 -------------------------------------------------------------- */
-.ctrlHolder {
+.ctrlHolder,
+.wf_oneField {
     line-height: 25px;
     border-bottom: 0px solid red;
 }
-.ctrlHolder label {
+.ctrlHolder label,
+.wf_oneField label,
+p.label {
     float: left;
     width: 231px;
-    margin-right: 15px;
+    margin: 0 15px 0 0;
     text-align: right;
 }
-
-
+p.formHint,
+div.multiField {
+    margin: 0 0 0 246px;
+}
+label.inlineLabel {
+    float: none;
+    width: auto;
+    margin: 0;
+    text-align: left;
+}
+div.multiField {
+    
+}
 /* modules/tabsbar
 -------------------------------------------------------------- */
 ul.tabsbar {
@@ -1651,8 +1668,10 @@ ul.toolbarmenu li span.conversation {
 
 /* buttons
 -------------------------------------------------------------- */
-.buttonHolder {
+.buttonHolder,
+.wf_actions {
     margin: 25px 0 0 150px;
+    height: 60px;
 }
 .buttons button[type] {
     line-height: 17px;

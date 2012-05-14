@@ -7,8 +7,8 @@
 <!-- end: toolbar -->
 
 <!-- beginn: modulebody -->
-<div class="uibox boxlistcontent" id="modulecontainer">
-    <h2 class="module-title"><tmpl_var name="form_hint"></h2>
+<div class="module-title"><h1><tmpl_var name="form_hint"></h1></div>
+<div class="module-box boxlistcontent" id="modulecontainer">
     <!-- tabs -->
     <ul class="tabsbar">
         <tmpl_loop name="formTab">
@@ -92,37 +92,37 @@
             <input name="traffic_quota" id="traffic_quota" value="{tmpl_var name='traffic_quota'}" size="7" maxlength="7" type="text" class="textInput formLengthLimit" />&nbsp;MB <tmpl_var name='traffic_quota_exceeded_txt'>
         </div>
         <div class="ctrlHolder">
-            <p class="label">{tmpl_var name='cgi_txt'}</p>
+            <label for="cgi">{tmpl_var name='cgi_txt'}</label>
             <div class="multiField">
                 {tmpl_var name='cgi'}
             </div>
         </div>
         <div class="ctrlHolder">
-            <p class="label">{tmpl_var name='ssi_txt'}</p>
+            <label for="ssi">{tmpl_var name='ssi_txt'}</label>
             <div class="multiField">
                 {tmpl_var name='ssi'}
             </div>
         </div>
         <div class="ctrlHolder apache">
-            <p class="label">{tmpl_var name='ruby_txt'}</p>
+            <label for="ruby">{tmpl_var name='ruby_txt'}</label>
             <div class="multiField">
                 {tmpl_var name='ruby'}
             </div>
         </div>
         <div class="ctrlHolder apache">
-            <p class="label">{tmpl_var name='python_txt'}</p>
+            <label for="python">{tmpl_var name='python_txt'}</label>
             <div class="multiField">
                 {tmpl_var name='python'}
             </div>
         </div>
         <div class="ctrlHolder apache">
-            <p class="label">{tmpl_var name='suexec_txt'}</p>
+            <label for="suexec">{tmpl_var name='suexec_txt'}</label>
             <div class="multiField">
                 {tmpl_var name='suexec'}
             </div>
         </div>
         <div class="ctrlHolder">
-            <p class="label">{tmpl_var name='errordocs_txt'}</p>
+            <label for="errordocs">{tmpl_var name='errordocs_txt'}</label>
             <div class="multiField">
                 {tmpl_var name='errordocs'}
             </div>
@@ -135,7 +135,7 @@
             </select>
         </div>
         <div class="ctrlHolder">
-            <p class="label">{tmpl_var name='ssl_txt'}</p>
+            <label for="ssl">{tmpl_var name='ssl_txt'}</label>
             <div class="multiField">
                 {tmpl_var name='ssl'}
             </div>
@@ -147,7 +147,7 @@
             </select>
         </div>
         <div class="ctrlHolder">
-            <p class="label">{tmpl_var name='active_txt'}</p>
+            <label for="active">{tmpl_var name='active_txt'}</label>
             <div class="multiField">
                 {tmpl_var name='active'}
             </div>

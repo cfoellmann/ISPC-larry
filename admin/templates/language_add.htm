@@ -7,9 +7,9 @@
 <!-- end: toolbar -->
 
 <!-- beginn: modulebody -->
-<div class="uibox boxlistcontent" id="modulecontainer">
-    <h2 class="module-title"><tmpl_var name="list_head_txt"></h2>
-    <p class="module-desc"><tmpl_var name="list_desc_txt"></p>
+<div class="module-title"><h1><tmpl_var name="list_head_txt"></h1></div>
+<div class="module-box boxlistcontent" id="modulecontainer">
+    <div class="module-desc"><tmpl_var name="list_desc_txt"></div>
     
     <!-- beginn: modulecontent -->
     <div class="panel panel_language_add">
@@ -21,10 +21,11 @@
         </div>
         <div class="ctrlHolder">
             <label for="lng_new">{tmpl_var name='language_new_txt'}</label>
-            <input name="lng_new" id="lng_new" value="" size="30" maxlength="255" type="text" class="textInput formLengthHalf" />
+            <input name="lng_new" id="lng_new" value="" size="30" maxlength="255" type="text" class="textInput formLengthHalf" /> 
+        </div>
+        <div class="ctrlHolder">
             <p class="formHint">{tmpl_var name='language_new_hint_txt'}</p>
         </div>
-            
         <input type="hidden" name="id" value="{tmpl_var name='id'}">
             
         <div class="buttonHolder buttons">

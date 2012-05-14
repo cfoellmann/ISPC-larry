@@ -7,9 +7,9 @@
 <!-- end: toolbar -->
 
 <!-- beginn: modulebody -->
-<div class="uibox boxlistcontent" id="modulecontainer">
-    <h2 class="module-title">Login</h2>
-    <p class="module-desc"><tmpl_var name="list_desc_txt"></p>
+<div class="module-title"><h1>Login</h1></div>
+<div class="module-box boxlistcontent" id="modulecontainer">
+    <div class="module-desc"><tmpl_var name="list_desc_txt"></div>
     
     <!-- beginn: modulecontent -->
     <div class="panel panel_login">
@@ -17,7 +17,7 @@
             <div id="OKMsg"><p><tmpl_var name="msg"></p></div>
         </tmpl_if>
         <tmpl_if name="error">
-            <div id="errorMsg"><h3>ERROR</h3><ol><li><tmpl_var name="error"></li></ol><br /><a href="#" onclick="loadContent('login/password_reset.php');">Password lost?</a></div><!--TODO: Language string for "Password lost"-->
+            <div id="errorMsg"><h3>ERROR</h3><ol><li><tmpl_var name="error"></li></ol><br /><a href="#" onclick="loadContent('login/password_reset.php');">Password lost?</a></div>
         </tmpl_if>
         <div class="ctrlHolder">
             <label for="username">{tmpl_var name='username_txt'}</label>

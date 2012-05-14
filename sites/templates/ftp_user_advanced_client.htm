@@ -7,8 +7,8 @@
 <!-- end: toolbar -->
 
 <!-- beginn: modulebody -->
-<div class="uibox boxlistcontent" id="modulecontainer">
-    <h2 class="module-title"><tmpl_var name="form_hint"></h2>
+<div class="module-title"><h1><tmpl_var name="form_hint"></h1></div>
+<div class="module-box boxlistcontent" id="modulecontainer">
     <!-- tabs -->
     <ul class="tabsbar">
         <tmpl_loop name="formTab">
@@ -29,21 +29,17 @@
         
     <!-- beginn: modulecontent -->
     <div class="panel panel_ftp_user">
-        
-        <div class="pnl_formsarea">
-            <fieldset class="inlineLabels">
-                <div class="ctrlHolder">
-                    <label for="dir">{tmpl_var name='dir_txt'}</label>
-                    <input name="dir" id="dir" value="{tmpl_var name='dir'}" size="30" maxlength="255" type="text" class="textInput" />
-                </div>
-            </fieldset>
-                
-            <input type="hidden" name="id" value="{tmpl_var name='id'}">
-                
-            <div class="buttonHolder buttons">
-                <button class="positive iconstxt icoPositive" type="button" value="{tmpl_var name='btn_save_txt'}" onClick="submitForm('pageForm','sites/ftp_user_edit.php');"><span>{tmpl_var name='btn_save_txt'}</span></button>
-                <button class="negative iconstxt icoNegative" type="button" value="{tmpl_var name='btn_cancel_txt'}" onClick="loadContent('sites/ftp_user_list.php');"><span>{tmpl_var name='btn_cancel_txt'}</span></button>
-            </div>
-        </div>    
+        <div class="ctrlHolder">
+            <label for="dir">{tmpl_var name='dir_txt'}</label>
+            <input name="dir" id="dir" value="{tmpl_var name='dir'}" size="30" maxlength="255" type="text" class="textInput" />
+        </div>
+        </fieldset>
+            
+        <input type="hidden" name="id" value="{tmpl_var name='id'}">
+            
+        <div class="buttonHolder buttons">
+            <button class="positive iconstxt icoPositive" type="button" value="{tmpl_var name='btn_save_txt'}" onClick="submitForm('pageForm','sites/ftp_user_edit.php');"><span>{tmpl_var name='btn_save_txt'}</span></button>
+            <button class="negative iconstxt icoNegative" type="button" value="{tmpl_var name='btn_cancel_txt'}" onClick="loadContent('sites/ftp_user_list.php');"><span>{tmpl_var name='btn_cancel_txt'}</span></button>
+        </div> 
     </div><!-- end: modulecontent -->
 </div><!-- end: modulebody -->
