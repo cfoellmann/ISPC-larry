@@ -1,0 +1,52 @@
+<div id="login-form">
+    <div class="box-inner">
+        <img width="152" height="32" title="<tmpl_var name="app_title">" alt="<tmpl_var name="app_title">" src="themes/ispc-larry/images/header_logo.png" id="logo" />
+            <!-- beginn: modulecontent -->
+            <div class="panel panel_login">
+                <tmpl_if name="msg">
+                    <div id="OKMsg"><p><tmpl_var name="msg"></p></div>
+                </tmpl_if>
+                
+                <div class="ctrlHolder">
+                    <label for="username">{tmpl_var name='username_txt'}</label>
+                    <input name="username" id="username" value="" size="25" maxlength="255" type="text" class="textInput"  onkeypress="if (event.keyCode && event.keyCode == 13) {submitLoginForm('pageForm'); return false;};" />
+                </div>
+                <div class="ctrlHolder">
+                    <label for="passwort">{tmpl_var name='password_txt'}</label>
+                    <input name="passwort" id="passwort" value="" size="25" maxlength="255" type="password" class="textInput"  onkeypress="if (event.keyCode && event.keyCode == 13) {submitLoginForm('pageForm'); return false;};" />
+                </div>			
+
+                <input type="hidden" name="s_mod" value="login" />
+                <input type="hidden" name="s_pg" value="index" />
+
+                <div class="buttonHolder buttons">
+                    <button class="positive iconstxt icoKey" type="button" value="{tmpl_var name="add_new_record_txt"}" onClick="submitLoginForm('pageForm');"><span>{tmpl_var name='login_button_txt'}</span></button>
+                </div>
+                <br style="clear:both" />
+            </div><!-- end: modulecontent -->       
+    </div>
+                
+    <div class="box-bottom">
+        <div id="message">
+            <tmpl_if name="error">
+                <tmpl_var name="error">
+                <p><a href="#" onclick="loadContent('login/password_reset.php');">Password lost?</a></p>
+            </tmpl_if>
+        </div>
+    </div>
+                
+    <!-- begin:footer -->
+    <footer><!-- <div id="bottomline"> -->
+        <!-- TODO: CSS make div height flexible for help text display + #pageContent must be pressed upward by footer/div -->
+        <p>Powered by <a href="<tmpl_var name="app_link">" target="_blank"><tmpl_var name="app_title"></a></p>
+    </footer><!-- end: footer -->
+</div>
+
+
+
+
+
+
+
+
+
