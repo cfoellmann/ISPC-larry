@@ -34,35 +34,54 @@ table.list {
 }
 table {
     background: -moz-linear-gradient(center top , #F7F7F7 0%, #EEEEEE 100%) repeat scroll 0 0 transparent;
+    background: -webkit-gradient(linear , left top, left bottom, color-stop(0%,#F7F7F7), color-stop(100%,#EEEEEE));
+    background: -o-linear-gradient(center top , #F7F7F7 0%, #EEEEEE 100%) repeat scroll 0 0 transparent;
+    background: -ms-linear-gradient(center top , #F7F7F7 0%, #EEEEEE 100%) repeat scroll 0 0 transparent;
+    background: linear-gradient(center top , #F7F7F7 0%, #EEEEEE 100%) repeat scroll 0 0 transparent;
     border: 0 none;
     border-radius: 5px 5px 5px 5px;
     margin: 0 0 12px;
     padding: 8px;
     border-collapse: collapse;
     margin-bottom: 0.5em;
-    width: auto;
 }
 th, td {
     padding: 0.5em;
     text-align: left;
 }
 table.list thead th {
+    background: linear-gradient(center top , #F0F0F0 0%, #D6D6D6 100%) repeat scroll 0 0 transparent;
+    background: -o-linear-gradient(center top , #F0F0F0 0%, #D6D6D6 100%) repeat scroll 0 0 transparent;
     background: -moz-linear-gradient(center top , #F0F0F0 0%, #D6D6D6 100%) repeat scroll 0 0 transparent;
+    background: -webkit-gradient(linear , left top, left bottom, color-stop(0%,#F0F0F0), color-stop(100%,#D6D6D6));
+    background: -ms-linear-gradient(center top , #F0F0F0 0%, #D6D6D6 100%) repeat scroll 0 0 transparent;
     border-bottom: 1px solid #CFCFCF;
 }
 table.list thead tr {
     border-radius: 5px 5px 0 0;
 }
 table.list tfoot td {
+    background: linear-gradient(center top , #F7F7F7 0%, #EEEEEE 100%) repeat scroll 0 0 transparent;
+    background: -o-linear-gradient(center top , #F7F7F7 0%, #EEEEEE 100%) repeat scroll 0 0 transparent;
     background: -moz-linear-gradient(center top , #F7F7F7 0%, #EEEEEE 100%) repeat scroll 0 0 transparent;
+    background: -webkit-gradient(linear , left top, left bottom, color-stop(0%,#F7F7F7), color-stop(100%,#EEEEEE));
+    background: -ms-linear-gradient(center top , #F7F7F7 0%, #EEEEEE 100%) repeat scroll 0 0 transparent;
     border: 0 none;
     margin: 0 0 12px;
     padding: 24px 8px 8px;
     text-align: center;
 }
-
-/* Input
+table.list .tbl_row_uneven {
+    background: #F0F8FF;
+}
+table.list .tbl_row_even {
+    background: #FCFCFC;
+}
+/* Forms/Input
 -------------------------------------------------------------- */
+textarea {
+    width: 400px;
+}
 input[type="text"],
 input[type="password"],
 textarea {
@@ -88,6 +107,27 @@ textarea:focus {
 input.placeholder,
 textarea.placeholder { color: #aaa; }
 
+input[type="checkbox"] {
+    margin: 6px 0;
+}
+
+select {
+    margin: 0; /* Safari by default adds a margin */
+    padding: 3px;
+    border: 1px solid #b2b2b2;
+    border-radius: 4px;
+    box-shadow: inset 0 0 2px 1px rgba(0,0,0, 0.1);
+    -moz-box-shadow: inset 0 0 2px 1px rgba(0,0,0, 0.1);
+    -webkit-box-shadow: inset 0 0 2px 1px rgba(0,0,0, 0.1);
+    -o-box-shadow: inset 0 0 2px 1px rgba(0,0,0, 0.1);
+}
+
+select.withicons option[value="y"] {
+    background-image: url("icons/x16/tick_circle_frame.png");
+}
+select.withicons option[value="n"] {
+    background-image: url("icons/x16/cross_circle_frame.png");
+}
 /* Input/buttons
 -------------------------------------------------------------- */
 input.button {
@@ -446,14 +486,13 @@ a.iconlink.upload {
 
 /* layout/top
 -------------------------------------------------------------- */
-#topline {
+#top-line {
     height: 18px;
     background: url(images/bg_linen_dark.jpg) repeat #666;
     border-bottom: 1px solid #4f4f4f;
     padding: 2px 0 2px 10px;
-    color: #aaa;
 }
-#topnav {
+#middle-line {
     height: 46px;
     margin-bottom: 10px;
     padding: 0 0 0 10px;
@@ -463,17 +502,15 @@ a.iconlink.upload {
     background: -o-linear-gradient(top, #404040 0%, #060606 100%);
     background: -ms-linear-gradient(top, #404040 0%, #060606 100%);
     background: linear-gradient(top, #404040 0%, #060606 100%);
+    
+    
+    
+    
 }
-#topline a,
-#topnav a {
-    color: #eee;
+#top-line a {
     text-decoration: none;
 }
-#topline a:hover { text-decoration: underline; }
-#topnav h1 {
-    color:#FFF;
-    margin:0;
-}
+#top-line a:hover { text-decoration: underline; }
 #toplogo { padding-top: 2px; }
 .topleft { float: left; }
 .topright { float: right; }
@@ -481,18 +518,20 @@ a.iconlink.upload {
     display: inline-block;
     padding: 2px 10px 2px 20px;
 }
-#topline span.username { padding-right: 1em; }
-#topline .topleft a {
+#top-line span.username { padding-right: 1em; }
+#top-line .topleft a {
     display: inline-block;
     padding: 2px 0.8em 0 0;
     color: #aaa;
 }
-#topline a.button-logout {
+#top-line a.button-logout {
     display: inline-block;
     padding: 2px 10px 2px 20px;
     background: url(images/buttons.png) -6px -193px no-repeat;
     color: #fff;
 }
+/* layout/top/topNav
+-------------------------------------------------------------- */
 #topNav a {
     display: inline-block;
     height: 34px;
@@ -503,20 +542,61 @@ a.iconlink.upload {
     font-size: 110%;
     font-weight: normal;
     text-shadow: 0px 1px 1px black;
+    color: #eee;
+    text-decoration: none;
     padding: 5px 0 0 34px;
     height: 19px;
-    background: url(images/buttons.png) -1000px 0 no-repeat;
+    background-image: url("icons/icons_topnav.png");
+    background-position: 12px 3px;
+    background-repeat: no-repeat;
 }
-#topNav a.button-selected {
+#topNav a#topNav_current {
     color: #3cf;
     background-color: #2c2c2c;
 }
-#topNav a.button-dashboard span.button-inner {
-    background-position: 0 2px;
+#topNav a.button- span.button-inner {
+    background-position: 3px 0px;
 }
+#topNav a.button-dashboard span.button-inner {
+    background-position: 3px -60px;
+}
+#topNav a.button-tools span.button-inner {
+    background-position: 3px -210px;
+}
+#topNav a.button-sites span.button-inner {
+    background-position: 3px -270px;
+}
+#topNav a.button-monitor span.button-inner {
+    background-position: 3px -300px;
+}
+#topNav a.button-help span.button-inner {
+    background-position: 3px -90px;
+}
+#topNav a.button-admin span.button-inner {
+    background-position: 3px -30px;
+}
+#topNav a.button-mail span.button-inner {
+    background-position: 3px -240px;
+}
+#topNav a.button-client span.button-inner {
+    background-position: 3px -180px;
+}
+#topNav a.button-domain span.button-inner {
+    background-position: 3px -120px;
+}
+#topNav a.button-dns span.button-inner {
+    background-position: 3px -150px;
+}
+#topNav a.button-vm span.button-inner {
+    background-position: 3px -330px;
+}
+#topNav a.button-billing span.button-inner {
+    background-position: 3px -360px;
+}
+#topNav a#topNav_current span.button-inner,
 #topNav a.button-dashboard:hover span.button-inner,
 #topNav a.button-dashboard.button-selected span.button-inner {
-    background-position: 0 -22px;
+    
 }
 
 /* layout/left
@@ -539,8 +619,16 @@ ul#submenu {
     text-decoration: none;
 }
 .menu li a {
-    height: 17px; /* doesn't affect table-cells in FF */  
+    height: 17px;
+    padding-left: 35px;
     white-space: nowrap;
+}
+.menu li select {
+    margin-left: 35px;
+}
+#submenu li.title a {
+    padding-left: 5px !important;
+    background: none;
 }
 #submenu li.title {
     font-size: 12px;
@@ -569,7 +657,63 @@ ul#submenu {
     padding: 6px 8px 5px 8px;
     /* height: 17px; -- doesn't affect table-cells in FF */
 }
-.menu li { white-space: nowrap; }
+.menu li { 
+    background-image: url("icons/icons_menu.png");
+    background-position: 12px 3px;
+    background-repeat: no-repeat;
+    white-space: nowrap;
+}
+.menu li:hover {
+    background-position: 12px -25px;
+}
+#software_repo_list {
+    background-position: 12px -52px;
+}
+#software_repo_list:hover {
+    background-position: 12px -80px;
+}
+#software_package_list {
+    background-position: 12px -108px;
+}
+#software_package_list:hover {
+    background-position: 12px -136px;
+}
+#software_update_list {
+    background-position: 12px -164px;
+}
+#software_update_list:hover {
+    background-position: 12px -192px;
+}
+#user_quota_stats {
+    background-position: 12px -220px;
+}
+#user_quota_stats:hover {
+    background-position: 12px -248px;
+}
+#websites_stats {
+    background-position: 12px -276px;
+}
+#websites_stats:hover {
+    background-position: 12px -304px;
+}
+#shell_user_list {
+    background-position: 12px -332px;
+}
+#shell_user_list:hover {
+    background-position: 12px -360px;
+}
+#select_server {
+    background-position: 12px -388px;
+}
+#select_server:hover {
+    background-position: 12px -416px;
+}
+
+
+.feed li a {
+    padding-left: 25px;
+    background: url("icons/x16/feed.png") no-repeat 0 5px transparent;
+}
 
 /* layout/right
 -------------------------------------------------------------- */
@@ -616,7 +760,6 @@ footer {
 footer p {
     margin: 5px 15px;
 }
-
 /* layout/right/footer/message bar
 -------------------------------------------------------------- */
 #message div.loading,
@@ -682,6 +825,34 @@ footer p {
     top: -6px;
     white-space: nowrap;
 }
+#moduletoolbar a.button {
+    text-align: center;
+    font-size: 10px;
+    color: #555;
+    min-width: 50px;
+    max-width: 75px;
+    height: 13px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 28px 2px 0 2px;
+    text-shadow: 0px 1px 1px #eee;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    -o-box-shadow: none;
+    border: 0;
+}
+#moduletoolbar a.button.edit {
+    background: url(icons/x24/edit.png) no-repeat transparent center top;
+}
+#moduletoolbar a.button.cancel {
+    background: url(icons/x24/cancel.png) no-repeat transparent center top;
+}
+#moduletoolbar a.button.import {
+    background: url(icons/x24/import.png) no-repeat transparent center top;
+}
+
 #module-view {
     bottom: 28px;
     left: 0;
@@ -731,27 +902,54 @@ footer p {
     background: #fff;
 }
 .module-desc {
-    
+    margin: 15px;
+}
+.panel {
+    padding: 35px 25px;
 }
 
 /* forms/fields
 -------------------------------------------------------------- */
 .ctrlHolder,
 .wf_oneField {
-    line-height: 25px;
+/*    line-height: 30px;*/
+    margin: 10px 0;
     border-bottom: 0px solid red;
 }
-.ctrlHolder label,
-.wf_oneField label,
+.ctrlHolder label, 
+.wf_oneField label, 
 p.label {
     float: left;
-    width: 231px;
-    margin: 0 15px 0 0;
+    margin: 5px 15px 0 0;
     text-align: right;
+    width: 250px;
+}
+p.value {
+    float:left;
+    margin: 5px 0;
+}
+.serverType label {
+    text-align: left;
+}
+.ctrlHolder select {
+    width: 300px;
+}
+label em,
+.label em {
+    color: #FF0000;
+    float: right;
+}
+.blockLabel {
+    float: left;
+    margin: 0 3% 0 0;
+    width: auto;
+}
+.blockLabel input {
+    float: left;
 }
 p.formHint,
 div.multiField {
-    margin: 0 0 0 246px;
+    margin: 0 0 0 265px;
 }
 label.inlineLabel {
     float: none;
@@ -759,12 +957,23 @@ label.inlineLabel {
     margin: 0;
     text-align: left;
 }
-div.multiField {
-    
+.multiField {
+    margin-left: 246px;
+}
+.multiField label {
+    margin: 0;
+    width: auto;
+}
+
+.multiField .blockLabel {
+    float: left;
+    margin: 0 3% 0 0;
+    width: 26%;
 }
 /* modules/tabsbar
 -------------------------------------------------------------- */
 ul.tabsbar {
+    position: fixed;
     margin: 0 0 15px 25px;
     padding: 0;
     list-style: none;
@@ -794,7 +1003,9 @@ h3.welcome {
     padding-left: 25px;
 }
 .systemmonitor-state {
+    position: fixed;
     width: 100%;
+    overflow: hidden; 
     border-bottom: 1px solid #000;
 }
 .systemmonitor-state p {
@@ -813,18 +1024,66 @@ div.icon32 {
 .state-info div.icon32 { background: url("icons/x32/info.png") no-repeat; }
 .state-warning div.icon32 { background: url("icons/x32/warning.png") no-repeat; }
 .state-error div.icon32 { background: url("icons/x32/error.png") no-repeat; }
-
 .dash-mods,
 .dash-limits {
     float:left;
-    width: 350px;
-    margin-left: 25px;
-    background: #FFF;
+    margin: 10px;
+    background: url("images/bg_paven.png") repeat #FFF;
+    border-top: 1px solid #D8D8D8;
+    border-right: 1px solid #6E6E6E;
+    border-bottom: 1px solid #6E6E6E;
+    border-left: 1px solid #D8D8D8;
+    border-radius: 5px;
+    box-shadow: 0 0 2px #999;
+    -o-box-shadow: 0 0 2px #999;
+    -webkit-box-shadow: 0 0 2px #999;
+    -moz-box-shadow: 0 0 2px #999;
+    -ms-box-shadow: 0 0 2px #999;
 }
-.dash-mods {   
+.dash-mods {
+    width: 344px;
+    
 }
-.dash-limits { 
+.dash-limits {
+    padding: 0 10px 10px 10px;
 }
+.dash-limits table {
+}
+.dash-mods h2,
+.dash-limits h2 {
+    margin: 10px;
+}
+.dashboard-modules {
+    background-color: #CCCCCC;
+    background-position: 14px center;
+    background-repeat: no-repeat;
+    border: 1px dotted #888888;
+    float: left;
+    height: 60px;
+    margin: 10px;
+    width: 150px;
+}
+.dashboard-modules a, 
+.dashboard-modules a:hover {
+    display: block;
+    font-weight: bold;
+    font-size: 1.2em;
+    height: 40px;
+    padding: 20px 0 0 50px;
+    text-decoration: none;
+    width: 100px;
+}
+.dashboard-modules.admin { background-image: url("icons/x32/system.png") !important; }
+.dashboard-modules.vm { background-image: url("icons/x32/vm.png") !important; }
+.dashboard-modules.client { background-image: url("icons/x32/client.png") !important; }
+.dashboard-modules.mail { background-image: url("icons/x32/mail.png") !important; }
+.dashboard-modules.monitor { background-image: url("icons/x32/monitor.png") !important; }
+.dashboard-modules.dns { background-image: url("icons/x32/dns.png") !important; }
+.dashboard-modules.tools { background-image: url("icons/x32/tools.png") !important; }
+.dashboard-modules.help { background-image: url("icons/x32/help.png") !important; }
+.dashboard-modules.domain { background-image: url("icons/x32/domain.png") !important; }
+.dashboard-modules.sites { background-image: url("icons/x32/sites.png") !important; }
+.dashboard-modules.billing { background-image: url("icons/x32/billing.png") !important; }
 
 /* ??
 -------------------------------------------------------------- */
@@ -1136,7 +1395,7 @@ table.propform {
 
 #login-form .box-inner {
     width: 430px;
-    background: url(images/linen_login.jpg) top left no-repeat #5c5c5c;
+    background: url(images/bg_linen_dark.jpg) top left repeat #5c5c5c;
     margin: 0 50px;
     padding: 10px 24px 24px 24px;
     border: 1px solid #333;
@@ -1159,7 +1418,7 @@ table.propform {
 
 #login-form input[type="text"],
 #login-form input[type="password"] {
-    width: 24em;
+    width: 20em;
     border-color: #666;
 }
 
@@ -1209,49 +1468,55 @@ table.propform {
 }
 
 #login-form #logo {
-    margin-bottom: 20px;
+    margin: 20px 0;
 }
 
 #login-form #message {
     min-height: 40px;
     padding: 5px 25px;
 }
+#login-form #message h1 {
+    display: none;
+}
 
+#login-form #message p,
 #login-form #message div {
-    display: block;
-    width: 200px;
+    text-align: center;
     margin: 0 auto;
 }
 
-#bottomline {
+#login footer {
     font-size: 90%;
     text-align: center;
     margin-top: 2em;
 }
-
-
+#login footer p {
+    text-align: center;
+}
+#login-form .ctrlHolder {
+    line-height: 45px;
+}
+#login-form label span {
+    color: #FF0000;
+}
+#login-form .ctrlHolder label {
+    width: 100px;
+    color: #CECECE;
+    text-align: right;
+    text-shadow: 0 1px 1px black;
+}
+#login-form .buttonHolder {
+    height: 30px;
+    margin: 0;
+    float: right;
+}
+#login-form #errorMsg {
+    
+}
 
 /*** toolbar ***/
 
-.toolbar a.button {
-    text-align: center;
-    font-size: 10px;
-    color: #555;
-    min-width: 50px;
-    max-width: 75px;
-    height: 13px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    padding: 28px 2px 0 2px;
-    text-shadow: 0px 1px 1px #eee;
-    box-shadow: none;
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-    -o-box-shadow: none;
-    background: url(images/buttons.png) -100px 0 no-repeat transparent;
-    border: 0;
-}
+
 
 .toolbar a.button.disabled {
     opacity: 0.4;
@@ -1298,9 +1563,7 @@ table.propform {
     background-position: 0 -1216px;
 }
 
-.toolbar a.button.checkmail {
-    background-position: center -1176px;
-}
+
 
 .toolbar a.button.compose {
     background-position: center -530px;

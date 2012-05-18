@@ -5,7 +5,9 @@
               <title><tmpl_var name="app_title"> <tmpl_var name="app_version"></title>
                     <link rel="shortcut icon" href="/themes/ispc-larry/images/favicon.ico" type="image/x-icon" />
                     <link href="themes/ispc-larry/styles.css" rel="stylesheet" type="text/css"/>
-
+                    <!--[if IE 9]><link href="themes/ispc-larry/svggradients.css" rel="stylesheet" type="text/css" /><![endif]-->
+                    <!--[if lte IE 8]><link href="themes/ispc-larry/iehacks.css" rel="stylesheet" type="text/css" /><![endif]-->
+                    <!--[if lte IE 7]><link href="themes/ispc-larry/ie7hacks.css" rel="stylesheet" type="text/css" /><![endif]-->
                     <script type="text/javascript" src="js/jquery-1.6.3.min.js"></script>
                     <script type="text/javascript" src="js/jquery-ui-1.8.16.custom.min.js"></script>
                     <script type="text/javascript" src="js/scrigo.js.php"></script>
@@ -45,13 +47,13 @@
 
                     </script>
                     </head>
-                    <body>
+                    <body>                  
                         <!-- begin: header -->
                         <header>
-                            <div id="topline"><!-- TODO: change ID #topline -> #top-line -->
+                            <div id="top-line">
                                 <div class="topleft">
                                     <!-- TODO: Add functionality for links to customer OR user support and more-->
-                                    <a href="#">Support-Link</a>
+                                    <a href="http://www.ispconfig.org/ispconfig-3/support/" target="_blank" title="ISPConfig Support">Support</a>
                                 </div>
                                 <div class="topright">
                                     <tmpl_if name="cpuser">
@@ -59,22 +61,22 @@
                                     </tmpl_if>
                                 </div>
                             </div>
-                            <div id="topnav"><!-- TODO: change ID #topnav -> #middle-line -->
+                            <div id="middle-line">
                                 <!-- begin: main navigation -->
-                                <!-- skiplink anchor: navigation -->
+                                <!-- ??? skiplink anchor: navigation -->
                                 <div id="topNav" class="topright">
                                     <a id="navigation" name="navigation"></a>
                                 </div><!-- end: main navigation -->
                                 <!-- logo + slogan -->
-                                <a href="#" onclick="capp('dashboard')" title="Show Dashboard"><img width="152" height="32" title="<tmpl_var name="app_title">" alt="<tmpl_var name="app_title">" src="themes/ispc-larry/images/header_logo.png"></a>
+                                <a href="#" onclick="capp('dashboard')" title="Show Dashboard"><img width="152" height="46" title="<tmpl_var name="app_title">" alt="<tmpl_var name="app_title">" src="themes/ispc-larry/images/header_logo.png"></a>
                                 <span>hosting control panel</span>
                             </div>
                             <br style="clear:both" />
-                        </header><!-- end: footer -->
+                        </header><!-- end: header -->
                         <!-- begin: #mainscreen -->
                         <div id="mainscreen">
                             <div id="mainscreen-left">
-                                <!-- app switcher -->
+                                <!-- app switcher 
                                 <div id="app-switcher" style="position: relative;">
                                     <select onchange="rcmail.filter_mailbox(this.value)" id="rcmlistfilter" class="searchfilter decorated" name="searchfilter">
                                         <option value="ALL">Alle</option>
@@ -89,7 +91,7 @@
                                         <option value="HEADER X-PRIORITY 5">Priorität: Niedrigste</option>
                                     </select><a class="menuselector dropdownselector" style="position: absolute; top: 0px; left: 0px;"><span class="handle" style="width: 112px;">Alle</span></a>    
                                 </div>
-                                    
+                                -->    
                                 <div class="uibox listbox" id="sideNav-container">
                                     <!-- begin: #col1 - first float column -->
                                     <div id="sideNav" class="scroller withfooter">&nbsp;</div>
