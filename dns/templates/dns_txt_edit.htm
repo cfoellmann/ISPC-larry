@@ -1,13 +1,11 @@
 <!-- beginn: toolbar -->
 <div id="moduletoolbar">
-    <div class="toolbar" id="optiontoolbar">
-        <a id="rcmbtn105" class="button checkmail" onClick="loadContent('dns/dns_slave_list.php');" href="#" title="{tmpl_var name='btn_cancel_txt'}">{tmpl_var name='btn_cancel_txt'}</a>
-    </div>
+    <a class="button cancel" onClick="loadContent('dns/dns_slave_list.php');" href="#" title="{tmpl_var name='btn_cancel_txt'}">{tmpl_var name='btn_cancel_txt'}</a>
 </div>
 <!-- end: toolbar -->
 
 <!-- beginn: modulebody -->
-<div class="module-title"><h1><tmpl_var name="list_head_txt"></h1></div>
+<div class="module-title"><h1><tmpl_var name="form_hint"></h1></div>
 <div class="module-box boxlistcontent" id="modulecontainer">
     <!-- tabs -->
     <ul class="tabsbar">

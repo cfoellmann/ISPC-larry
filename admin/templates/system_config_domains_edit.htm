@@ -1,8 +1,6 @@
 <!-- beginn: toolbar -->
 <div id="moduletoolbar">
-    <div class="toolbar" id="optiontoolbar">
-        <a id="rcmbtn105" class="button checkmail" onClick="loadContent('admin/users_list.php');" href="#" title="{tmpl_var name='btn_cancel_txt'}">{tmpl_var name='btn_cancel_txt'}</a>
-    </div>
+    <a class="button cancel" onClick="loadContent('admin/users_list.php');" href="#" title="{tmpl_var name='btn_cancel_txt'}">{tmpl_var name='btn_cancel_txt'}</a>
 </div>
 <!-- end: toolbar -->
 
@@ -30,18 +28,20 @@
     <!-- beginn: modulecontent -->
     <div class="panel panel_system_config">
         <div class="ctrlHolder">
-            <div style="float:left;width:100%">
-                <p class="label" style="width:270px">{tmpl_var name='use_domain_module_txt'}</p>
-                <div class="multiField">
-                    {tmpl_var name='use_domain_module'}
-                </div>
+            <p class="label">{tmpl_var name='use_domain_module_txt'}</p>
+            <div class="multiField">
+                {tmpl_var name='use_domain_module'}
             </div>
-            <div style="float:left;width:500px;margin-top:20px">{tmpl_var name='use_domain_module_hint'}</div>
+        </div>
+        <div class="ctrlHolder">
+            <p class="label">&nbsp;</p>
+            <p class="value" style="width: 400px;">{tmpl_var name='use_domain_module_hint'}</p>
+            <br style="clear: both;" />
         </div>
         <div class="ctrlHolder">
             <p class="label">{tmpl_var name='new_domain_txt'}</p>
             <div class="multiField">
-                <textarea name="new_domain_html" id="new_domain_html" style="width: 500px; height: 250px">{tmpl_var name='new_domain_html'}</textarea>
+                <textarea name="new_domain_html" id="new_domain_html">{tmpl_var name='new_domain_html'}</textarea>
             </div>
         </div>
             

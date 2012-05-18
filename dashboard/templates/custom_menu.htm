@@ -1,7 +1,8 @@
-<ul id="submenu">
+<!-- TODO: Add class="{tmpl_var name='cat'}" TODO: SimplePie lib/custom_menu.inc.php add 'cat' per feeditem -->
+<ul id="submenu" class="feed">
   <li class="title"><a>{tmpl_var name='latest_news_txt'}</a></li>
-  <tmpl_loop name="news">
-  <li <!-- ADD: class="{tmpl_var name='cat'}" TODO: SimplePie lib/custom_menu.inc.php add 'cat' per feeditem -->><a href="{tmpl_var name="link"}" target="_blank"><b>{tmpl_var name="date"}</b><br />
+  <tmpl_loop name="news">   
+  <li><a href="{tmpl_var name="link"}" target="_blank"><b>{tmpl_var name="date"}</b><br />
   {tmpl_var name="title"}</a>
   </li>
   </tmpl_loop>

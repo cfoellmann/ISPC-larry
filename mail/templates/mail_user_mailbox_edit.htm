@@ -1,13 +1,11 @@
 <!-- beginn: toolbar -->
 <div id="moduletoolbar">
-    <div class="toolbar" id="optiontoolbar">
-        <a id="rcmbtn105" class="button checkmail" onClick="loadContent('mail/mail_user_list.php');" href="#" title="{tmpl_var name='btn_cancel_txt'}">{tmpl_var name='btn_cancel_txt'}</a>
-    </div>
+    <a class="button cancel" onClick="loadContent('mail/mail_user_list.php');" href="#" title="{tmpl_var name='btn_cancel_txt'}">{tmpl_var name='btn_cancel_txt'}</a>
 </div>
 <!-- end: toolbar -->
 
 <!-- beginn: modulebody -->
-<div class="module-title"><h1><tmpl_var name="form_hint"></h1></div>
+<div class="module-title"><h1><tmpl_var name="form_hint"> &gt; <!--lang_var for Allgemein--> </h1></div>
 <div class="module-box boxlistcontent" id="modulecontainer">
     <!-- tabs -->
     <ul class="tabsbar">
@@ -34,11 +32,14 @@
             <input name="name" id="name" value="{tmpl_var name='name'}" size="30" maxlength="255" type="text" class="textInput" /> &nbsp; {tmpl_var name='name_optional_txt'}
         </div>
         <div class="ctrlHolder">
-            <p class="label"><em>*</em> {tmpl_var name='email_txt'}</p>
+            <p class="label">{tmpl_var name='email_txt'} <em>*</em></p>
             <div class="multiField">
-                <label for="email_local_part" class="blockLabel formLengthEmailDomain">Alias<input type="text" id="email_local_part" name="email_local_part" size="20" value="{tmpl_var name='email_local_part'}" class="textInput" /></label>
-                <label for="email_at" class="blockLabel email_at">&nbsp;<span id="email_at" name="email_at" />@</label>
-                <label for="email_domain" class="blockLabel formLengthEmailDomain">{tmpl_var name='domain_txt'}<select name="email_domain" id="email_domain" class="selectInput">{tmpl_var name='email_domain'}</select></label>
+<!--                <label for="email_local_part" class="blockLabel formLengthEmailDomain">Alias</label>-->
+                <input type="text" id="email_local_part" name="email_local_part" size="30" value="{tmpl_var name='email_local_part'}" class="textInput" />
+<!--                <label for="email_at" class="blockLabel email_at"></label>-->
+                &nbsp;@&nbsp;
+<!--                <label for="email_domain" class="blockLabel formLengthEmailDomain">{tmpl_var name='domain_txt'}</label>-->
+                    <select name="email_domain" id="email_domain" class="selectInput">{tmpl_var name='email_domain'}</select>
             </div>
         </div>
         <tmpl_if name="enable_custom_login"><div class="ctrlHolder">
@@ -56,11 +57,11 @@
         </div>
         <div class="ctrlHolder">
             <label for="quota">{tmpl_var name='quota_txt'}</label>
-            <input name="quota" id="quota" value="{tmpl_var name='quota'}" size="30" maxlength="255" type="text" class="textInput formLengthLimit" /><p class="formInputUnity">&nbsp;MB</p>
+            <input name="quota" id="quota" value="{tmpl_var name='quota'}" size="30" maxlength="255" type="text" class="textInput formLengthLimit" />&nbsp;MB (0 &Rightarrow; &infin;)
         </div>
         <div class="ctrlHolder">
             <label for="name">{tmpl_var name='cc_txt'}</label>
-            <input name="cc" id="cc" value="{tmpl_var name='cc'}" size="30" maxlength="255" type="text" class="textInput" /> &nbsp; {tmpl_var name='name_optional_txt'}
+            <input name="cc" id="cc" value="{tmpl_var name='cc'}" size="30" maxlength="255" type="text" class="textInput" />&nbsp;{tmpl_var name='name_optional_txt'}
         </div>
         <div class="ctrlHolder">
             <label for="policy">{tmpl_var name='policy_txt'}</label>

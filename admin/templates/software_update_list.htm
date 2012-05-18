@@ -13,13 +13,6 @@
     
     <!-- beginn: modulecontent -->
     <div class="panel panel_list_software_update">
-        <div id="searchfilter" style="position: relative;">
-            <select class="searchfilter decorated" name="searchfilter">
-                <tmpl_loop name="servers">
-                <option value="{tmpl_var name='server_id'}" {tmpl_var name='selected'}>{tmpl_var name='server_name'}</option>
-                </tmpl_loop>
-            </select><a class="menuselector dropdownselector" style="position: absolute; top: 0px; left: 0px;"><span class="handle" style="width: 112px;">Alle</span></a>    
-        </div>
         <div class="buttons">
             <div class="ctrlHolder">
                         <label for="server_id">{tmpl_var name='server_select_txt'}</label>

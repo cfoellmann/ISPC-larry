@@ -1,8 +1,6 @@
 <!-- beginn: toolbar -->
 <div id="moduletoolbar">
-    <div class="toolbar" id="optiontoolbar">
-        <a id="rcmbtn105" class="button checkmail" onClick="loadContent('sites/web_domain_list.php');" href="#" title="{tmpl_var name='btn_cancel_txt'}">{tmpl_var name='btn_cancel_txt'}</a>
-    </div>
+    <a class="button cancel" onClick="loadContent('sites/web_domain_list.php');" href="#" title="{tmpl_var name='btn_cancel_txt'}">{tmpl_var name='btn_cancel_txt'}</a>
 </div>
 <!-- end: toolbar -->
 
@@ -30,7 +28,9 @@
     <!-- beginn: modulecontent -->
     <div class="panel panel_web_domain">
         <div class="ctrlHolder">
-            <label>{tmpl_var name='stats_user_txt'}</label><p>admin</p>
+            <p class="label">{tmpl_var name='stats_user_txt'}</p>
+            <p class="value">admin</p>
+            <br style="clear: both;" />
         </div>
         <div class="ctrlHolder">
             <label for="stats_password">{tmpl_var name='stats_password_txt'}</label>

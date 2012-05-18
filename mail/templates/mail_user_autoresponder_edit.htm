@@ -1,13 +1,11 @@
 <!-- beginn: toolbar -->
 <div id="moduletoolbar">
-    <div class="toolbar" id="optiontoolbar">
-        <a id="rcmbtn105" class="button checkmail" onClick="loadContent('mail/mail_alias_list.php');" href="#" title="{tmpl_var name='btn_cancel_txt'}">{tmpl_var name='btn_cancel_txt'}</a>
-    </div>
+    <a class="button cancel" onClick="loadContent('mail/mail_alias_list.php');" href="#" title="{tmpl_var name='btn_cancel_txt'}">{tmpl_var name='btn_cancel_txt'}</a>
 </div>
 <!-- end: toolbar -->
 
 <!-- beginn: modulebody -->
-<div class="module-title"><h1><tmpl_var name="list_head_txt"></h1></div>
+<div class="module-title"><h1><tmpl_var name="form_hint"> &gt; Autoresponder</h1></div>
 <div class="module-box boxlistcontent" id="modulecontainer">
     <!-- tabs -->
     <ul class="tabsbar">
@@ -29,24 +27,28 @@
     
     <!-- beginn: modulecontent -->
     <div class="panel panel_mail_user">
+        <!-- Not yet functional in 3.0.4.4 - copied from SVN 
+            <div class="ctrlHolder">
+            <label for="autoresponder_subject">{tmpl_var name='autoresponder_subject_txt'}</label>
+            <input type="text" name="autoresponder_subject" id="autoresponder_subject" maxlength='250' value="{tmpl_var name='autoresponder_subject'}" />
+        </div>
+        -->
         <div class="ctrlHolder">
             <label for="autoresponder_text">{tmpl_var name='autoresponder_text_txt'}</label>
             <textarea name="autoresponder_text" id="autoresponder_text" rows='15' cols='30'>{tmpl_var name='autoresponder_text'}</textarea>
         </div>
         <div class="ctrlHolder">
-            <p class="label">{tmpl_var name='autoresponder_txt'}</p>
+            <label for="autoresponder">{tmpl_var name='autoresponder_active'}</label>
             <div class="multiField">
-                <div class="ctrlHolder" style="margin-bottom: 5px;">
-                    <label for="autoresponder"><input type="checkbox" value="y" id="autoresponder" name="autoresponder" onclick="AR_ResetDates();" {tmpl_var name='ar_active'} />&nbsp;{tmpl_var name='autoresponder_active'}</label><br />
-                </div>
-                    
-                <p style="margin-bottom: 3px;">
-                    <label for="autoresponder_start_date[day]" style="width: 55px;">{tmpl_var name='autoresponder_start_date_txt'}</label>
-                    {tmpl_var name='autoresponder_start_date'}&nbsp;<a href="javascript:AR_SetNow();">{tmpl_var name='now_txt'}</a></p>
-                        
-                <label for="password" style="width: 55px;">{tmpl_var name='autoresponder_end_date_txt'}</label>
-                {tmpl_var name='autoresponder_end_date'}				
-            </div>
+            <input type="checkbox" value="y" id="autoresponder" name="autoresponder" onclick="AR_ResetDates();" {tmpl_var name='ar_active'} />
+        </div>
+        <div class="ctrlHolder">
+            <label for="autoresponder_start_date[day]">{tmpl_var name='autoresponder_start_date_txt'}</label>
+            {tmpl_var name='autoresponder_start_date'}&nbsp;<a href="javascript:AR_SetNow();">{tmpl_var name='now_txt'}</a>   
+        </div>
+        <div class="ctrlHolder">
+            <label for="password">{tmpl_var name='autoresponder_end_date_txt'}</label>
+            {tmpl_var name='autoresponder_end_date'}				
         </div>
             
         <input type="hidden" name="id" value="{tmpl_var name='id'}">

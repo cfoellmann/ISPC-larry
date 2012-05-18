@@ -1,8 +1,6 @@
 <!-- beginn: toolbar -->
 <div id="moduletoolbar">
-    <div class="toolbar" id="optiontoolbar">
-        <a id="rcmbtn105" class="button checkmail" onClick="loadContent('admin/server_list.php');" href="#" title="{tmpl_var name='btn_cancel_txt'}">{tmpl_var name='btn_cancel_txt'}</a>
-    </div>
+    <a class="button cancel" onClick="loadContent('admin/server_list.php');" href="#" title="{tmpl_var name='btn_cancel_txt'}">{tmpl_var name='btn_cancel_txt'}</a>
 </div>
 <!-- end: toolbar -->
 
@@ -31,19 +29,19 @@
     <div class="panel panel_system_config">
         <div class="ctrlHolder">
             <label for="dashboard_atom_url_admin">{tmpl_var name='dashboard_atom_url_admin_txt'}</label>
-            <input name="dashboard_atom_url_admin" id="dashboard_atom_url_admin" value="{tmpl_var name='dashboard_atom_url_admin'}" size="" maxlength="" type="text" class="textInput" />
+            <input name="dashboard_atom_url_admin" id="dashboard_atom_url_admin" value="{tmpl_var name='dashboard_atom_url_admin'}" size="50" maxlength="" type="text" class="textInput" />
         </div>
         <div class="ctrlHolder">
             <label for="dashboard_atom_url_reseller">{tmpl_var name='dashboard_atom_url_reseller_txt'}</label>
-            <input name="dashboard_atom_url_reseller" id="dashboard_atom_url_reseller" value="{tmpl_var name='dashboard_atom_url_reseller'}" size="" maxlength="" type="text" class="textInput" />
+            <input name="dashboard_atom_url_reseller" id="dashboard_atom_url_reseller" value="{tmpl_var name='dashboard_atom_url_reseller'}" size="50" maxlength="" type="text" class="textInput" />
         </div>
         <div class="ctrlHolder">
             <label for="dashboard_atom_url_client">{tmpl_var name='dashboard_atom_url_client_txt'}</label>
-            <input name="dashboard_atom_url_client" id="dashboard_atom_url_client" value="{tmpl_var name='dashboard_atom_url_client'}" size="" maxlength="" type="text" class="textInput" />
+            <input name="dashboard_atom_url_client" id="dashboard_atom_url_client" value="{tmpl_var name='dashboard_atom_url_client'}" size="50" maxlength="" type="text" class="textInput" />
         </div>
         <div class="ctrlHolder">
             <label for="monitor_key">{tmpl_var name='monitor_key_txt'}</label>
-            <input name="monitor_key" id="monitor_key" value="{tmpl_var name='monitor_key'}" size="" maxlength="" type="text" class="textInput" />
+            <input name="monitor_key" id="monitor_key" value="{tmpl_var name='monitor_key'}" size="50" maxlength="" type="text" class="textInput" />
         </div>
         <input type="hidden" name="id" value="{tmpl_var name='id'}">
         <div class="buttonHolder buttons">

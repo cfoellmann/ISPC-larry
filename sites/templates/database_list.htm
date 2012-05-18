@@ -1,8 +1,6 @@
 <!-- beginn: toolbar -->
 <div id="moduletoolbar">
-    <div class="toolbar" id="optiontoolbar">
-        <a id="rcmbtn105" class="button checkmail" onClick="loadContent('sites/database_edit.php');" href="#" title="{tmpl_var name="add_new_record_txt"}">{tmpl_var name="add_new_record_txt"}</a>
-    </div>
+    <a class="button edit" onClick="loadContent('sites/database_edit.php');" href="#" title="{tmpl_var name="add_new_record_txt"}">{tmpl_var name="add_new_record_txt"}</a>
 </div>
 <!-- end: toolbar -->
 
@@ -24,7 +22,7 @@
                     <th class="tbl_col_buttons" scope="col">&nbsp;</th>
                 </tr>
                 <tr>
-                    <td class="tbl_col_active"><select name="search_active">{tmpl_var name='search_active'}</select></td>
+                    <td class="tbl_col_active"><select name="search_active" class="withicons">{tmpl_var name='search_active'}</select></td>
                     <td class="tbl_col_remote_access"><select name="search_remote_access">{tmpl_var name='search_remote_access'}</select></td>
                     <td class="tbl_col_server_id"><select name="search_server_id">{tmpl_var name='search_server_id'}</select></td>
                     <td class="tbl_col_database_user"><input type="text" name="search_database_user" value="{tmpl_var name='search_database_user'}"/></td>

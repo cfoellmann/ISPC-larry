@@ -1,8 +1,6 @@
 <!-- beginn: toolbar -->
 <div id="moduletoolbar">
-    <div class="toolbar" id="optiontoolbar">
-        <a id="rcmbtn105" class="button checkmail" onClick="loadContent('sites/web_domain_list.php');" href="#" title="{tmpl_var name='btn_cancel_txt'}">{tmpl_var name='btn_cancel_txt'}</a>
-    </div>
+    <a class="button cancel" onClick="loadContent('sites/web_domain_list.php');" href="#" title="{tmpl_var name='btn_cancel_txt'}">{tmpl_var name='btn_cancel_txt'}</a>
 </div>
 <!-- end: toolbar -->
 
@@ -32,13 +30,15 @@
         <input name="document_root" id="document_root" value="{tmpl_var name='document_root'}" size="30" maxlength="255" type="hidden" class="textInput" />
         <div class="ctrlHolder">
             <label for="system_user">{tmpl_var name='system_user_txt'}</label>
-            <p>{tmpl_var name='system_user'}</p>
+            <p class="value">{tmpl_var name='system_user'}</p>
             <input name="system_user" id="system_user" value="{tmpl_var name='system_user'}" type="hidden" />
+            <br style="clear: both;" />
         </div>
         <div class="ctrlHolder">
             <label for="system_group">{tmpl_var name='system_group_txt'}</label>
-            <p>{tmpl_var name='system_group'}</p>
+            <p class="value">{tmpl_var name='system_group'}</p>
             <input name="system_group" id="system_group" value="{tmpl_var name='system_group'}" type="hidden" />
+            <br style="clear: both;" />
         </div>
         <div class="ctrlHolder apache">
             <label for="allow_override">{tmpl_var name='allow_override_txt'}</label>

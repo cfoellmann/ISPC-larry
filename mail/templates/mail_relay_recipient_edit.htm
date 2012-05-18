@@ -1,8 +1,6 @@
 <!-- beginn: toolbar -->
 <div id="moduletoolbar">
-    <div class="toolbar" id="optiontoolbar">
-        <a id="rcmbtn105" class="button checkmail" onClick="loadContent('mail/mail_relay_recipient_list.php');" href="#" title="{tmpl_var name='btn_cancel_txt'}">{tmpl_var name='btn_cancel_txt'}</a>
-    </div>
+    <a class="button cancel" onClick="loadContent('mail/mail_relay_recipient_list.php');" href="#" title="{tmpl_var name='btn_cancel_txt'}">{tmpl_var name='btn_cancel_txt'}</a>
 </div>
 <!-- end: toolbar -->
 
@@ -29,7 +27,6 @@
     
     <!-- beginn: modulecontent -->
     <div class="panel panel_mail_relay_recipient">
-        <fieldset class="inlineLabels"><legend>Relay recipient</legend>
             <div class="ctrlHolder">
                 <label for="server_id">{tmpl_var name='server_id_txt'}</label>
                 <select name="server_id" id="server_id" class="selectInput">
@@ -46,7 +43,6 @@
                     {tmpl_var name='active'}
                 </div>
             </div>
-        </fieldset>
             
         <input type="hidden" name="id" value="{tmpl_var name='id'}">
         <input type="hidden" name="access" value="OK">

@@ -1,8 +1,6 @@
 <!-- beginn: toolbar -->
 <div id="moduletoolbar">
-    <div class="toolbar" id="optiontoolbar">
-        <a id="rcmbtn105" class="button checkmail" onClick="loadContent('admin/users_list.php');" href="#" title="{tmpl_var name='btn_cancel_txt'}">{tmpl_var name='btn_cancel_txt'}</a>
-    </div>
+    <a class="button cancel" onClick="loadContent('admin/users_list.php');" href="#" title="{tmpl_var name='btn_cancel_txt'}">{tmpl_var name='btn_cancel_txt'}</a>
 </div>
 <!-- end: toolbar -->
 
@@ -47,6 +45,7 @@
             <div class="multiField">
                 {tmpl_var name='modules'}
             </div>
+            <br style="clear: both;" />
         </div>
         <div class="ctrlHolder">
             <label for="startmodule">{tmpl_var name='startmodule_txt'}</label>
@@ -59,18 +58,21 @@
             <div class="multiField">
                 {tmpl_var name='app_theme'}
             </div>
+            <br style="clear: both;" />
         </div>
         <div class="ctrlHolder">
             <p class="label">{tmpl_var name='typ_txt'}</p>
             <div class="multiField">
                 {tmpl_var name='typ'}
             </div>
+            <br style="clear: both;" />
         </div>
         <div class="ctrlHolder">
             <p class="label">{tmpl_var name='active_txt'}</p>
             <div class="multiField">
                 {tmpl_var name='active'}
             </div>
+            <br style="clear: both;" />
         </div>
         <div class="ctrlHolder">
             <label for="language">{tmpl_var name='language_txt'}</label>

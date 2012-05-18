@@ -1,8 +1,6 @@
 <!-- beginn: toolbar -->
 <div id="moduletoolbar">
-    <div class="toolbar" id="optiontoolbar">
-        <a id="rcmbtn105" class="button checkmail" onClick="loadContent('sites/shell_user_list.php');" href="#" title="{tmpl_var name='btn_cancel_txt'}">{tmpl_var name='btn_cancel_txt'}</a>
-    </div>
+    <a class="button cancel" onClick="loadContent('sites/shell_user_list.php');" href="#" title="{tmpl_var name='btn_cancel_txt'}">{tmpl_var name='btn_cancel_txt'}</a>
 </div>
 <!-- end: toolbar -->
 
@@ -65,7 +63,7 @@
         </div>
         <div class="ctrlHolder">
             <label for="quota_size">{tmpl_var name='quota_size_txt'}</label>
-            <input name="quota_size" id="quota_size" value="{tmpl_var name='quota_size'}" size="7" maxlength="7" type="text" class="textInput formLengthLimit" /><p class="formInputUnity">&nbsp;MB</p>
+            <input name="quota_size" id="quota_size" value="{tmpl_var name='quota_size'}" size="7" maxlength="7" type="text" class="textInput formLengthLimit" />&nbsp;MB (-1 &Rightarrow; &infin;)
         </div>
         <div class="ctrlHolder">
             <label for="ssh_rsa">{tmpl_var name='ssh_rsa_txt'}</label>

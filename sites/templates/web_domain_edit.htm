@@ -1,8 +1,6 @@
 <!-- beginn: toolbar -->
 <div id="moduletoolbar">
-    <div class="toolbar" id="optiontoolbar">
-        <a id="rcmbtn105" class="button checkmail" onClick="loadContent('sites/web_domain_list.php');" href="#" title="{tmpl_var name='btn_cancel_txt'}">{tmpl_var name='btn_cancel_txt'}</a>
-    </div>
+    <a class="button cancel" onClick="loadContent('sites/web_domain_list.php');" href="#" title="{tmpl_var name='btn_cancel_txt'}">{tmpl_var name='btn_cancel_txt'}</a>
 </div>
 <!-- end: toolbar -->
 
@@ -85,11 +83,11 @@
         </div>
         <div class="ctrlHolder">
             <label for="hd_quota">{tmpl_var name='hd_quota_txt'}</label>
-            <input name="hd_quota" id="hd_quota" value="{tmpl_var name='hd_quota'}" size="7" maxlength="7" type="text" class="textInput formLengthLimit" />&nbsp;MB
+            <input name="hd_quota" id="hd_quota" value="{tmpl_var name='hd_quota'}" size="7" maxlength="7" type="text" class="textInput formLengthLimit" />&nbsp;MB (-1 &Rightarrow; &infin;)
         </div>
         <div class="ctrlHolder">
             <label for="traffic_quota">{tmpl_var name='traffic_quota_txt'}</label>
-            <input name="traffic_quota" id="traffic_quota" value="{tmpl_var name='traffic_quota'}" size="7" maxlength="7" type="text" class="textInput formLengthLimit" />&nbsp;MB <tmpl_var name='traffic_quota_exceeded_txt'>
+            <input name="traffic_quota" id="traffic_quota" value="{tmpl_var name='traffic_quota'}" size="7" maxlength="7" type="text" class="textInput formLengthLimit" />&nbsp;MB (-1 &Rightarrow; &infin;) <tmpl_var name='traffic_quota_exceeded_txt'>
         </div>
         <div class="ctrlHolder">
             <label for="cgi">{tmpl_var name='cgi_txt'}</label>

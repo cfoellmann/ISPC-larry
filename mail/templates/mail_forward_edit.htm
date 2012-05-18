@@ -1,8 +1,6 @@
 <!-- beginn: toolbar -->
 <div id="moduletoolbar">
-    <div class="toolbar" id="optiontoolbar">
-        <a id="rcmbtn105" class="button checkmail" onClick="loadContent('mail/mail_forward_list.php');" href="#" title="{tmpl_var name='btn_cancel_txt'}">{tmpl_var name='btn_cancel_txt'}</a>
-    </div>
+    <a class="button cancel" onClick="loadContent('mail/mail_forward_list.php');" href="#" title="{tmpl_var name='btn_cancel_txt'}">{tmpl_var name='btn_cancel_txt'}</a>
 </div>
 <!-- end: toolbar -->
 
@@ -30,11 +28,15 @@
     <!-- beginn: modulecontent -->
     <div class="panel panel_mail_forward">
         <div class="ctrlHolder">
-            <p class="label"><em>*</em> {tmpl_var name='email_txt'}</p>
+            <p class="label"> {tmpl_var name='email_txt'} <em>*</em></p>
             <div class="multiField">
-                <label for="email_local_part" class="blockLabel">Alias<input type="text" id="email_local_part" name="email_local_part" size="20" value="{tmpl_var name='email_local_part'}" class="textInput" /></label>
-                <label for="email_at" class="blockLabel email_at">&nbsp;<span id="email_at" name="email_at" />@</label>
-                <label for="email_domain" class="blockLabel">{tmpl_var name='domain_txt'}<select name="email_domain" id="email_domain" class="selectInput">{tmpl_var name='email_domain'}</select></label>
+<!--                <label for="email_local_part" class="blockLabel">Alias</label>-->
+                <input type="text" id="email_local_part" name="email_local_part" size="20" value="{tmpl_var name='email_local_part'}" class="textInput" />
+<!--                <label for="email_at" class="blockLabel email_at"></label>-->
+                &nbsp;@
+<!--                <label for="email_domain" class="blockLabel">{tmpl_var name='domain_txt'}</label>-->
+                <select name="email_domain" id="email_domain" class="selectInput">{tmpl_var name='email_domain'}</select>
+                <br style="clear: both" />
             </div>
         </div>
         <div class="ctrlHolder">
