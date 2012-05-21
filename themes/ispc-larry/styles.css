@@ -60,33 +60,47 @@ table.list thead th {
 table.list thead tr {
     border-radius: 5px 5px 0 0;
 }
+table.list tbody td,
+table.list thead td.tbl_col_buttons {
+    padding-left: 12px;
+}
+table.list tbody .icoDelete {
+    float:right;
+}
 table.list tfoot td {
     background: linear-gradient(center top , #F7F7F7 0%, #EEEEEE 100%) repeat scroll 0 0 transparent;
     background: -o-linear-gradient(center top , #F7F7F7 0%, #EEEEEE 100%) repeat scroll 0 0 transparent;
     background: -moz-linear-gradient(center top , #F7F7F7 0%, #EEEEEE 100%) repeat scroll 0 0 transparent;
     background: -webkit-gradient(linear , left top, left bottom, color-stop(0%,#F7F7F7), color-stop(100%,#EEEEEE));
     background: -ms-linear-gradient(center top , #F7F7F7 0%, #EEEEEE 100%) repeat scroll 0 0 transparent;
-    border: 0 none;
+    border: 0;
+    border-top: 1px solid #D3D3D3; 
     margin: 0 0 12px;
     padding: 24px 8px 8px;
     text-align: center;
 }
 table.list .tbl_row_uneven {
-    background: #F0F8FF;
+    background: #D9ECF4;
+    border-top: 1px solid #BBD3DA;
 }
 table.list .tbl_row_even {
     background: #FCFCFC;
+    border-top: 1px solid #BBD3DA;
 }
 /* Forms/Input
 -------------------------------------------------------------- */
 textarea {
     width: 400px;
 }
+/*select,
+input {
+    padding: 2px 0 2px 24px;
+}*/
 input[type="text"],
 input[type="password"],
 textarea {
     margin: 0; /* Safari by default adds a margin */
-    padding: 4px;
+    padding: 5px;
     border: 1px solid #b2b2b2;
     border-radius: 4px;
     box-shadow: inset 0 0 2px 1px rgba(0,0,0, 0.1);
@@ -110,7 +124,10 @@ textarea.placeholder { color: #aaa; }
 input[type="checkbox"] {
     margin: 6px 0;
 }
-
+input.search {
+    background: url("icons/x16/search.png") 5px 5px no-repeat #FFFFFF;
+    padding-left: 24px;
+}
 select {
     margin: 0; /* Safari by default adds a margin */
     padding: 3px;
@@ -121,7 +138,30 @@ select {
     -webkit-box-shadow: inset 0 0 2px 1px rgba(0,0,0, 0.1);
     -o-box-shadow: inset 0 0 2px 1px rgba(0,0,0, 0.1);
 }
-
+select option {
+    padding: 2px;
+}
+select.clienticons option {
+    background-position: 5px 50%;
+    background-repeat: no-repeat;
+    padding: 1px 0 1px 30px;
+}
+select.clienticons option {
+    background-image: url("icons/x16/client.png");
+}
+select.servericons option {
+    background-position: 5px 50%;
+    background-repeat: no-repeat;
+    padding: 1px 0 1px 30px;
+}
+select.servericons option {
+    background-image: url("icons/x16/linux.png");
+}
+select.withicons option {
+    background-position: 5px 50%;
+    background-repeat: no-repeat;
+    padding: 1px 0 1px 30px;
+}
 select.withicons option[value="y"] {
     background-image: url("icons/x16/tick_circle_frame.png");
 }
@@ -225,7 +265,8 @@ input.mainaction { font-weight: bold; }
 
 /* link buttons
 -------------------------------------------------------------- */
-a.button {
+a.button,
+.button {
     display: inline-block;
     margin: 0 2px;
     padding: 2px 5px;
@@ -492,21 +533,6 @@ a.iconlink.upload {
     border-bottom: 1px solid #4f4f4f;
     padding: 2px 0 2px 10px;
 }
-#middle-line {
-    height: 46px;
-    margin-bottom: 10px;
-    padding: 0 0 0 10px;
-    background: #111;
-    background: -moz-linear-gradient(top, #404040 0%, #060606 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#404040), color-stop(100%,#060606));
-    background: -o-linear-gradient(top, #404040 0%, #060606 100%);
-    background: -ms-linear-gradient(top, #404040 0%, #060606 100%);
-    background: linear-gradient(top, #404040 0%, #060606 100%);
-    
-    
-    
-    
-}
 #top-line a {
     text-decoration: none;
 }
@@ -514,10 +540,6 @@ a.iconlink.upload {
 #toplogo { padding-top: 2px; }
 .topleft { float: left; }
 .topright { float: right; }
-.closelink {
-    display: inline-block;
-    padding: 2px 10px 2px 20px;
-}
 #top-line span.username { padding-right: 1em; }
 #top-line .topleft a {
     display: inline-block;
@@ -529,6 +551,17 @@ a.iconlink.upload {
     padding: 2px 10px 2px 20px;
     background: url(images/buttons.png) -6px -193px no-repeat;
     color: #fff;
+}
+#middle-line {
+    height: 46px;
+    margin-bottom: 10px;
+    padding: 0 0 0 10px;
+    background: #111;
+    background: -moz-linear-gradient(top, #404040 0%, #060606 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#404040), color-stop(100%,#060606));
+    background: -o-linear-gradient(top, #404040 0%, #060606 100%);
+    background: -ms-linear-gradient(top, #404040 0%, #060606 100%);
+    background: linear-gradient(top, #404040 0%, #060606 100%);   
 }
 /* layout/top/topNav
 -------------------------------------------------------------- */
@@ -550,7 +583,8 @@ a.iconlink.upload {
     background-position: 12px 3px;
     background-repeat: no-repeat;
 }
-#topNav a#topNav_current {
+#topNav a#topNav_current,
+#topNav a:hover {
     color: #3cf;
     background-color: #2c2c2c;
 }
@@ -666,6 +700,7 @@ ul#submenu {
 .menu li:hover {
     background-position: 12px -25px;
 }
+/* Icons in the sideNav for different pages
 #software_repo_list {
     background-position: 12px -52px;
 }
@@ -690,10 +725,12 @@ ul#submenu {
 #user_quota_stats:hover {
     background-position: 12px -248px;
 }
-#websites_stats {
+#websites_stats,
+#mail_user_stats {
     background-position: 12px -276px;
 }
-#websites_stats:hover {
+#websites_stats:hover,
+#mail_user_stats:hover {
     background-position: 12px -304px;
 }
 #shell_user_list {
@@ -702,14 +739,12 @@ ul#submenu {
 #shell_user_list:hover {
     background-position: 12px -360px;
 }
+*/
+
 #select_server {
-    background-position: 12px -388px;
+    background: url("icons/x16/linux.png") no-repeat 15px 15px transparent;
+    white-space: nowrap;
 }
-#select_server:hover {
-    background-position: 12px -416px;
-}
-
-
 .feed li a {
     padding-left: 25px;
     background: url("icons/x16/feed.png") no-repeat 0 5px transparent;
@@ -1034,44 +1069,66 @@ div.icon32 {
     border-bottom: 1px solid #6E6E6E;
     border-left: 1px solid #D8D8D8;
     border-radius: 5px;
-    box-shadow: 0 0 2px #999;
-    -o-box-shadow: 0 0 2px #999;
-    -webkit-box-shadow: 0 0 2px #999;
-    -moz-box-shadow: 0 0 2px #999;
-    -ms-box-shadow: 0 0 2px #999;
+    box-shadow: 2px 2px 4px 4px #999;
+    -o-box-shadow: 2px 2px 4px 4px #999;
+    -webkit-box-shadow: 2px 2px 4px 4px #999;
+    -moz-box-shadow: 2px 2px 4px 4px #999;
+    -ms-box-shadow: 2px 2px 4px 4px #999;
 }
 .dash-mods {
     width: 344px;
     
 }
-.dash-limits {
-    padding: 0 10px 10px 10px;
-}
-.dash-limits table {
-}
 .dash-mods h2,
 .dash-limits h2 {
-    margin: 10px;
+    background: #B0CCD7;
+    text-shadow: 0 1px 1px #FFFFFF;
+    color: #376572;
+    font-size: 1.2em;
+    margin: 0;
+    padding: 10px;
+    border-bottom: 1px solid #A3A3A3;
+}
+.dash-limits table {
+    margin: 0;
 }
 .dashboard-modules {
-    background-color: #CCCCCC;
-    background-position: 14px center;
+    background-color: #D9ECF4;
+    background-position: 10px center;
     background-repeat: no-repeat;
-    border: 1px dotted #888888;
+    border: 1px solid #BBD3DA;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px 1px #BBD3DA;
+    -o-box-shadow: 1px 1px 1px 1px #BBD3DA;
+    -webkit-box-shadow: 1px 1px 1px 1px #BBD3DA;
+    -moz-box-shadow: 1px 1px 1px 1px #BBD3DA;
+    -ms-box-shadow: 1px 1px 1px 1px #BBD3DA;
     float: left;
     height: 60px;
     margin: 10px;
     width: 150px;
 }
-.dashboard-modules a, 
-.dashboard-modules a:hover {
+.dashboard-modules a {
+    border-top: 1px solid #D8D8D8;
+    border-right: 1px solid #9C9C9C;
+    border-bottom: 1px solid #9C9C9C;
+    border-left: 1px solid #D8D8D8;
     display: block;
     font-weight: bold;
     font-size: 1.2em;
+    color: #376572;
     height: 40px;
     padding: 20px 0 0 50px;
     text-decoration: none;
+    text-align: center;
     width: 100px;
+}
+.dashboard-modules a:hover {
+    border-top: 1px solid #9C9C9C;
+    border-right: 1px solid #D8D8D8;
+    border-bottom: 1px solid #D8D8D8;
+    border-left: 1px solid #9C9C9C;
+    color: #000;
 }
 .dashboard-modules.admin { background-image: url("icons/x32/system.png") !important; }
 .dashboard-modules.vm { background-image: url("icons/x32/vm.png") !important; }
@@ -1945,7 +2002,9 @@ ul.toolbarmenu li span.conversation {
     padding: 4px 10px 3px 7px;
     width: auto;
 }
-.buttons a, .buttons button {
+.button,
+a.button,
+.buttons button {
     -moz-border-bottom-colors: none;
     -moz-border-image: none;
     -moz-border-left-colors: none;
@@ -2053,11 +2112,7 @@ button.icons16 {
 
 #language.selectInput {
     width: 75px;
-}
-select.withicons option {
-    background-position: 1px 50%;
-    background-repeat: no-repeat;
-    padding-left: 24px;
+    padding-left: 25px;
 }
 select.withicons option[value="AD"] {
     background-image: url("icons/flags/ad.png");
