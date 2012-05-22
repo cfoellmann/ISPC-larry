@@ -16,17 +16,13 @@ A. Resources
 2. Resources/Basis
 ------------------
 -   ispc-larry is a direct derivate of Roundcube Webmail Skin 'Larry' by FLINT / Büro für Gestaltung, Bern, Switzerland / http://bueroflint.com
-    ispc-larry may be using structures, elements and code from the ISPConfig
-    default theme created by Martin Henne (red-ray.de) which is based on:
-        Templates: http://www.yaml.de
-        Web-Forms: http://www.sprawsm.com/uni-form/
-        Icons: http://www.pinvoke.com and 
-               http://www.randomjabber.com/static/sizcons
-        Know-How: http://particletree.com/features/rediscovering-the-button-element
-
-    ispc-larry-specific resources:
-        Danish Royalty Free by Jonas Rask (http://jonasraskdesign.com/)
-            (temporary v0.0.1-v?)
+-   ispc-larry is using structures, elements and code from the ISPConfig default-theme created by Martin Henne (red-ray.de) which is based on:
+    -   Templates: http://www.yaml.de
+    -   Web-Forms: http://www.sprawsm.com/uni-form/
+    -   Icons: http://www.pinvoke.com and http://www.randomjabber.com/static/sizcons
+    -   Know-How: http://particletree.com/features/rediscovering-the-button-element
+-   ispc-larry-specific resources:
+    -   Icons: iconSweets2 (http://www.iconsweets2.com/)
 
 3. Main characteristics
 -----------------------
