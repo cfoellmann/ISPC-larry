@@ -1,0 +1,48 @@
+<!-- beginn: toolbar -->
+<div id="moduletoolbar">
+    <a class="button edit" onClick="loadContent('billing/invoice_message_template_edit.php');" href="#" title="{tmpl_var name="add_new_record_txt"}">{tmpl_var name="add_new_record_txt"}</a>
+</div>
+<!-- end: toolbar -->
+
+<!-- beginn: modulebody -->
+<div class="module-title"><h1><tmpl_var name="list_head_txt"></h1></div> 
+<div class="module-box boxlistcontent" id="modulecontainer">
+    <div class="module-desc"><tmpl_var name="list_desc_txt"></div>
+    
+    <!-- beginn: modulecontent -->
+    <div class="panel panel_list_invoice_message_template">
+        <table class="list">
+            <thead>
+                <tr>
+                    <th class="tbl_col_template_type" scope="col"><tmpl_var name="template_type_txt"></th>
+                    <th class="tbl_col_template_name" scope="col"><tmpl_var name="template_name_txt"></th>
+                    <th class="tbl_col_buttons" scope="col">Actions</th>
+                </tr>
+                <tr>
+                    <td class="tbl_col_template_type"><select name="search_template_type" onChange="submitForm('pageForm','billing/invoice_message_template_list.php');">{tmpl_var name='search_template_type'}</select></td>
+                    <td class="tbl_col_template_name"><input type="text" name="search_template_name" value="{tmpl_var name='search_template_name'}" class="search" /></td>
+                    <td class="tbl_col_buttons">
+                        <button type="button" class="button icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="submitForm('pageForm','billing/invoice_message_template_list.php');"><span>{tmpl_var name="filter_txt"}</span></button>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tmpl_loop name="records">
+                <tr class="tbl_row_<tmpl_if name='__EVEN__'}even<tmpl_else>uneven</tmpl_if>">
+                    <td class="tbl_col_template_type">{tmpl_var name="template_type"}</td>
+                    <td class="tbl_col_template_name"><a href="#" onClick="loadContent('billing/invoice_message_template_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="template_name"}</a></td>
+                    <td class="tbl_col_buttons">
+                        <a class="button icons16 icoEdit" href="javascript: loadContent('billing/invoice_message_template_edit.php?id={tmpl_var name='id'}');"><span>Edit</span></a>
+                        <a class="button icons16 icoDelete" href="javascript: del_record('billing/invoice_message_template_del.php?id={tmpl_var name='id'}&phpsessid={tmpl_var name='phpsessid'}','{tmpl_var name='delete_confirmation'}');"><span>{tmpl_var name='delete_txt'}</span></a>
+                    </td>
+                </tr>
+            </tmpl_loop>
+            </tbody>
+            <tfoot>
+            <tr>
+                <td class="tbl_footer tbl_paging" colspan="3"><tmpl_var name="paging"></td>
+            </tr>
+            </tfoot>
+        </table>
+    </div><!-- end: modulecontent -->
+</div><!-- end: modulebody -->

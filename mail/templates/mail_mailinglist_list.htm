@@ -16,24 +16,25 @@
                 <tr>
                     <th class="tbl_col_listname" scope="col"><tmpl_var name="listname_txt"></th>
                     <th class="tbl_col_domain" scope="col"><tmpl_var name="domain_txt"></th>
-                    <th class="tbl_col_buttons" scope="col">&nbsp;</th>
+                    <th class="tbl_col_buttons" scope="col">Actions</th>
                 </tr>
                 <tr>
                     <td class="tbl_col_listname"><input type="text" name="search_listname" value="{tmpl_var name='search_listname'}" /></td>
                     <td class="tbl_col_domain"><input type="text" name="search_domain" value="{tmpl_var name='search_domain'}" /></td>
-                    <td class="tbl_col_buttons"><div class="buttons"><button type="button" class="icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="submitForm('pageForm','mail/mail_mailinglist_list.php');"><span>{tmpl_var name="filter_txt"}</span></button></div></td>
+                    <td class="tbl_col_buttons">
+                        <button type="button" class="button icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="submitForm('pageForm','mail/mail_mailinglist_list.php');"><span>{tmpl_var name="filter_txt"}</span></button>
+                    </td>
                 </tr>
             </thead>
             <tbody>
             <tmpl_loop name="records">
                 <tr class="tbl_row_<tmpl_if name='__EVEN__'}even<tmpl_else>uneven</tmpl_if>">
                     <td class="tbl_col_listname"><a href="#" onClick="loadContent('mail/mail_mailinglist_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="listname"}</a></td>
-                    <td class="tbl_col_domain"><a href="#" onClick="loadContent('mail/mail_mailinglist_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="domain"}</a></td>
+                    <td class="tbl_col_domain">{tmpl_var name="domain"}</td>
                     <td class="tbl_col_buttons">
-                    <div class="buttons icons16">
-                                        <tmpl_if name="mailmailinglist_link"><a class="icons16 icoWebmailer" href="mail/mailinglist.php?id={tmpl_var name='id'}" target="mailmailinglist"><span>{tmpl_var name='delete_txt'}</span></a></tmpl_if>
-                        <a class="icons16 icoDelete" href="javascript: del_record('mail/mail_mailinglist_del.php?id={tmpl_var name='id'}&phpsessid={tmpl_var name='phpsessid'}','{tmpl_var name='delete_confirmation'}');"><span>{tmpl_var name='delete_txt'}</span></a>
-                    </div>
+                        <a class="button icons16 icoEdit" href="javascript: loadContent('mail/mail_mailinglist_edit.php?id={tmpl_var name='id'}');"><span>Edit</span></a>
+                        <tmpl_if name="mailmailinglist_link"><a class="icons16 icoWebmailer" href="mail/mailinglist.php?id={tmpl_var name='id'}" target="mailmailinglist"><span>{tmpl_var name='delete_txt'}</span></a></tmpl_if>
+                        <a class="button icons16 icoDelete" href="javascript: del_record('mail/mail_mailinglist_del.php?id={tmpl_var name='id'}&phpsessid={tmpl_var name='phpsessid'}','{tmpl_var name='delete_confirmation'}');"><span>{tmpl_var name='delete_txt'}</span></a>
                     </td>
                 </tr>
             </tmpl_loop>

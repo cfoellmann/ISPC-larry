@@ -16,7 +16,7 @@
         <div class="buttons">
             <div class="ctrlHolder">
                         <label for="server_id">{tmpl_var name='server_select_txt'}</label>
-                <select name="server_id" id="server_id" class="selectInput" onChange="submitForm('pageForm','admin/software_update_list.php');">
+                <select name="server_id" id="server_id" class="selectInput servericons" onChange="submitForm('pageForm','admin/software_update_list.php');">
                 <tmpl_loop name="servers">
                 <option value="{tmpl_var name='server_id'}" {tmpl_var name='selected'}>{tmpl_var name='server_name'}</option>
                 </tmpl_loop>

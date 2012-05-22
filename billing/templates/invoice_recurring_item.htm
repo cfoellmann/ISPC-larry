@@ -1,0 +1,110 @@
+<!-- beginn: toolbar -->
+<div id="moduletoolbar">
+    <a class="button cancel" onClick="loadContent('billing/invoice_recurring_item_list.php');" href="#" title="{tmpl_var name='btn_cancel_txt'}">{tmpl_var name='btn_cancel_txt'}</a>
+</div>
+<!-- end: toolbar -->
+
+<!-- beginn: modulebody -->
+<div class="module-title"><h1><tmpl_var name="list_head_txt"></h1></div>
+<div class="module-box boxlistcontent" id="modulecontainer">
+    <!-- tabs -->
+    <ul class="tabsbar">
+        <tmpl_loop name="formTab">
+            <tmpl_if name="active">
+                <li class="active"><a href="javascript:changeTab('<tmpl_var name='name'>','<tmpl_var name='app_module'>/<tmpl_var name='form_action'>')"><tmpl_var name='title'></a></li>
+                <tmpl_else>
+                    <li><a href="javascript:changeTab('<tmpl_var name='name'>','<tmpl_var name='app_module'>/<tmpl_var name='form_action'>')"><tmpl_var name='title'></a></li>
+            </tmpl_if>
+        </tmpl_loop>
+    </ul>
+    <!-- messages/erros -->  
+    <tmpl_if name="msg">
+        <div id="OKMsg"><p><tmpl_var name="msg"></p></div>
+    </tmpl_if>
+    <tmpl_if name="error">
+        <div id="errorMsg"><h3>ERROR</h3><ol><tmpl_var name="error"></ol></div>
+    </tmpl_if>
+        
+    <!-- beginn: modulecontent -->
+    <div class="panel panel_invoice_recurring_item">
+        <div class="ctrlHolder">
+            <label for="invoice_company_id">{tmpl_var name='invoice_company_id_txt'}</label>
+            <select name="invoice_company_id" id="invoice_company_id" class="selectInput">
+                {tmpl_var name='invoice_company_id'}
+            </select>
+        </div>
+        <div class="ctrlHolder">
+            <label for="client_id">{tmpl_var name='client_id_txt'}</label>
+            <select name="client_id" id="client_id" class="selectInput">
+                {tmpl_var name='client_id'}
+            </select>
+        </div>
+        <div class="ctrlHolder">
+            <label for="invoice_item_template_id">{tmpl_var name='invoice_item_template_id_txt'}</label>
+            <select name="invoice_item_template_id" id="invoice_item_template_id" class="selectInput" onChange="submitForm('pageForm','billing/invoice_recurring_item_edit.php?action=loadtemplate');">
+                {tmpl_var name='invoice_item_template_id'}
+            </select>
+        </div>
+        <div class="ctrlHolder">
+            <label for="name">{tmpl_var name='name_txt'}</label>
+            <input name="name" id="name" value="{tmpl_var name='name'}" size="30" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="description">{tmpl_var name='description_txt'}</label>
+            <textarea name="description" id="description" rows='10' cols='30' style="height:50px;">{tmpl_var name='description'}</textarea> &nbsp; {tmpl_var name="description_variables_txt"}
+        </div>
+        <div class="ctrlHolder">
+            <label for="quantity">{tmpl_var name='quantity_txt'}</label>
+            <input name="quantity" id="quantity" value="{tmpl_var name='quantity'}" size="10" maxlength="255" type="text" class="textInput" style="width:50px;" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="price">{tmpl_var name='price_txt'}</label>
+            <input name="price" id="price" value="{tmpl_var name='price'}" size="10" maxlength="255" type="text" class="textInput" style="width:50px;" /> &nbsp; {tmpl_var name="currency_txt"}
+        </div>
+        <div class="ctrlHolder">
+            <label for="vat">{tmpl_var name='vat_txt'}</label>
+            <input name="vat" id="vat" value="{tmpl_var name='vat'}" size="5" maxlength="5" type="text" class="textInput" style="width:50px;" /> &nbsp; %
+        </div>
+        <div class="ctrlHolder">
+            <label for="recur_months">{tmpl_var name='recur_months_txt'}</label>
+            <input name="recur_months" id="recur_months" value="{tmpl_var name='recur_months'}" size="2" maxlength="2" type="text" class="textInput" style="width:20px;" /> &nbsp; <tmpl_var name="months_txt">
+        </div>
+        <div class="ctrlHolder">
+            <p class="label">{tmpl_var name='advance_payment_txt'}</p>
+            <div class="multiField">
+                {tmpl_var name='advance_payment'}
+            </div>
+        </div>
+        <div class="ctrlHolder">
+            <label for="type">{tmpl_var name='type_txt'}</label>
+            <select name="type" id="type" class="selectInput">
+                {tmpl_var name='type'}
+            </select>
+        </div>
+        <div class="ctrlHolder">
+            <label for="next_payment_date">{tmpl_var name='next_payment_date_txt'}</label>
+            <input name="next_payment_date" id="next_payment_date" value="{tmpl_var name='next_payment_date'}" size="15" maxlength="15" type="text" class="textInput"  style="width:70px;" /> &nbsp <tmpl_var name="date_format_txt">
+        </div>
+        <div class="ctrlHolder">
+            <label for="start_date">{tmpl_var name='start_date_txt'}</label>
+            <input name="start_date" id="start_date" value="{tmpl_var name='start_date'}" size="15" maxlength="15" type="text" class="textInput"  style="width:70px;" /> &nbsp <tmpl_var name="date_format_txt">
+        </div>
+        <div class="ctrlHolder">
+            <label for="end_date">{tmpl_var name='end_date_txt'}</label>
+            <input name="end_date" id="end_date" value="{tmpl_var name='end_date'}" size="15" maxlength="15" type="text" class="textInput"  style="width:70px;" /> &nbsp <tmpl_var name="date_format_txt">
+        </div>
+        <div class="ctrlHolder">
+            <p class="label">{tmpl_var name='active_txt'}</p>
+            <div class="multiField">
+                {tmpl_var name='active'}
+            </div>
+        </div>
+                            
+        <input type="hidden" name="id" value="{tmpl_var name='id'}">
+        
+        <div class="buttonHolder buttons">
+            <button class="positive iconstxt icoPositive" type="button" value="{tmpl_var name='btn_save_txt'}" onClick="submitForm('pageForm','billing/invoice_recurring_item_edit.php');"><span>{tmpl_var name='btn_save_txt'}</span></button>
+            <button class="negative iconstxt icoNegative" type="button" value="{tmpl_var name='btn_cancel_txt'}" onClick="loadContent('billing/invoice_recurring_item_list.php');"><span>{tmpl_var name='btn_cancel_txt'}</span></button>
+        </div>
+    </div><!-- end: modulecontent -->
+</div><!-- end: modulebody -->

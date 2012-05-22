@@ -18,27 +18,28 @@
                     <th class="tbl_col_server_id" scope="col"><tmpl_var name="server_id_txt"></th>
                     <th class="tbl_col_pattern" scope="col"><tmpl_var name="pattern_txt"></th>
                     <th class="tbl_col_action" scope="col"><tmpl_var name="action_txt"></th>
-                    <th class="tbl_col_buttons" scope="col">&nbsp;</th>
+                    <th class="tbl_col_buttons" scope="col">Actions</th>
                 </tr>
                 <tr>
                     <td class="tbl_col_active"><select name="search_active" class="withicons">{tmpl_var name='search_active'}</select></td>
-                    <td class="tbl_col_server_id"><select name="search_server_id">{tmpl_var name='search_server_id'}</select></td>
-                    <td class="tbl_col_pattern"><input type="text" name="search_pattern" value="{tmpl_var name='search_pattern'}" /></td>
+                    <td class="tbl_col_server_id"><select name="search_server_id" class="servericons">{tmpl_var name='search_server_id'}</select></td>
+                    <td class="tbl_col_pattern"><input type="text" name="search_pattern" value="{tmpl_var name='search_pattern'}" class="search" /></td>
                     <td class="tbl_col_action"><select name="search_action">{tmpl_var name='search_action'}</select></td>
-                    <td class="tbl_col_buttons"><div class="buttons"><button type="button" class="icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="submitForm('pageForm','mail/mail_content_filter_list.php');"><span>{tmpl_var name="filter_txt"}</span></button></div></td>
+                    <td class="tbl_col_buttons">
+                        <button type="button" class="button icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="submitForm('pageForm','mail/mail_content_filter_list.php');"><span>{tmpl_var name="filter_txt"}</span></button>
+                    </td>
                 </tr>
             </thead>
             <tbody>
                 <tmpl_loop name="records">
                 <tr class="tbl_row_<tmpl_if name='__EVEN__'}even<tmpl_else>uneven</tmpl_if>">
-                    <td class="tbl_col_active"><a href="#" onClick="loadContent('mail/mail_content_filter_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="active"}</a></td>
-                    <td class="tbl_col_server_id"><a href="#" onClick="loadContent('mail/mail_content_filter_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="server_id"}</a></td>
+                    <td class="tbl_col_active">{tmpl_var name="active"}</td>
+                    <td class="tbl_col_server_id">{tmpl_var name="server_id"}</td>
                     <td class="tbl_col_pattern"><a href="#" onClick="loadContent('mail/mail_content_filter_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="pattern"}</a></td>
-                    <td class="tbl_col_action"><a href="#" onClick="loadContent('mail/mail_content_filter_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="action"}</a></td>
+                    <td class="tbl_col_action">{tmpl_var name="action"}</td>
                     <td class="tbl_col_buttons">
-                        <div class="buttons icons16">    
-                        <a class="icons16 icoDelete" href="javascript: del_record('mail/mail_content_filter_del.php?id={tmpl_var name='id'}&phpsessid={tmpl_var name='phpsessid'}','{tmpl_var name='delete_confirmation'}');"><span>{tmpl_var name='delete_txt'}</span></a>
-                        </div>
+                        <a class="button icons16 icoEdit" href="javascript: loadContent('mail/mail_content_filter_edit.php?id={tmpl_var name='id'}');"><span>Edit</span></a>
+                        <a class="button icons16 icoDelete" href="javascript: del_record('mail/mail_content_filter_del.php?id={tmpl_var name='id'}&phpsessid={tmpl_var name='phpsessid'}','{tmpl_var name='delete_confirmation'}');"><span>{tmpl_var name='delete_txt'}</span></a>
                     </td>
                 </tr>
                 </tmpl_loop>

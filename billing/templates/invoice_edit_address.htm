@@ -1,0 +1,150 @@
+<!-- beginn: toolbar -->
+<div id="moduletoolbar">
+    <a class="button cancel" onClick="loadContent('billing/invoice_list.php');" href="#" title="{tmpl_var name='btn_cancel_txt'}">{tmpl_var name='btn_cancel_txt'}</a>
+</div>
+<!-- end: toolbar -->
+
+<!-- beginn: modulebody -->
+<div class="module-title"><h1><tmpl_var name="form_hint"></h1></div>
+<div class="module-box boxlistcontent" id="modulecontainer">
+    <!-- tabs -->
+    <ul class="tabsbar">
+        <tmpl_loop name="formTab">
+            <tmpl_if name="active">
+                <li class="active"><a href="javascript:changeTab('<tmpl_var name='name'>','<tmpl_var name='app_module'>/<tmpl_var name='form_action'>')"><tmpl_var name='title'></a></li>
+                <tmpl_else>
+                    <li><a href="javascript:changeTab('<tmpl_var name='name'>','<tmpl_var name='app_module'>/<tmpl_var name='form_action'>')"><tmpl_var name='title'></a></li>
+            </tmpl_if>
+        </tmpl_loop>
+    </ul>
+    <!-- messages/erros -->  
+    <tmpl_if name="msg">
+        <div id="OKMsg"><p><tmpl_var name="msg"></p></div>
+    </tmpl_if>
+    <tmpl_if name="error">
+        <div id="errorMsg"><h3>ERROR</h3><ol><tmpl_var name="error"></ol></div>
+    </tmpl_if>
+        
+    <!-- beginn: modulecontent -->
+    <div class="panel panel_invoice">
+        <div class="ctrlHolder">
+            <label for="invoice_type">{tmpl_var name='invoice_type_txt'}</label>
+            <select name="invoice_type" id="invoice_type" class="selectInput" disabled="disabled">
+                {tmpl_var name='invoice_type'}
+            </select>
+        </div>
+        <div class="ctrlHolder">
+            <label for="invoice_company_id">{tmpl_var name='invoice_company_id_txt'}</label>
+            <select name="invoice_company_id" id="invoice_company_id" class="selectInput">
+                {tmpl_var name='invoice_company_id'}
+            </select>
+        </div>
+        <div class="ctrlHolder">
+            <label for="client_id">{tmpl_var name='client_id_txt'}</label>
+            <select name="client_id" id="client_id" class="selectInput" onChange="submitForm('pageForm','billing/invoice_edit.php?action=loadtemplate');">
+                {tmpl_var name='client_id'}
+            </select>
+        </div>
+        <div class="ctrlHolder">
+            <label for="invoice_number">{tmpl_var name='invoice_number_txt'}</label>
+            <input name="invoice_number" id="invoice_number" value="{tmpl_var name='invoice_number'}" size="15" maxlength="255" type="hidden" class="textInput" /> {tmpl_var name='invoice_number'}
+        </div>
+        <div class="ctrlHolder">
+            <label for="invoice_date">{tmpl_var name='invoice_date_txt'}</label>
+            <input name="invoice_date" id="invoice_date" value="{tmpl_var name='invoice_date'}" size="15" maxlength="15" type="text" class="textInput formLengthDate" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="company_name">{tmpl_var name='company_name_txt'}</label>
+            <input name="company_name" id="company_name" value="{tmpl_var name='company_name'}" size="30" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="contact_name">{tmpl_var name='contact_name_txt'}</label>
+            <input name="contact_name" id="contact_name" value="{tmpl_var name='contact_name'}" size="30" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="street">{tmpl_var name='street_txt'}</label>
+            <input name="street" id="street" value="{tmpl_var name='street'}" size="30" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="zip">{tmpl_var name='zip_txt'}</label>
+            <input name="zip" id="zip" value="{tmpl_var name='zip'}" size="10" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="city">{tmpl_var name='city_txt'}</label>
+            <input name="city" id="city" value="{tmpl_var name='city'}" size="30" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="state">{tmpl_var name='state_txt'}</label>
+            <input name="state" id="state" value="{tmpl_var name='state'}" size="30" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="country">{tmpl_var name='country_txt'}</label>
+            <input name="country" id="country" value="{tmpl_var name='country'}" size="30" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="email">{tmpl_var name='email_txt'}</label>
+            <input name="email" id="email" value="{tmpl_var name='email'}" size="30" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="email">{tmpl_var name='vat_id_txt'}</label>
+            <input name="vat_id" id="vat_id" value="{tmpl_var name='vat_id'}" size="30" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="payment_terms">{tmpl_var name='payment_terms_txt'}</label>
+            <select name="payment_terms" id="payment_terms" class="selectInput">
+                {tmpl_var name='payment_terms'}
+            </select>
+        </div>
+        <div class="ctrlHolder">
+            <label for="payment_gateway">{tmpl_var name='payment_gateway_txt'}</label>
+            <select name="payment_gateway" id="payment_gateway" class="selectInput">
+                {tmpl_var name='payment_gateway'}
+            </select>
+        </div>
+        <div class="ctrlHolder">
+            <p class="label">{tmpl_var name='status_printed_txt'}</p>
+            <div class="multiField">
+                {tmpl_var name='status_printed'}
+            </div>
+        </div>
+        <div class="ctrlHolder">
+            <p class="label">{tmpl_var name='status_sent_txt'}</p>
+            <div class="multiField">
+                {tmpl_var name='status_sent'}
+            </div>
+        </div>
+        <div class="ctrlHolder">
+            <p class="label">{tmpl_var name='status_paid_txt'}</p>
+            <div class="multiField">
+                {tmpl_var name='status_paid'}
+            </div>
+        </div>
+        <div class="ctrlHolder">
+            <label for="payment_date">{tmpl_var name='payment_date_txt'}</label>
+            <input name="payment_date" id="payment_date" value="{tmpl_var name='payment_date'}" size="15" maxlength="15" type="text" class="textInput formLengthDate" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="invoice_amount">{tmpl_var name='invoice_amount_txt'}</label>
+            <input name="invoice_amount" id="invoice_amount" value="{tmpl_var name='invoice_amount'}" size="15" maxlength="255" type="hidden" class="textInput" /> {tmpl_var name='invoice_amount'} {tmpl_var name='currency_txt'}
+        </div>
+        <div class="ctrlHolder">
+            <label for="notes">{tmpl_var name='notes_txt'}</label>
+            <textarea name="notes" id="notes" rows='10' cols='30'>{tmpl_var name='notes'}</textarea>
+        </div>
+        
+        <input type="hidden" name="id" value="{tmpl_var name='id'}">
+
+        <div class="buttonHolder buttons">
+            <button class="positive iconstxt icoPositive" type="button" value="{tmpl_var name='btn_save_txt'}" onClick="submitForm('pageForm','billing/invoice_edit.php');"><span>{tmpl_var name='btn_save_draft_txt'}</span></button>
+            <button class="positive iconstxt icoPositive" type="button" value="{tmpl_var name='btn_save_txt'}" onClick="submitForm('pageForm','billing/invoice_edit.php?action=finalize_invoice');"><span>{tmpl_var name='btn_save_finalize_txt'}</span></button>
+            <button class="positive iconstxt icoAdd" type="button" value="{tmpl_var name='btn_save_txt'}" onClick="javascript:changeTab('invoice_items','billing/invoice_edit.php')"><span>{tmpl_var name='btn_add_items_txt'}</span></button>
+            <button class="negative iconstxt icoNegative" type="button" value="{tmpl_var name='btn_cancel_txt'}" onClick="loadContent('billing/invoice_list.php');"><span>{tmpl_var name='btn_cancel_txt'}</span></button>
+        </div>
+    </div><!-- end: modulecontent -->
+</div><!-- end: modulebody -->
+<script language="JavaScript" type="text/javascript">
+		var invoice_type = jQuery('#invoice_type').val();
+		jQuery('#invoice_type').attr({name: 'invoice_type_disabled', id: 'invoice_type_disabled'});
+		jQuery('#invoice_type_disabled').after('<input type="hidden" name="invoice_type" value="'+invoice_type+'">');
+			
+</script>

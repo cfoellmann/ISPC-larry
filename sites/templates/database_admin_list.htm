@@ -27,8 +27,8 @@
                     <td class="tbl_col_remote_access"><select name="search_remote_access" class="withicons">{tmpl_var name='search_remote_access'}</select></td>
                     <td class="tbl_col_sys_groupid"><select name="search_sys_groupid" class="clienticons">{tmpl_var name='search_sys_groupid'}</select></td>
                     <td class="tbl_col_server_id"><select name="search_server_id" class="servericons">{tmpl_var name='search_server_id'}</select></td>
-                    <td class="tbl_col_database_user"><input type="text" name="search_database_user" value="{tmpl_var name='search_database_user'}" /></td>
-                    <td class="tbl_col_database_name"><input type="text" name="search_database_name" value="{tmpl_var name='search_database_name'}" /></td>
+                    <td class="tbl_col_database_user"><input type="text" name="search_database_user" value="{tmpl_var name='search_database_user'}" class="search" /></td>
+                    <td class="tbl_col_database_name"><input type="text" name="search_database_name" value="{tmpl_var name='search_database_name'}" class="search" /></td>
                     <td class="tbl_col_buttons">
                         <button type="button" class="button icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="submitForm('pageForm','sites/database_list.php');"><span>{tmpl_var name="filter_txt"}</span></button>
                     </td>

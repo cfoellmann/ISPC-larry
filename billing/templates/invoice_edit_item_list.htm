@@ -1,0 +1,31 @@
+<div class="pnl_listarea">
+<table class="list">
+  <thead>
+  <tr style="font-weight:bold; background-color:#cccccc;">
+    <td style="padding:2px;"><tmpl_var name="quantity_txt"></td>
+	<td style="padding:2px;"><tmpl_var name="description_txt"></td>
+	<td style="padding:2px;text-align:right;"><tmpl_var name="price_txt"></td>
+	<td style="padding:2px;text-align:right;"><tmpl_var name="vat_txt"></td>
+	<td style="padding:2px;text-align:right;"><tmpl_var name="sum_txt"></td>
+	<td></td>
+  </tr>
+  </thead>
+  <tbody>
+  <tmpl_if name="has_invoice_items">
+  <tmpl_loop name="invoice_items">
+  <tr>
+    <td style="padding:2px;"><tmpl_var name="quantity"></td>
+	<td style="padding:2px;"><tmpl_var name="description"></td>
+	<td style="padding:2px;text-align:right;width:60px;"><tmpl_var name="price"> {tmpl_var name='currency_txt'}</td>
+	<td style="padding:2px;text-align:right;width:50px;"><tmpl_var name="vat">%</td>
+	<td style="padding:2px;text-align:right;width:80px;"><tmpl_var name="sum"> {tmpl_var name='currency_txt'}</td>
+	<td style="padding:2px;width:80px;">
+	  <div class="buttons" style="margin-left:10px;"><button type="button" value="Edit" onClick="changeTab('invoice_items','billing/invoice_edit.php?action=edit&invoice_item_id={tmpl_var name='invoice_item_id'}');" style="height:22px;padding:0px;"><span><tmpl_var name="edit_txt"></span></button></div>
+	  <div class="buttons"><button type="button" value="Del" onClick="changeTab('invoice_items','billing/invoice_edit.php?action=del&invoice_item_id={tmpl_var name='invoice_item_id'}');" style="height:22px;padding:0px;"><span><tmpl_var name="del_txt"></span></button></div>
+	</td>
+  </tr>
+  </tmpl_loop>
+  </tmpl_if>
+  </tbody>
+</table>
+</div>

@@ -1,0 +1,57 @@
+<!-- beginn: toolbar -->
+<div id="moduletoolbar">
+    <a class="button edit" onClick="loadContent('client/client_edit.php');" href="#" title="{tmpl_var name="add_new_record_txt"}">{tmpl_var name="add_new_record_txt"}</a>
+</div>
+<!-- end: toolbar -->
+
+<!-- beginn: modulebody -->
+<div class="module-title"><h1><tmpl_var name="list_head_txt"></h1></div>
+<div class="module-box boxlistcontent" id="modulecontainer">
+    <div class="module-desc"><tmpl_var name="list_desc_txt"></div>
+    
+    <!-- beginn: modulecontent -->
+    <div class="panel panel_list_clients">
+        <table class="list">
+            <thead>
+                <tr>
+                    <th class="tbl_col_client_id" scope="col"><tmpl_var name="client_id_txt"></th>
+                    <th class="tbl_col_company_name" scope="col"><tmpl_var name="company_name_txt"></th>
+                    <th class="tbl_col_contact_name" scope="col"><tmpl_var name="contact_name_txt"></th>
+                    <th class="tbl_col_city" scope="col"><tmpl_var name="city_txt"></th>
+                    <th class="tbl_col_country" scope="col"><tmpl_var name="country_txt"></th>
+                    <th class="tbl_col_country" scope="col">Actions</th>
+                </tr>
+                <tr>
+                    <td class="tbl_col_client_id"><input type="text" name="search_client_id" size="4" value="{tmpl_var name='search_client_id'}" class="search" /></td>
+                    <td class="tbl_col_company_name"><input type="text" name="search_company_name" value="{tmpl_var name='search_company_name'}" class="search" /></td>
+                    <td class="tbl_col_contact_name"><input type="text" name="search_contact_name" value="{tmpl_var name='search_contact_name'}" class="search" /></td>
+                    <td class="tbl_col_city"><input type="text" name="search_city" value="{tmpl_var name='search_city'}" class="search" /></td>
+                    <td class="tbl_col_country"><input type="text" name="search_country" value="{tmpl_var name='search_country'}" class="search" /></td>
+                    <td class="tbl_col_buttons">
+                        <button type="button" class="button icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="submitForm('pageForm','client/client_list.php');"><span>{tmpl_var name="filter_txt"}</span></button>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+            <tmpl_loop name="records">
+                <tr class="tbl_row_<tmpl_if name='__EVEN__'}even<tmpl_else>uneven</tmpl_if>">
+                    <td class="tbl_col_client_id">{tmpl_var name="client_id"}</td>
+                    <td class="tbl_col_company_name"><a href="#" onClick="loadContent('client/client_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="company_name"}</a></td>
+                    <td class="tbl_col_contact_name"><a href="#" onClick="loadContent('client/client_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="contact_name"}</a></td>
+                    <td class="tbl_col_city">{tmpl_var name="city"}</td>
+                    <td class="tbl_col_country">{tmpl_var name="country"}</td>
+                    <td class="tbl_col_buttons">
+                        <a class="button icons16 icoEdit" href="javascript: loadContent('client/client_edit.php?id={tmpl_var name='id'}');"><span>Edit</span></a>
+                        <a href="javascript: loadContent('billing/invoice_client_settings_edit.php?id={tmpl_var name='id'}');"">{tmpl_var name="settings_txt"}</a>
+                    </td>
+                </tr>
+            </tmpl_loop>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td class="tbl_footer tbl_paging" colspan="7"><tmpl_var name="paging"></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div><!-- end: modulecontent -->
+</div><!-- end: modulebody -->

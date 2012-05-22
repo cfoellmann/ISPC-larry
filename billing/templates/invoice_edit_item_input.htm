@@ -1,0 +1,18 @@
+<table>
+  <tr>
+    <td style="margin:0px; padding:2px; padding-right:10px;"><select name="invoice_item_template_id" id="invoice_item_template_id" class="selectInput formLengthLimit" onChange="changeTab('invoice_items','billing/invoice_edit.php?action=load&invoice_item_template_id='+document.getElementById('invoice_item_template_id').value);">{tmpl_var name='invoice_item_template_id'}</select></td>
+    <td style="margin:0px; padding:2px;">{tmpl_var name='number_txt'}: </td>
+    <td style="margin:0px; padding:2px; padding-right:10px;"><input type="text" name="quantity" value="{tmpl_var name='quantity'}" class="textInput formLengthLimit" /></td>
+	<td style="margin:0px; padding:2px;">{tmpl_var name='price_txt'}: </td>
+	<td style="margin:0px; padding:2px; padding-right:10px;"><input type="text" name="price" value="{tmpl_var name='price'}" class="textInput formLengthLimit" />&nbsp;{tmpl_var name='currency_txt'}</td>
+	<td style="margin:0px; padding:2px;">{tmpl_var name='vat_txt'}: </td>
+	<td style="margin:0px; padding:2px;"><input type="text" name="vat" value="{tmpl_var name='vat'}" class="textInput" />&nbsp;%</td>
+	<td></td>
+  </tr>
+  <tr>
+    <td style="margin:0px; padding:2px;" colspan="7"><textarea name="description" id="description" rows='2' cols='30' style="width:500px; height:40px;">{tmpl_var name='description'}</textarea></td>
+	<td><div class="buttons"><button class="positive iconstxt icoPositive" type="button" value="{tmpl_var name='btn_save_txt'}" onClick="changeTab('invoice_items','billing/invoice_edit.php?action=save');"><span>{tmpl_var name='add_save_txt'}</span></button></div></td>
+  </tr>
+</table>
+<input type="hidden" name="invoice_item_id" value="{tmpl_var name='invoice_item_id'}" />
+<hr />

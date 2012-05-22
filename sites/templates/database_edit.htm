@@ -65,7 +65,7 @@
         </div>
         <div class="ctrlHolder">
             <label for="database_name">{tmpl_var name='database_name_txt'}</label>
-            <div style="float: left;">{tmpl_var name='database_name_prefix'} </div>
+            <p class="prefix">{tmpl_var name='database_name_prefix'}</p>
             <tmpl_if name="edit_disabled">
                 <input name="database_name" id="database_name" value="{tmpl_var name='database_name'}" size="30" maxlength="255" type="text" class="textInput formLengthHalf" disabled="disabled" />
                 <input name="database_name" type="hidden" value="{tmpl_var name='database_name'}" />
@@ -75,7 +75,7 @@
         </div>
         <div class="ctrlHolder">
             <label for="database_user">{tmpl_var name='database_user_txt'}</label>
-            <div style="float: left;">{tmpl_var name='database_user_prefix'} </div>
+            <p class="prefix">{tmpl_var name='database_user_prefix'}</p>
             <input name="database_user" id="database_user" value="{tmpl_var name='database_user'}" size="30" maxlength="255" type="text" class="textInput formLengthHalf" />
         </div>
         <div class="ctrlHolder">
