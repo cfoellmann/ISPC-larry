@@ -1,7 +1,11 @@
- +--------------------------------------------------------------------------+
- | ispc-larry for ISPConfig 3.0.4.x                                         |
- | https://github.com/foe-services/ispc-larry                               |
- +--------------------------------------------------------------------------+ 
+ispc-larry for ISPConfig 3.0.4.x
+================================
+Web
+---
+Info: http://open-source.foe-services.de/ispc-larry/
+GitHub: https://github.com/foe-services/ispc-larry
+
+
 
  1. About
     The aim of this project is the conversion of the new 
