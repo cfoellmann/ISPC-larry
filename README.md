@@ -8,16 +8,12 @@ A. Resources
 *   Timeline/Roadmap: https://github.com/foe-services/ispc-larry/issues/milestones
 
 
-1.  About
-    The aim of this project is the conversion of the new 
-    Roundcube Webmail Skin 'Larry' into a theme for ISPConfig
-    For discussions please go to 
-    http://www.howtoforge.com/forums/showthread.php?p=278359
+1.  ###### About
+    The aim of this project is the conversion of the new Roundcube Webmail Skin 'Larry' into a theme for ISPConfig
+    For discussions please go to http://www.howtoforge.com/forums/showthread.php?p=278359  
 
-    
-
-2.  Resources/Basis
-    ispc-larry is a direct derivate of 
+2.  ###### Resources/Basis
+    -   ispc-larry is a direct derivate of 
         Roundcube Webmail Skin 'Larry' by FLINT / Büro für Gestaltung, 
         Bern, Switzerland / http://bueroflint.com
     ispc-larry may be using structures, elements and code from the ISPConfig
@@ -33,10 +29,10 @@ A. Resources
             (temporary v0.0.1-v?)
 
 3.  Main characteristics:
-    *   HTML5
-    *   Deployment via ISPC repository feature (http://ispc.foe-services.de)
-    *   Look and feel of "Roundcube larry" in desktop browsers
-    *   Responsive design OR native iPhone support as web-app
+    -   HTML5
+    -   Deployment via ISPC repository feature (http://ispc.foe-services.de)
+    -   Look and feel of "Roundcube larry" in desktop browsers
+    -   Responsive design OR native iPhone support as web-app
 
     
  
