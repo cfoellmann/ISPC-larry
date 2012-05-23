@@ -1,13 +1,7 @@
-ispc-larry for ISPConfig 3.0.4.x
-================================
-A. Resources
-------------
--   Info: http://open-source.foe-services.de/ispc-larry/
--   GitHub: https://github.com/foe-services/ispc-larry
--   Wiki: https://github.com/foe-services/ispc-larry/wiki
--   Issue-Tracker: https://github.com/foe-services/ispc-larry/issues
--   Timeline/Roadmap: https://github.com/foe-services/ispc-larry/issues/milestones
+# ispc-larry
+## for ISPConfig 3.0.4.x
 
+[Info](http://open-source.foe-services.de/ispc-larry/) | [GitHub](https://github.com/foe-services/ispc-larry) | [Wiki](https://github.com/foe-services/ispc-larry/wiki) | [Issue-Tracker](https://github.com/foe-services/ispc-larry/issues) | [Timeline/Roadmap](https://github.com/foe-services/ispc-larry/issues/milestones)
 
 1. About
 --------
@@ -23,7 +17,7 @@ For discussions please go to http://www.howtoforge.com/forums/showthread.php?p=2
     -   Icons: http://www.pinvoke.com and http://www.randomjabber.com/static/sizcons
     -   Know-How: http://particletree.com/features/rediscovering-the-button-element
 -   ispc-larry-specific resources:
-    -   Icons: iconSweets2 (http://www.iconsweets2.com/)
+    -   TBD
 
 3. Main characteristics
 -----------------------
