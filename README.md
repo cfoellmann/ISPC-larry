@@ -1,5 +1,4 @@
-# ispc-larry
-## for ISPConfig 3.0.4.x
+# ispc-larry for ISPConfig 3.0.4.x
 
 [Info](http://open-source.foe-services.de/ispc-larry/) | [GitHub](https://github.com/foe-services/ispc-larry) | [Wiki](https://github.com/foe-services/ispc-larry/wiki) | [Issue-Tracker](https://github.com/foe-services/ispc-larry/issues) | [Timeline/Roadmap](https://github.com/foe-services/ispc-larry/issues/milestones)
 
