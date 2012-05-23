@@ -40,9 +40,6 @@ For discussions please go to http://www.howtoforge.com/forums/showthread.php?p=2
 
 5. Developers
 -------------
--   Christian Foellmann
-    -   Github: https://github.com/cfoellmann
-    -   SourceForge: https://sourceforge.net/users/cfoellmann
-    -   Mail: foellmann@foe-services.de
+-   Christian Foellmann: [Github](https://github.com/cfoellmann) | [Web](http://www.foe-services.de) | [Mail](mailto:foellmann@foe-services.de)
 
 ### Contributations are always welcome
