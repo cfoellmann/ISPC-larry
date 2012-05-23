@@ -4,14 +4,15 @@ A. Resources
 ------------
 -   Info: http://open-source.foe-services.de/ispc-larry/
 -   GitHub: https://github.com/foe-services/ispc-larry
+-   Wiki: https://github.com/foe-services/ispc-larry/wiki
 -   Issue-Tracker: https://github.com/foe-services/ispc-larry/issues
 -   Timeline/Roadmap: https://github.com/foe-services/ispc-larry/issues/milestones
 
 
 1. About
 --------
-    The aim of this project is the conversion of the new Roundcube Webmail Skin 'Larry' into a theme for ISPConfig
-    For discussions please go to http://www.howtoforge.com/forums/showthread.php?p=278359  
+The aim of this project is the conversion of the new Roundcube Webmail Skin 'Larry' into a theme for ISPConfig
+For discussions please go to http://www.howtoforge.com/forums/showthread.php?p=278359  
 
 2. Resources/Basis
 ------------------
@@ -35,7 +36,7 @@ A. Resources
 --------------
 -   (v0.1) Tested only in Firefox (newest Version, currently 11.0)
 -   (v0.1) non "responsive" design -> not suitable for different platforms like smartphones or tablets
--   (v1.0) no IE6 support, http://www.ie6countdown.com/
+-   no IE6 support, http://www.ie6countdown.com/
 
 5. Developers
 -------------
