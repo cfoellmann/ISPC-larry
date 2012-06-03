@@ -5,9 +5,8 @@
     </div>
 </div>
 <!-- end: toolbar -->
-
 <!-- begin: modulebody -->
-<div class="module-title"><h1><tmpl_var name="app_title"> <tmpl_var name="app_version"></h1></div>
+<div class="module-title"><h1><tmpl_var name="app_title"></h1></div>
 <div class="module-box boxlistcontent" id="modulecontainer">   
     <tmpl_if name='error'>
         <div class="systemmonitor-state state-error">
@@ -34,7 +33,6 @@
             <br style="clear:both" />
         </div>
     </tmpl_if>
-    
     <div class="panel panel_dashboard">
         <h3 class="welcome"><tmpl_var name="welcome_user"></h3>
         <div class="dash-mods">
@@ -47,5 +45,6 @@
                 {tmpl_var name='content'}
             </tmpl_loop>
         </div>
+        <br style="clear:both" />
     </div><!-- end: modulecontent -->
 </div><!-- end: modulebody -->
