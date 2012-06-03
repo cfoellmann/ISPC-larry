@@ -540,8 +540,7 @@ a.iconlink.upload {
     text-decoration: none;
     padding: 5px 0 0 34px;
     height: 19px;
-    background-image: url("icons/icons_topnav.png");
-    background-position: 12px 3px;
+    background-image: url("icons/x24_bw.png");
     background-repeat: no-repeat;
 }
 #topNav a#topNav_current,
@@ -553,40 +552,40 @@ a.iconlink.upload {
     background-position: 3px 0px;
 }
 #topNav a.button-dashboard span.button-inner {
-    background-position: 3px -60px;
+    background-position: 3px -88px;
 }
 #topNav a.button-tools span.button-inner {
-    background-position: 3px -210px;
+    background-position: 3px -176px;
 }
 #topNav a.button-sites span.button-inner {
-    background-position: 3px -270px;
+    background-position: 3px -792px;
 }
 #topNav a.button-monitor span.button-inner {
-    background-position: 3px -300px;
+    background-position: 3px -968px;
 }
 #topNav a.button-help span.button-inner {
-    background-position: 3px -90px;
+    background-position: 3px -264px;
 }
 #topNav a.button-admin span.button-inner {
-    background-position: 3px -30px;
+    background-position: 3px -616px;
 }
 #topNav a.button-mail span.button-inner {
-    background-position: 3px -240px;
+    background-position: 3px -352px;
 }
 #topNav a.button-client span.button-inner {
-    background-position: 3px -180px;
+    background-position: 3px -440px;
 }
 #topNav a.button-domain span.button-inner {
-    background-position: 3px -120px;
+    background-position: 3px -528px;
 }
 #topNav a.button-dns span.button-inner {
-    background-position: 3px -150px;
+    background-position: 3px -704px;
 }
 #topNav a.button-vm span.button-inner {
-    background-position: 3px -330px;
+    background-position: 3px -880px;
 }
 #topNav a.button-billing span.button-inner {
-    background-position: 3px -360px;
+    background-position: 3px -1056px;
 }
 #topNav a#topNav_current span.button-inner,
 #topNav a.button-dashboard:hover span.button-inner,
@@ -828,15 +827,18 @@ footer p {
     -webkit-box-shadow: none;
     -o-box-shadow: none;
     border: 0;
+    background-image: url("icons/x24_bw.png");
+    background-repeat: no-repeat;
+    background-color: transparent;
 }
 #moduletoolbar a.button.edit {
-    background: url(icons/x24/edit.png) no-repeat transparent center top;
+    background-position: center -1188px;
 }
 #moduletoolbar a.button.cancel {
-    background: url(icons/x24/cancel.png) no-repeat transparent center top;
+    background-position: center -1276px;
 }
 #moduletoolbar a.button.import {
-    background: url(icons/x24/import.png) no-repeat transparent center top;
+    background-position: center -1364px;
 }
 #module-view {
     bottom: 28px;
@@ -1030,7 +1032,7 @@ div.icon32 {
     -ms-box-shadow: 2px 2px 4px 4px #999;
 }
 .dash-mods {
-    width: 344px;
+    width: 430px;
     
 }
 .dash-mods h2,
@@ -1047,8 +1049,8 @@ div.icon32 {
     margin: 0;
 }
 .dashboard-modules {
+    background-image: url("icons/x24_bw.png");
     background-color: #D9ECF4;
-    background-position: 10px center;
     background-repeat: no-repeat;
     border: 1px solid #BBD3DA;
     border-radius: 3px;
@@ -1060,7 +1062,7 @@ div.icon32 {
     float: left;
     height: 60px;
     margin: 10px;
-    width: 150px;
+    width: 120px;
 }
 .dashboard-modules a {
     border-top: 1px solid #D8D8D8;
@@ -1072,10 +1074,10 @@ div.icon32 {
     font-size: 1.2em;
     color: #376572;
     height: 40px;
-    padding: 20px 0 0 50px;
+    padding: 20px 0 0 35px;
     text-decoration: none;
     text-align: center;
-    width: 100px;
+    width: 85px;
 }
 .dashboard-modules a:hover {
     border-top: 1px solid #9C9C9C;
@@ -1084,17 +1086,17 @@ div.icon32 {
     border-left: 1px solid #9C9C9C;
     color: #000;
 }
-.dashboard-modules.admin { background-image: url("icons/x32/system.png") !important; }
-.dashboard-modules.vm { background-image: url("icons/x32/vm.png") !important; }
-.dashboard-modules.client { background-image: url("icons/x32/client.png") !important; }
-.dashboard-modules.mail { background-image: url("icons/x32/mail.png") !important; }
-.dashboard-modules.monitor { background-image: url("icons/x32/monitor.png") !important; }
-.dashboard-modules.dns { background-image: url("icons/x32/dns.png") !important; }
-.dashboard-modules.tools { background-image: url("icons/x32/tools.png") !important; }
-.dashboard-modules.help { background-image: url("icons/x32/help.png") !important; }
-.dashboard-modules.domain { background-image: url("icons/x32/domain.png") !important; }
-.dashboard-modules.sites { background-image: url("icons/x32/sites.png") !important; }
-.dashboard-modules.billing { background-image: url("icons/x32/billing.png") !important; }
+.dashboard-modules.admin { background-position: 10px -642px; }
+.dashboard-modules.vm { background-position: 10px -906px; }
+.dashboard-modules.client { background-position: 10px -466px; }
+.dashboard-modules.mail { background-position: 10px -378px; }
+.dashboard-modules.monitor { background-position: 10px -994px; }
+.dashboard-modules.dns { background-position: 10px -730px; }
+.dashboard-modules.tools { background-position: 10px -202px; }
+.dashboard-modules.help { background-position: 10px -290px; }
+.dashboard-modules.domain { background-position: 10px -554px; }
+.dashboard-modules.sites { background-position: 10px -818px; }
+.dashboard-modules.billing { background-position: 10px -1082px; }
 
 /* ??
 -------------------------------------------------------------- */
