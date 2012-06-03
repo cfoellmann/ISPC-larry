@@ -50,6 +50,10 @@ table.list {
     border: 1px solid #D3D3D3 !important;
     width: 100%;
 }
+table.list tr:hover,
+#submenu li:hover {
+    background: #FFFACD;
+}
 table.list .tbl_col_buttons {
     width: 120px;
 }
