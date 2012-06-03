@@ -20,14 +20,14 @@ For discussions please go to http://www.howtoforge.com/forums/showthread.php?p=2
     -   Icons: http://www.pinvoke.com and http://www.randomjabber.com/static/sizcons
     -   Know-How: http://particletree.com/features/rediscovering-the-button-element
 -   ispc-larry-specific resources:
-    -   TBD
+    -   Icons: [Entypo](http://www.entypo.com/)
 
 3. Main characteristics
 -----------------------
--   HTML5
--   Deployment via ISPC repository feature (http://ispc.foe-services.de)
--   Look and feel of "Roundcube larry" in desktop browsers
--   Responsive design OR native iPhone support as web-app
+-   HTML5 (since v0.0.1)
+-   Deployment via ISPC repository feature (http://ispc.foe-services.de) (planned)
+-   Look and feel of "Roundcube larry" in desktop browsers (since v0.0.1)
+-   Responsive design OR native iPhone support as web-app (planned)
  
 4. Limitations
 --------------
