@@ -2,17 +2,17 @@
 <html dir="ltr" lang="de-DE">
     <head>
         <meta charset="<tmpl_var name="html_content_encoding">" />
-              <title><tmpl_var name="app_title"></title>
-                    <link rel="shortcut icon" href="/themes/ispc-larry/images/favicon.ico" type="image/x-icon" />
-                    <link href="themes/ispc-larry/styles.css" rel="stylesheet" type="text/css"/>
-                    <!--[if IE 9]><link href="themes/ispc-larry/svggradients.css" rel="stylesheet" type="text/css" /><![endif]-->
-                    <!--[if lte IE 8]><link href="themes/ispc-larry/iehacks.css" rel="stylesheet" type="text/css" /><![endif]-->
-                    <!--[if lte IE 7]><link href="themes/ispc-larry/ie7hacks.css" rel="stylesheet" type="text/css" /><![endif]-->
-                    <script type="text/javascript" src="js/jquery-1.6.3.min.js"></script>
-                    <script type="text/javascript" src="js/jquery-ui-1.8.16.custom.min.js"></script>
-                    <script type="text/javascript" src="js/scrigo.js.php"></script>
-                    <script type="text/javascript" src="js/uni-form/uni-form.jquery.js"></script>
-                    <script language="JavaScript" type="text/javascript">
+        <title><tmpl_var name="app_title"></title>
+        <link rel="shortcut icon" href="/themes/ispc-larry/images/favicon.ico" type="image/x-icon" />
+        <link href="themes/ispc-larry/styles.css" rel="stylesheet" type="text/css"/>
+        <!--[if IE 9]><link href="themes/ispc-larry/svggradients.css" rel="stylesheet" type="text/css" /><![endif]-->
+        <!--[if lte IE 8]><link href="themes/ispc-larry/iehacks.css" rel="stylesheet" type="text/css" /><![endif]-->
+        <!--[if lte IE 7]><link href="themes/ispc-larry/ie7hacks.css" rel="stylesheet" type="text/css" /><![endif]-->
+        <script type="text/javascript" src="js/jquery-1.6.3.min.js"></script>
+        <script type="text/javascript" src="js/jquery-ui-1.8.16.custom.min.js"></script>
+        <script type="text/javascript" src="js/scrigo.js.php"></script>
+        <script type="text/javascript" src="js/uni-form/uni-form.jquery.js"></script>
+        <script language="JavaScript" type="text/javascript">
 //                        var is_chrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
 //                        if(!is_chrome && getInternetExplorerVersion() > 8.0) {
 //                            var style = document.createElement('style');
@@ -20,105 +20,93 @@
 //                            document.getElementsByTagName("head")[0].appendChild(style);
 //                        }
 
-                        jQuery(document).ready(function() {
-                            loadInitContent();
+            jQuery(document).ready(function() {
+                loadInitContent();
 
-                            $("#pageForm").submit(function(e){
-                                //Prevent form submit: e.preventDefault() in lists
-                                if ($(".panel #Filter").length > 0) {
-                                    e.preventDefault();
-                                }
-                            });
-                        });
+                $("#pageForm").submit(function(e){
+                    //Prevent form submit: e.preventDefault() in lists
+                    if ($(".panel #Filter").length > 0) {
+                        e.preventDefault();
+                    }
+                });
+            });
 
 
-                        jQuery(document).bind("change", function(event) {
-                            if ($(".panel #Filter").length > 0 && event.target.localName == 'select') {
-                                $(".panel #Filter").attr("onsubmit",$(".panel #Filter").attr("onclick")).submit();
-                            }
-                        });
+            jQuery(document).bind("change", function(event) {
+                if ($(".panel #Filter").length > 0 && event.target.localName == 'select') {
+                    $(".panel #Filter").attr("onsubmit",$(".panel #Filter").attr("onclick")).submit();
+                }
+            });
 
-                        //Use jQuery submit with kespress Enter in panel filterbar
-                        jQuery(document).bind("keypress", function(event) {
-                            if (event.which == '13' && $(".panel #Filter").length > 0) {
-                                $(".panel #Filter").attr("onsubmit",$(".panel #Filter").attr("onclick")).submit();
-                            }
-                        });
+            //Use jQuery submit with kespress Enter in panel filterbar
+            jQuery(document).bind("keypress", function(event) {
+                if (event.which == '13' && $(".panel #Filter").length > 0) {
+                    $(".panel #Filter").attr("onsubmit",$(".panel #Filter").attr("onclick")).submit();
+                }
+            });
 
-                    </script>
-                    </head>
-                    <body>                  
-                        <!-- begin: header -->
-                        <header>
-                            <div id="top-line">
-                                <div class="topleft">
-                                    <!-- TODO: Add functionality for links to customer OR user support and more-->
-                                    <a href="http://www.ispconfig.org/ispconfig-3/support/" target="_blank" title="ISPConfig Support">Support</a>
-                                </div>
-                                <div class="topright">
-                                    <tmpl_if name="cpuser">
-                                        <span class="username"><a href="#logout" onclick="loadContent('login/logout.php');" class="button-logout"><tmpl_var name="logout_txt"> <tmpl_var format="strtoupper" name="cpuser"></a></span>
-                                    </tmpl_if>
-                                </div>
-                            </div>
-                            <div id="middle-line">
-                                <!-- begin: main navigation -->
-                                <!-- ??? skiplink anchor: navigation -->
-                                <div id="topNav" class="topright">
-                                    <a id="navigation" name="navigation"></a>
-                                </div><!-- end: main navigation -->
-                                <!-- logo + slogan -->
-                                <a href="#" onclick="capp('dashboard')" title="Show Dashboard"><img width="152" height="46" title="<tmpl_var name="app_title">" alt="<tmpl_var name="app_title">" src="<tmpl_var name='app_logo'>"></a>
-                                <span>hosting control panel</span>
-                            </div>
-                            <br style="clear:both" />
-                        </header><!-- end: header -->
-                        <!-- begin: #mainscreen -->
-                        <div id="mainscreen">
-                            <div id="mainscreen-left">
-                                <!-- app switcher 
-                                <div id="app-switcher" style="position: relative;">
-                                    <select onchange="rcmail.filter_mailbox(this.value)" id="rcmlistfilter" class="searchfilter decorated" name="searchfilter">
-                                        <option value="ALL">Alle</option>
-                                        <option value="UNSEEN">Ungelesene</option>
-                                        <option value="FLAGGED">Markierte</option>
-                                        <option value="UNANSWERED">Unbeantwortete</option>
-                                        <option value="DELETED">Gelöschte</option>
-                                        <option value="HEADER X-PRIORITY 1">Priorität: Höchste</option>
-                                        <option value="HEADER X-PRIORITY 2">Priorität: Hoch</option>
-                                        <option value="NOT HEADER X-PRIORITY 1 NOT HEADER X-PRIORITY 2 NOT HEADER X-PRIORITY 4 NOT HEADER X-PRIORITY 5">Priorität: Normal</option>
-                                        <option value="HEADER X-PRIORITY 4">Priorität: Niedrig</option>
-                                        <option value="HEADER X-PRIORITY 5">Priorität: Niedrigste</option>
-                                    </select><a class="menuselector dropdownselector" style="position: absolute; top: 0px; left: 0px;"><span class="handle" style="width: 112px;">Alle</span></a>    
-                                </div>
-                                -->    
-                                <div class="uibox listbox" id="sideNav-container">
-                                    <!-- begin: #col1 - first float column -->
-                                    <div id="sideNav" class="scroller withfooter">&nbsp;</div>
-                                    <!-- end: #col1 -->
-                                        
-                                    <div class="boxfooter">
-                                        <a href="#" class="listbutton groupactions" title="Hilfe anzeigen" id="mailboxmenulink"><span class="inner">&nbsp;</span></a>
-                                        <!-- TODO: Add on-site help dialogs -->
-                                        <span class="countdisplay" id="quotadisplay" title="unbekannt" style="background-position: 0pt 0px;">&nbsp;</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="mainscreen-splitterv" class="splitter splitter-v"></div>
-                            <div id="mainscreen-right">
-                                <!-- skiplink anchor: Content -->
-                                <form method="post" action="" id="pageForm" name="pageForm" enctype="multipart/form-data" class="uniForm">
-                                    <div id="pageContent"><!-- AJAX CONTENT --></div>
-                                </form>
-                                <!-- begin:footer -->
-                                <footer>
-                                    <div class="statusbar" id="message">
-                                        <!-- TODO: CSS make div height flexible for help text display + #pageContent must be pressed upward by footer/div -->
-                                        <p>Powered by <a href="<tmpl_var name="app_link">" target="_blank"><tmpl_var name="app_title"></a></p>
-                                        <div class="loading" style="display: none;">Lädt…</div>
-                                    </div>
-                                </footer><!-- end: footer -->
-                            </div>
-                        </div><!-- end: #mainscreen -->
-                    </body>
+        </script>
+    </head>
+    <body>                  
+        <!-- begin: header -->
+        <header>
+            <div id="top-line">
+                <div class="topleft">
+                    <!-- TODO: Add functionality for links to customer OR user support and more-->
+                    <a href="http://www.ispconfig.org/ispconfig-3/support/" target="_blank" title="ISPConfig Support">Support</a>
+                </div>
+                <div class="topright">
+                    <tmpl_if name="cpuser">
+                        <span class="username"><a href="#logout" onclick="loadContent('login/logout.php');" class="button-logout"><tmpl_var name="logout_txt"> <tmpl_var format="strtoupper" name="cpuser"></a></span>
+                    </tmpl_if>
+                </div>
+            </div>
+            <div id="middle-line">
+                <!-- begin: main navigation -->
+                <!-- ??? skiplink anchor: navigation -->
+                <div id="topNav" class="topright">
+                    <a id="navigation" name="navigation"></a>
+                </div><!-- end: main navigation -->
+                <!-- logo + slogan -->
+                <a href="#" onclick="capp('dashboard')" title="Show Dashboard"><img width="152" height="46" title="<tmpl_var name="app_title">" alt="<tmpl_var name="app_title">" src="<tmpl_var name='app_logo'>"></a>
+                <span>hosting control panel</span>
+            </div>
+            <br style="clear:both" />
+        </header><!-- end: header -->
+        <!-- begin: #mainscreen -->
+        <div id="mainscreen">
+            <div id="mainscreen-left">
+                <!-- search for 3.0.5 
+                <div id="app-switcher" style="position: relative;">  
+                </div>
+                -->    
+                <div class="uibox listbox" id="sideNav-container">
+                    <!-- begin: #col1 - first float column -->
+                    <div id="sideNav" class="scroller withfooter">&nbsp;</div>
+                    <!-- end: #col1 -->
+
+                    <div class="boxfooter">
+                        <a href="#" class="listbutton groupactions" title="Hilfe anzeigen" id="mailboxmenulink"><span class="inner">&nbsp;</span></a>
+                        <!-- TODO: Add on-site help dialogs -->
+                        <span class="countdisplay" id="quotadisplay" title="unbekannt" style="background-position: 0pt 0px;">&nbsp;</span>
+                    </div>
+                </div>
+            </div>
+            <div id="mainscreen-splitterv" class="splitter splitter-v"></div>
+            <div id="mainscreen-right">
+                <!-- skiplink anchor: Content -->
+                <form method="post" action="" id="pageForm" name="pageForm" enctype="multipart/form-data" class="uniForm">
+                    <div id="pageContent"><!-- AJAX CONTENT --></div>
+                </form>
+                <!-- begin:footer -->
+                <footer>
+                    <div class="statusbar" id="message">
+                        <!-- TODO: CSS make div height flexible for help text display + #pageContent must be pressed upward by footer/div -->
+                        <p>Powered by <a href="<tmpl_var name="app_link">" target="_blank"><tmpl_var name="app_title"></a></p>
+                        <div class="loading" style="display: none;">Lädt…</div>
+                    </div>
+                </footer><!-- end: footer -->
+            </div>
+        </div><!-- end: #mainscreen -->
+    </body>
 </html>
