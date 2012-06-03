@@ -52,7 +52,7 @@ table.list {
 }
 table.list tr:hover,
 #submenu li:hover {
-    background: #FFFACD;
+    background-color: #FFFACD;
 }
 table.list .tbl_col_buttons {
     width: 120px;
@@ -661,48 +661,8 @@ ul#submenu {
     white-space: nowrap;
 }
 .menu li:hover {
-    background-position: 12px -25px;
+/*    background-position: 12px -25px;*/
 }
-/* Icons in the sideNav for different pages
-#software_repo_list {
-    background-position: 12px -52px;
-}
-#software_repo_list:hover {
-    background-position: 12px -80px;
-}
-#software_package_list {
-    background-position: 12px -108px;
-}
-#software_package_list:hover {
-    background-position: 12px -136px;
-}
-#software_update_list {
-    background-position: 12px -164px;
-}
-#software_update_list:hover {
-    background-position: 12px -192px;
-}
-#user_quota_stats {
-    background-position: 12px -220px;
-}
-#user_quota_stats:hover {
-    background-position: 12px -248px;
-}
-#websites_stats,
-#mail_user_stats {
-    background-position: 12px -276px;
-}
-#websites_stats:hover,
-#mail_user_stats:hover {
-    background-position: 12px -304px;
-}
-#shell_user_list {
-    background-position: 12px -332px;
-}
-#shell_user_list:hover {
-    background-position: 12px -360px;
-}
-*/
 
 #select_server {
     background: url("icons/x16/linux.png") no-repeat 15px 15px transparent;
@@ -896,7 +856,7 @@ footer p {
     margin: 15px;
 }
 .panel {
-    padding: 35px 25px;
+    padding: 0 25px 35px 25px;
 }
 
 /* forms/fields
@@ -998,7 +958,6 @@ h3.welcome {
     padding-left: 25px;
 }
 .systemmonitor-state {
-    position: fixed;
     width: 100%;
     overflow: hidden; 
     border-bottom: 1px solid #000;
