@@ -1,6 +1,7 @@
 # ISPC-larry for ISPConfig 3.0.4.x
 
 [Info@GitHub](https://github.com/foe-services/ispc-larry) | 
+[Discussion](http://www.howtoforge.com/forums/showthread.php?t=57106) |
 [Wiki](https://github.com/foe-services/ispc-larry/wiki) | 
 [Issue-Tracker](https://github.com/foe-services/ispc-larry/issues) | 
 [Timeline/Roadmap](https://github.com/foe-services/ispc-larry/issues/milestones) | 
