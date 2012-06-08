@@ -665,7 +665,7 @@ ul#submenu {
 }
 
 #select_server {
-    background: url("icons/x16/linux.png") no-repeat 15px 15px transparent;
+    background: url("icons/x16/linux.png") no-repeat 15px 13px transparent;
     white-space: nowrap;
 }
 .feed li a {
@@ -958,7 +958,6 @@ h3.welcome {
     padding-left: 25px;
 }
 .systemmonitor-state {
-    width: 100%;
     overflow: hidden; 
     border-bottom: 1px solid #000;
 }
