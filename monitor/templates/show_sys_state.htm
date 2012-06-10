@@ -10,25 +10,15 @@
 <div class="module-title"><h1><tmpl_var name="list_head_txt"></h1></div>
 <div class="module-box boxlistcontent" id="modulecontainer">
     <div class="module-desc"><tmpl_var name="list_desc_txt"></div>
-    
+
     <!-- beginn: modulecontent -->
     <div class="panel panel_sys_state">
-        
-        <div class="pnl_toolsarea">
-            <fieldset class="inlineLabels"><legend><tmpl_var name="monTransRefreshsq"></legend>
-                <div class="buttons">
-                    <div class="ctrlHolder">
-                        <label for="refreshinterval">{tmpl_var name='refreshinterval_txt'}</label>
-                        <select name="refreshinterval" id="refreshinterval" class="selectInput withicons" onChange="loadContentRefresh('monitor/show_sys_state.php?state={tmpl_var name="state_type"}')">
-                                {tmpl_var name='refresh'}
-                    </select>
-                </div>
-            </div>
-        </fieldset>
-    </div>
-        
-    <fieldset><legend></legend>
-        <div class="stateview"><tmpl_var name="state_data"></div>
-    </fieldset>
+        <div class="ctrlHolder">
+            <label for="refreshinterval"><tmpl_var name="monTransRefreshsq">{tmpl_var name='monitor_settings_refreshsq_txt'}</label>
+            <select name="refreshinterval" id="refreshinterval" class="selectInput withicons" onChange="loadContentRefresh('monitor/show_sys_state.php?state={tmpl_var name="state_type"}')">
+                    {tmpl_var name='refresh'}
+            </select>
+        </div>
+        <tmpl_var name="state_data">
     </div><!-- end: modulecontent -->
 </div><!-- end: modulebody -->
