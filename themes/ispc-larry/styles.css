@@ -957,10 +957,88 @@ h3.welcome {
     font-size: 20px;
     padding-left: 25px;
 }
+.systemmonitor-device {
+    background-position: -6px 5px;
+    background-repeat: no-repeat;
+    min-height: 80px;
+}
+.systemmonitor-state.state-no_state {
+    background-color: #F8F8FF;
+    border-top: 4px solid #95A19F;
+}
+.systemmonitor-state.state-unknown {
+    background-color: #CECFC5;
+    border-top: 4px solid #30302E;
+}
+.systemmonitor-state.state-ok {
+    background-color: #ADFFA2;
+    border-top: 4px solid #23FB00;
+}
+.systemmonitor-state.state-info {
+    background-color: #D4E2FF;
+    border-top: 4px solid #183E99;
+}
+.systemmonitor-state.state-warning {
+    background-color: #FFDA93;
+    border-top: 4px solid #FFA800;
+}
+.systemmonitor-state.state-critical {
+    background-color: #FFB9B9;
+    border-top: 4px solid #FF0000;
+}
+.systemmonitor-state.state-error {
+    background-color: #FF7F7F;
+    border-top: 4px solid #FF0000;
+}
+.systemmonitor-state.state-no_state-ve {
+    background-color: #F8F8FF;
+    border-top: 4px solid #95A19F;
+    float: left;
+    width: 213px;
+}
+.systemmonitor-state.state-unknown-ve {
+    background-color: #CECFC5;
+    border-top: 4px solid #30302E;
+    float: left;
+    width: 213px;
+}
+.systemmonitor-state.state-ok-ve {
+    background-color: #ADFFA2;
+    border-top: 4px solid #23FB00;
+    float: left;
+    width: 213px;
+}
+.systemmonitor-state.state-info-ve {
+    background-color: #D4E2FF;
+    border-top: 4px solid #183E99;
+    float: left;
+    width: 213px;
+}
+.systemmonitor-state.state-warning-ve {
+    background-color: #FFDA93;
+    border-top: 4px solid #FFA800;
+    float: left;
+    width: 213px;
+}
+.systemmonitor-state.state-critical-ve {
+    background-color: #FFB9B9;
+    border-top: 4px solid #FF0000;
+    float: left;
+    width: 213px;
+}
+.systemmonitor-state.state-error-ve {
+    background-color: #FF7F7F;
+    border-top: 4px solid #FF0000;
+    float: left;
+    width: 213px;
+}
 .systemmonitor-state {
     overflow: hidden; 
     border-bottom: 1px solid #000;
     margin-bottom: 10px;
+}
+.systemmonitor-state:hover {
+    background-color: #FFFACD;
 }
 .systemmonitor-state p {
     float:left;
@@ -969,15 +1047,13 @@ h3.welcome {
 .systemmonitor-device.device-server {
     background-image: url("icons/x64/server.png");
 }
-.systemmonitor-device {
-    background-position: -6px 4px;
-    background-repeat: no-repeat;
-    min-height: 80px;
+.systemmonitor-device.device-system {
+    background-image: url("icons/x64/network.png");
 }
 .systemmonitor-content.icons32 {
-    background-position: 12px 4px;
+    background-position: 50px 5px;
     background-repeat: no-repeat;
-    padding: 2px 10px 2px 56px;
+    padding: 10px 10px 2px 90px;
 }
 .systemmonitor-content.icons32.ico-unknown {
     background-image: url("icons/x32/state_unknown.png");
@@ -1009,6 +1085,9 @@ div.icon32 {
 .state-info div.icon32 { background: url("icons/x32/info.png") no-repeat; }
 .state-warning div.icon32 { background: url("icons/x32/warning.png") no-repeat; }
 .state-error div.icon32 { background: url("icons/x32/error.png") no-repeat; }
+#dashlets {
+    float: left;
+}
 .dash-mods,
 .dash-limits {
     float:left;
@@ -1027,7 +1106,10 @@ div.icon32 {
 }
 .dash-mods {
     width: 430px;
-    
+    clear:left;
+}
+.dash-limits {
+    float: right;
 }
 .dash-mods h2,
 .dash-limits h2 {

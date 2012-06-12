@@ -35,16 +35,14 @@
     </tmpl_if>
     <div class="panel panel_dashboard">
         <h3 class="welcome"><tmpl_var name="welcome_user"></h3>
-        <div class="dash-mods">
-            <tmpl_loop name='leftcol'>
-                {tmpl_var name='content'}
-            </tmpl_loop>
-        </div>
-        <div class="dash-limits">
-            <tmpl_loop name='rightcol'>
-                {tmpl_var name='content'}
-            </tmpl_loop>
-        </div>
+        <div id="dashlets">
+        <tmpl_loop name='rightcol'>
+            {tmpl_var name='content'}
+        </tmpl_loop>
+        <tmpl_loop name='leftcol'>
+            {tmpl_var name='content'}
+        </tmpl_loop>
         <br style="clear:both" />
+        </div>
     </div><!-- end: modulecontent -->
 </div><!-- end: modulebody -->
