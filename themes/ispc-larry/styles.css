@@ -2024,14 +2024,167 @@ button.icons16 {
 #language.selectInput {
     width: 75px;
 }
+select.withicons option[value="AD"] {
+    background-image: url("icons/flags/ad.png");
+}
+select.withicons option[value="AE"] {
+    background-image: url("icons/flags/ae.png");
+}
+select.withicons option[value="AF"] {
+    background-image: url("icons/flags/af.png");
+}
+select.withicons option[value="AG"] {
+    background-image: url("icons/flags/ag.png");
+}
+select.withicons option[value="AI"] {
+    background-image: url("icons/flags/ai.png");
+}
+select.withicons option[value="AL"] {
+    background-image: url("icons/flags/al.png");
+}
+select.withicons option[value="AM"] {
+    background-image: url("icons/flags/am.png");
+}
+select.withicons option[value="AN"] {
+    background-image: url("icons/flags/an.png");
+}
+select.withicons option[value="AO"] {
+    background-image: url("icons/flags/ao.png");
+}
+select.withicons option[value="AQ"] {
+    background-image: url("icons/flags/aq.png");
+}
 select.withicons option[value="AR"] {
     background-image: url("icons/flags/ar.png");
+}
+select.withicons option[value="AS"] {
+    background-image: url("icons/flags/as.png");
+}
+select.withicons option[value="AT"] {
+    background-image: url("icons/flags/at.png");
+}
+select.withicons option[value="AU"] {
+    background-image: url("icons/flags/au.png");
+}
+select.withicons option[value="AW"] {
+    background-image: url("icons/flags/aw.png");
+}
+select.withicons option[value="AX"] {
+    background-image: url("icons/flags/ax.png");
+}
+select.withicons option[value="AZ"] {
+    background-image: url("icons/flags/az.png");
+}
+select.withicons option[value="BA"] {
+    background-image: url("icons/flags/ba.png");
+}
+select.withicons option[value="BB"] {
+    background-image: url("icons/flags/bb.png");
+}
+select.withicons option[value="BD"] {
+    background-image: url("icons/flags/bd.png");
+}
+select.withicons option[value="BE"] {
+    background-image: url("icons/flags/be.png");
+}
+select.withicons option[value="BF"] {
+    background-image: url("icons/flags/bf.png");
 }
 select.withicons option[value="BG"] {
     background-image: url("icons/flags/bg.png");
 }
+select.withicons option[value="BH"] {
+    background-image: url("icons/flags/bh.png");
+}
+select.withicons option[value="BI"] {
+    background-image: url("icons/flags/bi.png");
+}
+select.withicons option[value="BJ"] {
+    background-image: url("icons/flags/bj.png");
+}
+select.withicons option[value="BM"] {
+    background-image: url("icons/flags/bm.png");
+}
+select.withicons option[value="BN"] {
+    background-image: url("icons/flags/bn.png");
+}
+select.withicons option[value="BO"] {
+    background-image: url("icons/flags/bo.png");
+}
 select.withicons option[value="BR"] {
     background-image: url("icons/flags/br.png");
+}
+select.withicons option[value="BS"] {
+    background-image: url("icons/flags/bs.png");
+}
+select.withicons option[value="BT"] {
+    background-image: url("icons/flags/bt.png");
+}
+select.withicons option[value="BV"] {
+    background-image: url("icons/flags/bv.png");
+}
+select.withicons option[value="BW"] {
+    background-image: url("icons/flags/bw.png");
+}
+select.withicons option[value="BY"] {
+    background-image: url("icons/flags/by.png");
+}
+select.withicons option[value="BZ"] {
+    background-image: url("icons/flags/bz.png");
+}
+select.withicons option[value="CA"] {
+    background-image: url("icons/flags/ca.png");
+}
+select.withicons option[value="CC"] {
+    background-image: url("icons/flags/cc.png");
+}
+select.withicons option[value="CD"] {
+    background-image: url("icons/flags/cd.png");
+}
+select.withicons option[value="CF"] {
+    background-image: url("icons/flags/cf.png");
+}
+select.withicons option[value="CG"] {
+    background-image: url("icons/flags/cg.png");
+}
+select.withicons option[value="CH"] {
+    background-image: url("icons/flags/ch.png");
+}
+select.withicons option[value="CI"] {
+    background-image: url("icons/flags/ci.png");
+}
+select.withicons option[value="CK"] {
+    background-image: url("icons/flags/ck.png");
+}
+select.withicons option[value="CL"] {
+    background-image: url("icons/flags/cl.png");
+}
+select.withicons option[value="CM"] {
+    background-image: url("icons/flags/cm.png");
+}
+select.withicons option[value="CN"] {
+    background-image: url("icons/flags/cn.png");
+}
+select.withicons option[value="CO"] {
+    background-image: url("icons/flags/co.png");
+}
+select.withicons option[value="CR"] {
+    background-image: url("icons/flags/cr.png");
+}
+select.withicons option[value="CS"] {
+    background-image: url("icons/flags/cs.png");
+}
+select.withicons option[value="CU"] {
+    background-image: url("icons/flags/cu.png");
+}
+select.withicons option[value="CV"] {
+    background-image: url("icons/flags/cv.png");
+}
+select.withicons option[value="CX"] {
+    background-image: url("icons/flags/cx.png");
+}
+select.withicons option[value="CY"] {
+    background-image: url("icons/flags/cy.png");
 }
 select.withicons option[value="CZ"] {
     background-image: url("icons/flags/cz.png");
@@ -2039,17 +2192,131 @@ select.withicons option[value="CZ"] {
 select.withicons option[value="DE"] {
     background-image: url("icons/flags/de.png");
 }
+select.withicons option[value="DJ"] {
+    background-image: url("icons/flags/dj.png");
+}
+select.withicons option[value="DK"] {
+    background-image: url("icons/flags/dk.png");
+}
+select.withicons option[value="DM"] {
+    background-image: url("icons/flags/dm.png");
+}
+select.withicons option[value="DO"] {
+    background-image: url("icons/flags/do.png");
+}
+select.withicons option[value="DZ"] {
+    background-image: url("icons/flags/dz.png");
+}
+select.withicons option[value="EC"] {
+    background-image: url("icons/flags/ec.png");
+}
+select.withicons option[value="EE"] {
+    background-image: url("icons/flags/ee.png");
+}
+select.withicons option[value="EG"] {
+    background-image: url("icons/flags/eg.png");
+}
+select.withicons option[value="EH"] {
+    background-image: url("icons/flags/eh.png");
+}
 select.withicons option[value="EL"] {
     background-image: url("icons/flags/gr.png");
+}
+select.withicons option[value="ER"] {
+    background-image: url("icons/flags/er.png");
 }
 select.withicons option[value="ES"] {
     background-image: url("icons/flags/es.png");
 }
+select.withicons option[value="ET"] {
+    background-image: url("icons/flags/et.png");
+}
+select.withicons option[value="FI"] {
+    background-image: url("icons/flags/fi.png");
+}
+select.withicons option[value="FJ"] {
+    background-image: url("icons/flags/fj.png");
+}
+select.withicons option[value="FK"] {
+    background-image: url("icons/flags/fk.png");
+}
+select.withicons option[value="FM"] {
+    background-image: url("icons/flags/fm.png");
+}
+select.withicons option[value="FO"] {
+    background-image: url("icons/flags/fo.png");
+}
 select.withicons option[value="FR"] {
     background-image: url("icons/flags/fr.png");
 }
+select.withicons option[value="GA"] {
+    background-image: url("icons/flags/ga.png");
+}
+select.withicons option[value="GB"] {
+    background-image: url("icons/flags/gb.png");
+}
+select.withicons option[value="GD"] {
+    background-image: url("icons/flags/gd.png");
+}
+select.withicons option[value="GE"] {
+    background-image: url("icons/flags/ge.png");
+}
+select.withicons option[value="GF"] {
+    background-image: url("icons/flags/gf.png");
+}
+select.withicons option[value="GH"] {
+    background-image: url("icons/flags/gh.png");
+}
+select.withicons option[value="GI"] {
+    background-image: url("icons/flags/gi.png");
+}
+select.withicons option[value="GL"] {
+    background-image: url("icons/flags/gl.png");
+}
+select.withicons option[value="GM"] {
+    background-image: url("icons/flags/gm.png");
+}
+select.withicons option[value="GN"] {
+    background-image: url("icons/flags/gn.png");
+}
+select.withicons option[value="GP"] {
+    background-image: url("icons/flags/gp.png");
+}
+select.withicons option[value="GQ"] {
+    background-image: url("icons/flags/gq.png");
+}
+select.withicons option[value="GR"] {
+    background-image: url("icons/flags/gr.png");
+}
+select.withicons option[value="GS"] {
+    background-image: url("icons/flags/gs.png");
+}
+select.withicons option[value="GT"] {
+    background-image: url("icons/flags/gt.png");
+}
+select.withicons option[value="GU"] {
+    background-image: url("icons/flags/gu.png");
+}
+select.withicons option[value="GW"] {
+    background-image: url("icons/flags/gw.png");
+}
+select.withicons option[value="GY"] {
+    background-image: url("icons/flags/gy.png");
+}
+select.withicons option[value="HK"] {
+    background-image: url("icons/flags/hk.png");
+}
+select.withicons option[value="HM"] {
+    background-image: url("icons/flags/hm.png");
+}
+select.withicons option[value="HN"] {
+    background-image: url("icons/flags/hn.png");
+}
 select.withicons option[value="HR"] {
     background-image: url("icons/flags/hr.png");
+}
+select.withicons option[value="HT"] {
+    background-image: url("icons/flags/ht.png");
 }
 select.withicons option[value="HU"] {
     background-image: url("icons/flags/hu.png");
@@ -2057,41 +2324,596 @@ select.withicons option[value="HU"] {
 select.withicons option[value="ID"] {
     background-image: url("icons/flags/id.png");
 }
+select.withicons option[value="IE"] {
+    background-image: url("icons/flags/ie.png");
+}
+select.withicons option[value="IL"] {
+    background-image: url("icons/flags/il.png");
+}
+select.withicons option[value="IN"] {
+    background-image: url("icons/flags/in.png");
+}
+select.withicons option[value="IO"] {
+    background-image: url("icons/flags/io.png");
+}
+select.withicons option[value="IQ"] {
+    background-image: url("icons/flags/iq.png");
+}
+select.withicons option[value="IR"] {
+    background-image: url("icons/flags/ir.png");
+}
+select.withicons option[value="IS"] {
+    background-image: url("icons/flags/is.png");
+}
 select.withicons option[value="IT"] {
     background-image: url("icons/flags/it.png");
+}
+select.withicons option[value="JM"] {
+    background-image: url("icons/flags/jm.png");
+}
+select.withicons option[value="JO"] {
+    background-image: url("icons/flags/jo.png");
+}
+select.withicons option[value="JP"] {
+    background-image: url("icons/flags/jp.png");
+}
+select.withicons option[value="KE"] {
+    background-image: url("icons/flags/ke.png");
+}
+select.withicons option[value="KG"] {
+    background-image: url("icons/flags/kg.png");
+}
+select.withicons option[value="KH"] {
+    background-image: url("icons/flags/kh.png");
+}
+select.withicons option[value="KI"] {
+    background-image: url("icons/flags/ki.png");
+}
+select.withicons option[value="KM"] {
+    background-image: url("icons/flags/km.png");
+}
+select.withicons option[value="KN"] {
+    background-image: url("icons/flags/kn.png");
+}
+select.withicons option[value="KP"] {
+    background-image: url("icons/flags/kp.png");
+}
+select.withicons option[value="KR"] {
+    background-image: url("icons/flags/kr.png");
+}
+select.withicons option[value="KW"] {
+    background-image: url("icons/flags/kw.png");
+}
+select.withicons option[value="KY"] {
+    background-image: url("icons/flags/ky.png");
+}
+select.withicons option[value="KZ"] {
+    background-image: url("icons/flags/kz.png");
+}
+select.withicons option[value="LA"] {
+    background-image: url("icons/flags/la.png");
+}
+select.withicons option[value="LB"] {
+    background-image: url("icons/flags/lb.png");
+}
+select.withicons option[value="LC"] {
+    background-image: url("icons/flags/lc.png");
+}
+select.withicons option[value="LI"] {
+    background-image: url("icons/flags/li.png");
+}
+select.withicons option[value="LK"] {
+    background-image: url("icons/flags/lk.png");
+}
+select.withicons option[value="LR"] {
+    background-image: url("icons/flags/lr.png");
+}
+select.withicons option[value="LS"] {
+    background-image: url("icons/flags/ls.png");
+}
+select.withicons option[value="LT"] {
+    background-image: url("icons/flags/lt.png");
+}
+select.withicons option[value="LU"] {
+    background-image: url("icons/flags/lu.png");
+}
+select.withicons option[value="LV"] {
+    background-image: url("icons/flags/lv.png");
+}
+select.withicons option[value="LY"] {
+    background-image: url("icons/flags/ly.png");
+}
+select.withicons option[value="MA"] {
+    background-image: url("icons/flags/ma.png");
+}
+select.withicons option[value="MC"] {
+    background-image: url("icons/flags/mc.png");
+}
+select.withicons option[value="MD"] {
+    background-image: url("icons/flags/md.png");
+}
+select.withicons option[value="ME"] {
+    background-image: url("icons/flags/me.png");
+}
+select.withicons option[value="MG"] {
+    background-image: url("icons/flags/mg.png");
+}
+select.withicons option[value="MH"] {
+    background-image: url("icons/flags/mh.png");
+}
+select.withicons option[value="MK"] {
+    background-image: url("icons/flags/mk.png");
+}
+select.withicons option[value="ML"] {
+    background-image: url("icons/flags/ml.png");
+}
+select.withicons option[value="MM"] {
+    background-image: url("icons/flags/mm.png");
+}
+select.withicons option[value="MN"] {
+    background-image: url("icons/flags/mn.png");
+}
+select.withicons option[value="MO"] {
+    background-image: url("icons/flags/mo.png");
+}
+select.withicons option[value="MP"] {
+    background-image: url("icons/flags/mp.png");
+}
+select.withicons option[value="MQ"] {
+    background-image: url("icons/flags/mq.png");
+}
+select.withicons option[value="MR"] {
+    background-image: url("icons/flags/mr.png");
+}
+select.withicons option[value="MS"] {
+    background-image: url("icons/flags/ms.png");
+}
+select.withicons option[value="MT"] {
+    background-image: url("icons/flags/mt.png");
+}
+select.withicons option[value="MU"] {
+    background-image: url("icons/flags/mu.png");
+}
+select.withicons option[value="MV"] {
+    background-image: url("icons/flags/mv.png");
+}
+select.withicons option[value="MW"] {
+    background-image: url("icons/flags/mw.png");
+}
+select.withicons option[value="MX"] {
+    background-image: url("icons/flags/mx.png");
+}
+select.withicons option[value="MY"] {
+    background-image: url("icons/flags/my.png");
+}
+select.withicons option[value="MZ"] {
+    background-image: url("icons/flags/mz.png");
+}
+select.withicons option[value="NA"] {
+    background-image: url("icons/flags/na.png");
+}
+select.withicons option[value="NC"] {
+    background-image: url("icons/flags/nc.png");
+}
+select.withicons option[value="NE"] {
+    background-image: url("icons/flags/ne.png");
+}
+select.withicons option[value="NF"] {
+    background-image: url("icons/flags/nf.png");
+}
+select.withicons option[value="NG"] {
+    background-image: url("icons/flags/ng.png");
+}
+select.withicons option[value="NI"] {
+    background-image: url("icons/flags/ni.png");
 }
 select.withicons option[value="NL"] {
     background-image: url("icons/flags/nl.png");
 }
+select.withicons option[value="NO"] {
+    background-image: url("icons/flags/no.png");
+}
+select.withicons option[value="NP"] {
+    background-image: url("icons/flags/np.png");
+}
+select.withicons option[value="NR"] {
+    background-image: url("icons/flags/nr.png");
+}
+select.withicons option[value="NU"] {
+    background-image: url("icons/flags/nu.png");
+}
+select.withicons option[value="NZ"] {
+    background-image: url("icons/flags/nz.png");
+}
+select.withicons option[value="OM"] {
+    background-image: url("icons/flags/om.png");
+}
+select.withicons option[value="PA"] {
+    background-image: url("icons/flags/pa.png");
+}
+select.withicons option[value="PE"] {
+    background-image: url("icons/flags/pe.png");
+}
+select.withicons option[value="PF"] {
+    background-image: url("icons/flags/pf.png");
+}
+select.withicons option[value="PG"] {
+    background-image: url("icons/flags/pg.png");
+}
+select.withicons option[value="PH"] {
+    background-image: url("icons/flags/ph.png");
+}
+select.withicons option[value="PK"] {
+    background-image: url("icons/flags/pk.png");
+}
 select.withicons option[value="PL"] {
     background-image: url("icons/flags/pl.png");
+}
+select.withicons option[value="PM"] {
+    background-image: url("icons/flags/pm.png");
+}
+select.withicons option[value="PN"] {
+    background-image: url("icons/flags/pn.png");
+}
+select.withicons option[value="PR"] {
+    background-image: url("icons/flags/pr.png");
+}
+select.withicons option[value="PS"] {
+    background-image: url("icons/flags/ps.png");
 }
 select.withicons option[value="PT"] {
     background-image: url("icons/flags/pt.png");
 }
+select.withicons option[value="PW"] {
+    background-image: url("icons/flags/pw.png");
+}
+select.withicons option[value="PY"] {
+    background-image: url("icons/flags/py.png");
+}
+select.withicons option[value="QA"] {
+    background-image: url("icons/flags/qa.png");
+}
+select.withicons option[value="RE"] {
+    background-image: url("icons/flags/re.png");
+}
 select.withicons option[value="RO"] {
     background-image: url("icons/flags/ro.png");
+}
+select.withicons option[value="RS"] {
+    background-image: url("icons/flags/rs.png");
 }
 select.withicons option[value="RU"] {
     background-image: url("icons/flags/ru.png");
 }
+select.withicons option[value="RW"] {
+    background-image: url("icons/flags/rw.png");
+}
+select.withicons option[value="SA"] {
+    background-image: url("icons/flags/sa.png");
+}
+select.withicons option[value="SB"] {
+    background-image: url("icons/flags/sb.png");
+}
+select.withicons option[value="SC"] {
+    background-image: url("icons/flags/sc.png");
+}
+select.withicons option[value="SD"] {
+    background-image: url("icons/flags/sd.png");
+}
 select.withicons option[value="SE"] {
     background-image: url("icons/flags/se.png");
+}
+select.withicons option[value="SG"] {
+    background-image: url("icons/flags/sg.png");
+}
+select.withicons option[value="SH"] {
+    background-image: url("icons/flags/sh.png");
+}
+select.withicons option[value="SI"] {
+    background-image: url("icons/flags/si.png");
+}
+select.withicons option[value="SJ"] {
+    background-image: url("icons/flags/sj.png");
 }
 select.withicons option[value="SK"] {
     background-image: url("icons/flags/sk.png");
 }
+select.withicons option[value="SL"] {
+    background-image: url("icons/flags/sl.png");
+}
+select.withicons option[value="SM"] {
+    background-image: url("icons/flags/sm.png");
+}
+select.withicons option[value="SN"] {
+    background-image: url("icons/flags/sn.png");
+}
+select.withicons option[value="SO"] {
+    background-image: url("icons/flags/so.png");
+}
+select.withicons option[value="SR"] {
+    background-image: url("icons/flags/sr.png");
+}
+select.withicons option[value="ST"] {
+    background-image: url("icons/flags/st.png");
+}
+select.withicons option[value="SV"] {
+    background-image: url("icons/flags/sv.png");
+}
+select.withicons option[value="SY"] {
+    background-image: url("icons/flags/sy.png");
+}
+select.withicons option[value="SZ"] {
+    background-image: url("icons/flags/sz.png");
+}
+select.withicons option[value="TC"] {
+    background-image: url("icons/flags/tc.png");
+}
+select.withicons option[value="TD"] {
+    background-image: url("icons/flags/td.png");
+}
+select.withicons option[value="TF"] {
+    background-image: url("icons/flags/tf.png");
+}
+select.withicons option[value="TG"] {
+    background-image: url("icons/flags/tg.png");
+}
+select.withicons option[value="TH"] {
+    background-image: url("icons/flags/th.png");
+}
+select.withicons option[value="TJ"] {
+    background-image: url("icons/flags/tj.png");
+}
+select.withicons option[value="TK"] {
+    background-image: url("icons/flags/tk.png");
+}
+select.withicons option[value="TL"] {
+    background-image: url("icons/flags/tl.png");
+}
+select.withicons option[value="TM"] {
+    background-image: url("icons/flags/tm.png");
+}
+select.withicons option[value="TN"] {
+    background-image: url("icons/flags/tn.png");
+}
+select.withicons option[value="TO"] {
+    background-image: url("icons/flags/to.png");
+}
 select.withicons option[value="TR"] {
     background-image: url("icons/flags/tr.png");
+}
+select.withicons option[value="TT"] {
+    background-image: url("icons/flags/tt.png");
+}
+select.withicons option[value="TV"] {
+    background-image: url("icons/flags/tv.png");
+}
+select.withicons option[value="TW"] {
+    background-image: url("icons/flags/tw.png");
+}
+select.withicons option[value="TZ"] {
+    background-image: url("icons/flags/tz.png");
+}
+select.withicons option[value="UA"] {
+    background-image: url("icons/flags/ua.png");
+}
+select.withicons option[value="UG"] {
+    background-image: url("icons/flags/ug.png");
+}
+select.withicons option[value="UM"] {
+    background-image: url("icons/flags/um.png");
+}
+select.withicons option[value="US"] {
+    background-image: url("icons/flags/us.png");
+}
+select.withicons option[value="UY"] {
+    background-image: url("icons/flags/uy.png");
+}
+select.withicons option[value="UZ"] {
+    background-image: url("icons/flags/uz.png");
+}
+select.withicons option[value="VA"] {
+    background-image: url("icons/flags/va.png");
+}
+select.withicons option[value="VC"] {
+    background-image: url("icons/flags/vc.png");
+}
+select.withicons option[value="VE"] {
+    background-image: url("icons/flags/ve.png");
+}
+select.withicons option[value="VG"] {
+    background-image: url("icons/flags/vg.png");
+}
+select.withicons option[value="VI"] {
+    background-image: url("icons/flags/vi.png");
+}
+select.withicons option[value="VN"] {
+    background-image: url("icons/flags/vn.png");
+}
+select.withicons option[value="VU"] {
+    background-image: url("icons/flags/vu.png");
+}
+select.withicons option[value="WF"] {
+    background-image: url("icons/flags/wf.png");
+}
+select.withicons option[value="WS"] {
+    background-image: url("icons/flags/ws.png");
+}
+select.withicons option[value="YE"] {
+    background-image: url("icons/flags/ye.png");
+}
+select.withicons option[value="YT"] {
+    background-image: url("icons/flags/yt.png");
+}
+select.withicons option[value="ZA"] {
+    background-image: url("icons/flags/za.png");
+}
+select.withicons option[value="ZM"] {
+    background-image: url("icons/flags/zm.png");
+}
+select.withicons option[value="ZW"] {
+    background-image: url("icons/flags/zw.png");
+}
+select.withicons option[value="ad"] {
+    background-image: url("icons/flags/ad.png");
+}
+select.withicons option[value="ae"] {
+    background-image: url("icons/flags/ae.png");
+}
+select.withicons option[value="af"] {
+    background-image: url("icons/flags/af.png");
+}
+select.withicons option[value="ag"] {
+    background-image: url("icons/flags/ag.png");
+}
+select.withicons option[value="ai"] {
+    background-image: url("icons/flags/ai.png");
+}
+select.withicons option[value="al"] {
+    background-image: url("icons/flags/al.png");
+}
+select.withicons option[value="am"] {
+    background-image: url("icons/flags/am.png");
+}
+select.withicons option[value="an"] {
+    background-image: url("icons/flags/an.png");
+}
+select.withicons option[value="ao"] {
+    background-image: url("icons/flags/ao.png");
+}
+select.withicons option[value="aq"] {
+    background-image: url("icons/flags/aq.png");
 }
 select.withicons option[value="ar"] {
     background-image: url("icons/flags/ar.png");
 }
+select.withicons option[value="as"] {
+    background-image: url("icons/flags/as.png");
+}
+select.withicons option[value="at"] {
+    background-image: url("icons/flags/at.png");
+}
+select.withicons option[value="au"] {
+    background-image: url("icons/flags/au.png");
+}
+select.withicons option[value="aw"] {
+    background-image: url("icons/flags/aw.png");
+}
+select.withicons option[value="ax"] {
+    background-image: url("icons/flags/ax.png");
+}
+select.withicons option[value="az"] {
+    background-image: url("icons/flags/az.png");
+}
+select.withicons option[value="ba"] {
+    background-image: url("icons/flags/ba.png");
+}
+select.withicons option[value="bb"] {
+    background-image: url("icons/flags/bb.png");
+}
+select.withicons option[value="bd"] {
+    background-image: url("icons/flags/bd.png");
+}
+select.withicons option[value="be"] {
+    background-image: url("icons/flags/be.png");
+}
+select.withicons option[value="bf"] {
+    background-image: url("icons/flags/bf.png");
+}
 select.withicons option[value="bg"] {
     background-image: url("icons/flags/bg.png");
 }
+select.withicons option[value="bh"] {
+    background-image: url("icons/flags/bh.png");
+}
+select.withicons option[value="bi"] {
+    background-image: url("icons/flags/bi.png");
+}
+select.withicons option[value="bj"] {
+    background-image: url("icons/flags/bj.png");
+}
+select.withicons option[value="bm"] {
+    background-image: url("icons/flags/bm.png");
+}
+select.withicons option[value="bn"] {
+    background-image: url("icons/flags/bn.png");
+}
+select.withicons option[value="bo"] {
+    background-image: url("icons/flags/bo.png");
+}
 select.withicons option[value="br"] {
     background-image: url("icons/flags/br.png");
+}
+select.withicons option[value="bs"] {
+    background-image: url("icons/flags/bs.png");
+}
+select.withicons option[value="bt"] {
+    background-image: url("icons/flags/bt.png");
+}
+select.withicons option[value="bv"] {
+    background-image: url("icons/flags/bv.png");
+}
+select.withicons option[value="bw"] {
+    background-image: url("icons/flags/bw.png");
+}
+select.withicons option[value="by"] {
+    background-image: url("icons/flags/by.png");
+}
+select.withicons option[value="bz"] {
+    background-image: url("icons/flags/bz.png");
+}
+select.withicons option[value="ca"] {
+    background-image: url("icons/flags/ca.png");
+}
+select.withicons option[value="cc"] {
+    background-image: url("icons/flags/cc.png");
+}
+select.withicons option[value="cd"] {
+    background-image: url("icons/flags/cd.png");
+}
+select.withicons option[value="cf"] {
+    background-image: url("icons/flags/cf.png");
+}
+select.withicons option[value="cg"] {
+    background-image: url("icons/flags/cg.png");
+}
+select.withicons option[value="ch"] {
+    background-image: url("icons/flags/ch.png");
+}
+select.withicons option[value="ci"] {
+    background-image: url("icons/flags/ci.png");
+}
+select.withicons option[value="ck"] {
+    background-image: url("icons/flags/ck.png");
+}
+select.withicons option[value="cl"] {
+    background-image: url("icons/flags/cl.png");
+}
+select.withicons option[value="cm"] {
+    background-image: url("icons/flags/cm.png");
+}
+select.withicons option[value="cn"] {
+    background-image: url("icons/flags/cn.png");
+}
+select.withicons option[value="co"] {
+    background-image: url("icons/flags/co.png");
+}
+select.withicons option[value="cr"] {
+    background-image: url("icons/flags/cr.png");
+}
+select.withicons option[value="cs"] {
+    background-image: url("icons/flags/cs.png");
+}
+select.withicons option[value="cu"] {
+    background-image: url("icons/flags/cu.png");
+}
+select.withicons option[value="cv"] {
+    background-image: url("icons/flags/cv.png");
+}
+select.withicons option[value="cx"] {
+    background-image: url("icons/flags/cx.png");
+}
+select.withicons option[value="cy"] {
+    background-image: url("icons/flags/cy.png");
 }
 select.withicons option[value="cz"] {
     background-image: url("icons/flags/cz.png");
@@ -2099,23 +2921,134 @@ select.withicons option[value="cz"] {
 select.withicons option[value="de"] {
     background-image: url("icons/flags/de.png");
 }
+select.withicons option[value="dj"] {
+    background-image: url("icons/flags/dj.png");
+}
+select.withicons option[value="dk"] {
+    background-image: url("icons/flags/dk.png");
+}
+select.withicons option[value="dm"] {
+    background-image: url("icons/flags/dm.png");
+}
+select.withicons option[value="do"] {
+    background-image: url("icons/flags/do.png");
+}
+select.withicons option[value="dz"] {
+    background-image: url("icons/flags/dz.png");
+}
+select.withicons option[value="ec"] {
+    background-image: url("icons/flags/ec.png");
+}
+select.withicons option[value="ee"] {
+    background-image: url("icons/flags/ee.png");
+}
+select.withicons option[value="eg"] {
+    background-image: url("icons/flags/eg.png");
+}
+select.withicons option[value="eh"] {
+    background-image: url("icons/flags/eh.png");
+}
 select.withicons option[value="el"] {
     background-image: url("icons/flags/gr.png");
 }
 select.withicons option[value="en"] {
     background-image: url("icons/flags/gb.png");
 }
+select.withicons option[value="er"] {
+    background-image: url("icons/flags/er.png");
+}
 select.withicons option[value="es"] {
     background-image: url("icons/flags/es.png");
+}
+select.withicons option[value="et"] {
+    background-image: url("icons/flags/et.png");
 }
 select.withicons option[value="fi"] {
     background-image: url("icons/flags/fi.png");
 }
+select.withicons option[value="fj"] {
+    background-image: url("icons/flags/fj.png");
+}
+select.withicons option[value="fk"] {
+    background-image: url("icons/flags/fk.png");
+}
+select.withicons option[value="fm"] {
+    background-image: url("icons/flags/fm.png");
+}
+select.withicons option[value="fo"] {
+    background-image: url("icons/flags/fo.png");
+}
 select.withicons option[value="fr"] {
     background-image: url("icons/flags/fr.png");
 }
+select.withicons option[value="ga"] {
+    background-image: url("icons/flags/ga.png");
+}
+select.withicons option[value="gb"] {
+    background-image: url("icons/flags/gb.png");
+}
+select.withicons option[value="gd"] {
+    background-image: url("icons/flags/gd.png");
+}
+select.withicons option[value="ge"] {
+    background-image: url("icons/flags/ge.png");
+}
+select.withicons option[value="gf"] {
+    background-image: url("icons/flags/gf.png");
+}
+select.withicons option[value="gh"] {
+    background-image: url("icons/flags/gh.png");
+}
+select.withicons option[value="gi"] {
+    background-image: url("icons/flags/gi.png");
+}
+select.withicons option[value="gl"] {
+    background-image: url("icons/flags/gl.png");
+}
+select.withicons option[value="gm"] {
+    background-image: url("icons/flags/gm.png");
+}
+select.withicons option[value="gn"] {
+    background-image: url("icons/flags/gn.png");
+}
+select.withicons option[value="gp"] {
+    background-image: url("icons/flags/gp.png");
+}
+select.withicons option[value="gq"] {
+    background-image: url("icons/flags/gq.png");
+}
+select.withicons option[value="gr"] {
+    background-image: url("icons/flags/gr.png");
+}
+select.withicons option[value="gs"] {
+    background-image: url("icons/flags/gs.png");
+}
+select.withicons option[value="gt"] {
+    background-image: url("icons/flags/gt.png");
+}
+select.withicons option[value="gu"] {
+    background-image: url("icons/flags/gu.png");
+}
+select.withicons option[value="gw"] {
+    background-image: url("icons/flags/gw.png");
+}
+select.withicons option[value="gy"] {
+    background-image: url("icons/flags/gy.png");
+}
+select.withicons option[value="hk"] {
+    background-image: url("icons/flags/hk.png");
+}
+select.withicons option[value="hm"] {
+    background-image: url("icons/flags/hm.png");
+}
+select.withicons option[value="hn"] {
+    background-image: url("icons/flags/hn.png");
+}
 select.withicons option[value="hr"] {
     background-image: url("icons/flags/hr.png");
+}
+select.withicons option[value="ht"] {
+    background-image: url("icons/flags/ht.png");
 }
 select.withicons option[value="hu"] {
     background-image: url("icons/flags/hu.png");
@@ -2123,33 +3056,435 @@ select.withicons option[value="hu"] {
 select.withicons option[value="id"] {
     background-image: url("icons/flags/id.png");
 }
+select.withicons option[value="ie"] {
+    background-image: url("icons/flags/ie.png");
+}
+select.withicons option[value="il"] {
+    background-image: url("icons/flags/il.png");
+}
+select.withicons option[value="in"] {
+    background-image: url("icons/flags/in.png");
+}
+select.withicons option[value="io"] {
+    background-image: url("icons/flags/io.png");
+}
+select.withicons option[value="iq"] {
+    background-image: url("icons/flags/iq.png");
+}
+select.withicons option[value="ir"] {
+    background-image: url("icons/flags/ir.png");
+}
+select.withicons option[value="is"] {
+    background-image: url("icons/flags/is.png");
+}
 select.withicons option[value="it"] {
     background-image: url("icons/flags/it.png");
+}
+select.withicons option[value="jm"] {
+    background-image: url("icons/flags/jm.png");
+}
+select.withicons option[value="jo"] {
+    background-image: url("icons/flags/jo.png");
 }
 select.withicons option[value="ja"] {
     background-image: url("icons/flags/jp.png");
 }
+select.withicons option[value="jp"] {
+    background-image: url("icons/flags/jp.png");
+}
+select.withicons option[value="ke"] {
+    background-image: url("icons/flags/ke.png");
+}
+select.withicons option[value="kg"] {
+    background-image: url("icons/flags/kg.png");
+}
+select.withicons option[value="kh"] {
+    background-image: url("icons/flags/kh.png");
+}
+select.withicons option[value="ki"] {
+    background-image: url("icons/flags/ki.png");
+}
+select.withicons option[value="km"] {
+    background-image: url("icons/flags/km.png");
+}
+select.withicons option[value="kn"] {
+    background-image: url("icons/flags/kn.png");
+}
+select.withicons option[value="kp"] {
+    background-image: url("icons/flags/kp.png");
+}
+select.withicons option[value="kr"] {
+    background-image: url("icons/flags/kr.png");
+}
+select.withicons option[value="kw"] {
+    background-image: url("icons/flags/kw.png");
+}
+select.withicons option[value="ky"] {
+    background-image: url("icons/flags/ky.png");
+}
+select.withicons option[value="kz"] {
+    background-image: url("icons/flags/kz.png");
+}
+select.withicons option[value="la"] {
+    background-image: url("icons/flags/la.png");
+}
+select.withicons option[value="lb"] {
+    background-image: url("icons/flags/lb.png");
+}
+select.withicons option[value="lc"] {
+    background-image: url("icons/flags/lc.png");
+}
+select.withicons option[value="li"] {
+    background-image: url("icons/flags/li.png");
+}
+select.withicons option[value="lk"] {
+    background-image: url("icons/flags/lk.png");
+}
+select.withicons option[value="lr"] {
+    background-image: url("icons/flags/lr.png");
+}
+select.withicons option[value="ls"] {
+    background-image: url("icons/flags/ls.png");
+}
+select.withicons option[value="lt"] {
+    background-image: url("icons/flags/lt.png");
+}
+select.withicons option[value="lu"] {
+    background-image: url("icons/flags/lu.png");
+}
+select.withicons option[value="lv"] {
+    background-image: url("icons/flags/lv.png");
+}
+select.withicons option[value="ly"] {
+    background-image: url("icons/flags/ly.png");
+}
+select.withicons option[value="ma"] {
+    background-image: url("icons/flags/ma.png");
+}
+select.withicons option[value="mc"] {
+    background-image: url("icons/flags/mc.png");
+}
+select.withicons option[value="md"] {
+    background-image: url("icons/flags/md.png");
+}
+select.withicons option[value="me"] {
+    background-image: url("icons/flags/me.png");
+}
+select.withicons option[value="mg"] {
+    background-image: url("icons/flags/mg.png");
+}
+select.withicons option[value="mh"] {
+    background-image: url("icons/flags/mh.png");
+}
+select.withicons option[value="mk"] {
+    background-image: url("icons/flags/mk.png");
+}
+select.withicons option[value="ml"] {
+    background-image: url("icons/flags/ml.png");
+}
+select.withicons option[value="mm"] {
+    background-image: url("icons/flags/mm.png");
+}
+select.withicons option[value="mn"] {
+    background-image: url("icons/flags/mn.png");
+}
+select.withicons option[value="mo"] {
+    background-image: url("icons/flags/mo.png");
+}
+select.withicons option[value="mp"] {
+    background-image: url("icons/flags/mp.png");
+}
+select.withicons option[value="mq"] {
+    background-image: url("icons/flags/mq.png");
+}
+select.withicons option[value="mr"] {
+    background-image: url("icons/flags/mr.png");
+}
+select.withicons option[value="ms"] {
+    background-image: url("icons/flags/ms.png");
+}
+select.withicons option[value="mt"] {
+    background-image: url("icons/flags/mt.png");
+}
+select.withicons option[value="mu"] {
+    background-image: url("icons/flags/mu.png");
+}
+select.withicons option[value="mv"] {
+    background-image: url("icons/flags/mv.png");
+}
+select.withicons option[value="mw"] {
+    background-image: url("icons/flags/mw.png");
+}
+select.withicons option[value="mx"] {
+    background-image: url("icons/flags/mx.png");
+}
+select.withicons option[value="my"] {
+    background-image: url("icons/flags/my.png");
+}
+select.withicons option[value="mz"] {
+    background-image: url("icons/flags/mz.png");
+}
+select.withicons option[value="na"] {
+    background-image: url("icons/flags/na.png");
+}
+select.withicons option[value="nc"] {
+    background-image: url("icons/flags/nc.png");
+}
+select.withicons option[value="ne"] {
+    background-image: url("icons/flags/ne.png");
+}
+select.withicons option[value="nf"] {
+    background-image: url("icons/flags/nf.png");
+}
+select.withicons option[value="ng"] {
+    background-image: url("icons/flags/ng.png");
+}
+select.withicons option[value="ni"] {
+    background-image: url("icons/flags/ni.png");
+}
 select.withicons option[value="nl"] {
     background-image: url("icons/flags/nl.png");
+}
+select.withicons option[value="no"] {
+    background-image: url("icons/flags/no.png");
+}
+select.withicons option[value="np"] {
+    background-image: url("icons/flags/np.png");
+}
+select.withicons option[value="nr"] {
+    background-image: url("icons/flags/nr.png");
+}
+select.withicons option[value="nu"] {
+    background-image: url("icons/flags/nu.png");
+}
+select.withicons option[value="nz"] {
+    background-image: url("icons/flags/nz.png");
+}
+select.withicons option[value="om"] {
+    background-image: url("icons/flags/om.png");
+}
+select.withicons option[value="pa"] {
+    background-image: url("icons/flags/pa.png");
+}
+select.withicons option[value="pe"] {
+    background-image: url("icons/flags/pe.png");
+}
+select.withicons option[value="pf"] {
+    background-image: url("icons/flags/pf.png");
+}
+select.withicons option[value="pg"] {
+    background-image: url("icons/flags/pg.png");
+}
+select.withicons option[value="ph"] {
+    background-image: url("icons/flags/ph.png");
+}
+select.withicons option[value="pk"] {
+    background-image: url("icons/flags/pk.png");
 }
 select.withicons option[value="pl"] {
     background-image: url("icons/flags/pl.png");
 }
+select.withicons option[value="pm"] {
+    background-image: url("icons/flags/pm.png");
+}
+select.withicons option[value="pn"] {
+    background-image: url("icons/flags/pn.png");
+}
+select.withicons option[value="pr"] {
+    background-image: url("icons/flags/pr.png");
+}
+select.withicons option[value="ps"] {
+    background-image: url("icons/flags/ps.png");
+}
 select.withicons option[value="pt"] {
     background-image: url("icons/flags/pt.png");
+}
+select.withicons option[value="pw"] {
+    background-image: url("icons/flags/pw.png");
+}
+select.withicons option[value="py"] {
+    background-image: url("icons/flags/py.png");
+}
+select.withicons option[value="qa"] {
+    background-image: url("icons/flags/qa.png");
+}
+select.withicons option[value="re"] {
+    background-image: url("icons/flags/re.png");
 }
 select.withicons option[value="ro"] {
     background-image: url("icons/flags/ro.png");
 }
+select.withicons option[value="rs"] {
+    background-image: url("icons/flags/rs.png");
+}
 select.withicons option[value="ru"] {
     background-image: url("icons/flags/ru.png");
+}
+select.withicons option[value="rw"] {
+    background-image: url("icons/flags/rw.png");
+}
+select.withicons option[value="sa"] {
+    background-image: url("icons/flags/sa.png");
+}
+select.withicons option[value="sb"] {
+    background-image: url("icons/flags/sb.png");
+}
+select.withicons option[value="sc"] {
+    background-image: url("icons/flags/sc.png");
+}
+select.withicons option[value="sd"] {
+    background-image: url("icons/flags/sd.png");
 }
 select.withicons option[value="se"] {
     background-image: url("icons/flags/se.png");
 }
+select.withicons option[value="sg"] {
+    background-image: url("icons/flags/sg.png");
+}
+select.withicons option[value="sh"] {
+    background-image: url("icons/flags/sh.png");
+}
+select.withicons option[value="si"] {
+    background-image: url("icons/flags/si.png");
+}
+select.withicons option[value="sj"] {
+    background-image: url("icons/flags/sj.png");
+}
 select.withicons option[value="sk"] {
     background-image: url("icons/flags/sk.png");
 }
+select.withicons option[value="sl"] {
+    background-image: url("icons/flags/sl.png");
+}
+select.withicons option[value="sm"] {
+    background-image: url("icons/flags/sm.png");
+}
+select.withicons option[value="sn"] {
+    background-image: url("icons/flags/sn.png");
+}
+select.withicons option[value="so"] {
+    background-image: url("icons/flags/so.png");
+}
+select.withicons option[value="sr"] {
+    background-image: url("icons/flags/sr.png");
+}
+select.withicons option[value="st"] {
+    background-image: url("icons/flags/st.png");
+}
+select.withicons option[value="sv"] {
+    background-image: url("icons/flags/sv.png");
+}
+select.withicons option[value="sy"] {
+    background-image: url("icons/flags/sy.png");
+}
+select.withicons option[value="sz"] {
+    background-image: url("icons/flags/sz.png");
+}
+select.withicons option[value="tc"] {
+    background-image: url("icons/flags/tc.png");
+}
+select.withicons option[value="td"] {
+    background-image: url("icons/flags/td.png");
+}
+select.withicons option[value="tf"] {
+    background-image: url("icons/flags/tf.png");
+}
+select.withicons option[value="tg"] {
+    background-image: url("icons/flags/tg.png");
+}
+select.withicons option[value="th"] {
+    background-image: url("icons/flags/th.png");
+}
+select.withicons option[value="tj"] {
+    background-image: url("icons/flags/tj.png");
+}
+select.withicons option[value="tk"] {
+    background-image: url("icons/flags/tk.png");
+}
+select.withicons option[value="tl"] {
+    background-image: url("icons/flags/tl.png");
+}
+select.withicons option[value="tm"] {
+    background-image: url("icons/flags/tm.png");
+}
+select.withicons option[value="tn"] {
+    background-image: url("icons/flags/tn.png");
+}
+select.withicons option[value="to"] {
+    background-image: url("icons/flags/to.png");
+}
 select.withicons option[value="tr"] {
     background-image: url("icons/flags/tr.png");
+}
+select.withicons option[value="tt"] {
+    background-image: url("icons/flags/tt.png");
+}
+select.withicons option[value="tv"] {
+    background-image: url("icons/flags/tv.png");
+}
+select.withicons option[value="tw"] {
+    background-image: url("icons/flags/tw.png");
+}
+select.withicons option[value="tz"] {
+    background-image: url("icons/flags/tz.png");
+}
+select.withicons option[value="ua"] {
+    background-image: url("icons/flags/ua.png");
+}
+select.withicons option[value="ug"] {
+    background-image: url("icons/flags/ug.png");
+}
+select.withicons option[value="um"] {
+    background-image: url("icons/flags/um.png");
+}
+select.withicons option[value="us"] {
+    background-image: url("icons/flags/us.png");
+}
+select.withicons option[value="uy"] {
+    background-image: url("icons/flags/uy.png");
+}
+select.withicons option[value="uz"] {
+    background-image: url("icons/flags/uz.png");
+}
+select.withicons option[value="va"] {
+    background-image: url("icons/flags/va.png");
+}
+select.withicons option[value="vc"] {
+    background-image: url("icons/flags/vc.png");
+}
+select.withicons option[value="ve"] {
+    background-image: url("icons/flags/ve.png");
+}
+select.withicons option[value="vg"] {
+    background-image: url("icons/flags/vg.png");
+}
+select.withicons option[value="vi"] {
+    background-image: url("icons/flags/vi.png");
+}
+select.withicons option[value="vn"] {
+    background-image: url("icons/flags/vn.png");
+}
+select.withicons option[value="vu"] {
+    background-image: url("icons/flags/vu.png");
+}
+select.withicons option[value="wf"] {
+    background-image: url("icons/flags/wf.png");
+}
+select.withicons option[value="ws"] {
+    background-image: url("icons/flags/ws.png");
+}
+select.withicons option[value="ye"] {
+    background-image: url("icons/flags/ye.png");
+}
+select.withicons option[value="yt"] {
+    background-image: url("icons/flags/yt.png");
+}
+select.withicons option[value="za"] {
+    background-image: url("icons/flags/za.png");
+}
+select.withicons option[value="zm"] {
+    background-image: url("icons/flags/zm.png");
+}
+select.withicons option[value="zw"] {
+    background-image: url("icons/flags/zw.png");
 }
