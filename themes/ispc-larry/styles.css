@@ -92,6 +92,10 @@ table.list .tbl_row_even {
     background: #FCFCFC;
     border-top: 1px solid #BBD3DA;
 }
+
+table.additem {
+    background: none;
+}
 /* Forms/Input
 -------------------------------------------------------------- */
 textarea {
@@ -856,6 +860,7 @@ footer p {
     margin: 15px;
 }
 .panel {
+    position: relative;
     padding: 0 25px 35px 25px;
 }
 
@@ -927,9 +932,12 @@ label.inlineLabel {
 }
 /* modules/tabsbar
 -------------------------------------------------------------- */
+#tabs {
+    position: relative;
+}
+
 ul.tabsbar {
-    position: fixed;
-    margin: 0 0 15px 25px;
+    margin: 0 0 10px 25px;
     padding: 0;
     list-style: none;
     display: block;
