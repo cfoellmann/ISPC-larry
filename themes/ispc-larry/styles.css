@@ -824,7 +824,7 @@ footer p {
     width: 100%;
     background: url("images/bg_module.png") repeat;
 }
-.module-title {
+#module-title {
     overflow: auto;
     top: 42px;
     left: 0;
@@ -841,7 +841,7 @@ footer p {
     border-radius: 4px 4px 0 0;
     box-shadow: 0 0 2px #999999;
 }
-.module-title h1 {
+#module-title h1 {
     padding: 10px 8px 3px;
     font-size: 12px;
     font-weight: bold;
@@ -856,7 +856,7 @@ footer p {
     -moz-box-shadow: 0 0 2px #999;
     background: #fff;
 }
-.module-desc {
+#module-desc {
     margin: 15px;
 }
 .panel {
