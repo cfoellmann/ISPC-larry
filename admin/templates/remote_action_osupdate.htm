@@ -9,6 +9,8 @@
 <!-- beginn: modulebody -->
 <div id="module-title"><h1><tmpl_var name="do_osupdate_caption"></h1></div>
 <div class="module-box boxlistcontent" id="modulecontainer">
+    <!-- desc -->
+    <div id="module-desc"><tmpl_var name="do_osupdate_desc"></div>
     <!-- messages/erros -->  
     <tmpl_if name="msg">
         <div id="OKMsg"><p><tmpl_var name="msg"></p></div>
@@ -18,7 +20,6 @@
     </tmpl_if>
     
     <!-- beginn: modulecontent -->
-    <div id="module-desc"><tmpl_var name="do_osupdate_desc"></div>
     <div class="panel panel_language_add">
         <div class="ctrlHolder">
             <label for="server_select">{tmpl_var name='select_server_txt'}</label>
