@@ -883,8 +883,8 @@ if (!defined('vlibTemplateClassLoaded')) {
             $filepath = dirname($file);
 
 			if(isset($_SESSION['s']['module']['name']) && isset($_SESSION['s']['theme'])) {
-				if(is_file(ISPC_THEMES_PATH.'/'.$_SESSION['s']['theme'].'/'.$_SESSION['s']['module']['name'].'/templates/'.$filename)) {
-					return ISPC_THEMES_PATH.'/'.$_SESSION['s']['theme'].'/'.$_SESSION['s']['module']['name'].'/templates/'.$filename;
+				if(is_file(ISPC_THEMES_PATH.'/'.$_SESSION['s']['theme'].'/templates/'.$_SESSION['s']['module']['name'].'/'.$filename)) {
+					return ISPC_THEMES_PATH.'/'.$_SESSION['s']['theme'].'/templates/'.$_SESSION['s']['module']['name'].'/templates/'.$filename;
 				}
 			}
 
