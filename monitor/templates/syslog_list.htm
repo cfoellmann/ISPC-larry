@@ -27,7 +27,9 @@
                     <td class="tbl_col_server_id"><select name="search_server_id">{tmpl_var name='search_server_id'}</select></td>
                     <td class="tbl_col_loglevel"><select name="search_loglevel">{tmpl_var name='search_loglevel'}</select></td>
                     <td class="tbl_col_message"><input type="text" name="search_message" value="{tmpl_var name='search_message'}" /></td>
-                    <td class="tbl_col_buttons"><div class="buttons"><button type="button" class="icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="submitForm('pageForm','monitor/log_list.php');"><span>{tmpl_var name="filter_txt"}</span></button></div></td>
+                    <td class="tbl_col_buttons">
+                        <button type="button" class="button icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="submitForm('pageForm','monitor/log_list.php');"><span>{tmpl_var name="filter_txt"}</span></button>
+                    </td>
                 </tr>
             </thead>
             <tbody>
@@ -38,18 +40,14 @@
                     <td class="tbl_col_loglevel">{tmpl_var name="loglevel"}</td>
                     <td class="tbl_col_message">{tmpl_var name="message"}</td>
                     <td class="tbl_col_buttons">
-                                <tmpl_if name="loglevel" op="==" value="Error">
-                                <div class="buttons icons16">
-                        <a class="icons16 icoDelete" href="javascript: del_record('monitor/log_del.php?id={tmpl_var name='id'}&phpsessid={tmpl_var name='phpsessid'}','{tmpl_var name='delete_confirmation'}');"><span>{tmpl_var name='delete_txt'}</span></a>
-                    </div>
-                                </tmpl_if>
-                                <tmpl_if name="loglevel" op="==" value="Warning">
-                                <div class="buttons icons16">
-                        <a class="icons16 icoDelete" href="javascript: del_record('monitor/log_del.php?id={tmpl_var name='id'}&phpsessid={tmpl_var name='phpsessid'}','{tmpl_var name='delete_confirmation'}');"><span>{tmpl_var name='delete_txt'}</span></a>
-                    </div>
-                                </tmpl_if>
-                                </td>
-                </tr>
+                        <tmpl_if name="loglevel" op="==" value="Error">
+                            <a class="button icons16 icoDelete" href="javascript: del_record('monitor/log_del.php?id={tmpl_var name='id'}&phpsessid={tmpl_var name='phpsessid'}','{tmpl_var name='delete_confirmation'}');"><span>{tmpl_var name='delete_txt'}</span></a>
+                        </tmpl_if>
+                        <tmpl_if name="loglevel" op="==" value="Warning">
+                            <a class="button icons16 icoDelete" href="javascript: del_record('monitor/log_del.php?id={tmpl_var name='id'}&phpsessid={tmpl_var name='phpsessid'}','{tmpl_var name='delete_confirmation'}');"><span>{tmpl_var name='delete_txt'}</span></a>
+                        </tmpl_if>
+                    </td>
+            </tr>
             </tmpl_loop>
             </tbody>
             <tfoot>
