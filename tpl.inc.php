@@ -878,8 +878,15 @@ if (!defined('vlibTemplateClassLoaded')) {
          */
         private function _fileSearch($file) 
         {
+			
             $filename = basename($file);
             $filepath = dirname($file);
+
+			if(isset($_SESSION['s']['module']['name']) && isset($_SESSION['s']['theme'])) {
+				if(is_file(ISPC_THEMES_PATH.'/'.$_SESSION['s']['theme'].'/'.$_SESSION['s']['module']['name'].'/templates/'.$filename)) {
+					return ISPC_THEMES_PATH.'/'.$_SESSION['s']['theme'].'/'.$_SESSION['s']['module']['name'].'/templates/'.$filename;
+				}
+			}
 
             //* check fullpath first..
             $fullpath = $filepath.'/'.$filename;
