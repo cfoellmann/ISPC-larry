@@ -20,6 +20,7 @@
         </ul>
     </div>
     <!-- desc --> 
+    <div id="module-desc"><tmpl_var name="list_desc_txt"></div>
     
     <!-- messages/erros -->  
     <tmpl_if name="msg">
@@ -82,8 +83,7 @@
             </div>
         </div>
             
-        <input type="hidden" name="id" value="{tmpl_var name='id'}">
-            
+        <input type="hidden" name="id" value="{tmpl_var name='id'}">    
         <div class="buttonHolder buttons">
             <button class="positive iconstxt icoPositive" type="button" value="{tmpl_var name='btn_save_txt'}" onClick="submitForm('pageForm','sites/cron_edit.php');"><span>{tmpl_var name='btn_save_txt'}</span></button>
             <button class="negative iconstxt icoNegative" type="button" value="{tmpl_var name='btn_cancel_txt'}" onClick="loadContent('sites/cron_list.php');"><span>{tmpl_var name='btn_cancel_txt'}</span></button>
