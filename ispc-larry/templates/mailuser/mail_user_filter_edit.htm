@@ -1,0 +1,38 @@
+<h2><tmpl_var name="list_head_txt"></h2>
+<p><tmpl_var name="list_desc_txt"></p>
+
+<div class="panel panel_mail_user_filter">
+
+  <div class="pnl_formsarea">
+    <fieldset class="inlineLabels">
+      <div class="ctrlHolder">
+        <label for="rulename" class="wf_preField">{tmpl_var name='rulename_txt'}</label>
+        <input type="text" id="rulename" name="rulename" value="{tmpl_var name='rulename'}" size="30" maxlength="255"  class="textInput">
+      </div>
+      <div class="ctrlHolder">
+        <label for="source" class="wf_preField">{tmpl_var name='source_txt'}</label>
+        <select id="source" name="source"  class="textInput formLengthHalf">{tmpl_var name='source'}</select>
+        <select id="op" name="op"  class="textInput formLengthHalf">{tmpl_var name='op'}</select>
+        <input type="text" id="searchterm" name="searchterm" value="{tmpl_var name='searchterm'}" size="30" maxlength="255"  class="textInput">
+      </div>
+      <div class="ctrlHolder">
+        <label for="action" class="wf_preField">{tmpl_var name='action_txt'}</label>
+        <select id="action" name="action" class="textInput formLengthHalf">{tmpl_var name='action'}</select>
+        <input type="text" id="target" name="target" value="{tmpl_var name='target'}" size="30" maxlength="255"  class="textInput formLengthHalf">
+      </div>
+      <div class="ctrlHolder">
+        <label for="active" class="wf_preField">{tmpl_var name='active_txt'}</label>
+        <span class="">{tmpl_var name='active'}</span>
+      </div>
+    </fieldset>
+
+    <input type="hidden" name="id" value="{tmpl_var name='id'}">
+    <input name="mailuser_id" type="hidden" value="{tmpl_var name='mailuser_id'}">
+
+    <div class="buttonHolder buttons">
+      <button class="positive iconstxt icoPositive" type="button" value="{tmpl_var name='btn_save_txt'}" onClick="submitForm('pageForm','mailuser/mail_user_filter_edit.php');"><span>{tmpl_var name='btn_save_txt'}</span></button>
+      <button class="negative iconstxt icoNegative" type="button" value="{tmpl_var name='btn_cancel_txt'}" onClick="loadContent('mailuser/mail_user_filter_list.php');"><span>{tmpl_var name='btn_cancel_txt'}</span></button>
+    </div>
+  </div>
+  
+</div>

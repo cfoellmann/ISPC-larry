@@ -1,0 +1,42 @@
+<h2><tmpl_var name="list_head_txt"></h2>
+<p><tmpl_var name="list_desc_txt"></p>
+
+<div class="panel panel_mail_user">
+	<div class="pnl_formsarea">
+		<fieldset class="inlineLabels">
+			<div class="ctrlHolder">
+				<label for="autoresponder_subject">{tmpl_var name='autoresponder_subject_txt'}</label>
+				<input type="text" name="autoresponder_subject" id="autoresponder_subject" maxlength='250' value="{tmpl_var name='autoresponder_subject'}" />
+			</div>
+			<div class="ctrlHolder">
+				<label for="autoresponder_text">{tmpl_var name='autoresponder_text_txt'}</label>
+				<textarea name="autoresponder_text" id="autoresponder_text" rows='15' cols='30'>{tmpl_var name='autoresponder_text'}</textarea>
+			</div>
+			<div class="ctrlHolder">
+				<label for="autoresponder">{tmpl_var name='autoresponder_active'}</label>
+				<input type="checkbox" value="y" id="autoresponder" name="autoresponder"
+					onclick="AR_ResetDates();" {tmpl_var name='ar_active'} />
+			</div>
+			<div class="ctrlHolder">
+				<label for="autoresponder_start_date">{tmpl_var name='autoresponder_start_date_txt'}</label>
+				{tmpl_var name='autoresponder_start_date'}&nbsp;
+				<a href="javascript:AR_SetNow();">{tmpl_var name='now_txt'}</a>
+			</div>
+			<div class="ctrlHolder">
+				<label for="autoresponder_end_date">{tmpl_var name='autoresponder_end_date_txt'}</label>
+				{tmpl_var name='autoresponder_end_date'}
+			</div>
+		</fieldset>
+		<input type="hidden" name="id" value="{tmpl_var name='id'}">
+		<div class="buttonHolder buttons">
+			<button class="positive iconstxt icoPositive" type="button"
+				value="{tmpl_var name='btn_save_txt'}" onClick="submitForm('pageForm','mailuser/mail_user_autoresponder_edit.php');">
+				<span>{tmpl_var name='btn_save_txt'}</span>
+			</button>
+			<button class="negative iconstxt icoNegative" type="button" value="{tmpl_var name='btn_cancel_txt'}"
+				onClick="loadContent('mailuser/index.php');">
+				<span>{tmpl_var name='btn_cancel_txt'}</span>
+			</button>
+		</div>
+	</div>
+</div>

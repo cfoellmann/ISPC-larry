@@ -1,0 +1,65 @@
+<!-- beginn: toolbar -->
+<div id="moduletoolbar">
+    &nbsp;
+</div>
+<!-- end: toolbar -->
+
+<!-- beginn: modulebody -->
+<div id="module-title"><h1><tmpl_var name="list_head_txt"></h1></div> 
+<div class="module-box boxlistcontent" id="modulecontainer">
+    <div id="module-desc"><tmpl_var name="list_desc_txt"></div>
+    
+    <!-- beginn: modulecontent -->
+    <div class="panel panel_list_instances">
+        <table class="list">
+            <thead>
+                <tr>
+                    <th class="tbl_col_name" scope="col">{tmpl_var name='name_txt'}</th>
+                    <th class="tbl_col_version" scope="col">{tmpl_var name='version_txt'}</th>
+                    <tmpl_if name='is_noclient'>
+                    <th class="tbl_col_customer" scope="col">{tmpl_var name='customer_txt'}</th>
+                    </tmpl_if>
+                    <th class="tbl_col_installlocation" scope="col">{tmpl_var name='install_location_txt'}</th>
+                    <th class="tbl_col_instancestatus" scope="col">{tmpl_var name='status_txt'}</th>
+                    <th class="tbl_col_buttons" scope="col" >{tmpl_var name='search_limit'}</th>
+                </tr>
+                <tr>
+                    <td class="tbl_col_name"><input type="text" name="search_name" value="{tmpl_var name='search_name'}" /></td>
+                    <td class="tbl_col_version"><input type="text" name="search_version" value="{tmpl_var name='search_version'}" /></td>
+                    <tmpl_if name='is_noclient'>
+                    <td class="tbl_col_customer"><input type="text" name="search_customer_name" value="{tmpl_var name='search_customer_name'}" /></td>
+                    </tmpl_if>
+                    <td class="tbl_col_installlocation">&nbsp;</td>
+                    <td class="tbl_col_instancestatus"><select name="search_instance_status" onChange="submitForm('pageForm','sites/aps_installedpackages_list.php');">{tmpl_var name='search_instance_status'}</select></td>
+                    <td class="tbl_col_buttons">
+                    <button type="button" class="button icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name='filter_txt'}" onClick="submitForm('pageForm','sites/aps_installedpackages_list.php');">
+                        <span>{tmpl_var name='filter_txt'}</span>
+                    </button>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tmpl_loop name='records'>
+                <tr class="tbl_row_<tmpl_if name='__EVEN__'}even<tmpl_else>uneven</tmpl_if>">
+                    <td class="tbl_col_name"><a href="#" onClick="loadContent('sites/aps_packagedetails_show.php?id={tmpl_var name='package_id'}');">{tmpl_var name='package_name'}</a></td>
+                    <td class="tbl_col_version">{tmpl_var name='package_version'}-{tmpl_var name='package_release'}</td>
+                    <tmpl_if name='is_noclient'>
+                    <td class="tbl_col_customer"><a href="#" onClick="loadContent('client/client_edit.php?id={tmpl_var name='CustomerID'}');">{tmpl_var name='customer_name'}</a></td>
+                    </tmpl_if>
+                    <td class="tbl_col_installlocation"><a href="http://{tmpl_var name='install_location'}" target="_blank">{tmpl_var name='install_location_short'}</a></td>
+                    <td class="tbl_col_instancestatus"><span id="status_content{tmpl_var name='__ROWNUM__'}">{tmpl_var name='instance_status'}</span></td>
+                    <td class="tbl_col_buttons">
+                        <tmpl_if name='delete_possible'><a class="button icons16 icoDelete" href="javascript:if(window.confirm('{tmpl_var name='pkg_delete_confirmation'}')){ loadContentInto('status_content{tmpl_var name='__ROWNUM__'}', 'sites/aps_do_operation.php?action=delete_instance&id={tmpl_var name='id'}&phpsessid={tmpl_var name='phpsessid'}'); }"><span>{tmpl_var name='delete_txt'}</span></a></tmpl_if>
+                        <tmpl_if name='reinstall_possible'><a class="button icons16 icoEdit" href="javascript:if(window.confirm('{tmpl_var name='pkg_reinstall_confirmation'}')){ loadContentInto('status_content{tmpl_var name='__ROWNUM__'}', 'sites/aps_do_operation.php?action=reinstall_instance&id={tmpl_var name='id'}&phpsessid={tmpl_var name='phpsessid'}'); }"><span>{tmpl_var name='reinstall_txt'}</span></a></tmpl_if>
+                    </td>        
+                </tr>
+                </tmpl_loop>
+            </tbody>
+            <tfoot>
+            <tr>
+                <td class="tbl_footer tbl_paging" colspan="6">{tmpl_var name='paging'}</td>
+            </tr>
+            </tfoot>
+        </table>
+  </div>
+</div>

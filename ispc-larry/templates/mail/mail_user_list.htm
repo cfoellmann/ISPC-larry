@@ -18,7 +18,7 @@
             <tmpl_if name="enable_custom_login"><th class="tbl_col_login" scope="col"><tmpl_var name="login_txt"></th></tmpl_if>
                     <th class="tbl_col_name" scope="col"><tmpl_var name="name_txt"></th>
                     <th class="tbl_col_autoresponder" scope="col"><tmpl_var name="autoresponder_txt"></th>
-                    <th class="tbl_col_buttons" scope="col">Actions</th>
+                    <th class="tbl_col_buttons" scope="col">{tmpl_var name='search_limit'}</th>
                 </tr>
                 <tr>
                     <td class="tbl_col_email"><input type="text" name="search_email" value="{tmpl_var name='search_email'}" class="search" /></td>
