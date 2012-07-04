@@ -2032,1467 +2032,252 @@ button.icons16 {
 #language.selectInput {
     width: 75px;
 }
-select.withicons option[value="AD"] {
-    background-image: url("icons/flags/ad.png");
-}
-select.withicons option[value="AE"] {
-    background-image: url("icons/flags/ae.png");
-}
-select.withicons option[value="AF"] {
-    background-image: url("icons/flags/af.png");
-}
-select.withicons option[value="AG"] {
-    background-image: url("icons/flags/ag.png");
-}
-select.withicons option[value="AI"] {
-    background-image: url("icons/flags/ai.png");
-}
-select.withicons option[value="AL"] {
-    background-image: url("icons/flags/al.png");
-}
-select.withicons option[value="AM"] {
-    background-image: url("icons/flags/am.png");
-}
-select.withicons option[value="AN"] {
-    background-image: url("icons/flags/an.png");
-}
-select.withicons option[value="AO"] {
-    background-image: url("icons/flags/ao.png");
-}
-select.withicons option[value="AQ"] {
-    background-image: url("icons/flags/aq.png");
-}
-select.withicons option[value="AR"] {
-    background-image: url("icons/flags/ar.png");
-}
-select.withicons option[value="AS"] {
-    background-image: url("icons/flags/as.png");
-}
-select.withicons option[value="AT"] {
-    background-image: url("icons/flags/at.png");
-}
-select.withicons option[value="AU"] {
-    background-image: url("icons/flags/au.png");
-}
-select.withicons option[value="AW"] {
-    background-image: url("icons/flags/aw.png");
-}
-select.withicons option[value="AX"] {
-    background-image: url("icons/flags/ax.png");
-}
-select.withicons option[value="AZ"] {
-    background-image: url("icons/flags/az.png");
-}
-select.withicons option[value="BA"] {
-    background-image: url("icons/flags/ba.png");
-}
-select.withicons option[value="BB"] {
-    background-image: url("icons/flags/bb.png");
-}
-select.withicons option[value="BD"] {
-    background-image: url("icons/flags/bd.png");
-}
-select.withicons option[value="BE"] {
-    background-image: url("icons/flags/be.png");
-}
-select.withicons option[value="BF"] {
-    background-image: url("icons/flags/bf.png");
-}
-select.withicons option[value="BG"] {
-    background-image: url("icons/flags/bg.png");
-}
-select.withicons option[value="BH"] {
-    background-image: url("icons/flags/bh.png");
-}
-select.withicons option[value="BI"] {
-    background-image: url("icons/flags/bi.png");
-}
-select.withicons option[value="BJ"] {
-    background-image: url("icons/flags/bj.png");
-}
-select.withicons option[value="BM"] {
-    background-image: url("icons/flags/bm.png");
-}
-select.withicons option[value="BN"] {
-    background-image: url("icons/flags/bn.png");
-}
-select.withicons option[value="BO"] {
-    background-image: url("icons/flags/bo.png");
-}
-select.withicons option[value="BR"] {
-    background-image: url("icons/flags/br.png");
-}
-select.withicons option[value="BS"] {
-    background-image: url("icons/flags/bs.png");
-}
-select.withicons option[value="BT"] {
-    background-image: url("icons/flags/bt.png");
-}
-select.withicons option[value="BV"] {
-    background-image: url("icons/flags/bv.png");
-}
-select.withicons option[value="BW"] {
-    background-image: url("icons/flags/bw.png");
-}
-select.withicons option[value="BY"] {
-    background-image: url("icons/flags/by.png");
-}
-select.withicons option[value="BZ"] {
-    background-image: url("icons/flags/bz.png");
-}
-select.withicons option[value="CA"] {
-    background-image: url("icons/flags/ca.png");
-}
-select.withicons option[value="CC"] {
-    background-image: url("icons/flags/cc.png");
-}
-select.withicons option[value="CD"] {
-    background-image: url("icons/flags/cd.png");
-}
-select.withicons option[value="CF"] {
-    background-image: url("icons/flags/cf.png");
-}
-select.withicons option[value="CG"] {
-    background-image: url("icons/flags/cg.png");
-}
-select.withicons option[value="CH"] {
-    background-image: url("icons/flags/ch.png");
-}
-select.withicons option[value="CI"] {
-    background-image: url("icons/flags/ci.png");
-}
-select.withicons option[value="CK"] {
-    background-image: url("icons/flags/ck.png");
-}
-select.withicons option[value="CL"] {
-    background-image: url("icons/flags/cl.png");
-}
-select.withicons option[value="CM"] {
-    background-image: url("icons/flags/cm.png");
-}
-select.withicons option[value="CN"] {
-    background-image: url("icons/flags/cn.png");
-}
-select.withicons option[value="CO"] {
-    background-image: url("icons/flags/co.png");
-}
-select.withicons option[value="CR"] {
-    background-image: url("icons/flags/cr.png");
-}
-select.withicons option[value="CS"] {
-    background-image: url("icons/flags/cs.png");
-}
-select.withicons option[value="CU"] {
-    background-image: url("icons/flags/cu.png");
-}
-select.withicons option[value="CV"] {
-    background-image: url("icons/flags/cv.png");
-}
-select.withicons option[value="CX"] {
-    background-image: url("icons/flags/cx.png");
-}
-select.withicons option[value="CY"] {
-    background-image: url("icons/flags/cy.png");
-}
-select.withicons option[value="CZ"] {
-    background-image: url("icons/flags/cz.png");
-}
-select.withicons option[value="DE"] {
-    background-image: url("icons/flags/de.png");
-}
-select.withicons option[value="DJ"] {
-    background-image: url("icons/flags/dj.png");
-}
-select.withicons option[value="DK"] {
-    background-image: url("icons/flags/dk.png");
-}
-select.withicons option[value="DM"] {
-    background-image: url("icons/flags/dm.png");
-}
-select.withicons option[value="DO"] {
-    background-image: url("icons/flags/do.png");
-}
-select.withicons option[value="DZ"] {
-    background-image: url("icons/flags/dz.png");
-}
-select.withicons option[value="EC"] {
-    background-image: url("icons/flags/ec.png");
-}
-select.withicons option[value="EE"] {
-    background-image: url("icons/flags/ee.png");
-}
-select.withicons option[value="EG"] {
-    background-image: url("icons/flags/eg.png");
-}
-select.withicons option[value="EH"] {
-    background-image: url("icons/flags/eh.png");
-}
-select.withicons option[value="EL"] {
-    background-image: url("icons/flags/gr.png");
-}
-select.withicons option[value="ER"] {
-    background-image: url("icons/flags/er.png");
-}
-select.withicons option[value="ES"] {
-    background-image: url("icons/flags/es.png");
-}
-select.withicons option[value="ET"] {
-    background-image: url("icons/flags/et.png");
-}
-select.withicons option[value="FI"] {
-    background-image: url("icons/flags/fi.png");
-}
-select.withicons option[value="FJ"] {
-    background-image: url("icons/flags/fj.png");
-}
-select.withicons option[value="FK"] {
-    background-image: url("icons/flags/fk.png");
-}
-select.withicons option[value="FM"] {
-    background-image: url("icons/flags/fm.png");
-}
-select.withicons option[value="FO"] {
-    background-image: url("icons/flags/fo.png");
-}
-select.withicons option[value="FR"] {
-    background-image: url("icons/flags/fr.png");
-}
-select.withicons option[value="GA"] {
-    background-image: url("icons/flags/ga.png");
-}
-select.withicons option[value="GB"] {
-    background-image: url("icons/flags/gb.png");
-}
-select.withicons option[value="GD"] {
-    background-image: url("icons/flags/gd.png");
-}
-select.withicons option[value="GE"] {
-    background-image: url("icons/flags/ge.png");
-}
-select.withicons option[value="GF"] {
-    background-image: url("icons/flags/gf.png");
-}
-select.withicons option[value="GH"] {
-    background-image: url("icons/flags/gh.png");
-}
-select.withicons option[value="GI"] {
-    background-image: url("icons/flags/gi.png");
-}
-select.withicons option[value="GL"] {
-    background-image: url("icons/flags/gl.png");
-}
-select.withicons option[value="GM"] {
-    background-image: url("icons/flags/gm.png");
-}
-select.withicons option[value="GN"] {
-    background-image: url("icons/flags/gn.png");
-}
-select.withicons option[value="GP"] {
-    background-image: url("icons/flags/gp.png");
-}
-select.withicons option[value="GQ"] {
-    background-image: url("icons/flags/gq.png");
-}
-select.withicons option[value="GR"] {
-    background-image: url("icons/flags/gr.png");
-}
-select.withicons option[value="GS"] {
-    background-image: url("icons/flags/gs.png");
-}
-select.withicons option[value="GT"] {
-    background-image: url("icons/flags/gt.png");
-}
-select.withicons option[value="GU"] {
-    background-image: url("icons/flags/gu.png");
-}
-select.withicons option[value="GW"] {
-    background-image: url("icons/flags/gw.png");
-}
-select.withicons option[value="GY"] {
-    background-image: url("icons/flags/gy.png");
-}
-select.withicons option[value="HK"] {
-    background-image: url("icons/flags/hk.png");
-}
-select.withicons option[value="HM"] {
-    background-image: url("icons/flags/hm.png");
-}
-select.withicons option[value="HN"] {
-    background-image: url("icons/flags/hn.png");
-}
-select.withicons option[value="HR"] {
-    background-image: url("icons/flags/hr.png");
-}
-select.withicons option[value="HT"] {
-    background-image: url("icons/flags/ht.png");
-}
-select.withicons option[value="HU"] {
-    background-image: url("icons/flags/hu.png");
-}
-select.withicons option[value="ID"] {
-    background-image: url("icons/flags/id.png");
-}
-select.withicons option[value="IE"] {
-    background-image: url("icons/flags/ie.png");
-}
-select.withicons option[value="IL"] {
-    background-image: url("icons/flags/il.png");
-}
-select.withicons option[value="IN"] {
-    background-image: url("icons/flags/in.png");
-}
-select.withicons option[value="IO"] {
-    background-image: url("icons/flags/io.png");
-}
-select.withicons option[value="IQ"] {
-    background-image: url("icons/flags/iq.png");
-}
-select.withicons option[value="IR"] {
-    background-image: url("icons/flags/ir.png");
-}
-select.withicons option[value="IS"] {
-    background-image: url("icons/flags/is.png");
-}
-select.withicons option[value="IT"] {
-    background-image: url("icons/flags/it.png");
-}
-select.withicons option[value="JM"] {
-    background-image: url("icons/flags/jm.png");
-}
-select.withicons option[value="JO"] {
-    background-image: url("icons/flags/jo.png");
-}
-select.withicons option[value="JP"] {
-    background-image: url("icons/flags/jp.png");
-}
-select.withicons option[value="KE"] {
-    background-image: url("icons/flags/ke.png");
-}
-select.withicons option[value="KG"] {
-    background-image: url("icons/flags/kg.png");
-}
-select.withicons option[value="KH"] {
-    background-image: url("icons/flags/kh.png");
-}
-select.withicons option[value="KI"] {
-    background-image: url("icons/flags/ki.png");
-}
-select.withicons option[value="KM"] {
-    background-image: url("icons/flags/km.png");
-}
-select.withicons option[value="KN"] {
-    background-image: url("icons/flags/kn.png");
-}
-select.withicons option[value="KP"] {
-    background-image: url("icons/flags/kp.png");
-}
-select.withicons option[value="KR"] {
-    background-image: url("icons/flags/kr.png");
-}
-select.withicons option[value="KW"] {
-    background-image: url("icons/flags/kw.png");
-}
-select.withicons option[value="KY"] {
-    background-image: url("icons/flags/ky.png");
-}
-select.withicons option[value="KZ"] {
-    background-image: url("icons/flags/kz.png");
-}
-select.withicons option[value="LA"] {
-    background-image: url("icons/flags/la.png");
-}
-select.withicons option[value="LB"] {
-    background-image: url("icons/flags/lb.png");
-}
-select.withicons option[value="LC"] {
-    background-image: url("icons/flags/lc.png");
-}
-select.withicons option[value="LI"] {
-    background-image: url("icons/flags/li.png");
-}
-select.withicons option[value="LK"] {
-    background-image: url("icons/flags/lk.png");
-}
-select.withicons option[value="LR"] {
-    background-image: url("icons/flags/lr.png");
-}
-select.withicons option[value="LS"] {
-    background-image: url("icons/flags/ls.png");
-}
-select.withicons option[value="LT"] {
-    background-image: url("icons/flags/lt.png");
-}
-select.withicons option[value="LU"] {
-    background-image: url("icons/flags/lu.png");
-}
-select.withicons option[value="LV"] {
-    background-image: url("icons/flags/lv.png");
-}
-select.withicons option[value="LY"] {
-    background-image: url("icons/flags/ly.png");
-}
-select.withicons option[value="MA"] {
-    background-image: url("icons/flags/ma.png");
-}
-select.withicons option[value="MC"] {
-    background-image: url("icons/flags/mc.png");
-}
-select.withicons option[value="MD"] {
-    background-image: url("icons/flags/md.png");
-}
-select.withicons option[value="ME"] {
-    background-image: url("icons/flags/me.png");
-}
-select.withicons option[value="MG"] {
-    background-image: url("icons/flags/mg.png");
-}
-select.withicons option[value="MH"] {
-    background-image: url("icons/flags/mh.png");
-}
-select.withicons option[value="MK"] {
-    background-image: url("icons/flags/mk.png");
-}
-select.withicons option[value="ML"] {
-    background-image: url("icons/flags/ml.png");
-}
-select.withicons option[value="MM"] {
-    background-image: url("icons/flags/mm.png");
-}
-select.withicons option[value="MN"] {
-    background-image: url("icons/flags/mn.png");
-}
-select.withicons option[value="MO"] {
-    background-image: url("icons/flags/mo.png");
-}
-select.withicons option[value="MP"] {
-    background-image: url("icons/flags/mp.png");
-}
-select.withicons option[value="MQ"] {
-    background-image: url("icons/flags/mq.png");
-}
-select.withicons option[value="MR"] {
-    background-image: url("icons/flags/mr.png");
-}
-select.withicons option[value="MS"] {
-    background-image: url("icons/flags/ms.png");
-}
-select.withicons option[value="MT"] {
-    background-image: url("icons/flags/mt.png");
-}
-select.withicons option[value="MU"] {
-    background-image: url("icons/flags/mu.png");
-}
-select.withicons option[value="MV"] {
-    background-image: url("icons/flags/mv.png");
-}
-select.withicons option[value="MW"] {
-    background-image: url("icons/flags/mw.png");
-}
-select.withicons option[value="MX"] {
-    background-image: url("icons/flags/mx.png");
-}
-select.withicons option[value="MY"] {
-    background-image: url("icons/flags/my.png");
-}
-select.withicons option[value="MZ"] {
-    background-image: url("icons/flags/mz.png");
-}
-select.withicons option[value="NA"] {
-    background-image: url("icons/flags/na.png");
-}
-select.withicons option[value="NC"] {
-    background-image: url("icons/flags/nc.png");
-}
-select.withicons option[value="NE"] {
-    background-image: url("icons/flags/ne.png");
-}
-select.withicons option[value="NF"] {
-    background-image: url("icons/flags/nf.png");
-}
-select.withicons option[value="NG"] {
-    background-image: url("icons/flags/ng.png");
-}
-select.withicons option[value="NI"] {
-    background-image: url("icons/flags/ni.png");
-}
-select.withicons option[value="NL"] {
-    background-image: url("icons/flags/nl.png");
-}
-select.withicons option[value="NO"] {
-    background-image: url("icons/flags/no.png");
-}
-select.withicons option[value="NP"] {
-    background-image: url("icons/flags/np.png");
-}
-select.withicons option[value="NR"] {
-    background-image: url("icons/flags/nr.png");
-}
-select.withicons option[value="NU"] {
-    background-image: url("icons/flags/nu.png");
-}
-select.withicons option[value="NZ"] {
-    background-image: url("icons/flags/nz.png");
-}
-select.withicons option[value="OM"] {
-    background-image: url("icons/flags/om.png");
-}
-select.withicons option[value="PA"] {
-    background-image: url("icons/flags/pa.png");
-}
-select.withicons option[value="PE"] {
-    background-image: url("icons/flags/pe.png");
-}
-select.withicons option[value="PF"] {
-    background-image: url("icons/flags/pf.png");
-}
-select.withicons option[value="PG"] {
-    background-image: url("icons/flags/pg.png");
-}
-select.withicons option[value="PH"] {
-    background-image: url("icons/flags/ph.png");
-}
-select.withicons option[value="PK"] {
-    background-image: url("icons/flags/pk.png");
-}
-select.withicons option[value="PL"] {
-    background-image: url("icons/flags/pl.png");
-}
-select.withicons option[value="PM"] {
-    background-image: url("icons/flags/pm.png");
-}
-select.withicons option[value="PN"] {
-    background-image: url("icons/flags/pn.png");
-}
-select.withicons option[value="PR"] {
-    background-image: url("icons/flags/pr.png");
-}
-select.withicons option[value="PS"] {
-    background-image: url("icons/flags/ps.png");
-}
-select.withicons option[value="PT"] {
-    background-image: url("icons/flags/pt.png");
-}
-select.withicons option[value="PW"] {
-    background-image: url("icons/flags/pw.png");
-}
-select.withicons option[value="PY"] {
-    background-image: url("icons/flags/py.png");
-}
-select.withicons option[value="QA"] {
-    background-image: url("icons/flags/qa.png");
-}
-select.withicons option[value="RE"] {
-    background-image: url("icons/flags/re.png");
-}
-select.withicons option[value="RO"] {
-    background-image: url("icons/flags/ro.png");
-}
-select.withicons option[value="RS"] {
-    background-image: url("icons/flags/rs.png");
-}
-select.withicons option[value="RU"] {
-    background-image: url("icons/flags/ru.png");
-}
-select.withicons option[value="RW"] {
-    background-image: url("icons/flags/rw.png");
-}
-select.withicons option[value="SA"] {
-    background-image: url("icons/flags/sa.png");
-}
-select.withicons option[value="SB"] {
-    background-image: url("icons/flags/sb.png");
-}
-select.withicons option[value="SC"] {
-    background-image: url("icons/flags/sc.png");
-}
-select.withicons option[value="SD"] {
-    background-image: url("icons/flags/sd.png");
-}
-select.withicons option[value="SE"] {
-    background-image: url("icons/flags/se.png");
-}
-select.withicons option[value="SG"] {
-    background-image: url("icons/flags/sg.png");
-}
-select.withicons option[value="SH"] {
-    background-image: url("icons/flags/sh.png");
-}
-select.withicons option[value="SI"] {
-    background-image: url("icons/flags/si.png");
-}
-select.withicons option[value="SJ"] {
-    background-image: url("icons/flags/sj.png");
-}
-select.withicons option[value="SK"] {
-    background-image: url("icons/flags/sk.png");
-}
-select.withicons option[value="SL"] {
-    background-image: url("icons/flags/sl.png");
-}
-select.withicons option[value="SM"] {
-    background-image: url("icons/flags/sm.png");
-}
-select.withicons option[value="SN"] {
-    background-image: url("icons/flags/sn.png");
-}
-select.withicons option[value="SO"] {
-    background-image: url("icons/flags/so.png");
-}
-select.withicons option[value="SR"] {
-    background-image: url("icons/flags/sr.png");
-}
-select.withicons option[value="ST"] {
-    background-image: url("icons/flags/st.png");
-}
-select.withicons option[value="SV"] {
-    background-image: url("icons/flags/sv.png");
-}
-select.withicons option[value="SY"] {
-    background-image: url("icons/flags/sy.png");
-}
-select.withicons option[value="SZ"] {
-    background-image: url("icons/flags/sz.png");
-}
-select.withicons option[value="TC"] {
-    background-image: url("icons/flags/tc.png");
-}
-select.withicons option[value="TD"] {
-    background-image: url("icons/flags/td.png");
-}
-select.withicons option[value="TF"] {
-    background-image: url("icons/flags/tf.png");
-}
-select.withicons option[value="TG"] {
-    background-image: url("icons/flags/tg.png");
-}
-select.withicons option[value="TH"] {
-    background-image: url("icons/flags/th.png");
-}
-select.withicons option[value="TJ"] {
-    background-image: url("icons/flags/tj.png");
-}
-select.withicons option[value="TK"] {
-    background-image: url("icons/flags/tk.png");
-}
-select.withicons option[value="TL"] {
-    background-image: url("icons/flags/tl.png");
-}
-select.withicons option[value="TM"] {
-    background-image: url("icons/flags/tm.png");
-}
-select.withicons option[value="TN"] {
-    background-image: url("icons/flags/tn.png");
-}
-select.withicons option[value="TO"] {
-    background-image: url("icons/flags/to.png");
-}
-select.withicons option[value="TR"] {
-    background-image: url("icons/flags/tr.png");
-}
-select.withicons option[value="TT"] {
-    background-image: url("icons/flags/tt.png");
-}
-select.withicons option[value="TV"] {
-    background-image: url("icons/flags/tv.png");
-}
-select.withicons option[value="TW"] {
-    background-image: url("icons/flags/tw.png");
-}
-select.withicons option[value="TZ"] {
-    background-image: url("icons/flags/tz.png");
-}
-select.withicons option[value="UA"] {
-    background-image: url("icons/flags/ua.png");
-}
-select.withicons option[value="UG"] {
-    background-image: url("icons/flags/ug.png");
-}
-select.withicons option[value="UM"] {
-    background-image: url("icons/flags/um.png");
-}
-select.withicons option[value="US"] {
-    background-image: url("icons/flags/us.png");
-}
-select.withicons option[value="UY"] {
-    background-image: url("icons/flags/uy.png");
-}
-select.withicons option[value="UZ"] {
-    background-image: url("icons/flags/uz.png");
-}
-select.withicons option[value="VA"] {
-    background-image: url("icons/flags/va.png");
-}
-select.withicons option[value="VC"] {
-    background-image: url("icons/flags/vc.png");
-}
-select.withicons option[value="VE"] {
-    background-image: url("icons/flags/ve.png");
-}
-select.withicons option[value="VG"] {
-    background-image: url("icons/flags/vg.png");
-}
-select.withicons option[value="VI"] {
-    background-image: url("icons/flags/vi.png");
-}
-select.withicons option[value="VN"] {
-    background-image: url("icons/flags/vn.png");
-}
-select.withicons option[value="VU"] {
-    background-image: url("icons/flags/vu.png");
-}
-select.withicons option[value="WF"] {
-    background-image: url("icons/flags/wf.png");
-}
-select.withicons option[value="WS"] {
-    background-image: url("icons/flags/ws.png");
-}
-select.withicons option[value="YE"] {
-    background-image: url("icons/flags/ye.png");
-}
-select.withicons option[value="YT"] {
-    background-image: url("icons/flags/yt.png");
-}
-select.withicons option[value="ZA"] {
-    background-image: url("icons/flags/za.png");
-}
-select.withicons option[value="ZM"] {
-    background-image: url("icons/flags/zm.png");
-}
-select.withicons option[value="ZW"] {
-    background-image: url("icons/flags/zw.png");
-}
-select.withicons option[value="ad"] {
-    background-image: url("icons/flags/ad.png");
-}
-select.withicons option[value="ae"] {
-    background-image: url("icons/flags/ae.png");
-}
-select.withicons option[value="af"] {
-    background-image: url("icons/flags/af.png");
-}
-select.withicons option[value="ag"] {
-    background-image: url("icons/flags/ag.png");
-}
-select.withicons option[value="ai"] {
-    background-image: url("icons/flags/ai.png");
-}
-select.withicons option[value="al"] {
-    background-image: url("icons/flags/al.png");
-}
-select.withicons option[value="am"] {
-    background-image: url("icons/flags/am.png");
-}
-select.withicons option[value="an"] {
-    background-image: url("icons/flags/an.png");
-}
-select.withicons option[value="ao"] {
-    background-image: url("icons/flags/ao.png");
-}
-select.withicons option[value="aq"] {
-    background-image: url("icons/flags/aq.png");
-}
-select.withicons option[value="ar"] {
-    background-image: url("icons/flags/ar.png");
-}
-select.withicons option[value="as"] {
-    background-image: url("icons/flags/as.png");
-}
-select.withicons option[value="at"] {
-    background-image: url("icons/flags/at.png");
-}
-select.withicons option[value="au"] {
-    background-image: url("icons/flags/au.png");
-}
-select.withicons option[value="aw"] {
-    background-image: url("icons/flags/aw.png");
-}
-select.withicons option[value="ax"] {
-    background-image: url("icons/flags/ax.png");
-}
-select.withicons option[value="az"] {
-    background-image: url("icons/flags/az.png");
-}
-select.withicons option[value="ba"] {
-    background-image: url("icons/flags/ba.png");
-}
-select.withicons option[value="bb"] {
-    background-image: url("icons/flags/bb.png");
-}
-select.withicons option[value="bd"] {
-    background-image: url("icons/flags/bd.png");
-}
-select.withicons option[value="be"] {
-    background-image: url("icons/flags/be.png");
-}
-select.withicons option[value="bf"] {
-    background-image: url("icons/flags/bf.png");
-}
-select.withicons option[value="bg"] {
-    background-image: url("icons/flags/bg.png");
-}
-select.withicons option[value="bh"] {
-    background-image: url("icons/flags/bh.png");
-}
-select.withicons option[value="bi"] {
-    background-image: url("icons/flags/bi.png");
-}
-select.withicons option[value="bj"] {
-    background-image: url("icons/flags/bj.png");
-}
-select.withicons option[value="bm"] {
-    background-image: url("icons/flags/bm.png");
-}
-select.withicons option[value="bn"] {
-    background-image: url("icons/flags/bn.png");
-}
-select.withicons option[value="bo"] {
-    background-image: url("icons/flags/bo.png");
-}
-select.withicons option[value="br"] {
-    background-image: url("icons/flags/br.png");
-}
-select.withicons option[value="bs"] {
-    background-image: url("icons/flags/bs.png");
-}
-select.withicons option[value="bt"] {
-    background-image: url("icons/flags/bt.png");
-}
-select.withicons option[value="bv"] {
-    background-image: url("icons/flags/bv.png");
-}
-select.withicons option[value="bw"] {
-    background-image: url("icons/flags/bw.png");
-}
-select.withicons option[value="by"] {
-    background-image: url("icons/flags/by.png");
-}
-select.withicons option[value="bz"] {
-    background-image: url("icons/flags/bz.png");
-}
-select.withicons option[value="ca"] {
-    background-image: url("icons/flags/ca.png");
-}
-select.withicons option[value="cc"] {
-    background-image: url("icons/flags/cc.png");
-}
-select.withicons option[value="cd"] {
-    background-image: url("icons/flags/cd.png");
-}
-select.withicons option[value="cf"] {
-    background-image: url("icons/flags/cf.png");
-}
-select.withicons option[value="cg"] {
-    background-image: url("icons/flags/cg.png");
-}
-select.withicons option[value="ch"] {
-    background-image: url("icons/flags/ch.png");
-}
-select.withicons option[value="ci"] {
-    background-image: url("icons/flags/ci.png");
-}
-select.withicons option[value="ck"] {
-    background-image: url("icons/flags/ck.png");
-}
-select.withicons option[value="cl"] {
-    background-image: url("icons/flags/cl.png");
-}
-select.withicons option[value="cm"] {
-    background-image: url("icons/flags/cm.png");
-}
-select.withicons option[value="cn"] {
-    background-image: url("icons/flags/cn.png");
-}
-select.withicons option[value="co"] {
-    background-image: url("icons/flags/co.png");
-}
-select.withicons option[value="cr"] {
-    background-image: url("icons/flags/cr.png");
-}
-select.withicons option[value="cs"] {
-    background-image: url("icons/flags/cs.png");
-}
-select.withicons option[value="cu"] {
-    background-image: url("icons/flags/cu.png");
-}
-select.withicons option[value="cv"] {
-    background-image: url("icons/flags/cv.png");
-}
-select.withicons option[value="cx"] {
-    background-image: url("icons/flags/cx.png");
-}
-select.withicons option[value="cy"] {
-    background-image: url("icons/flags/cy.png");
-}
-select.withicons option[value="cz"] {
-    background-image: url("icons/flags/cz.png");
-}
-select.withicons option[value="de"] {
-    background-image: url("icons/flags/de.png");
-}
-select.withicons option[value="dj"] {
-    background-image: url("icons/flags/dj.png");
-}
-select.withicons option[value="dk"] {
-    background-image: url("icons/flags/dk.png");
-}
-select.withicons option[value="dm"] {
-    background-image: url("icons/flags/dm.png");
-}
-select.withicons option[value="do"] {
-    background-image: url("icons/flags/do.png");
-}
-select.withicons option[value="dz"] {
-    background-image: url("icons/flags/dz.png");
-}
-select.withicons option[value="ec"] {
-    background-image: url("icons/flags/ec.png");
-}
-select.withicons option[value="ee"] {
-    background-image: url("icons/flags/ee.png");
-}
-select.withicons option[value="eg"] {
-    background-image: url("icons/flags/eg.png");
-}
-select.withicons option[value="eh"] {
-    background-image: url("icons/flags/eh.png");
-}
-select.withicons option[value="el"] {
-    background-image: url("icons/flags/gr.png");
-}
-select.withicons option[value="en"] {
-    background-image: url("icons/flags/gb.png");
-}
-select.withicons option[value="er"] {
-    background-image: url("icons/flags/er.png");
-}
-select.withicons option[value="es"] {
-    background-image: url("icons/flags/es.png");
-}
-select.withicons option[value="et"] {
-    background-image: url("icons/flags/et.png");
-}
-select.withicons option[value="fi"] {
-    background-image: url("icons/flags/fi.png");
-}
-select.withicons option[value="fj"] {
-    background-image: url("icons/flags/fj.png");
-}
-select.withicons option[value="fk"] {
-    background-image: url("icons/flags/fk.png");
-}
-select.withicons option[value="fm"] {
-    background-image: url("icons/flags/fm.png");
-}
-select.withicons option[value="fo"] {
-    background-image: url("icons/flags/fo.png");
-}
-select.withicons option[value="fr"] {
-    background-image: url("icons/flags/fr.png");
-}
-select.withicons option[value="ga"] {
-    background-image: url("icons/flags/ga.png");
-}
-select.withicons option[value="gb"] {
-    background-image: url("icons/flags/gb.png");
-}
-select.withicons option[value="gd"] {
-    background-image: url("icons/flags/gd.png");
-}
-select.withicons option[value="ge"] {
-    background-image: url("icons/flags/ge.png");
-}
-select.withicons option[value="gf"] {
-    background-image: url("icons/flags/gf.png");
-}
-select.withicons option[value="gh"] {
-    background-image: url("icons/flags/gh.png");
-}
-select.withicons option[value="gi"] {
-    background-image: url("icons/flags/gi.png");
-}
-select.withicons option[value="gl"] {
-    background-image: url("icons/flags/gl.png");
-}
-select.withicons option[value="gm"] {
-    background-image: url("icons/flags/gm.png");
-}
-select.withicons option[value="gn"] {
-    background-image: url("icons/flags/gn.png");
-}
-select.withicons option[value="gp"] {
-    background-image: url("icons/flags/gp.png");
-}
-select.withicons option[value="gq"] {
-    background-image: url("icons/flags/gq.png");
-}
-select.withicons option[value="gr"] {
-    background-image: url("icons/flags/gr.png");
-}
-select.withicons option[value="gs"] {
-    background-image: url("icons/flags/gs.png");
-}
-select.withicons option[value="gt"] {
-    background-image: url("icons/flags/gt.png");
-}
-select.withicons option[value="gu"] {
-    background-image: url("icons/flags/gu.png");
-}
-select.withicons option[value="gw"] {
-    background-image: url("icons/flags/gw.png");
-}
-select.withicons option[value="gy"] {
-    background-image: url("icons/flags/gy.png");
-}
-select.withicons option[value="hk"] {
-    background-image: url("icons/flags/hk.png");
-}
-select.withicons option[value="hm"] {
-    background-image: url("icons/flags/hm.png");
-}
-select.withicons option[value="hn"] {
-    background-image: url("icons/flags/hn.png");
-}
-select.withicons option[value="hr"] {
-    background-image: url("icons/flags/hr.png");
-}
-select.withicons option[value="ht"] {
-    background-image: url("icons/flags/ht.png");
-}
-select.withicons option[value="hu"] {
-    background-image: url("icons/flags/hu.png");
-}
-select.withicons option[value="id"] {
-    background-image: url("icons/flags/id.png");
-}
-select.withicons option[value="ie"] {
-    background-image: url("icons/flags/ie.png");
-}
-select.withicons option[value="il"] {
-    background-image: url("icons/flags/il.png");
-}
-select.withicons option[value="in"] {
-    background-image: url("icons/flags/in.png");
-}
-select.withicons option[value="io"] {
-    background-image: url("icons/flags/io.png");
-}
-select.withicons option[value="iq"] {
-    background-image: url("icons/flags/iq.png");
-}
-select.withicons option[value="ir"] {
-    background-image: url("icons/flags/ir.png");
-}
-select.withicons option[value="is"] {
-    background-image: url("icons/flags/is.png");
-}
-select.withicons option[value="it"] {
-    background-image: url("icons/flags/it.png");
-}
-select.withicons option[value="jm"] {
-    background-image: url("icons/flags/jm.png");
-}
-select.withicons option[value="jo"] {
-    background-image: url("icons/flags/jo.png");
-}
-select.withicons option[value="ja"] {
-    background-image: url("icons/flags/jp.png");
-}
-select.withicons option[value="jp"] {
-    background-image: url("icons/flags/jp.png");
-}
-select.withicons option[value="ke"] {
-    background-image: url("icons/flags/ke.png");
-}
-select.withicons option[value="kg"] {
-    background-image: url("icons/flags/kg.png");
-}
-select.withicons option[value="kh"] {
-    background-image: url("icons/flags/kh.png");
-}
-select.withicons option[value="ki"] {
-    background-image: url("icons/flags/ki.png");
-}
-select.withicons option[value="km"] {
-    background-image: url("icons/flags/km.png");
-}
-select.withicons option[value="kn"] {
-    background-image: url("icons/flags/kn.png");
-}
-select.withicons option[value="kp"] {
-    background-image: url("icons/flags/kp.png");
-}
-select.withicons option[value="kr"] {
-    background-image: url("icons/flags/kr.png");
-}
-select.withicons option[value="kw"] {
-    background-image: url("icons/flags/kw.png");
-}
-select.withicons option[value="ky"] {
-    background-image: url("icons/flags/ky.png");
-}
-select.withicons option[value="kz"] {
-    background-image: url("icons/flags/kz.png");
-}
-select.withicons option[value="la"] {
-    background-image: url("icons/flags/la.png");
-}
-select.withicons option[value="lb"] {
-    background-image: url("icons/flags/lb.png");
-}
-select.withicons option[value="lc"] {
-    background-image: url("icons/flags/lc.png");
-}
-select.withicons option[value="li"] {
-    background-image: url("icons/flags/li.png");
-}
-select.withicons option[value="lk"] {
-    background-image: url("icons/flags/lk.png");
-}
-select.withicons option[value="lr"] {
-    background-image: url("icons/flags/lr.png");
-}
-select.withicons option[value="ls"] {
-    background-image: url("icons/flags/ls.png");
-}
-select.withicons option[value="lt"] {
-    background-image: url("icons/flags/lt.png");
-}
-select.withicons option[value="lu"] {
-    background-image: url("icons/flags/lu.png");
-}
-select.withicons option[value="lv"] {
-    background-image: url("icons/flags/lv.png");
-}
-select.withicons option[value="ly"] {
-    background-image: url("icons/flags/ly.png");
-}
-select.withicons option[value="ma"] {
-    background-image: url("icons/flags/ma.png");
-}
-select.withicons option[value="mc"] {
-    background-image: url("icons/flags/mc.png");
-}
-select.withicons option[value="md"] {
-    background-image: url("icons/flags/md.png");
-}
-select.withicons option[value="me"] {
-    background-image: url("icons/flags/me.png");
-}
-select.withicons option[value="mg"] {
-    background-image: url("icons/flags/mg.png");
-}
-select.withicons option[value="mh"] {
-    background-image: url("icons/flags/mh.png");
-}
-select.withicons option[value="mk"] {
-    background-image: url("icons/flags/mk.png");
-}
-select.withicons option[value="ml"] {
-    background-image: url("icons/flags/ml.png");
-}
-select.withicons option[value="mm"] {
-    background-image: url("icons/flags/mm.png");
-}
-select.withicons option[value="mn"] {
-    background-image: url("icons/flags/mn.png");
-}
-select.withicons option[value="mo"] {
-    background-image: url("icons/flags/mo.png");
-}
-select.withicons option[value="mp"] {
-    background-image: url("icons/flags/mp.png");
-}
-select.withicons option[value="mq"] {
-    background-image: url("icons/flags/mq.png");
-}
-select.withicons option[value="mr"] {
-    background-image: url("icons/flags/mr.png");
-}
-select.withicons option[value="ms"] {
-    background-image: url("icons/flags/ms.png");
-}
-select.withicons option[value="mt"] {
-    background-image: url("icons/flags/mt.png");
-}
-select.withicons option[value="mu"] {
-    background-image: url("icons/flags/mu.png");
-}
-select.withicons option[value="mv"] {
-    background-image: url("icons/flags/mv.png");
-}
-select.withicons option[value="mw"] {
-    background-image: url("icons/flags/mw.png");
-}
-select.withicons option[value="mx"] {
-    background-image: url("icons/flags/mx.png");
-}
-select.withicons option[value="my"] {
-    background-image: url("icons/flags/my.png");
-}
-select.withicons option[value="mz"] {
-    background-image: url("icons/flags/mz.png");
-}
-select.withicons option[value="na"] {
-    background-image: url("icons/flags/na.png");
-}
-select.withicons option[value="nc"] {
-    background-image: url("icons/flags/nc.png");
-}
-select.withicons option[value="ne"] {
-    background-image: url("icons/flags/ne.png");
-}
-select.withicons option[value="nf"] {
-    background-image: url("icons/flags/nf.png");
-}
-select.withicons option[value="ng"] {
-    background-image: url("icons/flags/ng.png");
-}
-select.withicons option[value="ni"] {
-    background-image: url("icons/flags/ni.png");
-}
-select.withicons option[value="nl"] {
-    background-image: url("icons/flags/nl.png");
-}
-select.withicons option[value="no"] {
-    background-image: url("icons/flags/no.png");
-}
-select.withicons option[value="np"] {
-    background-image: url("icons/flags/np.png");
-}
-select.withicons option[value="nr"] {
-    background-image: url("icons/flags/nr.png");
-}
-select.withicons option[value="nu"] {
-    background-image: url("icons/flags/nu.png");
-}
-select.withicons option[value="nz"] {
-    background-image: url("icons/flags/nz.png");
-}
-select.withicons option[value="om"] {
-    background-image: url("icons/flags/om.png");
-}
-select.withicons option[value="pa"] {
-    background-image: url("icons/flags/pa.png");
-}
-select.withicons option[value="pe"] {
-    background-image: url("icons/flags/pe.png");
-}
-select.withicons option[value="pf"] {
-    background-image: url("icons/flags/pf.png");
-}
-select.withicons option[value="pg"] {
-    background-image: url("icons/flags/pg.png");
-}
-select.withicons option[value="ph"] {
-    background-image: url("icons/flags/ph.png");
-}
-select.withicons option[value="pk"] {
-    background-image: url("icons/flags/pk.png");
-}
-select.withicons option[value="pl"] {
-    background-image: url("icons/flags/pl.png");
-}
-select.withicons option[value="pm"] {
-    background-image: url("icons/flags/pm.png");
-}
-select.withicons option[value="pn"] {
-    background-image: url("icons/flags/pn.png");
-}
-select.withicons option[value="pr"] {
-    background-image: url("icons/flags/pr.png");
-}
-select.withicons option[value="ps"] {
-    background-image: url("icons/flags/ps.png");
-}
-select.withicons option[value="pt"] {
-    background-image: url("icons/flags/pt.png");
-}
-select.withicons option[value="pw"] {
-    background-image: url("icons/flags/pw.png");
-}
-select.withicons option[value="py"] {
-    background-image: url("icons/flags/py.png");
-}
-select.withicons option[value="qa"] {
-    background-image: url("icons/flags/qa.png");
-}
-select.withicons option[value="re"] {
-    background-image: url("icons/flags/re.png");
-}
-select.withicons option[value="ro"] {
-    background-image: url("icons/flags/ro.png");
-}
-select.withicons option[value="rs"] {
-    background-image: url("icons/flags/rs.png");
-}
-select.withicons option[value="ru"] {
-    background-image: url("icons/flags/ru.png");
-}
-select.withicons option[value="rw"] {
-    background-image: url("icons/flags/rw.png");
-}
-select.withicons option[value="sa"] {
-    background-image: url("icons/flags/sa.png");
-}
-select.withicons option[value="sb"] {
-    background-image: url("icons/flags/sb.png");
-}
-select.withicons option[value="sc"] {
-    background-image: url("icons/flags/sc.png");
-}
-select.withicons option[value="sd"] {
-    background-image: url("icons/flags/sd.png");
-}
-select.withicons option[value="se"] {
-    background-image: url("icons/flags/se.png");
-}
-select.withicons option[value="sg"] {
-    background-image: url("icons/flags/sg.png");
-}
-select.withicons option[value="sh"] {
-    background-image: url("icons/flags/sh.png");
-}
-select.withicons option[value="si"] {
-    background-image: url("icons/flags/si.png");
-}
-select.withicons option[value="sj"] {
-    background-image: url("icons/flags/sj.png");
-}
-select.withicons option[value="sk"] {
-    background-image: url("icons/flags/sk.png");
-}
-select.withicons option[value="sl"] {
-    background-image: url("icons/flags/sl.png");
-}
-select.withicons option[value="sm"] {
-    background-image: url("icons/flags/sm.png");
-}
-select.withicons option[value="sn"] {
-    background-image: url("icons/flags/sn.png");
-}
-select.withicons option[value="so"] {
-    background-image: url("icons/flags/so.png");
-}
-select.withicons option[value="sr"] {
-    background-image: url("icons/flags/sr.png");
-}
-select.withicons option[value="st"] {
-    background-image: url("icons/flags/st.png");
-}
-select.withicons option[value="sv"] {
-    background-image: url("icons/flags/sv.png");
-}
-select.withicons option[value="sy"] {
-    background-image: url("icons/flags/sy.png");
-}
-select.withicons option[value="sz"] {
-    background-image: url("icons/flags/sz.png");
-}
-select.withicons option[value="tc"] {
-    background-image: url("icons/flags/tc.png");
-}
-select.withicons option[value="td"] {
-    background-image: url("icons/flags/td.png");
-}
-select.withicons option[value="tf"] {
-    background-image: url("icons/flags/tf.png");
-}
-select.withicons option[value="tg"] {
-    background-image: url("icons/flags/tg.png");
-}
-select.withicons option[value="th"] {
-    background-image: url("icons/flags/th.png");
-}
-select.withicons option[value="tj"] {
-    background-image: url("icons/flags/tj.png");
-}
-select.withicons option[value="tk"] {
-    background-image: url("icons/flags/tk.png");
-}
-select.withicons option[value="tl"] {
-    background-image: url("icons/flags/tl.png");
-}
-select.withicons option[value="tm"] {
-    background-image: url("icons/flags/tm.png");
-}
-select.withicons option[value="tn"] {
-    background-image: url("icons/flags/tn.png");
-}
-select.withicons option[value="to"] {
-    background-image: url("icons/flags/to.png");
-}
-select.withicons option[value="tr"] {
-    background-image: url("icons/flags/tr.png");
-}
-select.withicons option[value="tt"] {
-    background-image: url("icons/flags/tt.png");
-}
-select.withicons option[value="tv"] {
-    background-image: url("icons/flags/tv.png");
-}
-select.withicons option[value="tw"] {
-    background-image: url("icons/flags/tw.png");
-}
-select.withicons option[value="tz"] {
-    background-image: url("icons/flags/tz.png");
-}
-select.withicons option[value="ua"] {
-    background-image: url("icons/flags/ua.png");
-}
-select.withicons option[value="ug"] {
-    background-image: url("icons/flags/ug.png");
-}
-select.withicons option[value="um"] {
-    background-image: url("icons/flags/um.png");
-}
-select.withicons option[value="us"] {
-    background-image: url("icons/flags/us.png");
-}
-select.withicons option[value="uy"] {
-    background-image: url("icons/flags/uy.png");
-}
-select.withicons option[value="uz"] {
-    background-image: url("icons/flags/uz.png");
-}
-select.withicons option[value="va"] {
-    background-image: url("icons/flags/va.png");
-}
-select.withicons option[value="vc"] {
-    background-image: url("icons/flags/vc.png");
-}
-select.withicons option[value="ve"] {
-    background-image: url("icons/flags/ve.png");
-}
-select.withicons option[value="vg"] {
-    background-image: url("icons/flags/vg.png");
-}
-select.withicons option[value="vi"] {
-    background-image: url("icons/flags/vi.png");
-}
-select.withicons option[value="vn"] {
-    background-image: url("icons/flags/vn.png");
-}
-select.withicons option[value="vu"] {
-    background-image: url("icons/flags/vu.png");
-}
-select.withicons option[value="wf"] {
-    background-image: url("icons/flags/wf.png");
-}
-select.withicons option[value="ws"] {
-    background-image: url("icons/flags/ws.png");
-}
-select.withicons option[value="ye"] {
-    background-image: url("icons/flags/ye.png");
-}
-select.withicons option[value="yt"] {
-    background-image: url("icons/flags/yt.png");
-}
-select.withicons option[value="za"] {
-    background-image: url("icons/flags/za.png");
-}
-select.withicons option[value="zm"] {
-    background-image: url("icons/flags/zm.png");
-}
-select.withicons option[value="zw"] {
-    background-image: url("icons/flags/zw.png");
-}
+
+select.flags option {
+    background-image: url("icons/flags_sprite.png");
+    background-repeat: no-repeat;
+    padding: 1px 0 1px 30px;
+}
+
+select.flags option[value=EL] {background-position:0 -1475px}
+select.flags option[value=AD], select.flags option[value=ad] {background-position:0 -1px}
+select.flags option[value=AE], select.flags option[value=ae] {background-position:0 -23px}
+select.flags option[value=AF], select.flags option[value=af] {background-position:0 -45px}
+select.flags option[value=AG], select.flags option[value=ag] {background-position:0 -67px}
+select.flags option[value=AI], select.flags option[value=ai] {background-position:0 -89px}
+select.flags option[value=AL], select.flags option[value=al] {background-position:0 -111px}
+select.flags option[value=AM], select.flags option[value=am] {background-position:0 -133px}
+select.flags option[value=AN], select.flags option[value=an] {background-position:0 -155px}
+select.flags option[value=AO], select.flags option[value=ao] {background-position:0 -177px}
+select.flags option[value=AQ], select.flags option[value=aq] {background-position:0 -199px}
+select.flags option[value=AR], select.flags option[value=ar] {background-position:0 -221px}
+select.flags option[value=AS], select.flags option[value=as] {background-position:0 -243px}
+select.flags option[value=AT], select.flags option[value=at] {background-position:0 -265px}
+select.flags option[value=AU], select.flags option[value=au] {background-position:0 -287px}
+select.flags option[value=AW], select.flags option[value=aw] {background-position:0 -309px}
+select.flags option[value=AX], select.flags option[value=ax] {background-position:0 -331px}
+select.flags option[value=AZ], select.flags option[value=az] {background-position:0 -353px}
+select.flags option[value=BA], select.flags option[value=ba] {background-position:0 -375px}
+select.flags option[value=BB], select.flags option[value=bb] {background-position:0 -397px}
+select.flags option[value=BD], select.flags option[value=bd] {background-position:0 -419px}
+select.flags option[value=BE], select.flags option[value=be] {background-position:0 -441px}
+select.flags option[value=BF], select.flags option[value=bf] {background-position:0 -463px}
+select.flags option[value=BG], select.flags option[value=bg] {background-position:0 -485px}
+select.flags option[value=BH], select.flags option[value=bh] {background-position:0 -507px}
+select.flags option[value=BI], select.flags option[value=bi] {background-position:0 -529px}
+select.flags option[value=BJ], select.flags option[value=bj] {background-position:0 -551px}
+select.flags option[value=BM], select.flags option[value=bm] {background-position:0 -573px}
+select.flags option[value=BN], select.flags option[value=bn] {background-position:0 -595px}
+select.flags option[value=BO], select.flags option[value=bo] {background-position:0 -617px}
+select.flags option[value=BR], select.flags option[value=br] {background-position:0 -639px}
+select.flags option[value=BS], select.flags option[value=bs] {background-position:0 -661px}
+select.flags option[value=BT], select.flags option[value=bt] {background-position:0 -683px}
+select.flags option[value=BV], select.flags option[value=bv] {background-position:0 -705px}
+select.flags option[value=BW], select.flags option[value=bw] {background-position:0 -727px}
+select.flags option[value=BY], select.flags option[value=by] {background-position:0 -749px}
+select.flags option[value=BZ], select.flags option[value=bz] {background-position:0 -771px}
+select.flags option[value=CA], select.flags option[value=ca] {background-position:0 -793px}
+select.flags option[value=CC], select.flags option[value=cc] {background-position:0 -837px}
+select.flags option[value=CD], select.flags option[value=cd] {background-position:0 -859px}
+select.flags option[value=CF], select.flags option[value=cf] {background-position:0 -881px}
+select.flags option[value=CG], select.flags option[value=cg] {background-position:0 -903px}
+select.flags option[value=CH], select.flags option[value=ch] {background-position:0 -925px}
+select.flags option[value=CI], select.flags option[value=ci] {background-position:0 -947px}
+select.flags option[value=CK], select.flags option[value=ck] {background-position:0 -969px}
+select.flags option[value=CL], select.flags option[value=cl] {background-position:0 -991px}
+select.flags option[value=CM], select.flags option[value=cm] {background-position:0 -1013px}
+select.flags option[value=CN], select.flags option[value=cn] {background-position:0 -1035px}
+select.flags option[value=CO], select.flags option[value=co] {background-position:0 -1057px}
+select.flags option[value=CR], select.flags option[value=cr] {background-position:0 -1079px}
+select.flags option[value=CS], select.flags option[value=cs] {background-position:0 -1101px}
+select.flags option[value=CU], select.flags option[value=cu] {background-position:0 -1123px}
+select.flags option[value=CV], select.flags option[value=cv] {background-position:0 -1145px}
+select.flags option[value=CX], select.flags option[value=cx] {background-position:0 -1167px}
+select.flags option[value=CY], select.flags option[value=cy] {background-position:0 -1189px}
+select.flags option[value=CZ], select.flags option[value=cz] {background-position:0 -1211px}
+select.flags option[value=DE], select.flags option[value=de] {background-position:0 -1233px}
+select.flags option[value=DJ], select.flags option[value=dj] {background-position:0 -1255px}
+select.flags option[value=DK], select.flags option[value=dk] {background-position:0 -1277px}
+select.flags option[value=DM], select.flags option[value=dm] {background-position:0 -1299px}
+select.flags option[value=DO], select.flags option[value=do] {background-position:0 -1321px}
+select.flags option[value=DZ], select.flags option[value=dz] {background-position:0 -1343px}
+select.flags option[value=EC], select.flags option[value=ec] {background-position:0 -1365px}
+select.flags option[value=EE], select.flags option[value=ee] {background-position:0 -1387px}
+select.flags option[value=EG], select.flags option[value=eg] {background-position:0 -1409px}
+select.flags option[value=EH], select.flags option[value=eh] {background-position:0 -1431px}
+select.flags option[value=ER], select.flags option[value=er] {background-position:0 -1497px}
+select.flags option[value=ES], select.flags option[value=ET], select.flags option[value=es], select.flags option[value=et] {background-position:0 -1519px}
+select.flags option[value=FI], select.flags option[value=fi] {background-position:0 -1585px}
+select.flags option[value=FJ], select.flags option[value=fj] {background-position:0 -1607px}
+select.flags option[value=FK], select.flags option[value=fk] {background-position:0 -1629px}
+select.flags option[value=FM], select.flags option[value=fm] {background-position:0 -1651px}
+select.flags option[value=FO], select.flags option[value=fo] {background-position:0 -1673px}
+select.flags option[value=FR], select.flags option[value=fr] {background-position:0 -1695px}
+select.flags option[value=GA], select.flags option[value=ga] {background-position:0 -1717px}
+select.flags option[value=GB], select.flags option[value=en], select.flags option[value=gb] {background-position:0 -1739px}
+select.flags option[value=GD], select.flags option[value=gd] {background-position:0 -1761px}
+select.flags option[value=GE], select.flags option[value=ge] {background-position:0 -1783px}
+select.flags option[value=GF], select.flags option[value=gf] {background-position:0 -1805px}
+select.flags option[value=GH], select.flags option[value=gh] {background-position:0 -1827px}
+select.flags option[value=GI], select.flags option[value=gi] {background-position:0 -1849px}
+select.flags option[value=GL], select.flags option[value=gl] {background-position:0 -1871px}
+select.flags option[value=GM], select.flags option[value=gm] {background-position:0 -1893px}
+select.flags option[value=GN], select.flags option[value=gn] {background-position:0 -1915px}
+select.flags option[value=GP], select.flags option[value=gp] {background-position:0 -1937px}
+select.flags option[value=GQ], select.flags option[value=gq] {background-position:0 -1959px}
+select.flags option[value=GR], select.flags option[value=el], select.flags option[value=gr] {background-position:0 -1981px}
+select.flags option[value=GS], select.flags option[value=gs] {background-position:0 -2003px}
+select.flags option[value=GT], select.flags option[value=gt] {background-position:0 -2025px}
+select.flags option[value=GU], select.flags option[value=gu] {background-position:0 -2047px}
+select.flags option[value=GW], select.flags option[value=gw] {background-position:0 -2069px}
+select.flags option[value=GY], select.flags option[value=gy] {background-position:0 -2091px}
+select.flags option[value=HK], select.flags option[value=hk] {background-position:0 -2113px}
+select.flags option[value=HM], select.flags option[value=hm] {background-position:0 -2135px}
+select.flags option[value=HN], select.flags option[value=hn] {background-position:0 -2157px}
+select.flags option[value=HR], select.flags option[value=hr] {background-position:0 -2179px}
+select.flags option[value=HT], select.flags option[value=ht] {background-position:0 -2201px}
+select.flags option[value=HU], select.flags option[value=hu] {background-position:0 -2223px}
+select.flags option[value=ID], select.flags option[value=id] {background-position:0 -2245px}
+select.flags option[value=IE], select.flags option[value=ie] {background-position:0 -2267px}
+select.flags option[value=IL], select.flags option[value=il] {background-position:0 -2289px}
+select.flags option[value=IN], select.flags option[value=in] {background-position:0 -2311px}
+select.flags option[value=IO], select.flags option[value=io] {background-position:0 -2333px}
+select.flags option[value=IQ], select.flags option[value=iq] {background-position:0 -2355px}
+select.flags option[value=IR], select.flags option[value=ir] {background-position:0 -2377px}
+select.flags option[value=IS], select.flags option[value=is] {background-position:0 -2399px}
+select.flags option[value=IT], select.flags option[value=it] {background-position:0 -2421px}
+select.flags option[value=JM], select.flags option[value=jm] {background-position:0 -2443px}
+select.flags option[value=JO], select.flags option[value=jo] {background-position:0 -2465px}
+select.flags option[value=JP], select.flags option[value=ja], select.flags option[value=jp] {background-position:0 -2487px}
+select.flags option[value=KE], select.flags option[value=ke] {background-position:0 -2509px}
+select.flags option[value=KG], select.flags option[value=kg] {background-position:0 -2531px}
+select.flags option[value=KH], select.flags option[value=kh] {background-position:0 -2553px}
+select.flags option[value=KI], select.flags option[value=ki] {background-position:0 -2575px}
+select.flags option[value=KM], select.flags option[value=km] {background-position:0 -2597px}
+select.flags option[value=KN], select.flags option[value=kn] {background-position:0 -2619px}
+select.flags option[value=KP], select.flags option[value=kp] {background-position:0 -2641px}
+select.flags option[value=KR], select.flags option[value=kr] {background-position:0 -2663px}
+select.flags option[value=KW], select.flags option[value=kw] {background-position:0 -2685px}
+select.flags option[value=KY], select.flags option[value=ky] {background-position:0 -2707px}
+select.flags option[value=KZ], select.flags option[value=kz] {background-position:0 -2729px}
+select.flags option[value=LA], select.flags option[value=la] {background-position:0 -2751px}
+select.flags option[value=LB], select.flags option[value=lb] {background-position:0 -2773px}
+select.flags option[value=LC], select.flags option[value=lc] {background-position:0 -2795px}
+select.flags option[value=LI], select.flags option[value=li] {background-position:0 -2817px}
+select.flags option[value=LK], select.flags option[value=lk] {background-position:0 -2839px}
+select.flags option[value=LR], select.flags option[value=lr] {background-position:0 -2861px}
+select.flags option[value=LS], select.flags option[value=ls] {background-position:0 -2883px}
+select.flags option[value=LT], select.flags option[value=lt] {background-position:0 -2905px}
+select.flags option[value=LU], select.flags option[value=lu] {background-position:0 -2927px}
+select.flags option[value=LV], select.flags option[value=lv] {background-position:0 -2949px}
+select.flags option[value=LY], select.flags option[value=ly] {background-position:0 -2971px}
+select.flags option[value=MA], select.flags option[value=ma] {background-position:0 -2993px}
+select.flags option[value=MC], select.flags option[value=mc] {background-position:0 -3015px}
+select.flags option[value=MD], select.flags option[value=md] {background-position:0 -3037px}
+select.flags option[value=ME], select.flags option[value=me] {background-position:0 -3059px}
+select.flags option[value=MG], select.flags option[value=mg] {background-position:0 -3081px}
+select.flags option[value=MH], select.flags option[value=mh] {background-position:0 -3103px}
+select.flags option[value=MK], select.flags option[value=mk] {background-position:0 -3125px}
+select.flags option[value=ML], select.flags option[value=ml] {background-position:0 -3147px}
+select.flags option[value=MM], select.flags option[value=mm] {background-position:0 -3169px}
+select.flags option[value=MN], select.flags option[value=mn] {background-position:0 -3191px}
+select.flags option[value=MO], select.flags option[value=mo] {background-position:0 -3213px}
+select.flags option[value=MP], select.flags option[value=mp] {background-position:0 -3235px}
+select.flags option[value=MQ], select.flags option[value=mq] {background-position:0 -3257px}
+select.flags option[value=MR], select.flags option[value=mr] {background-position:0 -3279px}
+select.flags option[value=MS], select.flags option[value=ms] {background-position:0 -3301px}
+select.flags option[value=MT], select.flags option[value=mt] {background-position:0 -3323px}
+select.flags option[value=MU], select.flags option[value=mu] {background-position:0 -3345px}
+select.flags option[value=MV], select.flags option[value=mv] {background-position:0 -3367px}
+select.flags option[value=MW], select.flags option[value=mw] {background-position:0 -3389px}
+select.flags option[value=MX], select.flags option[value=mx] {background-position:0 -3411px}
+select.flags option[value=MY], select.flags option[value=my] {background-position:0 -3433px}
+select.flags option[value=MZ], select.flags option[value=mz] {background-position:0 -3455px}
+select.flags option[value=NA], select.flags option[value=na] {background-position:0 -3477px}
+select.flags option[value=NC], select.flags option[value=nc] {background-position:0 -3499px}
+select.flags option[value=NE], select.flags option[value=ne] {background-position:0 -3521px}
+select.flags option[value=NF], select.flags option[value=nf] {background-position:0 -3543px}
+select.flags option[value=NG], select.flags option[value=ng] {background-position:0 -3565px}
+select.flags option[value=NI], select.flags option[value=ni] {background-position:0 -3587px}
+select.flags option[value=NL], select.flags option[value=nl] {background-position:0 -3609px}
+select.flags option[value=NO], select.flags option[value=no] {background-position:0 -3631px}
+select.flags option[value=NP], select.flags option[value=np] {background-position:0 -3653px}
+select.flags option[value=NR], select.flags option[value=nr] {background-position:0 -3675px}
+select.flags option[value=NU], select.flags option[value=nu] {background-position:0 -3697px}
+select.flags option[value=NZ], select.flags option[value=nz] {background-position:0 -3719px}
+select.flags option[value=OM], select.flags option[value=om] {background-position:0 -3741px}
+select.flags option[value=PA], select.flags option[value=pa] {background-position:0 -3763px}
+select.flags option[value=PE], select.flags option[value=pe] {background-position:0 -3785px}
+select.flags option[value=PF], select.flags option[value=pf] {background-position:0 -3807px}
+select.flags option[value=PG], select.flags option[value=pg] {background-position:0 -3829px}
+select.flags option[value=PH], select.flags option[value=ph] {background-position:0 -3851px}
+select.flags option[value=PK], select.flags option[value=pk] {background-position:0 -3873px}
+select.flags option[value=PL], select.flags option[value=pl] {background-position:0 -3895px}
+select.flags option[value=PM], select.flags option[value=pm] {background-position:0 -3917px}
+select.flags option[value=PN], select.flags option[value=pn] {background-position:0 -3939px}
+select.flags option[value=PR], select.flags option[value=pr] {background-position:0 -3961px}
+select.flags option[value=PS], select.flags option[value=ps] {background-position:0 -3983px}
+select.flags option[value=PT], select.flags option[value=pt] {background-position:0 -4005px}
+select.flags option[value=PW], select.flags option[value=pw] {background-position:0 -4027px}
+select.flags option[value=PY], select.flags option[value=py] {background-position:0 -4049px}
+select.flags option[value=QA], select.flags option[value=qa] {background-position:0 -4071px}
+select.flags option[value=RE], select.flags option[value=re] {background-position:0 -4093px}
+select.flags option[value=RO], select.flags option[value=ro] {background-position:0 -4115px}
+select.flags option[value=RS], select.flags option[value=rs] {background-position:0 -4137px}
+select.flags option[value=RU], select.flags option[value=ru] {background-position:0 -4159px}
+select.flags option[value=RW], select.flags option[value=rw] {background-position:0 -4181px}
+select.flags option[value=SA], select.flags option[value=sa] {background-position:0 -4203px}
+select.flags option[value=SB], select.flags option[value=sb] {background-position:0 -4225px}
+select.flags option[value=SC], select.flags option[value=sc] {background-position:0 -4247px}
+select.flags option[value=SD], select.flags option[value=sd] {background-position:0 -4291px}
+select.flags option[value=SE], select.flags option[value=se] {background-position:0 -4313px}
+select.flags option[value=SG], select.flags option[value=sg] {background-position:0 -4335px}
+select.flags option[value=SH], select.flags option[value=sh] {background-position:0 -4357px}
+select.flags option[value=SI], select.flags option[value=si] {background-position:0 -4379px}
+select.flags option[value=SJ], select.flags option[value=sj] {background-position:0 -4401px}
+select.flags option[value=SK], select.flags option[value=sk] {background-position:0 -4423px}
+select.flags option[value=SL], select.flags option[value=sl] {background-position:0 -4445px}
+select.flags option[value=SM], select.flags option[value=sm] {background-position:0 -4467px}
+select.flags option[value=SN], select.flags option[value=sn] {background-position:0 -4489px}
+select.flags option[value=SO], select.flags option[value=so] {background-position:0 -4511px}
+select.flags option[value=SR], select.flags option[value=sr] {background-position:0 -4533px}
+select.flags option[value=ST], select.flags option[value=st] {background-position:0 -4555px}
+select.flags option[value=SV], select.flags option[value=sv] {background-position:0 -4577px}
+select.flags option[value=SY], select.flags option[value=sy] {background-position:0 -4599px}
+select.flags option[value=SZ], select.flags option[value=sz] {background-position:0 -4621px}
+select.flags option[value=TC], select.flags option[value=tc] {background-position:0 -4643px}
+select.flags option[value=TD], select.flags option[value=td] {background-position:0 -4665px}
+select.flags option[value=TF], select.flags option[value=tf] {background-position:0 -4687px}
+select.flags option[value=TG], select.flags option[value=tg] {background-position:0 -4709px}
+select.flags option[value=TH], select.flags option[value=th] {background-position:0 -4731px}
+select.flags option[value=TJ], select.flags option[value=tj] {background-position:0 -4753px}
+select.flags option[value=TK], select.flags option[value=tk] {background-position:0 -4775px}
+select.flags option[value=TL], select.flags option[value=tl] {background-position:0 -4797px}
+select.flags option[value=TM], select.flags option[value=tm] {background-position:0 -4819px}
+select.flags option[value=TN], select.flags option[value=tn] {background-position:0 -4841px}
+select.flags option[value=TO], select.flags option[value=to] {background-position:0 -4863px}
+select.flags option[value=TR], select.flags option[value=tr] {background-position:0 -4885px}
+select.flags option[value=TT], select.flags option[value=tt] {background-position:0 -4907px}
+select.flags option[value=TV], select.flags option[value=tv] {background-position:0 -4929px}
+select.flags option[value=TW], select.flags option[value=tw] {background-position:0 -4951px}
+select.flags option[value=TZ], select.flags option[value=tz] {background-position:0 -4973px}
+select.flags option[value=UA], select.flags option[value=ua] {background-position:0 -4995px}
+select.flags option[value=UG], select.flags option[value=ug] {background-position:0 -5017px}
+select.flags option[value=UM], select.flags option[value=um] {background-position:0 -5039px}
+select.flags option[value=US], select.flags option[value=us] {background-position:0 -5061px}
+select.flags option[value=UY], select.flags option[value=uy] {background-position:0 -5083px}
+select.flags option[value=UZ], select.flags option[value=uz] {background-position:0 -5105px}
+select.flags option[value=VA], select.flags option[value=va] {background-position:0 -5127px}
+select.flags option[value=VC], select.flags option[value=vc] {background-position:0 -5149px}
+select.flags option[value=VE], select.flags option[value=ve] {background-position:0 -5171px}
+select.flags option[value=VG], select.flags option[value=vg] {background-position:0 -5193px}
+select.flags option[value=VI], select.flags option[value=vi] {background-position:0 -5215px}
+select.flags option[value=VN], select.flags option[value=vn] {background-position:0 -5237px}
+select.flags option[value=VU], select.flags option[value=vu] {background-position:0 -5259px}
+select.flags option[value=WF], select.flags option[value=wf] {background-position:0 -5303px}
+select.flags option[value=WS], select.flags option[value=ws] {background-position:0 -5325px}
+select.flags option[value=YE], select.flags option[value=ye] {background-position:0 -5347px}
+select.flags option[value=YT], select.flags option[value=yt] {background-position:0 -5369px}
+select.flags option[value=ZA], select.flags option[value=za] {background-position:0 -5391px}
+select.flags option[value=ZM], select.flags option[value=zm] {background-position:0 -5413px}
+select.flags option[value=ZW], select.flags option[value=zw] {background-position:0 -5435px}
