@@ -12,44 +12,60 @@
         <script type="text/javascript" src="js/jquery-ui-1.8.16.custom.min.js"></script>
         <script type="text/javascript" src="js/scrigo.js.php"></script>
         <script type="text/javascript" src="js/uni-form/uni-form.jquery.js"></script>
+        <script type="text/javascript" src="js/jquery.ispconfigsearch.js"></script>
+        <script type="text/javascript" src="js/jquery.tipsy.js"></script>
         <script language="JavaScript" type="text/javascript">
-//                        var is_chrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
-//                        if(!is_chrome && getInternetExplorerVersion() > 8.0) {
-//                            var style = document.createElement('style');
-//                            style.innerHTML = '#page_margins { min-width: 980px; max-width: 80%; background: #fff; display: table;}';
-//                            document.getElementsByTagName("head")[0].appendChild(style);
-//                        }
-
             jQuery(document).ready(function() {
                 loadInitContent();
-
+                
                 $("#pageForm").submit(function(e){
                     //Prevent form submit: e.preventDefault() in lists
                     if ($(".panel #Filter").length > 0) {
                         e.preventDefault();
                     }
                 });
+                
+                jQuery('.subsectiontoggle').live("click", function(){
+                    jQuery(this).children().toggleClass('showing').end().next().slideToggle();
+                });
+                
+                jQuery('#globalsearch').ispconfigSearch({
+                    dataSrc: '/dashboard/ajax_get_json.php?type=globalsearch',
+                    resultsLimit: '$ <tmpl_var name="globalsearch_resultslimit_of_txt"> % <tmpl_var name="globalsearch_resultslimit_results_txt">',
+                    noResultsText: '<tmpl_var name="globalsearch_noresults_text_txt">',
+                    noResultsLimit: '<tmpl_var name="globalsearch_noresults_limit_txt">',
+                    searchFieldWatermark: '<tmpl_var name="globalsearch_searchfield_watermark_txt">'
+                });
+                
+                jQuery('.ttip').tipsy({live: true, gravity: 'ne', html: true});
             });
-
-
+            
+            
             jQuery(document).bind("change", function(event) {
-                if ($(".panel #Filter").length > 0 && event.target.localName == 'select') {
-                    $(".panel #Filter").attr("onsubmit",$(".panel #Filter").attr("onclick")).submit();
+                if (jQuery(".panel #Filter").length > 0 && event.target.localName == 'select') {
+                    jQuery(".panel #Filter").trigger('click');
                 }
             });
-
-            //Use jQuery submit with kespress Enter in panel filterbar
+            
             jQuery(document).bind("keypress", function(event) {
-                if (event.which == '13' && $(".panel #Filter").length > 0) {
-                    $(".panel #Filter").attr("onsubmit",$(".panel #Filter").attr("onclick")).submit();
+                //Use jQuery submit with keypress Enter in panel filterbar
+                if (event.which == '13' && jQuery(".panel #Filter").length > 0) {
+                    jQuery(".panel #Filter").trigger('click');
+                }
+                //Use jQuery submit with keypress Enter in forms
+                if (event.which == '13' && jQuery(".pnl_formsarea button.positive").length > 0 && event.target.localName != 'textarea') {
+                    jQuery(".pnl_formsarea button.positive:first").trigger('click');
                 }
             });
-
         </script>
     </head>
     <body>                  
         <!-- begin: header -->
         <header>
+            <!-- start: skip link navigation -->
+            <!-- <a class="skip" href="#navigation" title="skip link">Skip to the navigation</a><span class="hideme">.</span>
+                <a class="skip" href="#content" title="skip link">Skip to the content</a><span class="hideme">.</span>      -->
+            <!-- end: skip link navigation -->
             <div id="top-line">
                 <div class="topleft">
                     <!-- TODO: Add functionality for links to customer OR user support and more-->
@@ -63,7 +79,6 @@
             </div>
             <div id="middle-line">
                 <!-- begin: main navigation -->
-                <!-- ??? skiplink anchor: navigation -->
                 <div id="topNav" class="topright">
                     <a id="navigation" name="navigation"></a>
                 </div><!-- end: main navigation -->
@@ -76,10 +91,6 @@
         <!-- begin: #mainscreen -->
         <div id="mainscreen">
             <div id="mainscreen-left">
-                <!-- search for 3.0.5 
-                <div id="app-switcher" style="position: relative;">  
-                </div>
-                -->    
                 <div class="uibox listbox" id="sideNav-container">
                     <!-- begin: #col1 - first float column -->
                     <div id="sideNav" class="scroller withfooter">&nbsp;</div>
@@ -94,6 +105,7 @@
             </div>
             <div id="mainscreen-splitterv" class="splitter splitter-v"></div>
             <div id="mainscreen-right">
+                <tmpl_if name='usertype' op='==' value='normaluser'><input type="text" id="globalsearch" size="25" value="" /></tmpl_if>
                 <!-- skiplink anchor: Content -->
                 <form method="post" action="" id="pageForm" name="pageForm" enctype="multipart/form-data" class="uniForm">
                     <div id="pageContent"><!-- AJAX CONTENT --></div>

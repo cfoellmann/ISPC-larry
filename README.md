@@ -27,14 +27,14 @@ For discussions please go to http://www.howtoforge.com/forums/showthread.php?p=2
 -----------------------
 -   HTML5 (since v0.0.1)
 -   Deployment via ISPC repository feature (http://ispc.foe-services.de) (planned)
--   Look and feel of "Roundcube larry" in desktop browsers (since v0.0.1)
+-   Look and feel of "Roundcube larry" in desktop browsers
 -   Responsive design OR native iPhone support as web-app (planned)
  
 4. Limitations
 --------------
 -   (v0.1) Tested only in Firefox (newest Version, currently 11.0)
--   (v0.1) non "responsive" design -> not suitable for different platforms like smartphones or tablets
--   no IE6 support, http://www.ie6countdown.com/
+-   (v0.1 - TBD) non "responsive" design -> not suitable for different platforms like smartphones or tablets
+-   (all versions) no IE6 support, http://www.ie6countdown.com/
 
 5. Developers
 -------------
