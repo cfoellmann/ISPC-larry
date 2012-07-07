@@ -1,40 +1,17 @@
-<div class="buttons">
-    <button class="iconstxt icoAdd" type="button" onClick="loadContent('dns/dns_a_edit.php?zone={tmpl_var name='parent_id'}');">
-        <span>A</span>
-    </button>
-    <button class="iconstxt icoAdd" type="button" onClick="loadContent('dns/dns_aaaa_edit.php?zone={tmpl_var name='parent_id'}');">
-        <span>AAAA</span>
-    </button>
-    <button class="iconstxt icoAdd" type="button" onClick="loadContent('dns/dns_alias_edit.php?zone={tmpl_var name='parent_id'}');">
-        <span>ALIAS</span>
-    </button>
-    <button class="iconstxt icoAdd" type="button" onClick="loadContent('dns/dns_cname_edit.php?zone={tmpl_var name='parent_id'}');">
-        <span>CNAME</span>
-    </button>
-    <button class="iconstxt icoAdd" type="button" onClick="loadContent('dns/dns_hinfo_edit.php?zone={tmpl_var name='parent_id'}');">
-        <span>HINFO</span>
-    </button>
-    <button class="iconstxt icoAdd" type="button" onClick="loadContent('dns/dns_mx_edit.php?zone={tmpl_var name='parent_id'}');">
-        <span>MX</span>
-    </button>
-    <button class="iconstxt icoAdd" type="button" onClick="loadContent('dns/dns_ns_edit.php?zone={tmpl_var name='parent_id'}');">
-        <span>NS</span>
-    </button>
-    <button class="iconstxt icoAdd" type="button" onClick="loadContent('dns/dns_ptr_edit.php?zone={tmpl_var name='parent_id'}');">
-        <span>PTR</span>
-    </button>
-    <button class="iconstxt icoAdd" type="button" onClick="loadContent('dns/dns_rp_edit.php?zone={tmpl_var name='parent_id'}');">
-        <span>RP</span>
-    </button>
-    <button class="iconstxt icoAdd" type="button" onClick="loadContent('dns/dns_srv_edit.php?zone={tmpl_var name='parent_id'}');">
-        <span>SRV</span>
-    </button>
-    <button class="iconstxt icoAdd" type="button" onClick="loadContent('dns/dns_txt_edit.php?zone={tmpl_var name='parent_id'}');">
-        <span>TXT</span>
-    </button>
+<div class="topbuttons">
+    <button class="button iconstxt icoAdd" type="button" onClick="loadContent('dns/dns_a_edit.php?zone={tmpl_var name='parent_id'}');"><span>A</span></button>
+    <button class="button iconstxt icoAdd" type="button" onClick="loadContent('dns/dns_aaaa_edit.php?zone={tmpl_var name='parent_id'}');"><span>AAAA</span></button>
+    <button class="button iconstxt icoAdd" type="button" onClick="loadContent('dns/dns_alias_edit.php?zone={tmpl_var name='parent_id'}');"><span>ALIAS</span></button>
+    <button class="button iconstxt icoAdd" type="button" onClick="loadContent('dns/dns_cname_edit.php?zone={tmpl_var name='parent_id'}');"><span>CNAME</span></button>
+    <button class="button iconstxt icoAdd" type="button" onClick="loadContent('dns/dns_hinfo_edit.php?zone={tmpl_var name='parent_id'}');"><span>HINFO</span></button>
+    <button class="button iconstxt icoAdd" type="button" onClick="loadContent('dns/dns_mx_edit.php?zone={tmpl_var name='parent_id'}');"><span>MX</span></button>
+    <button class="button iconstxt icoAdd" type="button" onClick="loadContent('dns/dns_ns_edit.php?zone={tmpl_var name='parent_id'}');"><span>NS</span></button>
+    <button class="button iconstxt icoAdd" type="button" onClick="loadContent('dns/dns_ptr_edit.php?zone={tmpl_var name='parent_id'}');"><span>PTR</span></button>
+    <button class="button iconstxt icoAdd" type="button" onClick="loadContent('dns/dns_rp_edit.php?zone={tmpl_var name='parent_id'}');"><span>RP</span></button>
+    <button class="button iconstxt icoAdd" type="button" onClick="loadContent('dns/dns_srv_edit.php?zone={tmpl_var name='parent_id'}');"><span>SRV</span></button>
 </div>
 
-<table class="list">
+<table class="list topbuttons">
     <thead>
         <tr>
             <th class="tbl_col_active" scope="col"><tmpl_var name="active_txt"></th>

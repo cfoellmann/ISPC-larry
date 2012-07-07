@@ -17,7 +17,10 @@ body {
     margin: 0;
 }
 body.noscroll {	overflow: hidden; /* also avoids bounce effect in Chrome and Safari */ }
-a { color: #0069a6; }
+a { 
+    color: #0069a6;
+    text-decoration: none;
+}
 a:visited { color: #0186ba; }
 img { border: 0; }
 h1 {
@@ -50,7 +53,14 @@ table.list {
     border: 1px solid #D3D3D3 !important;
     width: 100%;
 }
-table.list tr:hover,
+div.topbuttons {
+    float: left;
+    clear: both;
+    margin-bottom: 15px;
+}
+table.topbuttons {
+    float: left;
+}
 #submenu li:hover {
     background-color: #FFFACD;
 }
@@ -64,6 +74,9 @@ table.list thead th {
     background: -webkit-gradient(linear , left top, left bottom, color-stop(0%,#F0F0F0), color-stop(100%,#D6D6D6));
     background: -ms-linear-gradient(center top , #F0F0F0 0%, #D6D6D6 100%) repeat scroll 0 0 transparent;
     border-bottom: 1px solid #CFCFCF;
+}
+table.list thead th:hover {
+    
 }
 table.list thead tr {
     border-radius: 5px 5px 0 0;
@@ -365,7 +378,7 @@ input.button:active {
     height: 13px;
     text-indent: 1000px;
     overflow: hidden;
-    background: url(images/buttons.png) -6px -211px no-repeat;
+    background: url("images/buttons.png") -6px -211px no-repeat;
 }
 .pagenav a.prevpage span.inner {
     background-position: -7px -226px;
@@ -410,7 +423,7 @@ a.iconbutton {
     height: 18px;
     text-decoration: none;
     text-indent: -1000px;
-    background: url(images/buttons.png) -1000px 0 no-repeat;
+    background: url("images/buttons.png") -1000px 0 no-repeat;
 }
 a.iconbutton.disabled {
     opacity: 0.4;
@@ -432,7 +445,7 @@ a.iconlink {
     text-decoration: none;
     white-space: nowrap;
     padding: 2px 8px 2px 20px;
-    background: url(images/buttons.png) -1000px 0 no-repeat;
+    background: url("images/buttons.png") -1000px 0 no-repeat;
 }
 a.iconlink:hover {
     text-decoration: underline;
@@ -460,12 +473,12 @@ a.iconlink.upload {
 -------------------------------------------------------------- */
 #top-line {
     height: 18px;
-    background: url(images/bg_linen_dark.jpg) repeat #666;
+    background: url("images/bg_linen_dark.jpg") repeat #666;
     padding: 2px;
 }
-#top-line a {
+/*#top-line a {
     text-decoration: none;
-}
+}*/
 #top-line a:hover { text-decoration: underline; }
 #toplogo { padding-top: 2px; }
 .topleft { 
@@ -490,16 +503,11 @@ a.iconlink.upload {
 .topright a.button-logout { background-position: 4px -193px; }
 .topright a.button-settings { background-position: 4px -193px; }
 hgroup h2 { margin: 0; }
+
 #middle-line {
     height: 46px;
-    margin-bottom: 10px;
-    padding: 0 0 0 10px;
-    background: #111;
-    background: -moz-linear-gradient(top, #404040 0%, #060606 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#404040), color-stop(100%,#060606));
-    background: -o-linear-gradient(top, #404040 0%, #060606 100%);
-    background: -ms-linear-gradient(top, #404040 0%, #060606 100%);
-    background: linear-gradient(top, #404040 0%, #060606 100%);   
+    padding: 0 10px;
+    background: url("images/bg_linen_dark.jpg") repeat #666;  
 }
 
 /* layout/top/topNav
@@ -517,38 +525,60 @@ nav a {
 nav a span.button-inner {
     display: inline-block;
     font-size: 110%;
-    font-weight: normal;
-    text-shadow: 0px 1px 1px black;
+    text-shadow: 0px 1px 1px #000;
     color: #eee;
-    text-decoration: none;
+/*    text-decoration: none;*/
     padding: 5px 0 0 34px;
     height: 19px;
     background-image: url("icons/x24_bw.png");
     background-repeat: no-repeat;
 }
-nav a#topNav_current,
+nav a#current,
 nav a:hover {
-    color: #3cf;
-    background-color: #2c2c2c;
+    -moz-border-radius:5px 5px 0 0;
+    -webkit-border-radius:5px 5px 0 0;
+    -khtml-border-radius:5px 5px 0 0;
+    -o-border-radius:5px 5px 0 0;
+    -ms-border-radius:5px 5px 0 0;
+    border-radius:5px 5px 0 0;
+}
+nav a#current {
+    background: url("images/bg_linen.jpg") repeat #d1d5d8;
+}
+nav a#current span.button-inner {
+    text-shadow: 0px 1px 1px #fff;
+    color: #424242;
+    font-weight: bold;
+}
+nav a:hover {
+    background-color: #787878;
 }
 nav a.button- span.button-inner { background-position: 3px 0px; }
+nav a#current.button- span.button-inner { background-position: 3px -44px; }
 nav a.button-dashboard span.button-inner { background-position: 3px -88px; }
+nav a#current.button-dashboard span.button-inner { background-position: 3px -132px; }
 nav a.button-tools span.button-inner { background-position: 3px -176px; }
+nav a#current.button-tools span.button-inner { background-position: 3px -220px; }
 nav a.button-sites span.button-inner { background-position: 3px -792px; }
+nav a#current.button-sites span.button-inner { background-position: 3px -836px; }
 nav a.button-monitor span.button-inner { background-position: 3px -968px; }
+nav a#current.button-monitor span.button-inner { background-position: 3px -1012px; }
 nav a.button-help span.button-inner { background-position: 3px -264px; }
+nav a#current.button-help span.button-inner { background-position: 3px -308px; }
 nav a.button-admin span.button-inner { background-position: 3px -616px; }
+nav a#current.button-admin span.button-inner { background-position: 3px -660px; }
 nav a.button-mail span.button-inner { background-position: 3px -352px; }
+nav a#current.button-mail span.button-inner { background-position: 3px -396px; }
 nav a.button-client span.button-inner { background-position: 3px -440px; }
+nav a#current.button-client span.button-inner { background-position: 3px -484px; }
 nav a.button-domain span.button-inner { background-position: 3px -528px; }
+nav a#current.button-domain span.button-inner { background-position: 3px -572px; }
 nav a.button-dns span.button-inner { background-position: 3px -704px; }
+nav a#current.button-dns span.button-inner { background-position: 3px -748px; }
 nav a.button-vm span.button-inner { background-position: 3px -880px; }
+nav a#current.button-vm span.button-inner { background-position: 3px -924px; }
 nav a.button-billing span.button-inner { background-position: 3px -1056px; }
-
-nav a#topNav_current span.button-inner,
-nav a.button-dashboard:hover span.button-inner,
-nav a.button-dashboard.button-selected span.button-inner {   
-}
+nav a#current.button-billing span.button-inner { background-position: 3px -1100px; }
 
 /* layout/left
 -------------------------------------------------------------- */
@@ -821,7 +851,7 @@ footer p {
     padding: 6px 30px 6px 25px;
     display: inline-block;
     white-space: nowrap;
-    background: url(images/messages.png) 0 5px no-repeat;
+    background: url("images/messages.png") 0 5px no-repeat;
     cursor: default;
 }
 #message div.warning {
@@ -837,7 +867,7 @@ footer p {
     background-position: 0 -25px;
 }
 #message div.loading {
-    background: url(images/ajaxloader.gif) 2px 6px no-repeat;
+    background: url("images/ajaxloader.gif") 2px 6px no-repeat;
 }
 #message.statusbar {
     position: absolute;
@@ -1428,7 +1458,7 @@ select.decorated {
     width: 48px;
     height: 35px;
     text-indent: -1000px;
-    background: url(images/buttons.png) -1000px 0 no-repeat;
+    background: url("images/buttons.png") -1000px 0 no-repeat;
 }
 .boxfooter .listbutton.add .inner {
     background-position: 10px -1301px;
@@ -1477,7 +1507,7 @@ select.decorated {
     text-indent: 1000px;
     vertical-align: bottom;
     overflow: hidden;
-    background: url(images/buttons.png) -4px -286px no-repeat;
+    background: url("images/buttons.png") -4px -286px no-repeat;
 }
 .boxpagenav a.icon.prevpage {
     background-position: -4px -301px;
@@ -1546,7 +1576,7 @@ table.propform {
 }
 #login-form .box-inner {
     width: 430px;
-    background: url(images/bg_linen_dark.jpg) top left repeat #5c5c5c;
+    background: url("images/bg_linen_dark.jpg") top left repeat #5c5c5c;
     margin: 0 50px;
     padding: 10px 24px 24px 24px;
     border: 1px solid #333;
@@ -1557,7 +1587,7 @@ table.propform {
     -moz-box-shadow: inset 0 0 1px #ccc;
 }
 #login-form .box-bottom {
-    background: url(images/login_shadow.png) top center no-repeat;
+    background: url("images/login_shadow.png") top center no-repeat;
     margin-top: -3px;
     padding-top: 10px;
 }
@@ -1659,7 +1689,7 @@ table.propform {
     -moz-user-select: none;
     -khtml-user-select: none;
     position: absolute;
-    background: url(images/splitter.png) center no-repeat;
+    background: url("images/splitter.png") center no-repeat;
 }
 
 .splitter-h {
