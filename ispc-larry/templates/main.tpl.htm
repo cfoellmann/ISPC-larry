@@ -63,10 +63,6 @@
     <body>                  
         <!-- begin: header -->
         <header>
-            <!-- start: skip link navigation -->
-            <!-- <a class="skip" href="#navigation" title="skip link">Skip to the navigation</a><span class="hideme">.</span>
-                <a class="skip" href="#content" title="skip link">Skip to the content</a><span class="hideme">.</span>      -->
-            <!-- end: skip link navigation -->
             <div id="top-line">
                 <div class="topleft">
                     <!-- TODO: Add functionality for links to customer OR user support and more-->
@@ -74,33 +70,32 @@
                 </div>
                 <div class="topright">
                     <tmpl_if name="cpuser">
-                        <span class="username"><a href="#logout" onclick="loadContent('login/logout.php');" class="button-logout"><tmpl_var name="logout_txt"> <tmpl_var format="strtoupper" name="cpuser"></a></span>
+                        <a href="#" onclick="capp('tools')" class="button-settings" title="<tmpl_var name="toolsarea_head_txt">">Settings <tmpl_var name="toolsarea_head_txt"></a>
+                        <a href="#logout" onclick="loadContent('login/logout.php');" class="button-logout" title="Logout"><tmpl_var name="logout_txt"> <tmpl_var name="cpuser"></a>
                     </tmpl_if>
                 </div>
             </div>
             <div id="middle-line">
                 <!-- begin: main navigation -->
-                <div id="topNav" class="topright">
-                    <a id="navigation" name="navigation"></a>
-                </div><!-- end: main navigation -->
-                <!-- logo + slogan -->
-                <a href="#" onclick="capp('dashboard')" title="Show Dashboard"><img width="152" height="46" title="<tmpl_var name="app_title">" alt="<tmpl_var name="app_title">" src="<tmpl_var name='app_logo'>"></a>
-                <span>hosting control panel</span>
+                <nav id="topNav"></nav>
+                <!-- end: main navigation -->
+                <hgroup>
+                    <h1><a href="#" onclick="capp('dashboard')" title="Dashboard"><img width="152" height="46" title="<tmpl_var name="app_title">" alt="<tmpl_var name="app_title">" src="<tmpl_var name='app_logo'>"></a></h1>
+                    <h2>hosting control panel</h2>
+                </hgroup>
             </div>
             <br style="clear:both" />
-        </header><!-- end: header -->
+        </header>
+        <!-- end: header -->
         <!-- begin: #mainscreen -->
-        <div id="mainscreen">
+        <section id="mainscreen">
             <div id="mainscreen-left">
                 <div class="uibox listbox" id="sideNav-container">
-                    <!-- begin: #col1 - first float column -->
                     <div id="sideNav" class="scroller withfooter">&nbsp;</div>
-                    <!-- end: #col1 -->
-
                     <div class="boxfooter">
-                        <a href="#" class="listbutton groupactions" title="Hilfe anzeigen" id="mailboxmenulink"><span class="inner">&nbsp;</span></a>
+                        <a href="#" class="listbutton groupactions" id="mailboxmenulink"><span class="inner">&nbsp;</span></a>
                         <!-- TODO: Add on-site help dialogs -->
-                        <span class="countdisplay" id="quotadisplay" title="unbekannt" style="background-position: 0pt 0px;">&nbsp;</span>
+                        <span class="countdisplay" id="quotadisplay" style="background-position: 0pt 0px;">&nbsp;</span>
                     </div>
                 </div>
             </div>
@@ -120,6 +115,6 @@
                     </div>
                 </footer><!-- end: footer -->
             </div>
-        </div><!-- end: #mainscreen -->
+        </section><!-- end: #mainscreen -->
     </body>
 </html>

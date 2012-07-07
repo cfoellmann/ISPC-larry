@@ -48,8 +48,8 @@
                     <td class="tbl_col_status_paid">{tmpl_var name="status_paid"}</td>
                     <td class="tbl_col_buttons">
                         <a class="button icons16 icoEdit" href="javascript: loadContent('billing/invoice_edit.php?id={tmpl_var name='id'}');"><span>Edit</span></a>
-                        <a class="button icons16" href="#" onClick="loadContent('billing/invoice_action.php?id={tmpl_var name='id'}')" style="background-image: url('themes/default/icons/x16/arrow.png');"><span>&nbsp;</span></a>
-                        <a class="button icons16" href="billing/invoice_get_pdf.php?id={tmpl_var name='id'}" style="background-image: url('billing/lib/icon/pdficon_small.gif');"><span>&nbsp;</span></a>
+                        <a class="button icons16 icoAction" href="javascript: loadContent('billing/invoice_action.php?id={tmpl_var name='id'}');"><span>Action</span></a>
+                        <a class="button icons16 icoPDF" href="billing/invoice_get_pdf.php?id={tmpl_var name='id'}"><span>PDF</span></a>
                         <a class="button icons16 icoDelete" href="javascript: del_record('billing/invoice_del.php?id={tmpl_var name='id'}&phpsessid={tmpl_var name='phpsessid'}','{tmpl_var name='delete_confirmation'}');"><span>{tmpl_var name='delete_txt'}</span></a>
                     </td>
                 </tr>

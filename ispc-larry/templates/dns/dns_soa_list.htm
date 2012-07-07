@@ -49,7 +49,9 @@
                     <td class="tbl_col_origin"><input type="text" name="search_origin" value="{tmpl_var name='search_origin'}" class="search" /></td>
                     <td class="tbl_col_ns"><input type="text" name="search_ns" value="{tmpl_var name='search_ns'}" class="search" /></td>
                     <td class="tbl_col_mbox"><input type="text" name="search_mbox" value="{tmpl_var name='search_mbox'}" class="search" /></td>
-                    <td class="tbl_col_buttons"><div class="buttons"><button type="button" class="icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="submitForm('pageForm','dns/dns_soa_list.php');"><span>{tmpl_var name="filter_txt"}</span></button></div></td>
+                    <td class="tbl_col_buttons">
+                        <button type="button" class="button icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="submitForm('pageForm','dns/dns_soa_list.php');"><span>{tmpl_var name="filter_txt"}</span></button>
+                    </td>
                 </tr>
             </thead>
             <tbody>

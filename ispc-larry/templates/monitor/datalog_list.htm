@@ -27,7 +27,9 @@
                     <td class="tbl_col_server_id"><select name="search_server_id">{tmpl_var name='search_server_id'}</select></td>
                     <td class="tbl_col_action"><select name="search_action">{tmpl_var name='search_action'}</select></td>
                     <td class="tbl_col_dbtable"><input type="text" name="search_dbtable" value="{tmpl_var name='search_dbtable'}" /></td>
-                    <td class="tbl_col_buttons"><div class="buttons"><button type="button" class="icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="submitForm('pageForm','monitor/datalog_list.php');"><span>{tmpl_var name="filter_txt"}</span></button></div></td>
+                    <td class="tbl_col_buttons">
+                        <button type="button" class="button icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="submitForm('pageForm','monitor/datalog_list.php');"><span>{tmpl_var name="filter_txt"}</span></button>
+                    </td>
                 </tr>
             </thead>
             <tbody>
@@ -38,9 +40,7 @@
                     <td class="tbl_col_action">{tmpl_var name="action"}</td>
                     <td class="tbl_col_dbtable">{tmpl_var name="dbtable"}</td>
                     <td class="tbl_col_buttons">
-                    <div class="buttons icons16">    
-                        <!--<a class="icons16 icoDelete" href="javascript: del_record('monitor/datalog_del.php?id={tmpl_var name='id'}&phpsessid={tmpl_var name='phpsessid'}','{tmpl_var name='delete_confirmation'}');"><span>{tmpl_var name='delete_txt'}</span></a> -->
-                    </div>
+                        <!--<a class="button icons16 icoDelete" href="javascript: del_record('monitor/datalog_del.php?id={tmpl_var name='id'}&phpsessid={tmpl_var name='phpsessid'}','{tmpl_var name='delete_confirmation'}');"><span>{tmpl_var name='delete_txt'}</span></a> -->
                     </td>
                 </tr>
             </tmpl_loop>

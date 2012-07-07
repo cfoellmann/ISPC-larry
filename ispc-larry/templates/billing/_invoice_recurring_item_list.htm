@@ -2,57 +2,48 @@
 
 <div class="panel panel_list_invoice_recurring_item">
 
-  <div class="pnl_toolsarea">
-    <fieldset><legend>{tmpl_var name="toolsarea_head_txt"}</legend>
-      <div class="buttons">
-        <button class="iconstxt icoAdd" type="button" onClick="loadContent('billing/invoice_recurring_item_edit.php');">
-          <span>{tmpl_var name="add_new_record_txt"}</span>
-        </button>
-      </div>
-    </fieldset>
-  </div>
+    <div class="pnl_toolsarea">
+        <button class="button iconstxt icoAdd" type="button" onClick="loadContent('billing/invoice_recurring_item_edit.php');"><span>{tmpl_var name="add_new_record_txt"}</span></button>
+    </div>
 
-  <div class="pnl_listarea">
-    <fieldset><legend><tmpl_var name="list_head_txt"></legend>
-      <table class="list">
-        <thead>
-          <tr>
-            <th class="tbl_col_name" scope="col"><tmpl_var name="name_txt"></th>
-            <th class="tbl_col_price" scope="col"><tmpl_var name="price_txt"></th>
-            <th class="tbl_col_vat" scope="col"><tmpl_var name="vat_txt"></th>
-            <th class="tbl_col_next_payment_date" scope="col"><tmpl_var name="next_payment_date_txt"></th>
-            <th class="tbl_col_buttons" scope="col">{tmpl_var name='search_limit'}</th>
-          </tr>
-          <tr>
-            <td class="tbl_col_name"><input type="text" name="search_name" value="{tmpl_var name='search_name'}" /></td>
-            <td class="tbl_col_price" align="right"><input type="text" name="search_price" value="{tmpl_var name='search_price'}" /></td>
-            <td class="tbl_col_vat" align="right"><input type="text" name="search_vat" value="{tmpl_var name='search_vat'}" /></td>
-            <td class="tbl_col_next_payment_date"><input type="text" name="search_next_payment_date" value="{tmpl_var name='search_next_payment_date'}" /></td>
-            <td class="tbl_col_buttons"><div class="buttons"><button type="button" class="icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="submitForm('pageForm','billing/invoice_recurring_item_list.php');"><span>{tmpl_var name="filter_txt"}</span></button></div></td>
-          </tr>
-        </thead>
-        <tbody>
-          <tmpl_loop name="records">
-          <tr class="tbl_row_<tmpl_if name='__EVEN__'}even<tmpl_else>uneven</tmpl_if>">
-            <td class="tbl_col_name"><a href="#" onClick="loadContent('billing/invoice_recurring_item_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="name"}</a></td>
-            <td class="tbl_col_price" align="right"><a href="#" onClick="loadContent('billing/invoice_recurring_item_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="price"} EUR</a></td>
-            <td class="tbl_col_vat" align="right"><a href="#" onClick="loadContent('billing/invoice_recurring_item_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="vat"} %</a></td>
-            <td class="tbl_col_next_payment_date"><a href="#" onClick="loadContent('billing/invoice_recurring_item_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="next_payment_date"}</a></td>
-            <td class="tbl_col_buttons">
-              <div class="buttons icons16">    
-                <a class="icons16 icoDelete" href="javascript: del_record('billing/invoice_recurring_item_del.php?id={tmpl_var name='id'}&phpsessid={tmpl_var name='phpsessid'}','{tmpl_var name='delete_confirmation'}');"><span>{tmpl_var name='delete_txt'}</span></a>
-              </div>
-            </td>
-          </tr>
-          </tmpl_loop>
-        </tbody>
-        <tfoot>
-          <tr>
-            <td class="tbl_footer tbl_paging" colspan="5"><tmpl_var name="paging"></td>
-          </tr>
-        </tfoot>
-      </table>
-    </fieldset>
-  </div>
-
-</div>
+    <div class="pnl_listarea">
+        <table class="list">
+            <thead>
+                <tr>
+                    <th class="tbl_col_name" scope="col"><tmpl_var name="name_txt"></th>
+                    <th class="tbl_col_price" scope="col"><tmpl_var name="price_txt"></th>
+                    <th class="tbl_col_vat" scope="col"><tmpl_var name="vat_txt"></th>
+                    <th class="tbl_col_next_payment_date" scope="col"><tmpl_var name="next_payment_date_txt"></th>
+                    <th class="tbl_col_buttons" scope="col">{tmpl_var name='search_limit'}</th>
+                </tr>
+                <tr>
+                    <td class="tbl_col_name"><input type="text" name="search_name" value="{tmpl_var name='search_name'}" /></td>
+                    <td class="tbl_col_price" align="right"><input type="text" name="search_price" value="{tmpl_var name='search_price'}" /></td>
+                    <td class="tbl_col_vat" align="right"><input type="text" name="search_vat" value="{tmpl_var name='search_vat'}" /></td>
+                    <td class="tbl_col_next_payment_date"><input type="text" name="search_next_payment_date" value="{tmpl_var name='search_next_payment_date'}" /></td>
+                    <td class="tbl_col_buttons">
+                        <button type="button" class="button icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="submitForm('pageForm','billing/invoice_recurring_item_list.php');"><span>{tmpl_var name="filter_txt"}</span></button>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tmpl_loop name="records">
+                    <tr class="tbl_row_<tmpl_if name='__EVEN__'}even<tmpl_else>uneven</tmpl_if>">
+                        <td class="tbl_col_name"><a href="#" onClick="loadContent('billing/invoice_recurring_item_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="name"}</a></td>
+                        <td class="tbl_col_price" align="right"><a href="#" onClick="loadContent('billing/invoice_recurring_item_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="price"} EUR</a></td>
+                        <td class="tbl_col_vat" align="right"><a href="#" onClick="loadContent('billing/invoice_recurring_item_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="vat"} %</a></td>
+                        <td class="tbl_col_next_payment_date"><a href="#" onClick="loadContent('billing/invoice_recurring_item_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="next_payment_date"}</a></td>
+                        <td class="tbl_col_buttons">
+                            <a class="button icons16 icoDelete" href="javascript: del_record('billing/invoice_recurring_item_del.php?id={tmpl_var name='id'}&phpsessid={tmpl_var name='phpsessid'}','{tmpl_var name='delete_confirmation'}');"><span>{tmpl_var name='delete_txt'}</span></a>
+                        </td>
+                    </tr>
+                </tmpl_loop>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td class="tbl_footer tbl_paging" colspan="5"><tmpl_var name="paging"></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div><!-- end: modulecontent -->
+</div><!-- end: modulebody -->

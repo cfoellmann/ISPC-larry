@@ -25,7 +25,9 @@
                     <td class="tbl_col_server_id"><select name="search_server_id">{tmpl_var name='search_server_id'}</select></td>
                     <td class="tbl_col_tcp_port"><input type="text" name="search_tcp_port" value="{tmpl_var name='search_tcp_port'}" /></td>
                     <td class="tbl_col_udp_port"><input type="text" name="search_udp_port" value="{tmpl_var name='search_udp_port'}" /></td>
-                    <td class="tbl_col_buttons"><div class="buttons"><button type="button" class="icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="submitForm('pageForm','admin/firewall_list.php');"><span>{tmpl_var name="filter_txt"}</span></button></div></td>
+                    <td class="tbl_col_buttons">
+                        <button type="button" class="button icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="submitForm('pageForm','admin/firewall_list.php');"><span>{tmpl_var name="filter_txt"}</span></button>
+                    </td>
                 </tr>
             </thead>
             <tbody>
@@ -35,10 +37,8 @@
                     <td class="tbl_col_server_id"><a href="#" onClick="loadContent('admin/firewall_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="server_id"}</a></td>
                     <td class="tbl_col_tcp_port"><a href="#" onClick="loadContent('admin/firewall_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="tcp_port"}</a></td>
                     <td class="tbl_col_udp_port"><a href="#" onClick="loadContent('admin/firewall_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="udp_port"}</a></td>
-                    <td class="tbl_col_buttons">
-                    <div class="buttons icons16">    
-                        <a class="icons16 icoDelete" href="javascript: del_record('admin/firewall_del.php?id={tmpl_var name='id'}&phpsessid={tmpl_var name='phpsessid'}','{tmpl_var name='delete_confirmation'}');"><span>{tmpl_var name='delete_txt'}</span></a>
-                    </div>
+                    <td class="tbl_col_buttons">   
+                        <a class="button icons16 icoDelete" href="javascript: del_record('admin/firewall_del.php?id={tmpl_var name='id'}&phpsessid={tmpl_var name='phpsessid'}','{tmpl_var name='delete_confirmation'}');"><span>{tmpl_var name='delete_txt'}</span></a>
                     </td>
                 </tr>
             </tmpl_loop>

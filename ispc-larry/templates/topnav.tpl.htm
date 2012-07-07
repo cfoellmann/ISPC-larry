@@ -1,7 +1,9 @@
-<tmpl_loop name="nav_top">
-<tmpl_if name="active">
-  <a href="#" id="topNav_current" class="topnav button-<tmpl_var name='module'>"><span class="button-inner"><tmpl_var name="title"></span></a>
-<tmpl_else>
-  <a href="#" onClick="capp('<tmpl_var name='module'>')" class="topnav button-<tmpl_var name='module'>"><span class="button-inner"><tmpl_var name="title"></span></a>
-</tmpl_if>
-</tmpl_loop>
+<ul>
+    <tmpl_loop name="nav_top">
+        <tmpl_if name="active">
+            <a href="#" id="topNav_current" class="topnav button-<tmpl_var name='module'>"><span class="button-inner"><tmpl_var name="title"></span></a>
+            <tmpl_else>
+                <a href="#" onClick="capp('<tmpl_var name='module'>')" class="topnav button-<tmpl_var name='module'>"><span class="button-inner"><tmpl_var name="title"></span></a>
+        </tmpl_if>
+    </tmpl_loop>
+</ul>
