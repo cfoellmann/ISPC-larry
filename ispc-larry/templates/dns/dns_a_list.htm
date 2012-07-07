@@ -64,7 +64,7 @@
             <td class="tbl_col_data">{tmpl_var name="data"}</td>
             <td class="tbl_col_aux">{tmpl_var name="aux"}</td>
             <td class="tbl_col_buttons">
-                <a class="button icons16 icoEdit" href="javascript: loadContent('dns/dns_{tmpl_var name='type_lowercase'}_edit.php?id={tmpl_var name='id'}');"><span>Edit</span></a>
+                <a class="button icons16 icoEdit" href="javascript: loadContent('dns/dns_{tmpl_var name='type_lowercase'}_edit.php?id={tmpl_var name='id'}');"><span>{tmpl_var name='edit_txt'}</span></a>
                 <a class="button icons16 icoDelete" href="javascript: del_record('dns/dns_rr_del.php?id={tmpl_var name='id'}&phpsessid={tmpl_var name='phpsessid'}','{tmpl_var name='delete_confirmation'}');"><span>{tmpl_var name='delete_txt'}</span></a>
             </td>
         </tr>

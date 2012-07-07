@@ -32,7 +32,7 @@
                     <td class="tbl_col_company_name"><a href="#" onClick="loadContent('billing/invoice_company_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="company_name"}</a></td>
                     <td class="tbl_col_contact_name"><a href="#" onClick="loadContent('billing/invoice_company_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="contact_name"}</a></td>
                     <td class="tbl_col_buttons">
-                        <a class="button icons16 icoEdit" href="javascript: loadContent('billing/invoice_company_edit.php?id={tmpl_var name='id'}');"><span>Edit</span></a>
+                        <a class="button icons16 icoEdit" href="javascript: loadContent('billing/invoice_company_edit.php?id={tmpl_var name='id'}');"><span>{tmpl_var name='edit_txt'}</span></a>
                         <a class="button icons16 icoDelete" href="javascript: del_record('billing/invoice_company_del.php?id={tmpl_var name='id'}&phpsessid={tmpl_var name='phpsessid'}','{tmpl_var name='delete_confirmation'}');"><span>{tmpl_var name='delete_txt'}</span></a>
                     </td>
                 </tr>
