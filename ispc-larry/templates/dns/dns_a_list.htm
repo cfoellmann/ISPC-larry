@@ -13,7 +13,7 @@
 
 <table class="list topbuttons">
     <thead>
-        <tr>
+        <tr class="caption">
             <th class="tbl_col_active" scope="col"><tmpl_var name="active_txt"></th>
             <th class="tbl_col_type" scope="col"><tmpl_var name="type_txt"></th>
             <th class="tbl_col_name" scope="col"><tmpl_var name="name_txt"></th>
@@ -21,7 +21,7 @@
             <th class="tbl_col_aux" scope="col"><tmpl_var name="aux_txt"></th>
             <th class="tbl_col_limit" scope="col">{tmpl_var name='search_limit'}</th>
         </tr>
-        <tr>
+        <tr class="filter">
             <td class="tbl_col_active"><select name="search_active" class="withicons">{tmpl_var name='search_active'}</select></td>
             <td class="tbl_col_type"><select name="search_type">{tmpl_var name='search_type'}</select></td>
             <td class="tbl_col_name"><input type="text" name="search_name" value="{tmpl_var name='search_name'}" /></td>
