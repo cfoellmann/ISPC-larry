@@ -22,13 +22,13 @@
                     <th class="tbl_col_country" scope="col"><tmpl_var name="country_txt"></th>
                     <th class="tbl_col_limit" scope="col">{tmpl_var name='search_limit'}</th>
                 </tr>
-                <tr>
-                    <td class="tbl_col_client_id"><input type="text" name="search_client_id" size="4" value="{tmpl_var name='search_client_id'}" class="search" /></td>
-                    <td class="tbl_col_company_name"><input type="text" name="search_company_name" value="{tmpl_var name='search_company_name'}" class="search" /></td>
-                    <td class="tbl_col_contact_name"><input type="text" name="search_contact_name" value="{tmpl_var name='search_contact_name'}" class="search" /></td>
-                    <td class="tbl_col_username"><input type="text" name="search_username" value="{tmpl_var name='search_username'}" class="search" /></td>
-                    <td class="tbl_col_city"><input type="text" name="search_city" value="{tmpl_var name='search_city'}" class="search" /></td>
-                    <td class="tbl_col_country"><input type="text" name="search_country" value="{tmpl_var name='search_country'}" class="search" /></td>
+                <tr class="filter">
+                    <td class="tbl_col_client_id"><input type="text" name="search_client_id" size="4" value="{tmpl_var name='search_client_id'}" /></td>
+                    <td class="tbl_col_company_name"><input type="text" name="search_company_name" value="{tmpl_var name='search_company_name'}" /></td>
+                    <td class="tbl_col_contact_name"><input type="text" name="search_contact_name" value="{tmpl_var name='search_contact_name'}" /></td>
+                    <td class="tbl_col_username"><input type="text" name="search_username" value="{tmpl_var name='search_username'}" /></td>
+                    <td class="tbl_col_city"><input type="text" name="search_city" value="{tmpl_var name='search_city'}" /></td>
+                    <td class="tbl_col_country"><input type="text" name="search_country" value="{tmpl_var name='search_country'}" /></td>
                     <td class="tbl_col_buttons">
                         <button type="button" class="button icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="submitForm('pageForm','client/client_list.php');"><span>{tmpl_var name="filter_txt"}</span></button>
                     </td>

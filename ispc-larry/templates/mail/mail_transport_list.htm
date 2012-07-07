@@ -21,12 +21,12 @@
                     <th class="tbl_col_sort_order" scope="col"><tmpl_var name="sort_order_txt"></th>
                     <th class="tbl_col_limit" scope="col">{tmpl_var name='search_limit'}</th>
                 </tr>
-                <tr>
+                <tr class="filter">
                     <td class="tbl_col_active"><select name="search_active" class="withicons">{tmpl_var name='search_active'}</select></td>
                     <td class="tbl_col_server_id"><select name="search_server_id" class="servericons">{tmpl_var name='search_server_id'}</select></td>
-                    <td class="tbl_col_domain"><input type="text" name="search_domain" value="{tmpl_var name='search_domain'}" class="search" /></td>
-                    <td class="tbl_col_transport"><input type="text" name="search_transport" value="{tmpl_var name='search_transport'}" class="search" /></td>
-                    <td class="tbl_col_sort_order"><input type="text" name="search_sort_order" value="{tmpl_var name='search_sort_order'}" class="search" /></td>
+                    <td class="tbl_col_domain"><input type="text" name="search_domain" value="{tmpl_var name='search_domain'}" /></td>
+                    <td class="tbl_col_transport"><input type="text" name="search_transport" value="{tmpl_var name='search_transport'}" /></td>
+                    <td class="tbl_col_sort_order"><input type="text" name="search_sort_order" value="{tmpl_var name='search_sort_order'}" /></td>
                     <td class="tbl_col_buttons">
                         <button type="button" class="button icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="submitForm('pageForm','mail/mail_transport_list.php');"><span>{tmpl_var name="filter_txt"}</span></button>
                     </td>

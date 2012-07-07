@@ -20,7 +20,7 @@
                 <th class="tbl_col_vat" scope="col"><tmpl_var name="vat_txt"></th>
                 <th class="tbl_col_limit" scope="col">{tmpl_var name='search_limit'}</th>
             </tr>
-            <tr>
+            <tr class="filter">
                 <td class="tbl_col_type"><select name="search_type" onChange="submitForm('pageForm','billing/invoice_item_template_list.php');">{tmpl_var name='search_type'}</select></td>
                 <td class="tbl_col_name"><input type="text" name="search_name" value="{tmpl_var name='search_name'}" /></td>
                 <td class="tbl_col_price"><input type="text" name="search_price" value="{tmpl_var name='search_price'}" /></td>

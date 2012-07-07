@@ -81,6 +81,9 @@ table.list thead th:hover {
 table.list thead tr {
     border-radius: 5px 5px 0 0;
 }
+table.list thead tr.filter td {
+    padding: 4px 0 4px 10px;
+}
 table.list tbody td,
 table.list thead td.tbl_col_buttons {
     padding-left: 12px;
@@ -108,6 +111,13 @@ table.list .tbl_row_even {
 
 table.additem {
     background: none;
+}
+.tbl_col_limit select {
+    padding: 0;
+    width: 50px;
+}
+.tbl_col_limit select option {
+    padding: 0;
 }
 /* Forms/Input
 -------------------------------------------------------------- */
@@ -142,9 +152,10 @@ textarea.placeholder { color: #aaa; }
 input[type="checkbox"] {
     margin: 6px 0;
 }
-input.search {
+.filter input {
     background: url("icons/x16/search.png") 5px 5px no-repeat #FFFFFF;
     padding-left: 24px;
+    font-size: 12px;
 }
 select {
     margin: 0; /* Safari by default adds a margin */
@@ -175,21 +186,17 @@ select.servericons option {
 select.servericons option {
     background-image: url("icons/x16/linux.png");
 }
-select.withicons option {
+.filter select option {
     background-position: 5px 50%;
     background-repeat: no-repeat;
     padding: 1px 0 1px 30px;
 }
-select.withicons option[value="y"] {
+.filter select option[value="Y"],
+.filter select option[value="y"] {
     background-image: url("icons/x16/tick_circle_frame.png");
 }
-select.withicons option[value="Y"] {
-    background-image: url("icons/x16/tick_circle_frame.png");
-}
-select.withicons option[value="n"] {
-    background-image: url("icons/x16/cross_circle_frame.png");
-}
-select.withicons option[value="N"] {
+.filter select option[value="N"],
+.filter select option[value="n"] {
     background-image: url("icons/x16/cross_circle_frame.png");
 }
 /* Input/buttons

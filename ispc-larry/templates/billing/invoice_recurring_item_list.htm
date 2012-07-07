@@ -22,13 +22,13 @@
                     <th class="tbl_col_next_payment_date" scope="col"><tmpl_var name="next_payment_date_txt"></th>
                     <th class="tbl_col_limit" scope="col">{tmpl_var name='search_limit'}</th>
                 </tr>
-                <tr>
+                <tr class="filter">
                     <td class="tbl_col_active"><select name="search_active" onChange="submitForm('pageForm','billing/invoice_recurring_item_list.php');" class="withicons">{tmpl_var name='search_active'}</select></td>
                     <td class="tbl_col_type"><select name="search_type" onChange="submitForm('pageForm','billing/invoice_recurring_item_list.php');">{tmpl_var name='search_type'}</select></td>
-                    <td class="tbl_col_name"><input type="text" name="search_name" value="{tmpl_var name='search_name'}" class="search" /></td>
+                    <td class="tbl_col_name"><input type="text" name="search_name" value="{tmpl_var name='search_name'}" /></td>
                     <td class="tbl_col_client_id"><select name="search_client_id" onChange="submitForm('pageForm','billing/invoice_recurring_item_list.php');" class="clienticons">{tmpl_var name='search_client_id'}</select></td>
-                    <td class="tbl_col_price"><input type="text" name="search_price" value="{tmpl_var name='search_price'}" class="search" /></td>
-                    <td class="tbl_col_next_payment_date"><input type="text" name="search_next_payment_date" value="{tmpl_var name='search_next_payment_date'}" class="search" /></td>
+                    <td class="tbl_col_price"><input type="text" name="search_price" value="{tmpl_var name='search_price'}" /></td>
+                    <td class="tbl_col_next_payment_date"><input type="text" name="search_next_payment_date" value="{tmpl_var name='search_next_payment_date'}" /></td>
                     <td class="tbl_col_buttons">
                         <button type="button" class="button icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="submitForm('pageForm','billing/invoice_recurring_item_list.php');"><span>{tmpl_var name="filter_txt"}</span></button>
                     </td>

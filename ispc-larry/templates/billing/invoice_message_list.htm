@@ -19,7 +19,7 @@
                     <th class="tbl_col_subject" scope="col"><tmpl_var name="subject_txt"></th>
                     <th class="tbl_col_limit" scope="col">{tmpl_var name='search_limit'}</th>
                 </tr>
-                <tr>
+                <tr class="filter">
                     <td class="tbl_col_message_date"><input type="text" name="search_message_sent_date" value="{tmpl_var name='search_message_sent_date'}" /></td>
                     <td class="tbl_col_client_id"><select name="search_client_id" onChange="submitForm('pageForm','billing/invoice_message_list.php');">{tmpl_var name='search_client_id'}</select></td>
                     <td class="tbl_col_subject"><input type="text" name="search_subject" value="{tmpl_var name='search_subject'}" /></td>

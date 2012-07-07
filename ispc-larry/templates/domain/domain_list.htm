@@ -22,8 +22,8 @@
                     <th class="tbl_col_domain" scope="col"><tmpl_var name="user_txt"></th>
                     <th class="tbl_col_limit" scope="col">{tmpl_var name='search_limit'}</th>
                 </tr>
-                <tr>
-                    <td class="tbl_col_domain"><input type="text" name="search_domain" value="{tmpl_var name='search_domain'}" class="search" /></td>
+                <tr class="filter">
+                    <td class="tbl_col_domain"><input type="text" name="search_domain" value="{tmpl_var name='search_domain'}" /></td>
                     <td class="tbl_col_user"><select name="search_sys_groupid">{tmpl_var name='search_sys_groupid'}</select></td>
                     <td class="tbl_col_buttons">
                         <button type="button" class="button icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name='filter_txt'}" onClick="submitForm('pageForm','domain/domain_list.php');"><span>{tmpl_var name="filter_txt"}</span></button>

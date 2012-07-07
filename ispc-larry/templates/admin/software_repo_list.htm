@@ -19,10 +19,10 @@
                     <th class="tbl_col_repo_url" scope="col"><tmpl_var name="repo_url_txt"></th>
                     <th class="tbl_col_limit" scope="col">{tmpl_var name='search_limit'}</th>
                 </tr>
-                <tr>
+                <tr class="filter">
                     <td class="tbl_col_active"><select name="search_active" class="withicons">{tmpl_var name='search_active'}</select></td>
-                    <td class="tbl_col_repo_name"><input type="text" name="search_repo_name" value="{tmpl_var name='search_repo_name'}" class="search" /></td>
-                    <td class="tbl_col_repo_url"><input type="text" name="search_repo_url" value="{tmpl_var name='search_repo_url'}" class="search" /></td>
+                    <td class="tbl_col_repo_name"><input type="text" name="search_repo_name" value="{tmpl_var name='search_repo_name'}" /></td>
+                    <td class="tbl_col_repo_url"><input type="text" name="search_repo_url" value="{tmpl_var name='search_repo_url'}" /></td>
                     <td class="tbl_col_buttons">
                         <button type="button" class="button icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="submitForm('pageForm','admin/software_repo_list.php');"><span>{tmpl_var name="filter_txt"}</span></button>
                     </td>

@@ -19,10 +19,10 @@
                 <th class="tbl_col_description" scope="col"><tmpl_var name="description_txt"></th>
                 <th class="tbl_col_limit" scope="col">{tmpl_var name='search_limit'}</th>
             </tr>
-            <tr>
-                <td class="tbl_col_name"><input type="text" name="search_name" value="{tmpl_var name='search_name'}" class="search" /></td>
-                <td class="tbl_col_due_days"><input type="text" name="search_due_days" value="{tmpl_var name='search_due_days'}" class="search" /></td>
-                <td class="tbl_col_description"><input type="text" name="search_description" value="{tmpl_var name='search_description'}" class="search" /></td>
+            <tr class="filter">
+                <td class="tbl_col_name"><input type="text" name="search_name" value="{tmpl_var name='search_name'}" /></td>
+                <td class="tbl_col_due_days"><input type="text" name="search_due_days" value="{tmpl_var name='search_due_days'}" /></td>
+                <td class="tbl_col_description"><input type="text" name="search_description" value="{tmpl_var name='search_description'}" /></td>
                 <td class="tbl_col_buttons">
                     <button type="button" class="button icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="submitForm('pageForm','billing/invoice_payment_term_list.php');"><span>{tmpl_var name="filter_txt"}</span></button>
                 </td>

@@ -20,10 +20,10 @@
                     <th class="tbl_col_action" scope="col"><tmpl_var name="action_txt"></th>
                     <th class="tbl_col_limit" scope="col">{tmpl_var name='search_limit'}</th>
                 </tr>
-                <tr>
+                <tr class="filter">
                     <td class="tbl_col_active"><select name="search_active" class="withicons">{tmpl_var name='search_active'}</select></td>
                     <td class="tbl_col_server_id"><select name="search_server_id" class="servericons">{tmpl_var name='search_server_id'}</select></td>
-                    <td class="tbl_col_pattern"><input type="text" name="search_pattern" value="{tmpl_var name='search_pattern'}" class="search" /></td>
+                    <td class="tbl_col_pattern"><input type="text" name="search_pattern" value="{tmpl_var name='search_pattern'}" /></td>
                     <td class="tbl_col_action"><select name="search_action">{tmpl_var name='search_action'}</select></td>
                     <td class="tbl_col_buttons">
                         <button type="button" class="button icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="submitForm('pageForm','mail/mail_content_filter_list.php');"><span>{tmpl_var name="filter_txt"}</span></button>

@@ -20,9 +20,9 @@
                     <th class="tbl_col_autoresponder" scope="col"><tmpl_var name="autoresponder_txt"></th>
                     <th class="tbl_col_limit" scope="col">{tmpl_var name='search_limit'}</th>
                 </tr>
-                <tr>
-                    <td class="tbl_col_email"><input type="text" name="search_email" value="{tmpl_var name='search_email'}" class="search" /></td>
-                    <td class="tbl_col_name"><input type="text" name="search_name" value="{tmpl_var name='search_name'}" class="search" /></td>
+                <tr class="filter">
+                    <td class="tbl_col_email"><input type="text" name="search_email" value="{tmpl_var name='search_email'}" /></td>
+                    <td class="tbl_col_name"><input type="text" name="search_name" value="{tmpl_var name='search_name'}" /></td>
                     <tmpl_if name="enable_custom_login"><td class="tbl_col_login"><input type="text" name="search_login" value="{tmpl_var name='search_login'}" /></td></tmpl_if>
                     <td class="tbl_col_autoresponder"><input type="text" name="search_autoresponder" value="{tmpl_var name='search_autoresponder'}" /></td>
                     <!-- TODO: Dropdown for Autoresponder n/y

@@ -22,7 +22,7 @@
                     </tmpl_if>
                     <th class="tbl_col_limit" scope="col">{tmpl_var name='search_limit'}</th>
                 </tr>
-                <tr>
+                <tr class="filter">
                     <td class="tbl_col_name"><input type="text" name="search_name" value="{tmpl_var name='search_name'}" /></td>
                     <td class="tbl_col_version"><input type="text" name="search_version" value="{tmpl_var name='search_version'}" /></td>
                     <td class="tbl_col_customerid"><select name="search_category" onChange="submitForm('pageForm','sites/aps_availablepackages_list.php');">{tmpl_var name='search_category'}</select></td>

@@ -20,10 +20,10 @@
                     <th class="tbl_col_reserved" scope="col"><tmpl_var name="reserved_txt"></th>
                     <th class="tbl_col_limit" scope="col">{tmpl_var name='search_limit'}</th>
                 </tr>
-                <tr>
+                <tr class="filter">
                     <td class="tbl_col_server_id"><select name="search_server_id" class="servericons">{tmpl_var name='search_server_id'}</select></td>
                     <td class="tbl_col_vm_id"><select name="search_vm_id">{tmpl_var name='search_vm_id'}</select></td>
-                    <td class="tbl_col_ip_address"><input type="text" name="search_ip_address" value="{tmpl_var name='search_ip_address'}" class="search" /></td>
+                    <td class="tbl_col_ip_address"><input type="text" name="search_ip_address" value="{tmpl_var name='search_ip_address'}" /></td>
                     <td class="tbl_col_reserved"><select name="search_reserved" class="withicons">{tmpl_var name='search_reserved'}</select></td>
                     <td class="tbl_col_buttons">
                         <button type="button" class="button icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="submitForm('pageForm','vm/openvz_ip_list.php');"><span>{tmpl_var name="filter_txt"}</span></button>

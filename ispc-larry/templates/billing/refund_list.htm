@@ -23,11 +23,11 @@
                     <th class="tbl_col_status_paid" scope="col"><tmpl_var name="status_paid_txt"></th>
                     <th class="tbl_col_limit" scope="col">{tmpl_var name='search_limit'}</th>
                 </tr>
-                <tr>
-                    <td class="tbl_col_invoice_number"><input type="text" name="search_invoice_number" value="{tmpl_var name='search_invoice_number'}" class="search" /></td>
-                    <td class="tbl_col_invoice_date"><input type="text" name="search_invoice_date" value="{tmpl_var name='search_invoice_date'}" class="search" /></td>
+                <tr class="filter">
+                    <td class="tbl_col_invoice_number"><input type="text" name="search_invoice_number" value="{tmpl_var name='search_invoice_number'}" /></td>
+                    <td class="tbl_col_invoice_date"><input type="text" name="search_invoice_date" value="{tmpl_var name='search_invoice_date'}" /></td>
                     <td class="tbl_col_client_id"><select name="search_client_id" onChange="submitForm('pageForm','billing/refund_list.php');" class="clienticons">{tmpl_var name='search_client_id'}</select></td>
-                    <td class="tbl_col_invoice_amount"><input type="text" name="search_invoice_amount" value="{tmpl_var name='search_invoice_amount'}" class="search" /></td>
+                    <td class="tbl_col_invoice_amount"><input type="text" name="search_invoice_amount" value="{tmpl_var name='search_invoice_amount'}" /></td>
                     <td class="tbl_col_status_sent"><select name="search_status_sent" onChange="submitForm('pageForm','billing/refund_list.php');" class="withicons">{tmpl_var name='search_status_sent'}</select></td>
                     <td class="tbl_col_status_printed"><select name="search_status_printed" onChange="submitForm('pageForm','billing/refund_list.php');" class="withicons">{tmpl_var name='search_status_printed'}</select></td>
                     <td class="tbl_col_status_paid"><select name="search_status_paid" onChange="submitForm('pageForm','billing/refund_list.php');" class="withicons">{tmpl_var name='search_status_paid'}</select></td>

@@ -18,9 +18,9 @@
                     <th class="tbl_col_template_name" scope="col"><tmpl_var name="template_name_txt"></th>
                     <th class="tbl_col_limit" scope="col">{tmpl_var name='search_limit'}</th>
                 </tr>
-                <tr>
+                <tr class="filter">
                     <td class="tbl_col_active"><select name="search_active" class="withicons">{tmpl_var name='search_active'}</select></td>
-                    <td class="tbl_col_template_name"><input type="text" name="search_template_name" value="{tmpl_var name='search_template_name'}" class="search" /></td>
+                    <td class="tbl_col_template_name"><input type="text" name="search_template_name" value="{tmpl_var name='search_template_name'}" /></td>
                     <td class="tbl_col_buttons">
                         <button type="button" class="button icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="submitForm('pageForm','vm/openvz_template_list.php');"><span>{tmpl_var name="filter_txt"}</span></button>
                     </td>

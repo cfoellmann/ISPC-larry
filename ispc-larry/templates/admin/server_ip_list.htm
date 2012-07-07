@@ -22,11 +22,11 @@
                     <th class="tbl_col_virtualhost_port" scope="col"><tmpl_var name="virtualhost_port_txt"></th>
                     <th class="tbl_col_limit" scope="col">{tmpl_var name='search_limit'}</th>
                 </tr>
-                <tr>
+                <tr class="filter">
                     <td class="tbl_col_server_id"><select name="search_server_id" class="servericons">{tmpl_var name='search_server_id'}</select></td>
                     <td class="tbl_col_client_id"><select name="search_client_id" class="clienticons">{tmpl_var name='search_client_id'}</select></td>
                     <td class="tbl_col_ip_type"><select name="search_ip_type">{tmpl_var name='search_ip_type'}</select></td>
-                    <td class="tbl_col_ip_address"><input type="text" name="search_ip_address" value="{tmpl_var name='search_ip_address'}" class="search" /></td>
+                    <td class="tbl_col_ip_address"><input type="text" name="search_ip_address" value="{tmpl_var name='search_ip_address'}" /></td>
                     <td class="tbl_col_virtualhost"><select name="search_virtualhost" class="withicons">{tmpl_var name='search_virtualhost'}</select></td>
                     <td class="tbl_col_virtualhost_port"><input type="text" name="search_virtualhost_port" value="{tmpl_var name='search_virtualhost_port'}" /></td>
                     <td class="tbl_col_buttons">

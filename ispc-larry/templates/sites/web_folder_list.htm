@@ -20,11 +20,11 @@
                 <th class="tbl_col_path" scope="col"><tmpl_var name="path_txt"></th>
                 <th class="tbl_col_limit" scope="col">{tmpl_var name='search_limit'}</th>
             </tr>
-            <tr>
+            <tr class="filter">
                 <td class="tbl_col_active"><select name="search_active" class="withicons" onChange="submitForm('pageForm','sites/web_folder_list.php');">{tmpl_var name='search_active'}</select></td>
                 <td class="tbl_col_server_id"><select name="search_server_id" onChange="submitForm('pageForm','sites/web_folder_list.php');" class="servericons">{tmpl_var name='search_server_id'}</select></td>
                 <td class="tbl_col_parent_domain_id"><select name="search_parent_domain_id" onChange="submitForm('pageForm','sites/web_folder_list.php');">{tmpl_var name='search_parent_domain_id'}</select></td>
-                <td class="tbl_col_path"><input type="text" name="search_path" value="{tmpl_var name='search_path'}" class="search" /></td>
+                <td class="tbl_col_path"><input type="text" name="search_path" value="{tmpl_var name='search_path'}" /></td>
                 <td class="tbl_col_buttons">
                     <button type="button" class="button icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="submitForm('pageForm','sites/web_folder_list.php');"><span>{tmpl_var name="filter_txt"}</span></button>
                 </td>
