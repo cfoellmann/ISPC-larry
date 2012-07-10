@@ -53,6 +53,9 @@ table.list {
     border: 1px solid #D3D3D3 !important;
     width: 100%;
 }
+table.list tr:hover, #submenu li:hover {
+    background-color: #FFFACD;
+}
 div.topbuttons {
     float: left;
     clear: both;
@@ -76,10 +79,14 @@ table.list thead th {
     border-bottom: 1px solid #CFCFCF;
 }
 table.list thead th:hover {
-    
+    cursor:pointer;
+    background: #CCCCCC !important;
 }
 table.list thead tr {
     border-radius: 5px 5px 0 0;
+}
+table.list thead tr.caption td {
+    
 }
 table.list thead tr.filter td {
     padding: 4px 0 4px 10px;
@@ -119,6 +126,10 @@ table.additem {
 .tbl_col_limit select option {
     padding: 0;
 }
+/*TODO*/
+.pnl_listarea th[class^="tbl_col"]{cursor:pointer}
+.pnl_listarea th[class^="tbl_col"]:hover{background-position:0 -15px!important}
+
 /* Forms/Input
 -------------------------------------------------------------- */
 textarea {
@@ -153,7 +164,7 @@ input[type="checkbox"] {
     margin: 6px 0;
 }
 .filter input {
-    background: url("icons/x16/search.png") 5px 5px no-repeat #FFFFFF;
+    background: url("icons/x16_sprite.png") 3px -118px no-repeat #FFFFFF;
     padding-left: 24px;
     font-size: 12px;
 }
@@ -193,11 +204,11 @@ select.servericons option {
 }
 .filter select option[value="Y"],
 .filter select option[value="y"] {
-    background-image: url("icons/x16/tick_circle_frame.png");
+    background-image: url("icons/x16/tick_circle.png");
 }
 .filter select option[value="N"],
 .filter select option[value="n"] {
-    background-image: url("icons/x16/cross_circle_frame.png");
+    background-image: url("icons/x16/cross_circle.png");
 }
 /* Input/buttons
 -------------------------------------------------------------- */
@@ -504,11 +515,11 @@ a.iconlink.upload {
 .topright a {
     display: inline-block;
     padding: 2px 0 2px 30px;
-    background: url("images/buttons.png") no-repeat;
+    background: url("icons/x16_sprite.png") no-repeat;
     color: #fff;
 }
-.topright a.button-logout { background-position: 4px -193px; }
-.topright a.button-settings { background-position: 4px -193px; }
+.topright a.button-logout { background-position: 8px -140px; }
+.topright a.button-settings { background-position: 8px -340px; }
 hgroup h2 { margin: 0; }
 
 #middle-line {
@@ -532,12 +543,12 @@ nav a {
 nav a span.button-inner {
     display: inline-block;
     font-size: 110%;
+    font-weight: bold;
     text-shadow: 0px 1px 1px #000;
     color: #eee;
-/*    text-decoration: none;*/
     padding: 5px 0 0 34px;
     height: 19px;
-    background-image: url("icons/x24_bw.png");
+    background-image: url("icons/nav_sprite.png");
     background-repeat: no-repeat;
 }
 nav a#current,
@@ -555,38 +566,37 @@ nav a#current {
 nav a#current span.button-inner {
     text-shadow: 0px 1px 1px #fff;
     color: #424242;
-    font-weight: bold;
 }
 nav a:hover {
     background-color: #787878;
 }
-nav a.button- span.button-inner { background-position: 3px 0px; }
-nav a#current.button- span.button-inner { background-position: 3px -44px; }
-nav a.button-dashboard span.button-inner { background-position: 3px -88px; }
-nav a#current.button-dashboard span.button-inner { background-position: 3px -132px; }
-nav a.button-tools span.button-inner { background-position: 3px -176px; }
-nav a#current.button-tools span.button-inner { background-position: 3px -220px; }
-nav a.button-sites span.button-inner { background-position: 3px -792px; }
-nav a#current.button-sites span.button-inner { background-position: 3px -836px; }
-nav a.button-monitor span.button-inner { background-position: 3px -968px; }
-nav a#current.button-monitor span.button-inner { background-position: 3px -1012px; }
-nav a.button-help span.button-inner { background-position: 3px -264px; }
-nav a#current.button-help span.button-inner { background-position: 3px -308px; }
-nav a.button-admin span.button-inner { background-position: 3px -616px; }
-nav a#current.button-admin span.button-inner { background-position: 3px -660px; }
-nav a.button-mail span.button-inner { background-position: 3px -352px; }
-nav a#current.button-mail span.button-inner { background-position: 3px -396px; }
-nav a.button-client span.button-inner { background-position: 3px -440px; }
-nav a#current.button-client span.button-inner { background-position: 3px -484px; }
-nav a.button-domain span.button-inner { background-position: 3px -528px; }
-nav a#current.button-domain span.button-inner { background-position: 3px -572px; }
-nav a.button-dns span.button-inner { background-position: 3px -704px; }
-nav a#current.button-dns span.button-inner { background-position: 3px -748px; }
-nav a.button-vm span.button-inner { background-position: 3px -880px; }
-nav a#current.button-vm span.button-inner { background-position: 3px -924px; }
-nav a.button-billing span.button-inner { background-position: 3px -1056px; }
-nav a#current.button-billing span.button-inner { background-position: 3px -1100px; }
 
+nav a#current.button-tools span.button-inner { background-position: 3px -6px; }
+nav a.button-tools span.button-inner { background-position: 3px -42px; }
+nav a#current.button-admin span.button-inner { background-position: 3px -78px; }
+nav a.button-admin span.button-inner { background-position: 0 -114px; }
+nav a#current.button-sites span.button-inner { background-position: 3px -150px; }
+nav a.button-sites span.button-inner { background-position: 3px -186px; }
+nav a#current.button-monitor span.button-inner { background-position: 3px -222px; }
+nav a.button-monitor span.button-inner { background-position: 3px -258px; }
+nav a#current.button- span.button-inner { background-position: 3px -294px; }
+nav a.button- span.button-inner { background-position: 3px -330px; }
+nav a#current.button-help span.button-inner { background-position: 3px -366px; }
+nav a.button-help span.button-inner { background-position: 3px -402px; }
+nav a#current.button-mail span.button-inner { background-position: 3px -438px; }
+nav a.button-mail span.button-inner { background-position: 3px -474px; }
+nav a#current.button-vm span.button-inner { background-position: 3px -510px; }
+nav a.button-vm span.button-inner { background-position: 3px -546px; }
+nav a#current.button-domain span.button-inner { background-position: 3px -582px; }
+nav a.button-domain span.button-inner { background-position: 3px -618px; }
+nav a#current.button-dns span.button-inner { background-position: 3px -654px; }
+nav a.button-dns span.button-inner { background-position: 3px -690px; }
+nav a#current.button-dashboard span.button-inner { background-position: 3px -726px; }
+nav a.button-dashboard span.button-inner { background-position: 3px -762px; }
+nav a#current.button-client span.button-inner { background-position: 3px -798px; }
+nav a.button-client span.button-inner { background-position: 3px -834px; }
+nav a#current.button-billing span.button-inner { background-position: 3px -870px; }
+nav a.button-billing span.button-inner { background-position: 3px -906px; }
 /* layout/left
 -------------------------------------------------------------- */
 #sideNav-container {
@@ -706,7 +716,7 @@ div.gs-container * {
 }
 div.gs-container input {
     height: 22px;
-    background: url("icons/search.png") no-repeat 6px 3px #CCCCCC;
+    background: url("icons/x16_sprite.png") no-repeat 6px -118px #CCCCCC;
     border: 1px solid #A3A3A3;
     padding: 2px 5px 2px 30px;
     color:#444;
@@ -922,19 +932,13 @@ footer p {
     -webkit-box-shadow: none;
     -o-box-shadow: none;
     border: 0;
-    background-image: url("icons/x24_bw.png");
+    background-image: url("icons/x24_sprite.png");
     background-repeat: no-repeat;
     background-color: transparent;
 }
-#moduletoolbar a.button.edit {
-    background-position: center -1188px;
-}
-#moduletoolbar a.button.cancel {
-    background-position: center -1276px;
-}
-#moduletoolbar a.button.import {
-    background-position: center -1364px;
-}
+#moduletoolbar a.button.edit { background-position: center -12px; }
+#moduletoolbar a.button.cancel { background-position: center -108px; }
+#moduletoolbar a.button.import { background-position: center -204px; }
 #module-view {
     bottom: 28px;
     left: 0;
@@ -1092,134 +1096,6 @@ h3.welcome {
     font-size: 20px;
     padding-left: 25px;
 }
-.systemmonitor-device {
-    background-position: -6px 5px;
-    background-repeat: no-repeat;
-    min-height: 80px;
-}
-.systemmonitor-state.state-no_state {
-    background-color: #F8F8FF;
-    border-top: 4px solid #95A19F;
-}
-.systemmonitor-state.state-unknown {
-    background-color: #CECFC5;
-    border-top: 4px solid #30302E;
-}
-.systemmonitor-state.state-ok {
-    background-color: #ADFFA2;
-    border-top: 4px solid #23FB00;
-}
-.systemmonitor-state.state-info {
-    background-color: #D4E2FF;
-    border-top: 4px solid #183E99;
-}
-.systemmonitor-state.state-warning {
-    background-color: #FFDA93;
-    border-top: 4px solid #FFA800;
-}
-.systemmonitor-state.state-critical {
-    background-color: #FFB9B9;
-    border-top: 4px solid #FF0000;
-}
-.systemmonitor-state.state-error {
-    background-color: #FF7F7F;
-    border-top: 4px solid #FF0000;
-}
-.systemmonitor-state.state-no_state-ve {
-    background-color: #F8F8FF;
-    border-top: 4px solid #95A19F;
-    float: left;
-    width: 213px;
-}
-.systemmonitor-state.state-unknown-ve {
-    background-color: #CECFC5;
-    border-top: 4px solid #30302E;
-    float: left;
-    width: 213px;
-}
-.systemmonitor-state.state-ok-ve {
-    background-color: #ADFFA2;
-    border-top: 4px solid #23FB00;
-    float: left;
-    width: 213px;
-}
-.systemmonitor-state.state-info-ve {
-    background-color: #D4E2FF;
-    border-top: 4px solid #183E99;
-    float: left;
-    width: 213px;
-}
-.systemmonitor-state.state-warning-ve {
-    background-color: #FFDA93;
-    border-top: 4px solid #FFA800;
-    float: left;
-    width: 213px;
-}
-.systemmonitor-state.state-critical-ve {
-    background-color: #FFB9B9;
-    border-top: 4px solid #FF0000;
-    float: left;
-    width: 213px;
-}
-.systemmonitor-state.state-error-ve {
-    background-color: #FF7F7F;
-    border-top: 4px solid #FF0000;
-    float: left;
-    width: 213px;
-}
-.systemmonitor-state {
-    overflow: hidden; 
-    border-bottom: 1px solid #000;
-    margin-bottom: 10px;
-}
-.systemmonitor-state:hover {
-    background-color: #FFFACD;
-}
-.systemmonitor-state p {
-    float:left;
-    margin-right: 5px;
-}
-.systemmonitor-device.device-server {
-    background-image: url("icons/x64/server.png");
-}
-.systemmonitor-device.device-system {
-    background-image: url("icons/x64/network.png");
-}
-.systemmonitor-content.icons32 {
-    background-position: 50px 5px;
-    background-repeat: no-repeat;
-    padding: 10px 10px 2px 90px;
-}
-.systemmonitor-content.icons32.ico-unknown {
-    background-image: url("icons/x32/state_unknown.png");
-}
-.systemmonitor-content.icons32.ico-ok {
-    background-image: url("icons/x32/state_ok.png");
-}
-.systemmonitor-content.icons32.ico-info {
-    background-image: url("icons/x32/state_info.png");
-}
-.systemmonitor-content.icons32.ico-warning {
-    background-image: url("icons/x32/state_warning.png");
-}
-.systemmonitor-content.icons32.ico-critical {
-    background-image: url("icons/x32/state_critical.png");
-}
-.systemmonitor-content.icons32.ico-error {
-    background-image: url("icons/x32/state_error.png");
-}
-div.state-info { background-color: #87D087; }
-div.state-warning { border-color: #FFFFE1; }
-div.state-error { border-color: #FF0000; }
-div.icon32 {
-    float: left;
-    margin: 2px 10px;
-    width: 32px;
-    height: 32px;
-}
-.state-info div.icon32 { background: url("icons/x32/info.png") no-repeat; }
-.state-warning div.icon32 { background: url("icons/x32/warning.png") no-repeat; }
-.state-error div.icon32 { background: url("icons/x32/error.png") no-repeat; }
 #dashlets {
     float: left;
 }
@@ -1260,7 +1136,7 @@ div.icon32 {
     margin: 0;
 }
 .dashboard-modules {
-    background-image: url("icons/x24_bw.png");
+    background-image: url("icons/nav_sprite.png");
     background-color: #D9ECF4;
     background-repeat: no-repeat;
     border: 1px solid #BBD3DA;
@@ -1324,6 +1200,116 @@ div.icon32 {
 .scroller {
     overflow: auto;
 }
+
+/* Systemmonitor
+-------------------------------------------------------------- */
+.systemmonitor-server,
+.systemmonitor-ve,
+.systemmonitor-state {
+    font-size: 0.9em;
+    float: left;
+    width: 100%;
+    border-bottom: 1px solid #a0a0a0;
+}
+.systemmonitor-server:hover,
+.systemmonitor-vm:hover { background-color: #FFFACD; }
+.state-no_state,
+.state-no_state-ve {
+    border-top: 4px solid #95A19F;
+    background-color: #f8f8ff;
+}
+.state-unknown,
+.state-unknown-ve {
+    border-top: 4px solid #30302e;
+    background-color: #cecfc5;
+}
+.state-ok,
+.state-ok-ve {
+    border-top: 4px solid #23fb00;
+    background-color: #adffa2;
+}
+.state-info,
+.state-info-ve {
+    border-top: 4px solid #183e99;
+    background-color: #d4e2ff;
+}
+.state-warning,
+.state-warning-ve {
+    border-top: 4px solid #ffa800;
+    background-color: #ffda93;
+}
+.state-critical,
+.state-critical-ve {
+    border-top: 4px solid #ff0000;
+    background-color: #ffb9b9;
+}
+.state-error,
+.state-error-ve {
+    border-top: 4px solid #ff0000;
+    background-color: #ff7f7f;
+}       
+div.icoDevice {
+    float: left;
+    width: 64px;
+    height: 64px;
+    margin: 5px;
+    background: url("icons/device_sprite.png") no-repeat transparent;
+}
+.systemmonitor-server div.icoDevice { background-position: 0 -64px; }
+.systemmonitor-ve div.icoDevice { background-position: 0 -128px; }
+.systemmonitor-network div.icoDevice { background-position: 0 0; }
+div.statusDevice, div.statusMsg { float: left; }
+
+div.statusMsg p { 
+    float: left;
+    padding: 5px;
+}
+.systemmonitor-state .status {
+    margin: 5px;
+}
+.status {
+    float: right;
+    width: 32px;
+    height: 32px;
+    background: url("icons/x32_sprite.png") no-repeat transparent;
+}
+div.status {
+    float: left !important;
+}
+.state-no_state .status,
+.state-no_state-ve .status,
+.state-unknown .status,
+.state-unknown-ve .status { background-position: 0 -70px; }
+.state-ok .status,
+.state-ok-ve .status { background-position: 0 -126px; }
+.state-info .status,
+.state-info-ve .status { background-position: 0 -182px; }
+.state-warning .status,
+.state-warning-ve .status { background-position: 0 -14px; }
+.state-critical .status,
+.state-critical-ve .status { background-position: 0 -294px; }
+.state-error .status,
+.state-error-ve .status { background-position: 0 -238px; }
+
+/* Usage unknown  
+.systemmonitor-content table {
+    border: none;
+    margin-top: 10px;
+}
+
+.systemmonitor-content * .online {
+    border: 1px solid #ffffff;
+    background-color: #E3FFB8;
+    color: #000000;
+    padding:0px 5px;
+}
+.systemmonitor-content * .offline {
+    border: 1px solid #ffffff;
+    background-color: #d12f19; 
+    color:#ffffff;
+    padding:0px 5px;
+}*/
+
 /* Lists
 -------------------------------------------------------------- */
 .listbox {
@@ -1753,28 +1739,15 @@ a.button,
     padding: 5px 10px 6px 7px;
     text-decoration: none;
 }
-.iconstxt {
-    background-position: 4px center;
-    background-repeat: no-repeat;
-}
-.iconstxt span {
-    padding-left: 20px;
-}
-.iconstxt.icoPositive {
-    background-image: url("icons/x16/tick_circle_frame.png");
-}
-.iconstxt.icoNegative {
-    background-image: url("icons/x16/cross_circle_frame.png");
-}
-.iconstxt.icoAdd {
-    background-image: url("icons/x16/plus_circle_frame.png");
-}
-.iconstxt.icoKey {
-    background-image: url("icons/x16/key.png");
-}
-.iconstxt.icoDelete {
-    background-image: url("icons/x16/minus_circle_frame.png");
-}
+.iconstxt { background: url("icons/button_sprite.png") no-repeat transparent; }
+.iconstxt span { padding-left: 20px; font-weight: bold; }
+.iconstxt.icoPositive { background-position: 6px -130px; }
+.iconstxt.icoNegative { background-position: 6px -98px; }
+.iconstxt.icoAdd { background-position: 6px -66px; }
+.iconstxt.icoKey { background-position: 6px -1px; }
+.iconstxt.icoDelete { background-position: 6px -34px; }
+.iconstxt.icoDownload { background-position: 6px -1px; }
+.iconstxt.icoRestore { background-position: 6px -1px; }
 .buttons a.negative, button.negative {
     color: #D12F19;
 }
@@ -1797,47 +1770,28 @@ a.button,
     display: none;
     height: 16px;
 }
-.icons16 span {
-    display: none;
-}
+.icons16 span { display: none; }
 a.icons16 {
-    background-position: 1px 1px;
-    background-repeat: no-repeat;
     height: 18px;
-    padding: 0;
     width: 18px;
+    padding: 0;
+    background: url("icons/x16_sprite.png") no-repeat transparent;
 }
 button.icons16 {
-    background-position: 1px 1px;
-    background-repeat: no-repeat;
     height: 20px;
-    padding: 0;
     width: 20px;
+    padding: 0;
+    background: url("icons/x16_sprite.png") no-repeat transparent;
 }
-.icons16.icoDelete {
-    background-image: url("icons/x16/minus_circle_frame.png");
-}
-.icons16.icoFilter {
-    background-image: url("icons/x16/funnel.png");
-}
-.icons16.icoEdit {
-    background-image: url("icons/x16/wrench.png");
-}
-.icons16.icoDbAdmin {
-    background-image: url("icons/x16/database.png");
-}
-.icons16.icoLoginAs {
-    background-image: url("icons/x16/user_go.png");
-}
-.icons16.icoWebmailer {
-    background-image: url("icons/x16/mails_arrow.png");
-}
-.icons16.icoPDF {
-    background-image: url("icons/x16/pdf.png");
-}
-.icons16.icoAction {
-    background-image: url("icons/x16/arrow.png");
-}
+
+.icons16.icoDelete { background-position: -1px -81px; }
+.icons16.icoFilter { background-position: -1px -161px; }
+.icons16.icoEdit { background-position: -1px -1px; }
+.icons16.icoDbAdmin { background-position: -1px -221px; }
+.icons16.icoLoginAs { background-position: -1px -21px; }
+.icons16.icoWebmailer { background-position: -1px -81px; }
+.icons16.icoPDF { background-position: -1px -61px; }
+.icons16.icoAction { background-position: -1px -241px; }
 
 /* Flags
 -------------------------------------------------------------- */
