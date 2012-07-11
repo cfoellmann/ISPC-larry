@@ -1,10 +1,10 @@
-<!-- beginn: toolbar -->
+<!-- begin: toolbar -->
 <div id="moduletoolbar">
     <a class="button edit" onClick="loadContent('admin/language_list.php?lng_select={tmpl_var name='lang'}');" href="#" title="{tmpl_var name="add_new_record_txt"}">{tmpl_var name='btn_cancel_txt'}</a>
 </div>
 <!-- end: toolbar -->
 
-<!-- beginn: modulebody -->
+<!-- begin: modulebody -->
 <div id="module-title"><h1>Language File Edit: {tmpl_var name="file_path"}</h1></div>
 <div class="module-box boxlistcontent" id="modulecontainer">
     <!-- tabs -->
@@ -29,7 +29,7 @@
         <div id="errorMsg"><h3>ERROR</h3><ol><tmpl_var name="error"></ol></div>
     </tmpl_if>
     
-    <!-- beginn: modulecontent -->
+    <!-- begin: modulecontent -->
     <div class="panel panel_language_edit">
         <span class="wf_oneField">
             <tmpl_loop name="records">
