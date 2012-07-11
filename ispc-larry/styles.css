@@ -692,7 +692,7 @@ nav a.button-billing span.button-inner { background-position: 3px -906px; }
 
 #sidebar {
     background: url("images/bg_linen_dark.jpg") repeat #666;
-    bottom: 20px;
+    bottom: 0;
     left: 0;
     position: fixed;
     top: 68px;
