@@ -1324,9 +1324,6 @@ div.status {
     bottom: 0;
     overflow: auto;
 }
-.listbox .scroller.withfooter {
-    bottom: 42px;
-}
 .listbox .boxtitle + .scroller {
     top: 34px;
 }
@@ -1423,98 +1420,6 @@ select.decorated {
     position: relative;
     z-index: 10;
 }
-.listbox .boxfooter {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 42px;
-    border-top: 1px solid #ccdde4;
-    background: #d9ecf4;
-    -webkit-box-shadow: inset 0 1px 0 0 #fff;
-    -moz-box-shadow: inset 0 1px 0 0 #fff;
-    box-shadow: inset 0 1px 0 0 #fff;
-    white-space: nowrap;
-    overflow: hidden;
-}
-.boxfooter .listbutton {
-    display: inline-block;
-    text-decoration: none;
-    width: 48px;
-    border-right: 1px solid #fff;
-    background: #c7e3ef;
-    padding: 3px 0;
-    margin-top: 1px;
-}
-.boxfooter .listbutton .inner {
-    display: inline-block;
-    width: 48px;
-    height: 35px;
-    text-indent: -1000px;
-    background: url("images/buttons.png") -1000px 0 no-repeat;
-}
-.boxfooter .listbutton.add .inner {
-    background-position: 10px -1301px;
-}
-.boxfooter .listbutton.delete .inner {
-    background-position: 10px -1342px;
-}
-.boxfooter .listbutton.groupactions .inner {
-    background-position: 5px -1382px;
-}
-.boxfooter .listbutton.addto .inner {
-    background-position: 5px -1422px;
-}
-.boxfooter .listbutton.addcc .inner {
-    background-position: 5px -1462px;
-}
-.boxfooter .listbutton.addbcc {
-    width: 54px;
-}
-.boxfooter .listbutton.addbcc .inner {
-    width: 54px;
-    background-position: 2px -1502px;
-}
-.boxfooter .listbutton.disabled .inner {
-    opacity: 0.4;
-    filter: alpha(opacity=40);
-}
-.boxfooter .countdisplay {
-    display: inline-block;
-    position: relative;
-    top: 10px;
-    color: #69929e;
-    padding: 3px 6px;
-}
-.boxpagenav {
-    position: absolute;
-    top: 10px;
-    right: 6px;
-    width: auto;
-}
-.boxpagenav a.icon {
-    display: inline-block;
-    padding: 1px 3px;
-    height: 13px;
-    width: 14px;
-    text-indent: 1000px;
-    vertical-align: bottom;
-    overflow: hidden;
-    background: url("images/buttons.png") -4px -286px no-repeat;
-}
-.boxpagenav a.icon.prevpage {
-    background-position: -4px -301px;
-}
-.boxpagenav a.icon.nextpage {
-    background-position: -28px -301px;
-}
-.boxpagenav a.icon.lastpage {
-    background-position: -28px -286px;
-}
-.boxpagenav a.icon.disabled {
-    opacity: 0.4;
-    filter: alpha(opacity=40);
-}
 .centerbox {
     width: 40em;
     margin: 16px auto;
@@ -1533,33 +1438,6 @@ select.decorated {
 .footerleft {
     padding: 0 12px;
 }
-.propform fieldset {
-    margin-bottom: 20px;
-    border: 0;
-    padding: 0;
-}
-.propform fieldset legend {
-    display: block;
-    font-size: 14px;
-    font-weight: bold;
-    padding-bottom: 10px;
-    margin-bottom: 0;
-}
-.propform fieldset fieldset legend {
-    color: #666;
-    font-size: 12px;
-}
-fieldset.floating {
-    float: left;
-    margin-right: 10px;
-    margin-bottom: 10px;
-}
-table.propform {
-    width: 100%;
-    border-spacing: 0;
-    border-collapse: collapse;
-}
-
 /* Login form
 -------------------------------------------------------------- */
 #login-form {
