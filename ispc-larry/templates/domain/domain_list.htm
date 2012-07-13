@@ -19,12 +19,12 @@
             <thead>
                 <tr class="caption">
                     <th class="tbl_col_domain" scope="col"><tmpl_var name="domain_txt"></th>
-                    <th class="tbl_col_domain" scope="col"><tmpl_var name="user_txt"></th>
+                    <th class="tbl_col_username" scope="col"><tmpl_var name="user_txt"></th>
                     <th class="tbl_col_limit" scope="col"><a class="button icons16 icoLimit" href="#"><span>Limit</span></a>{tmpl_var name='search_limit'}</th>
                 </tr>
                 <tr class="filter">
                     <td class="tbl_col_domain"><input type="text" name="search_domain" value="{tmpl_var name='search_domain'}" /></td>
-                    <td class="tbl_col_user"><select name="search_sys_groupid">{tmpl_var name='search_sys_groupid'}</select></td>
+                    <td class="tbl_col_username"><select name="search_sys_groupid" class="clienticons">{tmpl_var name='search_sys_groupid'}</select></td>
                     <td class="tbl_col_buttons">
                         <button type="button" class="button icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name='filter_txt'}" onClick="submitForm('pageForm','domain/domain_list.php');"><span>{tmpl_var name="filter_txt"}</span></button>
                         <button type="button" class="button icons16 icoFilterReset" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="#"><span>{tmpl_var name="filter_txt"}</span></button>
@@ -34,7 +34,7 @@
             <tbody>
                 <tmpl_loop name="records">
                     <tr class="tbl_row_<tmpl_if name='__EVEN__'}even<tmpl_else>uneven</tmpl_if>">
-                        <td class="tbl_col_domain"><a href="#" onClick="loadContent('domain/domain_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="domain"}</a></td>
+                        <td class="tbl_col_domain"><a href="#" onClick="loadContent('domain/domain_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="domain"}</a><a href="http://{tmpl_var name="domain"}" target="_blank" class="button icons16 icoLink"><span>Link</span></a></td>
                         <td class="tbl_col_domain">{tmpl_var name="sys_groupid"}</td>
                         <td class="tbl_col_buttons">
                             <tmpl_if name="is_admin">  

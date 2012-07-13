@@ -43,7 +43,7 @@
                     <td class="tbl_col_contact_name"><a href="#" onClick="loadContent('client/client_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="contact_name"}</a></td>
                     <td class="tbl_col_username"><a href="#" onClick="loadContent('client/client_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="username"}</a></td>
                     <td class="tbl_col_city">{tmpl_var name="city"}</td>
-                    <td class="tbl_col_country">{tmpl_var name="country"}</td>
+                    <td class="tbl_col_country"><div class="country-{tmpl_var name="country"}"><span>{tmpl_var name="country"}</span></div></td>
                     <td class="tbl_col_buttons">
                         <a class="button icons16 icoEdit" href="javascript: loadContent('client/client_edit.php?id={tmpl_var name='id'}');"><span>{tmpl_var name='edit_txt'}</span></a>
                         <tmpl_if name="is_admin">
