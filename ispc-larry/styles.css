@@ -812,9 +812,7 @@ ul#submenu {
     padding: 6px 8px 5px 8px;
     /* height: 17px; -- doesn't affect table-cells in FF */
 }
-#submenu li:hover {
-    background-color: #FFFACD;
-}
+
 #submenu li a {
     display: block;
     color: #376572;
