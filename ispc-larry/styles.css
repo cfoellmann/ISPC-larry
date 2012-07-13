@@ -33,7 +33,8 @@ h1 {
 -------------------------------------------------------------- */
 table,input[type="text"],input[type="password"],textarea,select,input.button,
 .formbuttons input.button,a.button,.button,div.gs-container input,ul.gs-resultbox,
-.dash-mods,.dash-limits,#sideNav-container,#login-form .box-inner,ul li .app-image {
+.dash-mods,.dash-limits,#sideNav-container,#login-form .box-inner,ul li .app-image,
+.buttons button {
     -moz-border-radius:5px;
     -webkit-border-radius:5px;
     -khtml-border-radius:5px;
@@ -349,6 +350,7 @@ a.button {
     margin: 0 4px;
 }
 .buttons button {
+    background-color: #F7F7F7;
     -moz-border-bottom-colors: none;
     -moz-border-image: none;
     -moz-border-left-colors: none;
