@@ -65,8 +65,13 @@ table.list {
     border: 1px solid #D3D3D3 !important;
     width: 100%;
 }
-table.list tr:hover, #submenu li:hover {
+table.list tr:hover,
+#submenu li:hover {
     background-color: #FFFACD;
+}
+table.list th:hover,
+table.list td:hover {
+    background-color: #D9DAFF;
 }
 div.topbuttons {
     float: left;
@@ -108,6 +113,9 @@ table.list thead th {
 table.list thead th:hover {
     cursor:pointer;
     background: #CCCCCC !important;
+}
+table.list thead td:hover {
+    background: inherit !important;
 }
 table.list thead tr.filter td {
     padding: 4px 0 4px 10px;
