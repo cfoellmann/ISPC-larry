@@ -77,12 +77,22 @@ table.topbuttons {
     float: left;
 }
 table.list th[class$="_active"],
-table.list td[class$="_active"] {
-    
+table.list td[class$="_active"],
+table.list th[class$="_reserved"],
+table.list td[class$="_reserved"],
+table.list th.tbl_col_remote_access,
+table.list td.tbl_col_remote_access,
+table.list th[class$="_pid"],
+table.list td[class$="_pid"] {
+    width: 70px;
+    text-align: center;
+}
+table.list th[class$="_ip_address"],
+table.list td[class$="_ip_address"] {
+    width: 100px;
+    text-align: center;
 }
 
-table.list th[class$="_active"],
-table.list td[class$="_active"] { width: 80px; }
 table.list .tbl_col_buttons,
 table.list .tbl_col_limit {
     width: 120px;
@@ -350,6 +360,8 @@ a.button {
     margin: 0 2px;
     padding: 2px 5px;
     color: #525252;
+    width: auto;
+    overflow: visible;
     text-shadow: 0px 1px 1px #fff;
     border: 1px solid #c6c6c6;
     box-shadow: 0 1px 1px 0 rgba(140, 140, 140, 0.3);
@@ -482,11 +494,7 @@ a.iconlink.upload { background-position: -6px -437px; }
     line-height: 17px;
     padding: 5px 10px 5px 7px;
 }
-.buttons button {
-    overflow: visible;
-    padding: 4px 10px 3px 7px;
-    width: auto;
-}
+
 .iconstxt { background: url("icons/button_sprite.png") no-repeat transparent; }
 .iconstxt span { padding-left: 20px; font-weight: bold; }
 .iconstxt.icoPositive { background-position: 6px -130px; }
@@ -502,6 +510,10 @@ a.iconlink.upload { background-position: -6px -437px; }
 
 .buttons a.positive, button.positive {
     color: #529214;
+}
+div[id^=ir-] {
+    text-align: center;
+    background-position: center center;
 }
 #ir-Yes {
     background-image: url("icons/x16/tick_circle.png");
@@ -534,6 +546,7 @@ button.icons16 {
 
 .icons16.icoDelete { background-position: 0 -80px; }
 .icons16.icoFilter { background-position: 0 -160px; }
+.icons16.icoFilterReset { background-position: 0 -180px; }
 .icons16.icoEdit { background-position: 0 -0px; }
 .icons16.icoDbAdmin { background-position: 0 -220px; }
 .icons16.icoLoginAs { background-position: 0 -20px; }

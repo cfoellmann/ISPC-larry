@@ -27,16 +27,17 @@
                     <td class="tbl_col_reserved"><select name="search_reserved" class="withicons">{tmpl_var name='search_reserved'}</select></td>
                     <td class="tbl_col_buttons">
                         <button type="button" class="button icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="submitForm('pageForm','vm/openvz_ip_list.php');"><span>{tmpl_var name="filter_txt"}</span></button>
+                        <button type="button" class="button icons16 icoFilterReset" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="submitForm('pageForm','vm/openvz_ip_list.php');"><span>{tmpl_var name="filter_txt"}</span></button>
                     </td>
                 </tr>
             </thead>
             <tbody>
             <tmpl_loop name="records">
                 <tr class="tbl_row_<tmpl_if name='__EVEN__'}even<tmpl_else>uneven</tmpl_if>">
-                    <td class="tbl_col_server_id"><a href="#" onClick="loadContent('vm/openvz_ip_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="server_id"}</a></td>
-                    <td class="tbl_col_vm_id"><a href="#" onClick="loadContent('vm/openvz_ip_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="vm_id"}</a></td>
+                    <td class="tbl_col_server_id">{tmpl_var name="server_id"}</td>
+                    <td class="tbl_col_vm_id">{tmpl_var name="vm_id"}</a></td>
                     <td class="tbl_col_ip_address"><a href="#" onClick="loadContent('vm/openvz_ip_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="ip_address"}</a></td>
-                    <td class="tbl_col_reserved"><a href="#" onClick="loadContent('vm/openvz_ip_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="reserved"}</a></td>
+                    <td class="tbl_col_reserved">{tmpl_var name="reserved"}</td>
                     <td class="tbl_col_buttons">
                         <a class="button icons16 icoEdit" href="javascript: loadContent('vm/openvz_ip_edit.php?id={tmpl_var name='id'}');"><span>{tmpl_var name='edit_txt'}</span></a>
                         <a class="button icons16 icoDelete" href="javascript: del_record('vm/openvz_ip_del.php?id={tmpl_var name='id'}&phpsessid={tmpl_var name='phpsessid'}','{tmpl_var name='delete_confirmation'}');"><span>{tmpl_var name='delete_txt'}</span></a>

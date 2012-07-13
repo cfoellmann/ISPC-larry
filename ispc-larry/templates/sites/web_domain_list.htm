@@ -16,26 +16,27 @@
         <table class="list">
             <thead>
                 <tr class="caption">
-                    <th class="tbl_col_domain_id" scope="col"><tmpl_var name="domain_id_txt"></th>
+                    <th class="tbl_col_domain_pid" scope="col"><tmpl_var name="domain_id_txt"></th>
                     <th class="tbl_col_active" scope="col"><tmpl_var name="active_txt"></th>
                     <th class="tbl_col_server_id" scope="col"><tmpl_var name="server_id_txt"></th>
                     <th class="tbl_col_domain" scope="col"><tmpl_var name="domain_txt"></th>
                     <th class="tbl_col_limit" scope="col"><a class="button icons16 icoLimit" href="#"><span>Limit</span></a>{tmpl_var name='search_limit'}</th>
                 </tr>
                 <tr class="filter">
-                    <td class="tbl_col_domain_id"><input type="text" size="5" name="search_domain_id" value="{tmpl_var name='search_domain_id'}" /></td>
+                    <td class="tbl_col_domain_pid"><input type="text" size="5" name="search_domain_id" value="{tmpl_var name='search_domain_id'}" /></td>
                     <td class="tbl_col_active"><select name="search_active" class="withicons">{tmpl_var name='search_active'}</select></td>
                     <td class="tbl_col_server_id"><select name="search_server_id" class="clienticons">{tmpl_var name='search_server_id'}</select></td>
                     <td class="tbl_col_domain"><input type="text" name="search_domain" value="{tmpl_var name='search_domain'}" /></td>
                     <td class="tbl_col_buttons">
                         <button type="button" class="button icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="submitForm('pageForm','sites/web_domain_list.php');"><span>{tmpl_var name="filter_txt"}</span></button>
+                        <button type="button" class="button icons16 icoFilterReset" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="#"><span>{tmpl_var name="filter_txt"}</span></button>
                     </td>
                 </tr>
             </thead>
             <tbody>
             <tmpl_loop name="records">
             <tr class="tbl_row_<tmpl_if name='__EVEN__'}even<tmpl_else>uneven</tmpl_if>">
-                <td class="tbl_col_domain_id">{tmpl_var name="domain_id"}</td>
+                <td class="tbl_col_domain_pid">{tmpl_var name="domain_id"}</td>
                 <td class="tbl_col_active">{tmpl_var name="active"}</td>
                 <td class="tbl_col_server_id">{tmpl_var name="server_id"}</td>
                 <td class="tbl_col_domain"><a href="#" onClick="loadContent('sites/web_domain_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="domain"}</a></td>

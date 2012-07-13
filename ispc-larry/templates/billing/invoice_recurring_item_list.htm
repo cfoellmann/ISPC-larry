@@ -17,7 +17,7 @@
                     <th class="tbl_col_active" scope="col"><tmpl_var name="active_txt"></th>
                     <th class="tbl_col_type" scope="col"><tmpl_var name="type_txt"></th>
                     <th class="tbl_col_name" scope="col"><tmpl_var name="name_txt"></th>
-                    <th class="tbl_col_client_id" scope="col"><tmpl_var name="client_id_txt"></th>
+                    <th class="tbl_col_client_pid" scope="col"><tmpl_var name="client_id_txt"></th>
                     <th class="tbl_col_price" scope="col"><tmpl_var name="price_txt"></th>
                     <th class="tbl_col_next_payment_date" scope="col"><tmpl_var name="next_payment_date_txt"></th>
                     <th class="tbl_col_limit" scope="col"><a class="button icons16 icoLimit" href="#"><span>Limit</span></a>{tmpl_var name='search_limit'}</th>
@@ -26,11 +26,12 @@
                     <td class="tbl_col_active"><select name="search_active" onChange="submitForm('pageForm','billing/invoice_recurring_item_list.php');" class="withicons">{tmpl_var name='search_active'}</select></td>
                     <td class="tbl_col_type"><select name="search_type" onChange="submitForm('pageForm','billing/invoice_recurring_item_list.php');">{tmpl_var name='search_type'}</select></td>
                     <td class="tbl_col_name"><input type="text" name="search_name" value="{tmpl_var name='search_name'}" /></td>
-                    <td class="tbl_col_client_id"><select name="search_client_id" onChange="submitForm('pageForm','billing/invoice_recurring_item_list.php');" class="clienticons">{tmpl_var name='search_client_id'}</select></td>
+                    <td class="tbl_col_client_pid"><select name="search_client_id" onChange="submitForm('pageForm','billing/invoice_recurring_item_list.php');" class="clienticons">{tmpl_var name='search_client_id'}</select></td>
                     <td class="tbl_col_price"><input type="text" name="search_price" value="{tmpl_var name='search_price'}" /></td>
                     <td class="tbl_col_next_payment_date"><input type="text" name="search_next_payment_date" value="{tmpl_var name='search_next_payment_date'}" /></td>
                     <td class="tbl_col_buttons">
                         <button type="button" class="button icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="submitForm('pageForm','billing/invoice_recurring_item_list.php');"><span>{tmpl_var name="filter_txt"}</span></button>
+                        <button type="button" class="button icons16 icoFilterReset" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="#"><span>{tmpl_var name="filter_txt"}</span></button>
                     </td>
                 </tr>
             </thead>
@@ -40,7 +41,7 @@
                     <td class="tbl_col_active">{tmpl_var name="active"}</td>
                     <td class="tbl_col_type">{tmpl_var name="type"}</td>
                     <td class="tbl_col_name"><a href="#" onClick="loadContent('billing/invoice_recurring_item_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="name"}</a></td>
-                    <td class="tbl_col_client_id">{tmpl_var name="client_id"}</td>
+                    <td class="tbl_col_client_pid">{tmpl_var name="client_id"}</td>
                     <td class="tbl_col_price">{tmpl_var name="price"} {tmpl_var name="currency_txt"}</td>
                     <td class="tbl_col_next_payment_date">{tmpl_var name="next_payment_date"}</td>
                     <td class="tbl_col_buttons">

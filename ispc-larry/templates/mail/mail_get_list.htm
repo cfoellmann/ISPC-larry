@@ -28,7 +28,8 @@
                     <td class="tbl_col_source_username"><input type="text" name="search_source_username" value="{tmpl_var name='search_source_username'}" /></td>
                     <td class="tbl_col_destination"><input type="text" name="search_destination" value="{tmpl_var name='search_destination'}" /></td>
                     <td class="tbl_col_buttons">
-                        <button type="button" class="button icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="submitForm('pageForm','mail/mail_get_list.php');"><span>{tmpl_var name="filter_txt"}</span>
+                        <button type="button" class="button icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="submitForm('pageForm','mail/mail_get_list.php');"><span>{tmpl_var name="filter_txt"}</span></button>
+                        <button type="button" class="button icons16 icoFilterReset" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="#"><span>{tmpl_var name="filter_txt"}</span></button>
                     </td>
                 </tr>
             </thead>

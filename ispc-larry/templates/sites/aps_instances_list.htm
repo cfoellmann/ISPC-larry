@@ -32,9 +32,8 @@
                     <td class="tbl_col_installlocation">&nbsp;</td>
                     <td class="tbl_col_instancestatus"><select name="search_instance_status" onChange="submitForm('pageForm','sites/aps_installedpackages_list.php');">{tmpl_var name='search_instance_status'}</select></td>
                     <td class="tbl_col_buttons">
-                    <button type="button" class="button icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name='filter_txt'}" onClick="submitForm('pageForm','sites/aps_installedpackages_list.php');">
-                        <span>{tmpl_var name='filter_txt'}</span>
-                    </button>
+                        <button type="button" class="button icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name='filter_txt'}" onClick="submitForm('pageForm','sites/aps_installedpackages_list.php');"><span>{tmpl_var name='filter_txt'}</span></button>
+                        <button type="button" class="button icons16 icoFilterReset" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="#"><span>{tmpl_var name="filter_txt"}</span></button>
                     </td>
                 </tr>
             </thead>

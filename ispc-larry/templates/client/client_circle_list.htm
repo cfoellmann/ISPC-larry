@@ -13,26 +13,27 @@
         <table class="list">
             <thead>
                 <tr class="caption">
-                    <th class="tbl_col_circle_id" scope="col"><tmpl_var name="circle_id_txt"></th>
+                    <th class="tbl_col_circle_pid" scope="col"><tmpl_var name="circle_id_txt"></th>
                     <th class="tbl_col_active" scope="col"><tmpl_var name="active_txt"></th>
                     <th class="tbl_col_circle_name" scope="col"><tmpl_var name="circle_name_txt"></th>
                     <th class="tbl_col_description" scope="col"><tmpl_var name="description_txt"></th>
                     <th class="tbl_col_limit" scope="col"><a class="button icons16 icoLimit" href="#"><span>Limit</span></a>{tmpl_var name='search_limit'}</th>
                 </tr>
                 <tr class="filter">
-                    <td class="tbl_col_circle_id"><input type="text" name="search_circle_id" value="{tmpl_var name='search_circle_id'}" /></td>
+                    <td class="tbl_col_circle_pid"><input type="text" name="search_circle_id" value="{tmpl_var name='search_circle_id'}" /></td>
                     <td class="tbl_col_active"><select name="search_active" class="withicon" >{tmpl_var name='search_active'}</select></td>
                     <td class="tbl_col_circle_name"><input type="text" name="search_circle_name" value="{tmpl_var name='search_circle_name'}" /></td>
                     <td class="tbl_col_description"><input type="text" name="search_description" value="{tmpl_var name='search_description'}" /></td>
                     <td class="tbl_col_buttons">
                         <button type="button" class="button icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="submitForm('pageForm','client/client_circle_list.php');"><span>{tmpl_var name="filter_txt"}</span></button>
+                        <button type="button" class="button icons16 icoFilterReset" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="#"><span>{tmpl_var name="filter_txt"}</span></button>
                     </td>
                 </tr>
             </thead>
             <tbody>
                 <tmpl_loop name="records">
                 <tr class="tbl_row_<tmpl_if name='__EVEN__'}even<tmpl_else>uneven</tmpl_if>">
-                    <td class="tbl_col_circle_id"><a href="#" onClick="loadContent('client/client_circle_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="circle_id"}</a></td>
+                    <td class="tbl_col_circle_pid"><a href="#" onClick="loadContent('client/client_circle_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="circle_id"}</a></td>
                     <td class="tbl_col_active">{tmpl_var name="active"}</td>
                     <td class="tbl_col_circle_name"><a href="#" onClick="loadContent('client/client_circle_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="circle_name"}</a></td>
                     <td class="tbl_col_description">{tmpl_var name="description"}</td>
