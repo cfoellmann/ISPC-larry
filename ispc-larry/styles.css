@@ -89,7 +89,9 @@ table.list td[class$="_reserved"],
 table.list th.tbl_col_remote_access,
 table.list td.tbl_col_remote_access,
 table.list th[class$="_pid"],
-table.list td[class$="_pid"] {
+table.list td[class$="_pid"],
+table.list th.tbl_col_veid,
+table.list td.tbl_col_veid {
     width: 70px;
     text-align: center;
 }
@@ -403,92 +405,6 @@ a.button.disabled span.inner {
     opacity: 0.4;
     filter: alpha(opacity=40);
 }
-.pagenav.dark a.button {
-    font-weight: bold;
-    border-color: #e6e6e6;
-    background: #d8d8d8;
-    background: -moz-linear-gradient(top, #d8d8d8 0%, #bababa 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d8d8d8), color-stop(100%,#bababa));
-    background: -o-linear-gradient(top, #d8d8d8 0%, #bababa 100%);
-    background: -ms-linear-gradient(top, #d8d8d8 0%, #bababa 100%);
-    background: linear-gradient(top, #d8d8d8 0%, #bababa 100%);
-    box-shadow: 0 1px 1px 0 #999;
-    -o-box-shadow: 0 1px 1px 0 #999;
-    -webkit-box-shadow: 0 1px 1px 0 #999;
-    -moz-box-shadow: 0 1px 1px 0 #999;
-}
-.pagenav.dark a.button.pressed {
-    background: #bababa;
-    background: -moz-linear-gradient(top, #bababa 0%, #d8d8d8 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#bababa), color-stop(100%,#d8d8d8));
-    background: -o-linear-gradient(top, #bababa 0%, #d8d8d8 100%);
-    background: -ms-linear-gradient(top, #bababa 0%, #d8d8d8 100%);
-    background: linear-gradient(top, #bababa 0%, #d8d8d8 100%);
-}
-.pagenav a.button {
-    padding: 1px 3px;
-    height: 16px;
-    vertical-align: middle;
-}
-.pagenav a.button span.inner {
-    display: inline-block;
-    width: 16px;
-    height: 13px;
-    text-indent: 1000px;
-    overflow: hidden;
-    background: url("images/buttons.png") -6px -211px no-repeat;
-}
-.pagenav a.prevpage span.inner { background-position: -7px -226px; }
-.pagenav a.nextpage span.inner { background-position: -28px -226px; }
-.pagenav a.lastpage span.inner { background-position: -28px -211px; }
-.pagenav a.pageup span.inner { background-position: -7px -241px; }
-.pagenav a.pagedown span.inner { background-position: -29px -241px; }
-.pagenav a.reply span.inner { background-position: -7px -256px; }
-.pagenav a.forward span.inner { background-position: -29px -256px; }
-.pagenav a.replyall span.inner { background-position: -7px -271px; }
-.pagenav a.extwin span.inner { background-position: -29px -271px; }
-.pagenav .countdisplay {
-    display: inline-block;
-    padding:0 1em;
-    text-shadow: 0px 1px 1px #fff;
-    min-width: 16em;
-}
-/*.pagenavbuttons {
-    position: relative;
-    top: -2px;
-}*/
-a.iconbutton {
-    display: inline-block;
-    width: 24px;
-    height: 18px;
-    text-decoration: none;
-    text-indent: -1000px;
-    background: url("images/buttons.png") -1000px 0 no-repeat;
-}
-a.iconbutton.disabled {
-    opacity: 0.4;
-    filter: alpha(opacity=40);
-    cursor: default;
-}
-a.iconbutton.searchoptions { background-position: -2px -317px; }
-a.iconbutton.reset { background-position: -25px -317px; }
-a.iconbutton.cancel { background-position: -7px -377px; }
-a.iconlink {
-    display: inline-block;
-    color: #888;
-    text-decoration: none;
-    white-space: nowrap;
-    padding: 2px 8px 2px 20px;
-    background: url("images/buttons.png") -1000px 0 no-repeat;
-}
-a.iconlink:hover { text-decoration: underline; }
-a.iconlink.delete { background-position: -7px -337px; }
-a.iconlink.add { background-position: -7px -357px; }
-a.iconlink.remove { background-position: -7px -378px; }
-a.iconlink.cancel { background-position: -7px -397px; }
-a.iconlink.edit { background-position: -7px -417px; }
-a.iconlink.upload { background-position: -6px -437px; }
-
 .buttonHolder,
 .wf_actions {
     margin: 25px 0 0 150px;
@@ -701,7 +617,12 @@ nav a.button-billing span.button-inner { background-position: 3px -906px; }
     list-style: none outside none;
 }
 .unselectable {
-    -moz-user-select: -moz-none;
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    /* No support for these yet, use at own risk */
+    -o-user-select: none;
+    user-select: none; 
 }
 .sidebar-container {
     margin-top: 25px;
