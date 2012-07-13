@@ -76,9 +76,13 @@ div.topbuttons {
 table.topbuttons {
     float: left;
 }
-#submenu li:hover {
-    background-color: #FFFACD;
+table.list th[class$="_active"],
+table.list td[class$="_active"] {
+    
 }
+
+table.list th[class$="_active"],
+table.list td[class$="_active"] { width: 80px; }
 table.list .tbl_col_buttons,
 table.list .tbl_col_limit {
     width: 120px;
@@ -173,13 +177,13 @@ input[type="checkbox"] {
     background: url("icons/x16_sprite.png") 3px -118px no-repeat #FFFFFF;
     padding-left: 24px;
     font-size: 12px;
-    width: 10px;
+    width: 25px;
     -moz-transition-duration: 400ms;
     -moz-transition-property: width, background;
     -moz-transition-timing-function: ease;
 }
 .filter input:focus {
-    width: 75px;
+    width: 100px;
 }
 select {
     margin: 0; /* Safari by default adds a margin */
@@ -539,7 +543,7 @@ button.icons16 {
 .icons16.icoLimit { 
     background-position: 0 -320px; 
     cursor: default;
-    margin-left: 10px;
+    margin-left: 8px;
 }
 .icons16.icoLimit:hover { border: 0; box-shadow: none;}
 
@@ -769,38 +773,6 @@ ul#submenu {
     padding: 0;
     margin: 0;
 }
-#submenu li a {
-    display: block;
-    color: #376572;
-    text-shadow: 0px 1px 1px #fff;
-    text-decoration: none;
-}
-.menu li a {
-    height: 17px;
-    padding-left: 35px;
-    white-space: nowrap;
-}
-.menu li select {
-    margin-left: 35px;
-    width: 80%;
-}
-#submenu li.title a {
-    padding-left: 5px !important;
-    background: none;
-}
-#submenu li.title {
-    font-size: 12px;
-    font-weight: bold;
-    padding: 10px 8px 3px 8px;
-    height: 20px;  /* doesn't affect table-cells in FF */
-    margin: 0;
-    text-shadow: 0px 1px 1px #fff;
-    border: 0;
-    border-bottom: 1px solid #bbd3da;
-    white-space: nowrap;
-    background: #b0ccd7;
-    color: #004458;
-}
 #submenu li {
     display: block;
     border-top: 1px solid #fff;
@@ -814,6 +786,33 @@ ul#submenu {
     padding: 6px 8px 5px 8px;
     /* height: 17px; -- doesn't affect table-cells in FF */
 }
+#submenu li:hover {
+    background-color: #FFFACD;
+}
+#submenu li a {
+    display: block;
+    color: #376572;
+    text-shadow: 0px 1px 1px #fff;
+    text-decoration: none;
+}
+
+#submenu li.title {
+    font-size: 12px;
+    font-weight: bold;
+    padding: 10px 8px 3px 8px;
+    height: 20px;  /* doesn't affect table-cells in FF */
+    margin: 0;
+    text-shadow: 0px 1px 1px #fff;
+    border: 0;
+    border-bottom: 1px solid #bbd3da;
+    white-space: nowrap;
+    background: #b0ccd7;
+    color: #004458;
+}
+#submenu li.title a {
+    padding-left: 5px !important;
+    background: none;
+}
 .menu li { 
     background-image: url("icons/icons_menu.png");
     background-position: 12px 3px;
@@ -823,7 +822,15 @@ ul#submenu {
 .menu li:hover {
 /*    background-position: 12px -25px;*/
 }
-
+.menu li a {
+    height: 17px;
+    padding-left: 35px;
+    white-space: nowrap;
+}
+.menu li select {
+    margin-left: 35px;
+    width: 80%;
+}
 #select_server {
     background: url("icons/x16/linux.png") no-repeat 15px 13px transparent;
     white-space: nowrap;
