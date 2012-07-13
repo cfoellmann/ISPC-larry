@@ -539,7 +539,7 @@ button.icons16 {
 .icons16.icoLimit { 
     background-position: 0 -320px; 
     cursor: default;
-    margin-left: 8px;
+    margin-left: 10px;
 }
 .icons16.icoLimit:hover { border: 0; box-shadow: none;}
 
