@@ -38,7 +38,7 @@
             <tmpl_loop name="records">
                 <tr class="tbl_row_<tmpl_if name='__EVEN__'}even<tmpl_else>uneven</tmpl_if>">
                     <td class="tbl_col_active">{tmpl_var name="active"}</td>
-                    <td class="tbl_col_remote_access">{tmpl_var name="remote_access"}</td>
+                    <td class="tbl_col_remote_access"><div id="ir-{tmpl_var name="remote_access"}" class="swap"><span>{tmpl_var name="remote_access"}</span></div></td>
                     <td class="tbl_col_sys_groupid">{tmpl_var name="sys_groupid"}</td>
                     <td class="tbl_col_server_id">{tmpl_var name="server_id"}</td>
                     <td class="tbl_col_database_user">{tmpl_var name="database_user"}</td>
