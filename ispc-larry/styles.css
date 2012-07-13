@@ -220,34 +220,26 @@ select {
 select option {
     padding: 2px;
 }
-select.clienticons option {
-    background-position: 5px 50%;
-    background-repeat: no-repeat;
-    padding: 1px 0 1px 30px;
-}
-select.clienticons option {
-    background-image: url("icons/x16/client.png");
-}
-select.servericons option {
-    background-position: 5px 50%;
-    background-repeat: no-repeat;
-    padding: 1px 0 1px 30px;
-}
-select.servericons option {
-    background-image: url("icons/x16/linux.png");
-}
 .filter select option {
-    background-position: 5px 50%;
-    background-repeat: no-repeat;
+    background: url("icons/x16_sprite.png") no-repeat transparent;
     padding: 1px 0 1px 30px;
 }
+select option[value=""] {background-position: 0 20px !important;}
 .filter select option[value="Y"],
 .filter select option[value="y"] {
-    background-image: url("icons/x16/tick_circle.png");
+    background-position: 0 -400px;
 }
 .filter select option[value="N"],
 .filter select option[value="n"] {
-    background-image: url("icons/x16/cross_circle.png");
+    background-position: 0 -420px;
+}
+select.clienticons option {
+    background-position: 5px -440px;
+    padding: 1px 0 1px 30px;
+}
+select.servericons option {
+    background-position: 5px -460px;
+    padding: 1px 0 1px 30px;
 }
 /* Input/buttons
 -------------------------------------------------------------- */
@@ -525,14 +517,14 @@ a.iconlink.upload { background-position: -6px -437px; }
 }
 div[id^=ir-] {
     text-align: center;
-    background-position: center center;
+    background: url("icons/x16_sprite.png") no-repeat transparent;
 }
 #ir-Yes {
-    background-image: url("icons/x16/tick_circle.png");
+    background-position: center -402px;
     height: 16px;
 }
 #ir-No {
-    background-image: url("icons/x16/cross_circle.png");
+    background-position: center -422px;
     height: 16px;
 }
 .swap {
@@ -859,9 +851,17 @@ ul#submenu {
     background: url("icons/x16/linux.png") no-repeat 15px 13px transparent;
     white-space: nowrap;
 }
+.feed li div {
+    float: left;
+    height: 20px;
+    width: 20px;
+    background: url("icons/x16_sprite.png") no-repeat 0 -200px transparent;
+}
 .feed li a {
-    padding-left: 25px;
-    background: url("icons/x16/feed.png") no-repeat 0 5px transparent;
+    margin-left: 25px;
+}
+.feed li span {
+    display: block;
 }
 
 /* layout/right
