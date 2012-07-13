@@ -18,7 +18,7 @@
                 <th class="tbl_col_name" scope="col"><tmpl_var name="name_txt"></th>
                 <th class="tbl_col_price" scope="col"><tmpl_var name="price_txt"></th>
                 <th class="tbl_col_vat" scope="col"><tmpl_var name="vat_txt"></th>
-                <th class="tbl_col_limit" scope="col">{tmpl_var name='search_limit'}</th>
+                <th class="tbl_col_limit" scope="col"><a class="button icons16 icoLimit" href="#"><span>Limit</span></a>{tmpl_var name='search_limit'}</th>
             </tr>
             <tr class="filter">
                 <td class="tbl_col_type"><select name="search_type" onChange="submitForm('pageForm','billing/invoice_item_template_list.php');">{tmpl_var name='search_type'}</select></td>
