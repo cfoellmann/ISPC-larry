@@ -5,6 +5,7 @@
     Script URI: https://github.com/foe-services/ispc-larry
     Author: Foe Services
     Author URI: http://www.foe-services.de/
+    License: https://github.com/foe-services/ispc-larry/LICENSE
 */
 
 /* global
@@ -34,7 +35,7 @@ h1 {
 table,input[type="text"],input[type="password"],textarea,select,input.button,
 .formbuttons input.button,a.button,.button,div.gs-container input,ul.gs-resultbox,
 .dash-mods,.dash-limits,#sideNav-container,#login-form .box-inner,ul li .app-image,
-.buttons button {
+.buttons button, .dashboard-modules, .dashboard-modules a {
     -moz-border-radius:5px;
     -webkit-border-radius:5px;
     -khtml-border-radius:5px;
@@ -1198,11 +1199,12 @@ h3.welcome {
     padding-left: 25px;
 }
 #dashlets {
-    float: left;
+    
 }
 .dash-mods,
 .dash-limits {
     float:left;
+    width: 45%;
     margin: 10px;
     background: url("images/bg_paven.png") repeat #FFF;
     border-top: 1px solid #D8D8D8;
@@ -1216,8 +1218,7 @@ h3.welcome {
     -ms-box-shadow: 2px 2px 4px 4px #999;
 }
 .dash-mods {
-    width: 430px;
-    clear:left;
+    display: inline-block;
 }
 .dash-limits {
     float: right;
@@ -1236,54 +1237,64 @@ h3.welcome {
     margin: 0;
 }
 .dashboard-modules {
-    background-image: url("icons/nav_sprite.png");
-    background-color: #D9ECF4;
-    background-repeat: no-repeat;
+    background: url("icons/nav_sprite.png") no-repeat 0 32px #D9ECF4;
     border: 1px solid #BBD3DA;
-    border-radius: 3px; /* 5px? */
     box-shadow: 1px 1px 1px 1px #BBD3DA;
     -o-box-shadow: 1px 1px 1px 1px #BBD3DA;
     -webkit-box-shadow: 1px 1px 1px 1px #BBD3DA;
     -moz-box-shadow: 1px 1px 1px 1px #BBD3DA;
     -ms-box-shadow: 1px 1px 1px 1px #BBD3DA;
     float: left;
-    height: 60px;
-    margin: 10px;
-    width: 120px;
+    height: 40px;
+    margin: 5px;
+    width: 140px;
+}
+.dashboard-modules:hover {
+    background-color: #0069a6;
 }
 .dashboard-modules a {
-    border-top: 1px solid #D8D8D8;
-    border-right: 1px solid #9C9C9C;
-    border-bottom: 1px solid #9C9C9C;
-    border-left: 1px solid #D8D8D8;
-    display: block;
-    font-weight: bold;
-    font-size: 1.2em;
+    border-color: #D8D8D8 #9C9C9C #9C9C9C #D8D8D8;
+    border-style: solid;
+    border-width: 1px;
     color: #376572;
-    height: 40px;
-    padding: 20px 0 0 35px;
-    text-decoration: none;
+    display: block;
+    font-size: 1.2em;
+    font-weight: bold;
+    height: 30px;
+    padding: 10px 0 0 25px;
     text-align: center;
-    width: 85px;
+    text-decoration: none;
+    width: 115px;
 }
 .dashboard-modules a:hover {
     border-top: 1px solid #9C9C9C;
     border-right: 1px solid #D8D8D8;
     border-bottom: 1px solid #D8D8D8;
     border-left: 1px solid #9C9C9C;
-    color: #000;
+    color: #fff;
 }
-.dashboard-modules.admin { background-position: 10px -642px; }
-.dashboard-modules.vm { background-position: 10px -906px; }
-.dashboard-modules.client { background-position: 10px -466px; }
-.dashboard-modules.mail { background-position: 10px -378px; }
-.dashboard-modules.monitor { background-position: 10px -994px; }
-.dashboard-modules.dns { background-position: 10px -730px; }
-.dashboard-modules.tools { background-position: 10px -202px; }
-.dashboard-modules.help { background-position: 10px -290px; }
-.dashboard-modules.domain { background-position: 10px -554px; }
-.dashboard-modules.sites { background-position: 10px -818px; }
-.dashboard-modules.billing { background-position: 10px -1082px; }
+.dashboard-modules.tools { background-position: 10px 2px; }
+.dashboard-modules.tools:hover { background-position: 10px -34px; }
+.dashboard-modules.admin { background-position: 10px -72px; }
+.dashboard-modules.admin:hover { background-position: 10px -108px; }
+.dashboard-modules.sites { background-position: 10px -142px; }
+.dashboard-modules.sites:hover { background-position: 10px -178px; }
+.dashboard-modules.monitor { background-position: 10px -212px; }
+.dashboard-modules.monitor:hover { background-position: 10px -248px; }
+.dashboard-modules.help { background-position: 10px -357px; }
+.dashboard-modules.help:hover { background-position: 10px -393px; }
+.dashboard-modules.mail { background-position: 10px -429px; }
+.dashboard-modules.mail:hover { background-position: 10px -465px; }
+.dashboard-modules.vm { background-position: 10px -502px; }
+.dashboard-modules.vm:hover { background-position: 10px -538px; }
+.dashboard-modules.domain { background-position: 10px -575px; }
+.dashboard-modules.domain:hover { background-position: 10px -611px; }
+.dashboard-modules.dns { background-position: 10px -646px; }
+.dashboard-modules.dns:hover { background-position: 10px -682px; }
+.dashboard-modules.client { background-position: 10px -788px; }
+.dashboard-modules.client:hover { background-position: 10px -824px; }
+.dashboard-modules.billing { background-position: 10px -861px; }
+.dashboard-modules.billing:hover { background-position: 10px -897px; }
 
 /* Systemmonitor
 -------------------------------------------------------------- */
