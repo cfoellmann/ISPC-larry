@@ -1250,7 +1250,9 @@ h3.welcome {
     width: 140px;
 }
 .dashboard-modules:hover {
-    background-color: #0069a6;
+    background-color: #B0CCD7;
+    
+    text-shadow: 0 -1px #999999, 1px 0 #999999, 0 1px #999999, -1px 0 #999999;
 }
 .dashboard-modules a {
     border-color: #D8D8D8 #9C9C9C #9C9C9C #D8D8D8;

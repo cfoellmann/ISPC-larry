@@ -9,3 +9,8 @@
 */
 
 /*TODO Print stylesheet*/
+
+aside,
+ul.feed {
+    display: none;
+}
