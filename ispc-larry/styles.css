@@ -34,8 +34,8 @@ h1 {
 -------------------------------------------------------------- */
 table,input[type="text"],input[type="password"],textarea,select,input.button,
 .formbuttons input.button,a.button,.button,div.gs-container input,ul.gs-resultbox,
-.dash-mods,.dash-limits,#sideNav-container,#login-form .box-inner,ul li .app-image,
-.buttons button, .dashboard-modules, .dashboard-modules a {
+.dash-mods,.dash-limits,#sideNav-container,#login-form .box-inner,ul li.sideitem .image,
+.buttons button {
     -moz-border-radius:5px;
     -webkit-border-radius:5px;
     -khtml-border-radius:5px;
@@ -626,16 +626,33 @@ nav a.button-billing span.button-inner { background-position: 3px -906px; }
     user-select: none; 
 }
 .sidebar-container {
-    margin-top: 25px;
+    
 }
 .sidebar-container ul {
     border-bottom: 1px solid #4A4A54;
-    margin: 0;
+    margin: 0 0 25px 0;
     outline: medium none;
     padding: 0;
     text-decoration: none;
 }
-.sidebar-container ul li {
+ul li.sidetitle {
+    background: none repeat scroll 0 0 rgba(255,255,255,0.1);
+    height: 20px;
+    padding: 5px 0;
+    border-bottom: 1px solid #666666 !important;
+}
+ul li.sidetitle .name {    
+    font-size: 13px;
+    width: 100%;
+    color: #fff;
+    cursor: default;
+    display: block;
+}
+ul li.sidetitle .name-inner {    
+    float: right;
+    margin-right: 25px;
+}
+ul li.sideitem {
     border-bottom: 1px solid #1D1E21 !important;
     border-top: 1px solid #4A4A54;
     color: #FFFFFF;
@@ -646,17 +663,17 @@ nav a.button-billing span.button-inner { background-position: 3px -906px; }
     right: 0;
     text-shadow: 0 1px 1px black;
 }
-.sidebar-container ul li a {
+ul li.sideitem a {
     background: none repeat scroll 0 0 transparent;
-    color: white;
+    color: #fff;
     cursor: pointer;
     display: block;
     height: 68px;
 }
-.sidebar-container ul li a:hover {
+ul li.sideitem a:hover {
     background: none repeat scroll 0 0 rgba(255,255,255,0.05);
 }
-ul li .app-image {
+ul li.sideitem .image {
     border: 1px solid black;
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
     cursor: pointer;
@@ -667,7 +684,7 @@ ul li .app-image {
     top: 11px;
     width: 45px;
 }
-ul li .app-name {
+ul li.sideitem .name {
     font-size: 12px;
     font-weight: bold;
     left: 70px;
@@ -675,7 +692,7 @@ ul li .app-name {
     top: 18px;
     width: 152px;
 }
-ul li .app-description {
+ul li.sideitem .description {
     color: #BBBBBB;
     font-size: 11px;
     left: 70px;
