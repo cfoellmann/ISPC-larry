@@ -92,12 +92,18 @@ table.list td.tbl_col_remote_access,
 table.list th[class$="_pid"],
 table.list td[class$="_pid"],
 table.list th.tbl_col_veid,
-table.list td.tbl_col_veid {
+table.list td.tbl_col_veid,
+table.list th.tbl_col_autoresponder,
+table.list td.tbl_col_autoresponder {
     width: 70px;
     text-align: center;
 }
 table.list th[class$="_ip_address"],
-table.list td[class$="_ip_address"] {
+table.list td[class$="_ip_address"],
+table.list th.tbl_col_country,
+table.list td.tbl_col_country,
+table.list th.tbl_col_group,
+table.list td.tbl_col_group {
     width: 100px;
     text-align: center;
 }
@@ -108,7 +114,7 @@ table.list td.tbl_col_allservers {
 }
 table.list .tbl_col_buttons,
 table.list .tbl_col_limit {
-    width: 120px;
+    width: 150px;
 }
 table.list thead th {
     background: linear-gradient(center top , #F0F0F0 0%, #D6D6D6 100%) repeat scroll 0 0 transparent;
@@ -229,11 +235,13 @@ select option {
 }
 select option[value=""] {background-position: 0 20px !important;}
 .filter select option[value="Y"],
-.filter select option[value="y"] {
+.filter select option[value="y"],
+.filter select option[value="1"] {
     background-position: 0 -400px;
 }
 .filter select option[value="N"],
-.filter select option[value="n"] {
+.filter select option[value="n"],
+.filter select option[value="0"] {
     background-position: 0 -420px;
 }
 select.clienticons option {
@@ -482,6 +490,20 @@ button.icons16 {
 .icons16.icoLink { background-position: 0 -360px; float: right; }
 .icons16.icoMailinglist { background-position: 0 -380px; }
 
+div.group-icon {
+    padding: 2px 0;
+}
+.group-admin,
+.group-user {
+    height: 20px;
+    width: 20px;
+    padding: 0;
+    float: left;
+    background: url("icons/x16_sprite.png") no-repeat transparent;
+}
+.group-admin { background-position: 0 -440px; }
+.group-user { background-position: 0 -440px; }
+
 /* layout/top
 -------------------------------------------------------------- */
 #top-line {
@@ -630,7 +652,7 @@ nav a.button-billing span.button-inner { background-position: 3px -906px; }
 }
 .sidebar-container ul {
     border-bottom: 1px solid #4A4A54;
-    margin: 0 0 25px 0;
+    margin: 0;
     outline: medium none;
     padding: 0;
     text-decoration: none;
