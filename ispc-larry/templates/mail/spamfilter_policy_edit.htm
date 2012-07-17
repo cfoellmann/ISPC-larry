@@ -1,6 +1,6 @@
 <!-- begin: toolbar -->
 <div id="moduletoolbar">
-    <a lass="button cancel" onClick="loadContent('mail/spamfilter_policy_list.php');" href="#" title="{tmpl_var name='btn_cancel_txt'}">{tmpl_var name='btn_cancel_txt'}</a>
+    <a class="button cancel" onClick="loadContent('mail/spamfilter_policy_list.php');" href="#" title="{tmpl_var name='btn_cancel_txt'}">{tmpl_var name='btn_cancel_txt'}</a>
 </div>
 <!-- end: toolbar -->
 
@@ -31,51 +31,54 @@
     
     <!-- begin: modulecontent -->
     <div class="panel panel_spamfilter_policy">
-        <div class="ctrlHolder">
-            <label for="policy_name">{tmpl_var name='policy_name_txt'}</label>
-            <input name="policy_name" id="policy_name" value="{tmpl_var name='policy_name'}" size="30" maxlength="255" type="text" class="textInput" />
-        </div>
-        <div class="ctrlHolder">
-            <label for="virus_lover">{tmpl_var name='virus_lover_txt'}</label>
-            <select name="virus_lover" id="virus_lover" class="selectInput formLengthBool">
-                {tmpl_var name='virus_lover'}
-            </select>
-        </div>
-        <div class="ctrlHolder">
-            <label for="spam_lover">{tmpl_var name='spam_lover_txt'}</label>
-            <select name="spam_lover" id="spam_lover" class="selectInput formLengthBool">
-                {tmpl_var name='spam_lover'}
-            </select>
-        </div>
-        <div class="ctrlHolder">
-            <label for="banned_files_lover">{tmpl_var name='banned_files_lover_txt'}</label>
-            <select name="banned_files_lover" id="banned_files_lover" class="selectInput formLengthBool">
-                {tmpl_var name='banned_files_lover'}
-            </select>
-        </div>
-        <div class="ctrlHolder">
-            <label for="bad_header_lover">{tmpl_var name='bad_header_lover_txt'}</label>
-            <select name="bad_header_lover" id="bad_header_lover" class="selectInput formLengthBool">
-                {tmpl_var name='bad_header_lover'}
-            </select>
-        </div>
-        <div class="ctrlHolder">
-            <label for="bypass_virus_checks">{tmpl_var name='bypass_virus_checks_txt'}</label>
-            <select name="bypass_virus_checks" id="bypass_virus_checks" class="selectInput formLengthBool">
-                {tmpl_var name='bypass_virus_checks'}
-            </select>
-        </div>
-        <div class="ctrlHolder">
-            <label for="bypass_banned_checks">{tmpl_var name='bypass_banned_checks_txt'}</label>
-            <select name="bypass_banned_checks" id="bypass_banned_checks" class="selectInput formLengthBool">
-                {tmpl_var name='bypass_banned_checks'}
-            </select>
-        </div>
-        <div class="ctrlHolder">
-            <label for="bypass_header_checks">{tmpl_var name='bypass_header_checks_txt'}</label>
-            <select name="bypass_header_checks" id="bypass_header_checks" class="selectInput formLengthBool">
-                {tmpl_var name='bypass_header_checks'}
-            </select>
+        <div class="subsectiontoggle"><span class="showing"></span>Firewall<em class="showing"></em></div>
+        <div class="subsection">
+            <div class="ctrlHolder">
+                <label for="policy_name">{tmpl_var name='policy_name_txt'}</label>
+                <input name="policy_name" id="policy_name" value="{tmpl_var name='policy_name'}" size="30" maxlength="255" type="text" class="textInput" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="virus_lover">{tmpl_var name='virus_lover_txt'}</label>
+                <select name="virus_lover" id="virus_lover" class="selectInput formLengthBool">
+                    {tmpl_var name='virus_lover'}
+                </select>
+            </div>
+            <div class="ctrlHolder">
+                <label for="spam_lover">{tmpl_var name='spam_lover_txt'}</label>
+                <select name="spam_lover" id="spam_lover" class="selectInput formLengthBool">
+                    {tmpl_var name='spam_lover'}
+                </select>
+            </div>
+            <div class="ctrlHolder">
+                <label for="banned_files_lover">{tmpl_var name='banned_files_lover_txt'}</label>
+                <select name="banned_files_lover" id="banned_files_lover" class="selectInput formLengthBool">
+                    {tmpl_var name='banned_files_lover'}
+                </select>
+            </div>
+            <div class="ctrlHolder">
+                <label for="bad_header_lover">{tmpl_var name='bad_header_lover_txt'}</label>
+                <select name="bad_header_lover" id="bad_header_lover" class="selectInput formLengthBool">
+                    {tmpl_var name='bad_header_lover'}
+                </select>
+            </div>
+            <div class="ctrlHolder">
+                <label for="bypass_virus_checks">{tmpl_var name='bypass_virus_checks_txt'}</label>
+                <select name="bypass_virus_checks" id="bypass_virus_checks" class="selectInput formLengthBool">
+                    {tmpl_var name='bypass_virus_checks'}
+                </select>
+            </div>
+            <div class="ctrlHolder">
+                <label for="bypass_banned_checks">{tmpl_var name='bypass_banned_checks_txt'}</label>
+                <select name="bypass_banned_checks" id="bypass_banned_checks" class="selectInput formLengthBool">
+                    {tmpl_var name='bypass_banned_checks'}
+                </select>
+            </div>
+            <div class="ctrlHolder">
+                <label for="bypass_header_checks">{tmpl_var name='bypass_header_checks_txt'}</label>
+                <select name="bypass_header_checks" id="bypass_header_checks" class="selectInput formLengthBool">
+                    {tmpl_var name='bypass_header_checks'}
+                </select>
+            </div>
         </div>
             
         <input type="hidden" name="id" value="{tmpl_var name='id'}">

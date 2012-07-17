@@ -31,37 +31,40 @@
     
     <!-- begin: modulecontent -->
     <div class="panel panel_spamfilter_users">
-        <div class="ctrlHolder">
-            <label for="server_id">{tmpl_var name='server_id_txt'}</label>
-            <select name="server_id" id="server_id" class="selectInput">
-                {tmpl_var name='server_id'}
-            </select>
-        </div>
-        <div class="ctrlHolder">
-            <label for="priority">{tmpl_var name='priority_txt'}</label>
-            <select name="priority" id="priority" class="selectInput formLengthLimit">
-                {tmpl_var name='priority'}
-            </select>
-        </div>
-        <div class="ctrlHolder">
-            <label for="policy_id">{tmpl_var name='policy_id_txt'}</label>
-            <select name="policy_id" id="policy_id" class="selectInput">
-                {tmpl_var name='policy_id'}
-            </select>
-        </div>
-        <div class="ctrlHolder">
-            <label for="email">{tmpl_var name='email_txt'}</label>
-            <input name="email" id="email" value="{tmpl_var name='email'}" size="30" maxlength="255" type="text" class="textInput" />
-        </div>
-        <div class="ctrlHolder">
-            <label for="fullname">{tmpl_var name='fullname_txt'}</label>
-            <input name="fullname" id="fullname" value="{tmpl_var name='fullname'}" size="30" maxlength="255" type="text" class="textInput" />
-        </div>
-        <div class="ctrlHolder">
-            <label for="local">{tmpl_var name='local_txt'}</label>
-            <select name="local" id="local" class="selectInput formLengthBool">
-                {tmpl_var name='local'}
-            </select>
+        <div class="subsectiontoggle"><span class="showing"></span>Firewall<em class="showing"></em></div>
+        <div class="subsection">
+            <div class="ctrlHolder">
+                <label for="server_id">{tmpl_var name='server_id_txt'}</label>
+                <select name="server_id" id="server_id" class="selectInput">
+                    {tmpl_var name='server_id'}
+                </select>
+            </div>
+            <div class="ctrlHolder">
+                <label for="priority">{tmpl_var name='priority_txt'}</label>
+                <select name="priority" id="priority" class="selectInput formLengthLimit">
+                    {tmpl_var name='priority'}
+                </select>
+            </div>
+            <div class="ctrlHolder">
+                <label for="policy_id">{tmpl_var name='policy_id_txt'}</label>
+                <select name="policy_id" id="policy_id" class="selectInput">
+                    {tmpl_var name='policy_id'}
+                </select>
+            </div>
+            <div class="ctrlHolder">
+                <label for="email">{tmpl_var name='email_txt'}</label>
+                <input name="email" id="email" value="{tmpl_var name='email'}" size="30" maxlength="255" type="text" class="textInput" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="fullname">{tmpl_var name='fullname_txt'}</label>
+                <input name="fullname" id="fullname" value="{tmpl_var name='fullname'}" size="30" maxlength="255" type="text" class="textInput" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="local">{tmpl_var name='local_txt'}</label>
+                <select name="local" id="local" class="selectInput formLengthBool">
+                    {tmpl_var name='local'}
+                </select>
+            </div>
         </div>
             
         <input type="hidden" name="id" value="{tmpl_var name='id'}">

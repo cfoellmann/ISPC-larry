@@ -31,39 +31,42 @@
     
     <!-- begin: modulecontent -->
     <div class="panel panel_spamfilter_policy">
-        <div class="ctrlHolder">
-            <label for="spam_tag_level">{tmpl_var name='spam_tag_level_txt'}</label>
-            <input name="spam_tag_level" id="spam_tag_level" value="{tmpl_var name='spam_tag_level'}" size="10" maxlength="255" type="text" class="textInput formLengthLimit" />
-        </div>
-        <div class="ctrlHolder">
-            <label for="spam_tag2_level">{tmpl_var name='spam_tag2_level_txt'}</label>
-            <input name="spam_tag2_level" id="spam_tag2_level" value="{tmpl_var name='spam_tag2_level'}" size="10" maxlength="255" type="text" class="textInput formLengthLimit" />
-        </div>
-        <div class="ctrlHolder">
-            <label for="spam_kill_level">{tmpl_var name='spam_kill_level_txt'}</label>
-            <input name="spam_kill_level" id="spam_kill_level" value="{tmpl_var name='spam_kill_level'}" size="10" maxlength="255" type="text" class="textInput formLengthLimit" />
-        </div>
-        <div class="ctrlHolder">
-            <label for="spam_dsn_cutoff_level">{tmpl_var name='spam_dsn_cutoff_level_txt'}</label>
-            <input name="spam_dsn_cutoff_level" id="spam_dsn_cutoff_level" value="{tmpl_var name='spam_dsn_cutoff_level'}" size="10" maxlength="255" type="text" class="textInput formLengthLimit" />
-        </div>
-        <div class="ctrlHolder">
-            <label for="spam_quarantine_cutoff_level">{tmpl_var name='spam_quarantine_cutoff_level_txt'}</label>
-            <input name="spam_quarantine_cutoff_level" id="spam_quarantine_cutoff_level" value="{tmpl_var name='spam_quarantine_cutoff_level'}" size="10" maxlength="255" type="text" class="textInput formLengthLimit" />
-        </div>
-        <div class="ctrlHolder">
-            <label for="spam_modifies_subj">{tmpl_var name='spam_modifies_subj_txt'}</label>
-            <select name="spam_modifies_subj" id="spam_modifies_subj" class="selectInput formLengthBool">
-                {tmpl_var name='spam_modifies_subj'}
-            </select>
-        </div>
-        <div class="ctrlHolder">
-            <label for="spam_subject_tag">{tmpl_var name='spam_subject_tag_txt'}</label>
-            <input name="spam_subject_tag" id="spam_subject_tag" value="{tmpl_var name='spam_subject_tag'}" size="30" maxlength="255" type="text" class="textInput" />
-        </div>
-        <div class="ctrlHolder">
-            <label for="spam_subject_tag2">{tmpl_var name='spam_subject_tag2_txt'}</label>
-            <input name="spam_subject_tag2" id="spam_subject_tag2" value="{tmpl_var name='spam_subject_tag2'}" size="30" maxlength="255" type="text" class="textInput" />
+        <div class="subsectiontoggle"><span class="showing"></span>Firewall<em class="showing"></em></div>
+        <div class="subsection">
+            <div class="ctrlHolder">
+                <label for="spam_tag_level">{tmpl_var name='spam_tag_level_txt'}</label>
+                <input name="spam_tag_level" id="spam_tag_level" value="{tmpl_var name='spam_tag_level'}" size="10" maxlength="255" type="text" class="textInput formLengthLimit" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="spam_tag2_level">{tmpl_var name='spam_tag2_level_txt'}</label>
+                <input name="spam_tag2_level" id="spam_tag2_level" value="{tmpl_var name='spam_tag2_level'}" size="10" maxlength="255" type="text" class="textInput formLengthLimit" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="spam_kill_level">{tmpl_var name='spam_kill_level_txt'}</label>
+                <input name="spam_kill_level" id="spam_kill_level" value="{tmpl_var name='spam_kill_level'}" size="10" maxlength="255" type="text" class="textInput formLengthLimit" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="spam_dsn_cutoff_level">{tmpl_var name='spam_dsn_cutoff_level_txt'}</label>
+                <input name="spam_dsn_cutoff_level" id="spam_dsn_cutoff_level" value="{tmpl_var name='spam_dsn_cutoff_level'}" size="10" maxlength="255" type="text" class="textInput formLengthLimit" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="spam_quarantine_cutoff_level">{tmpl_var name='spam_quarantine_cutoff_level_txt'}</label>
+                <input name="spam_quarantine_cutoff_level" id="spam_quarantine_cutoff_level" value="{tmpl_var name='spam_quarantine_cutoff_level'}" size="10" maxlength="255" type="text" class="textInput formLengthLimit" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="spam_modifies_subj">{tmpl_var name='spam_modifies_subj_txt'}</label>
+                <select name="spam_modifies_subj" id="spam_modifies_subj" class="selectInput formLengthBool">
+                    {tmpl_var name='spam_modifies_subj'}
+                </select>
+            </div>
+            <div class="ctrlHolder">
+                <label for="spam_subject_tag">{tmpl_var name='spam_subject_tag_txt'}</label>
+                <input name="spam_subject_tag" id="spam_subject_tag" value="{tmpl_var name='spam_subject_tag'}" size="30" maxlength="255" type="text" class="textInput" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="spam_subject_tag2">{tmpl_var name='spam_subject_tag2_txt'}</label>
+                <input name="spam_subject_tag2" id="spam_subject_tag2" value="{tmpl_var name='spam_subject_tag2'}" size="30" maxlength="255" type="text" class="textInput" />
+            </div>
         </div>
             
         <input type="hidden" name="id" value="{tmpl_var name='id'}">

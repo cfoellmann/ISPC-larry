@@ -31,33 +31,35 @@
     
     <!-- begin: modulecontent -->
     <div class="panel panel_spamfilter_policy">
-        <div class="ctrlHolder">
-            <label for="virus_quarantine_to">{tmpl_var name='virus_quarantine_to_txt'}</label>
-            <input name="virus_quarantine_to" id="virus_quarantine_to" value="{tmpl_var name='virus_quarantine_to'}" size="30" maxlength="255" type="text" class="textInput" />
+        <div class="subsectiontoggle"><span class="showing"></span>Firewall<em class="showing"></em></div>
+        <div class="subsection">
+            <div class="ctrlHolder">
+                <label for="virus_quarantine_to">{tmpl_var name='virus_quarantine_to_txt'}</label>
+                <input name="virus_quarantine_to" id="virus_quarantine_to" value="{tmpl_var name='virus_quarantine_to'}" size="30" maxlength="255" type="text" class="textInput" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="spam_quarantine_to">{tmpl_var name='spam_quarantine_to_txt'}</label>
+                <input name="spam_quarantine_to" id="spam_quarantine_to" value="{tmpl_var name='spam_quarantine_to'}" size="30" maxlength="255" type="text" class="textInput" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="banned_quarantine_to">{tmpl_var name='banned_quarantine_to_txt'}</label>
+                <input name="banned_quarantine_to" id="banned_quarantine_to" value="{tmpl_var name='banned_quarantine_to'}" size="30" maxlength="255" type="text" class="textInput" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="bad_header_quarantine_to">{tmpl_var name='bad_header_quarantine_to_txt'}</label>
+                <input name="bad_header_quarantine_to" id="bad_header_quarantine_to" value="{tmpl_var name='bad_header_quarantine_to'}" size="30" maxlength="255" type="text" class="textInput" />
+            </div>
+            <!--
+                  <div class="ctrlHolder">
+                    <label for="clean_quarantine_to">{tmpl_var name='clean_quarantine_to_txt'}</label>
+                    <input name="clean_quarantine_to" id="clean_quarantine_to" value="{tmpl_var name='clean_quarantine_to'}" size="30" maxlength="255" type="text" class="textInput" />
+                                    </div>
+                  <div class="ctrlHolder">
+                    <label for="other_quarantine_to">{tmpl_var name='other_quarantine_to_txt'}</label>
+                    <input name="other_quarantine_to" id="other_quarantine_to" value="{tmpl_var name='other_quarantine_to'}" size="30" maxlength="255" type="text" class="textInput" />
+                                    </div>
+            -->
         </div>
-        <div class="ctrlHolder">
-            <label for="spam_quarantine_to">{tmpl_var name='spam_quarantine_to_txt'}</label>
-            <input name="spam_quarantine_to" id="spam_quarantine_to" value="{tmpl_var name='spam_quarantine_to'}" size="30" maxlength="255" type="text" class="textInput" />
-        </div>
-        <div class="ctrlHolder">
-            <label for="banned_quarantine_to">{tmpl_var name='banned_quarantine_to_txt'}</label>
-            <input name="banned_quarantine_to" id="banned_quarantine_to" value="{tmpl_var name='banned_quarantine_to'}" size="30" maxlength="255" type="text" class="textInput" />
-        </div>
-        <div class="ctrlHolder">
-            <label for="bad_header_quarantine_to">{tmpl_var name='bad_header_quarantine_to_txt'}</label>
-            <input name="bad_header_quarantine_to" id="bad_header_quarantine_to" value="{tmpl_var name='bad_header_quarantine_to'}" size="30" maxlength="255" type="text" class="textInput" />
-        </div>
-        <!--
-              <div class="ctrlHolder">
-                <label for="clean_quarantine_to">{tmpl_var name='clean_quarantine_to_txt'}</label>
-                <input name="clean_quarantine_to" id="clean_quarantine_to" value="{tmpl_var name='clean_quarantine_to'}" size="30" maxlength="255" type="text" class="textInput" />
-                                </div>
-              <div class="ctrlHolder">
-                <label for="other_quarantine_to">{tmpl_var name='other_quarantine_to_txt'}</label>
-                <input name="other_quarantine_to" id="other_quarantine_to" value="{tmpl_var name='other_quarantine_to'}" size="30" maxlength="255" type="text" class="textInput" />
-                                </div>
-        -->
-            
         <input type="hidden" name="id" value="{tmpl_var name='id'}">
             
         <div class="buttonHolder buttons">

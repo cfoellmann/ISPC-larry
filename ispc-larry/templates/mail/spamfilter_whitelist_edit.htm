@@ -31,34 +31,37 @@
     
     <!-- begin: modulecontent -->
     <div class="panel panel_spamfilter_whitelist">
-        <!--
-              <div class="ctrlHolder">
-                <label for="server_id">{tmpl_var name='server_id_txt'}</label>
-                <select name="server_id" id="server_id" class="selectInput">
-                                                {tmpl_var name='server_id'}
-                                        </select>
-              </div>
-        -->
-        <div class="ctrlHolder">
-            <label for="rid">{tmpl_var name='rid_txt'}</label>
-            <select name="rid" id="rid" class="selectInput">
-                {tmpl_var name='rid'}
-            </select>
-        </div>
-        <div class="ctrlHolder">
-            <label for="email">{tmpl_var name='email_txt'}</label>
-            <input name="email" id="email" value="{tmpl_var name='email'}" size="30" maxlength="255" type="text" class="textInput" />
-        </div>
-        <div class="ctrlHolder">
-            <label for="priority">{tmpl_var name='priority_txt'}</label>
-            <select name="priority" id="priority" class="selectInput formLengthHalf">
-                {tmpl_var name='priority'}
-            </select>
-        </div>
-        <div class="ctrlHolder">
-            <p class="label">{tmpl_var name='active_txt'}</p>
-            <div class="multiField">
-                {tmpl_var name='active'}
+        <div class="subsectiontoggle"><span class="showing"></span>Firewall<em class="showing"></em></div>
+        <div class="subsection">
+            <!--
+                  <div class="ctrlHolder">
+                    <label for="server_id">{tmpl_var name='server_id_txt'}</label>
+                    <select name="server_id" id="server_id" class="selectInput">
+                                                    {tmpl_var name='server_id'}
+                                            </select>
+                  </div>
+            -->
+            <div class="ctrlHolder">
+                <label for="rid">{tmpl_var name='rid_txt'}</label>
+                <select name="rid" id="rid" class="selectInput">
+                    {tmpl_var name='rid'}
+                </select>
+            </div>
+            <div class="ctrlHolder">
+                <label for="email">{tmpl_var name='email_txt'}</label>
+                <input name="email" id="email" value="{tmpl_var name='email'}" size="30" maxlength="255" type="text" class="textInput" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="priority">{tmpl_var name='priority_txt'}</label>
+                <select name="priority" id="priority" class="selectInput formLengthHalf">
+                    {tmpl_var name='priority'}
+                </select>
+            </div>
+            <div class="ctrlHolder">
+                <p class="label">{tmpl_var name='active_txt'}</p>
+                <div class="multiField">
+                    {tmpl_var name='active'}
+                </div>
             </div>
         </div>
             

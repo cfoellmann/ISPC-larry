@@ -31,64 +31,67 @@
     
     <!-- begin: modulecontent -->
     <div class="panel panel_mail_user">
-        <div class="ctrlHolder">
-            <label for="name">{tmpl_var name='name_txt'}</label>
-            <input name="name" id="name" value="{tmpl_var name='name'}" size="30" maxlength="255" type="text" class="textInput" /> &nbsp; {tmpl_var name='name_optional_txt'}
-        </div>
-        <div class="ctrlHolder">
-            <p class="label">{tmpl_var name='email_txt'} <em>*</em></p>
-            <div class="multiField">
-<!--                <label for="email_local_part" class="blockLabel formLengthEmailDomain">Alias</label>-->
-                <input type="text" id="email_local_part" name="email_local_part" size="30" value="{tmpl_var name='email_local_part'}" class="textInput" />
-<!--                <label for="email_at" class="blockLabel email_at"></label>-->
-                &nbsp;@&nbsp;
-<!--                <label for="email_domain" class="blockLabel formLengthEmailDomain">{tmpl_var name='domain_txt'}</label>-->
+        <div class="subsectiontoggle"><span class="showing"></span>Firewall<em class="showing"></em></div>
+        <div class="subsection">
+            <div class="ctrlHolder">
+                <label for="name">{tmpl_var name='name_txt'}</label>
+                <input name="name" id="name" value="{tmpl_var name='name'}" size="30" maxlength="255" type="text" class="textInput" /> &nbsp; {tmpl_var name='name_optional_txt'}
+            </div>
+            <div class="ctrlHolder">
+                <p class="label">{tmpl_var name='email_txt'} <em>*</em></p>
+                <div class="multiField">
+                    <!--                <label for="email_local_part" class="blockLabel formLengthEmailDomain">Alias</label>-->
+                    <input type="text" id="email_local_part" name="email_local_part" size="30" value="{tmpl_var name='email_local_part'}" class="textInput" />
+                    <!--                <label for="email_at" class="blockLabel email_at"></label>-->
+                    &nbsp;@&nbsp;
+                    <!--                <label for="email_domain" class="blockLabel formLengthEmailDomain">{tmpl_var name='domain_txt'}</label>-->
                     <select name="email_domain" id="email_domain" class="selectInput">{tmpl_var name='email_domain'}</select>
+                </div>
             </div>
-        </div>
-        <tmpl_if name="enable_custom_login"><div class="ctrlHolder">
-                <label for="login">{tmpl_var name='login_txt'}</label>
-                <input type="text" id="login" name="login" size="20" value="{tmpl_var name='login'}" class="textInput" /></label>
-            </div></tmpl_if>
-        <div class="ctrlHolder">
-            <label for="password">{tmpl_var name='password_txt'}</label>
-            <input name="password" id="password" value="{tmpl_var name='password'}" size="30" maxlength="255" type="password" class="textInput" onkeyup="pass_check(this.value)" />
-        </div>
-        <div class="ctrlHolder">
-            <p class="label">{tmpl_var name='password_strength_txt'}</p>
-            <div id="passBar"></div>
-            <p class="formHint"><span id="passText">&nbsp;</span></p>
-        </div>
-        <div class="ctrlHolder">
-            <label for="quota">{tmpl_var name='quota_txt'}</label>
-            <input name="quota" id="quota" value="{tmpl_var name='quota'}" size="30" maxlength="255" type="text" class="textInput formLengthLimit" />&nbsp;MB (0 &Rightarrow; &infin;)
-        </div>
-        <div class="ctrlHolder">
-            <label for="name">{tmpl_var name='cc_txt'}</label>
-            <input name="cc" id="cc" value="{tmpl_var name='cc'}" size="30" maxlength="255" type="text" class="textInput" />&nbsp;{tmpl_var name='name_optional_txt'}
-        </div>
-        <div class="ctrlHolder">
-            <label for="policy">{tmpl_var name='policy_txt'}</label>
-            <select name="policy" id="policy" class="selectInput">
-                {tmpl_var name='policy'}
-            </select>
-        </div>
-        <div class="ctrlHolder">
-            <p class="label">{tmpl_var name='postfix_txt'}</p>
-            <div class="multiField">
-                {tmpl_var name='postfix'}
+            <tmpl_if name="enable_custom_login"><div class="ctrlHolder">
+                    <label for="login">{tmpl_var name='login_txt'}</label>
+                    <input type="text" id="login" name="login" size="20" value="{tmpl_var name='login'}" class="textInput" /></label>
+                </div></tmpl_if>
+            <div class="ctrlHolder">
+                <label for="password">{tmpl_var name='password_txt'}</label>
+                <input name="password" id="password" value="{tmpl_var name='password'}" size="30" maxlength="255" type="password" class="textInput" onkeyup="pass_check(this.value)" />
             </div>
-        </div>
-        <div class="ctrlHolder">
-            <p class="label">{tmpl_var name='disableimap_txt'}</p>
-            <div class="multiField">
-                {tmpl_var name='disableimap'}
+            <div class="ctrlHolder">
+                <p class="label">{tmpl_var name='password_strength_txt'}</p>
+                <div id="passBar"></div>
+                <p class="formHint"><span id="passText">&nbsp;</span></p>
             </div>
-        </div>
-        <div class="ctrlHolder">
-            <p class="label">{tmpl_var name='disablepop3_txt'}</p>
-            <div class="multiField">
-                {tmpl_var name='disablepop3'}
+            <div class="ctrlHolder">
+                <label for="quota">{tmpl_var name='quota_txt'}</label>
+                <input name="quota" id="quota" value="{tmpl_var name='quota'}" size="30" maxlength="255" type="text" class="textInput formLengthLimit" />&nbsp;MB (0 &Rightarrow; &infin;)
+            </div>
+            <div class="ctrlHolder">
+                <label for="name">{tmpl_var name='cc_txt'}</label>
+                <input name="cc" id="cc" value="{tmpl_var name='cc'}" size="30" maxlength="255" type="text" class="textInput" />&nbsp;{tmpl_var name='name_optional_txt'}
+            </div>
+            <div class="ctrlHolder">
+                <label for="policy">{tmpl_var name='policy_txt'}</label>
+                <select name="policy" id="policy" class="selectInput">
+                    {tmpl_var name='policy'}
+                </select>
+            </div>
+            <div class="ctrlHolder">
+                <p class="label">{tmpl_var name='postfix_txt'}</p>
+                <div class="multiField">
+                    {tmpl_var name='postfix'}
+                </div>
+            </div>
+            <div class="ctrlHolder">
+                <p class="label">{tmpl_var name='disableimap_txt'}</p>
+                <div class="multiField">
+                    {tmpl_var name='disableimap'}
+                </div>
+            </div>
+            <div class="ctrlHolder">
+                <p class="label">{tmpl_var name='disablepop3_txt'}</p>
+                <div class="multiField">
+                    {tmpl_var name='disablepop3'}
+                </div>
             </div>
         </div>
             

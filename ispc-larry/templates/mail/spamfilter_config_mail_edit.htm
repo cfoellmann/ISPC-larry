@@ -31,54 +31,57 @@
     
     <!-- begin: modulecontent -->
     <div class="panel panel_spamfilter_config">
-        <span class="wf_oneField">
-            <label for="module" class="wf_preField">{tmpl_var name='module_txt'}</label>
-            <select id="module" name="module">{tmpl_var name='module'}</select>
-        </span>
-        <span class="wf_oneField">
-            <label for="maildir_path" class="wf_preField">{tmpl_var name='maildir_path_txt'}</label>
-            <input type="text" id="maildir_path" name="maildir_path" value="{tmpl_var name='maildir_path'}" size="40" maxlength="255">
-        </span>
-        <span class="wf_oneField">
-            <label for="homedir_path" class="wf_preField">{tmpl_var name='homedir_path_txt'}</label>
-            <input type="text" id="homedir_path" name="homedir_path" value="{tmpl_var name='homedir_path'}" size="40" maxlength="255">
-        </span>
-        <span class="wf_oneField">
-            <label for="mailuser_uid" class="wf_preField">{tmpl_var name='mailuser_uid_txt'}</label>
-            <input type="text" id="mailuser_uid" name="mailuser_uid" value="{tmpl_var name='mailuser_uid'}" size="10" maxlength="255">
-        </span>
-        <span class="wf_oneField">
-            <label for="mailuser_gid" class="wf_preField">{tmpl_var name='mailuser_gid_txt'}</label>
-            <input type="text" id="mailuser_gid" name="mailuser_gid" value="{tmpl_var name='mailuser_gid'}" size="10" maxlength="255">
-        </span>
-        <span class="wf_oneField">
-            <label for="mailuser_name" class="wf_preField">{tmpl_var name='mailuser_name_txt'}</label>
-            <input type="text" id="mailuser_name" name="mailuser_name" value="{tmpl_var name='mailuser_name'}" size="10" maxlength="255">
-        </span>
-        <span class="wf_oneField">
-            <label for="mailuser_group" class="wf_preField">{tmpl_var name='mailuser_group_txt'}</label>
-            <input type="text" id="mailuser_group" name="mailuser_group" value="{tmpl_var name='mailuser_group'}" size="10" maxlength="255">
-        </span>
-        <span class="wf_oneField">
-            <label for="relayhost" class="wf_preField">{tmpl_var name='relayhost_txt'}</label>
-            <input type="text" id="relayhost" name="relayhost" value="{tmpl_var name='relayhost'}" size="40" maxlength="255">
-        </span>
-        <span class="wf_oneField">
-            <label for="relayhost_user" class="wf_preField">{tmpl_var name='relayhost_user_txt'}</label>
-            <input type="text" id="relayhost_user" name="relayhost_user" value="{tmpl_var name='relayhost_user'}" size="40" maxlength="255">
-        </span>
-        <span class="wf_oneField">
-            <label for="relayhost_password" class="wf_preField">{tmpl_var name='relayhost_password_txt'}</label>
-            <input type="text" id="relayhost_password" name="relayhost_password" value="{tmpl_var name='relayhost_password'}" size="40" maxlength="255">
-        </span>
-        <span class="wf_oneField">
-            <label for="mailbox_size_limit" class="wf_preField">{tmpl_var name='mailbox_size_limit_txt'}</label>
-            <input type="text" id="mailbox_size_limit" name="mailbox_size_limit" value="{tmpl_var name='mailbox_size_limit'}" size="10" maxlength="15">
-        </span>
-        <span class="wf_oneField">
-            <label for="message_size_limit" class="wf_preField">{tmpl_var name='message_size_limit_txt'}</label>
-            <input type="text" id="message_size_limit" name="message_size_limit" value="{tmpl_var name='message_size_limit'}" size="10" maxlength="15">
-        </span>
+        <div class="subsectiontoggle"><span class="showing"></span>Firewall<em class="showing"></em></div>
+        <div class="subsection">
+            <span class="wf_oneField">
+                <label for="module" class="wf_preField">{tmpl_var name='module_txt'}</label>
+                <select id="module" name="module">{tmpl_var name='module'}</select>
+            </span>
+            <span class="wf_oneField">
+                <label for="maildir_path" class="wf_preField">{tmpl_var name='maildir_path_txt'}</label>
+                <input type="text" id="maildir_path" name="maildir_path" value="{tmpl_var name='maildir_path'}" size="40" maxlength="255">
+            </span>
+            <span class="wf_oneField">
+                <label for="homedir_path" class="wf_preField">{tmpl_var name='homedir_path_txt'}</label>
+                <input type="text" id="homedir_path" name="homedir_path" value="{tmpl_var name='homedir_path'}" size="40" maxlength="255">
+            </span>
+            <span class="wf_oneField">
+                <label for="mailuser_uid" class="wf_preField">{tmpl_var name='mailuser_uid_txt'}</label>
+                <input type="text" id="mailuser_uid" name="mailuser_uid" value="{tmpl_var name='mailuser_uid'}" size="10" maxlength="255">
+            </span>
+            <span class="wf_oneField">
+                <label for="mailuser_gid" class="wf_preField">{tmpl_var name='mailuser_gid_txt'}</label>
+                <input type="text" id="mailuser_gid" name="mailuser_gid" value="{tmpl_var name='mailuser_gid'}" size="10" maxlength="255">
+            </span>
+            <span class="wf_oneField">
+                <label for="mailuser_name" class="wf_preField">{tmpl_var name='mailuser_name_txt'}</label>
+                <input type="text" id="mailuser_name" name="mailuser_name" value="{tmpl_var name='mailuser_name'}" size="10" maxlength="255">
+            </span>
+            <span class="wf_oneField">
+                <label for="mailuser_group" class="wf_preField">{tmpl_var name='mailuser_group_txt'}</label>
+                <input type="text" id="mailuser_group" name="mailuser_group" value="{tmpl_var name='mailuser_group'}" size="10" maxlength="255">
+            </span>
+            <span class="wf_oneField">
+                <label for="relayhost" class="wf_preField">{tmpl_var name='relayhost_txt'}</label>
+                <input type="text" id="relayhost" name="relayhost" value="{tmpl_var name='relayhost'}" size="40" maxlength="255">
+            </span>
+            <span class="wf_oneField">
+                <label for="relayhost_user" class="wf_preField">{tmpl_var name='relayhost_user_txt'}</label>
+                <input type="text" id="relayhost_user" name="relayhost_user" value="{tmpl_var name='relayhost_user'}" size="40" maxlength="255">
+            </span>
+            <span class="wf_oneField">
+                <label for="relayhost_password" class="wf_preField">{tmpl_var name='relayhost_password_txt'}</label>
+                <input type="text" id="relayhost_password" name="relayhost_password" value="{tmpl_var name='relayhost_password'}" size="40" maxlength="255">
+            </span>
+            <span class="wf_oneField">
+                <label for="mailbox_size_limit" class="wf_preField">{tmpl_var name='mailbox_size_limit_txt'}</label>
+                <input type="text" id="mailbox_size_limit" name="mailbox_size_limit" value="{tmpl_var name='mailbox_size_limit'}" size="10" maxlength="15">
+            </span>
+            <span class="wf_oneField">
+                <label for="message_size_limit" class="wf_preField">{tmpl_var name='message_size_limit_txt'}</label>
+                <input type="text" id="message_size_limit" name="message_size_limit" value="{tmpl_var name='message_size_limit'}" size="10" maxlength="15">
+            </span>
+        </div>
             
         <input type="hidden" name="id" value="{tmpl_var name='id'}">
             
