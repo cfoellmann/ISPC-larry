@@ -85,6 +85,8 @@ table.topbuttons {
 }
 table.list th[class$="_active"],
 table.list td[class$="_active"],
+table.list th.tbl_col_visible,
+table.list td.tbl_col_visible,
 table.list th[class$="_reserved"],
 table.list td[class$="_reserved"],
 table.list th.tbl_col_remote_access,
@@ -169,7 +171,6 @@ table.additem {
 .tbl_col_limit select option {
     padding: 0;
 }
-/*TODO*/
 .pnl_listarea th[class^="tbl_col"]{cursor:pointer}
 .pnl_listarea th[class^="tbl_col"]:hover{background-position:0 -15px!important}
 
@@ -249,7 +250,7 @@ select.clienticons option {
     padding: 1px 0 1px 30px;
 }
 select.servericons option {
-    background-position: 5px -460px;
+    background-position: 5px -460px !important;
     padding: 1px 0 1px 30px;
 }
 /* Input/buttons
