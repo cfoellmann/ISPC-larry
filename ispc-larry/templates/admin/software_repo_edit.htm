@@ -31,29 +31,30 @@
     
     <!-- begin: modulecontent -->
     <div class="panel panel_software_repo">
-        <div class="ctrlHolder">
-            <label for="repo_name">{tmpl_var name='repo_name_txt'}</label>
-            <input name="repo_name" id="repo_name" value="{tmpl_var name='repo_name'}" size="40" maxlength="40" type="text" class="textInput" />
-        </div>
-        <div class="ctrlHolder">
-            <label for="repo_url">{tmpl_var name='repo_url_txt'}</label>
-            <input name="repo_url" id="repo_url" value="{tmpl_var name='repo_url'}" size="40" maxlength="40" type="text" class="textInput" />
-        </div>
-        <div class="ctrlHolder">
-            <label for="repo_username">{tmpl_var name='repo_username_txt'}</label>
-            <input name="repo_username" id="repo_username" value="{tmpl_var name='repo_username'}" size="30" maxlength="30" type="text" class="textInput formLengthHalf" />
-        </div>
-        <div class="ctrlHolder">
-            <label for="repo_password">{tmpl_var name='repo_password_txt'}</label>
-            <input name="repo_password" id="repo_password" value="{tmpl_var name='repo_password'}" size="30" maxlength="30" type="password" class="textInput formLengthHalf" />
-        </div>
-        <div class="ctrlHolder">
-            <p class="label">{tmpl_var name='active_txt'}</p>
-            <div class="multiField">
-                {tmpl_var name='active'}
+        <div class="subsectiontoggle"><span class="showing"></span>Repo Details<em class="showing"></em></div>
+        <div class="subsection">
+            <div class="ctrlHolder">
+                <label for="repo_name">{tmpl_var name='repo_name_txt'}</label>
+                <input name="repo_name" id="repo_name" value="{tmpl_var name='repo_name'}" size="40" maxlength="40" type="text" class="textInput" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="repo_url">{tmpl_var name='repo_url_txt'}</label>
+                <input name="repo_url" id="repo_url" value="{tmpl_var name='repo_url'}" size="40" maxlength="40" type="text" class="textInput" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="repo_username">{tmpl_var name='repo_username_txt'}</label>
+                <input name="repo_username" id="repo_username" value="{tmpl_var name='repo_username'}" size="30" maxlength="30" type="text" class="textInput formLengthHalf" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="repo_password">{tmpl_var name='repo_password_txt'}</label>
+                <input name="repo_password" id="repo_password" value="{tmpl_var name='repo_password'}" size="30" maxlength="30" type="password" class="textInput formLengthHalf" />
+            </div>
+            <div class="ctrlHolder">
+                <p class="label">{tmpl_var name='active_txt'}</p>
+                <div class="multiField">{tmpl_var name='active'}</div>
             </div>
         </div>
-            
+        
         <input type="hidden" name="id" value="{tmpl_var name='id'}">
             
         <div class="buttonHolder buttons">

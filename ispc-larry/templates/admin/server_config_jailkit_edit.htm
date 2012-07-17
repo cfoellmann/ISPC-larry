@@ -31,23 +31,25 @@
     
     <!-- begin: modulecontent -->
     <div class="panel panel_server_config">
-        <div class="ctrlHolder">
-            <label for="jailkit_chroot_home">{tmpl_var name='jailkit_chroot_home_txt'}</label>
-            <input name="jailkit_chroot_home" id="jailkit_chroot_home" value="{tmpl_var name='jailkit_chroot_home'}" size="40" maxlength="255" type="text" class="textInput" />
+        <div class="subsectiontoggle"><span class="showing"></span>Interface > Jailkit<em class="showing"></em></div>
+        <div class="subsection">
+            <div class="ctrlHolder">
+                <label for="jailkit_chroot_home">{tmpl_var name='jailkit_chroot_home_txt'}</label>
+                <input name="jailkit_chroot_home" id="jailkit_chroot_home" value="{tmpl_var name='jailkit_chroot_home'}" size="40" maxlength="255" type="text" class="textInput" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="jailkit_chroot_app_sections">{tmpl_var name='jailkit_chroot_app_sections_txt'}</label>
+                <input name="jailkit_chroot_app_sections" id="jailkit_chroot_app_sections" value="{tmpl_var name='jailkit_chroot_app_sections'}" size="40" maxlength="1000" type="text" class="textInput" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="jailkit_chroot_app_programs">{tmpl_var name='jailkit_chroot_app_programs_txt'}</label>
+                <input name="jailkit_chroot_app_programs" id="jailkit_chroot_app_programs" value="{tmpl_var name='jailkit_chroot_app_programs'}" size="40" maxlength="1000" type="text" class="textInput" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="jailkit_chroot_cron_programs">{tmpl_var name='jailkit_chroot_cron_programs_txt'}</label>
+                <input name="jailkit_chroot_cron_programs" id="jailkit_chroot_cron_programs" value="{tmpl_var name='jailkit_chroot_cron_programs'}" size="40" maxlength="1000" type="text" class="textInput" />
+            </div>
         </div>
-        <div class="ctrlHolder">
-            <label for="jailkit_chroot_app_sections">{tmpl_var name='jailkit_chroot_app_sections_txt'}</label>
-            <input name="jailkit_chroot_app_sections" id="jailkit_chroot_app_sections" value="{tmpl_var name='jailkit_chroot_app_sections'}" size="40" maxlength="1000" type="text" class="textInput" />
-        </div>
-        <div class="ctrlHolder">
-            <label for="jailkit_chroot_app_programs">{tmpl_var name='jailkit_chroot_app_programs_txt'}</label>
-            <input name="jailkit_chroot_app_programs" id="jailkit_chroot_app_programs" value="{tmpl_var name='jailkit_chroot_app_programs'}" size="40" maxlength="1000" type="text" class="textInput" />
-        </div>
-        <div class="ctrlHolder">
-            <label for="jailkit_chroot_cron_programs">{tmpl_var name='jailkit_chroot_cron_programs_txt'}</label>
-            <input name="jailkit_chroot_cron_programs" id="jailkit_chroot_cron_programs" value="{tmpl_var name='jailkit_chroot_cron_programs'}" size="40" maxlength="1000" type="text" class="textInput" />
-        </div>
-            
         <input type="hidden" name="id" value="{tmpl_var name='id'}">
             
         <div class="buttonHolder buttons">

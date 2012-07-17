@@ -31,27 +31,29 @@
     
     <!-- begin: modulecontent -->
     <div class="panel panel_dns_template">
-        <div class="ctrlHolder">
-            <label for="name">{tmpl_var name='name_txt'}</label>
-            <input name="name" id="name" value="{tmpl_var name='name'}" size="40" maxlength="255" type="text" class="textInput" />
-        </div>
-        <div class="ctrlHolder">
-            <p class="label">{tmpl_var name='fields_txt'}</p>
-            <div class="multiField">
-                {tmpl_var name='fields'}
+        <div class="subsectiontoggle"><span class="showing"></span>Template<em class="showing"></em></div>
+        <div class="subsection">
+            <div class="ctrlHolder">
+                <label for="name">{tmpl_var name='name_txt'}</label>
+                <input name="name" id="name" value="{tmpl_var name='name'}" size="40" maxlength="255" type="text" class="textInput" />
+            </div>
+            <div class="ctrlHolder">
+                <p class="label">{tmpl_var name='fields_txt'}</p>
+                <div class="multiField">
+                    {tmpl_var name='fields'}
+                </div>
+            </div>
+            <div class="ctrlHolder">
+                <label for="template">{tmpl_var name='template_txt'}</label>
+                <textarea name="template" id="template" rows='15' cols='40'>{tmpl_var name='template'}</textarea>
+            </div>
+            <div class="ctrlHolder">
+                <p class="label">{tmpl_var name='visible_txt'}</p>
+                <div class="multiField">
+                    {tmpl_var name='visible'}
+                </div>
             </div>
         </div>
-        <div class="ctrlHolder">
-            <label for="template">{tmpl_var name='template_txt'}</label>
-            <textarea name="template" id="template" rows='15' cols='40'>{tmpl_var name='template'}</textarea>
-        </div>
-        <div class="ctrlHolder">
-            <p class="label">{tmpl_var name='visible_txt'}</p>
-            <div class="multiField">
-                {tmpl_var name='visible'}
-            </div>
-        </div>
-            
         <input type="hidden" name="id" value="{tmpl_var name='id'}">
             
         <div class="buttonHolder buttons">

@@ -31,28 +31,27 @@
     
     <!-- begin: modulecontent -->
     <div class="panel panel_edit_server_php">
-        <div class="ctrlHolder">
-            <label for="server_id">{tmpl_var name='server_id_txt'}</label>
-            <select name="server_id" id="server_id" class="selectInput">
-                                            {tmpl_var name='server_id'}
-            </select>
-        </div>
-        <div class="ctrlHolder">
-            <label for="client_id">{tmpl_var name='client_id_txt'}</label>
-            <select name="client_id" id="client_id" class="selectInput">
-                                            {tmpl_var name='client_id'}
-            </select>
-        </div>
-        <div class="ctrlHolder">
-            <label for="name">{tmpl_var name='name_txt'}</label>
-            <input name="name" id="name" value="{tmpl_var name='name'}" size="40" maxlength="255" type="text" class="textInput" />
-        </div>
-
-        <input type="hidden" name="id" value="{tmpl_var name='id'}">
-
-        <div class="buttonHolder buttons">
-            <button class="positive iconstxt icoPositive" type="button" value="{tmpl_var name='btn_save_txt'}" onClick="submitForm('pageForm','admin/server_php_edit.php');"><span>{tmpl_var name='btn_save_txt'}</span></button>
-            <button class="negative iconstxt icoNegative" type="button" value="{tmpl_var name='btn_cancel_txt'}" onClick="loadContent('admin/server_php_list.php');"><span>{tmpl_var name='btn_cancel_txt'}</span></button>
+        <div class="subsectiontoggle"><span class="showing"></span>PHP Name<em class="showing"></em></div>
+        <div class="subsection">
+            <div class="ctrlHolder">
+                <label for="server_id">{tmpl_var name='server_id_txt'}</label>
+                <select name="server_id" id="server_id" class="selectInput">{tmpl_var name='server_id'}</select>
+            </div>
+            <div class="ctrlHolder">
+                <label for="client_id">{tmpl_var name='client_id_txt'}</label>
+                <select name="client_id" id="client_id" class="selectInput">{tmpl_var name='client_id'}</select>
+            </div>
+            <div class="ctrlHolder">
+                <label for="name">{tmpl_var name='name_txt'}</label>
+                <input name="name" id="name" value="{tmpl_var name='name'}" size="40" maxlength="255" type="text" class="textInput" />
+            </div>
+                
+            <input type="hidden" name="id" value="{tmpl_var name='id'}">
+                
+            <div class="buttonHolder buttons">
+                <button class="positive iconstxt icoPositive" type="button" value="{tmpl_var name='btn_save_txt'}" onClick="submitForm('pageForm','admin/server_php_edit.php');"><span>{tmpl_var name='btn_save_txt'}</span></button>
+                <button class="negative iconstxt icoNegative" type="button" value="{tmpl_var name='btn_cancel_txt'}" onClick="loadContent('admin/server_php_list.php');"><span>{tmpl_var name='btn_cancel_txt'}</span></button>
+            </div>
         </div>
     </div><!-- end: modulecontent -->
 </div><!-- end: modulebody -->

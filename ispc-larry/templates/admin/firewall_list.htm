@@ -34,11 +34,12 @@
             <tbody>
             <tmpl_loop name="records">
                 <tr class="tbl_row_<tmpl_if name='__EVEN__'}even<tmpl_else>uneven</tmpl_if>">
-                    <td class="tbl_col_active"><a href="#" onClick="loadContent('admin/firewall_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="active"}</a></td>
+                    <td class="tbl_col_active">{tmpl_var name="active"}</td>
                     <td class="tbl_col_server_id"><a href="#" onClick="loadContent('admin/firewall_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="server_id"}</a></td>
-                    <td class="tbl_col_tcp_port"><a href="#" onClick="loadContent('admin/firewall_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="tcp_port"}</a></td>
-                    <td class="tbl_col_udp_port"><a href="#" onClick="loadContent('admin/firewall_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="udp_port"}</a></td>
-                    <td class="tbl_col_buttons">   
+                    <td class="tbl_col_tcp_port">{tmpl_var name="tcp_port"}</td>
+                    <td class="tbl_col_udp_port">{tmpl_var name="udp_port"}</td>
+                    <td class="tbl_col_buttons"> 
+                        <a class="button icons16 icoEdit" href="javascript: loadContent('admin/firewall_edit.php?id={tmpl_var name='id'}');"><span>{tmpl_var name='edit_txt'}</span></a>
                         <a class="button icons16 icoDelete" href="javascript: del_record('admin/firewall_del.php?id={tmpl_var name='id'}&phpsessid={tmpl_var name='phpsessid'}','{tmpl_var name='delete_confirmation'}');"><span>{tmpl_var name='delete_txt'}</span></a>
                     </td>
                 </tr>

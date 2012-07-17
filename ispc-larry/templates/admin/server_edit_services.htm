@@ -30,62 +30,62 @@
     </tmpl_if>
     
     <!-- begin: modulecontent -->
-    <p><tmpl_var name="list_desc_txt"></p>
-
     <div class="panel panel_server">
-        <div class="ctrlHolder">
-            <label for="server_name">{tmpl_var name='server_name_txt'}</label>
-            <input name="server_name" id="server_name" value="{tmpl_var name='server_name'}" size="30" maxlength="255" type="text" class="textInput" />
-        </div>
-        <div class="ctrlHolder">
-            <p class="label">{tmpl_var name='mail_server_txt'}</p>
-            <div class="multiField">
-                {tmpl_var name='mail_server'}
+        <div class="subsectiontoggle"><span class="showing"></span>Services<em class="showing"></em></div>
+        <div class="subsection">
+            <div class="ctrlHolder">
+                <label for="server_name">{tmpl_var name='server_name_txt'}</label>
+                <input name="server_name" id="server_name" value="{tmpl_var name='server_name'}" size="30" maxlength="255" type="text" class="textInput" />
+            </div>
+            <div class="ctrlHolder">
+                <p class="label">{tmpl_var name='mail_server_txt'}</p>
+                <div class="multiField">
+                    {tmpl_var name='mail_server'}
+                </div>
+            </div>
+            <div class="ctrlHolder">
+                <p class="label">{tmpl_var name='web_server_txt'}</p>
+                <div class="multiField">
+                    {tmpl_var name='web_server'}
+                </div>
+            </div>
+            <div class="ctrlHolder">
+                <p class="label">{tmpl_var name='dns_server_txt'}</p>
+                <div class="multiField">
+                    {tmpl_var name='dns_server'}
+                </div>
+            </div>
+            <div class="ctrlHolder">
+                <p class="label">{tmpl_var name='file_server_txt'}</p>
+                <div class="multiField">
+                    {tmpl_var name='file_server'}
+                </div>
+            </div>
+            <div class="ctrlHolder">
+                <p class="label">{tmpl_var name='db_server_txt'}</p>
+                <div class="multiField">
+                    {tmpl_var name='db_server'}
+                </div>
+            </div>
+            <div class="ctrlHolder">
+                <p class="label">{tmpl_var name='vserver_server_txt'}</p>
+                <div class="multiField">
+                    {tmpl_var name='vserver_server'}
+                </div>
+            </div>
+            <div class="ctrlHolder">
+                <label for="mirror_server_id">{tmpl_var name='mirror_server_id_txt'}</label>
+                <select name="mirror_server_id" id="server_id" class="selectInput">
+                    {tmpl_var name='mirror_server_id'}
+                </select>
+            </div>
+            <div class="ctrlHolder">
+                <label for="active">{tmpl_var name='active_txt'}</label>
+                <select name="active" id="active" class="selectInput formLengthBool">
+                    {tmpl_var name='active'}
+                </select>
             </div>
         </div>
-        <div class="ctrlHolder">
-            <p class="label">{tmpl_var name='web_server_txt'}</p>
-            <div class="multiField">
-                {tmpl_var name='web_server'}
-            </div>
-        </div>
-        <div class="ctrlHolder">
-            <p class="label">{tmpl_var name='dns_server_txt'}</p>
-            <div class="multiField">
-                {tmpl_var name='dns_server'}
-            </div>
-        </div>
-        <div class="ctrlHolder">
-            <p class="label">{tmpl_var name='file_server_txt'}</p>
-            <div class="multiField">
-                {tmpl_var name='file_server'}
-            </div>
-        </div>
-        <div class="ctrlHolder">
-            <p class="label">{tmpl_var name='db_server_txt'}</p>
-            <div class="multiField">
-                {tmpl_var name='db_server'}
-            </div>
-        </div>
-        <div class="ctrlHolder">
-            <p class="label">{tmpl_var name='vserver_server_txt'}</p>
-            <div class="multiField">
-                {tmpl_var name='vserver_server'}
-            </div>
-        </div>
-        <div class="ctrlHolder">
-            <label for="mirror_server_id">{tmpl_var name='mirror_server_id_txt'}</label>
-            <select name="mirror_server_id" id="server_id" class="selectInput">
-                {tmpl_var name='mirror_server_id'}
-            </select>
-        </div>
-        <div class="ctrlHolder">
-            <label for="active">{tmpl_var name='active_txt'}</label>
-            <select name="active" id="active" class="selectInput formLengthBool">
-                {tmpl_var name='active'}
-            </select>
-        </div>
-
         <input type="hidden" name="id" value="{tmpl_var name='id'}">
 
         <div class="buttonHolder buttons">

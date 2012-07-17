@@ -35,7 +35,7 @@ h1 {
 table,input[type="text"],input[type="password"],textarea,select,input.button,
 .formbuttons input.button,a.button,.button,div.gs-container input,ul.gs-resultbox,
 .dash-mods,.dash-limits,#sideNav-container,#login-form .box-inner,ul li.sideitem .image,
-.buttons button, div.subsection {
+.buttons button, div.subsectiontoggle, div.subsection {
     -moz-border-radius:5px;
     -webkit-border-radius:5px;
     -khtml-border-radius:5px;
@@ -85,38 +85,35 @@ table.topbuttons {
 }
 table.list th[class$="_active"],
 table.list td[class$="_active"],
-table.list th.tbl_col_visible,
-table.list td.tbl_col_visible,
+.tbl_col_visible,
 table.list th[class$="_reserved"],
 table.list td[class$="_reserved"],
-table.list th.tbl_col_remote_access,
-table.list td.tbl_col_remote_access,
+.tbl_col_remote_access,
 table.list th[class$="_pid"],
 table.list td[class$="_pid"],
-table.list th.tbl_col_veid,
-table.list td.tbl_col_veid,
-table.list th.tbl_col_autoresponder,
-table.list td.tbl_col_autoresponder {
-    width: 70px;
+.tbl_col_veid,
+.tbl_col_autoresponder,
+.tbl_col_virtualhost,
+.tbl_col_ip_type {
+    width: 90px;
     text-align: center;
 }
 table.list th[class$="_ip_address"],
 table.list td[class$="_ip_address"],
-table.list th.tbl_col_country,
-table.list td.tbl_col_country,
-table.list th.tbl_col_group,
-table.list td.tbl_col_group {
-    width: 100px;
+.tbl_col_phpname,
+.tbl_col_country,
+.tbl_col_group {
+    width: 120px;
     text-align: center;
 }
-table.list th.tbl_col_allservers,
-table.list td.tbl_col_allservers {
-    width: 180px;
+.tbl_col_allservers {
+    width: 200px;
     text-align: center;
 }
-table.list .tbl_col_buttons,
-table.list .tbl_col_limit,
-table.list .tbl_col_template_type{
+.tbl_col_buttons,
+.tbl_col_limit,
+.tbl_col_template_type,
+.tbl_col_clientname {
     width: 150px;
 }
 table.list thead th {
@@ -238,21 +235,21 @@ select option {
 select option[value=""] {background-position: 0 20px !important;}
 .filter select option[value="Y"],
 .filter select option[value="y"],
-.filter select option[value="1"] {
-    background-position: 0 -400px;
-}
+.filter select option[value="1"] { background-position: 0 -400px; }
 .filter select option[value="N"],
 .filter select option[value="n"],
-.filter select option[value="0"] {
-    background-position: 0 -420px;
-}
+.filter select option[value="0"] { background-position: 0 -420px; }
 select.clienticons option {
-    background-position: 5px -440px;
-    padding: 1px 0 1px 30px;
+    background-position: 5px -440px !important;
+    padding: 1px 0 1px 30px !important;
 }
 select.servericons option {
     background-position: 5px -460px !important;
     padding: 1px 0 1px 30px;
+}
+select.ip_type option {
+    padding: 0 0 0 5px !important;
+    background: none;
 }
 /* Input/buttons
 -------------------------------------------------------------- */
@@ -1061,12 +1058,6 @@ div.subsectiontoggle {
     cursor:pointer;
     margin-bottom:10px;
     background-color:#f4f4f4;
-    -moz-border-radius:5px;
-    -webkit-border-radius:5px;
-    -khtml-border-radius:5px;
-    -o-border-radius:5px;
-    -ms-border-radius:5px;
-    border-radius:5px;
 }
 div.subsectiontoggle span {
     display:inline-block;
@@ -1076,7 +1067,7 @@ div.subsectiontoggle span {
     height:16px;
     background: url("icons/button_sprite.png") 0 -72px no-repeat transparent;
 }
-div.subsectiontoggle span.showing{
+div.subsectiontoggle span.showing {
     background-position: 0 -40px;
 }
 div.subsectiontoggle em {
@@ -1131,10 +1122,9 @@ div.subsectiontoggle:hover em {
     transform:rotate(90deg);
 }
 div.subsection {
-    background: #fff;
+    background: #f4f4f4;
     border: 1px solid #CCC;
     margin-bottom: 10px;
-    padding: 0 10px;
 }
 
 
@@ -1233,7 +1223,7 @@ div.subsection {
 .ctrlHolder,
 .wf_oneField {
 /*    line-height: 30px;*/
-    padding: 10px 0;
+    padding: 10px;
 }
 .ctrlHolder:hover {
     background: #FFFACD;
@@ -1800,6 +1790,7 @@ select.decorated {
 div[class^=country-] {
     background-image: url("icons/flags_sprite.png");
     background-repeat: no-repeat;
+    margin: 0 auto;
     height: 20px;
     width: 26px;
 }

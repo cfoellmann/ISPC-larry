@@ -31,8 +31,8 @@
     
     <!-- begin: modulecontent -->
     <div class="panel panel_mail_mailinglist">
-        
-        <div class="pnl_formsarea">	
+        <div class="subsectiontoggle"><span class="showing"></span>User Groups<em class="showing"></em></div>
+        <div class="subsection">
             <tmpl_if name="is_admin">
                 <div class="ctrlHolder">
                     <label for="client_group_id">{tmpl_var name='client_txt'}</label>
@@ -54,9 +54,7 @@
             <tmpl_if name="edit_disabled">
                 <div class="ctrlHolder">
                     <label for="domain_disabled">{tmpl_var name='domain_txt'}</label>
-                    <select name="domain_disabled" id="domain_disabled" class="selectInput" disabled="disabled">
-                        {tmpl_var name='domain_option'}
-                    </select>
+                    <select name="domain_disabled" id="domain_disabled" class="selectInput" disabled="disabled">{tmpl_var name='domain_option'}</select>
                     <input type="hidden" name="domain" value="{tmpl_var name='domain_value'}" />
                 </div>
                     
@@ -73,9 +71,7 @@
                 <tmpl_else>
                     <div class="ctrlHolder">
                         <label for="domain">{tmpl_var name='domain_txt'}</label>
-                        <select name="domain" id="domain" class="selectInput">
-                            {tmpl_var name='domain_option'}
-                        </select>
+                        <select name="domain" id="domain" class="selectInput">{tmpl_var name='domain_option'}</select>
                     </div>
                     <div class="ctrlHolder">
                         <label for="listname">{tmpl_var name='listname_txt'}</label>
@@ -95,12 +91,13 @@
                 <div id="passBar"></div>
                 <p class="formHint"><span id="passText">&nbsp;</span></p>
             </div>
-                
-            <input type="hidden" name="id" value="{tmpl_var name='id'}">
-                
-            <div class="buttonHolder buttons">
-                <button class="positive iconstxt icoPositive" type="button" value="{tmpl_var name='btn_save_txt'}" onClick="submitForm('pageForm','mail/mail_mailinglist_edit.php');"><span>{tmpl_var name='btn_save_txt'}</span></button>
-                <button class="negative iconstxt icoNegative" type="button" value="{tmpl_var name='btn_cancel_txt'}" onClick="loadContent('mail/mail_mailinglist_list.php');"><span>{tmpl_var name='btn_cancel_txt'}</span></button>
-            </div>
+        </div>
+            
+        <input type="hidden" name="id" value="{tmpl_var name='id'}">
+            
+        <div class="buttonHolder buttons">
+            <button class="positive iconstxt icoPositive" type="button" value="{tmpl_var name='btn_save_txt'}" onClick="submitForm('pageForm','mail/mail_mailinglist_edit.php');"><span>{tmpl_var name='btn_save_txt'}</span></button>
+            <button class="negative iconstxt icoNegative" type="button" value="{tmpl_var name='btn_cancel_txt'}" onClick="loadContent('mail/mail_mailinglist_list.php');"><span>{tmpl_var name='btn_cancel_txt'}</span></button>
+        </div>
     </div><!-- end: modulecontent -->
 </div><!-- end: modulebody -->

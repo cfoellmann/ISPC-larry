@@ -31,62 +31,63 @@
     
     <!-- begin: modulecontent -->
     <div class="panel panel_iptables">
-        <div class="ctrlHolder">
-            <label for="server_id">{tmpl_var name='server_id_txt'}</label>
-            <select name="server_id" id="server_id" class="selectInput">
-                {tmpl_var name='server_id'}
-            </select>
-        </div>
-        <div class="ctrlHolder">
-            <label for="table">{tmpl_var name='table_txt'}</label>
-            <select name="table" id="table" class="selectInput formLengthLimit">
-                {tmpl_var name='table'}
-            </select>
-        </div>
-        <div class="ctrlHolder">
-            <label for="protocol">{tmpl_var name='protocol_txt'}</label>
-            <select name="protocol" id="protocol" class="selectInput formLengthLimit">
-                {tmpl_var name='protocol'}
-            </select>
-        </div>
-        <div class="ctrlHolder">
-            <label for="singleport">{tmpl_var name='singleport_txt'}</label>
-            <input name="singleport" id="singleport" value="{tmpl_var name='singleport'}" size="10" maxlength="10" type="text" class="textInput formLengthLimit" />
-        </div>
-        <div class="ctrlHolder">
-            <label for="multiport">{tmpl_var name='multiport_txt'}</label>
-            <input name="multiport" id="multiport" value="{tmpl_var name='multiport'}" size="20" maxlength="40" type="text" class="textInput" />
-        </div>
-        <div class="ctrlHolder">
-            <label for="destination_ip">{tmpl_var name='destination_ip_txt'}</label>
-            <input name="destination_ip" id="destination_ip" value="{tmpl_var name='destination_ip'}" size="16" maxlength="20" type="text" class="textInput formLengthIPv4" />
-        </div>
-        <div class="ctrlHolder">
-            <label for="source_ip">{tmpl_var name='source_ip_txt'}</label>
-            <input name="source_ip" id="source_ip" value="{tmpl_var name='source_ip'}" size="16" maxlength="20" type="text" class="textInput formLengthIPv4" />
-        </div>
-        <div class="ctrlHolder">
-            <label for="state">{tmpl_var name='state_txt'}</label>
-            <input name="state" id="state" value="{tmpl_var name='state'}" size="16" maxlength="20" type="text" class="textInput" />
-        </div>
-        <div class="ctrlHolder">
-            <label for="target">{tmpl_var name='target_txt'}</label>
-            <select name="target" id="target" class="selectInput formLengthLimit">
-                {tmpl_var name='target'}
-            </select>
-        </div>
-        <div class="ctrlHolder">
-            <p class="label">{tmpl_var name='active_txt'}</p>
-            <div class="multiField">
-                {tmpl_var name='active'}
+        <div class="subsectiontoggle"><span class="showing"></span>Interface > vlogger<em class="showing"></em></div>
+        <div class="subsection">
+            <div class="ctrlHolder">
+                <label for="server_id">{tmpl_var name='server_id_txt'}</label>
+                <select name="server_id" id="server_id" class="selectInput">
+                    {tmpl_var name='server_id'}
+                </select>
+            </div>
+            <div class="ctrlHolder">
+                <label for="table">{tmpl_var name='table_txt'}</label>
+                <select name="table" id="table" class="selectInput formLengthLimit">
+                    {tmpl_var name='table'}
+                </select>
+            </div>
+            <div class="ctrlHolder">
+                <label for="protocol">{tmpl_var name='protocol_txt'}</label>
+                <select name="protocol" id="protocol" class="selectInput formLengthLimit">
+                    {tmpl_var name='protocol'}
+                </select>
+            </div>
+            <div class="ctrlHolder">
+                <label for="singleport">{tmpl_var name='singleport_txt'}</label>
+                <input name="singleport" id="singleport" value="{tmpl_var name='singleport'}" size="10" maxlength="10" type="text" class="textInput formLengthLimit" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="multiport">{tmpl_var name='multiport_txt'}</label>
+                <input name="multiport" id="multiport" value="{tmpl_var name='multiport'}" size="20" maxlength="40" type="text" class="textInput" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="destination_ip">{tmpl_var name='destination_ip_txt'}</label>
+                <input name="destination_ip" id="destination_ip" value="{tmpl_var name='destination_ip'}" size="16" maxlength="20" type="text" class="textInput formLengthIPv4" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="source_ip">{tmpl_var name='source_ip_txt'}</label>
+                <input name="source_ip" id="source_ip" value="{tmpl_var name='source_ip'}" size="16" maxlength="20" type="text" class="textInput formLengthIPv4" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="state">{tmpl_var name='state_txt'}</label>
+                <input name="state" id="state" value="{tmpl_var name='state'}" size="16" maxlength="20" type="text" class="textInput" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="target">{tmpl_var name='target_txt'}</label>
+                <select name="target" id="target" class="selectInput formLengthLimit">
+                    {tmpl_var name='target'}
+                </select>
+            </div>
+            <div class="ctrlHolder">
+                <p class="label">{tmpl_var name='active_txt'}</p>
+                <div class="multiField">
+                    {tmpl_var name='active'}
+                </div>
             </div>
         </div>
         <input type="hidden" name="id" value="{tmpl_var name='id'}">
         <div class="buttonHolder buttons">
-            <button class="positive iconstxt icoPositive" type="button" value="{tmpl_var name='btn_save_txt'}" onClick="submitForm('pageForm','admin/iptables_edit.php');">
-                <span>{tmpl_var name='btn_save_txt'}</span></button>
-            <button class="negative iconstxt icoNegative" type="button" value="{tmpl_var name='btn_cancel_txt'}" onClick="loadContent('admin/iptables_list.php');">
-                <span>{tmpl_var name='btn_cancel_txt'}</span></button>
+            <button class="positive iconstxt icoPositive" type="button" value="{tmpl_var name='btn_save_txt'}" onClick="submitForm('pageForm','admin/iptables_edit.php');"><span>{tmpl_var name='btn_save_txt'}</span></button>
+            <button class="negative iconstxt icoNegative" type="button" value="{tmpl_var name='btn_cancel_txt'}" onClick="loadContent('admin/iptables_list.php');"><span>{tmpl_var name='btn_cancel_txt'}</span></button>
         </div>
     </div><!-- end: modulecontent -->
 </div><!-- end: modulebody -->

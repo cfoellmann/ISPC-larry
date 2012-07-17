@@ -31,11 +31,14 @@
         
     <!-- begin: modulecontent -->
     <div class="panel panel_ftp_user">
-        <div class="ctrlHolder">
-            <label for="dir">{tmpl_var name='dir_txt'}</label>
-            <input name="dir" id="dir" value="{tmpl_var name='dir'}" size="30" maxlength="255" type="text" class="textInput" />
+        <div class="subsectiontoggle"><span class="showing"></span>FTP Advanced Options<em class="showing"></em></div>
+        <div class="subsection">
+            <div class="ctrlHolder">
+                <label for="dir">{tmpl_var name='dir_txt'}</label>
+                <input name="dir" id="dir" value="{tmpl_var name='dir'}" size="30" maxlength="255" type="text" class="textInput" />
+            </div>
         </div>
-            
+        
         <input type="hidden" name="id" value="{tmpl_var name='id'}">
             
         <div class="buttonHolder buttons">

@@ -31,26 +31,29 @@
     
     <!-- begin: modulecontent -->
     <div class="panel panel_dns_mx">
-        <div class="ctrlHolder">
-            <label for="name">{tmpl_var name='name_txt'}</label>
-            <input name="name" id="name" value="{tmpl_var name='name'}" size="30" maxlength="255" type="text" class="textInput" />
-        </div>
-        <div class="ctrlHolder">
-            <label for="data">{tmpl_var name='data_txt'}</label>
-            <input name="data" id="data" value="{tmpl_var name='data'}" size="30" maxlength="255" type="text" class="textInput" />
-        </div>
-        <div class="ctrlHolder">
-            <label for="aux">{tmpl_var name='aux_txt'}</label>
-            <input name="aux" id="aux" value="{tmpl_var name='aux'}" size="10" maxlength="10" type="text" class="textInput formLengthLimit" />
-        </div>
-        <div class="ctrlHolder">
-            <label for="ttl">{tmpl_var name='ttl_txt'}</label>
-            <input name="ttl" id="ttl" value="{tmpl_var name='ttl'}" size="10" maxlength="10" type="text" class="textInput" />
-        </div>
-        <div class="ctrlHolder">
-            <p class="label">{tmpl_var name='active_txt'}</p>
-            <div class="multiField">
-                {tmpl_var name='active'}
+        <div class="subsectiontoggle"><span class="showing"></span>MX-Record<em class="showing"></em></div>
+        <div class="subsection">
+            <div class="ctrlHolder">
+                <label for="name">{tmpl_var name='name_txt'}</label>
+                <input name="name" id="name" value="{tmpl_var name='name'}" size="30" maxlength="255" type="text" class="textInput" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="data">{tmpl_var name='data_txt'}</label>
+                <input name="data" id="data" value="{tmpl_var name='data'}" size="30" maxlength="255" type="text" class="textInput" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="aux">{tmpl_var name='aux_txt'}</label>
+                <input name="aux" id="aux" value="{tmpl_var name='aux'}" size="10" maxlength="10" type="text" class="textInput formLengthLimit" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="ttl">{tmpl_var name='ttl_txt'}</label>
+                <input name="ttl" id="ttl" value="{tmpl_var name='ttl'}" size="10" maxlength="10" type="text" class="textInput" />
+            </div>
+            <div class="ctrlHolder">
+                <p class="label">{tmpl_var name='active_txt'}</p>
+                <div class="multiField">
+                    {tmpl_var name='active'}
+                </div>
             </div>
         </div>
             

@@ -31,27 +31,29 @@
     
     <!-- begin: modulecontent -->
     <div class="panel panel_server_config">
-        <div class="ctrlHolder">
-            <label for="bind_user">{tmpl_var name='bind_user_txt'}</label>
-            <input name="bind_user" id="bind_user" value="{tmpl_var name='bind_user'}" size="40" maxlength="255" type="text" class="textInput" />
+        <div class="subsectiontoggle"><span class="showing"></span>Interface > DNS<em class="showing"></em></div>
+        <div class="subsection">
+            <div class="ctrlHolder">
+                <label for="bind_user">{tmpl_var name='bind_user_txt'}</label>
+                <input name="bind_user" id="bind_user" value="{tmpl_var name='bind_user'}" size="40" maxlength="255" type="text" class="textInput" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="bind_group">{tmpl_var name='bind_group_txt'}</label>
+                <input name="bind_group" id="bind_group" value="{tmpl_var name='bind_group'}" size="40" maxlength="255" type="text" class="textInput" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="bind_zonefiles_dir">{tmpl_var name='bind_zonefiles_dir_txt'}</label>
+                <input name="bind_zonefiles_dir" id="bind_zonefiles_dir" value="{tmpl_var name='bind_zonefiles_dir'}" size="40" maxlength="255" type="text" class="textInput" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="named_conf_path">{tmpl_var name='named_conf_path_txt'}</label>
+                <input name="named_conf_path" id="named_conf_path" value="{tmpl_var name='named_conf_path'}" size="40" maxlength="255" type="text" class="textInput" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="named_conf_local_path">{tmpl_var name='named_conf_local_path_txt'}</label>
+                <input name="named_conf_local_path" id="named_conf_local_path" value="{tmpl_var name='named_conf_local_path'}" size="40" maxlength="255" type="text" class="textInput" />
+            </div>
         </div>
-        <div class="ctrlHolder">
-            <label for="bind_group">{tmpl_var name='bind_group_txt'}</label>
-            <input name="bind_group" id="bind_group" value="{tmpl_var name='bind_group'}" size="40" maxlength="255" type="text" class="textInput" />
-        </div>
-        <div class="ctrlHolder">
-            <label for="bind_zonefiles_dir">{tmpl_var name='bind_zonefiles_dir_txt'}</label>
-            <input name="bind_zonefiles_dir" id="bind_zonefiles_dir" value="{tmpl_var name='bind_zonefiles_dir'}" size="40" maxlength="255" type="text" class="textInput" />
-        </div>
-        <div class="ctrlHolder">
-            <label for="named_conf_path">{tmpl_var name='named_conf_path_txt'}</label>
-            <input name="named_conf_path" id="named_conf_path" value="{tmpl_var name='named_conf_path'}" size="40" maxlength="255" type="text" class="textInput" />
-        </div>
-        <div class="ctrlHolder">
-            <label for="named_conf_local_path">{tmpl_var name='named_conf_local_path_txt'}</label>
-            <input name="named_conf_local_path" id="named_conf_local_path" value="{tmpl_var name='named_conf_local_path'}" size="40" maxlength="255" type="text" class="textInput" />
-        </div>
-            
         <input type="hidden" name="id" value="{tmpl_var name='id'}">
             
         <div class="buttonHolder buttons">

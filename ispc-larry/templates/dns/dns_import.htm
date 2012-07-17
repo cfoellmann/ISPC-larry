@@ -31,37 +31,32 @@
     
     <!-- begin: modulecontent -->
     <div class="panel panel_dns_wizard">
-        <tmpl_if name="is_admin">
+        <div class="subsectiontoggle"><span class="showing"></span>Import Details<em class="showing"></em></div>
+        <div class="subsection">
+            <tmpl_if name="is_admin">
+                <div class="ctrlHolder">
+                    <label for="server_id">{tmpl_var name='server_id_txt'}</label>
+                    <select name="server_id" id="server_id" class="selectInput">
+                        {tmpl_var name='server_id'}
+                    </select>
+                </div>
+                <div class="ctrlHolder">
+                    <label for="client_group_id">{tmpl_var name='client_txt'}</label>
+                    <select name="client_group_id" id="client_group_id" class="selectInput">
+                        {tmpl_var name='client_group_id'}
+                    </select>
+                </div>
+            </tmpl_if>
             <div class="ctrlHolder">
-                <label for="server_id">{tmpl_var name='server_id_txt'}</label>
-                <select name="server_id" id="server_id" class="selectInput">
-                    {tmpl_var name='server_id'}
-                </select>
+                <label for="domain">{tmpl_var name='domain_txt'}. {tmpl_var name='domain_field_desc_txt'}</label>
+                <input name="domain" id="domain" value="{tmpl_var name='domain'}" size="30" maxlength="255" type="text" class="textInput" onkeydown="keydown(event.which);" />
+            </div>   
+            <div class="ctrlHolder"">
+                 <label for="file">{tmpl_var name='zonefile_to_import_txt'}</label>
+                <input name="file" id="file" size="30" type="file" class="fileUpload" />
             </div>
-            <div class="ctrlHolder">
-                <label for="client_group_id">{tmpl_var name='client_txt'}</label>
-                <select name="client_group_id" id="client_group_id" class="selectInput">
-                    {tmpl_var name='client_group_id'}
-                </select>
-            </div>
-        </tmpl_if>
-        <div class="ctrlHolder">
-            <label for="domain">{tmpl_var name='domain_txt'}. {tmpl_var name='domain_field_desc_txt'}</label>
-            <input name="domain" id="domain" value="{tmpl_var name='domain'}" size="30" maxlength="255" type="text" class="textInput" onkeydown="keydown(event.which);" />
         </div>
-            
-        <div class="ctrlHolder"">
-             <label for="file">{tmpl_var name='zonefile_to_import_txt'}</label>
-            <input name="file" id="file" size="30" type="file" class="fileUpload" />
-        </div>
-            
-        <tmpl_if name="msg">
-            <div id="OKMsg"><p><tmpl_var name="msg"></p></div>
-        </tmpl_if>
-        <tmpl_if name="error">
-            <div id="errorMsg"><h3>ERROR</h3><ol><tmpl_var name="error"></ol></div>
-        </tmpl_if>
-            
+        
         <input type="hidden" name="id" value="{tmpl_var name='id'}">
             
         <div class="buttonHolder buttons">

@@ -30,29 +30,31 @@
     </tmpl_if>
     
     <!-- begin: modulecontent -->
-    <div class="panel panel_ftp_user">
-        <div class="ctrlHolder">
-            <label for="remote_username">{tmpl_var name='username_txt'}</label>
-            <p class="prefix">{tmpl_var name='username_prefix'}</p>
-            <input name="remote_username" id="username" value="{tmpl_var name='remote_username'}" size="30" maxlength="255" type="text" class="textInput" />
-        </div>
-            
-        <div class="ctrlHolder">
-            <label for="remote_password">{tmpl_var name='password_txt'}</label>
-            <input name="remote_password" id="password" value="{tmpl_var name='remote_password'}" size="30" maxlength="255" type="password" class="textInput" onkeyup="pass_check(this.value)" />
-        </div>
-        <div class="ctrlHolder">
-            <label>{tmpl_var name='password_strength_txt'}</label>
-            <div id="passBar"></div>
-            <p class="formHint"><span id="passText">&nbsp;</span></p>
-        </div>
-        <div class="ctrlHolder">
-            <p class="label">{tmpl_var name='function_txt'}</p>
-            <div class="multiField">
-                &nbsp; {tmpl_var name='remote_functions'}
+    <div class="panel panel_remote_user">
+        <div class="subsectiontoggle"><span class="showing"></span>Remote User<em class="showing"></em></div>
+        <div class="subsection">
+            <div class="ctrlHolder">
+                <label for="remote_username">{tmpl_var name='username_txt'}</label>
+                <p class="prefix">{tmpl_var name='username_prefix'}</p>
+                <input name="remote_username" id="username" value="{tmpl_var name='remote_username'}" size="30" maxlength="255" type="text" class="textInput" />
+            </div>
+                
+            <div class="ctrlHolder">
+                <label for="remote_password">{tmpl_var name='password_txt'}</label>
+                <input name="remote_password" id="password" value="{tmpl_var name='remote_password'}" size="30" maxlength="255" type="password" class="textInput" onkeyup="pass_check(this.value)" />
+            </div>
+            <div class="ctrlHolder">
+                <label>{tmpl_var name='password_strength_txt'}</label>
+                <div id="passBar"></div>
+                <p class="formHint"><span id="passText">&nbsp;</span></p>
+            </div>
+            <div class="ctrlHolder">
+                <p class="label">{tmpl_var name='function_txt'}</p>
+                <div class="multiField">
+                    &nbsp; {tmpl_var name='remote_functions'}
+                </div>
             </div>
         </div>
-            
         <input type="hidden" name="remote_userid" value="{tmpl_var name='id'}">
         <input type="hidden" name="id" value="{tmpl_var name='id'}">
             

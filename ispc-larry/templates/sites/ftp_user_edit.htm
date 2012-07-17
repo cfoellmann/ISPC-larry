@@ -31,34 +31,33 @@
     
     <!-- begin: modulecontent -->
     <div class="panel panel_ftp_user">
-        <div class="ctrlHolder">
-            <label for="parent_domain_id">{tmpl_var name='parent_domain_id_txt'}</label>
-            <select name="parent_domain_id" id="parent_domain_id" class="selectInput">
-                {tmpl_var name='parent_domain_id'}
-            </select>
-        </div>
-        <div class="ctrlHolder">
-            <label for="username">{tmpl_var name='username_txt'}</label>
-            <p class="prefix">{tmpl_var name='username_prefix'}</p>
-            <input name="username" id="username" value="{tmpl_var name='username'}" size="30" maxlength="255" type="text" class="textInput" />
-        </div>
-        <div class="ctrlHolder">
-            <label for="password">{tmpl_var name='password_txt'}</label>
-            <input name="password" id="password" value="{tmpl_var name='password'}" size="30" maxlength="255" type="password" class="textInput" onkeyup="pass_check(this.value)" />
-        </div>
-        <div class="ctrlHolder">
-            <label>{tmpl_var name='password_strength_txt'}</label>
-            <div id="passBar"></div>
-            <p class="formHint"><span id="passText">&nbsp;</span></p>
-        </div>
-        <div class="ctrlHolder">
-            <label for="quota_size">{tmpl_var name='quota_size_txt'}</label>
-            <input name="quota_size" id="quota_size" value="{tmpl_var name='quota_size'}" size="7" maxlength="7" type="text" class="textInput formLengthLimit" />&nbsp;MB (-1 &Rightarrow; &infin;)
-        </div>
-        <div class="ctrlHolder">
-            <label>{tmpl_var name='active_txt'}</label>
-            <div class="multiField">
-                {tmpl_var name='active'}
+        <div class="subsectiontoggle"><span class="showing"></span>FTP User<em class="showing"></em></div>
+        <div class="subsection">
+            <div class="ctrlHolder">
+                <label for="parent_domain_id">{tmpl_var name='parent_domain_id_txt'}</label>
+                <select name="parent_domain_id" id="parent_domain_id" class="selectInput">{tmpl_var name='parent_domain_id'}</select>
+            </div>
+            <div class="ctrlHolder">
+                <label for="username">{tmpl_var name='username_txt'}</label>
+                <p class="prefix">{tmpl_var name='username_prefix'}</p>
+                <input name="username" id="username" value="{tmpl_var name='username'}" size="30" maxlength="255" type="text" class="textInput" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="password">{tmpl_var name='password_txt'}</label>
+                <input name="password" id="password" value="{tmpl_var name='password'}" size="30" maxlength="255" type="password" class="textInput" onkeyup="pass_check(this.value)" />
+            </div>
+            <div class="ctrlHolder">
+                <label>{tmpl_var name='password_strength_txt'}</label>
+                <div id="passBar"></div>
+                <p class="formHint"><span id="passText">&nbsp;</span></p>
+            </div>
+            <div class="ctrlHolder">
+                <label for="quota_size">{tmpl_var name='quota_size_txt'}</label>
+                <input name="quota_size" id="quota_size" value="{tmpl_var name='quota_size'}" size="7" maxlength="7" type="text" class="textInput formLengthLimit" />&nbsp;MB (-1 &Rightarrow; &infin;)
+            </div>
+            <div class="ctrlHolder">
+                <label>{tmpl_var name='active_txt'}</label>
+                <div class="multiField">{tmpl_var name='active'}</div>
             </div>
         </div>
 

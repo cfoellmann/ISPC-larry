@@ -31,16 +31,19 @@
     
     <!-- begin: modulecontent -->
     <div class="panel panel_users">
-        <div class="ctrlHolder">
-            <label for="default_group">{tmpl_var name='default_group_txt'}</label>
-            <select name="default_group" id="default_group" class="selectInput">
-                {tmpl_var name='default_group'}
-            </select>
-        </div>
-        <div class="ctrlHolder">
-            <p class="label">{tmpl_var name='groups_txt'}</p>
-            <div class="multiField">
-                {tmpl_var name='groups'}
+        <div class="subsectiontoggle"><span class="showing"></span>User Groups<em class="showing"></em></div>
+        <div class="subsection">
+            <div class="ctrlHolder">
+                <label for="default_group">{tmpl_var name='default_group_txt'}</label>
+                <select name="default_group" id="default_group" class="selectInput">
+                    {tmpl_var name='default_group'}
+                </select>
+            </div>
+            <div class="ctrlHolder">
+                <p class="label">{tmpl_var name='groups_txt'}</p>
+                <div class="multiField">
+                    {tmpl_var name='groups'}
+                </div>
             </div>
         </div>
             
@@ -49,6 +52,6 @@
         <div class="buttonHolder buttons">
             <button class="positive iconstxt icoPositive" type="button" value="{tmpl_var name='btn_save_txt'}" onClick="submitForm('pageForm','admin/users_edit.php');"><span>{tmpl_var name='btn_save_txt'}</span></button>
             <button class="negative iconstxt icoNegative" type="button" value="{tmpl_var name='btn_cancel_txt'}" onClick="loadContent('admin/users_list.php');"><span>{tmpl_var name='btn_cancel_txt'}</span></button>
-        </div>
+        </div>      
     </div><!-- end: modulecontent -->
 </div><!-- end: modulebody -->

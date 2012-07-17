@@ -30,69 +30,72 @@
     </tmpl_if>
     
     <!-- begin: modulecontent -->
-<div class="panel panel_openvz_template">
-      <div class="ctrlHolder">
-      	<label for="template_name">{tmpl_var name='template_name_txt'}</label>
-        <input name="template_name" id="template_name" value="{tmpl_var name='template_name'}" size="30" maxlength="255" type="text" class="textInput" />
-			</div>
-      <div class="ctrlHolder">
-      	<label for="diskspace">{tmpl_var name='diskspace_txt'}</label>
-        <input name="diskspace" id="diskspace" value="{tmpl_var name='diskspace'}" size="30" maxlength="255" type="text" class="textInput formLengthLimit" /> &nbsp;GB
-			</div>
-      <div class="ctrlHolder">
-      	<label for="ram">{tmpl_var name='ram_txt'}</label>
-        <input name="ram" id="ram" value="{tmpl_var name='ram'}" size="30" maxlength="255" type="text" class="textInput formLengthLimit" /> &nbsp;MB
-			</div>
-      <div class="ctrlHolder">
-      	<label for="ram_burst">{tmpl_var name='ram_burst_txt'}</label>
-        <input name="ram_burst" id="ram_burst" value="{tmpl_var name='ram_burst'}" size="30" maxlength="255" type="text" class="textInput formLengthLimit" /> &nbsp;MB
-			</div>
-      <div class="ctrlHolder">
-      	<label for="cpu_units">{tmpl_var name='cpu_units_txt'}</label>
-        <input name="cpu_units" id="cpu_units" value="{tmpl_var name='cpu_units'}" size="30" maxlength="255" type="text" class="textInput formLengthLimit" />&nbsp;(8 - 500000)
-			</div>
-      <div class="ctrlHolder">
-      	<label for="cpu_num">{tmpl_var name='cpu_num_txt'}</label>
-        <input name="cpu_num" id="cpu_num" value="{tmpl_var name='cpu_num'}" size="30" maxlength="255" type="text" class="textInput formLengthLimit" />&nbsp;(1 - 64)
-			</div>
-      <div class="ctrlHolder">
-      	<label for="cpu_limit">{tmpl_var name='cpu_limit_txt'}</label>
-        <input name="cpu_limit" id="cpu_limit" value="{tmpl_var name='cpu_limit'}" size="30" maxlength="255" type="text" class="textInput formLengthLimit" />&nbsp;(10 - 6400)
-			</div>
-      <div class="ctrlHolder">
-      	<label for="io_priority">{tmpl_var name='io_priority_txt'}</label>
-        <input name="io_priority" id="io_priority" value="{tmpl_var name='io_priority'}" size="30" maxlength="255" type="text" class="textInput formLengthLimit" />&nbsp;(0 - 7)
-			</div>
-	  <div class="ctrlHolder">
-      	<label for="hostname">{tmpl_var name='hostname_txt'}</label>
-        <input name="hostname" id="hostname" value="{tmpl_var name='hostname'}" size="30" maxlength="255" type="text" class="textInput" />
-			</div>
-	  <div class="ctrlHolder">
-				<p class="label">{tmpl_var name='create_dns_txt'}</p>
-					<div class="multiField">
-						{tmpl_var name='create_dns'}
-					</div>
-			</div>
-      <div class="ctrlHolder">
-      	<label for="nameserver">{tmpl_var name='nameserver_txt'}</label>
-        <input name="nameserver" id="nameserver" value="{tmpl_var name='nameserver'}" size="30" maxlength="255" type="text" class="textInput" />&nbsp;{tmpl_var name='nameserver_desc_txt'}
-			</div>
-      <div class="ctrlHolder">
-				<p class="label">{tmpl_var name='active_txt'}</p>
-					<div class="multiField">
-						{tmpl_var name='active'}
-					</div>
-			</div>
-      <div class="ctrlHolder">
-      	<label for="description">{tmpl_var name='description_txt'}</label>
-        <textarea name="description" id="description" rows='10' cols='30'>{tmpl_var name='description'}</textarea>
-      </div>
-
-    <input type="hidden" name="id" value="{tmpl_var name='id'}">
-
-    <div class="buttonHolder buttons">
-      <button class="positive iconstxt icoPositive" type="button" value="{tmpl_var name='btn_save_txt'}" onClick="submitForm('pageForm','vm/openvz_template_edit.php');"><span>{tmpl_var name='btn_save_txt'}</span></button>
-      <button class="negative iconstxt icoNegative" type="button" value="{tmpl_var name='btn_cancel_txt'}" onClick="loadContent('vm/openvz_template_list.php');"><span>{tmpl_var name='btn_cancel_txt'}</span></button>
-    </div>
+    <div class="panel panel_openvz_template">
+        <div class="subsectiontoggle"><span class="showing"></span>VM Template Parameter<em class="showing"></em></div>
+        <div class="subsection">
+            <div class="ctrlHolder">
+                <label for="template_name">{tmpl_var name='template_name_txt'}</label>
+                <input name="template_name" id="template_name" value="{tmpl_var name='template_name'}" size="30" maxlength="255" type="text" class="textInput" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="diskspace">{tmpl_var name='diskspace_txt'}</label>
+                <input name="diskspace" id="diskspace" value="{tmpl_var name='diskspace'}" size="30" maxlength="255" type="text" class="textInput formLengthLimit" /> &nbsp;GB
+            </div>
+            <div class="ctrlHolder">
+                <label for="ram">{tmpl_var name='ram_txt'}</label>
+                <input name="ram" id="ram" value="{tmpl_var name='ram'}" size="30" maxlength="255" type="text" class="textInput formLengthLimit" /> &nbsp;MB
+            </div>
+            <div class="ctrlHolder">
+                <label for="ram_burst">{tmpl_var name='ram_burst_txt'}</label>
+                <input name="ram_burst" id="ram_burst" value="{tmpl_var name='ram_burst'}" size="30" maxlength="255" type="text" class="textInput formLengthLimit" /> &nbsp;MB
+            </div>
+            <div class="ctrlHolder">
+                <label for="cpu_units">{tmpl_var name='cpu_units_txt'}</label>
+                <input name="cpu_units" id="cpu_units" value="{tmpl_var name='cpu_units'}" size="30" maxlength="255" type="text" class="textInput formLengthLimit" />&nbsp;(8 - 500000)
+            </div>
+            <div class="ctrlHolder">
+                <label for="cpu_num">{tmpl_var name='cpu_num_txt'}</label>
+                <input name="cpu_num" id="cpu_num" value="{tmpl_var name='cpu_num'}" size="30" maxlength="255" type="text" class="textInput formLengthLimit" />&nbsp;(1 - 64)
+            </div>
+            <div class="ctrlHolder">
+                <label for="cpu_limit">{tmpl_var name='cpu_limit_txt'}</label>
+                <input name="cpu_limit" id="cpu_limit" value="{tmpl_var name='cpu_limit'}" size="30" maxlength="255" type="text" class="textInput formLengthLimit" />&nbsp;(10 - 6400)
+            </div>
+            <div class="ctrlHolder">
+                <label for="io_priority">{tmpl_var name='io_priority_txt'}</label>
+                <input name="io_priority" id="io_priority" value="{tmpl_var name='io_priority'}" size="30" maxlength="255" type="text" class="textInput formLengthLimit" />&nbsp;(0 - 7)
+            </div>
+            <div class="ctrlHolder">
+                <label for="hostname">{tmpl_var name='hostname_txt'}</label>
+                <input name="hostname" id="hostname" value="{tmpl_var name='hostname'}" size="30" maxlength="255" type="text" class="textInput" />
+            </div>
+            <div class="ctrlHolder">
+                <p class="label">{tmpl_var name='create_dns_txt'}</p>
+                <div class="multiField">
+                    {tmpl_var name='create_dns'}
+                </div>
+            </div>
+            <div class="ctrlHolder">
+                <label for="nameserver">{tmpl_var name='nameserver_txt'}</label>
+                <input name="nameserver" id="nameserver" value="{tmpl_var name='nameserver'}" size="30" maxlength="255" type="text" class="textInput" />&nbsp;{tmpl_var name='nameserver_desc_txt'}
+            </div>
+            <div class="ctrlHolder">
+                <p class="label">{tmpl_var name='active_txt'}</p>
+                <div class="multiField">
+                    {tmpl_var name='active'}
+                </div>
+            </div>
+            <div class="ctrlHolder">
+                <label for="description">{tmpl_var name='description_txt'}</label>
+                <textarea name="description" id="description" rows='10' cols='30'>{tmpl_var name='description'}</textarea>
+            </div>
+        </div>
+        
+        <input type="hidden" name="id" value="{tmpl_var name='id'}">
+            
+        <div class="buttonHolder buttons">
+            <button class="positive iconstxt icoPositive" type="button" value="{tmpl_var name='btn_save_txt'}" onClick="submitForm('pageForm','vm/openvz_template_edit.php');"><span>{tmpl_var name='btn_save_txt'}</span></button>
+            <button class="negative iconstxt icoNegative" type="button" value="{tmpl_var name='btn_cancel_txt'}" onClick="loadContent('vm/openvz_template_list.php');"><span>{tmpl_var name='btn_cancel_txt'}</span></button>
+        </div>
     </div><!-- end: modulecontent -->
 </div><!-- end: modulebody -->

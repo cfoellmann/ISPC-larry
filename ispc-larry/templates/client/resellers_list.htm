@@ -40,7 +40,7 @@
                     <td class="tbl_col_company_name"><a href="#" onClick="loadContent('client/reseller_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="company_name"}</a></td>
                     <td class="tbl_col_contact_name"><a href="#" onClick="loadContent('client/reseller_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="contact_name"}</a></td>
                     <td class="tbl_col_city">{tmpl_var name="city"}</td>
-                    <td class="tbl_col_country">{tmpl_var name="country"}</td>
+                    <td class="tbl_col_country"><div class="country-{tmpl_var name="country"}"><span>{tmpl_var name="country"}</span></div></td>
                     <td class="tbl_col_buttons">
                         <a class="button icons16 icoEdit" href="javascript: loadContent('client/reseller_edit.php?id={tmpl_var name='id'}');"><span>{tmpl_var name='edit_txt'}</span></a>
                         <a class="button icons16 icoLoginAs" href="javascript: loadContent('admin/login_as.php?cid={tmpl_var name='id'}');"><span>{tmpl_var name='login_as_txt'}</span></a>

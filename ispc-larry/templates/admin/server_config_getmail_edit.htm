@@ -31,11 +31,13 @@
     
     <!-- begin: modulecontent -->
     <div class="panel panel_server_config">
-        <div class="ctrlHolder">
-            <label for="getmail_config_dir">{tmpl_var name='getmail_config_dir_txt'}</label>
-            <input name="getmail_config_dir" id="getmail_config_dir" value="{tmpl_var name='getmail_config_dir'}" size="40" maxlength="255" type="text" class="textInput" />
+        <div class="subsectiontoggle"><span class="showing"></span>Interface > Getmail<em class="showing"></em></div>
+        <div class="subsection">
+            <div class="ctrlHolder">
+                <label for="getmail_config_dir">{tmpl_var name='getmail_config_dir_txt'}</label>
+                <input name="getmail_config_dir" id="getmail_config_dir" value="{tmpl_var name='getmail_config_dir'}" size="40" maxlength="255" type="text" class="textInput" />
+            </div>
         </div>
-            
         <input type="hidden" name="id" value="{tmpl_var name='id'}">
             
         <div class="buttonHolder buttons">

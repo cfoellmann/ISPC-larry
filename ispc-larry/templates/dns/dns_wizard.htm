@@ -31,6 +31,8 @@
     
     <!-- begin: modulecontent -->
     <div class="panel panel_dns_wizard">
+        <div class="subsectiontoggle"><span class="showing"></span>Wizard<em class="showing"></em></div>
+        <div class="subsection">
             <div class="ctrlHolder">
                 <label for="template_id">{tmpl_var name='template_id_txt'}</label>
                 <select name="template_id" id="template_id" class="selectInput" onChange="submitForm('pageForm','dns/dns_wizard.php')">
@@ -89,7 +91,8 @@
                     <input name="email" id="email" value="{tmpl_var name='email'}" size="30" maxlength="255" type="text" class="textInput" />
                 </div>
             </tmpl_if>
-            
+        </div> 
+        
         <input type="hidden" name="create" value="0" />
             
         <div class="buttonHolder buttons">

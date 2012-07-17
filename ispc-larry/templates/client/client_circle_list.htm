@@ -38,6 +38,7 @@
                     <td class="tbl_col_circle_name"><a href="#" onClick="loadContent('client/client_circle_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="circle_name"}</a></td>
                     <td class="tbl_col_description">{tmpl_var name="description"}</td>
                     <td class="tbl_col_buttons">
+                        <a class="button icons16 icoEdit" href="javascript: loadContent('client/client_circle_edit.php?id={tmpl_var name='id'}');"><span>{tmpl_var name='edit_txt'}</span></a>
                         <a class="button icons16 icoDelete" href="javascript: del_record('client/client_circle_del.php?id={tmpl_var name='id'}&phpsessid={tmpl_var name='phpsessid'}','{tmpl_var name='delete_confirmation'}');"><span>{tmpl_var name='delete_txt'}</span></a>
                     </td>
                 </tr>

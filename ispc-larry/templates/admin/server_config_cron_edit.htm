@@ -31,19 +31,21 @@
     
     <!-- begin: modulecontent -->
     <div class="panel panel_server_config">
-        <div class="ctrlHolder">
-            <label for="init_script">{tmpl_var name='init_script_txt'}</label>
-            <input name="init_script" id="init_script" value="{tmpl_var name='init_script'}" size="40" maxlength="255" type="text" class="textInput" />
+        <div class="subsectiontoggle"><span class="showing"></span>Interface > Cron<em class="showing"></em></div>
+        <div class="subsection">
+            <div class="ctrlHolder">
+                <label for="init_script">{tmpl_var name='init_script_txt'}</label>
+                <input name="init_script" id="init_script" value="{tmpl_var name='init_script'}" size="40" maxlength="255" type="text" class="textInput" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="crontab_dir">{tmpl_var name='crontab_dir_txt'}</label>
+                <input name="crontab_dir" id="crontab_dir" value="{tmpl_var name='crontab_dir'}" size="40" maxlength="255" type="text" class="textInput" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="wget">{tmpl_var name='wget_txt'}</label>
+                <input name="wget" id="wget" value="{tmpl_var name='wget'}" size="40" maxlength="255" type="text" class="textInput" />
+            </div>
         </div>
-        <div class="ctrlHolder">
-            <label for="crontab_dir">{tmpl_var name='crontab_dir_txt'}</label>
-            <input name="crontab_dir" id="crontab_dir" value="{tmpl_var name='crontab_dir'}" size="40" maxlength="255" type="text" class="textInput" />
-        </div>
-        <div class="ctrlHolder">
-            <label for="wget">{tmpl_var name='wget_txt'}</label>
-            <input name="wget" id="wget" value="{tmpl_var name='wget'}" size="40" maxlength="255" type="text" class="textInput" />
-        </div>
-            
         <input type="hidden" name="id" value="{tmpl_var name='id'}">
             
         <div class="buttonHolder buttons">

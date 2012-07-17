@@ -31,23 +31,28 @@
     
     <!-- begin: modulecontent -->
     <div class="panel panel_mail_domain_catchall">
-        <div class="ctrlHolder">
-            <p class="label">{tmpl_var name='domain_txt'}</p>
-            <div class="multiField">
-<!--                <label for="email_domain" class="blockLabel">{tmpl_var name='domain_txt'}</label>-->
-                <select name="email_domain" id="email_domain" class="selectInput">{tmpl_var name='email_domain'}</select>
+        <div class="subsectiontoggle"><span class="showing"></span>User Groups<em class="showing"></em></div>
+        <div class="subsection">
+            <div class="ctrlHolder">
+                <p class="label">{tmpl_var name='domain_txt'}</p>
+                <div class="multiField">
+                    <!--                <label for="email_domain" class="blockLabel">{tmpl_var name='domain_txt'}</label>-->
+                    <select name="email_domain" id="email_domain" class="selectInput">
+                        {tmpl_var name='email_domain'}
+                    </select>
+                </div>
             </div>
-        </div>
-        <div class="ctrlHolder">
-            <label for="destination">{tmpl_var name='destination_txt'}</label>
-            <select name="destination" id="destination" class="selectInput">
-                {tmpl_var name='destination'}
-            </select>
-        </div>
-        <div class="ctrlHolder">
-            <p class="label">{tmpl_var name='active_txt'}</p>
-            <div class="multiField">
-                {tmpl_var name='active'}
+            <div class="ctrlHolder">
+                <label for="destination">{tmpl_var name='destination_txt'}</label>
+                <select name="destination" id="destination" class="selectInput">
+                    {tmpl_var name='destination'}
+                </select>
+            </div>
+            <div class="ctrlHolder">
+                <p class="label">{tmpl_var name='active_txt'}</p>
+                <div class="multiField">
+                    {tmpl_var name='active'}
+                </div>
             </div>
         </div>
             

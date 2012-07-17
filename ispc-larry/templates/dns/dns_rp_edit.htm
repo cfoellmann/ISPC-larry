@@ -31,7 +31,8 @@
     
     <!-- begin: modulecontent -->
     <div class="panel panel_dns_rp">
-        <p><tmpl_var name="list_desc_txt"></p>
+        <div class="subsectiontoggle"><span class="showing"></span>RP-Record<em class="showing"></em></div>
+        <div class="subsection">
             <div class="ctrlHolder">
                 <label for="name">{tmpl_var name='name_txt'}</label>
                 <input name="name" id="name" value="{tmpl_var name='name'}" size="30" maxlength="255" type="text" class="textInput" />
@@ -50,6 +51,7 @@
                     {tmpl_var name='active'}
                 </div>
             </div>
+        </div>
                             
             <input type="hidden" name="id" value="{tmpl_var name='id'}">
             <input type="hidden" name="zone" value="{tmpl_var name='zone'}">

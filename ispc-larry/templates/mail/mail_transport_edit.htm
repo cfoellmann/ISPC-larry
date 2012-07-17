@@ -31,42 +31,39 @@
 
     <!-- begin: modulecontent -->
     <div class="panel panel_mail_transport">
-        <div class="ctrlHolder">
-            <label for="server_id">{tmpl_var name='server_id_txt'}</label>
-            <select name="server_id" id="server_id" class="selectInput">
-                {tmpl_var name='server_id'}
-            </select>
-        </div>
-        <div class="ctrlHolder">
-            <label for="domain">{tmpl_var name='domain_txt'}</label>
-            <input name="domain" id="domain" value="{tmpl_var name='domain'}" size="30" maxlength="255" type="text" class="textInput" />
-        </div>
-        <div class="ctrlHolder">
-            <label for="type">{tmpl_var name='type_txt'}</label>
-            <select name="type" id="type" class="selectInput formLengthHalf">
-                {tmpl_var name='type'}
-            </select>
-        </div>
-        <div class="ctrlHolder">
-            <p class="label">{tmpl_var name='mx_txt'}</p>
-            <div class="multiField">
-                <input type="checkbox" value="y" id="mx" name="mx" {tmpl_var name='mx'} />
+        <div class="subsectiontoggle"><span class="showing"></span>User Groups<em class="showing"></em></div>
+        <div class="subsection">
+            <div class="ctrlHolder">
+                <label for="server_id">{tmpl_var name='server_id_txt'}</label>
+                <select name="server_id" id="server_id" class="selectInput">{tmpl_var name='server_id'}</select>
             </div>
-        </div>
-        <div class="ctrlHolder">
-            <label for="destination">{tmpl_var name='destination_txt'}</label>
-            <input name="destination" id="transport" value="{tmpl_var name='destination'}" size="30" maxlength="255" type="text" class="textInput" />
-        </div>
-        <div class="ctrlHolder">
-            <label for="sort_order">{tmpl_var name='sort_order_txt'}</label>
-            <select name="sort_order" id="sort_order" class="selectInput formLengthHalf">
-                {tmpl_var name='sort_order'}
-            </select>
-        </div>
-        <div class="ctrlHolder">
-            <p class="label">{tmpl_var name='active_txt'}</p>
-            <div class="multiField">
-                {tmpl_var name='active'}
+            <div class="ctrlHolder">
+                <label for="domain">{tmpl_var name='domain_txt'}</label>
+                <input name="domain" id="domain" value="{tmpl_var name='domain'}" size="30" maxlength="255" type="text" class="textInput" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="type">{tmpl_var name='type_txt'}</label>
+                <select name="type" id="type" class="selectInput formLengthHalf">{tmpl_var name='type'}</select>
+            </div>
+            <div class="ctrlHolder">
+                <p class="label">{tmpl_var name='mx_txt'}</p>
+                <div class="multiField">
+                    <input type="checkbox" value="y" id="mx" name="mx" {tmpl_var name='mx'} />
+                </div>
+            </div>
+            <div class="ctrlHolder">
+                <label for="destination">{tmpl_var name='destination_txt'}</label>
+                <input name="destination" id="transport" value="{tmpl_var name='destination'}" size="30" maxlength="255" type="text" class="textInput" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="sort_order">{tmpl_var name='sort_order_txt'}</label>
+                <select name="sort_order" id="sort_order" class="selectInput formLengthHalf">
+                    {tmpl_var name='sort_order'}<
+                    /select>
+            </div>
+            <div class="ctrlHolder">
+                <p class="label">{tmpl_var name='active_txt'}</p>
+                <div class="multiField">{tmpl_var name='active'}</div>
             </div>
         </div>
 

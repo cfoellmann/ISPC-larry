@@ -31,39 +31,41 @@
     
     <!-- begin: modulecontent -->
     <div class="panel panel_server_ip">
-        <div class="ctrlHolder">
-            <label for="server_id">{tmpl_var name='server_id_txt'}</label>
-            <select name="server_id" id="server_id" class="selectInput">
-                {tmpl_var name='server_id'}
-            </select>
-        </div>
-        <div class="ctrlHolder">
-            <label for="client_id">{tmpl_var name='client_id_txt'}</label>
-            <select name="client_id" id="client_id" class="selectInput">
-                {tmpl_var name='client_id'}
-            </select>
-        </div>
-        <div class="ctrlHolder">
-            <label for="ip_type">{tmpl_var name='ip_type_txt'}</label>
-            <select name="ip_type" id="ip_type" class="selectInput">
-                {tmpl_var name='ip_type'}
-            </select>
-        </div>
-        <div class="ctrlHolder">
-            <label for="ip_address">{tmpl_var name='ip_address_txt'}</label>
-            <input name="ip_address" id="ip_address" value="{tmpl_var name='ip_address'}" size="15" maxlength="255" type="text" class="textInput" />
-        </div>
-        <div class="ctrlHolder">
-            <p class="label">{tmpl_var name='virtualhost_txt'}</p>
-            <div class="multiField">
-                {tmpl_var name='virtualhost'}
+        <div class="subsectiontoggle"><span class="showing"></span>IP<em class="showing"></em></div>
+        <div class="subsection">
+            <div class="ctrlHolder">
+                <label for="server_id">{tmpl_var name='server_id_txt'}</label>
+                <select name="server_id" id="server_id" class="selectInput">
+                    {tmpl_var name='server_id'}
+                </select>
+            </div>
+            <div class="ctrlHolder">
+                <label for="client_id">{tmpl_var name='client_id_txt'}</label>
+                <select name="client_id" id="client_id" class="selectInput">
+                    {tmpl_var name='client_id'}
+                </select>
+            </div>
+            <div class="ctrlHolder">
+                <label for="ip_type">{tmpl_var name='ip_type_txt'}</label>
+                <select name="ip_type" id="ip_type" class="selectInput">
+                    {tmpl_var name='ip_type'}
+                </select>
+            </div>
+            <div class="ctrlHolder">
+                <label for="ip_address">{tmpl_var name='ip_address_txt'}</label>
+                <input name="ip_address" id="ip_address" value="{tmpl_var name='ip_address'}" size="15" maxlength="255" type="text" class="textInput" />
+            </div>
+            <div class="ctrlHolder">
+                <p class="label">{tmpl_var name='virtualhost_txt'}</p>
+                <div class="multiField">
+                    {tmpl_var name='virtualhost'}
+                </div>
+            </div>
+            <div class="ctrlHolder">
+                <label for="virtualhost_port">{tmpl_var name='virtualhost_port_txt'}</label>
+                <input name="virtualhost_port" id="virtualhost_port" value="{tmpl_var name='virtualhost_port'}" size="15" maxlength="15" type="text" class="textInput" />
             </div>
         </div>
-        <div class="ctrlHolder">
-            <label for="virtualhost_port">{tmpl_var name='virtualhost_port_txt'}</label>
-            <input name="virtualhost_port" id="virtualhost_port" value="{tmpl_var name='virtualhost_port'}" size="15" maxlength="15" type="text" class="textInput" />
-        </div>
-            
         <input type="hidden" name="id" value="{tmpl_var name='id'}">
             
         <div class="buttonHolder buttons">

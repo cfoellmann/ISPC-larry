@@ -31,15 +31,17 @@
     
     <!-- begin: modulecontent -->
     <div class="panel panel_groups">
-        <div class="ctrlHolder">
-            <label for="name">{tmpl_var name='name_txt'}</label>
-            <input name="name" id="name" value="{tmpl_var name='name'}" size="30" maxlength="255" type="text" class="textInput formLengthHalf" />
+        <div class="subsectiontoggle"><span class="showing"></span>Groups<em class="showing"></em></div>
+        <div class="subsection">
+            <div class="ctrlHolder">
+                <label for="name">{tmpl_var name='name_txt'}</label>
+                <input name="name" id="name" value="{tmpl_var name='name'}" size="30" maxlength="255" type="text" class="textInput formLengthHalf" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="description">{tmpl_var name='description_txt'}</label>
+                <textarea name="description" id="description" rows='5' cols='30'>{tmpl_var name='description'}</textarea>
+            </div>
         </div>
-        <div class="ctrlHolder">
-            <label for="description">{tmpl_var name='description_txt'}</label>
-            <textarea name="description" id="description" rows='5' cols='30'>{tmpl_var name='description'}</textarea>
-        </div>
-            
         <input type="hidden" name="id" value="{tmpl_var name='id'}">
             
         <div class="buttonHolder buttons">

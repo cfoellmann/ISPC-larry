@@ -31,26 +31,29 @@
     
     <!-- begin: modulecontent -->
     <div class="panel panel_mail_blacklist">
-        <div class="ctrlHolder">
-            <label for="server_id">{tmpl_var name='server_id_txt'}</label>
-            <select name="server_id" id="server_id" class="selectInput">
-                {tmpl_var name='server_id'}
-            </select>
-        </div>
-        <div class="ctrlHolder">
-            <label for="source">{tmpl_var name='source_txt'}</label>
-            <input name="source" id="source" value="{tmpl_var name='source'}" size="30" maxlength="255" type="text" class="textInput" />
-        </div>
-        <div class="ctrlHolder">
-            <label for="type">{tmpl_var name='type_txt'}</label>
-            <select name="type" id="type" class="selectInput">
-                {tmpl_var name='type'}
-            </select>
-        </div>
-        <div class="ctrlHolder">
-            <p class="label">{tmpl_var name='active_txt'}</p>
-            <div class="multiField">
-                {tmpl_var name='active'}
+        <div class="subsectiontoggle"><span class="showing"></span>User Groups<em class="showing"></em></div>
+        <div class="subsection">
+            <div class="ctrlHolder">
+                <label for="server_id">{tmpl_var name='server_id_txt'}</label>
+                <select name="server_id" id="server_id" class="selectInput">
+                    {tmpl_var name='server_id'}
+                </select>
+            </div>
+            <div class="ctrlHolder">
+                <label for="source">{tmpl_var name='source_txt'}</label>
+                <input name="source" id="source" value="{tmpl_var name='source'}" size="30" maxlength="255" type="text" class="textInput" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="type">{tmpl_var name='type_txt'}</label>
+                <select name="type" id="type" class="selectInput">
+                    {tmpl_var name='type'}
+                </select>
+            </div>
+            <div class="ctrlHolder">
+                <p class="label">{tmpl_var name='active_txt'}</p>
+                <div class="multiField">
+                    {tmpl_var name='active'}
+                </div>
             </div>
         </div>
             

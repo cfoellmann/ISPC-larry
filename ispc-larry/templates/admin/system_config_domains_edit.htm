@@ -32,24 +32,26 @@
     
     <!-- begin: modulecontent -->
     <div class="panel panel_system_config">
-        <div class="ctrlHolder">
-            <p class="label">{tmpl_var name='use_domain_module_txt'}</p>
-            <div class="multiField">
-                {tmpl_var name='use_domain_module'}
+        <div class="subsectiontoggle"><span class="showing"></span>Domains<em class="showing"></em></div>
+        <div class="subsection">
+            <div class="ctrlHolder">
+                <p class="label">{tmpl_var name='use_domain_module_txt'}</p>
+                <div class="multiField">
+                    {tmpl_var name='use_domain_module'}
+                </div>
+            </div>
+            <div class="ctrlHolder">
+                <p class="label">&nbsp;</p>
+                <p class="value" style="width: 400px;">{tmpl_var name='use_domain_module_hint'}</p>
+                <br style="clear: both;" />
+            </div>
+            <div class="ctrlHolder">
+                <p class="label">{tmpl_var name='new_domain_txt'}</p>
+                <div class="multiField">
+                    <textarea name="new_domain_html" id="new_domain_html">{tmpl_var name='new_domain_html'}</textarea>
+                </div>
             </div>
         </div>
-        <div class="ctrlHolder">
-            <p class="label">&nbsp;</p>
-            <p class="value" style="width: 400px;">{tmpl_var name='use_domain_module_hint'}</p>
-            <br style="clear: both;" />
-        </div>
-        <div class="ctrlHolder">
-            <p class="label">{tmpl_var name='new_domain_txt'}</p>
-            <div class="multiField">
-                <textarea name="new_domain_html" id="new_domain_html">{tmpl_var name='new_domain_html'}</textarea>
-            </div>
-        </div>
-            
         <input type="hidden" name="id" value="{tmpl_var name='id'}">
             
         <div class="buttonHolder buttons">
