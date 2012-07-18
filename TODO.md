@@ -11,3 +11,4 @@ TODO
 
 -   Integrate: [tablesorter 2.0](http://tablesorter.com/docs/)
     -   although it will only sort the currently displayed rows it is a start.
+    -   I added the library and am trying to figure out what classes and IDs are necessary to make it work

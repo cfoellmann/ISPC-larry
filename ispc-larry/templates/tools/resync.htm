@@ -29,10 +29,10 @@
         <div id="errorMsg"><h3>ERROR</h3><ol><tmpl_var name="error"></ol></div>
     </tmpl_if>
         
-    <!-- begin: modulecontent -->
-    <p><tmpl_var name="list_desc_txt"></p>
-        
-        <div class="panel panel_language_import">
+    <!-- begin: modulecontent -->   
+    <div class="panel panel_language_import">
+        <div class="subsectiontoggle"><span class="showing"></span>Circle Settings<em class="showing"></em></div>
+        <div class="subsection">
             <div class="ctrlHolder">
                 <p class="label">{tmpl_var name="resync_sites_txt"}</p>
                 <div class="multiField">
@@ -75,12 +75,13 @@
                     <input id="resync_dns" type="checkbox" value="1" name="resync_dns" />
                 </div>
             </div>
+        </div>
+            
+        <input type="hidden" name="id" value="{tmpl_var name='id'}">
 
-            <input type="hidden" name="id" value="{tmpl_var name='id'}">
-                
-            <div class="buttonHolder buttons">
-                <button class="positive iconstxt icoPositive" type="button" value="Import" onClick="submitForm('pageForm','tools/resync.php');"><span>{tmpl_var name="btn_start_txt"}</span></button>
-                <button class="negative iconstxt icoNegative" type="button" value="Cancel" onClick="loadContent('tools/index.php');"><span>{tmpl_var name="btn_cancel_txt"}</span></button>
-            </div>
-        </div><!-- end: modulecontent -->
+        <div class="buttonHolder buttons">
+            <button class="positive iconstxt icoPositive" type="button" value="Import" onClick="submitForm('pageForm','tools/resync.php');"><span>{tmpl_var name="btn_start_txt"}</span></button>
+            <button class="negative iconstxt icoNegative" type="button" value="Cancel" onClick="loadContent('tools/index.php');"><span>{tmpl_var name="btn_cancel_txt"}</span></button>
+        </div>
+    </div><!-- end: modulecontent -->
 </div><!-- end: modulebody -->

@@ -31,41 +31,43 @@
         
     <!-- begin: modulecontent -->
     <div class="panel panel_language_import">
-        <div id="module-desc">Import DNS recods from Tupa PowerDNS controlpanel<tmpl_var name="list_desc_txt"></div>
-        <div class="ctrlHolder">
-            <p class="label">Tupa database hostname</p>
-            <div class="multiField">
-                <input id="dbhost" type="text" value="{tmpl_var name='dbhost'}" name="dbhost" />
+        <div class="subsectiontoggle"><span class="showing"></span>Circle Settings<em class="showing"></em></div>
+        <div class="subsection">
+            <div id="module-desc">Import DNS recods from Tupa PowerDNS controlpanel<tmpl_var name="list_desc_txt"></div>
+            <div class="ctrlHolder">
+                <p class="label">Tupa database hostname</p>
+                <div class="multiField">
+                    <input id="dbhost" type="text" value="{tmpl_var name='dbhost'}" name="dbhost" />
+                </div>
+            </div>
+            <div class="ctrlHolder">
+                <p class="label">Tupa database name</p>
+                <div class="multiField">
+                    <input id="dbname" type="text" value="{tmpl_var name='dbname'}" name="dbname" />
+                </div>
+            </div>
+            <div class="ctrlHolder">
+                <p class="label">Tupa database user</p>
+                <div class="multiField">
+                    <input id="dbuser" type="text" value="{tmpl_var name='dbuser'}" name="dbuser" />
+                </div>
+            </div>
+            <div class="ctrlHolder">
+                <p class="label">Tupa database password</p>
+                <div class="multiField">
+                    <input id="dbpassword" type="text" value="{tmpl_var name='dbpassword'}" name="dbpassword" />
+                </div>
+            </div>   
+            <div class="ctrlHolder">
+                <p class="label">Import DNS Records</p>
+                <div class="multiField">
+                    <input id="start" type="checkbox" value="1" name="start" checked/>
+                </div>
             </div>
         </div>
-        <div class="ctrlHolder">
-            <p class="label">Tupa database name</p>
-            <div class="multiField">
-                <input id="dbname" type="text" value="{tmpl_var name='dbname'}" name="dbname" />
-            </div>
-        </div>
-        <div class="ctrlHolder">
-            <p class="label">Tupa database user</p>
-            <div class="multiField">
-                <input id="dbuser" type="text" value="{tmpl_var name='dbuser'}" name="dbuser" />
-            </div>
-        </div>
-        <div class="ctrlHolder">
-            <p class="label">Tupa database password</p>
-            <div class="multiField">
-                <input id="dbpassword" type="text" value="{tmpl_var name='dbpassword'}" name="dbpassword" />
-            </div>
-        </div>
-            
-        <div class="ctrlHolder">
-            <p class="label">Import DNS Records</p>
-            <div class="multiField">
-                <input id="start" type="checkbox" value="1" name="start" checked/>
-            </div>
-        </div>
-            
+
         <input type="hidden" name="id" value="{tmpl_var name='id'}">
-            
+
         <div class="buttonHolder buttons">
             <button class="positive iconstxt icoPositive" type="button" value="Import" onClick="submitForm('pageForm','tools/dns_import_tupa.php');"><span>Start</span></button>
             <button class="negative iconstxt icoNegative" type="button" value="Cancel" onClick="loadContent('tools/index.php');"><span>Cancel</span></button>

@@ -31,17 +31,20 @@
     
     <!-- begin: modulecontent -->
     <div class="panel panel_mail_user">
-        <div class="ctrlHolder">
-            <p class="label">{tmpl_var name='move_junk_txt'}</p>
-            <div class="multiField">
-                {tmpl_var name='move_junk'}
+        <div class="subsectiontoggle"><span class="showing"></span>Circle Settings<em class="showing"></em></div>
+        <div class="subsection">
+            <div class="ctrlHolder">
+                <p class="label">{tmpl_var name='move_junk_txt'}</p>
+                <div class="multiField">
+                    {tmpl_var name='move_junk'}
+                </div>
             </div>
         </div>
-            
+
         {tmpl_var name='filter_records'}
-            
+
         <input type="hidden" name="id" value="{tmpl_var name='id'}">
-            
+
         <div class="buttonHolder buttons">
             <button class="positive iconstxt icoPositive" type="button" value="{tmpl_var name='btn_save_txt'}" onClick="submitForm('pageForm','mail/mail_user_edit.php');"><span>{tmpl_var name='btn_save_txt'}</span></button>
             <button class="negative iconstxt icoNegative" type="button" value="{tmpl_var name='btn_cancel_txt'}" onClick="loadContent('mail/mail_user_list.php');"><span>{tmpl_var name='btn_cancel_txt'}</span></button>

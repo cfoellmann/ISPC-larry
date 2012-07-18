@@ -31,18 +31,22 @@
     
     <!-- begin: modulecontent -->
     <div class="panel panel_client">
-        <div class="ctrlHolder">
-            <label for="sender">{tmpl_var name='sender_txt'}</label>
-            <input name="sender" id="sender" value="{tmpl_var name='sender'}" style="width:500px" size="30" maxlength="255" type="text" class="textInput" />
+        <div class="subsectiontoggle"><span class="showing"></span>Write Message<em class="showing"></em></div>
+        <div class="subsection">
+            <div class="ctrlHolder">
+                <label for="sender">{tmpl_var name='sender_txt'}</label>
+                <input name="sender" id="sender" value="{tmpl_var name='sender'}" style="width:500px" size="30" maxlength="255" type="text" class="textInput" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="subject">{tmpl_var name='subject_txt'}</label>
+                <input name="subject" id="subject" value="{tmpl_var name='subject'}" style="width:500px" size="30" maxlength="255" type="text" class="textInput" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="message">{tmpl_var name='message_txt'}</label>
+                <textarea name="message" id="message" rows='' cols='' style="width:500px">{tmpl_var name='message'}</textarea>
+            </div>
         </div>
-        <div class="ctrlHolder">
-            <label for="subject">{tmpl_var name='subject_txt'}</label>
-            <input name="subject" id="subject" value="{tmpl_var name='subject'}" style="width:500px" size="30" maxlength="255" type="text" class="textInput" />
-        </div>
-        <div class="ctrlHolder">
-            <label for="message">{tmpl_var name='message_txt'}</label>
-            <textarea name="message" id="message" rows='' cols='' style="width:500px">{tmpl_var name='message'}</textarea>
-        </div>
+            
         <div class="buttonHolder buttons">
             <button class="positive iconstxt icoPositive" type="button" value="{tmpl_var name='btn_send_txt'}" onClick="submitForm('pageForm','client/client_message.php');"><span>{tmpl_var name='btn_send_txt'}</span></button>
             <button class="negative iconstxt icoNegative" type="button" value="{tmpl_var name='btn_cancel_txt'}" onClick="loadContent('client/client_list.php');"><span>{tmpl_var name='btn_cancel_txt'}</span></button>

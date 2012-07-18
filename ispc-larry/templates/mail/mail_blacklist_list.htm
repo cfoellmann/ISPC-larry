@@ -35,7 +35,7 @@
             <tmpl_loop name="records">
                 <tr class="tbl_row_<tmpl_if name='__EVEN__'}even<tmpl_else>uneven</tmpl_if>">
                     <td class="tbl_col_active">{tmpl_var name="active"}</td>
-                    <td class="tbl_col_server_id">{tmpl_var name="server_id"}/a></td>
+                    <td class="tbl_col_server_id">{tmpl_var name="server_id"}</td>
                     <td class="tbl_col_source"><a href="#" onClick="loadContent('mail/mail_blacklist_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="source"}</a></td>
                     <td class="tbl_col_type">{tmpl_var name="type"}</td>
                     <td class="tbl_col_buttons">

@@ -51,7 +51,7 @@
             </div>
             <div class="ctrlHolder">
                 <label for="password">{tmpl_var name='password_txt'}</label>
-                <input name="password" id="password" value="{tmpl_var name='password'}" size="30" maxlength="255" type="password" class="textInput" onkeyup="pass_check(this.value)" />
+                <input name="password" id="password" value="{tmpl_var name='password'}" size="30" maxlength="255" type="password" class="textInput" onkeyup="pass_check(this.value);checkPassMatch('password','repeat_password');" />&nbsp;<a href="javascript:void(0);" onClick="generatePassword('password');">{tmpl_var name='generate_password_txt'}</a>
             </div>
             <div class="ctrlHolder">
                 <p class="label">{tmpl_var name='password_strength_txt'}</p>
@@ -59,6 +59,12 @@
                 <p class="formHint"><span id="passText">&nbsp;</span></p>
                 <br style="clear:both;" />
             </div>
+            <div class="ctrlHolder">
+                <label for="repeat_password">{tmpl_var name='repeat_password_txt'}</label>
+                <input name="repeat_password" id="repeat_password" value="" size="15" maxlength="100" type="password" class="textInput" style="width:100px;"  onkeyup="checkPassMatch('password','repeat_password');" />
+            </div>
+            <div id="confirmpasswordError" style="display:none;" class="confirmpassworderror">{tmpl_var name='password_mismatch_txt'}</div>
+            <div id="confirmpasswordOK" style="display:none;" class="confirmpasswordok">{tmpl_var name='password_match_txt'}</div>
             <div class="ctrlHolder">
                 <label for="language">{tmpl_var name='language_txt'}</label>
                 <select name="language" id="language" class="selectInput flags">
@@ -71,6 +77,9 @@
                     {tmpl_var name='usertheme'}
                 </select>
             </div>
+        </div>
+        <div class="subsectiontoggle"><span class="showing"></span>Circle Settings<em class="showing"></em></div>
+        <div class="subsection">
             <div class="ctrlHolder">
                 <label for="street">{tmpl_var name='street_txt'}</label>
                 <input name="street" id="street" value="{tmpl_var name='street'}" size="30" maxlength="255" type="text" class="textInput" />
@@ -128,6 +137,22 @@
             <div class="ctrlHolder">
                 <label for="bank_account_number">{tmpl_var name='bank_account_number_txt'}</label>
                 <input name="bank_account_number" id="bank_account_number" value="{tmpl_var name='bank_account_number'}" size="30" maxlength="255" type="text" class="textInput" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="bank_code">{tmpl_var name='bank_code_txt'}</label>
+                <input name="bank_code" id="bank_code" value="{tmpl_var name='bank_code'}" size="30" maxlength="255" type="text" class="textInput" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="bank_name">{tmpl_var name='bank_name_txt'}</label>
+                <input name="bank_name" id="bank_name" value="{tmpl_var name='bank_name'}" size="30" maxlength="255" type="text" class="textInput" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="bank_account_iban">{tmpl_var name='bank_account_iban_txt'}</label>
+                <input name="bank_account_iban" id="bank_account_iban" value="{tmpl_var name='bank_account_iban'}" size="30" maxlength="255" type="text" class="textInput" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="bank_account_swift">{tmpl_var name='bank_account_swift_txt'}</label>
+                <input name="bank_account_swift" id="bank_account_swift" value="{tmpl_var name='bank_account_swift'}" size="30" maxlength="255" type="text" class="textInput" />
             </div>
             <div class="ctrlHolder">
                 <label for="notes">{tmpl_var name='notes_txt'}</label>

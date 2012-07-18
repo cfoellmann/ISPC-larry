@@ -31,25 +31,28 @@
         
     <!-- begin: modulecontent -->
     <div class="panel panel_shell_user">
-        <div class="ctrlHolder">
-            <label for="puser">{tmpl_var name='puser_txt'}</label>
-            <input name="puser" id="puser" value="{tmpl_var name='puser'}" size="30" maxlength="255" type="text" class="textInput formLengthHalf" />
+        <div class="subsectiontoggle"><span class="showing"></span>Circle Settings<em class="showing"></em></div>
+        <div class="subsection">
+            <div class="ctrlHolder">
+                <label for="puser">{tmpl_var name='puser_txt'}</label>
+                <input name="puser" id="puser" value="{tmpl_var name='puser'}" size="30" maxlength="255" type="text" class="textInput formLengthHalf" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="pgroup">{tmpl_var name='pgroup_txt'}</label>
+                <input name="pgroup" id="pgroup" value="{tmpl_var name='pgroup'}" size="30" maxlength="255" type="text" class="textInput formLengthHalf" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="shell">{tmpl_var name='shell_txt'}</label>
+                <input name="shell" id="shell" value="{tmpl_var name='shell'}" size="30" maxlength="255" type="text" class="textInput" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="dir">{tmpl_var name='dir_txt'}</label>
+                <input name="dir" id="dir" value="{tmpl_var name='dir'}" size="30" maxlength="255" type="text" class="textInput" />
+            </div>
         </div>
-        <div class="ctrlHolder">
-            <label for="pgroup">{tmpl_var name='pgroup_txt'}</label>
-            <input name="pgroup" id="pgroup" value="{tmpl_var name='pgroup'}" size="30" maxlength="255" type="text" class="textInput formLengthHalf" />
-        </div>
-        <div class="ctrlHolder">
-            <label for="shell">{tmpl_var name='shell_txt'}</label>
-            <input name="shell" id="shell" value="{tmpl_var name='shell'}" size="30" maxlength="255" type="text" class="textInput" />
-        </div>
-        <div class="ctrlHolder">
-            <label for="dir">{tmpl_var name='dir_txt'}</label>
-            <input name="dir" id="dir" value="{tmpl_var name='dir'}" size="30" maxlength="255" type="text" class="textInput" />
-        </div>
-               
-        <input type="hidden" name="id" value="{tmpl_var name='id'}">
             
+        <input type="hidden" name="id" value="{tmpl_var name='id'}">
+
         <div class="buttonHolder buttons">
             <button class="positive iconstxt icoPositive" type="button" value="{tmpl_var name='btn_save_txt'}" onClick="submitForm('pageForm','sites/shell_user_edit.php');"><span>{tmpl_var name='btn_save_txt'}</span></button>
             <button class="negative iconstxt icoNegative" type="button" value="{tmpl_var name='btn_cancel_txt'}" onClick="loadContent('sites/shell_user_list.php');"><span>{tmpl_var name='btn_cancel_txt'}</span></button>

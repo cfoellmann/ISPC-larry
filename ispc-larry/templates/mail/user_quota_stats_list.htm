@@ -37,9 +37,9 @@
             <tmpl_loop name="records">
                 <tr class="tbl_row_<tmpl_if name='__EVEN__'}even<tmpl_else>uneven</tmpl_if>">
                     <td class="tbl_col_email"><a href="#" onClick="loadContent('mail/mail_user_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="email"}</a></td>
-                    <td class="tbl_col_name"><a href="#" onClick="loadContent('mail/mail_user_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="name"}</a></td>
-                    <td class="tbl_col_used"><a href="#" onClick="loadContent('mail/mail_user_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="used"}</a></td>
-                    <td class="tbl_col_limit"><a href="#" onClick="loadContent('mail/mail_user_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="quota"}</a></td>
+                    <td class="tbl_col_name">{tmpl_var name="name"}</td>
+                    <td class="tbl_col_used">{tmpl_var name="used"}</td>
+                    <td class="tbl_col_limit">{tmpl_var name="quota"}</td>
                     <td class="tbl_col_buttons"></td>
                 </tr>
             </tmpl_loop>

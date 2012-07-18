@@ -31,25 +31,28 @@
         
     <!-- begin: modulecontent -->
     <div class="panel panel_web_domain">
-        <div class="ctrlHolder">
-            <label for="redirect_type">{tmpl_var name='redirect_type_txt'}</label>
-            <select name="redirect_type" id="redirect_type" class="selectInput formLengthHalf">
-                {tmpl_var name='redirect_type'}
-            </select>
+        <div class="subsectiontoggle"><span class="showing"></span>Circle Settings<em class="showing"></em></div>
+        <div class="subsection">
+            <div class="ctrlHolder">
+                <label for="redirect_type">{tmpl_var name='redirect_type_txt'}</label>
+                <select name="redirect_type" id="redirect_type" class="selectInput formLengthHalf">
+                    {tmpl_var name='redirect_type'}
+                </select>
+            </div>
+            <div class="ctrlHolder">
+                <label for="redirect_path">{tmpl_var name='redirect_path_txt'}</label>
+                <input name="redirect_path" id="redirect_path" value="{tmpl_var name='redirect_path'}" size="30" maxlength="255" type="text" class="textInput" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="seo_redirect">{tmpl_var name='seo_redirect_txt'}</label>
+                <select name="seo_redirect" id="seo_redirect" class="selectInput formLengthHalf">
+                    {tmpl_var name='seo_redirect'}
+                </select>
+            </div>
         </div>
-        <div class="ctrlHolder">
-            <label for="redirect_path">{tmpl_var name='redirect_path_txt'}</label>
-            <input name="redirect_path" id="redirect_path" value="{tmpl_var name='redirect_path'}" size="30" maxlength="255" type="text" class="textInput" />
-        </div>
-        <div class="ctrlHolder">
-            <label for="seo_redirect">{tmpl_var name='seo_redirect_txt'}</label>
-            <select name="seo_redirect" id="seo_redirect" class="selectInput formLengthHalf">
-                {tmpl_var name='seo_redirect'}
-            </select>
-        </div>
-            
+
         <input type="hidden" name="id" value="{tmpl_var name='id'}">
-            
+
         <div class="buttonHolder buttons">
             <button class="positive iconstxt icoPositive" type="button" value="{tmpl_var name='btn_save_txt'}" onClick="submitForm('pageForm','sites/web_domain_edit.php');"><span>{tmpl_var name='btn_save_txt'}</span></button>
             <button class="negative iconstxt icoNegative" type="button" value="{tmpl_var name='btn_cancel_txt'}" onClick="loadContent('sites/web_domain_list.php');"><span>{tmpl_var name='btn_cancel_txt'}</span></button>

@@ -31,25 +31,28 @@
     
     <!-- begin: modulecontent -->
     <div class="panel panel_web_folder">
-        <div class="ctrlHolder">
-            <label for="parent_domain_id">{tmpl_var name='parent_domain_id_txt'}</label>
-            <select name="parent_domain_id" id="parent_domain_id" class="selectInput">
-                {tmpl_var name='parent_domain_id'}
-            </select>
-        </div>
-        <div class="ctrlHolder">
-            <label for="path">{tmpl_var name='path_txt'}</label>
-            <input name="path" id="path" value="{tmpl_var name='path'}" size="30" maxlength="255" type="text" class="textInput" />
-        </div>
-        <div class="ctrlHolder">
-            <p class="label">{tmpl_var name='active_txt'}</p>
-            <div class="multiField">
-                {tmpl_var name='active'}
+        <div class="subsectiontoggle"><span class="showing"></span>Circle Settings<em class="showing"></em></div>
+        <div class="subsection">
+            <div class="ctrlHolder">
+                <label for="parent_domain_id">{tmpl_var name='parent_domain_id_txt'}</label>
+                <select name="parent_domain_id" id="parent_domain_id" class="selectInput">
+                    {tmpl_var name='parent_domain_id'}
+                </select>
+            </div>
+            <div class="ctrlHolder">
+                <label for="path">{tmpl_var name='path_txt'}</label>
+                <input name="path" id="path" value="{tmpl_var name='path'}" size="30" maxlength="255" type="text" class="textInput" />
+            </div>
+            <div class="ctrlHolder">
+                <p class="label">{tmpl_var name='active_txt'}</p>
+                <div class="multiField">
+                    {tmpl_var name='active'}
+                </div>
             </div>
         </div>
-            
+
         <input type="hidden" name="id" value="{tmpl_var name='id'}">
-            
+
         <div class="buttonHolder buttons">
             <button class="positive iconstxt icoPositive" type="button" value="{tmpl_var name='btn_save_txt'}" onClick="submitForm('pageForm','sites/web_folder_edit.php');"><span>{tmpl_var name='btn_save_txt'}</span></button>
             <button class="negative iconstxt icoNegative" type="button" value="{tmpl_var name='btn_cancel_txt'}" onClick="loadContent('sites/web_folder_list.php');"><span>{tmpl_var name='btn_cancel_txt'}</span></button>

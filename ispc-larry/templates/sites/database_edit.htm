@@ -31,99 +31,102 @@
     
     <!-- begin: modulecontent -->
     <div class="panel panel_database">
-        <tmpl_if name="is_admin">
+        <div class="subsectiontoggle"><span class="showing"></span>Circle Settings<em class="showing"></em></div>
+        <div class="subsection">
+            <tmpl_if name="is_admin">
+                <div class="ctrlHolder">
+                    <tmpl_if name="edit_disabled">
+                        <label for="server_id_disabled">{tmpl_var name='server_id_txt'}</label>
+                        <select name="server_id_disabled" id="server_id_disabled" class="selectInput" disabled="disabled">
+                            {tmpl_var name='server_id'}
+                        </select>
+                        <input type="hidden" name="server_id" value="{tmpl_var name='server_id_value'}" />
+                        <tmpl_else>
+                            <label for="server_id">{tmpl_var name='server_id_txt'}</label>
+                            <select name="server_id" id="server_id" class="selectInput">
+                                {tmpl_var name='server_id'}
+                            </select>
+                    </tmpl_if>
+                </div>
+                <div class="ctrlHolder">
+                    <label for="client_group_id">{tmpl_var name='client_txt'}</label>
+                    <select name="client_group_id" id="client_group_id" class="selectInput">
+                        {tmpl_var name='client_group_id'}
+                    </select>
+                </div>
+            </tmpl_if>
+            <tmpl_if name="is_reseller">
+                <div class="ctrlHolder">
+                    <label for="client_group_id">{tmpl_var name='client_txt'}</label>
+                    <select name="client_group_id" id="client_group_id" class="selectInput">
+                        {tmpl_var name='client_group_id'}
+                    </select>
+                </div>
+            </tmpl_if>
+            <div class="ctrlHolder">
+                <label for="type">{tmpl_var name='type_txt'}</label>
+                <select name="type" id="type" class="selectInput formLengthHalf">
+                    {tmpl_var name='type'}
+                </select>
+            </div>
+            <div class="ctrlHolder">
+                <label for="database_name">{tmpl_var name='database_name_txt'}</label>
+                <p class="prefix">{tmpl_var name='database_name_prefix'}</p>
+                <tmpl_if name="edit_disabled">
+                    <input name="database_name" id="database_name" value="{tmpl_var name='database_name'}" size="30" maxlength="255" type="text" class="textInput formLengthHalf" disabled="disabled" />
+                    <input name="database_name" type="hidden" value="{tmpl_var name='database_name'}" />
+                    <tmpl_else>
+                        <input name="database_name" id="database_name" value="{tmpl_var name='database_name'}" size="30" maxlength="255" type="text" class="textInput formLengthHalf" />
+                </tmpl_if>
+            </div>
+            <div class="ctrlHolder">
+                <label for="database_user">{tmpl_var name='database_user_txt'}</label>
+                <p class="prefix">{tmpl_var name='database_user_prefix'}</p>
+                <input name="database_user" id="database_user" value="{tmpl_var name='database_user'}" size="30" maxlength="255" type="text" class="textInput formLengthHalf" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="database_password">{tmpl_var name='database_password_txt'}</label>
+                <input name="database_password" id="database_password" value="{tmpl_var name='database_password'}" size="30" maxlength="255" type="password" class="textInput formLengthHalf" onkeyup="pass_check(this.value)" />
+            </div>
+            <div class="ctrlHolder">
+                <p class="label">{tmpl_var name='password_strength_txt'}</p>
+                <div id="passBar"></div>
+                <p class="formHint"><span id="passText">&nbsp;</span></p>
+            </div>
             <div class="ctrlHolder">
                 <tmpl_if name="edit_disabled">
-                    <label for="server_id_disabled">{tmpl_var name='server_id_txt'}</label>
-                    <select name="server_id_disabled" id="server_id_disabled" class="selectInput" disabled="disabled">
-                        {tmpl_var name='server_id'}
+                    <label for="database_charset_disabled">{tmpl_var name='database_charset_txt'}</label>
+                    <select name="database_charset_disabled" id="database_charset_disabled" class="selectInput formLengthHalf" disabled="disabled">
+                        {tmpl_var name='database_charset'}
                     </select>
-                    <input type="hidden" name="server_id" value="{tmpl_var name='server_id_value'}" />
+                    <input type="hidden" name="database_charset" value="{tmpl_var name='database_charset_value'}" />
                     <tmpl_else>
-                        <label for="server_id">{tmpl_var name='server_id_txt'}</label>
-                        <select name="server_id" id="server_id" class="selectInput">
-                            {tmpl_var name='server_id'}
+                        <label for="database_charset">{tmpl_var name='database_charset_txt'}</label>
+                        <select name="database_charset" id="database_charset" class="selectInput formLengthHalf">
+                            {tmpl_var name='database_charset'}
                         </select>
                 </tmpl_if>
             </div>
             <div class="ctrlHolder">
-                <label for="client_group_id">{tmpl_var name='client_txt'}</label>
-                <select name="client_group_id" id="client_group_id" class="selectInput">
-                    {tmpl_var name='client_group_id'}
-                </select>
+                <p class="label">{tmpl_var name='remote_access_txt'}</p>
+                <div class="multiField">
+                    {tmpl_var name='remote_access'}
+                </div>
             </div>
-        </tmpl_if>
-        <tmpl_if name="is_reseller">
             <div class="ctrlHolder">
-                <label for="client_group_id">{tmpl_var name='client_txt'}</label>
-                <select name="client_group_id" id="client_group_id" class="selectInput">
-                    {tmpl_var name='client_group_id'}
-                </select>
+                <label for="remote_ips">{tmpl_var name='remote_ips_txt'}</label>
+                <input name="remote_ips" id="remote_ips" value="{tmpl_var name='remote_ips'}" size="60" type="text" class="textInput formLengthHalf" />
             </div>
-        </tmpl_if>
-        <div class="ctrlHolder">
-            <label for="type">{tmpl_var name='type_txt'}</label>
-            <select name="type" id="type" class="selectInput formLengthHalf">
-                {tmpl_var name='type'}
-            </select>
-        </div>
-        <div class="ctrlHolder">
-            <label for="database_name">{tmpl_var name='database_name_txt'}</label>
-            <p class="prefix">{tmpl_var name='database_name_prefix'}</p>
-            <tmpl_if name="edit_disabled">
-                <input name="database_name" id="database_name" value="{tmpl_var name='database_name'}" size="30" maxlength="255" type="text" class="textInput formLengthHalf" disabled="disabled" />
-                <input name="database_name" type="hidden" value="{tmpl_var name='database_name'}" />
-                <tmpl_else>
-                    <input name="database_name" id="database_name" value="{tmpl_var name='database_name'}" size="30" maxlength="255" type="text" class="textInput formLengthHalf" />
-            </tmpl_if>
-        </div>
-        <div class="ctrlHolder">
-            <label for="database_user">{tmpl_var name='database_user_txt'}</label>
-            <p class="prefix">{tmpl_var name='database_user_prefix'}</p>
-            <input name="database_user" id="database_user" value="{tmpl_var name='database_user'}" size="30" maxlength="255" type="text" class="textInput formLengthHalf" />
-        </div>
-        <div class="ctrlHolder">
-            <label for="database_password">{tmpl_var name='database_password_txt'}</label>
-            <input name="database_password" id="database_password" value="{tmpl_var name='database_password'}" size="30" maxlength="255" type="password" class="textInput formLengthHalf" onkeyup="pass_check(this.value)" />
-        </div>
-        <div class="ctrlHolder">
-            <p class="label">{tmpl_var name='password_strength_txt'}</p>
-            <div id="passBar"></div>
-            <p class="formHint"><span id="passText">&nbsp;</span></p>
-        </div>
-        <div class="ctrlHolder">
-            <tmpl_if name="edit_disabled">
-                <label for="database_charset_disabled">{tmpl_var name='database_charset_txt'}</label>
-                <select name="database_charset_disabled" id="database_charset_disabled" class="selectInput formLengthHalf" disabled="disabled">
-                    {tmpl_var name='database_charset'}
-                </select>
-                <input type="hidden" name="database_charset" value="{tmpl_var name='database_charset_value'}" />
-                <tmpl_else>
-                    <label for="database_charset">{tmpl_var name='database_charset_txt'}</label>
-                    <select name="database_charset" id="database_charset" class="selectInput formLengthHalf">
-                        {tmpl_var name='database_charset'}
-                    </select>
-            </tmpl_if>
-        </div>
-        <div class="ctrlHolder">
-            <p class="label">{tmpl_var name='remote_access_txt'}</p>
-            <div class="multiField">
-                {tmpl_var name='remote_access'}
+            <div class="ctrlHolder">
+                <p class="label">{tmpl_var name='active_txt'}</p>
+                <div class="multiField">
+                    {tmpl_var name='active'}
+                </div>
             </div>
         </div>
-        <div class="ctrlHolder">
-            <label for="remote_ips">{tmpl_var name='remote_ips_txt'}</label>
-            <input name="remote_ips" id="remote_ips" value="{tmpl_var name='remote_ips'}" size="60" type="text" class="textInput formLengthHalf" />
-        </div>
-        <div class="ctrlHolder">
-            <p class="label">{tmpl_var name='active_txt'}</p>
-            <div class="multiField">
-                {tmpl_var name='active'}
-            </div>
-        </div>
-            
+
         <input type="hidden" name="id" value="{tmpl_var name='id'}">
-            
+
         <div class="buttonHolder buttons">
             <button class="positive iconstxt icoPositive" type="button" value="{tmpl_var name='btn_save_txt'}" onClick="submitForm('pageForm','sites/database_edit.php');"><span>{tmpl_var name='btn_save_txt'}</span></button>
             <button class="negative iconstxt icoNegative" type="button" value="{tmpl_var name='btn_cancel_txt'}" onClick="loadContent('sites/database_list.php');"><span>{tmpl_var name='btn_cancel_txt'}</span></button>

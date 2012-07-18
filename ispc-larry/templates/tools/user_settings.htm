@@ -32,24 +32,27 @@
         
     <!-- begin: modulecontent -->
     <div class="panel panel_usersettings">
-        <div class="ctrlHolder">
-            <label for="passwort">{tmpl_var name='passwort_txt'}</label>
-            <input name="passwort" id="passwort" value="{tmpl_var name='passwort'}" size="15" maxlength="100" type="password" class="textInput" onkeyup="pass_check(this.value)"/>
-        </div>
-        <div class="ctrlHolder">
-            <label>{tmpl_var name='password_strength_txt'}</label>
-            <div id="passBar"></div>
-            <p class="formHint"><span id="passText">&nbsp;</span></p>
-        </div>
-        <div class="ctrlHolder">
-            <label for="passwort2">{tmpl_var name='passwort_txt'}</label>
-            <input name="passwort2" id="passwort2" value="" size="15" maxlength="100" type="password" class="textInput" style="width:100px;"/>
-        </div>
-        <div class="ctrlHolder">
-            <label for="language">{tmpl_var name='language_txt'}</label>
-            <select name="language" id="language" class="selectInput flags">
-                {tmpl_var name='language'}
-            </select>
+        <div class="subsectiontoggle"><span class="showing"></span>Circle Settings<em class="showing"></em></div>
+        <div class="subsection">
+            <div class="ctrlHolder">
+                <label for="passwort">{tmpl_var name='passwort_txt'}</label>
+                <input name="passwort" id="passwort" value="{tmpl_var name='passwort'}" size="15" maxlength="100" type="password" class="textInput" onkeyup="pass_check(this.value)"/>
+            </div>
+            <div class="ctrlHolder">
+                <label>{tmpl_var name='password_strength_txt'}</label>
+                <div id="passBar"></div>
+                <p class="formHint"><span id="passText">&nbsp;</span></p>
+            </div>
+            <div class="ctrlHolder">
+                <label for="passwort2">{tmpl_var name='passwort_txt'}</label>
+                <input name="passwort2" id="passwort2" value="" size="15" maxlength="100" type="password" class="textInput" style="width:100px;"/>
+            </div>
+            <div class="ctrlHolder">
+                <label for="language">{tmpl_var name='language_txt'}</label>
+                <select name="language" id="language" class="selectInput flags">
+                    {tmpl_var name='language'}
+                </select>
+            </div>
         </div>
             
         <input type="hidden" name="id" value="{tmpl_var name='id'}">

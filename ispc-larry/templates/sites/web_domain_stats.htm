@@ -31,24 +31,27 @@
         
     <!-- begin: modulecontent -->
     <div class="panel panel_web_domain">
-        <div class="ctrlHolder">
-            <p class="label">{tmpl_var name='stats_user_txt'}</p>
-            <p class="value">admin</p>
-            <br style="clear: both;" />
+        <div class="subsectiontoggle"><span class="showing"></span>Circle Settings<em class="showing"></em></div>
+        <div class="subsection">
+            <div class="ctrlHolder">
+                <p class="label">{tmpl_var name='stats_user_txt'}</p>
+                <p class="value">admin</p>
+                <br style="clear: both;" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="stats_password">{tmpl_var name='stats_password_txt'}</label>
+                <input name="stats_password" id="stats_password" value="{tmpl_var name='stats_password'}" size="30" maxlength="255" type="password" class="textInput" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="stats_type">{tmpl_var name='stats_type_txt'}</label>
+                <select name="stats_type" id="stats_type" class="selectInput" >
+                    {tmpl_var name='stats_type'}
+                </select>
+            </div>
         </div>
-        <div class="ctrlHolder">
-            <label for="stats_password">{tmpl_var name='stats_password_txt'}</label>
-            <input name="stats_password" id="stats_password" value="{tmpl_var name='stats_password'}" size="30" maxlength="255" type="password" class="textInput" />
-        </div>
-        <div class="ctrlHolder">
-            <label for="stats_type">{tmpl_var name='stats_type_txt'}</label>
-            <select name="stats_type" id="stats_type" class="selectInput" >
-                {tmpl_var name='stats_type'}
-            </select>
-        </div>
-            
+
         <input type="hidden" name="id" value="{tmpl_var name='id'}">
-            
+
         <div class="buttonHolder buttons">
             <button class="positive iconstxt icoPositive" type="button" value="{tmpl_var name='btn_save_txt'}" onClick="submitForm('pageForm','sites/web_domain_edit.php');"><span>{tmpl_var name='btn_save_txt'}</span></button>
             <button class="negative iconstxt icoNegative" type="button" value="{tmpl_var name='btn_cancel_txt'}" onClick="loadContent('sites/web_domain_list.php');"><span>{tmpl_var name='btn_cancel_txt'}</span></button>
