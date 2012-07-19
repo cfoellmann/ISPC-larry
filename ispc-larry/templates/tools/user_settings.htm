@@ -36,17 +36,19 @@
         <div class="subsection">
             <div class="ctrlHolder">
                 <label for="passwort">{tmpl_var name='passwort_txt'}</label>
-                <input name="passwort" id="passwort" value="{tmpl_var name='passwort'}" size="15" maxlength="100" type="password" class="textInput" onkeyup="pass_check(this.value)"/>
+                <input name="passwort" id="passwort" value="{tmpl_var name='passwort'}" size="15" maxlength="100" type="password" class="textInput" onkeyup="pass_check(this.value);checkPassMatch('passwort','repeat_password');"/>&nbsp;<a href="javascript:void(0);" onClick="generatePassword('passwort');">{tmpl_var name='generate_password_txt'}</a>
             </div>
             <div class="ctrlHolder">
-                <label>{tmpl_var name='password_strength_txt'}</label>
+                <p class="label">{tmpl_var name='password_strength_txt'}</p>
                 <div id="passBar"></div>
                 <p class="formHint"><span id="passText">&nbsp;</span></p>
             </div>
             <div class="ctrlHolder">
-                <label for="passwort2">{tmpl_var name='passwort_txt'}</label>
-                <input name="passwort2" id="passwort2" value="" size="15" maxlength="100" type="password" class="textInput" style="width:100px;"/>
+                <label for="repeat_password">{tmpl_var name='repeat_password_txt'}</label>
+                <input name="repeat_password" id="repeat_password" value="" size="15" maxlength="100" type="password" class="textInput" style="width:100px;"  onkeyup="checkPassMatch('passwort','repeat_password');" />
             </div>
+            <div id="confirmpasswordError" style="display:none;" class="confirmpassworderror">{tmpl_var name='password_mismatch_txt'}</div>
+            <div id="confirmpasswordOK" style="display:none;" class="confirmpasswordok">{tmpl_var name='password_match_txt'}</div>
             <div class="ctrlHolder">
                 <label for="language">{tmpl_var name='language_txt'}</label>
                 <select name="language" id="language" class="selectInput flags">
