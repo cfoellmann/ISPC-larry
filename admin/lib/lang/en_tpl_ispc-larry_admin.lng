@@ -1,6 +1,6 @@
 <?php
-$wb['tpl_default_admin_head_txt'] = 'Global Default-Theme Settings';
-$wb['tpl_default_admin_desc_txt'] = '';
+$wb['tpl_ispc-larry_admin_head_txt'] = 'Global ISPC-larry Theme Settings';
+$wb['tpl_ispc-larry_admin_desc_txt'] = '';
 $wb['server_id_txt'] = 'Server';
 $wb['client_id_txt'] = 'Client';
 $wb['name_txt'] = 'PHP Name';
