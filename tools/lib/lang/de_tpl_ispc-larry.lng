@@ -1,0 +1,7 @@
+<?php
+$wb["tpl_default_head_txt"] = 'Default Theme Einstellungen';
+$wb["tpl_default_desc_txt"] = 'Passe default-theme-spezifische Optionen';
+$wb['language_txt'] = 'Sprache';
+$wb['startmodule_txt'] = 'Startmodul';
+$wb['app_theme_txt'] = 'Design';
+?>

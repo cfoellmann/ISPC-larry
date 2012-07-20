@@ -1,0 +1,18 @@
+<?php
+$wb['tpl_default_admin_head_txt'] = 'Global Default-Theme Settings';
+$wb['tpl_default_admin_desc_txt'] = '';
+$wb['server_id_txt'] = 'Server';
+$wb['client_id_txt'] = 'Client';
+$wb['name_txt'] = 'PHP Name';
+$wb['Name'] = 'Name';
+$wb['FastCGI Settings'] = 'FastCGI Settings';
+$wb['PHP-FPM Settings'] = 'PHP-FPM Settings';
+$wb['Additional PHP Versions'] = 'Additional PHP Versions';
+$wb['Form to edit additional PHP versions'] = 'Form to edit additional PHP versions';
+$wb['server_php_name_error_empty'] = 'The Name field must not be empty.';
+$wb['php_fastcgi_binary_txt'] = 'Path to the PHP FastCGI binary';
+$wb['php_fastcgi_ini_dir_txt'] = 'Path to the php.ini directory';
+$wb['php_fpm_init_script_txt'] = 'Path to the PHP-FPM init script';
+$wb['php_fpm_ini_dir_txt'] = 'Path to the php.ini directory';
+$wb['php_fpm_pool_dir_txt'] = 'Path to the PHP-FPM pool directory';
+?>
