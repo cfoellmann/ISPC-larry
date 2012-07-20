@@ -1,0 +1,67 @@
+<!-- begin: toolbar -->
+<div id="moduletoolbar">
+    <a class="button cancel" onClick="loadContent('tools/index.php');" href="#" title="{tmpl_var name='btn_cancel_txt'}">{tmpl_var name='btn_cancel_txt'}</a>
+</div>
+<!-- end: toolbar -->
+
+<!-- begin: modulebody -->
+<div id="module-title"><h1><tmpl_var name="list_head_txt"></h1></div>
+<div class="module-box boxlistcontent" id="modulecontainer">
+
+    <!-- tabs -->
+    <div id="tabs">
+        <ul class="tabsbar">
+            <tmpl_loop name="formTab">
+                <tmpl_if name="active">
+                    <li class="active"><a href="javascript:changeTab('<tmpl_var name='name'>','<tmpl_var name='app_module'>/<tmpl_var name='form_action'>')"><tmpl_var name='title'></a></li>
+                    <tmpl_else>
+                        <li><a href="javascript:changeTab('<tmpl_var name='name'>','<tmpl_var name='app_module'>/<tmpl_var name='form_action'>')"><tmpl_var name='title'></a></li>
+                </tmpl_if>
+            </tmpl_loop>
+        </ul>
+    </div>
+    
+    <!-- desc --> 
+    <div id="module-desc"><tmpl_var name="list_desc_txt"></div>
+    
+    <!-- messages/erros -->  
+    <tmpl_if name="msg">
+        <div id="OKMsg"><p><tmpl_var name="msg"></p></div>
+    </tmpl_if>
+    <tmpl_if name="error">
+        <div id="errorMsg"><h3>ERROR</h3><ol><tmpl_var name="error"></ol></div>
+    </tmpl_if>
+        
+    <!-- begin: modulecontent -->
+    <div class="panel panel_tools_tpl">
+        <div class="subsectiontoggle"><span class="showing"></span>Plesk data import<em class="showing"></em></div>
+        <div class="subsection">
+            <div class="ctrlHolder">
+                <label for="startmodule">{tmpl_var name='startmodule_txt'}</label>
+                <select name="startmodule" id="startmodule" class="selectInput formLengthHalf">
+                    {tmpl_var name='startmodule'}
+                </select>
+            </div>
+            <div class="ctrlHolder">
+                <label for="language">{tmpl_var name='language_txt'}</label>
+                <select name="language" id="language" class="selectInput flags">
+                    {tmpl_var name='language'}
+                </select>
+            </div>
+            <!-- TODO: If user theme change is activated -->
+            <div class="ctrlHolder">
+                <label for="app_theme">{tmpl_var name='app_theme_txt'}</label>
+                <select name="app_theme" id="app_theme" class="selectInput formLengthHalf">
+                    {tmpl_var name='app_theme'}
+                </select>
+            </div>
+        </div>
+
+        <input type="hidden" name="id" value="{tmpl_var name='id'}">
+
+        <div class="buttonHolder buttons">
+            <button class="positive iconstxt icoPositive" type="button" value="{tmpl_var name='btn_save_txt'}" onClick="submitForm('pageForm','tools/tpl_default.php');"><span>{tmpl_var name='btn_save_txt'}</span></button>
+            <button class="negative iconstxt icoNegative" type="button" value="{tmpl_var name='btn_cancel_txt'}" onClick="loadContent('tools/index.php');"><span>{tmpl_var name='btn_cancel_txt'}</span></button>
+        </div>
+    </div><!-- end: modulecontent -->
+</div><!-- end: modulebody -->
