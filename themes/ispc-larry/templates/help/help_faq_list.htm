@@ -1,0 +1,16 @@
+<tmpl_loop name="records">
+    <h3>{tmpl_var name='hf_question'}
+    </h3>
+    <p>
+        {tmpl_var name='hf_answer'}
+    </p>
+    <tmpl_if name='is_admin'>
+        <a class="button icons16 icoDelete" href="javascript: del_record('help/faq_delete.php?id={tmpl_var name='id'}&phpsessid={tmpl_var name='phpsessid'}','{tmpl_var name='delete_confirmation'}');"><span>Delete</span></a>
+        <a href="#" onClick="loadContent('help/faq_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="edit_txt"}</a>
+        <br/>
+        <br/>
+        <br/>
+    </tmpl_if>
+</tmpl_loop>
+
+<!--<tmpl_var name="paging">-->

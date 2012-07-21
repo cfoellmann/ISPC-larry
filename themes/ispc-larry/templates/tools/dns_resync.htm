@@ -1,0 +1,35 @@
+<!-- begin: toolbar -->
+<div id="moduletoolbar">
+    <a class="button edit" onClick="loadContent('tools/index.php');" href="#" title="{tmpl_var name='btn_cancel_txt'}">Cancel</a>
+</div>
+<!-- end: toolbar -->
+
+<!-- begin: modulebody -->
+<div id="module-title"><h1>DNS Resync</h1></div>    
+<div class="module-box boxlistcontent" id="modulecontainer">
+    <div id="module-desc"><tmpl_var name="list_desc_txt"></div>
+    
+    <!-- begin: modulecontent -->
+    <div class="panel panel_language_import">
+        <div class="ctrlHolder">
+            <label>Resync DNS Records</label>
+            <div class="multiField">
+                <input id="resync" type="checkbox" value="1" name="resync" s/>
+            </div>
+        </div>
+
+        <tmpl_if name="msg">
+            <div id="OKMsg"><p><tmpl_var name="msg"></p></div>
+        </tmpl_if>
+        <tmpl_if name="error">
+            <div id="errorMsg"><h3>ERROR</h3><ol><tmpl_var name="error"></ol></div>
+        </tmpl_if>
+            
+        <input type="hidden" name="id" value="{tmpl_var name='id'}">
+            
+        <div class="buttonHolder buttons">
+            <button class="positive iconstxt icoPositive" type="button" value="Import" onClick="submitForm('pageForm','tools/dns_resync.php');"><span>Start</span></button>
+            <button class="negative iconstxt icoNegative" type="button" value="Cancel" onClick="loadContent('tools/index.php');"><span>Cancel</span></button>
+        </div>
+    </div><!-- end: modulecontent -->
+</div><!-- end: modulebody -->

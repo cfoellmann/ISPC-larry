@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="de-DE">
+    <head>
+        <meta charset="<tmpl_var name="html_content_encoding">" />
+        <title><tmpl_var name="app_title"> <tmpl_var name="app_version"></title>
+        <link rel="shortcut icon" href="/themes/ispc-larry/images/favicon.ico" type="image/x-icon" />
+        <link href="themes/ispc-larry/styles.css" rel="stylesheet" type="text/css"/>
+
+        <script type="text/javascript" src="js/jquery-1.6.3.min.js"></script>
+        <script type="text/javascript" src="js/jquery-ui-1.8.16.custom.min.js"></script>
+        <script type="text/javascript" src="js/scrigo.js.php"></script>
+        <script type="text/javascript" src="js/uni-form/uni-form.jquery.js"></script>
+        <script language="JavaScript" type="text/javascript">
+            jQuery(document).ready(function() {
+                loadInitContent();
+                
+                $("#pageForm").submit(function(e){
+                    //Prevent form submit: e.preventDefault() in lists
+                    if ($(".panel #Filter").length > 0) {
+                        e.preventDefault();
+                    }
+                });
+            });
+            
+            
+            jQuery(document).bind("change", function(event) {
+                if ($(".panel #Filter").length > 0 && event.target.localName == 'select') {
+                    $(".panel #Filter").attr("onsubmit",$(".panel #Filter").attr("onclick")).submit();
+                }
+            });
+            
+            //Use jQuery submit with kespress Enter in panel filterbar
+            jQuery(document).bind("keypress", function(event) {
+                if (event.which == '13' && $(".panel #Filter").length > 0) {
+                    $(".panel #Filter").attr("onsubmit",$(".panel #Filter").attr("onclick")).submit();
+                }
+            });
+            
+        </script>
+    </head>
+    <body id="login">
+        <form method="post" action="" id="pageForm" name="pageForm" enctype="multipart/form-data" class="uniForm">
+                    <div id="pageContent"><!-- AJAX CONTENT --></div>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<!-- begin: toolbar -->
+<div id="moduletoolbar">
+    <div class="toolbar" id="optiontoolbar">
+        &nbsp;
+    </div>
+</div>
+<!-- end: toolbar -->
+
+<!-- begin: modulebody -->
+<div id="module-title"><h1><tmpl_var name="list_head_txt"></h1></div>
+<div class="module-box boxlistcontent" id="modulecontainer">
+    <div id="module-desc"><tmpl_var name="list_desc_txt"></div>
+
+    <!-- begin: modulecontent -->
+    <div class="panel panel_logview">
+        <div class="ctrlHolder">
+            <label for="refreshinterval">{tmpl_var name='refreshinterval_txt'}</label>
+            <select name="refreshinterval" id="refreshinterval" class="selectInput" onChange="loadContentRefresh('monitor/show_log.php?log={tmpl_var name="log_id"}')">
+                    {tmpl_var name='refresh'}
+            </select>
+        </div>
+
+    <tmpl_var name="monTransDate"><tmpl_var name="time">
+    <div class="codeview"><tmpl_var name="log_data"></div>
+                    
+    </div><!-- end: modulecontent -->
+</div><!-- end: modulebody -->

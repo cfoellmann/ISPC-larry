@@ -1,0 +1,51 @@
+<!-- begin: toolbar -->
+<div id="moduletoolbar">
+    <div class="toolbar" id="optiontoolbar">
+        &nbsp;
+    </div>
+</div>
+<!-- end: toolbar -->
+
+<!-- begin: modulebody -->
+<div id="module-title"><h1><tmpl_var name="list_head_txt"></h1></div>
+<div class="module-box boxlistcontent" id="modulecontainer">
+    <div id="module-desc"><tmpl_var name="list_desc_txt"></div>
+    
+    <!-- begin: modulecontent -->
+    <div class="panel panel_list_software_update">
+        <div class="buttons">
+            <div class="ctrlHolder">
+                <label for="server_id">{tmpl_var name='server_select_txt'}</label>
+                <select name="server_id" id="server_id" class="selectInput servericons" onChange="submitForm('pageForm','admin/software_update_list.php');">
+                    <tmpl_loop name="servers">
+                        <option value="{tmpl_var name='server_id'}" {tmpl_var name='selected'}>{tmpl_var name='server_name'}</option>
+                    </tmpl_loop>
+                </select>
+            </div>
+        </div>
+
+        <table class="list">
+            <thead>
+                <tr class="caption">
+                    <th class="tbl_col_installed" scope="col"><tmpl_var name="installed_txt"></th>
+                    <th class="tbl_col_update_title" scope="col"><tmpl_var name="update_title_txt"></th>
+                    <th class="tbl_col_version" scope="col"><tmpl_var name="version_txt"></th>
+                </tr>
+            </thead>
+            <tbody>
+            <tmpl_loop name="records">
+                <tr class="tbl_row_<tmpl_if name='__EVEN__'}even<tmpl_else>uneven</tmpl_if>">
+                    <td class="tbl_col_installed">{tmpl_var name="installed"}</td>
+                    <td class="tbl_col_update_title">{tmpl_var name="update_title"}</td>
+                    <td class="tbl_col_version">{tmpl_var name="version"}</td>
+                </tr>
+            </tmpl_loop>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td class="tbl_footer tbl_paging" colspan="3"></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div><!-- end: modulecontent -->
+</div><!-- end: modulebody -->

@@ -1,0 +1,79 @@
+<!-- begin: toolbar -->
+<div id="moduletoolbar">
+    <a class="button cancel" onClick="loadContent('mail/spamfilter_users_list.php');" href="#" title="{tmpl_var name='btn_cancel_txt'}">{tmpl_var name='btn_cancel_txt'}</a>
+</div>
+<!-- end: toolbar -->
+
+<!-- begin: modulebody -->
+<div id="module-title"><h1><tmpl_var name="form_hint"></h1></div>
+<div class="module-box boxlistcontent" id="modulecontainer">
+    <!-- tabs -->
+    <div id="tabs">
+        <ul class="tabsbar">
+            <tmpl_loop name="formTab">
+                <tmpl_if name="active">
+                    <li class="active"><a href="javascript:changeTab('<tmpl_var name='name'>','<tmpl_var name='app_module'>/<tmpl_var name='form_action'>')"><tmpl_var name='title'></a></li>
+                    <tmpl_else>
+                        <li><a href="javascript:changeTab('<tmpl_var name='name'>','<tmpl_var name='app_module'>/<tmpl_var name='form_action'>')"><tmpl_var name='title'></a></li>
+                </tmpl_if>
+            </tmpl_loop>
+        </ul>
+    </div>
+    
+    <!-- desc --> 
+    <div id="module-desc"><tmpl_var name="page_desc_txt"></div>
+    
+    <!-- messages/erros -->   
+    <tmpl_if name="msg">
+        <div id="OKMsg"><p><tmpl_var name="msg"></p></div>
+    </tmpl_if>
+    <tmpl_if name="error">
+        <div id="errorMsg"><h3>ERROR</h3><ol><tmpl_var name="error"></ol></div>
+    </tmpl_if>
+    
+    <!-- begin: modulecontent -->
+    <div class="panel panel_spamfilter_users">
+        <div class="subsectiontoggle"><span class="showing"></span>Firewall<em class="showing"></em></div>
+        <div class="subsection">
+            <div class="ctrlHolder">
+                <label for="server_id">{tmpl_var name='server_id_txt'}</label>
+                <select name="server_id" id="server_id" class="selectInput">
+                    {tmpl_var name='server_id'}
+                </select>
+            </div>
+            <div class="ctrlHolder">
+                <label for="priority">{tmpl_var name='priority_txt'}</label>
+                <select name="priority" id="priority" class="selectInput formLengthLimit">
+                    {tmpl_var name='priority'}
+                </select>
+            </div>
+            <div class="ctrlHolder">
+                <label for="policy_id">{tmpl_var name='policy_id_txt'}</label>
+                <select name="policy_id" id="policy_id" class="selectInput">
+                    {tmpl_var name='policy_id'}
+                </select>
+            </div>
+            <div class="ctrlHolder">
+                <label for="email">{tmpl_var name='email_txt'}</label>
+                <input name="email" id="email" value="{tmpl_var name='email'}" size="30" maxlength="255" type="text" class="textInput" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="fullname">{tmpl_var name='fullname_txt'}</label>
+                <input name="fullname" id="fullname" value="{tmpl_var name='fullname'}" size="30" maxlength="255" type="text" class="textInput" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="local">{tmpl_var name='local_txt'}</label>
+                <select name="local" id="local" class="selectInput formLengthBool">
+                    {tmpl_var name='local'}
+                </select>
+            </div>
+        </div>
+            
+        <input type="hidden" name="id" value="{tmpl_var name='id'}">
+            
+        <div class="buttonHolder buttons">
+            <button class="positive iconstxt icoPositive" type="button" value="{tmpl_var name='btn_save_txt'}" onClick="submitForm('pageForm','mail/spamfilter_users_edit.php');"><span>{tmpl_var name='btn_save_txt'}</span></button>
+            <button class="negative iconstxt icoNegative" type="button" value="{tmpl_var name='btn_cancel_txt'}" onClick="loadContent('mail/spamfilter_users_list.php');"><span>{tmpl_var name='btn_cancel_txt'}</span></button>
+        </div>
+    </div><!-- end: modulecontent -->
+</div><!-- end: modulebody -->

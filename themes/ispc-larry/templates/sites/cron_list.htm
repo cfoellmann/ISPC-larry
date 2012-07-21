@@ -1,0 +1,70 @@
+<!-- begin: toolbar -->
+<div id="moduletoolbar">
+    <a class="button edit" onClick="loadContent('sites/cron_edit.php');" href="#" title="{tmpl_var name='add_new_cron_txt'}">{tmpl_var name="add_new_cron_txt"}</a>
+</div>
+<!-- end: toolbar -->
+
+<!-- begin: modulebody -->
+<div id="module-title"><h1><tmpl_var name="list_head_txt"></h1></div> 
+<div class="module-box boxlistcontent" id="modulecontainer">
+    <div id="module-desc"><tmpl_var name="list_desc_txt"></div>
+    
+    <!-- begin: modulecontent -->
+    <div class="panel panel_list_cron">
+        <table class="list">
+            <thead>
+                <tr class="caption">
+                    <th class="tbl_col_active" scope="col"><tmpl_var name="active_txt"></th>
+                    <th class="tbl_col_server_id" scope="col"><tmpl_var name="server_id_txt"></th>
+                    <th class="tbl_col_parent_domain_id" scope="col"><tmpl_var name="parent_domain_id_txt"></th>
+                    <th class="tbl_col_run_min" scope="col"><tmpl_var name="run_min_txt"></th>
+                    <th class="tbl_col_run_hour" scope="col"><tmpl_var name="run_hour_txt"></th>
+                    <th class="tbl_col_run_mday" scope="col"><tmpl_var name="run_mday_txt"></th>
+                    <th class="tbl_col_run_month" scope="col"><tmpl_var name="run_month_txt"></th>
+                    <th class="tbl_col_run_wday" scope="col"><tmpl_var name="run_wday_txt"></th>
+                    <th class="tbl_col_command" scope="col"><tmpl_var name="command_txt"></th>
+                    <th class="tbl_col_limit" scope="col"><a class="button icons16 icoLimit" href="#"><span>Limit</span></a>{tmpl_var name='search_limit'}</th>
+                </tr>
+                <tr class="filter">
+                    <td class="tbl_col_active"><select name="search_active" class="withicons">{tmpl_var name='search_active'}</select></td>
+                    <td class="tbl_col_server_id"><select name="search_server_id" class="servericons">{tmpl_var name='search_server_id'}</select></td>
+                    <td class="tbl_col_parent_domain_id"><select name="search_parent_domain_id">{tmpl_var name='search_parent_domain_id'}</select></td>
+                    <td class="tbl_col_run_min"><input type="text" name="search_run_min" size="1" value="{tmpl_var name='search_run_min'}" /></td>
+                    <td class="tbl_col_run_hour"><input type="text" name="search_run_hour" size="1" value="{tmpl_var name='search_run_hour'}" /></td>
+                    <td class="tbl_col_run_mday"><input type="text" name="search_run_mday" size="1" value="{tmpl_var name='search_run_mday'}" /></td>
+                    <td class="tbl_col_run_month"><input type="text" name="search_run_month" size="1" value="{tmpl_var name='search_run_month'}" /></td>
+                    <td class="tbl_col_run_wday"><input type="text" name="search_run_wday" size="1" value="{tmpl_var name='search_run_wday'}" /></td>
+                    <td class="tbl_col_command"><input type="text" name="search_command" value="{tmpl_var name='search_command'}" /></td>
+                    <td class="tbl_col_buttons">
+                        <button type="button" class="button icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="submitForm('pageForm','sites/cron_list.php');"><span>{tmpl_var name="filter_txt"}</span></button>
+                        <button type="button" class="button icons16 icoFilterReset" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="#"><span>{tmpl_var name="filter_txt"}</span></button>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+            <tmpl_loop name="records">
+                <tr class="tbl_row_<tmpl_if name='__EVEN__'}even<tmpl_else>uneven</tmpl_if>">
+                    <td class="tbl_col_active"><img src="themes/{tmpl_var name='theme'}/icons/{tmpl_var name='_active_'}" border="0" /></td>
+                    <td class="tbl_col_server_id">{tmpl_var name="server_id"}</td>
+                    <td class="tbl_col_parent_domain_id">{tmpl_var name="parent_domain_id"}</td>
+                    <td class="tbl_col_run_min">{tmpl_var name="run_min"}</td>
+                    <td class="tbl_col_run_hour">{tmpl_var name="run_hour"}</td>
+                    <td class="tbl_col_run_mday">{tmpl_var name="run_mday"}</td>
+                    <td class="tbl_col_run_month">{tmpl_var name="run_month"}</td>
+                    <td class="tbl_col_run_wday">{tmpl_var name="run_wday"}</td>
+                    <td class="tbl_col_commnd"><a href="#" onClick="loadContent('sites/cron_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="command"}</a></td>
+                    <td class="tbl_col_buttons">
+                        <a class="button icons16 icoEdit" href="javascript: loadContent('sites/cron_edit.php?id={tmpl_var name='id'}');"><span>{tmpl_var name='edit_txt'}</span></a>
+                        <a class="button icons16 icoDelete" href="javascript: del_record('sites/cron_del.php?id={tmpl_var name='id'}&phpsessid={tmpl_var name='phpsessid'}','{tmpl_var name='delete_confirmation'}');"><span>{tmpl_var name='delete_txt'}</span></a>
+                    </td>
+                </tr>
+            </tmpl_loop>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td class="tbl_footer tbl_paging" colspan="10"><tmpl_var name="paging"></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div><!-- end: modulecontent -->
+</div><!-- end: modulebody -->

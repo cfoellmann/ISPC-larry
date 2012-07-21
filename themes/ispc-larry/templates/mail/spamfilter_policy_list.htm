@@ -1,0 +1,58 @@
+<!-- begin: toolbar -->
+<div id="moduletoolbar">
+    <a class="button edit" onClick="loadContent('mail/spamfilter_policy_edit.php');" href="#" title="{tmpl_var name="add_new_record_txt"}">{tmpl_var name="add_new_record_txt"}</a>
+</div>
+<!-- end: toolbar -->
+
+<!-- begin: modulebody -->
+<div id="module-title"><h1><tmpl_var name="list_head_txt"></h1></div>
+<div class="module-box boxlistcontent" id="modulecontainer">
+    <div id="module-desc"><tmpl_var name="list_desc_txt"></div>
+    
+    <!-- begin: modulecontent -->
+    <div class="panel panel_list_spamfilter_policy">
+        <table class="list">
+            <thead>
+                <tr class="caption">
+                    <th class="tbl_col_policy_name" scope="col"><tmpl_var name="policy_name_txt"></th>
+                    <th class="tbl_col_virus_lover" scope="col"><tmpl_var name="virus_lover_txt"></th>
+                    <th class="tbl_col_spam_lover" scope="col"><tmpl_var name="spam_lover_txt"></th>
+                    <th class="tbl_col_banned_files_lover" scope="col"><tmpl_var name="banned_files_lover_txt"></th>
+                    <th class="tbl_col_bad_header_lover" scope="col"><tmpl_var name="bad_header_lover_txt"></th>
+                    <th class="tbl_col_limit" scope="col"><a class="button icons16 icoLimit" href="#"><span>Limit</span></a>{tmpl_var name='search_limit'}</th>
+                </tr>
+                <tr class="filter">
+                    <td class="tbl_col_policy_name"><input type="text" name="search_policy_name" value="{tmpl_var name='search_policy_name'}" /></td>
+                    <td class="tbl_col_virus_lover"><select name="search_virus_lover" class="withicons">{tmpl_var name='search_virus_lover'}</select></td>
+                    <td class="tbl_col_spam_lover"><select name="search_spam_lover" class="withicons">{tmpl_var name='search_spam_lover'}</select></td>
+                    <td class="tbl_col_banned_files_lover"><select name="search_banned_files_lover" class="withicons">{tmpl_var name='search_banned_files_lover'}</select></td>
+                    <td class="tbl_col_bad_header_lover"><select name="search_bad_header_lover" class="withicons">{tmpl_var name='search_bad_header_lover'}</select></td>
+                    <td class="tbl_col_buttons">
+                        <button type="button" class="button icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="submitForm('pageForm','mail/spamfilter_policy_list.php');"><span>{tmpl_var name="filter_txt"}</span></button>
+                        <button type="button" class="button icons16 icoFilterReset" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="#"><span>{tmpl_var name="filter_txt"}</span></button>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+            <tmpl_loop name="records">
+                <tr class="tbl_row_<tmpl_if name='__EVEN__'}even<tmpl_else>uneven</tmpl_if>">
+                    <td class="tbl_col_policy_name"><a href="#" onClick="loadContent('mail/spamfilter_policy_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="policy_name"}</a></td>
+                    <td class="tbl_col_virus_lover">{tmpl_var name="virus_lover"}</td>
+                    <td class="tbl_col_spam_lover">{tmpl_var name="spam_lover"}</td>
+                    <td class="tbl_col_banned_files_lover">{tmpl_var name="banned_files_lover"}</td>
+                    <td class="tbl_col_bad_header_lover">{tmpl_var name="bad_header_lover"}</td>
+                    <td class="tbl_col_buttons">
+                        <a class="button icons16 icoEdit" href="javascript: loadContent('mail/spamfilter_policy_edit.php?id={tmpl_var name='id'}');"><span>{tmpl_var name='edit_txt'}</span></a>
+                        <a class="button icons16 icoDelete" href="javascript: del_record('mail/spamfilter_policy_del.php?id={tmpl_var name='id'}&phpsessid={tmpl_var name='phpsessid'}','{tmpl_var name='delete_confirmation'}');"><span>{tmpl_var name='delete_txt'}</span></a>
+                    </td>
+                </tr>
+            </tmpl_loop>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td class="tbl_footer tbl_paging" colspan="6"><tmpl_var name="paging"></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div><!-- end: modulecontent -->
+</div><!-- end: modulebody -->

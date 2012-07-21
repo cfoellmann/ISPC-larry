@@ -1,0 +1,24 @@
+<!-- begin: toolbar -->
+<div id="moduletoolbar">
+    <div class="toolbar" id="optiontoolbar">
+        &nbsp;
+    </div>
+</div>
+<!-- end: toolbar -->
+
+<!-- begin: modulebody -->
+<div id="module-title"><h1><tmpl_var name="list_head_txt"></h1></div>
+<div class="module-box boxlistcontent" id="modulecontainer">
+    <div id="module-desc"><tmpl_var name="list_desc_txt"></div>
+
+    <!-- begin: modulecontent -->
+    <div class="panel panel_sys_state">
+        <div class="ctrlHolder">
+            <label for="refreshinterval"><tmpl_var name="monTransRefreshsq">{tmpl_var name='monitor_settings_refreshsq_txt'}</label>
+            <select name="refreshinterval" id="refreshinterval" class="selectInput withicons" onChange="loadContentRefresh('monitor/show_sys_state.php?state={tmpl_var name="state_type"}')">
+                    {tmpl_var name='refresh'}
+            </select>
+        </div>
+        <tmpl_var name="state_data">
+    </div><!-- end: modulecontent -->
+</div><!-- end: modulebody -->

@@ -1,0 +1,16 @@
+@charset "utf-8";
+/*
+    File: print.css
+    Script: ISPC-larry
+    Script URI: https://github.com/foe-services/ispc-larry
+    Author: Foe Services
+    Author URI: http://www.foe-services.de/
+    License: https://github.com/foe-services/ispc-larry/LICENSE
+*/
+
+/*TODO Print stylesheet*/
+
+aside,
+ul.feed {
+    display: none;
+}

@@ -1,0 +1,59 @@
+<!-- begin: toolbar -->
+<div id="moduletoolbar">
+    <a class="button edit" onClick="loadContent('client/reseller_edit.php');" href="#" title="{tmpl_var name="add_new_record_txt"}">{tmpl_var name="add_new_record_txt"}</a>
+</div>
+<!-- end: toolbar -->
+
+<!-- begin: modulebody -->
+<div id="module-title"><h1><tmpl_var name="list_head_txt"></h1></div>
+<div class="module-box boxlistcontent" id="modulecontainer">
+    <div id="module-desc"><tmpl_var name="list_desc_txt"></div>
+    
+    <!-- begin: modulecontent -->
+    <div class="panel panel_list_clients">
+        <table class="list">
+            <thead>
+                <tr class="caption">
+                    <th class="tbl_col_client_pid" scope="col"><tmpl_var name="client_id_txt"></th>
+                    <th class="tbl_col_company_name" scope="col"><tmpl_var name="company_name_txt"></th>
+                    <th class="tbl_col_contact_name" scope="col"><tmpl_var name="contact_name_txt"></th>
+                    <th class="tbl_col_city" scope="col"><tmpl_var name="city_txt"></th>
+                    <th class="tbl_col_country" scope="col"><tmpl_var name="country_txt"></th>
+                    <th class="tbl_col_limit" scope="col"><a class="button icons16 icoLimit" href="#"><span>Limit</span></a>{tmpl_var name='search_limit'}</th>
+                </tr>
+                <tr class="filter">
+                    <td class="tbl_col_client_pid"><input type="text" name="search_client_id" value="{tmpl_var name='search_client_id'}" /></td>
+                    <td class="tbl_col_company_name"><input type="text" name="search_company_name" value="{tmpl_var name='search_company_name'}" /></td>
+                    <td class="tbl_col_contact_name"><input type="text" name="search_contact_name" value="{tmpl_var name='search_contact_name'}" /></td>
+                    <td class="tbl_col_city"><input type="text" name="search_city" value="{tmpl_var name='search_city'}" /></td>
+                    <td class="tbl_col_country"><input type="text" name="search_country" value="{tmpl_var name='search_country'}" /></td>
+                    <td class="tbl_col_buttons">
+                        <button type="button" class="button icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="submitForm('pageForm','client/reseller_list.php');"><span>{tmpl_var name="filter_txt"}</span></button>
+                        <button type="button" class="button icons16 icoFilterReset" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="#"><span>{tmpl_var name="filter_txt"}</span></button>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+            <tmpl_loop name="records">
+                <tr class="tbl_row_<tmpl_if name='__EVEN__'}even<tmpl_else>uneven</tmpl_if>">
+                    <td class="tbl_col_client_pid">{tmpl_var name="client_id"}</td>
+                    <td class="tbl_col_company_name"><a href="#" onClick="loadContent('client/reseller_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="company_name"}</a></td>
+                    <td class="tbl_col_contact_name"><a href="#" onClick="loadContent('client/reseller_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="contact_name"}</a></td>
+                    <td class="tbl_col_city">{tmpl_var name="city"}</td>
+                    <td class="tbl_col_country"><div class="country-{tmpl_var name="country"}"><span>{tmpl_var name="country"}</span></div></td>
+                    <td class="tbl_col_buttons">
+                        <a class="button icons16 icoEdit" href="javascript: loadContent('client/reseller_edit.php?id={tmpl_var name='id'}');"><span>{tmpl_var name='edit_txt'}</span></a>
+                        <a class="button icons16 icoLoginAs" href="javascript: loadContent('admin/login_as.php?cid={tmpl_var name='id'}');"><span>{tmpl_var name='login_as_txt'}</span></a>
+                        <a class="button icons16 icoDelete" href="javascript: del_record('client/reseller_del.php?id={tmpl_var name='id'}&phpsessid={tmpl_var name='phpsessid'}','{tmpl_var name='delete_confirmation'}');"><span>{tmpl_var name='delete_txt'}</span></a>
+                    </td>
+                </tr>
+            </tmpl_loop>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td class="tbl_footer tbl_paging" colspan="6"><tmpl_var name="paging"></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div><!-- end: modulecontent -->
+</div><!-- end: modulebody -->

@@ -1,0 +1,125 @@
+<!-- begin: toolbar -->
+<div id="moduletoolbar">
+    <a class="button cancel" onClick="loadContent('tools/index.php');" href="#" title="{tmpl_var name='btn_cancel_txt'}">{tmpl_var name='btn_cancel_txt'}</a>
+</div>
+<!-- end: toolbar -->
+
+<!-- begin: modulebody -->
+<div id="module-title"><h1><tmpl_var name="head_txt"></h1></div>
+<div class="module-box boxlistcontent" id="modulecontainer">
+    <!-- tabs -->
+    <div id="tabs">
+        <ul class="tabsbar">
+            <tmpl_loop name="formTab">
+                <tmpl_if name="active">
+                    <li class="active"><a href="javascript:changeTab('<tmpl_var name='name'>','<tmpl_var name='app_module'>/<tmpl_var name='form_action'>')"><tmpl_var name='title'></a></li>
+                    <tmpl_else>
+                        <li><a href="javascript:changeTab('<tmpl_var name='name'>','<tmpl_var name='app_module'>/<tmpl_var name='form_action'>')"><tmpl_var name='title'></a></li>
+                </tmpl_if>
+            </tmpl_loop>
+        </ul>
+    </div>
+    
+    <!-- desc -->
+    <div id="module-desc"><tmpl_var name="page_desc_txt"></div>
+    
+    <!-- messages/erros -->  
+    <tmpl_if name="msg">
+        <div id="OKMsg"><p><tmpl_var name="msg"></p></div>
+    </tmpl_if>
+    <tmpl_if name="error">
+        <div id="errorMsg"><h3>ERROR</h3><ol><tmpl_var name="error"></ol></div>
+    </tmpl_if>
+        
+    <!-- begin: modulecontent -->
+    <div class="panel panel_language_import">
+        <div class="subsectiontoggle"><span class="showing"></span>Circle Settings<em class="showing"></em></div>
+        <div class="subsection">
+            <div class="ctrlHolder">
+                <p class="label">Remote API URL</p>
+                <div class="multiField">
+                    <input id="remote_server" type="text" value="{tmpl_var name='remote_server'}" name="remote_server" /> (e.g. https://www.example.com:8080/remote/ )
+                </div>
+            </div>
+            <div class="ctrlHolder">
+                <p class="label">Remote User</p>
+                <div class="multiField">
+                    <input id="remote_user" type="text" value="{tmpl_var name='remote_user'}" name="remote_user" />
+                </div>
+            </div>
+            <div class="ctrlHolder">
+                <p class="label">Remote password</p>
+                <div class="multiField">
+                    <input id="remote_password" type="text" value="{tmpl_var name='remote_password'}" name="remote_password" />
+                </div>
+            </div>
+        </div>     
+        <tmpl_if name="connected">
+            <div class="subsectiontoggle"><span class="showing"></span>Circle Settings<em class="showing"></em></div>
+            <div class="subsection">
+                <div class="ctrlHolder">
+                    <label for="mail_domain">{tmpl_var name='mail_domain_txt'}</label>
+                    <select name="mail_domain" id="mail_domain" class="selectInput">
+                        {tmpl_var name='mail_domain'}
+                    </select>
+                </div>
+                <div class="ctrlHolder">
+                    <label for="client_group_id">{tmpl_var name='client_group_id_txt'}</label>
+                    <select name="client_group_id" id="client_group_id" class="selectInput">
+                        {tmpl_var name='client_group_id'}
+                    </select>
+                </div>
+                <div class="ctrlHolder">
+                    <p class="label">{tmpl_var name="import_mailbox_txt"}</p>
+                    <div class="multiField">
+                        <input id="import_mailbox" type="checkbox" value="1" name="import_mailbox" checked="checked" />
+                    </div>
+                </div>
+                <div class="ctrlHolder">
+                    <p class="label">{tmpl_var name="import_user_filter_txt"}</p>
+                    <div class="multiField">
+                        <input id="import_user_filter" type="checkbox" value="1" name="import_user_filter" checked="checked" />
+                    </div>
+                </div>
+                <div class="ctrlHolder">
+                    <p class="label">{tmpl_var name="import_spamfilter_txt"}</p>
+                    <div class="multiField">
+                        <input id="import_spamfilter" type="checkbox" value="1" name="import_spamfilter" checked="checked" />
+                    </div>
+                </div>
+                <div class="ctrlHolder">
+                    <p class="label">{tmpl_var name="import_alias_txt"}</p>
+                    <div class="multiField">
+                        <input id="import_alias" type="checkbox" value="1" name="import_alias" checked="checked" />
+                    </div>
+                </div>
+                <div class="ctrlHolder">
+                    <p class="label">{tmpl_var name="import_forward_txt"}</p>
+                    <div class="multiField">
+                        <input id="import_forward" type="checkbox" value="1" name="import_forward" checked="checked" />
+                    </div>
+                </div>
+                <div class="ctrlHolder">
+                    <p class="label">{tmpl_var name="import_aliasdomain_txt"}</p>
+                    <div class="multiField">
+                        <input id="import_aliasdomain" type="checkbox" value="1" name="import_aliasdomain" checked="checked" />
+                    </div>
+                </div>
+            </div>
+        </tmpl_if>
+              
+        <input type="hidden" name="remote_session_id" value="{tmpl_var name='remote_session_id'}">
+        <input type="hidden" name="connected" value="{tmpl_var name='connected'}">
+        <tmpl_if name="connected">
+            <div class="buttonHolder buttons">
+                <button class="positive iconstxt icoPositive" type="button" value="Import" onClick="submitForm('pageForm','tools/import_ispconfig.php');"><span>{tmpl_var name="btn_start_txt"}</span></button>
+                <button class="negative iconstxt icoNegative" type="button" value="Cancel" onClick="loadContent('tools/index.php');"><span>{tmpl_var name="btn_cancel_txt"}</span></button>
+            </div>
+        <tmpl_else>
+            <div class="buttonHolder buttons">
+                <button class="positive iconstxt icoPositive" type="button" value="Import" onClick="submitForm('pageForm','tools/import_ispconfig.php');"><span>{tmpl_var name="btn_connect_txt"}</span></button>
+                <button class="negative iconstxt icoNegative" type="button" value="Cancel" onClick="loadContent('tools/index.php');"><span>{tmpl_var name="btn_cancel_txt"}</span></button>
+            </div>
+        </tmpl_if>
+    </div><!-- end: modulecontent -->
+</div><!-- end: modulebody -->

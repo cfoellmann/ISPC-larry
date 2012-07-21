@@ -1,0 +1,58 @@
+<!-- begin: toolbar -->
+<div id="moduletoolbar">
+    &nbsp;
+</div>
+<!-- end: toolbar -->
+
+<!-- begin: modulebody -->
+<div id="module-title"><h1><tmpl_var name="list_head_txt"> (<tmpl_var name='package_count'>)</h1></div> 
+<div class="module-box boxlistcontent" id="modulecontainer">
+    <div id="module-desc"><tmpl_var name="list_desc_txt"></div>
+    
+    <!-- begin: modulecontent -->
+    <div class="panel panel_list_packages">
+        <table class="list">
+            <thead>
+                <tr class="caption">
+                    <th class="tbl_col_name" scope="col">{tmpl_var name='name_txt'}</th>
+                    <th class="tbl_col_version" scope="col">{tmpl_var name='version_txt'}</th>
+                    <th class="tbl_col_category" scope="col">{tmpl_var name='category_txt'}</th>
+                    <tmpl_if name='is_admin'>
+                    <th class="tbl_col_status" scope="col">{tmpl_var name='status_txt'}</th>
+                    </tmpl_if>
+                    <th class="tbl_col_limit" scope="col"><a class="button icons16 icoLimit" href="#"><span>Limit</span></a>{tmpl_var name='search_limit'}</th>
+                </tr>
+                <tr class="filter">
+                    <td class="tbl_col_name"><input type="text" name="search_name" value="{tmpl_var name='search_name'}" /></td>
+                    <td class="tbl_col_version"><input type="text" name="search_version" value="{tmpl_var name='search_version'}" /></td>
+                    <td class="tbl_col_customerid"><select name="search_category" onChange="submitForm('pageForm','sites/aps_availablepackages_list.php');">{tmpl_var name='search_category'}</select></td>
+                    <tmpl_if name='is_admin'>
+                    <td class="tbl_col_status"><select name="search_package_status" onChange="submitForm('pageForm','sites/aps_availablepackages_list.php');">{tmpl_var name='search_package_status'}</select></td>
+                    </tmpl_if>
+                    <td class="tbl_col_buttons">
+                        <button type="button" class="button icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name='filter_txt'}" onClick="submitForm('pageForm','sites/aps_availablepackages_list.php');"><span>{tmpl_var name='filter_txt'}</span></button>
+                        <button type="button" class="button icons16 icoFilterReset" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="#"><span>{tmpl_var name="filter_txt"}</span></button>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tmpl_loop name='records'>
+                <tr class="tbl_row_<tmpl_if name='__EVEN__'}even<tmpl_else>uneven</tmpl_if>">
+                    <td class="tbl_col_name"><a href="#" onClick="loadContent('sites/aps_packagedetails_show.php?id={tmpl_var name='id'}');">{tmpl_var name='name'}</a></td>
+                    <td class="tbl_col_version">{tmpl_var name='version'}-{tmpl_var name='release'}</td>
+                    <td class="tbl_col_category">{tmpl_var name='category'}</td>
+                    <tmpl_if name='is_admin'>
+                    <td class="tbl_col_status"><a href="javascript:loadContentInto('status_content{tmpl_var name='__ROWNUM__'}', 'sites/aps_do_operation.php?action=change_status&id={tmpl_var name='id'}&phpsessid={tmpl_var name='phpsessid'}');"><span id="status_content{tmpl_var name='__ROWNUM__'}">{tmpl_var name='package_status'}</span></a></td>
+                    </tmpl_if>
+                    <td class="tbl_col_buttons">&nbsp;</td>
+                </tr>
+                </tmpl_loop>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td class="tbl_footer tbl_paging" colspan="5">{tmpl_var name='paging'}</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div><!-- end: modulecontent -->
+</div><!-- end: modulebody -->

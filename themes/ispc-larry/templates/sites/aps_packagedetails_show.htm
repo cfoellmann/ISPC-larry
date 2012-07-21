@@ -1,0 +1,120 @@
+<h2>
+    <tmpl_if name='pkg_icon' op='!=' value=''>
+        <img src="{tmpl_var name='pkg_icon'}" height="32" width="32" alt="{tmpl_var name='pkg_name'}" style="vertical-align:text-bottom;" /> 
+    </tmpl_if>
+    {tmpl_var name='pkg_name'}
+</h2>
+<b>{tmpl_var name='pkg_summary'}</b>
+<p>&nbsp;</p>
+
+<div class="pnl_toolsarea">
+    <button class="button iconstxt icoAdd" type="button" onClick="loadContent('sites/aps_install_package.php?id={tmpl_var name='pkg_id'}');">
+      <span>{tmpl_var name='install_package_txt'}</span>
+    </button>
+  <p>&nbsp;</p><p>&nbsp;</p>
+</div>
+
+
+<div class="tabbox_tabs">
+    <input type="hidden" name="next_tab" value="" />
+    <ul>
+        <li<tmpl_if name='next_tab' op='==' value='details'> class="active"</tmpl_if>>
+            <a href="javascript:changeTab('details', 'sites/aps_packagedetails_show.php?id={tmpl_var name='pkg_id'}');">{tmpl_var name='details_txt'}</a>
+        </li>
+        <tmpl_if name='pkg_screenshots'>
+        <li<tmpl_if name='next_tab' op='==' value='screenshots'> class="active"</tmpl_if>>
+            <a href="javascript:changeTab('screenshots', 'sites/aps_packagedetails_show.php?id={tmpl_var name='pkg_id'}');">{tmpl_var name='screenshots_txt'}</a>
+        </li></tmpl_if>
+        <tmpl_if name='pkg_changelog'>
+        <li<tmpl_if name='next_tab' op='==' value='changelog'> class="active"</tmpl_if>>
+            <a href="javascript:changeTab('changelog', 'sites/aps_packagedetails_show.php?id={tmpl_var name='pkg_id'}');">{tmpl_var name='changelog_txt'}</a>
+        </li></tmpl_if>
+        <li<tmpl_if name='next_tab' op='==' value='settings'> class="active"</tmpl_if>>
+            <a href="javascript:changeTab('settings', 'sites/aps_packagedetails_show.php?id={tmpl_var name='pkg_id'}');">{tmpl_var name='settings_txt'}</a>
+        </li>
+    </ul>
+</div>
+<p>&nbsp;</p>
+
+<div class="panel panel_list_packages">
+  <div class="pnl_listarea">
+    <table class="list">
+      <tbody>
+      <tmpl_if name='next_tab' op='==' value='details'>
+        <tr class="tbl_row_uneven">
+          <td width="25%">{tmpl_var name='version_txt'}</td>
+          <td>{tmpl_var name='pkg_version'} (Release {tmpl_var name='pkg_release'})</td>
+        </tr>
+        <tr class="tbl_row_even">
+          <td>{tmpl_var name='category_txt'}</td>
+          <td>{tmpl_var name='pkg_category'}</td>
+        </tr>
+        <tr class="tbl_row_uneven">
+          <td>{tmpl_var name='description_txt'}</td>
+          <td>{tmpl_var name='pkg_description'}</td>
+        </tr>
+        <tr class="tbl_row_even">
+          <td>{tmpl_var name='homepage_txt'}</td>
+          <td><a href="{tmpl_var name='pkg_homepage'}" target="_blank">{tmpl_var name='pkg_homepage'}</a></td>
+        </tr>
+        <tr class="tbl_row_uneven">
+          <td>{tmpl_var name='installed_size_txt'}</td>
+          <td>{tmpl_var name='pkg_installed_size'}</td>
+        </tr>
+        <tr class="tbl_row_even">
+            <td>{tmpl_var name='supported_languages_txt'}</td>
+            <td>{tmpl_var name='pkg_languages'}</td>
+          </tr>
+        <tr class="tbl_row_uneven">
+          <td>{tmpl_var name='config_script_txt'}</td>
+          <td>{tmpl_var name='pkg_config_script'}</td>
+        </tr>
+        <tr class="tbl_row_even">
+          <td>{tmpl_var name='license_txt'}</td>
+          <td>
+              <tmpl_if name='pkg_license_name'>{tmpl_var name='pkg_license_name'}<br /></tmpl_if>
+              <tmpl_if name='pkg_license_type' op='==' value='url'>
+                  <a href="{tmpl_var name='pkg_license_content'}" target="_blank">{tmpl_var name='pkg_license_content'}</a>
+              <tmpl_elseif name='pkg_license_content'>
+                  <textarea rows="10" cols="80">{tmpl_var name='pkg_license_content'}</textarea>
+              </tmpl_if>
+          </td>
+        </tr>
+      <tmpl_elseif name='next_tab' op='==' value='screenshots'>
+        <tmpl_if name='pkg_screenshots'><tr class="tbl_row_even">
+          <td style="text-align:center;"><tmpl_loop name='pkg_screenshots'>
+              <img src="{tmpl_var name='ScreenPath'}" alt="{tmpl_var name='ScreenDescription'}" /><br />
+              <em>{tmpl_var name='ScreenDescription'}</em><br /><br />
+          </tmpl_loop></td>
+        </tr></tmpl_if>
+      <tmpl_elseif name='next_tab' op='==' value='changelog'>
+        <tmpl_if name='pkg_changelog'><tr class="tbl_row_even">
+          <td><ul><tmpl_loop name='pkg_changelog'>
+                <li>{tmpl_var name='ChangelogVersion'}</li>
+              <ul><tmpl_if name='ChangelogDescription'><li>{tmpl_var name='ChangelogDescription'}</li></tmpl_if></ul>
+          </tmpl_loop></ul></td>
+        </tr></tmpl_if>
+      <tmpl_elseif name='next_tab' op='==' value='settings'>
+        <tr class="tbl_row_uneven">
+          <td width="25%">{tmpl_var name='php_extensions_txt'}</td>
+          <td>{tmpl_var name='pkg_requirements_php_extensions'}</td>
+        </tr>
+        <tr class="tbl_row_even">
+          <td>{tmpl_var name='php_settings_txt'}</td>
+          <td><tmpl_loop name='pkg_requirements_php_settings'>
+                {tmpl_var name='PHPSettingName'} = {tmpl_var name='PHPSettingValue'}<br />
+              </tmpl_loop></td>
+        </tr>
+        <tr class="tbl_row_uneven">
+          <td>{tmpl_var name='supported_php_versions_txt'}</td>
+          <td>{tmpl_var name='pkg_requirements_supported_php_versions'}</td>
+        </tr>
+        <tr class="tbl_row_even">
+          <td>{tmpl_var name='database_txt'}</td>
+          <td>{tmpl_var name='pkg_requirements_database'}</a></td>
+        </tr>
+      </tmpl_if>
+      </tbody>
+    </table>
+  </div>
+</div>

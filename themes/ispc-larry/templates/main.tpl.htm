@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="de-DE">
+    <head>
+        <meta charset="<tmpl_var name="html_content_encoding">" />
+        <title><tmpl_var name="app_title"></title>
+        <link rel="shortcut icon" href="/themes/ispc-larry/images/favicon.ico" type="image/x-icon" />
+        <link href="themes/ispc-larry/styles.css" rel="stylesheet" media="screen" type="text/css" />
+        <link href="themes/ispc-larry/print.css" rel="stylesheet" media="print" type="text/css" />
+        <!--[if IE 9]><link href="themes/ispc-larry/svggradients.css" rel="stylesheet" type="text/css" /><![endif]-->
+        <!--[if lte IE 8]><link href="themes/ispc-larry/iehacks.css" rel="stylesheet" type="text/css" /><![endif]-->
+        <!--[if lte IE 7]><link href="themes/ispc-larry/ie7hacks.css" rel="stylesheet" type="text/css" /><![endif]-->
+        <script type="text/javascript" src="js/jquery-1.6.3.min.js"></script>
+        <script type="text/javascript" src="js/jquery-ui-1.8.16.custom.min.js"></script>
+        <script type="text/javascript" src="js/scrigo.js.php"></script>
+        <script type="text/javascript" src="js/uni-form/uni-form.jquery.js"></script>
+        <script type="text/javascript" src="js/jquery.ispconfigsearch.js"></script>
+        <script type="text/javascript" src="js/jquery.tipsy.js"></script>
+        <script type="text/javascript" src="themes/ispc-larry/html5shiv.js"></script>
+        <script type="text/javascript" src="themes/ispc-larry/jquery.tablesorter.js"></script>
+        <script language="JavaScript" type="text/javascript">
+            jQuery(document).ready(function() {
+                loadInitContent();
+                
+                $("#pageForm").submit(function(e){
+                    //Prevent form submit: e.preventDefault() in lists
+                    if ($(".panel #Filter").length > 0) {
+                        e.preventDefault();
+                    }
+                });
+                
+                jQuery('.subsectiontoggle').live("click", function(){
+                    jQuery(this).children().toggleClass('showing').end().next().slideToggle();
+                });
+                
+                jQuery('#globalsearch').ispconfigSearch({
+                    dataSrc: '/dashboard/ajax_get_json.php?type=globalsearch',
+                    resultsLimit: '$ <tmpl_var name="globalsearch_resultslimit_of_txt"> % <tmpl_var name="globalsearch_resultslimit_results_txt">',
+                    noResultsText: '<tmpl_var name="globalsearch_noresults_text_txt">',
+                    noResultsLimit: '<tmpl_var name="globalsearch_noresults_limit_txt">',
+                    searchFieldWatermark: '<tmpl_var name="globalsearch_searchfield_watermark_txt">'
+                });
+                
+                jQuery('.ttip').tipsy({live: true, gravity: 'ne', html: true});
+            });
+            
+            
+            jQuery(document).bind("change", function(event) {
+                if (jQuery(".panel #Filter").length > 0 && event.target.localName == 'select') {
+                    jQuery(".panel #Filter").trigger('click');
+                }
+            });
+            
+            jQuery(document).bind("keypress", function(event) {
+                //Use jQuery submit with keypress Enter in panel filterbar
+                if (event.which == '13' && jQuery(".panel #Filter").length > 0) {
+                    jQuery(".panel #Filter").trigger('click');
+                }
+                //Use jQuery submit with keypress Enter in forms
+                if (event.which == '13' && jQuery(".pnl_formsarea button.positive").length > 0 && event.target.localName != 'textarea') {
+                    jQuery(".pnl_formsarea button.positive:first").trigger('click');
+                }
+            });
+            $(function() {
+
+                $("table").delegate('td','mouseover mouseleave', function(e) {
+                    if (e.type == 'mouseover') {
+                        $(this).parent().addClass("hover");
+                        $("colgroup").eq($(this).index()).addClass("hover");
+                    } else {
+                        $(this).parent().removeClass("hover");
+                        $("colgroup").eq($(this).index()).removeClass("hover");
+                    }
+                });
+
+            });
+            jQuery(function() {		
+		$("#tablesorter").tablesorter({sortList:[[0,0],[2,1]], widgets: ['zebra']});
+		$("#options").tablesorter({sortList: [[0,0]], headers: { 3:{sorter: false}, 4:{sorter: false}}});
+            });
+        </script>
+    </head>
+    <body>                  
+        <!-- begin: header -->
+        <header class="unselectable" unselectable="on">
+            <div id="top-line">
+                <div class="topleft">
+                    <!-- TODO: Add functionality for links to customer OR user support and more-->
+                    <a href="http://www.ispconfig.org/ispconfig-3/support/" target="_blank" title="ISPConfig Support">Support</a>
+                </div>
+                <div class="topright">
+                    <tmpl_if name="cpuser">
+                        <a href="#" onclick="capp('tools')" class="button-settings" title="<tmpl_var name="toolsarea_head_txt">">Settings <tmpl_var name="toolsarea_head_txt"></a>
+                        <a href="#logout" onclick="loadContent('login/logout.php');" class="button-logout" title="Logout"><tmpl_var name="logout_txt"> <tmpl_var name="cpuser"></a>
+                    </tmpl_if>
+                </div>
+            </div>
+            <div id="middle-line">
+                <!-- begin: main navigation -->
+                <nav id="topNav"></nav>
+                <!-- end: main navigation -->
+                <hgroup>
+                    <h1><a href="#" onclick="capp('dashboard')" title="Dashboard"><img width="152" height="46" title="<tmpl_var name="app_title">" alt="<tmpl_var name="app_title">" src="<tmpl_var name='app_logo'>"></a></h1>
+                    <h2>hosting control panel</h2>
+                </hgroup>
+            </div>
+        </header>
+        <!-- end: header -->
+        <!-- begin: sidebar -->
+        <aside id="sidebar" class="unselectable" unselectable="on">
+            <div class="sidebar-container">
+                <ul>
+                    <!-- begin: sidebar/text-content (hardcoded) -->
+                    <li class="sidetitle">
+                        <span class="name">
+                            <span class="name-inner">Applications</span>
+                        </span>
+                    </li>
+                    <li class="sideitem">
+                        <a href="https://mysql.foe-services.de/phpmyadmin/" target="_blank">
+                            <span class="image">
+                                <img src="https://d1mpyuettu12if.cloudfront.net/dev/phpmyadmin.png">
+                            </span>
+                            <span class="name">
+                                <span class="name-inner">phpMyAdmin</span>
+                            </span>
+                            <span class="description">MySQL-Administration</span>
+                        </a>
+                    </li>
+                    <li class="sideitem">
+                        <a href="https://mysql.foe-services.de/phpmybackup/" target="_blank">
+                            <span class="image">
+                                <img src="#">
+                            </span>
+                            <span class="name">
+                                <span class="name-inner">phpMyBackup</span>
+                            </span>
+                            <span class="description">MySQL-Backup</span>
+                        </a>
+                    </li>
+                    <li class="sideitem">
+                        <a href="https://ftp.foe-services.de/" target="_blank">
+                            <span class="image">
+                                <img src="https://d1mpyuettu12if.cloudfront.net/dev/ajaxplorer.png">
+                            </span>
+                            <span class="name">
+                                <span class="name-inner">AjaXplorer</span>
+                            </span>
+                            <span class="description">WebFTP-Client</span>
+                        </a>
+                    </li>
+                    <li class="sideitem">
+                        <a href="https://webmail.foe-mail.de" target="_blank">
+                            <span class="image">
+                                <img src="https://d1mpyuettu12if.cloudfront.net/dev/fmail.png">
+                            </span>
+                            <span class="name">
+                                <span class="name-inner">Webmail</span>
+                            </span>
+                            <span class="description">Roundcube</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="sidetitle">
+                        <span class="name">
+                            <span class="name-inner">Foe Services</span>
+                        </span>
+                    </li>
+                    <li class="sideitem">
+                        <a href="http://www.foe-mail.de" target="_blank">
+                            <span class="image">
+                                <img src="https://d1mpyuettu12if.cloudfront.net/dev/fmail.png">
+                            </span>
+                            <span class="name">
+                                <span class="name-inner">Foe Mail</span>
+                            </span>
+                            <span class="description">Mailing</span>
+                        </a>
+                    </li>
+                    <li class="sideitem">
+                        <a href="http://www.foe-services.de" target="_blank">
+                            <span class="image">
+                                <img src="#">
+                            </span>
+                            <span class="name">
+                                <span class="name-inner">Foe Services</span>
+                            </span>
+                            <span class="description">Web- & IT-Services</span>
+                        </a>
+                    </li>
+                    <li class="sideitem">
+                        <a href="http://www.foe-domains.de" target="_blank">
+                            <span class="image">
+                                <img src="">
+                            </span>
+                            <span class="name">
+                                <span class="name-inner">Foe Domains</span>
+                            </span>
+                            <span class="description">Premium Domain-Service</span>
+                        </a>
+                    </li>
+                    <!-- end: sidebar/text-content (hardcoded) -->
+                </ul>
+            </div>
+        </aside>
+        <!-- end: sidebar -->
+        <!-- begin: #mainscreen -->
+        <section id="mainscreen">
+            <div id="mainscreen-left">
+                <div id="sideNav-container" class="unselectable">
+                    <div id="sideNav" class="scroller">&nbsp;</div>
+                </div>
+            </div>
+            <div id="mainscreen-splitterv" class="splitter splitter-v"></div>
+            <div id="mainscreen-right">
+                <tmpl_if name='usertype' op='==' value='normaluser'><input type="text" id="globalsearch" size="25" value="" /></tmpl_if>
+                <!-- skiplink anchor: Content -->
+                <form method="post" action="" id="pageForm" name="pageForm" enctype="multipart/form-data" class="uniForm">
+                    <div id="pageContent"><!-- AJAX CONTENT --></div>
+                </form>
+                <!-- begin:footer -->
+                <footer>
+                    <div class="statusbar" id="message">
+                        <!-- TODO: CSS make div height flexible for help text display + #pageContent must be pressed upward by footer/div -->
+                        <p>Powered by <a href="<tmpl_var name="app_link">" target="_blank"><tmpl_var name="app_title"></a></p>
+                        <div class="loading" style="display: none;">Lädt…</div>
+                    </div>
+                </footer><!-- end: footer -->
+            </div>
+        </section><!-- end: #mainscreen -->
+    </body>
+</html>

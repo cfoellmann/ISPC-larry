@@ -1,0 +1,40 @@
+<!-- begin: toolbar -->
+<div id="moduletoolbar">
+    <a class="button edit" onClick="loadContent('admin/software_package_list.php?action=repoupdate');" href="#" title="{tmpl_var name="repoupdate_txt"}">{tmpl_var name="repoupdate_txt"}</a>
+</div>
+<!-- end: toolbar -->
+
+<!-- begin: modulebody -->
+<div id="module-title"><h1><tmpl_var name="list_head_txt"></h1></div>
+<div class="module-box boxlistcontent" id="modulecontainer">
+    <div id="module-desc"><tmpl_var name="list_desc_txt"></div>
+    
+    <!-- begin: modulecontent -->
+    <div class="panel panel_list_package">
+        <table class="list">
+            <thead>
+                <tr class="caption">
+                    <th class="tbl_col_installed" scope="col"><tmpl_var name="installed_txt"></th>
+                    <th class="tbl_col_package_title" scope="col"><tmpl_var name="package_title_txt"></th>
+                    <th class="tbl_col_package_description" scope="col"><tmpl_var name="package_description_txt"></th>
+                    <th class="tbl_col_package_description" scope="col"><tmpl_var name="package_id_txt"></th>
+                </tr>
+            </thead>
+            <tbody>
+            <tmpl_loop name="records">
+                <tr class="tbl_row_<tmpl_if name='__EVEN__'}even<tmpl_else>uneven</tmpl_if>">
+                    <td class="tbl_col_installed">{tmpl_var name="installed"}</td>
+                    <td class="tbl_col_package_title">{tmpl_var name="package_title"}</td>
+                    <td class="tbl_col_package_description">{tmpl_var name="package_description"}</td>
+                    <td class="tbl_col_package_description">ispapp{tmpl_var name="package_id"}</td>
+                </tr>
+            </tmpl_loop>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td class="tbl_footer tbl_paging" colspan="4"></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div><!-- end: modulecontent -->
+</div><!-- end: modulebody -->

@@ -1,0 +1,29 @@
+<div class="dash-mods">
+	<h2>{tmpl_var name='invoices_txt'}</h2>
+	<table class="list">
+		<thead>
+		<tr class="caption">
+		  <td>{tmpl_var name='invoice_no_txt'}</td>
+		  <td>{tmpl_var name='date_txt'}</td>
+		  <td style="text-align:right;">{tmpl_var name='amount_txt'}</td>
+		  <td>{tmpl_var name='invoice_status_txt'}</td>
+		  <td>&nbsp;</td>
+		</tr>
+		</thead>
+	<tmpl_if name="has_invoices">
+	<tmpl_loop name='invoices'>
+		<tr class="tbl_row_<tmpl_if name='__EVEN__'}even<tmpl_else>uneven</tmpl_if>">
+		  <td>{tmpl_var name='invoice_number'}</td>
+		  <td>{tmpl_var name='invoice_date'}</td>
+		  <td style="text-align:right;">{tmpl_var name='invoice_amount'} {tmpl_var name='currency'}</td>
+		  <td>{tmpl_var name='invoice_status'}</td>
+		  <td style="text-align:right;"><a href="billing/invoice_get_pdf.php?id={tmpl_var name='invoice_id'}"><img src="billing/lib/icon/pdficon_small.gif"></a></td>
+		</tr>
+	</tmpl_loop>
+	<tmpl_else>
+	<tr>
+	  <td colspan="5" style="text-align:center;">{tmpl_var name='no_invoices_txt'}</td>
+	</tr>
+	</tmpl_if>
+	</table>
+</div>
