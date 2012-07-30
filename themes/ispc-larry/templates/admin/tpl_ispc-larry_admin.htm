@@ -1,5 +1,13 @@
-<h2><tmpl_var name="list_head_txt"></h2>
-<p><tmpl_var name="list_desc_txt"></p>
+<!-- begin: toolbar -->
+<div id="moduletoolbar">
+    <a class="button edit" onClick="loadContent('admin/system_config_edit.php');" href="#" title="{tmpl_var name="btn_cancel_txt"}">{tmpl_var name="btn_cancel_txt"}</a>
+</div>
+<!-- end: toolbar -->
+
+<!-- begin: modulebody -->
+<div id="module-title"><h1><tmpl_var name="list_head_txt"></h1></div>
+<div class="module-box boxlistcontent" id="modulecontainer">
+    <div id="module-desc"><tmpl_var name="list_desc_txt"></div>
 
 <div class="panel panel_tools_interface">
 

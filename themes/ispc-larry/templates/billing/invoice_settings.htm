@@ -33,34 +33,38 @@
         
     <!-- begin: modulecontent -->
     <div class="panel panel_invoice_settings">
-        <div class="ctrlHolder">
-            <label for="date_format">{tmpl_var name='date_format_txt'}</label>
-            <input name="date_format" id="date_format" value="{tmpl_var name='date_format'}" size="30" maxlength="255" type="text" class="textInput formLengthDate" />
-        </div>
-        <div class="ctrlHolder">
-            <label for="currency">{tmpl_var name='currency_txt'}</label>
-            <input name="currency" id="currency" value="{tmpl_var name='currency'}" size="30" maxlength="64" type="text" class="textInput formLengthDate" />
-        </div>
-        <div class="ctrlHolder">
-            <label for="invoice_dir">{tmpl_var name='invoice_dir_txt'}</label>
-            <input name="invoice_dir" id="invoice_dir" value="{tmpl_var name='invoice_dir'}" size="30" maxlength="255" type="text" class="textInput" />
-        </div>
-        <div class="ctrlHolder">
-            <p class="label">{tmpl_var name='invoice_item_list_with_vat_txt'}</p>
-            <div class="multiField">
-                {tmpl_var name='invoice_item_list_with_vat'}
+        <div class="subsectiontoggle"><span class="showing"></span>Remote User<em class="showing"></em></div>
+        <div class="subsection">
+            <div class="ctrlHolder">
+                <label for="date_format">{tmpl_var name='date_format_txt'}</label>
+                <input name="date_format" id="date_format" value="{tmpl_var name='date_format'}" size="30" maxlength="255" type="text" class="textInput formLengthDate" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="currency">{tmpl_var name='currency_txt'}</label>
+                <input name="currency" id="currency" value="{tmpl_var name='currency'}" size="30" maxlength="64" type="text" class="textInput formLengthDate" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="invoice_dir">{tmpl_var name='invoice_dir_txt'}</label>
+                <input name="invoice_dir" id="invoice_dir" value="{tmpl_var name='invoice_dir'}" size="30" maxlength="255" type="text" class="textInput" />
+            </div>
+            <div class="ctrlHolder">
+                <p class="label">{tmpl_var name='invoice_item_list_with_vat_txt'}</p>
+                <div class="multiField">
+                    {tmpl_var name='invoice_item_list_with_vat'}
+                </div>
+            </div>
+            <div class="ctrlHolder">
+                <label for="revnum">{tmpl_var name='revnum_txt'}</label>
+                <input name="revnum" id="revnum" value="{tmpl_var name='revnum'}" size="30" maxlength="64" type="hidden" class="textInput formLengthDate" />REV-{tmpl_var name='revnum'}
             </div>
         </div>
-        <div class="ctrlHolder">
-            <label for="revnum">{tmpl_var name='revnum_txt'}</label>
-            <input name="revnum" id="revnum" value="{tmpl_var name='revnum'}" size="30" maxlength="64" type="hidden" class="textInput formLengthDate" />REV-{tmpl_var name='revnum'}
-        </div>
-        
+            
         <input type="hidden" name="id" value="{tmpl_var name='id'}">
-        
+            
         <div class="buttonHolder buttons">
             <button class="positive iconstxt icoPositive" type="button" value="{tmpl_var name='btn_save_txt'}" onClick="submitForm('pageForm','billing/invoice_settings_edit.php');"><span>{tmpl_var name='btn_save_txt'}</span></button>
             <button class="negative iconstxt icoNegative" type="button" value="{tmpl_var name='btn_cancel_txt'}" onClick="loadContent('billing/invoice_list.php');"><span>{tmpl_var name='btn_cancel_txt'}</span></button>
         </div>
+        
     </div><!-- end: modulecontent -->
 </div><!-- end: modulebody -->

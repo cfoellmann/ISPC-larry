@@ -63,11 +63,11 @@ $form["title"] 		= "tpl_ispc-larry_admin_head_txt";
 $form["description"] 	= "tpl_ispc-larry_admin_desc_txt";
 $form["name"] 		= "tpl_ispc-larry_admin";
 $form["action"]		= "tpl_ispc-larry_admin.php";
-$form["db_table"]	= "server_php";
-$form["db_table_idx"]	= "server_php_id";
+$form["db_table"]	= "";
+$form["db_table_idx"]	= "";
 $form["db_history"]	= "yes";
-$form["tab_default"]	= "php_name";
-$form["list_default"]	= "server_php_list.php";
+$form["tab_default"]	= "basic";
+$form["list_default"]	= "system_config_edit.php";
 $form["auth"]		= 'yes';
 
 $form["auth_preset"]["userid"]  = 0; // 0 = id of the user, > 0 id must match with id of current user
@@ -76,10 +76,10 @@ $form["auth_preset"]["perm_user"] = 'riud'; //r = read, i = insert, u = update, 
 $form["auth_preset"]["perm_group"] = 'riud'; //r = read, i = insert, u = update, d = delete
 $form["auth_preset"]["perm_other"] = ''; //r = read, i = insert, u = update, d = delete
 
-$form["tabs"]['php_name'] = array (
-	'title' 	=> "Name",
+$form["tabs"]['basic'] = array (
+	'title' 	=> "Basic Settings",
 	'width' 	=> 80,
-	'template' 	=> "templates/server_php_name_edit.htm",
+	'template' 	=> "templates/tpl_ispc-larry_basic.htm",
 	'fields' 	=> array (
 	##################################
 	# Beginn Datenbankfelder
@@ -88,10 +88,10 @@ $form["tabs"]['php_name'] = array (
 			'datatype'	=> 'INTEGER',
 			'formtype'	=> 'SELECT',
 			'default'	=> '',
-			'datasource'	=> array ( 	'type'	=> 'SQL',
-										'querystring' => 'SELECT server_id,server_name FROM server WHERE {AUTHSQL} ORDER BY server_name',
-										'keyfield'=> 'server_id',
-										'valuefield'=> 'server_name'
+			'datasource'	=> array ( 	'type'          => 'SQL',
+                                                        'querystring'   => 'SELECT server_id,server_name FROM server WHERE {AUTHSQL} ORDER BY server_name',
+                                                        'keyfield'      => 'server_id',
+                                                        'valuefield'    => 'server_name'
 									 ),
 			'value'		=> ''
 		),
@@ -106,13 +106,11 @@ $form["tabs"]['php_name'] = array (
 									 ),
 			'value'		=> array(0 => ' ')
 		),
-		'name' => array (
+		'logo' => array (
 			'datatype'	=> 'VARCHAR',
 			'formtype'	=> 'TEXT',
-			'validators' => array(0 => array('type' => 'NOTEMPTY',
-											 'errmsg' => 'server_php_name_error_empty'),
-			),
-			'default'	=> '',
+			'validators'    => '',
+			'default'	=> 'themes/ispc-larry/images/header_logo.png',
 			'value'		=> '',
 			'separator'	=> '',
 			'width'		=> '40',
@@ -124,10 +122,10 @@ $form["tabs"]['php_name'] = array (
 	)
 );
 
-$form["tabs"]['php_fastcgi'] = array(
-	'title' => "FastCGI Settings",
+$form["tabs"]['sidebar'] = array(
+	'title' => "Sidebar",
 	'width' => 80,
-	'template' => "templates/server_php_fastcgi_edit.htm",
+	'template' => "templates/tpl_ispc-larry_sidebar.htm",
 	'fields' => array(
 		##################################
 		# Begin Datatable fields
@@ -154,10 +152,10 @@ $form["tabs"]['php_fastcgi'] = array(
 	)
 );
 
-$form["tabs"]['php_fpm'] = array(
-	'title' => "PHP-FPM Settings",
+$form["tabs"]['links'] = array(
+	'title' => "Links",
 	'width' => 80,
-	'template' => "templates/server_php_fpm_edit.htm",
+	'template' => "templates/tpl_ispc-larry_links.htm",
 	'fields' => array(
 		##################################
 		# Begin Datatable fields

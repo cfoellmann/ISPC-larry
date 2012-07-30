@@ -34,22 +34,26 @@
         
     <!-- begin: modulecontent -->
     <div class="panel panel_language_import">
-        <div class="ctrlHolder">
-            <label for="lng_select"><em>*</em> {tmpl_var name='language_import_txt'}</label>
-            <input name="file" id="file" size="30" type="file" class="fileUpload" />
-        </div>
-        <div class="ctrlHolder">
-            <p class="label">{tmpl_var name='overwrite_txt'}</p>
-            <div class="multiField">
-                <input id="overwrite" type="checkbox" value="1" name="overwrite"/>
+        <div class="subsectiontoggle"><span class="showing"></span>Import<em class="showing"></em></div>
+        <div class="subsection">
+            <div class="ctrlHolder">
+                <label for="lng_select"><em>*</em> {tmpl_var name='language_import_txt'}</label>
+                <input name="file" id="file" size="30" type="file" class="fileUpload" />
+            </div>
+            <div class="ctrlHolder">
+                <p class="label">{tmpl_var name='overwrite_txt'}</p>
+                <div class="multiField">
+                    <input id="overwrite" type="checkbox" value="1" name="overwrite"/>
+                </div>
             </div>
         </div>
-      
+            
         <input type="hidden" name="id" value="{tmpl_var name='id'}">
-        
+            
         <div class="buttonHolder buttons">
             <button class="positive iconstxt icoPositive" type="button" value="{tmpl_var name='btn_save_txt'}" onClick="submitUploadForm('pageForm','billing/invoice_recurring_item_import.php');"><span>{tmpl_var name='btn_save_txt'}</span></button>
             <button class="negative iconstxt icoNegative" type="button" value="{tmpl_var name='btn_cancel_txt'}" onClick="loadContent('billing/invoice_list.php');"><span>{tmpl_var name='btn_cancel_txt'}</span></button>
         </div>
+            
     </div><!-- end: modulecontent -->
 </div><!-- end: modulebody -->

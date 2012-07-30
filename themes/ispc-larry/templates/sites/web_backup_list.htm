@@ -1,3 +1,6 @@
+<div class="subsectiontoggle"><span class="showing"></span><tmpl_var name="list_head_txt"><em class="showing"></em></div>
+<div class="subsection">   
+    
     <!-- messages/erros --> 
     <tmpl_if name="msg">
         <div id="OKMsg"><p><tmpl_var name="msg"></p></div>
@@ -5,7 +8,7 @@
     <tmpl_if name="error">
         <div id="errorMsg"><h3>ERROR</h3><ol><tmpl_var name="error"></ol></div>
     </tmpl_if>
-    <h3><tmpl_var name="list_head_txt"></h3>
+    
     <!-- begin: modulecontent -->
     <div class="panel panel_list_backup">
         <table class="list">
@@ -36,3 +39,4 @@
             </tbody>
         </table>
     </div><!-- end: modulecontent -->
+</div>

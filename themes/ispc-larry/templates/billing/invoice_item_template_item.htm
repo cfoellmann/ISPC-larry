@@ -33,50 +33,54 @@
         
     <!-- begin: modulecontent -->
     <div class="panel panel_invoice_item_template">
-        <div class="ctrlHolder">
-            <label for="type">{tmpl_var name='type_txt'}</label>
-            <select name="type" id="type" class="selectInput formLengthLimit">
-                {tmpl_var name='type'}
-            </select>
+        <div class="subsectiontoggle"><span class="showing"></span>Remote User<em class="showing"></em></div>
+        <div class="subsection">
+            <div class="ctrlHolder">
+                <label for="type">{tmpl_var name='type_txt'}</label>
+                <select name="type" id="type" class="selectInput formLengthLimit">
+                    {tmpl_var name='type'}
+                </select>
+            </div>
+            <div class="ctrlHolder">
+                <label for="name">{tmpl_var name='name_txt'}</label>
+                <input name="name" id="name" value="{tmpl_var name='name'}" size="30" maxlength="255" type="text" class="textInput" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="description">{tmpl_var name='description_txt'}</label>
+                <textarea name="description" id="description" rows='10' cols='30'>{tmpl_var name='description'}</textarea> &nbsp; {tmpl_var name="description_variables_txt"}
+            </div>
+            <div class="ctrlHolder">
+                <label for="price">{tmpl_var name='price_txt'}</label>
+                <input name="price" id="price" value="{tmpl_var name='price'}" size="10" maxlength="255" type="text" class="textInput formLengthLimit" /> &nbsp; {tmpl_var name='currency_txt'}
+            </div>
+            <div class="ctrlHolder">
+                <label for="vat">{tmpl_var name='vat_txt'}</label>
+                <input name="vat" id="vat" value="{tmpl_var name='vat'}" size="5" maxlength="5" type="text" class="textInput formLengthLimit" /> &nbsp; %
+            </div>
+            <div class="ctrlHolder">
+                <label for="unit">{tmpl_var name='unit_txt'}</label>
+                <select name="unit" id="unit" class="selectInput formLengthLimit">
+                    {tmpl_var name='unit'}
+                </select>
+            </div>
+            <div class="ctrlHolder">
+                <label for="recur_months">{tmpl_var name='recur_months_txt'}</label>
+                <input name="recur_months" id="recur_months" value="{tmpl_var name='recur_months'}" size="3" maxlength="3" type="text" class="textInput formLengthLimit" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="client_template_id">{tmpl_var name='client_template_id_txt'}</label>
+                <select name="client_template_id" id="client_template_id" class="selectInput">
+                    {tmpl_var name='client_template_id'}
+                </select> &nbsp; {tmpl_var name='client_template_description_txt'}
+            </div>
         </div>
-        <div class="ctrlHolder">
-            <label for="name">{tmpl_var name='name_txt'}</label>
-            <input name="name" id="name" value="{tmpl_var name='name'}" size="30" maxlength="255" type="text" class="textInput" />
-        </div>
-        <div class="ctrlHolder">
-            <label for="description">{tmpl_var name='description_txt'}</label>
-            <textarea name="description" id="description" rows='10' cols='30'>{tmpl_var name='description'}</textarea> &nbsp; {tmpl_var name="description_variables_txt"}
-        </div>
-        <div class="ctrlHolder">
-            <label for="price">{tmpl_var name='price_txt'}</label>
-            <input name="price" id="price" value="{tmpl_var name='price'}" size="10" maxlength="255" type="text" class="textInput formLengthLimit" /> &nbsp; {tmpl_var name='currency_txt'}
-        </div>
-        <div class="ctrlHolder">
-            <label for="vat">{tmpl_var name='vat_txt'}</label>
-            <input name="vat" id="vat" value="{tmpl_var name='vat'}" size="5" maxlength="5" type="text" class="textInput formLengthLimit" /> &nbsp; %
-        </div>
-        <div class="ctrlHolder">
-            <label for="unit">{tmpl_var name='unit_txt'}</label>
-            <select name="unit" id="unit" class="selectInput formLengthLimit">
-                {tmpl_var name='unit'}
-            </select>
-        </div>
-        <div class="ctrlHolder">
-            <label for="recur_months">{tmpl_var name='recur_months_txt'}</label>
-            <input name="recur_months" id="recur_months" value="{tmpl_var name='recur_months'}" size="3" maxlength="3" type="text" class="textInput formLengthLimit" />
-        </div>
-        <div class="ctrlHolder">
-            <label for="client_template_id">{tmpl_var name='client_template_id_txt'}</label>
-            <select name="client_template_id" id="client_template_id" class="selectInput">
-                {tmpl_var name='client_template_id'}
-            </select> &nbsp; {tmpl_var name='client_template_description_txt'}
-        </div>
-          
+            
         <input type="hidden" name="id" value="{tmpl_var name='id'}">
-        
+            
         <div class="buttonHolder buttons">
             <button class="positive iconstxt icoPositive" type="button" value="{tmpl_var name='btn_save_txt'}" onClick="submitForm('pageForm','billing/invoice_item_template_edit.php');"><span>{tmpl_var name='btn_save_txt'}</span></button>
             <button class="negative iconstxt icoNegative" type="button" value="{tmpl_var name='btn_cancel_txt'}" onClick="loadContent('billing/invoice_item_template_list.php');"><span>{tmpl_var name='btn_cancel_txt'}</span></button>
         </div>
+            
     </div><!-- end: modulecontent -->
 </div><!-- end: modulebody -->

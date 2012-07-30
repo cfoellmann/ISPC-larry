@@ -33,30 +33,34 @@
         
     <!-- begin: modulecontent -->
     <div class="panel panel_invoice_message_template">
-        <div class="ctrlHolder">
-            <label for="template_type">{tmpl_var name='template_type_txt'}</label>
-            <select name="template_type" id="template_type" class="selectInput">
-                {tmpl_var name='template_type'}
-            </select>
+        <div class="subsectiontoggle"><span class="showing"></span>Remote User<em class="showing"></em></div>
+        <div class="subsection">
+            <div class="ctrlHolder">
+                <label for="template_type">{tmpl_var name='template_type_txt'}</label>
+                <select name="template_type" id="template_type" class="selectInput">
+                    {tmpl_var name='template_type'}
+                </select>
+            </div>
+            <div class="ctrlHolder">
+                <label for="template_name">{tmpl_var name='template_name_txt'}</label>
+                <input name="template_name" id="template_name" value="{tmpl_var name='template_name'}" size="30" maxlength="255" type="text" class="textInput" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="subject">{tmpl_var name='subject_txt'}</label>
+                <input name="subject" id="subject" value="{tmpl_var name='subject'}" style="width:500px" size="30" maxlength="255" type="text" class="textInput" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="message">{tmpl_var name='message_txt'}</label>
+                <textarea name="message" id="message" rows='' cols='' style="width:500px">{tmpl_var name='message'}</textarea>&nbsp;{INVOICE_NUMBER}, {CONTACT_NAME}, {COMPANY_NAME}, {INVOICE_PAY_LINK}
+            </div>
         </div>
-        <div class="ctrlHolder">
-            <label for="template_name">{tmpl_var name='template_name_txt'}</label>
-            <input name="template_name" id="template_name" value="{tmpl_var name='template_name'}" size="30" maxlength="255" type="text" class="textInput" />
-        </div>
-        <div class="ctrlHolder">
-            <label for="subject">{tmpl_var name='subject_txt'}</label>
-            <input name="subject" id="subject" value="{tmpl_var name='subject'}" style="width:500px" size="30" maxlength="255" type="text" class="textInput" />
-        </div>
-        <div class="ctrlHolder">
-            <label for="message">{tmpl_var name='message_txt'}</label>
-            <textarea name="message" id="message" rows='' cols='' style="width:500px">{tmpl_var name='message'}</textarea>&nbsp;{INVOICE_NUMBER}, {CONTACT_NAME}, {COMPANY_NAME}, {INVOICE_PAY_LINK}
-        </div>
+            
+        <input type="hidden" name="id" value="{tmpl_var name='id'}">
+            
         <div class="buttonHolder buttons">
             <button class="positive iconstxt icoPositive" type="button" value="{tmpl_var name='btn_save_txt'}" onClick="submitForm('pageForm','billing/invoice_message_template_edit.php');"><span>{tmpl_var name='btn_save_txt'}</span></button>
             <button class="negative iconstxt icoNegative" type="button" value="{tmpl_var name='btn_cancel_txt'}" onClick="loadContent('billing/invoice_message_template_list.php');"><span>{tmpl_var name='btn_cancel_txt'}</span></button>
         </div>
-                    
-        <input type="hidden" name="id" value="{tmpl_var name='id'}">
-                
+            
     </div><!-- end: modulecontent -->
 </div><!-- end: modulebody -->

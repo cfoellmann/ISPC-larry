@@ -112,7 +112,10 @@ table.list td[class$="_pid"],
 .tbl_col_veid,
 .tbl_col_autoresponder,
 .tbl_col_virtualhost,
-.tbl_col_ip_type {
+.tbl_col_ip_type,
+table.list th[class$="_id"],
+table.list td[class$="_id"]
+{
     width: 90px;
     text-align: center;
 }
@@ -223,7 +226,7 @@ input[type="checkbox"] {
     margin: 6px 0;
 }
 .filter input {
-    background: url("icons/x16_sprite.png") 3px -118px no-repeat #FFFFFF;
+    background: url("icons/x16_sprite.png") 3px -118px no-repeat #fff;
     padding-left: 24px;
     font-size: 12px;
     width: 25px;
@@ -233,6 +236,15 @@ input[type="checkbox"] {
 }
 .filter input:focus {
     width: 100px;
+}
+.filter td[class$="_id"] input,
+.filter td[class$="_pid"] input,
+.filter td[class$="_veid"] input {
+    background: none #fff;
+    padding-left: 5px;
+    font-size: 12px;
+    text-align: center;
+    width: 35px;
 }
 select {
     margin: 0; /* Safari by default adds a margin */

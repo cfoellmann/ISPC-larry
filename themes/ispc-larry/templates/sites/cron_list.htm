@@ -44,7 +44,7 @@
             <tbody>
             <tmpl_loop name="records">
                 <tr class="tbl_row_<tmpl_if name='__EVEN__'}even<tmpl_else>uneven</tmpl_if>">
-                    <td class="tbl_col_active"><img src="themes/{tmpl_var name='theme'}/icons/{tmpl_var name='_active_'}" border="0" /></td>
+                    <td class="tbl_col_active">{tmpl_var name="active"}</td>
                     <td class="tbl_col_server_id">{tmpl_var name="server_id"}</td>
                     <td class="tbl_col_parent_domain_id">{tmpl_var name="parent_domain_id"}</td>
                     <td class="tbl_col_run_min">{tmpl_var name="run_min"}</td>

@@ -40,7 +40,9 @@
                 <td class="tbl_col_username"><a href="#" onClick="loadContent('sites/ftp_user_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="username"}</a></td>
                 <td class="tbl_col_buttons">
                     <a class="button icons16 icoEdit" href="javascript: loadContent('sites/ftp_user_edit.php?id={tmpl_var name='id'}');"><span>{tmpl_var name='edit_txt'}</span></a>
-                    <tmpl_if name="webftp_link"><a class="button icons16 icoDbAdmin" href="{tmpl_var name='webftp_url'}" target="_blank"><span>{tmpl_var name='admin_txt'}</span></a></tmpl_if>
+                    <tmpl_if name="webftp_link">
+                        <a class="button icons16 icoLoginAs" href="{tmpl_var name='webftp_url'}" target="_blank"><span>{tmpl_var name='admin_txt'}</span></a>
+                    </tmpl_if>
                     <a class="button icons16 icoDelete" href="javascript: del_record('sites/ftp_user_del.php?id={tmpl_var name='id'}&phpsessid={tmpl_var name='phpsessid'}','{tmpl_var name='delete_confirmation'}');"><span>{tmpl_var name='delete_txt'}</span></a>
                 </td>
             </tr>

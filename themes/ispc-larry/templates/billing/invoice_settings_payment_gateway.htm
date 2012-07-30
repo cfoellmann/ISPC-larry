@@ -33,34 +33,38 @@
 
     <!-- begin: modulecontent -->
     <div class="panel panel_invoice_settings">
-        <div class="ctrlHolder">
-            <label for="invoice_pay_link">{tmpl_var name='invoice_pay_link_txt'}</label>
-            <input name="invoice_pay_link" id="invoice_pay_link" value="{tmpl_var name='invoice_pay_link'}" size="30" maxlength="255" type="text" class="textInput" />
-        </div>
-        <div class="ctrlHolder">
-            <label for="paypal_business">{tmpl_var name='paypal_business_txt'}</label>
-            <input name="paypal_business" id="paypal_business" value="{tmpl_var name='paypal_business'}" size="30" maxlength="255" type="text" class="textInput" />
-        </div>
-        <div class="ctrlHolder">
-            <label for="paypal_url">{tmpl_var name='paypal_url_txt'}</label>
-            <input name="paypal_url" id="paypal_url" value="{tmpl_var name='paypal_url'}" size="30" maxlength="255" type="text" class="textInput" />
-        </div>
-        <div class="ctrlHolder">
-            <label for="paypal_ipn_url">{tmpl_var name='paypal_ipn_url_txt'}</label>
-            <input name="paypal_ipn_url" id="paypal_ipn_url" value="{tmpl_var name='paypal_ipn_url'}" size="30" maxlength="255" type="text" class="textInput" />
-        </div>
-        <div class="ctrlHolder">
-            <p class="label">{tmpl_var name='paypal_active_txt'}</p>
-            <div class="multiField">
-                {tmpl_var name='paypal_active'}
+        <div class="subsectiontoggle"><span class="showing"></span>Remote User<em class="showing"></em></div>
+        <div class="subsection">
+            <div class="ctrlHolder">
+                <label for="invoice_pay_link">{tmpl_var name='invoice_pay_link_txt'}</label>
+                <input name="invoice_pay_link" id="invoice_pay_link" value="{tmpl_var name='invoice_pay_link'}" size="30" maxlength="255" type="text" class="textInput" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="paypal_business">{tmpl_var name='paypal_business_txt'}</label>
+                <input name="paypal_business" id="paypal_business" value="{tmpl_var name='paypal_business'}" size="30" maxlength="255" type="text" class="textInput" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="paypal_url">{tmpl_var name='paypal_url_txt'}</label>
+                <input name="paypal_url" id="paypal_url" value="{tmpl_var name='paypal_url'}" size="30" maxlength="255" type="text" class="textInput" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="paypal_ipn_url">{tmpl_var name='paypal_ipn_url_txt'}</label>
+                <input name="paypal_ipn_url" id="paypal_ipn_url" value="{tmpl_var name='paypal_ipn_url'}" size="30" maxlength="255" type="text" class="textInput" />
+            </div>
+            <div class="ctrlHolder">
+                <p class="label">{tmpl_var name='paypal_active_txt'}</p>
+                <div class="multiField">
+                    {tmpl_var name='paypal_active'}
+                </div>
             </div>
         </div>
-                            
+            
         <input type="hidden" name="id" value="{tmpl_var name='id'}">
-        
+            
         <div class="buttonHolder buttons">
             <button class="positive iconstxt icoPositive" type="button" value="{tmpl_var name='btn_save_txt'}" onClick="submitForm('pageForm','billing/invoice_settings_edit.php');"><span>{tmpl_var name='btn_save_txt'}</span></button>
             <button class="negative iconstxt icoNegative" type="button" value="{tmpl_var name='btn_cancel_txt'}" onClick="loadContent('billing/invoice_list.php');"><span>{tmpl_var name='btn_cancel_txt'}</span></button>
         </div>
+        
     </div><!-- end: modulecontent -->
 </div><!-- end: modulebody -->
