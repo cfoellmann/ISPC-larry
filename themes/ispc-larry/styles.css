@@ -445,8 +445,36 @@ a.button.disabled span.inner {
 }
 .buttonHolder,
 .wf_actions {
-    margin: 25px 0 0 150px;
-    height: 60px;
+    float: left;
+    margin: 15px 0 0 -2px;
+    position: fixed;
+}
+button.positive,
+button.negative {
+    -khtml-border-radius:0 5px 5px 0;
+    -moz-border-radius:0 5px 5px 0;
+    -ms-border-radius:0 5px 5px 0;
+    -o-border-radius:0 5px 5px 0;
+    -webkit-border-radius:0 5px 5px 0;
+    border-radius:0 5px 5px 0;
+    height: 29px;
+    margin-bottom: 10px;
+    width: 32px;
+    -moz-transition-duration: 400ms;
+    -moz-transition-property: width;
+    -moz-transition-timing-function: ease;
+}
+button.positive:hover,
+button.negative:hover {
+    width: auto;
+}
+button.positive span,
+button.negative span {
+    display: none;
+}
+button.positive:hover span,
+button.negative:hover span {
+    display: inline;
 }
 .buttons button[type] {
     line-height: 17px;
@@ -1218,7 +1246,7 @@ div.subsection {
     box-shadow: 0 0 2px #999999;
 }
 #module-title h1 {
-    padding: 10px 8px 3px;
+    padding: 9px 32px 3px;
     font-size: 12px;
     font-weight: bold;
     color: #376572;
@@ -1233,10 +1261,11 @@ div.subsection {
     background: #fff;
 }
 #module-desc {
-    margin: 15px;
+    margin: 15px 15px 15px 50px;
 }
 .panel {
-    position: relative;
+/*    position: relative;*/
+    margin-left: 25px;
     padding: 0 25px 35px 25px;
 }
 
@@ -1311,11 +1340,13 @@ label.inlineLabel {
 /* modules/tabsbar
 -------------------------------------------------------------- */
 #tabs {
+    float: left;
     position: relative;
+    z-index: 9999;
 }
 
 ul.tabsbar {
-    margin: 0 0 10px 25px;
+    margin: 0 0 0 25px;
     padding: 0;
     list-style: none;
     display: block;
@@ -1325,13 +1356,30 @@ ul.tabsbar {
     background: #EEEEEE;
     border-radius: 0 0 5px 5px;
 }
-.tabsbar li.active {
-    background: red;
+.tabsbar li.active a {
+    background: #B0CCD7;
+    border-bottom: 0;
+    height: 30px;
 
 }
 .tabsbar li a {
-    padding: 5px;
+    -khtml-border-radius:5px 5px 0 0;
+    -moz-border-radius:5px 5px 0 0;
+    -ms-border-radius:5px 5px 0 0;
+    -o-border-radius:5px 5px 0 0;
+    -webkit-border-radius:5px 5px 0 0;
+    border-radius:5px 5px 0 0;
+    border: 1px solid #A3A3A3;
+    background: #A3A3A3;
+    display: inline-block;
+    height: 29px;
+    padding: 12px 10px 0 6px;
     text-decoration: none;
+}
+.tabsbar li a span {
+    display: inline-block;
+    height: 19px;
+    padding: 5px 0 0 34px;
 }
 .module-body {
     padding: 15px;
