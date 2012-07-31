@@ -16,3 +16,5 @@ TODO
 -   Frontend config pages
     -   for the enduser in tools module
     -   for the admin in admin module
+
+-   Check all template files for missing fields

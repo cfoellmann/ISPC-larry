@@ -1,28 +1,28 @@
-<!-- begin: toolbar -->
-<div id="moduletoolbar">
-    <a class="button cancel" onClick="loadContent('sites/web_folder_user_list.php');" href="#" title="{tmpl_var name='btn_cancel_txt'}">{tmpl_var name='btn_cancel_txt'}</a>
+<!-- tabs -->
+<div id="tabs">
+    <ul class="tabsbar">
+        <tmpl_loop name="formTab">
+            <tmpl_if name="active">
+                <li class="active"><a href="javascript:changeTab('<tmpl_var name='name'>','<tmpl_var name='app_module'>/<tmpl_var name='form_action'>')"><tmpl_var name='title'></a></li>
+                <tmpl_else>
+                    <li><a href="javascript:changeTab('<tmpl_var name='name'>','<tmpl_var name='app_module'>/<tmpl_var name='form_action'>')"><tmpl_var name='title'></a></li>
+            </tmpl_if>
+        </tmpl_loop>
+    </ul>
 </div>
-<!-- end: toolbar -->
 
 <!-- begin: modulebody -->
 <div id="module-title"><h1><tmpl_var name="form_hint"></h1></div>
 <div class="module-box boxlistcontent" id="modulecontainer">
-    <!-- tabs -->
-    <div id="tabs">
-        <ul class="tabsbar">
-            <tmpl_loop name="formTab">
-                <tmpl_if name="active">
-                    <li class="active"><a href="javascript:changeTab('<tmpl_var name='name'>','<tmpl_var name='app_module'>/<tmpl_var name='form_action'>')"><tmpl_var name='title'></a></li>
-                    <tmpl_else>
-                        <li><a href="javascript:changeTab('<tmpl_var name='name'>','<tmpl_var name='app_module'>/<tmpl_var name='form_action'>')"><tmpl_var name='title'></a></li>
-                </tmpl_if>
-            </tmpl_loop>
-        </ul>
+
+    <div class="buttonHolder buttons">
+        <button class="positive iconstxt icoPositive" type="button" value="{tmpl_var name='btn_save_txt'}" onClick="submitForm('pageForm','sites/web_folder_user_edit.php');"><span>{tmpl_var name='btn_save_txt'}</span></button>
+        <button class="negative iconstxt icoNegative" type="button" value="{tmpl_var name='btn_cancel_txt'}" onClick="loadContent('sites/web_folder_user_list.php');"><span>{tmpl_var name='btn_cancel_txt'}</span></button>
     </div>
-    
+
     <!-- desc --> 
     <div id="module-desc"><tmpl_var name="page_desc_txt"></div>
-    
+
     <!-- messages/erros -->  
     <tmpl_if name="msg">
         <div id="OKMsg"><p><tmpl_var name="msg"></p></div>
@@ -30,7 +30,7 @@
     <tmpl_if name="error">
         <div id="errorMsg"><h3>ERROR</h3><ol><tmpl_var name="error"></ol></div>
     </tmpl_if>
-    
+
     <!-- begin: modulecontent -->
     <div class="panel panel_web_folder_user">
         <div class="subsectiontoggle"><span class="showing"></span>Circle Settings<em class="showing"></em></div>
@@ -59,9 +59,5 @@
 
         <input type="hidden" name="id" value="{tmpl_var name='id'}">
 
-        <div class="buttonHolder buttons">
-            <button class="positive iconstxt icoPositive" type="button" value="{tmpl_var name='btn_save_txt'}" onClick="submitForm('pageForm','sites/web_folder_user_edit.php');"><span>{tmpl_var name='btn_save_txt'}</span></button>
-            <button class="negative iconstxt icoNegative" type="button" value="{tmpl_var name='btn_cancel_txt'}" onClick="loadContent('sites/web_folder_user_list.php');"><span>{tmpl_var name='btn_cancel_txt'}</span></button>
-        </div>
     </div><!-- end: modulecontent -->
 </div><!-- end: modulebody -->

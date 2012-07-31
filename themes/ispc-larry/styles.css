@@ -1359,8 +1359,8 @@ ul.tabsbar {
 .tabsbar li.active a {
     background: #B0CCD7;
     border-bottom: 0;
-    height: 30px;
-
+    height: 15px;
+    margin-top: 7px;
 }
 .tabsbar li a {
     -khtml-border-radius:5px 5px 0 0;
@@ -1372,8 +1372,8 @@ ul.tabsbar {
     border: 1px solid #A3A3A3;
     background: #A3A3A3;
     display: inline-block;
-    height: 29px;
-    padding: 12px 10px 0 6px;
+    height: 14px;
+    padding: 10px;
     text-decoration: none;
 }
 .tabsbar li a span {
