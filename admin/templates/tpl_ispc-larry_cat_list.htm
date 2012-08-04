@@ -37,7 +37,7 @@
             <tbody>
                 <tmpl_loop name="records">
                     <tr class="tbl_row_<tmpl_if name='__EVEN__'}even<tmpl_else>uneven</tmpl_if>">
-                        <td class="tbl_col_active"><a href="#" onClick="loadContent('dns/dns_soa_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="active"}</td>
+                        <td class="tbl_col_active"><a href="#" onClick="loadContent('dns/dns_soa_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="active"}</a></td>
                         <td class="tbl_col_server_id"><a href="#" onClick="loadContent('dns/dns_soa_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="server_id"}</a></td>
                         <td class="tbl_col_origin"><a href="#" onClick="loadContent('dns/dns_soa_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="origin"}</a></td>
                         <td class="tbl_col_ns"><a href="#" onClick="loadContent('dns/dns_soa_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="ns"}</a></td>

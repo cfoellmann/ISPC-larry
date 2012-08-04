@@ -58,7 +58,7 @@ class page_action extends tform_actions {
 		// Delete all records that belog to this zone.
 		$records = $app->db->queryAllRecords("SELECT cat_id FROM ispc_larry_cat WHERE cat_id = '".intval($this->cat_id)."'");
 		foreach($records as $rec) {
-			$app->db->datalogDelete('ispc_larry_cat','cat_id',$rec['cat_id']);
+			$app->db->datalogDelete('tpl_ispc_larry_cat','cat_id',$rec['cat_id']);
 		}
 	}
 }

@@ -16,13 +16,13 @@
 $liste["name"] 			= "tpl_ispc-larry_cat";
 
 // Database table
-$liste["table"] 		= "ispc_larry_cats";
+$liste["table"] 		= "tpl_ispc_larry_cats";
 
 // Index index field of the database table
 $liste["table_idx"]		= "cat_id";
 
 // Search Field Prefix
-// $liste["search_prefix"] 	= "search_";
+$liste["search_prefix"] 	= "search_";
 
 // Records per page
 $liste["records_per_page"] 	= "15";
@@ -46,22 +46,34 @@ $liste["auth"]			= "yes";
 /*****************************************************
 * Suchfelder
 *****************************************************/
-$liste["item"][] = array(	'field'		=> "title",
-							'datatype'	=> "VARCHAR",
-							'formtype'	=> "TEXT",
-							'op'		=> "like",
-							'prefix'	=> "%",
-							'suffix'	=> "%",
-							'width'		=> "",
-							'value'		=> "");
+$liste["item"][] = array(   'field'	=> "active",
+                            'datatype'	=> "VARCHAR",
+                            'formtype'	=> "SELECT",
+                            'op'	=> "=",
+                            'prefix'	=> "",
+                            'suffix'	=> "",
+                            'width'	=> "",
+                            'value'	=> array('Y' => "<div id=\"ir-Yes\" class=\"swap\"><span>Yes</span></div>",'N' => "<div class=\"swap\" id=\"ir-No\"><span>No</span></div>")
+);
 
+$liste["item"][] = array(   'field'	=> "title",
+                            'datatype'	=> "VARCHAR",
+                            'formtype'	=> "TEXT",
+                            'op'	=> "like",
+                            'prefix'	=> "%",
+                            'suffix'	=> "%",
+                            'width'	=> "",
+                            'value'	=> ""
+);
 
-$liste["item"][] = array(	'field'		=> "sorting",
-							'datatype'	=> "INTEGER",
-							'formtype'	=> "TEXT",
-							'op'		=> "like",
-							'prefix'	=> "%",
-							'suffix'	=> "%",
-							'width'		=> "",
-							'value'		=> "");
+$liste["item"][] = array(   'field'	=> "sorting",
+                            'datatype'	=> "INTEGER",
+                            'formtype'	=> "TEXT",
+                            'op'	=> "like",
+                            'prefix'	=> "%",
+                            'suffix'	=> "%",
+                            'width'	=> "",
+                            'value'	=> ""
+);
+
 ?>

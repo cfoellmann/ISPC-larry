@@ -59,11 +59,11 @@ EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 */
 
-$form["title"] 		= "tpl_ispc-larry_admin_head_txt";
-$form["description"] 	= "tpl_ispc-larry_admin_desc_txt";
-$form["name"] 		= "tpl_ispc-larry_admin";
-$form["action"]		= "tpl_ispc-larry_admin.php";
-$form["db_table"]	= "ispc_larry";
+$form["title"] 		= "tpl_ispc-larry_head_txt";
+$form["description"] 	= "tpl_ispc-larry_desc_txt";
+$form["name"] 		= "tpl_ispc-larry";
+$form["action"]		= "tpl_ispc-larry.php";
+$form["db_table"]	= "tpl_ispc_larry";
 $form["db_table_idx"]	= "var_id";
 $form["db_history"]	= "yes";
 $form["tab_default"]	= "basic";
@@ -84,74 +84,41 @@ $form["tabs"]['basic'] = array (
 	##################################
 	# Beginn Datenbankfelder
 	##################################
-		'server_id' => array (
-			'datatype'	=> 'INTEGER',
-			'formtype'	=> 'SELECT',
-			'default'	=> '',
-			'datasource'	=> array ( 	'type'          => 'SQL',
-                                                        'querystring'   => 'SELECT server_id,server_name FROM server WHERE {AUTHSQL} ORDER BY server_name',
-                                                        'keyfield'      => 'server_id',
-                                                        'valuefield'    => 'server_name'
-									 ),
-			'value'		=> ''
-		),
-		'client_id' => array (
-			'datatype'	=> 'INTEGER',
-			'formtype'	=> 'SELECT',
-			'default'	=> '',
-			'datasource'	=> array ( 	'type'	=> 'SQL',
-										'querystring' => "SELECT client_id,CONCAT(contact_name,' :: ',username) as name FROM client WHERE {AUTHSQL} ORDER BY contact_name",
-										'keyfield'=> 'client_id',
-										'valuefield'=> 'name'
-									 ),
-			'value'		=> array(0 => ' ')
-		),
-		'logo' => array (
+                'username' => array (
 			'datatype'	=> 'VARCHAR',
 			'formtype'	=> 'TEXT',
 			'validators'    => '',
-			'default'	=> 'themes/ispc-larry/images/header_logo.png',
+			'default'	=> 'global',
+			'value'		=> 'global',
+			'separator'	=> '',
+			'width'		=> '40',
+			'maxlength'	=> '64'
+		),
+		'logo_url' => array (
+			'datatype'	=> 'VARCHAR',
+			'formtype'	=> 'TEXT',
+			'validators'    => '',
+			'default'	=> '',
 			'value'		=> '',
 			'separator'	=> '',
 			'width'		=> '40',
 			'maxlength'	=> '255'
+		),
+                'sidebar_state' => array (
+			'datatype'	=> 'INTEGER',
+			'formtype'	=> 'TEXT',
+			'validators'    => '',
+			'default'	=> '',
+			'value'		=> '',
+			'separator'	=> '',
+			'width'		=> '40'
 		),
 	##################################
 	# ENDE Datenbankfelder
 	##################################
 	)
 );
-
-$form["tabs"]['sidebar'] = array(
-	'title' => "Sidebar",
-	'width' => 80,
-	'template' => "templates/tpl_ispc-larry_sidebar.htm",
-	'fields' => array(
-		##################################
-		# Begin Datatable fields
-		##################################
-		'php_fastcgi_binary' => array(
-			'datatype' => 'VARCHAR',
-			'formtype' => 'TEXT',
-			'default' => '',
-			'value' => '',
-			'width' => '40',
-			'maxlength' => '255'
-		),
-		'php_fastcgi_ini_dir' => array(
-			'datatype' => 'VARCHAR',
-			'formtype' => 'TEXT',
-			'default' => '',
-			'value' => '',
-			'width' => '40',
-			'maxlength' => '255'
-		),
-	##################################
-	# ENDE Datatable fields
-	##################################
-	)
-);
-
+/*
 $form["tabs"]['links'] = array(
 	'title' => "Links",
 	'width' => 80,
@@ -189,4 +156,5 @@ $form["tabs"]['links'] = array(
 	##################################
 	)
 );
+*/
 ?>

@@ -34,57 +34,16 @@
     <div class="panel panel_dns_soa">
         <div class="subsectiontoggle"><span class="showing"></span>Sidebar<em class="showing"></em></div>
         <div class="subsection">
-
             <div class="ctrlHolder">
-                <label for="origin">{tmpl_var name='origin_txt'}</label>
-                <input name="origin" id="origin" value="{tmpl_var name='origin'}" size="30" maxlength="255" type="text" class="textInput" />
-                <p class="formHint">{tmpl_var name='eg_domain_tld'}</p>
+                <label for="title">{tmpl_var name='title_txt'}Title</label>
+                <input name="title" id="title" value="{tmpl_var name='title'}" size="30" maxlength="64" type="text" class="textInput" />
             </div>
             <div class="ctrlHolder">
-                <label for="ns">{tmpl_var name='ns_txt'}</label>
-                <input name="ns" id="ns" value="{tmpl_var name='ns'}" size="30" maxlength="255" type="text" class="textInput" />
-                <p class="formHint">{tmpl_var name='eg_ns1_domain_tld'}</p>
+                <label for="sorting">{tmpl_var name='sorting_txt'}Sorting</label>
+                <input name="sorting" id="sorting" value="{tmpl_var name='sorting'}" size="10" maxlength="4" type="text" class="textInput" />
             </div>
             <div class="ctrlHolder">
-                <label for="mbox">{tmpl_var name='mbox_txt'}</label>
-                <input name="mbox" id="mbox" value="{tmpl_var name='mbox'}" size="30" maxlength="255" type="text" class="textInput" />
-                <p class="formHint">{tmpl_var name='eg_webmaster_domain_tld'}</p>
-            </div>
-            <div class="ctrlHolder">
-                <label for="refresh">{tmpl_var name='refresh_txt'}</label>
-                <input name="refresh" id="refresh" value="{tmpl_var name='refresh'}" size="10" maxlength="10" type="text" class="textInput" />&nbsp;{tmpl_var name='seconds_txt'}
-            </div>
-            <div class="ctrlHolder">
-                <label for="retry">{tmpl_var name='retry_txt'}</label>
-                <input name="retry" id="retry" value="{tmpl_var name='retry'}" size="10" maxlength="10" type="text" class="textInput" />&nbsp;{tmpl_var name='seconds_txt'}
-            </div>
-            <div class="ctrlHolder">
-                <label for="expire">{tmpl_var name='expire_txt'}</label>
-                <input name="expire" id="expire" value="{tmpl_var name='expire'}" size="10" maxlength="10" type="text" class="textInput" />&nbsp;{tmpl_var name='seconds_txt'}
-            </div>
-            <div class="ctrlHolder">
-                <label for="minimum">{tmpl_var name='minimum_txt'}</label>
-                <input name="minimum" id="minimum" value="{tmpl_var name='minimum'}" size="10" maxlength="10" type="text" class="textInput" />&nbsp;{tmpl_var name='seconds_txt'}
-            </div>
-            <div class="ctrlHolder">
-                <label for="ttl">{tmpl_var name='ttl_txt'}</label>
-                <input name="ttl" id="ttl" value="{tmpl_var name='ttl'}" size="10" maxlength="10" type="text" class="textInput" />&nbsp;{tmpl_var name='seconds_txt'}
-            </div>
-            <div class="ctrlHolder">
-                <label for="xfer">{tmpl_var name='xfer_txt'}</label>
-                <input name="xfer" id="xfer" value="{tmpl_var name='xfer'}" size="30" maxlength="255" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="also_notify">{tmpl_var name='also_notify_txt'}</label>
-                <input name="also_notify" id="also_notify" value="{tmpl_var name='also_notify'}" size="30" maxlength="255" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="update_acl">{tmpl_var name='update_acl_txt'}</label>
-                <input name="update_acl" id="update_acl" value="{tmpl_var name='update_acl'}" size="30" maxlength="255" type="text" class="textInput" />
-            </div>
-
-            <div class="ctrlHolder">
-                <p class="label">{tmpl_var name='active_txt'}</p>
+                <p class="label">{tmpl_var name='active_txt'}Active</p>
                 <div class="multiField">
                     {tmpl_var name='active'}
                 </div>
@@ -92,35 +51,6 @@
         </div>
 
         <input type="hidden" name="id" value="{tmpl_var name='id'}">
-        <input name="serial" type="hidden" value="{tmpl_var name='serial'}">
 
     </div><!-- end: modulecontent -->
 </div><!-- end: modulebody -->
-<script language="JavaScript" type="text/javascript">
-    jQuery('#xfer').ispconfigSearch({
-        dataSrc: '/dns/ajax_get_json.php?type=get_ipv4',
-        resultsLimit: '$ <tmpl_var name="globalsearch_resultslimit_of_txt"> % <tmpl_var name="globalsearch_resultslimit_results_txt">',
-        ResultsTextPrefix: '<tmpl_var name="globalsearch_suggestions_text_txt">',
-        noResultsText: '<tmpl_var name="globalsearch_noresults_text_txt">',
-        noResultsLimit: '<tmpl_var name="globalsearch_noresults_limit_txt">',
-        minChars: 0,
-        cssPrefix: 'df-',
-        fillSearchField: true,
-        fillSearchFieldWith: 'fill_text',
-        searchFieldWatermark: '',
-        resultBoxPosition: 'e'
-    });
-    jQuery('#also_notify').ispconfigSearch({
-        dataSrc: '/dns/ajax_get_json.php?type=get_ipv4',
-        resultsLimit: '$ <tmpl_var name="globalsearch_resultslimit_of_txt"> % <tmpl_var name="globalsearch_resultslimit_results_txt">',
-        ResultsTextPrefix: '<tmpl_var name="globalsearch_suggestions_text_txt">',
-        noResultsText: '<tmpl_var name="globalsearch_noresults_text_txt">',
-        noResultsLimit: '<tmpl_var name="globalsearch_noresults_limit_txt">',
-        minChars: 0,
-        cssPrefix: 'df-',
-        fillSearchField: true,
-        fillSearchFieldWith: 'fill_text',
-        searchFieldWatermark: '',
-        resultBoxPosition: 'e'
-    });
-</script>

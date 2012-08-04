@@ -40,9 +40,9 @@
 
 $form["title"] 		= "Sidebar Categories";
 $form["description"] 	= "";
-$form["name"] 		= "dns_soa";
+$form["name"] 		= "tpl_ispc-larry_cat";
 $form["action"]		= "tpl_ispc-larry_cat_edit.php";
-$form["db_table"]	= "ispc_larry_cats";
+$form["db_table"]	= "tpl_ispc_larry_cats";
 $form["db_table_idx"]	= "cat_id";
 $form["db_history"]	= "yes";
 $form["tab_default"]	= "cat";
@@ -79,6 +79,12 @@ $form["tabs"]['cat'] = array (
 			'width'		=> '4',
 			'maxlength'	=> '4'
 		),
+                'active' => array (
+                        'datatype'	=> 'VARCHAR',
+                        'formtype'	=> 'CHECKBOX',
+                        'default'	=> 'Y',
+                        'value'         => array(0 => 'N',1 => 'Y')
+                ),
 	##################################
 	# ENDE Datatable fields
 	##################################
@@ -88,7 +94,7 @@ $form["tabs"]['cat'] = array (
 $form["tabs"]['apps'] = array (
 	'title' 	=> "Apps",
 	'width' 	=> 100,
-	'template' 	=> "templates/tpl_ispc-larry_apps_edit.htm",
+	'template' 	=> "templates/tpl_ispc-larry_apps_list.htm",
 	'fields' 	=> array (
 	##################################
 	# Begin Datatable fields
@@ -99,14 +105,14 @@ $form["tabs"]['apps'] = array (
 	##################################
 	),
 	'plugins' => array (
-     	'dns_records' => array (
-         	'class'   => 'plugin_listview',
-     		'options' => array(
-				'listdef' => 'list/tpl_ispc-larry_apps.list.php',
-				'sqlextwhere' => "cat_id = ".@intval(@$_REQUEST['cat']),
-				'sql_order_by' => "ORDER BY sorting"
-			)
-        )
+                'cat_items' => array (
+                        'class'   => 'plugin_listview',
+                        'options' => array(
+                                        'listdef' => 'list/tpl_ispc-larry_apps.list.php',
+                                        'sqlextwhere' => "cat = ".@intval(@$_REQUEST['cat']),
+                                        'sql_order_by' => "ORDER BY sorting"
+                                )
+                        )
 	)
 );
 ?>
