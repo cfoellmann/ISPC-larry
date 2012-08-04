@@ -1,23 +1,26 @@
 <!-- tabs -->
-    <div id="tabs">
-        <ul class="tabsbar">
-            <tmpl_loop name="formTab">
-                <tmpl_if name="active">
-                    <li class="active"><a href="javascript:changeTab('<tmpl_var name='name'>','<tmpl_var name='app_module'>/<tmpl_var name='form_action'>')"><tmpl_var name='title'></a></li>
-                    <tmpl_else>
-                        <li><a href="javascript:changeTab('<tmpl_var name='name'>','<tmpl_var name='app_module'>/<tmpl_var name='form_action'>')"><tmpl_var name='title'></a></li>
-                </tmpl_if>
-            </tmpl_loop>
-        </ul>
-    </div>
+<div id="tabs">
+    <ul class="tabsbar">
+        <tmpl_loop name="formTab">
+            <tmpl_if name="active">
+                <li class="active"><a href="javascript:changeTab('<tmpl_var name='name'>','<tmpl_var name='app_module'>/<tmpl_var name='form_action'>')"><tmpl_var name='title'></a></li>
+                <tmpl_else>
+                    <li><a href="javascript:changeTab('<tmpl_var name='name'>','<tmpl_var name='app_module'>/<tmpl_var name='form_action'>')"><tmpl_var name='title'></a></li>
+            </tmpl_if>
+        </tmpl_loop>
+    </ul>
+    <ul class="tabsbar-buttons">
+        <li><a href="javascript:loadContent('dns/dns_soa_edit.php?id={tmpl_var name='zone'}');" title="{tmpl_var name='btn_cancel_txt'}" class="negative iconstxt icoNegative"><span>{tmpl_var name='btn_cancel_txt'}</span></a></li>
+    </ul>
+</div>
 
 <!-- begin: modulebody -->
 <div id="module-title"><h1><tmpl_var name="form_hint"></h1></div>
 <div class="module-box boxlistcontent" id="modulecontainer">   
-    
+
     <!-- desc --> 
     <div id="module-desc"><tmpl_var name="page_desc_txt"></div>
-    
+
     <!-- messages/erros -->  
     <tmpl_if name="msg">
         <div id="OKMsg"><p><tmpl_var name="msg"></p></div>
@@ -25,12 +28,12 @@
     <tmpl_if name="error">
         <div id="errorMsg"><h3>ERROR</h3><ol><tmpl_var name="error"></ol></div>
     </tmpl_if>
-    
+
     <!-- begin: modulecontent -->
     <div class="panel panel_dns_soa">        
         {tmpl_var name='dns_records'}
-        
+
         <input type="hidden" name="id" value="{tmpl_var name='id'}">
-        
+
     </div><!-- end: modulecontent -->
 </div><!-- end: modulebody -->

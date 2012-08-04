@@ -1,0 +1,67 @@
+<?php
+
+/*
+	Datatypes:
+	- INTEGER
+	- DOUBLE
+	- CURRENCY
+	- VARCHAR
+	- TEXT
+	- DATE
+*/
+
+
+
+// Name of the list
+$liste["name"] 			= "tpl_ispc-larry_cat";
+
+// Database table
+$liste["table"] 		= "ispc_larry_cats";
+
+// Index index field of the database table
+$liste["table_idx"]		= "cat_id";
+
+// Search Field Prefix
+// $liste["search_prefix"] 	= "search_";
+
+// Records per page
+$liste["records_per_page"] 	= "15";
+
+// Script File of the list
+$liste["file"]			= "tpl_ispc-larry_cat_list.php";
+
+// Script file of the edit form
+$liste["edit_file"]		= "tpl_ispc-larry_cat_edit.php";
+
+// Script File of the delete script
+$liste["delete_file"]		= "tpl_ispc-larry_cat_del.php";
+
+// Paging Template
+$liste["paging_tpl"]		= "templates/paging.tpl.htm";
+
+// Enable auth
+$liste["auth"]			= "yes";
+
+
+/*****************************************************
+* Suchfelder
+*****************************************************/
+$liste["item"][] = array(	'field'		=> "title",
+							'datatype'	=> "VARCHAR",
+							'formtype'	=> "TEXT",
+							'op'		=> "like",
+							'prefix'	=> "%",
+							'suffix'	=> "%",
+							'width'		=> "",
+							'value'		=> "");
+
+
+$liste["item"][] = array(	'field'		=> "sorting",
+							'datatype'	=> "INTEGER",
+							'formtype'	=> "TEXT",
+							'op'		=> "like",
+							'prefix'	=> "%",
+							'suffix'	=> "%",
+							'width'		=> "",
+							'value'		=> "");
+?>

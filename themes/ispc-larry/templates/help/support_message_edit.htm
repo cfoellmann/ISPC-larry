@@ -9,16 +9,15 @@
             </tmpl_if>
         </tmpl_loop>
     </ul>
+    <ul class="tabsbar-buttons">
+        <li><a href="javascript:submitForm('pageForm','help/support_message_edit.php');" title="{tmpl_var name='btn_save_txt'}" class="positive iconstxt icoPositive"><span>{tmpl_var name='btn_save_txt'}</span></a></li>
+        <li><a href="javascript:loadContent('help/support_message_list.php');" title="{tmpl_var name='btn_cancel_txt'}" class="negative iconstxt icoNegative"><span>{tmpl_var name='btn_cancel_txt'}</span></a></li>
+    </ul>
 </div>
 
 <!-- begin: modulebody -->
 <div id="module-title"><h1><tmpl_var name="form_hint"></h1></div>
 <div class="module-box boxlistcontent" id="modulecontainer">
-
-    <div class="buttonHolder buttons">
-        <button class="positive iconstxt icoPositive" type="button" value="{tmpl_var name='btn_save_txt'}" onClick="submitForm('pageForm','help/support_message_edit.php');"><span>{tmpl_var name='btn_save_txt'}</span></button>
-        <button class="negative iconstxt icoNegative" type="button" value="{tmpl_var name='btn_cancel_txt'}" onClick="loadContent('help/support_message_list.php');"><span>{tmpl_var name='btn_cancel_txt'}</span></button>
-    </div>
 
     <!-- desc --> 
     <div id="module-desc"><tmpl_var name="page_desc_txt"></div>
@@ -33,19 +32,22 @@
 
     <!-- begin: modulecontent -->
     <div class="panel panel_support_message">
-        <div class="ctrlHolder">
-            <label for="recipient_id">{tmpl_var name='recipient_id_txt'}</label>
-            <select name="recipient_id" id="recipient_id" class="selectInput">
-                {tmpl_var name='recipient_id'}
-            </select>
-        </div>
-        <div class="ctrlHolder">
-            <label for="subject">{tmpl_var name='subject_txt'}</label>
-            <input name="subject" id="subject" value="{tmpl_var name='subject'}" size="30" maxlength="255" type="text" class="textInput" />
-        </div>
-        <div class="ctrlHolder">
-            <label for="message">{tmpl_var name='message_txt'}</label>
-            <textarea name="message" id="message" rows='10' cols='30'>{tmpl_var name='message'}</textarea>
+        <div class="subsectiontoggle"><span class="showing"></span>Import Details<em class="showing"></em></div>
+        <div class="subsection">
+            <div class="ctrlHolder">
+                <label for="recipient_id">{tmpl_var name='recipient_id_txt'}</label>
+                <select name="recipient_id" id="recipient_id" class="selectInput">
+                    {tmpl_var name='recipient_id'}
+                </select>
+            </div>
+            <div class="ctrlHolder">
+                <label for="subject">{tmpl_var name='subject_txt'}</label>
+                <input name="subject" id="subject" value="{tmpl_var name='subject'}" size="30" maxlength="255" type="text" class="textInput" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="message">{tmpl_var name='message_txt'}</label>
+                <textarea name="message" id="message" rows='10' cols='30'>{tmpl_var name='message'}</textarea>
+            </div>
         </div>
 
         <input type="hidden" name="id" value="{tmpl_var name='id'}">

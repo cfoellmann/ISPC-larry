@@ -9,16 +9,15 @@
             </tmpl_if>
         </tmpl_loop>
     </ul>
+    <ul class="tabsbar-buttons">
+        <li><a href="javascript:submitForm('pageForm','admin/users_edit.php');" title="{tmpl_var name='btn_save_txt'}" class="positive iconstxt icoPositive"><span>{tmpl_var name='btn_save_txt'}</span></a></li>
+        <li><a href="javascript:loadContent('admin/users_list.php');" title="{tmpl_var name='btn_cancel_txt'}" class="negative iconstxt icoNegative"><span>{tmpl_var name='btn_cancel_txt'}</span></a></li>
+    </ul>
 </div>
 
 <!-- begin: modulebody -->
 <div id="module-title"><h1><tmpl_var name="form_hint"></h1></div>
 <div class="module-box boxlistcontent" id="modulecontainer">
-
-    <div class="buttonHolder buttons">
-        <button class="positive iconstxt icoPositive" type="button" value="{tmpl_var name='btn_save_txt'}" onClick="submitForm('pageForm','admin/users_edit.php');"><span>{tmpl_var name='btn_save_txt'}</span></button>
-        <button class="negative iconstxt icoNegative" type="button" value="{tmpl_var name='btn_cancel_txt'}" onClick="loadContent('admin/users_list.php');"><span>{tmpl_var name='btn_cancel_txt'}</span></button>
-    </div>
 
     <!-- desc --> 
     <div id="module-desc"><tmpl_var name="page_desc_txt"></div>
@@ -41,7 +40,7 @@
             </div>
             <div class="ctrlHolder">
                 <label for="passwort">{tmpl_var name='passwort_txt'}</label>
-                <input name="passwort" id="passwort" value="{tmpl_var name='passwort'}" size="15" maxlength="100" type="password" class="textInput"  onkeyup="pass_check(this.value)"/>
+                <input name="passwort" id="passwort" value="{tmpl_var name='passwort'}" size="15" maxlength="100" type="password" class="textInput"  onkeyup="pass_check(this.value)"/>&nbsp;<a href="javascript:void(0);" onClick="generatePassword('passwort');">{tmpl_var name='generate_password_txt'}</a>
             </div>
             <div class="ctrlHolder">
                 <p class="label">{tmpl_var name='password_strength_txt'}</p>

@@ -44,7 +44,8 @@ table,input[type="text"],input[type="password"],textarea,select,input.button,
     border-radius:5px;
 }
 nav a#current, nav a:hover,
-ul.gs-resultbox li:first-child {
+ul.gs-resultbox li:first-child,
+button.positive, button.negative {
     -khtml-border-radius:5px 5px 0 0;
     -moz-border-radius:5px 5px 0 0;
     -ms-border-radius:5px 5px 0 0;
@@ -446,27 +447,18 @@ a.button.disabled span.inner {
 .buttonHolder,
 .wf_actions {
     float: left;
-    margin: 15px 0 0 -2px;
+    margin: -2px 0 0 25px;
     position: fixed;
 }
 button.positive,
 button.negative {
-    -khtml-border-radius:0 5px 5px 0;
-    -moz-border-radius:0 5px 5px 0;
-    -ms-border-radius:0 5px 5px 0;
-    -o-border-radius:0 5px 5px 0;
-    -webkit-border-radius:0 5px 5px 0;
-    border-radius:0 5px 5px 0;
     height: 29px;
     margin-bottom: 10px;
-    width: 32px;
-    -moz-transition-duration: 400ms;
-    -moz-transition-property: width;
-    -moz-transition-timing-function: ease;
-}
-button.positive:hover,
-button.negative:hover {
     width: auto;
+}
+/*button.positive:hover,
+button.negative:hover {
+    
 }
 button.positive span,
 button.negative span {
@@ -475,13 +467,13 @@ button.negative span {
 button.positive:hover span,
 button.negative:hover span {
     display: inline;
-}
+}*/
 .buttons button[type] {
     line-height: 17px;
     padding: 5px 10px 5px 7px;
 }
 
-.iconstxt { background: url("icons/button_sprite.png") no-repeat transparent; }
+.iconstxt { background: url("icons/button_sprite.png") no-repeat #F7F7F7; }
 .iconstxt span { padding-left: 20px; font-weight: bold; }
 .iconstxt.icoPositive { background-position: 6px -130px; }
 .iconstxt.icoNegative { background-position: 6px -98px; }
@@ -490,11 +482,11 @@ button.negative:hover span {
 .iconstxt.icoDelete { background-position: 6px -34px; }
 .iconstxt.icoDownload { background-position: 6px -1px; }
 .iconstxt.icoRestore { background-position: 6px -1px; }
-.buttons a.negative, button.negative {
+.buttons a.negative, button.negative, .negative {
     color: #D12F19;
 }
 
-.buttons a.positive, button.positive {
+.buttons a.positive, button.positive, .positive {
     color: #529214;
 }
 div[id^=ir-] {
@@ -1264,8 +1256,6 @@ div.subsection {
     margin: 15px 15px 15px 50px;
 }
 .panel {
-/*    position: relative;*/
-    margin-left: 25px;
     padding: 0 25px 35px 25px;
 }
 
@@ -1345,22 +1335,27 @@ label.inlineLabel {
     z-index: 9999;
 }
 
-ul.tabsbar {
+ul.tabsbar,
+ul.tabsbar-buttons {
     margin: 0 0 0 25px;
     padding: 0;
     list-style: none;
-    display: block;
+    display: inline;
 }
 .tabsbar li {
     display: inline;
     background: #EEEEEE;
     border-radius: 0 0 5px 5px;
 }
+.tabsbar-buttons li {
+    display: inline;
+    border-radius: 0 0 5px 5px;
+}
 .tabsbar li.active a {
     background: #B0CCD7;
     border-bottom: 0;
     height: 15px;
-    margin-top: 7px;
+    margin-top: 17px;
 }
 .tabsbar li a {
     -khtml-border-radius:5px 5px 0 0;
@@ -1373,13 +1368,23 @@ ul.tabsbar {
     background: #A3A3A3;
     display: inline-block;
     height: 14px;
-    padding: 10px;
-    text-decoration: none;
+    padding: 5px 10px;
 }
-.tabsbar li a span {
+.tabsbar-buttons li a {
+    -khtml-border-radius:5px 5px 0 0;
+    -moz-border-radius:5px 5px 0 0;
+    -ms-border-radius:5px 5px 0 0;
+    -o-border-radius:5px 5px 0 0;
+    -webkit-border-radius:5px 5px 0 0;
+    border-radius:5px 5px 0 0;
+    border: 1px solid #A3A3A3;
     display: inline-block;
-    height: 19px;
-    padding: 5px 0 0 34px;
+    height: 12px;
+    padding: 7px 10px;
+}
+.tabsbar-buttons li a span {
+    font-size: 90%;
+    text-shadow: 0 1px 1px #CCC;
 }
 .module-body {
     padding: 15px;

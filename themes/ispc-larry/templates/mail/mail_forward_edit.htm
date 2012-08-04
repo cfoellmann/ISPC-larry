@@ -9,6 +9,10 @@
             </tmpl_if>
         </tmpl_loop>
     </ul>
+    <ul class="tabsbar-buttons">
+        <li><a href="javascript:submitForm('pageForm','mail/mail_forward_edit.php');" title="{tmpl_var name='btn_save_txt'}" class="positive iconstxt icoPositive"><span>{tmpl_var name='btn_save_txt'}</span></a></li>
+        <li><a href="javascript:loadContent('mail/mail_forward_list.php');" title="{tmpl_var name='btn_cancel_txt'}" class="negative iconstxt icoNegative"><span>{tmpl_var name='btn_cancel_txt'}</span></a></li>
+    </ul>
 </div>
 
 <!-- begin: modulebody -->

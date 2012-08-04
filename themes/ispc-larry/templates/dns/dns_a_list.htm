@@ -36,7 +36,7 @@
     <tbody>
         <tmpl_loop name="records">
         <tr class="tbl_row_<tmpl_if name='__EVEN__'}even<tmpl_else>uneven</tmpl_if>">
-            <td class="tbl_col_active"><img src="themes/{tmpl_var name='theme'}/icons/{tmpl_var name='_active_'}" border="0" /></td>
+            <td class="tbl_col_active">{tmpl_var name="active"}</td>
             <td class="tbl_col_type">{tmpl_var name="type"}</td>
             <td class="tbl_col_name"><a href="#" onClick="loadContent('dns/dns_{tmpl_var name='type_lowercase'}_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="name"}</a></td>
             <td class="tbl_col_data">{tmpl_var name="data"}</td>

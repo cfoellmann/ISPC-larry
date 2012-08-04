@@ -9,16 +9,15 @@
             </tmpl_if>
         </tmpl_loop>
     </ul>
+    <ul class="tabsbar-buttons">
+        <li><a href="javascript:submitForm('pageForm','help/faq_edit.php');" title="{tmpl_var name='btn_save_txt'}" class="positive iconstxt icoPositive"><span>{tmpl_var name='btn_save_txt'}</span></a></li>
+        <li><a href="javascript:loadContent('help/faq_list.php');" title="{tmpl_var name='btn_cancel_txt'}" class="negative iconstxt icoNegative"><span>{tmpl_var name='btn_cancel_txt'}</span></a></li>
+    </ul>
 </div>
 
 <!-- begin: modulebody -->
 <div id="module-title"><h1><tmpl_var name="form_hint"></h1></div>
 <div class="module-box boxlistcontent" id="modulecontainer">
-
-    <div class="buttonHolder buttons">
-        <button class="positive iconstxt icoPositive" type="button" value="{tmpl_var name='btn_save_txt'}" onClick="submitForm('pageForm','help/faq_edit.php');"><span>{tmpl_var name='btn_save_txt'}</span></button>
-        <button class="negative iconstxt icoNegative" type="button" value="{tmpl_var name='btn_cancel_txt'}" onClick="loadContent('help/faq_list.php');"><span>{tmpl_var name='btn_cancel_txt'}</span></button>
-    </div>
 
     <!-- desc -->
     <div id="module-desc"><tmpl_var name="page_desc_txt"></div>
@@ -33,19 +32,22 @@
 
     <!-- begin: modulecontent -->
     <div class="panel panel_support_message">
-        <div class="ctrlHolder">
-            <label for="hf_section">{tmpl_var name='faq_section_txt'}</label>
-            <select name="hf_section" id="hf_section" class="selectInput">
-                {tmpl_var name='hf_section'}
-            </select>
-        </div>
-        <div class="ctrlHolder">
-            <label for="hf_question">{tmpl_var name='faq_question_txt'}</label>
-            <input name="hf_question" id="hf_question" value="{tmpl_var name='hf_question'}" size="30" maxlength="255" type="text" class="textInput" />
-        </div>
-        <div class="ctrlHolder">
-            <label for="hf_answer">{tmpl_var name='faq_answer_txt'}</label>
-            <textarea name="hf_answer" id="hf_answer" rows='10' cols='30'>{tmpl_var name='hf_answer'}</textarea>
+        <div class="subsectiontoggle"><span class="showing"></span>Import Details<em class="showing"></em></div>
+        <div class="subsection">
+            <div class="ctrlHolder">
+                <label for="hf_section">{tmpl_var name='faq_section_txt'}</label>
+                <select name="hf_section" id="hf_section" class="selectInput">
+                    {tmpl_var name='hf_section'}
+                </select>
+            </div>
+            <div class="ctrlHolder">
+                <label for="hf_question">{tmpl_var name='faq_question_txt'}</label>
+                <input name="hf_question" id="hf_question" value="{tmpl_var name='hf_question'}" size="30" maxlength="255" type="text" class="textInput" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="hf_answer">{tmpl_var name='faq_answer_txt'}</label>
+                <textarea name="hf_answer" id="hf_answer" rows='10' cols='30'>{tmpl_var name='hf_answer'}</textarea>
+            </div>
         </div>
 
         <input type="hidden" name="id" value="{tmpl_var name='id'}">

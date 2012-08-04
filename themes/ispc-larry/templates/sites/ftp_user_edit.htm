@@ -9,16 +9,15 @@
             </tmpl_if>
         </tmpl_loop>
     </ul>
+    <ul class="tabsbar-buttons">
+        <li><a href="javascript:submitForm('pageForm','sites/ftp_user_edit.php');" title="{tmpl_var name='btn_save_txt'}" class="positive iconstxt icoPositive"><span>{tmpl_var name='btn_save_txt'}</span></a></li>
+        <li><a href="javascript:loadContent('sites/ftp_user_list.php');" title="{tmpl_var name='btn_cancel_txt'}" class="negative iconstxt icoNegative"><span>{tmpl_var name='btn_cancel_txt'}</span></a></li>
+    </ul>
 </div>
 
 <!-- begin: modulebody -->
 <div id="module-title"><h1><tmpl_var name="form_hint"></h1></div> 
 <div class="module-box boxlistcontent" id="modulecontainer">
-
-    <div class="buttonHolder buttons">
-        <button class="positive iconstxt icoPositive" type="button" value="{tmpl_var name='btn_save_txt'}" onClick="submitForm('pageForm','sites/ftp_user_edit.php');"><span>{tmpl_var name='btn_save_txt'}</span></button>
-        <button class="negative iconstxt icoNegative" type="button" value="{tmpl_var name='btn_cancel_txt'}" onClick="loadContent('sites/ftp_user_list.php');"><span>{tmpl_var name='btn_cancel_txt'}</span></button>
-    </div>
 
     <!-- desc -->
     <div id="module-desc"><tmpl_var name="page_desc_txt"></div>
@@ -46,12 +45,19 @@
             </div>
             <div class="ctrlHolder">
                 <label for="password">{tmpl_var name='password_txt'}</label>
-                <input name="password" id="password" value="{tmpl_var name='password'}" size="30" maxlength="255" type="password" class="textInput" onkeyup="pass_check(this.value)" />
+                <input name="password" id="password" value="{tmpl_var name='password'}" size="30" maxlength="255" type="password" class="textInput" onkeyup="pass_check(this.value);checkPassMatch('password','repeat_password');" />&nbsp;<a href="javascript:void(0);" onClick="generatePassword('password');">{tmpl_var name='generate_password_txt'}</a>
             </div>
             <div class="ctrlHolder">
-                <label>{tmpl_var name='password_strength_txt'}</label>
+                <p class="label">{tmpl_var name='password_strength_txt'}</p>
                 <div id="passBar"></div>
                 <p class="formHint"><span id="passText">&nbsp;</span></p>
+                <br style="clear:both;" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="repeat_password">{tmpl_var name='repeat_password_txt'}</label>
+                <input name="repeat_password" id="repeat_password" value="" size="30" maxlength="100" type="password" class="textInput" onkeyup="checkPassMatch('password','repeat_password');" />
+                <div id="confirmpasswordError" style="display:none;" class="confirmpassworderror">{tmpl_var name='password_mismatch_txt'}</div>
+                <div id="confirmpasswordOK" style="display:none;" class="confirmpasswordok">{tmpl_var name='password_match_txt'}</div>
             </div>
             <div class="ctrlHolder">
                 <label for="quota_size">{tmpl_var name='quota_size_txt'}</label>

@@ -9,16 +9,15 @@
             </tmpl_if>
         </tmpl_loop>
     </ul>
+    <ul class="tabsbar-buttons">
+        <li><a href="javascript:submitForm('pageForm','mail/mail_transport_edit.php');" title="{tmpl_var name='btn_save_txt'}" class="positive iconstxt icoPositive"><span>{tmpl_var name='btn_save_txt'}</span></a></li>
+        <li><a href="javascript:loadContent('mail/mail_transport_list.php');" title="{tmpl_var name='btn_cancel_txt'}" class="negative iconstxt icoNegative"><span>{tmpl_var name='btn_cancel_txt'}</span></a></li>
+    </ul>
 </div>
 
 <!-- begin: modulebody -->
 <div id="module-title"><h1><tmpl_var name="form_hint"></h1></div>
 <div class="module-box boxlistcontent" id="modulecontainer">
-
-    <div class="buttonHolder buttons">
-        <button class="positive iconstxt icoPositive" type="button" value="{tmpl_var name='btn_save_txt'}" onClick="submitForm('pageForm','mail/mail_transport_edit.php');"><span>{tmpl_var name='btn_save_txt'}</span></button>
-        <button class="negative iconstxt icoNegative" type="button" value="{tmpl_var name='btn_cancel_txt'}" onClick="loadContent('mail/mail_transport_list.php');"><span>{tmpl_var name='btn_cancel_txt'}</span></button>
-    </div>
 
     <!-- desc -->
     <div id="module-desc"><tmpl_var name="page_desc_txt"></div>
@@ -60,8 +59,8 @@
             <div class="ctrlHolder">
                 <label for="sort_order">{tmpl_var name='sort_order_txt'}</label>
                 <select name="sort_order" id="sort_order" class="selectInput formLengthHalf">
-                    {tmpl_var name='sort_order'}<
-                    /select>
+                    {tmpl_var name='sort_order'}
+                </select>
             </div>
             <div class="ctrlHolder">
                 <p class="label">{tmpl_var name='active_txt'}</p>
