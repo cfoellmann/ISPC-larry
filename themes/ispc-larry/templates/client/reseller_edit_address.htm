@@ -52,7 +52,7 @@
             </div>
             <div class="ctrlHolder">
                 <label for="password">{tmpl_var name='password_txt'}</label>
-                <input name="password" id="password" value="{tmpl_var name='password'}" size="30" maxlength="255" type="password" class="textInput" onkeyup="pass_check(this.value)" />&nbsp;<a href="javascript:void(0);" onClick="generatePassword('password');">{tmpl_var name='generate_password_txt'}</a>
+                <input name="password" id="password" value="{tmpl_var name='password'}" size="30" maxlength="255" type="password" class="textInput" onkeyup="pass_check(this.value)" />&nbsp;<a href="javascript:void(0);" onClick="generatePassword('password','repeat_password');">{tmpl_var name='generate_password_txt'}</a>
             </div>
             <div class="ctrlHolder">
                 <p class="label">{tmpl_var name='password_strength_txt'}</p>
