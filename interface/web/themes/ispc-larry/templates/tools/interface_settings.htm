@@ -32,18 +32,12 @@
 
     <!-- begin: modulecontent -->
     <div class="panel panel_tools_interface">
-        <div class="subsectiontoggle"><span class="showing"></span>Plesk data import<em class="showing"></em></div>
+        <div class="subsectiontoggle"><span class="showing"></span>{tmpl_var name='interface_settings_txt'}Interface Settings: <tmpl_var name="cpuser"><em class="showing"></em></div>
         <div class="subsection">
             <div class="ctrlHolder">
                 <label for="startmodule">{tmpl_var name='startmodule_txt'}</label>
                 <select name="startmodule" id="startmodule" class="selectInput formLengthHalf">
                     {tmpl_var name='startmodule'}
-                </select>
-            </div>
-            <div class="ctrlHolder">
-                <label for="language">{tmpl_var name='language_txt'}</label>
-                <select name="language" id="language" class="selectInput flags">
-                    {tmpl_var name='language'}
                 </select>
             </div>
             <!-- TODO: If user theme change is activated -->

@@ -1,0 +1,33 @@
+<h2><tmpl_var name="list_head_txt"></h2>
+<p><tmpl_var name="list_desc_txt"></p>
+
+<div class="panel panel_ispc-larry-cat">
+
+    <div class="pnl_formsarea">
+        <fieldset class="inlineLabels"><legend>DNS Zone</legend>
+            <div class="ctrlHolder">
+                <label for="title">{tmpl_var name='title_txt'}Title</label>
+                <input name="title" id="title" value="{tmpl_var name='title'}" size="30" maxlength="64" type="text" class="textInput" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="sorting">{tmpl_var name='sorting_txt'}Sorting</label>
+                <input name="sorting" id="sorting" value="{tmpl_var name='sorting'}" size="10" maxlength="4" type="text" class="textInput" />
+            </div>
+            <div class="ctrlHolder">
+                <p class="label">{tmpl_var name='active_txt'}Active</p>
+                <div class="multiField">
+                    {tmpl_var name='active'}
+                </div>
+            </div>
+        </fieldset>
+            
+        <input type="hidden" name="id" value="{tmpl_var name='id'}">
+        <input name="serial" type="hidden" value="{tmpl_var name='serial'}">
+            
+        <div class="buttonHolder buttons">
+            <button class="positive iconstxt icoPositive" type="button" value="{tmpl_var name='btn_save_txt'}" onClick="submitForm('pageForm','dns/dns_soa_edit.php');"><span>{tmpl_var name='btn_save_txt'}</span></button>
+            <button class="negative iconstxt icoNegative" type="button" value="{tmpl_var name='btn_cancel_txt'}" onClick="loadContent('dns/dns_soa_list.php');"><span>{tmpl_var name='btn_cancel_txt'}</span></button>
+        </div>
+    </div>
+
+</div>

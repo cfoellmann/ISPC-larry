@@ -16,10 +16,8 @@ $list_def_file = "list/tpl_ispc-larry_cat.list.php";
 $app->auth->check_module_permissions('admin');
 
 $app->uses('listform_actions');
-// $app->listform_actions->SQLExtWhere = "access = 'REJECT'";
 
 $app->listform_actions->SQLOrderBy = 'ORDER BY sorting ASC';
+
 $app->listform_actions->onLoad();
-
-
 ?>
