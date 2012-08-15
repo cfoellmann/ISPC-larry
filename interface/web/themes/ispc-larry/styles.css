@@ -1380,6 +1380,7 @@ ul.tabsbar-buttons {
     border: 1px solid #A3A3A3;
     display: inline-block;
     height: 12px;
+    margin-top: 15px;
     padding: 7px 10px;
 }
 .tabsbar-buttons li a span {
