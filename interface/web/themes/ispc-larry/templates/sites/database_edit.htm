@@ -49,21 +49,13 @@
                             </select>
                     </tmpl_if>
                 </div>
-                <div class="ctrlHolder">
-                    <label for="client_group_id">{tmpl_var name='client_txt'}</label>
-                    <select name="client_group_id" id="client_group_id" class="selectInput">
-                        {tmpl_var name='client_group_id'}
-                    </select>
-                </div>
             </tmpl_if>
-            <tmpl_if name="is_reseller">
-                <div class="ctrlHolder">
-                    <label for="client_group_id">{tmpl_var name='client_txt'}</label>
-                    <select name="client_group_id" id="client_group_id" class="selectInput">
-                        {tmpl_var name='client_group_id'}
-                    </select>
-                </div>
-            </tmpl_if>
+            <div class="ctrlHolder">
+                <label for="parent_domain_id">{tmpl_var name='parent_domain_id_txt'}</label>
+                <select name="parent_domain_id" id="parent_domain_id" class="selectInput">
+                    {tmpl_var name='parent_domain_id'}
+                </select>
+            </div>
             <div class="ctrlHolder">
                 <label for="type">{tmpl_var name='type_txt'}</label>
                 <select name="type" id="type" class="selectInput formLengthHalf">
@@ -87,7 +79,7 @@
             </div>
             <div class="ctrlHolder">
                 <label for="database_password">{tmpl_var name='database_password_txt'}</label>
-                <input name="database_password" id="database_password" value="{tmpl_var name='database_password'}" size="30" maxlength="255" type="password" class="textInput formLengthHalf" onkeyup="pass_check(this.value);checkPassMatch('database_password','repeat_password');" />&nbsp;<a href="javascript:void(0);" onClick="generatePassword('database_password');">{tmpl_var name='generate_password_txt'}</a>
+                <input name="database_password" id="database_password" value="{tmpl_var name='database_password'}" size="30" maxlength="255" type="password" class="textInput formLengthHalf" onkeyup="pass_check(this.value);checkPassMatch('database_password','repeat_password');" />&nbsp;<a href="javascript:void(0);" onClick="generatePassword('database_password','repeat_password');">{tmpl_var name='generate_password_txt'}</a>
             </div>
             <div class="ctrlHolder">
                 <p class="label">{tmpl_var name='password_strength_txt'}</p>
@@ -96,7 +88,7 @@
             </div>
             <div class="ctrlHolder">
                 <label for="repeat_password">{tmpl_var name='repeat_password_txt'}</label>
-                <input name="repeat_password" id="repeat_password" value="" size="15" maxlength="100" type="password" class="textInput" style="width:100px;"  onkeyup="checkPassMatch('database_password','repeat_password');" />
+                <input name="repeat_password" id="repeat_password" value="" size="15" maxlength="100" type="password" class="textInput" onkeyup="checkPassMatch('database_password','repeat_password');" />
                 <div id="confirmpasswordError" style="display:none;" class="confirmpassworderror">{tmpl_var name='password_mismatch_txt'}</div>
                 <div id="confirmpasswordOK" style="display:none;" class="confirmpasswordok">{tmpl_var name='password_match_txt'}</div>
             </div>
@@ -130,9 +122,23 @@
                     {tmpl_var name='active'}
                 </div>
             </div>
-        </div>
 
         <input type="hidden" name="id" value="{tmpl_var name='id'}">
 
     </div><!-- end: modulecontent -->
 </div><!-- end: modulebody -->
+<script language="JavaScript" type="text/javascript">
+    jQuery('#remote_ips').ispconfigSearch({
+        dataSrc: '/sites/ajax_get_json.php?type=get_ipv4',
+        resultsLimit: '$ <tmpl_var name="globalsearch_resultslimit_of_txt"> % <tmpl_var name="globalsearch_resultslimit_results_txt">',
+        ResultsTextPrefix: '<tmpl_var name="globalsearch_suggestions_text_txt">',
+        noResultsText: '<tmpl_var name="globalsearch_noresults_text_txt">',
+        noResultsLimit: '<tmpl_var name="globalsearch_noresults_limit_txt">',
+        minChars: 0,
+        cssPrefix: 'df-',
+        fillSearchField: true,
+        fillSearchFieldWith: 'fill_text',
+        searchFieldWatermark: '',
+        resultBoxPosition: 'e'
+    });
+</script>
