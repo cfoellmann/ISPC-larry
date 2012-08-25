@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="de-DE">
+<html dir="ltr" lang="<tmpl_var name="language">-<tmpl_var name="country">">
     <head>
         <meta charset="<tmpl_var name="html_content_encoding">" />
         <title><tmpl_var name="app_title"></title>
@@ -41,25 +41,37 @@
                 });
                 
                 jQuery('.ttip').tipsy({live: true, gravity: 'ne', html: true});
+                
+                tabChangeDiscard = '<tmpl_var name="tabchange_discard_enabled>';
+                tabChangeWarning = '<tmpl_var name="tabchange_warning_enabled>';
+                tabChangeWarningTxt = '<tmpl_var name="global_tabchange_warning_txt">';
+                tabChangeDiscardTxt = '<tmpl_var name="global_tabchange_discard_txt">';
             });
             
             
             jQuery(document).bind("change", function(event) {
-                if (jQuery(".panel #Filter").length > 0 && event.target.localName == 'select') {
+                var elName = event.target.localName;
+                if (jQuery(".panel #Filter").length > 0 && elName == 'select') {
+                    event.preventDefault();
                     jQuery(".panel #Filter").trigger('click');
+                }
+                if(elName == 'select' || elName == 'input' || elName == 'textarea') {
+                    // set marker that something was changed
+                    pageFormChanged = true;
                 }
             });
             
             jQuery(document).bind("keypress", function(event) {
                 //Use jQuery submit with keypress Enter in panel filterbar
                 if (event.which == '13' && jQuery(".panel #Filter").length > 0) {
+                    event.preventDefault();
                     jQuery(".panel #Filter").trigger('click');
                 }
                 //Use jQuery submit with keypress Enter in forms
                 if (event.which == '13' && jQuery(".pnl_formsarea button.positive").length > 0 && event.target.localName != 'textarea') {
+                    event.preventDefault();
                     jQuery(".pnl_formsarea button.positive:first").trigger('click');
                 }
-            });
             $(function() {
 
                 $("table").delegate('td','mouseover mouseleave', function(e) {
@@ -207,13 +219,13 @@
         <!-- begin: #mainscreen -->
         <section id="mainscreen">
             <div id="mainscreen-left">
+                <tmpl_if name='usertype' op='==' value='normaluser'><input type="text" id="globalsearch" value="" /></tmpl_if>
                 <div id="sideNav-container" class="unselectable">
                     <div id="sideNav" class="scroller">&nbsp;</div>
                 </div>
             </div>
             <div id="mainscreen-splitterv" class="splitter splitter-v"></div>
-            <div id="mainscreen-right">
-                <tmpl_if name='usertype' op='==' value='normaluser'><input type="text" id="globalsearch" size="25" value="" /></tmpl_if>
+            <div id="mainscreen-right">               
                 <!-- skiplink anchor: Content -->
                 <form method="post" action="" id="pageForm" name="pageForm" enctype="multipart/form-data" class="uniForm">
                     <div id="pageContent"><!-- AJAX CONTENT --></div>
