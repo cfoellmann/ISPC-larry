@@ -25,6 +25,23 @@
                         e.preventDefault();
                     }
                 });
+                
+                jQuery('.subsectiontoggle').live("click", function(){
+                    jQuery(this).children().toggleClass('showing').end().next().slideToggle();
+                });
+                
+                jQuery('#globalsearch').ispconfigSearch({
+                    dataSrc: '/dashboard/ajax_get_json.php?type=globalsearch',
+                    resultsLimit: '$ <tmpl_var name="globalsearch_resultslimit_of_txt"> % <tmpl_var name="globalsearch_resultslimit_results_txt">',
+                    noResultsText: '<tmpl_var name="globalsearch_noresults_text_txt">',
+                    noResultsLimit: '<tmpl_var name="globalsearch_noresults_limit_txt">',
+                    searchFieldWatermark: '<tmpl_var name="globalsearch_searchfield_watermark_txt">'
+                });
+                
+                jQuery('.ttip').tipsy({live: true, gravity: 'ne', html: true});
+            });
+            
+            
             jQuery(document).bind("change", function(event) {
                 if (jQuery(".panel #Filter").length > 0 && event.target.localName == 'select') {
                     jQuery(".panel #Filter").trigger('click');
@@ -41,7 +58,24 @@
                     jQuery(".pnl_formsarea button.positive:first").trigger('click');
                 }
             });
-            </script>
+            $(function() {
+
+                $("table").delegate('td','mouseover mouseleave', function(e) {
+                    if (e.type == 'mouseover') {
+                        $(this).parent().addClass("hover");
+                        $("colgroup").eq($(this).index()).addClass("hover");
+                    } else {
+                        $(this).parent().removeClass("hover");
+                        $("colgroup").eq($(this).index()).removeClass("hover");
+                    }
+                });
+
+            });
+            jQuery(function() {		
+		$("#tablesorter").tablesorter({sortList:[[0,0],[2,1]], widgets: ['zebra']});
+		$("#options").tablesorter({sortList: [[0,0]], headers: { 3:{sorter: false}, 4:{sorter: false}}});
+            });
+        </script>
     </head>
     <body>                  
         <!-- begin: sidebar -->
