@@ -16,7 +16,6 @@
         <script type="text/javascript" src="js/jquery.ispconfigsearch.js"></script>
         <script type="text/javascript" src="js/jquery.tipsy.js"></script>
         <script type="text/javascript" src="themes/ispc-larry/html5shiv.js"></script>
-        <script type="text/javascript" src="themes/ispc-larry/jquery.tablesorter.js"></script>
         <script language="JavaScript" type="text/javascript">
             jQuery(document).ready(function() {
                 loadInitContent();
@@ -72,23 +71,6 @@
                     event.preventDefault();
                     jQuery(".pnl_formsarea button.positive:first").trigger('click');
                 }
-            $(function() {
-
-                $("table").delegate('td','mouseover mouseleave', function(e) {
-                    if (e.type == 'mouseover') {
-                        $(this).parent().addClass("hover");
-                        $("colgroup").eq($(this).index()).addClass("hover");
-                    } else {
-                        $(this).parent().removeClass("hover");
-                        $("colgroup").eq($(this).index()).removeClass("hover");
-                    }
-                });
-
-            });
-            jQuery(function() {		
-		$("#tablesorter").tablesorter({sortList:[[0,0],[2,1]], widgets: ['zebra']});
-		$("#options").tablesorter({sortList: [[0,0]], headers: { 3:{sorter: false}, 4:{sorter: false}}});
-            });
         </script>
     </head>
     <body>                  
