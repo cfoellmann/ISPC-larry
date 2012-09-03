@@ -1,6 +1,6 @@
 <!-- begin: toolbar -->
 <div id="moduletoolbar">
-    <a class="button edit" onClick="loadContent('help/support_message_edit.php');" href="#" title="{tmpl_var name="add_new_record_txt"}">{tmpl_var name="add_new_record_txt"}</a>
+    <a class="button edit" onclick="loadContent('help/support_message_edit.php');" href="#" title="{tmpl_var name="add_new_record_txt"}">{tmpl_var name="add_new_record_txt"}</a>
 </div>
 <!-- end: toolbar -->
 
@@ -22,8 +22,8 @@
                     <td class="tbl_col_sender_id"><select name="search_sender_id">{tmpl_var name='search_sender_id'}</select></td>
                     <td class="tbl_col_subject"><input type="text" name="search_subject" value="{tmpl_var name='search_subject'}" /></td>
                     <td class="tbl_col_buttons">
-                        <button type="button" class="button icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="submitForm('pageForm','help/support_message_list.php');"><span>{tmpl_var name="filter_txt"}</span></button>
-                        <button type="button" class="button icons16 icoFilterReset" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="#"><span>{tmpl_var name="filter_txt"}</span></button>
+                        <button type="button" class="button icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onclick="submitForm('pageForm','help/support_message_list.php');"><span>{tmpl_var name="filter_txt"}</span></button>
+                        <button type="button" class="button icons16 icoFilterReset" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onclick="#"><span>{tmpl_var name="filter_txt"}</span></button>
                     </td>
                 </tr>
             </thead>
@@ -31,7 +31,7 @@
             <tmpl_loop name="records">
                 <tr class="tbl_row_<tmpl_if name='__EVEN__'}even<tmpl_else>uneven</tmpl_if>">
                     <td class="tbl_col_sender_id">{tmpl_var name="sender_id"}</td>
-                    <td class="tbl_col_subject"><a href="#" onClick="loadContent('help/support_message_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="subject"}</a></td>
+                    <td class="tbl_col_subject"><a href="#" onclick="loadContent('help/support_message_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="subject"}</a></td>
                     <td class="tbl_col_buttons">
                         <a class="button icons16 icoEdit" href="javascript: loadContent('help/support_message_edit.php?id={tmpl_var name='id'}');"><span>{tmpl_var name='edit_txt'}</span></a>
                         <a class="button icons16 icoDelete" href="javascript: del_record('help/support_message_del.php?id={tmpl_var name='id'}&phpsessid={tmpl_var name='phpsessid'}','{tmpl_var name='delete_confirmation'}');"><span>{tmpl_var name='delete_txt'}</span></a>

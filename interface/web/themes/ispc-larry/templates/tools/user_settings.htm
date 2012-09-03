@@ -36,7 +36,7 @@
         <div class="subsection">
             <div class="ctrlHolder">
                 <label for="passwort">{tmpl_var name='passwort_txt'}</label>
-                <input name="passwort" id="passwort" value="{tmpl_var name='passwort'}" size="15" maxlength="100" type="password" class="textInput" onkeyup="pass_check(this.value);checkPassMatch('passwort','repeat_password');"/>&nbsp;<a href="javascript:void(0);" onClick="generatePassword('passwort','repeat_password');">{tmpl_var name='generate_password_txt'}</a>
+                <input name="passwort" id="passwort" value="{tmpl_var name='passwort'}" size="15" maxlength="100" type="password" class="textInput" onkeyup="pass_check(this.value);checkPassMatch('passwort','repeat_password');"/>&nbsp;<a href="javascript:void(0);" onclick="generatePassword('passwort','repeat_password');">{tmpl_var name='generate_password_txt'}</a>
             </div>
             <div class="ctrlHolder">
                 <p class="label">{tmpl_var name='password_strength_txt'}</p>

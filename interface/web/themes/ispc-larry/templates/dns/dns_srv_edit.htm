@@ -20,7 +20,7 @@
 <div class="module-box boxlistcontent" id="modulecontainer">
 
     <!-- desc -->
-    <div id="module-desc"><tmpl_var name="page_desc_txt"></div>
+    <div id="module-desc"><tmpl_var name="list_desc_txt"></div>
 
     <!-- messages/erros -->  
     <tmpl_if name="msg">
@@ -39,8 +39,16 @@
                 <input name="name" id="name" value="{tmpl_var name='name'}" size="30" maxlength="255" type="text" class="textInput" />
             </div>
             <div class="ctrlHolder">
-                <label for="data">{tmpl_var name='data_txt'}</label>
-                <input name="data" id="data" value="{tmpl_var name='data'}" size="30" maxlength="255" type="text" class="textInput" />
+                <label for="target">{tmpl_var name='target_txt'}</label>
+                <input name="target" id="target" value="{tmpl_var name='target'}" size="30" maxlength="255" type="text" class="textInput" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="weight">{tmpl_var name='weight_txt'}</label>
+                <input name="weight" id="weight" value="{tmpl_var name='weight'}" size="10" maxlength="10" type="text" class="textInput formLengthLimit" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="port">{tmpl_var name='port_txt'}</label>
+                <input name="port" id="port" value="{tmpl_var name='port'}" size="10" maxlength="10" type="text" class="textInput formLengthLimit" />
             </div>
             <div class="ctrlHolder">
                 <label for="aux">{tmpl_var name='aux_txt'}</label>
@@ -52,7 +60,9 @@
             </div>
             <div class="ctrlHolder">
                 <p class="label">{tmpl_var name='active_txt'}</p>
-                <div class="multiField">{tmpl_var name='active'}</div>
+                <div class="multiField">
+                    {tmpl_var name='active'}
+                </div>
             </div>
         </div>
 

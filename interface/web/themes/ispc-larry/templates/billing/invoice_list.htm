@@ -1,6 +1,6 @@
 <!-- begin: toolbar -->
 <div id="moduletoolbar">
-    <a class="button edit" onClick="loadContent('billing/invoice_edit.php');" href="#" title="{tmpl_var name="add_new_record_txt"}">{tmpl_var name="add_new_record_txt"}</a>
+    <a class="button edit" onclick="loadContent('billing/invoice_edit.php');" href="#" title="{tmpl_var name="add_new_record_txt"}">{tmpl_var name="add_new_record_txt"}</a>
 </div>
 <!-- end: toolbar -->
 
@@ -32,15 +32,15 @@
                     <td class="tbl_col_status_printed"><select name="search_status_printed" onChange="submitForm('pageForm','billing/invoice_list.php');" class="withicons">{tmpl_var name='search_status_printed'}</select></td>
                     <td class="tbl_col_status_paid"><select name="search_status_paid" onChange="submitForm('pageForm','billing/invoice_list.php');" class="withicons">{tmpl_var name='search_status_paid'}</select></td>
                     <td class="tbl_col_buttons">
-                        <button type="button" class="button icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="submitForm('pageForm','billing/invoice_list.php');"><span>{tmpl_var name="filter_txt"}</span></button>
-                        <button type="button" class="button icons16 icoFilterReset" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="#"><span>{tmpl_var name="filter_txt"}</span></button>                        
+                        <button type="button" class="button icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onclick="submitForm('pageForm','billing/invoice_list.php');"><span>{tmpl_var name="filter_txt"}</span></button>
+                        <button type="button" class="button icons16 icoFilterReset" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onclick="#"><span>{tmpl_var name="filter_txt"}</span></button>                        
                     </td>
                 </tr>
             </thead>
             <tbody>
                 <tmpl_loop name="records">
                 <tr class="tbl_row_<tmpl_if name='__EVEN__'}even<tmpl_else>uneven</tmpl_if>">
-                    <td class="tbl_col_invoice_number"><a href="#" onClick="loadContent('billing/invoice_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="invoice_number"}</a></td>
+                    <td class="tbl_col_invoice_number"><a href="#" onclick="loadContent('billing/invoice_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="invoice_number"}</a></td>
                     <td class="tbl_col_invoice_date">{tmpl_var name="invoice_date"}</td>
                     <td class="tbl_col_client_pid">{tmpl_var name="client_id"}</td>
                     <td class="tbl_col_invoice_amount">{tmpl_var name="invoice_amount"} {tmpl_var name="currency_txt"}</td>

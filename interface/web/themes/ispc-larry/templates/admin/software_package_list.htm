@@ -1,12 +1,14 @@
 <!-- begin: toolbar -->
 <div id="moduletoolbar">
-    <a class="button edit" onClick="loadContent('admin/software_package_list.php?action=repoupdate');" href="#" title="{tmpl_var name="repoupdate_txt"}">{tmpl_var name="repoupdate_txt"}</a>
+    <a class="button edit" onclick="loadContent('admin/software_package_list.php?action=repoupdate');" href="#" title="{tmpl_var name="repoupdate_txt"}">{tmpl_var name="repoupdate_txt"}</a>
 </div>
 <!-- end: toolbar -->
 
 <!-- begin: modulebody -->
 <div id="module-title"><h1><tmpl_var name="list_head_txt"></h1></div>
 <div class="module-box boxlistcontent" id="modulecontainer">
+    
+    <!-- desc -->
     <div id="module-desc"><tmpl_var name="list_desc_txt"></div>
     
     <!-- begin: modulecontent -->
@@ -18,6 +20,7 @@
                     <th class="tbl_col_package_title" scope="col"><tmpl_var name="package_title_txt"></th>
                     <th class="tbl_col_package_description" scope="col"><tmpl_var name="package_description_txt"></th>
                     <th class="tbl_col_package_description" scope="col"><tmpl_var name="package_id_txt"></th>
+                    <th class="tbl_col_limit" scope="col"><a class="button icons16 icoLimit" href="#"><span>Limit</span></a>{tmpl_var name='search_limit'}</th>
                 </tr>
             </thead>
             <tbody>
@@ -27,12 +30,15 @@
                     <td class="tbl_col_package_title">{tmpl_var name="package_title"}</td>
                     <td class="tbl_col_package_description">{tmpl_var name="package_description"}</td>
                     <td class="tbl_col_package_description">ispapp{tmpl_var name="package_id"}</td>
+                    <td class="tbl_col_buttons">
+                        <a class="button icons16 icoDelete" href="javascript: del_record('admin/software_package_del.php?software_update_inst_id={tmpl_var name="software_update_inst_id"}','{tmpl_var name='delete_confirmation'}');"><span>{tmpl_var name='delete_txt'}</span></a>
+                    </td>
                 </tr>
             </tmpl_loop>
             </tbody>
             <tfoot>
                 <tr>
-                    <td class="tbl_footer tbl_paging" colspan="4"></td>
+                        <td class="tbl_footer tbl_paging" colspan="5"></td>
                 </tr>
             </tfoot>
         </table>

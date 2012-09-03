@@ -1,6 +1,6 @@
 <!-- begin: toolbar -->
 <div id="moduletoolbar">
-    <a class="button edit" onClick="loadContent('vm/openvz_ostemplate_edit.php');" href="#" title="{tmpl_var name="add_new_record_txt"}">{tmpl_var name="add_new_record_txt"}</a>
+    <a class="button edit" onclick="loadContent('vm/openvz_ostemplate_edit.php');" href="#" title="{tmpl_var name="add_new_record_txt"}">{tmpl_var name="add_new_record_txt"}</a>
 </div>
 <!-- end: toolbar -->
 
@@ -30,8 +30,8 @@
                     <td class="tbl_col_server_id"><select name="search_server_id" class="servericons">{tmpl_var name='search_server_id'}</select></td>
                     <td class="tbl_col_allservers"><select name="search_allservers" class="withicons">{tmpl_var name='search_allservers'}</select></td>
                     <td class="tbl_col_buttons">
-                        <button type="button" class="button icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="submitForm('pageForm','vm/openvz_ostemplate_list.php');"><span>{tmpl_var name="filter_txt"}</span></button>
-                        <button type="button" class="button icons16 icoFilterReset" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="#"><span>{tmpl_var name="filter_txt"}</span></button>
+                        <button type="button" class="button icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onclick="submitForm('pageForm','vm/openvz_ostemplate_list.php');"><span>{tmpl_var name="filter_txt"}</span></button>
+                        <button type="button" class="button icons16 icoFilterReset" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onclick="#"><span>{tmpl_var name="filter_txt"}</span></button>
                     </td>
                 </tr>
             </thead>
@@ -40,7 +40,7 @@
                 <tr class="tbl_row_<tmpl_if name='__EVEN__'}even<tmpl_else>uneven</tmpl_if>">
                     <td class="tbl_col_active">{tmpl_var name="active"}</td>
                     <td class="tbl_col_ostemplate_id">{tmpl_var name="ostemplate_id"}</td>
-                    <td class="tbl_col_template_name"><a href="#" onClick="loadContent('vm/openvz_ostemplate_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="template_name"}</a></td>
+                    <td class="tbl_col_template_name"><a href="#" onclick="loadContent('vm/openvz_ostemplate_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="template_name"}</a></td>
                     <td class="tbl_col_server_id">{tmpl_var name="server_id"}</td>
                     <td class="tbl_col_allservers">{tmpl_var name="allservers"}</td>
                     <td class="tbl_col_buttons">

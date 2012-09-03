@@ -1,6 +1,6 @@
 <!-- begin: toolbar -->
 <div id="moduletoolbar">
-    <a class="button edit" onClick="loadContent('sites/cron_edit.php');" href="#" title="{tmpl_var name='add_new_cron_txt'}">{tmpl_var name="add_new_cron_txt"}</a>
+    <a class="button edit" onclick="loadContent('sites/cron_edit.php');" href="#" title="{tmpl_var name='add_new_cron_txt'}">{tmpl_var name="add_new_cron_txt"}</a>
 </div>
 <!-- end: toolbar -->
 
@@ -36,8 +36,8 @@
                     <td class="tbl_col_run_wday"><input type="text" name="search_run_wday" size="1" value="{tmpl_var name='search_run_wday'}" /></td>
                     <td class="tbl_col_command"><input type="text" name="search_command" value="{tmpl_var name='search_command'}" /></td>
                     <td class="tbl_col_buttons">
-                        <button type="button" class="button icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="submitForm('pageForm','sites/cron_list.php');"><span>{tmpl_var name="filter_txt"}</span></button>
-                        <button type="button" class="button icons16 icoFilterReset" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="#"><span>{tmpl_var name="filter_txt"}</span></button>
+                        <button type="button" class="button icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onclick="submitForm('pageForm','sites/cron_list.php');"><span>{tmpl_var name="filter_txt"}</span></button>
+                        <button type="button" class="button icons16 icoFilterReset" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onclick="#"><span>{tmpl_var name="filter_txt"}</span></button>
                     </td>
                 </tr>
             </thead>
@@ -52,7 +52,7 @@
                     <td class="tbl_col_run_mday">{tmpl_var name="run_mday"}</td>
                     <td class="tbl_col_run_month">{tmpl_var name="run_month"}</td>
                     <td class="tbl_col_run_wday">{tmpl_var name="run_wday"}</td>
-                    <td class="tbl_col_commnd"><a href="#" onClick="loadContent('sites/cron_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="command"}</a></td>
+                    <td class="tbl_col_commnd"><a href="#" onclick="loadContent('sites/cron_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="command"}</a></td>
                     <td class="tbl_col_buttons">
                         <a class="button icons16 icoEdit" href="javascript: loadContent('sites/cron_edit.php?id={tmpl_var name='id'}');"><span>{tmpl_var name='edit_txt'}</span></a>
                         <a class="button icons16 icoDelete" href="javascript: del_record('sites/cron_del.php?id={tmpl_var name='id'}&phpsessid={tmpl_var name='phpsessid'}','{tmpl_var name='delete_confirmation'}');"><span>{tmpl_var name='delete_txt'}</span></a>

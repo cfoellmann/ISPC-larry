@@ -36,15 +36,15 @@
                     <td class="tbl_col_db_server"><select name="search_active">{tmpl_var name='search_db_server'}</select></td>
                     <td class="tbl_col_vserver_server"><select name="search_active">{tmpl_var name='search_vserver_server'}</select></td>
                     <td class="tbl_col_buttons">
-                        <button type="button" class="button icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="submitForm('pageForm','admin/server_list.php');"><span>{tmpl_var name="filter_txt"}</span></button>
-                        <button type="button" class="button icons16 icoFilterReset" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="#"><span>{tmpl_var name="filter_txt"}</span></button>
+                        <button type="button" class="button icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onclick="submitForm('pageForm','admin/server_list.php');"><span>{tmpl_var name="filter_txt"}</span></button>
+                        <button type="button" class="button icons16 icoFilterReset" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onclick="#"><span>{tmpl_var name="filter_txt"}</span></button>
                     </td>
                 </tr>
             </thead>
             <tbody>
             <tmpl_loop name="records">
                 <tr class="tbl_row_<tmpl_if name='__EVEN__'}even<tmpl_else>uneven</tmpl_if>">
-                    <td class="tbl_col_server_name"><a href="#" onClick="loadContent('admin/server_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="server_name"}</a></td>
+                    <td class="tbl_col_server_name"><a href="#" onclick="loadContent('admin/server_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="server_name"}</a></td>
                     <td class="tbl_col_mail_server">{tmpl_var name="mail_server"}</td>
                     <td class="tbl_col_web_server">{tmpl_var name="web_server"}</td>
                     <td class="tbl_col_dns_server">{tmpl_var name="dns_server"}</td>

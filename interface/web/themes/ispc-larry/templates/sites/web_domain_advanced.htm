@@ -16,11 +16,11 @@
 </div>
 
 <!-- begin: modulebody -->
-<div id="module-title"><h1><tmpl_var name="form_hint"> &gt; Erweiterte Optionen</h1></div>
+<div id="module-title"><h1><tmpl_var name="list_head_txt"> &gt; Erweiterte Optionen</h1></div>
 <div class="module-box boxlistcontent" id="modulecontainer">
 
     <!-- desc --> 
-    <div id="module-desc"><tmpl_var name="page_desc_txt"></div>
+    <div id="module-desc"><tmpl_var name="list_desc_txt"></div>
 
     <!-- messages/erros -->  
     <tmpl_if name="msg">
@@ -51,27 +51,46 @@
                 <label for="allow_override">{tmpl_var name='allow_override_txt'}</label>
                 <input name="allow_override" id="allow_override" value="{tmpl_var name='allow_override'}" size="30" maxlength="255" type="text" class="textInput" />
             </div>
-            <div class="ctrlHolder nginx">
+            <div class="phpfpm">
+                <div class="ctrlHolder">
                 <p class="label">{tmpl_var name='php_fpm_use_socket_txt'}</p>
                 <div class="multiField">
                     {tmpl_var name='php_fpm_use_socket'}
                 </div>
             </div>
-            <div class="ctrlHolder nginx">
+                <div class="ctrlHolder">
+                    <label for="pm">{tmpl_var name='pm_txt'}</label>
+                    <select name="pm" id="pm" class="selectInput">
+                        {tmpl_var name='pm'}
+                    </select>
+                </div>
+                <div class="ctrlHolder pm_ondemand" style="background: #ffdfdf; border: 1px solid #df7d7d; border-width: 1px 0; margin: 1.5em 0 1.5em 0; padding: 7px;">
+                    {tmpl_var name='pm_ondemand_hint_txt'}
+                </div>
+                <div class="ctrlHolder">
                 <label for="pm_max_children">{tmpl_var name='pm_max_children_txt'}</label>
                 <input name="pm_max_children" id="pm_max_children" value="{tmpl_var name='pm_max_children'}" size="3" maxlength="3" type="text" class="textInput formLengthLimit" />
             </div>
-            <div class="ctrlHolder nginx">
+                <div class="ctrlHolder pm_dynamic">
                 <label for="pm_start_servers">{tmpl_var name='pm_start_servers_txt'}</label>
                 <input name="pm_start_servers" id="pm_start_servers" value="{tmpl_var name='pm_start_servers'}" size="3" maxlength="3" type="text" class="textInput formLengthLimit" />
             </div>
-            <div class="ctrlHolder nginx">
+                <div class="ctrlHolder pm_dynamic">
                 <label for="pm_min_spare_servers">{tmpl_var name='pm_min_spare_servers_txt'}</label>
                 <input name="pm_min_spare_servers" id="pm_min_spare_servers" value="{tmpl_var name='pm_min_spare_servers'}" size="3" maxlength="3" type="text" class="textInput formLengthLimit" />
             </div>
-            <div class="ctrlHolder nginx">
+                <div class="ctrlHolder pm_dynamic">
                 <label for="pm_max_spare_servers">{tmpl_var name='pm_max_spare_servers_txt'}</label>
                 <input name="pm_max_spare_servers" id="pm_max_spare_servers" value="{tmpl_var name='pm_max_spare_servers'}" size="3" maxlength="3" type="text" class="textInput formLengthLimit" />
+            </div>
+                <div class="ctrlHolder pm_ondemand">
+                    <label for="pm_process_idle_timeout">{tmpl_var name='pm_process_idle_timeout_txt'}</label>
+                    <input name="pm_process_idle_timeout" id="pm_process_idle_timeout" value="{tmpl_var name='pm_process_idle_timeout'}" size="3" maxlength="6" type="text" class="textInput formLengthLimit" />&nbsp;s
+                </div>
+            <div class="ctrlHolder">
+                    <label for="pm_max_requests">{tmpl_var name='pm_max_requests_txt'}</label>
+                    <input name="pm_max_requests" id="pm_max_requests" value="{tmpl_var name='pm_max_requests'}" size="3" maxlength="6" type="text" class="textInput formLengthLimit" />
+                </div>
             </div>
             <div class="ctrlHolder">
                 <label for="php_open_basedir">{tmpl_var name='php_open_basedir_txt'}</label>
@@ -101,6 +120,30 @@
     getServerId();
     adjustForm();
 		
+    var pm = jQuery('#pm').val();
+    pmMode(pm);
+    jQuery('#pm').change(function(){
+        pm = jQuery(this).val();
+        pmMode(pm);
+    });
+		
+    function pmMode(pm){
+        switch(pm){
+            case "static":
+                jQuery('.pm_dynamic').add('.pm_ondemand').hide();
+                jQuery('.pm_static').show();
+                break;
+            case "dynamic":
+                jQuery('.pm_static').add('.pm_ondemand').hide();
+                jQuery('.pm_dynamic').show();
+                break;
+            case "ondemand":
+                jQuery('.pm_static').add('.pm_dynamic').hide();
+                jQuery('.pm_ondemand').show();
+                break;
+        }
+    }
+		
     function getServerId(){
         jQuery.getJSON('sites/ajax_get_json.php'+ '?' + Math.round(new Date().getTime()), {web_id : webId, type : "getserverid"}, function(data) {
             serverId = data.serverid;
@@ -116,6 +159,13 @@
                 jQuery('.nginx').hide();
                 jQuery('.apache').show();
             }
+        });
+        jQuery.getJSON('sites/ajax_get_json.php'+ '?' + Math.round(new Date().getTime()), {web_id : webId, type : "getphptype"}, function(data) {
+            if(data.phptype == "php-fpm"){
+                jQuery('.phpfpm').show();
+            } else {
+                jQuery('.phpfpm').hide();
+    }
         });
     }
 			

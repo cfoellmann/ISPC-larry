@@ -10,17 +10,17 @@
         </tmpl_loop>
     </ul>
     <ul class="tabsbar-buttons">
-        <li><a href="javascript:submitForm('pageForm','sites/web_domain_edit.php');" title="{tmpl_var name='btn_save_txt'}" class="positive iconstxt icoPositive"><span>{tmpl_var name='btn_save_txt'}</span></a></li>
+        <li><a id="dom-edit-submit" href="javascript:submitForm('pageForm','sites/web_domain_edit.php');" title="{tmpl_var name='btn_save_txt'}" class="positive iconstxt icoPositive"><span>{tmpl_var name='btn_save_txt'}</span></a></li>
         <li><a href="javascript:loadContent('sites/web_domain_list.php');" title="{tmpl_var name='btn_cancel_txt'}" class="negative iconstxt icoNegative"><span>{tmpl_var name='btn_cancel_txt'}</span></a></li>
     </ul>
 </div>
 
 <!-- begin: modulebody -->
-<div id="module-title"><h1><tmpl_var name="form_hint"></h1></div>
+<div id="module-title"><h1><tmpl_var name="list_head_txt"></h1></div>
 <div class="module-box boxlistcontent" id="modulecontainer">
 
     <!-- desc --> 
-    <div id="module-desc"><tmpl_var name="page_desc_txt"></div>
+    <div id="module-desc"><tmpl_var name="list_desc_txt"></div>
 
     <!-- messages/erros -->  
     <tmpl_if name="msg">
@@ -32,7 +32,7 @@
 
     <!-- begin: modulecontent -->
     <div class="panel panel_web_domain">
-        <div class="subsectiontoggle"><span class="showing"></span>Circle Settings<em class="showing"></em></div>
+        <div class="subsectiontoggle"><span class="showing"></span><tmpl_var name="list_head_txt"><em class="showing"></em></div>
         <div class="subsection">
             <tmpl_if name="is_admin">
                 <div class="ctrlHolder">
@@ -90,48 +90,54 @@
             </div>
             <div class="ctrlHolder">
                 <label for="hd_quota">{tmpl_var name='hd_quota_txt'}</label>
-                <input name="hd_quota" id="hd_quota" value="{tmpl_var name='hd_quota'}" size="7" maxlength="7" type="text" class="textInput formLengthLimit" />&nbsp;MB (-1 &Rightarrow; &infin;)
+                <input name="hd_quota" id="hd_quota" value="{tmpl_var name='hd_quota'}" size="7" maxlength="7" type="text" class="textInput formLengthLimit" />&nbsp;MB
             </div>
             <div class="ctrlHolder">
                 <label for="traffic_quota">{tmpl_var name='traffic_quota_txt'}</label>
-                <input name="traffic_quota" id="traffic_quota" value="{tmpl_var name='traffic_quota'}" size="7" maxlength="7" type="text" class="textInput formLengthLimit" />&nbsp;MB (-1 &Rightarrow; &infin;) <tmpl_var name='traffic_quota_exceeded_txt'>
+                <input name="traffic_quota" id="traffic_quota" value="{tmpl_var name='traffic_quota'}" size="7" maxlength="7" type="text" class="textInput formLengthLimit" />&nbsp;MB <tmpl_var name='traffic_quota_exceeded_txt'>
             </div>
-            <div class="ctrlHolder">
-                <label for="cgi">{tmpl_var name='cgi_txt'}</label>
+            <tmpl_if name="limit_cgi" op="==" value="y"><div class="ctrlHolder">
+                <p class="label">{tmpl_var name='cgi_txt'}</p>
                 <div class="multiField">
                     {tmpl_var name='cgi'}
                 </div>
-            </div>
-            <div class="ctrlHolder">
-                <label for="ssi">{tmpl_var name='ssi_txt'}</label>
+            </div></tmpl_if>
+            <tmpl_if name="limit_ssi" op="==" value="y"><div class="ctrlHolder">
+                <p class="label">{tmpl_var name='ssi_txt'}</p>
                 <div class="multiField">
                     {tmpl_var name='ssi'}
                 </div>
+            </div></tmpl_if>
+            <tmpl_if name="limit_perl" op="==" value="y"><div class="ctrlHolder apache">
+                <p class="label">{tmpl_var name='perl_txt'}</p>
+                <div class="multiField">
+                    {tmpl_var name='perl'}
             </div>
-            <div class="ctrlHolder apache">
-                <label for="ruby">{tmpl_var name='ruby_txt'}</label>
+            </div></tmpl_if>
+            <tmpl_if name="limit_ruby" op="==" value="y"><div class="ctrlHolder apache">
+                <p class="label">{tmpl_var name='ruby_txt'}</p>
                 <div class="multiField">
                     {tmpl_var name='ruby'}
                 </div>
-            </div>
-            <div class="ctrlHolder apache">
-                <label for="python">{tmpl_var name='python_txt'}</label>
+            </div></tmpl_if>
+            <tmpl_if name="limit_python" op="==" value="y"><div class="ctrlHolder apache">
+                <p class="label">{tmpl_var name='python_txt'}</p>
                 <div class="multiField">
                     {tmpl_var name='python'}
                 </div>
-            </div>
-            <div class="ctrlHolder apache">
-                <label for="suexec">{tmpl_var name='suexec_txt'}</label>
+            </div></tmpl_if>
+            <tmpl_if name="force_suexec" op="==" value="n"><div class="ctrlHolder apache">
+                <p class="label">{tmpl_var name='suexec_txt'}</p>
                 <div class="multiField">
                     {tmpl_var name='suexec'}
                 </div>
-            </div>
-            <div class="ctrlHolder">
-                <label for="errordocs">{tmpl_var name='errordocs_txt'}</label>
+            </div></tmpl_if>
+            <tmpl_if name="limit_hterror" op="==" value="y"><div class="ctrlHolder">
+                <p class="label">{tmpl_var name='errordocs_txt'}</p>
                 <div class="multiField">
                     {tmpl_var name='errordocs'}
                 </div>
-            </div>
+            </div></tmpl_if>
 
             <div class="ctrlHolder">
                 <label for="subdomain">{tmpl_var name='subdomain_txt'}</label>
@@ -139,12 +145,12 @@
                     {tmpl_var name='subdomain'}
                 </select>
             </div>
-            <div class="ctrlHolder">
-                <label for="ssl">{tmpl_var name='ssl_txt'}</label>
+            <tmpl_if name="limit_ssl" op="==" value="y"><div class="ctrlHolder">
+                <p class="label">{tmpl_var name='ssl_txt'}</p>
                 <div class="multiField">
                     {tmpl_var name='ssl'}
                 </div>
-            </div>
+            </div></tmpl_if>
             <div class="ctrlHolder">
                 <label for="php">{tmpl_var name='php_txt'}</label>
                 <select name="php" id="php" class="selectInput formLengthHalf">
@@ -158,7 +164,7 @@
                 </select>
             </div>
             <div class="ctrlHolder">
-                <label for="active">{tmpl_var name='active_txt'}</label>
+                <p class="label">{tmpl_var name='active_txt'}</p>
                 <div class="multiField">
                     {tmpl_var name='active'}
                 </div>
@@ -169,7 +175,6 @@
 
     </div><!-- end: modulecontent -->
 </div><!-- end: modulebody -->
-
 <script language="JavaScript" type="text/javascript">
     var serverId;
     var clientGroupId = jQuery('#client_group_id').val();
@@ -182,13 +187,29 @@
             serverId = $(this).val();
             adjustForm();
             reloadWebIP();
+            reloadFastcgiPHPVersions();
         });
     }
     adjustForm();
+    reloadFastcgiPHPVersions();
 		
     jQuery('#client_group_id').change(function(){
         clientGroupId = $(this).val();
         reloadWebIP();
+    });
+		
+    if(jQuery('#php').val() == 'fast-cgi' || jQuery('#php').val() == 'php-fpm'){
+        jQuery('.fastcgi_php_version:hidden').show();
+    } else {
+        jQuery('.fastcgi_php_version:visible').hide();
+    }
+    jQuery('#php').change(function(){
+        reloadFastcgiPHPVersions();
+        if(jQuery(this).val() == 'fast-cgi' || jQuery(this).val() == 'php-fpm'){
+            jQuery('.fastcgi_php_version:hidden').show();
+        } else {
+            jQuery('.fastcgi_php_version:visible').hide();
+        }
     });
 		
     function adjustForm(){
@@ -197,13 +218,15 @@
                 var selected = jQuery('#php').val();
                 jQuery('.apache').hide();
                 jQuery('.apache').hide();
+                jQuery('#php option[value="fast-cgi"]').hide();
                 jQuery('#php option[value="cgi"]').hide();
                 jQuery('#php option[value="mod"]').hide();
                 jQuery('#php option[value="suphp"]').hide();
-                if(selected != "no" && selected != "fast-cgi") jQuery('#php option[value="fast-cgi"]').attr('selected', 'selected');
+                if(selected != "no" && selected != "php-fpm") jQuery('#php option[value="php-fpm"]').attr('selected', 'selected');
             } else {
                 jQuery('.apache').show();
                 jQuery('.apache').show();
+                jQuery('#php option[value="fast-cgi"]').show();
                 jQuery('#php option[value="cgi"]').show();
                 jQuery('#php option[value="mod"]').show();
                 jQuery('#php option[value="suphp"]').show();
@@ -215,5 +238,36 @@
         loadOptionInto('ip_address','sites/ajax_get_ip.php?ip_type=IPv4&server_id='+serverId+'&client_group_id='+clientGroupId);
         loadOptionInto('ipv6_address','sites/ajax_get_ip.php?ip_type=IPv6&server_id='+serverId+'&client_group_id='+clientGroupId);
     }
+			
+    function reloadFastcgiPHPVersions() {
+        jQuery.getJSON('sites/ajax_get_json.php'+ '?' + Math.round(new Date().getTime()), {server_id : serverId, php_type : jQuery('#php').val(), type : "getphpfastcgi"}, function(data) {
+            var options = '<option value="">Default</option>';
+            var phpfastcgiselected = '';
+            $.each(data, function(key, val) {
+                if($('#fastcgi_php_version').val() == key){
+                    phpfastcgiselected = ' selected="selected"';
+                } else {
+                    phpfastcgiselected = '';
+                }
+                options += '<option value="'+key+'"'+phpfastcgiselected+'>'+val+'</option>';
+            });
+            $('#fastcgi_php_version').html(options);
+        });
+    }
+    
+    <tmpl_if name="readonly_tab">
+        jQuery('div.panel_web_domain').find('fieldset').find('input,select,button').attr('disabled', 'disabled');
+        jQuery('div.tabbox_tabs').find('a').click(function() {
+               jQuery('div.panel_web_domain').find('fieldset').find('input,select,button').removeAttr('disabled');
+        });
+        jQuery('#dom-edit-submit').click(function() {
+               jQuery('div.panel_web_domain').find('fieldset').find('input,select,button').removeAttr('disabled');
+               submitForm('pageForm','sites/web_domain_edit.php');
+        });
+    <tmpl_else>
+        jQuery('#dom-edit-submit').click(function() {
+            submitForm('pageForm','sites/web_domain_edit.php');
+        });
+    </tmpl_if>
 			
 </script>

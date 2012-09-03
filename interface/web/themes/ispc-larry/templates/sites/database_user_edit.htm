@@ -1,0 +1,78 @@
+<!-- tabs -->
+<div id="tabs">
+    <ul class="tabsbar">
+        <tmpl_loop name="formTab">
+            <tmpl_if name="active">
+                <li class="active"><a href="javascript:changeTab('<tmpl_var name='name'>','<tmpl_var name='app_module'>/<tmpl_var name='form_action'>')"><tmpl_var name='title'></a></li>
+                <tmpl_else>
+                    <li><a href="javascript:changeTab('<tmpl_var name='name'>','<tmpl_var name='app_module'>/<tmpl_var name='form_action'>')"><tmpl_var name='title'></a></li>
+            </tmpl_if>
+        </tmpl_loop>
+    </ul>
+        <ul class="tabsbar-buttons">
+        <li><a href="javascript:submitForm('pageForm','sites/database_user_edit.php');" title="{tmpl_var name='btn_save_txt'}" class="positive iconstxt icoPositive"><span>{tmpl_var name='btn_save_txt'}</span></a></li>
+        <li><a href="javascript:loadContent('sites/database_user_list.php');" title="{tmpl_var name='btn_cancel_txt'}" class="negative iconstxt icoNegative"><span>{tmpl_var name='btn_cancel_txt'}</span></a></li>
+    </ul>
+</div>
+
+<!-- begin: modulebody -->
+<div id="module-title"><h1><tmpl_var name="list_head_txt"></h1></div>
+<div class="module-box boxlistcontent" id="modulecontainer">
+
+    <!-- desc -->
+    <div id="module-desc"><tmpl_var name="list_desc_txt"></div>
+
+    <!-- messages/erros --> 
+    <tmpl_if name="msg">
+        <div id="OKMsg"><p><tmpl_var name="msg"></p></div>
+    </tmpl_if>
+    <tmpl_if name="error">
+        <div id="errorMsg"><h3>ERROR</h3><ol><tmpl_var name="error"></ol></div>
+    </tmpl_if>
+
+    <!-- begin: modulecontent -->
+    <div class="panel panel_database_user">
+        <div class="subsectiontoggle"><span class="showing"></span>Circle Settings<em class="showing"></em></div>
+        <div class="subsection">
+            <tmpl_if name="is_admin">
+                <div class="ctrlHolder">
+                    <label for="client_group_id">{tmpl_var name='client_txt'}</label>
+                    <select name="client_group_id" id="client_group_id" class="selectInput">
+                        {tmpl_var name='client_group_id'}
+                    </select>
+                </div>
+            </tmpl_if>
+            <tmpl_if name="is_reseller">
+                <div class="ctrlHolder">
+                    <label for="client_group_id">{tmpl_var name='client_txt'}</label>
+                    <select name="client_group_id" id="client_group_id" class="selectInput">
+                        {tmpl_var name='client_group_id'}
+                    </select>
+                </div>
+            </tmpl_if>
+            <div class="ctrlHolder">
+                <label for="database_user">{tmpl_var name='database_user_txt'}</label>
+                <p class="prefix">{tmpl_var name='database_user_prefix'}</p>
+                <input name="database_user" id="database_user" value="{tmpl_var name='database_user'}" size="30" maxlength="255" type="text" class="textInput formLengthHalf" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="database_password">{tmpl_var name='database_password_txt'}</label>
+                <input name="database_password" id="database_password" value="{tmpl_var name='database_password'}" size="30" maxlength="255" type="password" class="textInput formLengthHalf" onkeyup="pass_check(this.value);checkPassMatch('database_password','repeat_password');" />&nbsp;<a href="javascript:void(0);" onclick="generatePassword('database_password','repeat_password');">{tmpl_var name='generate_password_txt'}</a>
+            </div>
+            <div class="ctrlHolder">
+                <p class="label">{tmpl_var name='password_strength_txt'}</p>
+                <div id="passBar"></div>
+                <p class="formHint"><span id="passText">&nbsp;</span></p>
+            </div>
+            <div class="ctrlHolder">
+                <label for="repeat_password">{tmpl_var name='repeat_password_txt'}</label>
+                <input name="repeat_password" id="repeat_password" value="" size="15" maxlength="100" type="password" class="textInput" style="width:100px;"  onkeyup="checkPassMatch('database_password','repeat_password');" />
+                <div id="confirmpasswordError" style="display:none;" class="confirmpassworderror">{tmpl_var name='password_mismatch_txt'}</div>
+                <div id="confirmpasswordOK" style="display:none;" class="confirmpasswordok">{tmpl_var name='password_match_txt'}</div>
+            </div>            
+        </div>
+
+        <input type="hidden" name="id" value="{tmpl_var name='id'}">
+
+    </div><!-- end: modulecontent -->
+</div><!-- end: modulebody -->

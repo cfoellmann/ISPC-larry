@@ -20,8 +20,8 @@
 <div class="module-box boxlistcontent" id="modulecontainer">
 
     <div class="buttonHolder buttons">
-        <button class="positive iconstxt icoPositive" type="button" value="{tmpl_var name='btn_save_txt'}" onClick="submitForm('pageForm','mail/mail_forward_edit.php');"><span>{tmpl_var name='btn_save_txt'}</span></button>
-        <button class="negative iconstxt icoNegative" type="button" value="{tmpl_var name='btn_cancel_txt'}" onClick="loadContent('mail/mail_forward_list.php');"><span>{tmpl_var name='btn_cancel_txt'}</span></button>
+        <button class="positive iconstxt icoPositive" type="button" value="{tmpl_var name='btn_save_txt'}" onclick="submitForm('pageForm','mail/mail_forward_edit.php');"><span>{tmpl_var name='btn_save_txt'}</span></button>
+        <button class="negative iconstxt icoNegative" type="button" value="{tmpl_var name='btn_cancel_txt'}" onclick="loadContent('mail/mail_forward_list.php');"><span>{tmpl_var name='btn_cancel_txt'}</span></button>
     </div>
 
     <!-- desc -->
@@ -37,18 +37,14 @@
 
     <!-- begin: modulecontent -->
     <div class="panel panel_mail_forward">
-        <div class="subsectiontoggle"><span class="showing"></span>User Groups<em class="showing"></em></div>
+        <div class="subsectiontoggle"><span class="showing"></span>{tmpl_var name='email_txt'}<em class="showing"></em></div>
         <div class="subsection">
             <div class="ctrlHolder">
                 <p class="label"> {tmpl_var name='email_txt'} <em>*</em></p>
                 <div class="multiField">
-                    <!--                <label for="email_local_part" class="blockLabel">Alias</label>-->
-                    <input type="text" id="email_local_part" name="email_local_part" size="20" value="{tmpl_var name='email_local_part'}" class="textInput" />
-                    <!--                <label for="email_at" class="blockLabel email_at"></label>-->
-                    &nbsp;@
-                    <!--                <label for="email_domain" class="blockLabel">{tmpl_var name='domain_txt'}</label>-->
-                    <select name="email_domain" id="email_domain" class="selectInput">{tmpl_var name='email_domain'}</select>
-                    <br style="clear: both" />
+                    <label for="email_local_part" class="blockLabel">Alias<input type="text" id="email_local_part" name="email_local_part" size="20" value="{tmpl_var name='email_local_part'}" class="textInput" /></label>
+                    <label for="email_at" class="blockLabel email_at">&nbsp;<span id="email_at" name="email_at" />@</label>
+                    <label for="email_domain" class="blockLabel">{tmpl_var name='domain_txt'}<select name="email_domain" id="email_domain" class="selectInput">{tmpl_var name='email_domain'}</select></label>
                 </div>
             </div>
             <div class="ctrlHolder">

@@ -34,9 +34,9 @@
             <tbody>
             <tmpl_loop name="records">
             <tr class="tbl_row_<tmpl_if name='__EVEN__'}even<tmpl_else>uneven</tmpl_if>">
-                <td class="tbl_col_module"><a href="#" onClick="loadContent('admin/language_edit.php?lang_file={tmpl_var name="lang_file"}&module={tmpl_var name="module"}&lang={tmpl_var name="lang"}');">{tmpl_var name="module"}</a></td>
-                <td class="tbl_col_lang_file"><a href="#" onClick="loadContent('admin/language_edit.php?lang_file={tmpl_var name="lang_file"}&module={tmpl_var name="module"}&lang={tmpl_var name="lang"}');">{tmpl_var name="lang_file"}</a></td>
-                <td><a href="#" onClick="loadContent('admin/language_edit.php?lang_file={tmpl_var name="lang_file"}&module={tmpl_var name="module"}&lang={tmpl_var name="lang"}');">{tmpl_var name="lang_file_date"}</a></td>
+                <td class="tbl_col_module"><a href="#" onclick="loadContent('admin/language_edit.php?lang_file={tmpl_var name="lang_file"}&module={tmpl_var name="module"}&lang={tmpl_var name="lang"}');">{tmpl_var name="module"}</a></td>
+                <td class="tbl_col_lang_file"><a href="#" onclick="loadContent('admin/language_edit.php?lang_file={tmpl_var name="lang_file"}&module={tmpl_var name="module"}&lang={tmpl_var name="lang"}');">{tmpl_var name="lang_file"}</a></td>
+                <td><a href="#" onclick="loadContent('admin/language_edit.php?lang_file={tmpl_var name="lang_file"}&module={tmpl_var name="module"}&lang={tmpl_var name="lang"}');">{tmpl_var name="lang_file_date"}</a></td>
             </tr>
             </tmpl_loop>
             </tbody>

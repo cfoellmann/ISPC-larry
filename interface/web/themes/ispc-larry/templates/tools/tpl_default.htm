@@ -1,0 +1,36 @@
+<!-- tabs -->
+<div id="tabs">
+    <ul class="tabsbar">
+        <tmpl_loop name="formTab">
+            <tmpl_if name="active">
+                <li class="active"><a href="javascript:changeTab('<tmpl_var name='name'>','<tmpl_var name='app_module'>/<tmpl_var name='form_action'>')"><tmpl_var name='title'></a></li>
+                <tmpl_else>
+                    <li><a href="javascript:changeTab('<tmpl_var name='name'>','<tmpl_var name='app_module'>/<tmpl_var name='form_action'>')"><tmpl_var name='title'></a></li>
+            </tmpl_if>
+        </tmpl_loop>
+    </ul>
+    <ul class="tabsbar-buttons">
+<!--    <li><a href="javascript:submitForm('pageForm','tools/tpl_default.php');" title="{tmpl_var name='btn_save_txt'}" class="positive iconstxt icoPositive"><span>{tmpl_var name='btn_save_txt'}</span></a></li>-->
+        <li><a href="javascript:loadContent('tools/index.php');" title="{tmpl_var name='btn_cancel_txt'}" class="negative iconstxt icoNegative"><span>{tmpl_var name='btn_cancel_txt'}</span></a></li>
+    </ul>
+</div>
+
+<!-- begin: modulebody -->
+<div id="module-title"><h1><tmpl_var name="list_head_txt"></h1></div>
+<div class="module-box boxlistcontent" id="modulecontainer">
+    
+    <!-- desc -->
+    <div id="module-desc"><tmpl_var name="list_desc_txt"></div>
+
+    <!-- begin: modulecontent -->
+    <div class="panel panel_tools_tpl">
+
+    <div class="pnl_formsarea">
+            <div class="ctrlHolder">
+                <p><tmpl_var name="no_settings_txt"></p>
+            </div>
+        
+        <input type="hidden" name="id" value="{tmpl_var name='id'}">
+
+    </div><!-- end: modulecontent -->
+</div><!-- end: modulebody -->

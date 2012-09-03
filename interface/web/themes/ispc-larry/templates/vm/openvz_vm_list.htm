@@ -1,6 +1,6 @@
 <!-- begin: toolbar -->
 <div id="moduletoolbar">
-    <a class="button edit" onClick="loadContent('vm/openvz_vm_edit.php');" href="#" title="{tmpl_var name="add_new_record_txt"}">{tmpl_var name="add_new_record_txt"}</a>
+    <a class="button edit" onclick="loadContent('vm/openvz_vm_edit.php');" href="#" title="{tmpl_var name="add_new_record_txt"}">{tmpl_var name="add_new_record_txt"}</a>
 </div>
 <!-- end: toolbar -->
 
@@ -10,14 +10,6 @@
     
     <!-- desc -->
     <div id="module-desc"><tmpl_var name="list_desc_txt"></div>
-
-    <!-- messages/erros -->  
-    <tmpl_if name="msg">
-        <div id="OKMsg"><p><tmpl_var name="msg"></p></div>
-    </tmpl_if>
-    <tmpl_if name="error">
-        <div id="errorMsg"><h3>ERROR</h3><ol><tmpl_var name="error"></ol></div>
-    </tmpl_if>
     
     <!-- begin: modulecontent -->
     <div class="panel panel_list_openvz_vm">
@@ -42,8 +34,8 @@
                     <td class="tbl_col_hostname"><input type="text" name="search_hostname" value="{tmpl_var name='search_hostname'}" /></td>
                     <td class="tbl_col_ip_address"><input type="text" name="search_ip_address" value="{tmpl_var name='search_ip_address'}" /></td>
                     <td class="tbl_col_buttons">
-                        <button type="button" class="button icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="submitForm('pageForm','vm/openvz_vm_list.php');"><span>{tmpl_var name="filter_txt"}</span></button>
-                        <button type="button" class="button icons16 icoFilterReset" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="#"><span>{tmpl_var name="filter_txt"}</span></button>
+                        <button type="button" class="button icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onclick="submitForm('pageForm','vm/openvz_vm_list.php');"><span>{tmpl_var name="filter_txt"}</span></button>
+                        <button type="button" class="button icons16 icoFilterReset" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onclick="#"><span>{tmpl_var name="filter_txt"}</span></button>
                     </td>
                 </tr>
             </thead>
@@ -55,7 +47,7 @@
                     <td class="tbl_col_server_id">{tmpl_var name="server_id"}</td>
                     <td class="tbl_col_ostemplate_id">{tmpl_var name="ostemplate_id"}</td>
                     <td class="tbl_col_template_id">{tmpl_var name="template_id"}</td>
-                    <td class="tbl_col_hostname"><a href="#" onClick="loadContent('vm/openvz_vm_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="hostname"}</a></td>
+                    <td class="tbl_col_hostname"><a href="#" onclick="loadContent('vm/openvz_vm_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="hostname"}</a></td>
                     <td class="tbl_col_ip_address">{tmpl_var name="ip_address"}</td>
                     <td class="tbl_col_buttons">
                         <a class="button icons16 icoEdit" href="javascript: loadContent('vm/openvz_vm_edit.php?id={tmpl_var name='id'}');"><span>{tmpl_var name='edit_txt'}</span></a>

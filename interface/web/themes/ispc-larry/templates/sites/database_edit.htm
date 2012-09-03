@@ -16,11 +16,11 @@
 </div>
 
 <!-- begin: modulebody -->
-<div id="module-title"><h1><tmpl_var name="form_hint"></h1></div>
+<div id="module-title"><h1><tmpl_var name="list_head_txt"></h1></div>
 <div class="module-box boxlistcontent" id="modulecontainer">
 
     <!-- desc -->
-    <div id="module-desc"><tmpl_var name="page_desc_txt"></div>
+    <div id="module-desc"><tmpl_var name="list_desc_txt"></div>
 
     <!-- messages/erros --> 
     <tmpl_if name="msg">
@@ -42,7 +42,7 @@
                             {tmpl_var name='server_id'}
                         </select>
                         <input type="hidden" name="server_id" value="{tmpl_var name='server_id_value'}" />
-                        <tmpl_else>
+                    <tmpl_else>
                             <label for="server_id">{tmpl_var name='server_id_txt'}</label>
                             <select name="server_id" id="server_id" class="selectInput">
                                 {tmpl_var name='server_id'}
@@ -73,24 +73,16 @@
                 </tmpl_if>
             </div>
             <div class="ctrlHolder">
-                <label for="database_user">{tmpl_var name='database_user_txt'}</label>
-                <p class="prefix">{tmpl_var name='database_user_prefix'}</p>
-                <input name="database_user" id="database_user" value="{tmpl_var name='database_user'}" size="30" maxlength="255" type="text" class="textInput formLengthHalf" />
+                <label for="database_user_id">{tmpl_var name='database_user_txt'}</label>
+                <select name="database_user_id" id="database_user_id" class="selectInput">
+                    {tmpl_var name='database_user_id'}
+                </select>
             </div>
             <div class="ctrlHolder">
-                <label for="database_password">{tmpl_var name='database_password_txt'}</label>
-                <input name="database_password" id="database_password" value="{tmpl_var name='database_password'}" size="30" maxlength="255" type="password" class="textInput formLengthHalf" onkeyup="pass_check(this.value);checkPassMatch('database_password','repeat_password');" />&nbsp;<a href="javascript:void(0);" onClick="generatePassword('database_password','repeat_password');">{tmpl_var name='generate_password_txt'}</a>
-            </div>
-            <div class="ctrlHolder">
-                <p class="label">{tmpl_var name='password_strength_txt'}</p>
-                <div id="passBar"></div>
-                <p class="formHint"><span id="passText">&nbsp;</span></p>
-            </div>
-            <div class="ctrlHolder">
-                <label for="repeat_password">{tmpl_var name='repeat_password_txt'}</label>
-                <input name="repeat_password" id="repeat_password" value="" size="15" maxlength="100" type="password" class="textInput" onkeyup="checkPassMatch('database_password','repeat_password');" />
-                <div id="confirmpasswordError" style="display:none;" class="confirmpassworderror">{tmpl_var name='password_mismatch_txt'}</div>
-                <div id="confirmpasswordOK" style="display:none;" class="confirmpasswordok">{tmpl_var name='password_match_txt'}</div>
+                <label for="database_ro_user_id">{tmpl_var name='database_ro_user_txt'}</label>
+                <select name="database_ro_user_id" id="database_ro_user_id" class="selectInput">
+                    {tmpl_var name='database_ro_user_id'}
+                </select>&nbsp;{tmpl_var name='optional_txt'}
             </div>
             <div class="ctrlHolder">
                 <tmpl_if name="edit_disabled">

@@ -10,14 +10,6 @@
     
     <!-- desc -->
     <div id="module-desc"><tmpl_var name="page_desc_txt"></div>
-    
-    <!-- messages/erros -->  
-    <tmpl_if name="msg">
-        <div id="OKMsg"><p><tmpl_var name="msg"></p></div>
-    </tmpl_if>
-    <tmpl_if name="error">
-        <div id="errorMsg"><h3>ERROR</h3><ol><tmpl_var name="error"></ol></div>
-    </tmpl_if>
 
     <!-- begin: modulecontent -->
     <div class="panel panel_tools_interface">
@@ -28,8 +20,5 @@
 
         <input type="hidden" name="id" value="{tmpl_var name='id'}">
 
-        <div class="buttonHolder buttons">
-            &nbsp;
-        </div>
     </div><!-- end: modulecontent -->
 </div><!-- end: modulebody -->

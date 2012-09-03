@@ -1,6 +1,6 @@
 <!-- begin: toolbar -->
 <div id="moduletoolbar">
-    <a class="button edit" onClick="loadContent('admin/server_php_edit.php');" href="#" title="{tmpl_var name="add_new_record_txt"}">{tmpl_var name="add_new_record_txt"}</a>
+    <a class="button edit" onclick="loadContent('admin/server_php_edit.php');" href="#" title="{tmpl_var name="add_new_record_txt"}">{tmpl_var name="add_new_record_txt"}</a>
 </div>
 <!-- end: toolbar -->
 
@@ -17,7 +17,7 @@
             <thead>
             <tr class="caption">
                 <th class="tbl_col_server_id" scope="col"><tmpl_var name="server_id_txt"></th>
-                <th class="tbl_col_client" scope="col"><tmpl_var name="client_id_txt"></th>
+                <th class="tbl_col_clientname" scope="col"><tmpl_var name="client_id_txt"></th>
                 <th class="tbl_col_phpname" scope="col"><tmpl_var name="name_txt"></th>
                 <th class="tbl_col_limit" scope="col"><a class="button icons16 icoLimit" href="#"><span>Limit</span></a>{tmpl_var name='search_limit'}</th>
             </tr>
@@ -26,8 +26,8 @@
                 <td class="tbl_col_clientname"><select name="search_client_id">{tmpl_var name='search_client_id'}</select></td>
                 <td class="tbl_col_phpname"><input type="text" name="search_name" value="{tmpl_var name='search_name'}" /></td>
                 <td class="tbl_col_buttons">
-                    <button type="button" class="button icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="submitForm('pageForm','admin/server_php_list.php');"><span>{tmpl_var name="filter_txt"}</span></button>
-                    <button type="button" class="button icons16 icoFilterReset" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="#"><span>{tmpl_var name="filter_txt"}</span></button>
+                    <button type="button" class="button icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onclick="submitForm('pageForm','admin/server_php_list.php');"><span>{tmpl_var name="filter_txt"}</span></button>
+                    <button type="button" class="button icons16 icoFilterReset" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onclick="#"><span>{tmpl_var name="filter_txt"}</span></button>
                 </td>
             </tr>
             </thead>
@@ -35,8 +35,8 @@
             <tmpl_loop name="records">
             <tr class="tbl_row_<tmpl_if name='__EVEN__'}even<tmpl_else>uneven</tmpl_if>">
                 <td class="tbl_col_server_id">{tmpl_var name="server_id"}</td>
-                <td class="tbl_col_client">{tmpl_var name="client_id"}</td>
-                <td class="tbl_col_phpname"><a href="#" onClick="loadContent('admin/server_php_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="name"}</a></td>
+                <td class="tbl_col_clientname">{tmpl_var name="client_id"}</td>
+                <td class="tbl_col_phpname"><a href="#" onclick="loadContent('admin/server_php_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="name"}</a></td>
                 <td class="tbl_col_buttons"> 
                     <a class="button icons16 icoEdit" href="javascript: loadContent('admin/server_php_edit.php?id={tmpl_var name='id'}');"><span>{tmpl_var name='edit_txt'}</span></a>
                     <a class="button icons16 icoDelete" href="javascript: del_record('admin/server_php_del.php?id={tmpl_var name='id'}&phpsessid={tmpl_var name='phpsessid'}','{tmpl_var name='delete_confirmation'}');"><span>{tmpl_var name='delete_txt'}</span></a>

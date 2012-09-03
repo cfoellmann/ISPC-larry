@@ -1,6 +1,6 @@
 <!-- begin: toolbar -->
 <div id="moduletoolbar">
-    <a class="button edit" onClick="loadContent('sites/webdav_user_edit.php');" href="#" title="{tmpl_var name="add_new_record_txt"}">{tmpl_var name="add_new_record_txt"}</a>
+    <a class="button edit" onclick="loadContent('sites/webdav_user_edit.php');" href="#" title="{tmpl_var name="add_new_record_txt"}">{tmpl_var name="add_new_record_txt"}</a>
 </div>
 <!-- end: toolbar -->
 
@@ -26,8 +26,8 @@
                     <td class="tbl_col_parent_domain_id"><select name="search_parent_domain_id">{tmpl_var name='search_parent_domain_id'}</select></td>
                     <td class="tbl_col_username"><input type="text" name="search_username" value="{tmpl_var name='search_username'}" /></td>
                     <td class="tbl_col_buttons">
-                        <button type="button" class="button icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="submitForm('pageForm','sites/webdav_user_list.php');"><span>{tmpl_var name="filter_txt"}</span></button>
-                        <button type="button" class="button icons16 icoFilterReset" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="#"><span>{tmpl_var name="filter_txt"}</span></button>
+                        <button type="button" class="button icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onclick="submitForm('pageForm','sites/webdav_user_list.php');"><span>{tmpl_var name="filter_txt"}</span></button>
+                        <button type="button" class="button icons16 icoFilterReset" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onclick="#"><span>{tmpl_var name="filter_txt"}</span></button>
                     </td>
                 </tr>
             </thead>
@@ -37,7 +37,7 @@
                     <td class="tbl_col_active">{tmpl_var name="active"}</td>
                     <td class="tbl_col_server_id">{tmpl_var name="server_id"}</td>
                     <td class="tbl_col_parent_domain_id">{tmpl_var name="parent_domain_id"}</td>
-                    <td class="tbl_col_username"><a href="#" onClick="loadContent('sites/webdav_user_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="username"}</a></td>
+                    <td class="tbl_col_username"><a href="#" onclick="loadContent('sites/webdav_user_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="username"}</a></td>
                     <td class="tbl_col_buttons">
                         <a class="button icons16 icoEdit" href="javascript: loadContent('sites/webdav_user_edit.php?id={tmpl_var name='id'}');"><span>{tmpl_var name='edit_txt'}</span></a>
                         <a class="button icons16 icoDelete" href="javascript: del_record('sites/webdav_user_del.php?id={tmpl_var name='id'}&phpsessid={tmpl_var name='phpsessid'}','{tmpl_var name='delete_confirmation'}');"><span>{tmpl_var name='delete_txt'}</span></a>

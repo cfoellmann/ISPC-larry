@@ -16,7 +16,7 @@
 </div>
 
 <!-- begin: modulebody -->
-<div id="module-title"><h1>Zone File Import</h1></div>
+<div id="module-title"><h1><tmpl_var name="list_head_txt"></h1></div>
 <div class="module-box boxlistcontent" id="modulecontainer">
 
     <!-- desc -->
@@ -32,7 +32,7 @@
 
     <!-- begin: modulecontent -->
     <div class="panel panel_dns_wizard">
-        <div class="subsectiontoggle"><span class="showing"></span>Import Details<em class="showing"></em></div>
+        <div class="subsectiontoggle"><span class="showing"></span><tmpl_var name="zone_file_import_txt"><em class="showing"></em></div>
         <div class="subsection">
             <tmpl_if name="is_admin">
                 <div class="ctrlHolder">
@@ -50,8 +50,7 @@
             </tmpl_if>
             <div class="ctrlHolder">
                 <label for="domain">{tmpl_var name='domain_txt'}</label>
-                <input name="domain" id="domain" value="{tmpl_var name='domain'}" size="30" maxlength="255" type="text" class="textInput" onkeydown="keydown(event.which);" />
-                {tmpl_var name='domain_field_desc_txt'}
+                <input name="domain" id="domain" value="{tmpl_var name='domain'}" size="30" maxlength="255" type="text" class="textInput" onkeydown="keydown(event.which);" /><p class="value"><tmpl_var name='domain_field_desc_txt'}</p>
             </div>   
             <div class="ctrlHolder"">
                  <label for="file">{tmpl_var name='zonefile_to_import_txt'}</label>

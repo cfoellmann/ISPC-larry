@@ -84,14 +84,14 @@
                 <tmpl_if name="has_invoice_records">
                     <tmpl_loop name="invoice_records">
                         <tr class="tbl_row_<tmpl_if name='__EVEN__'}even<tmpl_else>uneven</tmpl_if>">
-                            <td class="tbl_col_invoice_number"><a href="#" onClick="loadContent('billing/invoice_edit.php?id={tmpl_var name='invoice_id'}');">{tmpl_var name="invoice_number"}</a></td>
-                            <td class="tbl_col_invoice_date"><a href="#" onClick="loadContent('billing/invoice_edit.php?id={tmpl_var name='invoice_id'}');">{tmpl_var name="invoice_date"}</a></td>
-                            <td class="tbl_col_invoice_amount" align="right"><a href="#" onClick="loadContent('billing/invoice_edit.php?id={tmpl_var name='invoice_id'}');">{tmpl_var name="invoice_amount"} {tmpl_var name="currency_txt"}</a></td>
+                            <td class="tbl_col_invoice_number"><a href="#" onclick="loadContent('billing/invoice_edit.php?id={tmpl_var name='invoice_id'}');">{tmpl_var name="invoice_number"}</a></td>
+                            <td class="tbl_col_invoice_date"><a href="#" onclick="loadContent('billing/invoice_edit.php?id={tmpl_var name='invoice_id'}');">{tmpl_var name="invoice_date"}</a></td>
+                            <td class="tbl_col_invoice_amount" align="right"><a href="#" onclick="loadContent('billing/invoice_edit.php?id={tmpl_var name='invoice_id'}');">{tmpl_var name="invoice_amount"} {tmpl_var name="currency_txt"}</a></td>
                         </tr>
                     </tmpl_loop>
                 </tmpl_if>
                 <tr>
-                    <td colspan="3" style="text-align:right;"><a href="#" onClick="loadContent('billing/invoice_list.php');">{tmpl_var name='more_txt'}</a></td>
+                    <td colspan="3" style="text-align:right;"><a href="#" onclick="loadContent('billing/invoice_list.php');">{tmpl_var name='more_txt'}</a></td>
                 </tr>
                 </tbody>
             </table>
@@ -110,14 +110,14 @@
                 <tmpl_if name="has_invoice_due">
                     <tmpl_loop name="invoice_due">
                         <tr class="tbl_row_<tmpl_if name='__EVEN__'}even<tmpl_else>uneven</tmpl_if>">
-                            <td class="tbl_col_invoice_number"><a href="#" onClick="loadContent('billing/invoice_edit.php?id={tmpl_var name='invoice_id'}');">{tmpl_var name="invoice_number"}</a></td>
-                            <td class="tbl_col_invoice_date"><a href="#" onClick="loadContent('billing/invoice_edit.php?id={tmpl_var name='invoice_id'}');">{tmpl_var name="invoice_date"}</a></td>
-                            <td class="tbl_col_invoice_amount" align="right"><a href="#" onClick="loadContent('billing/invoice_edit.php?id={tmpl_var name='invoice_id'}');">{tmpl_var name="invoice_amount"} {tmpl_var name="currency_txt"}</a></td>
+                            <td class="tbl_col_invoice_number"><a href="#" onclick="loadContent('billing/invoice_edit.php?id={tmpl_var name='invoice_id'}');">{tmpl_var name="invoice_number"}</a></td>
+                            <td class="tbl_col_invoice_date"><a href="#" onclick="loadContent('billing/invoice_edit.php?id={tmpl_var name='invoice_id'}');">{tmpl_var name="invoice_date"}</a></td>
+                            <td class="tbl_col_invoice_amount" align="right"><a href="#" onclick="loadContent('billing/invoice_edit.php?id={tmpl_var name='invoice_id'}');">{tmpl_var name="invoice_amount"} {tmpl_var name="currency_txt"}</a></td>
                         </tr>
                     </tmpl_loop>
                 </tmpl_if>
                 <tr>
-                    <td colspan="3" style="text-align:right;"><a href="#" onClick="loadContent('billing/send_invoice_reminder.php');">{tmpl_var name='more_txt'}</a></td>
+                    <td colspan="3" style="text-align:right;"><a href="#" onclick="loadContent('billing/send_invoice_reminder.php');">{tmpl_var name='more_txt'}</a></td>
                 </tr>
                 </tbody>
             </table>

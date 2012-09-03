@@ -16,11 +16,11 @@
 </div>
 
 <!-- begin: modulebody -->
-<div id="module-title"><h1><tmpl_var name="dns_zone_txt"></h1></div>
+<div id="module-title"><h1><tmpl_var name="list_head_txt"></h1></div>
 <div class="module-box boxlistcontent" id="modulecontainer">
 
     <!-- desc -->
-    <div id="module-desc"><tmpl_var name="page_desc_txt"></div>
+    <div id="module-desc"><tmpl_var name="list_desc_txt"></div>
 
     <!-- messages/erros -->   
     <tmpl_if name="msg">
@@ -32,7 +32,7 @@
 
     <!-- begin: modulecontent -->
     <div class="panel panel_dns_wizard">
-        <div class="subsectiontoggle"><span class="showing"></span>Wizard<em class="showing"></em></div>
+        <div class="subsectiontoggle"><span class="showing"></span><tmpl_var name="dns_zone_txt"><em class="showing"></em></div>
         <div class="subsection">
             <div class="ctrlHolder">
                 <label for="template_id">{tmpl_var name='template_id_txt'}</label>
@@ -98,3 +98,18 @@
 
     </div><!-- end: modulecontent -->
 </div><!-- end: modulebody -->
+<script language="JavaScript" type="text/javascript">
+    jQuery('#ip').ispconfigSearch({
+        dataSrc: '/dns/ajax_get_json.php?type=get_ipv4',
+        resultsLimit: '$ <tmpl_var name="globalsearch_resultslimit_of_txt"> % <tmpl_var name="globalsearch_resultslimit_results_txt">',
+        ResultsTextPrefix: '<tmpl_var name="globalsearch_suggestions_text_txt">',
+        noResultsText: '<tmpl_var name="globalsearch_noresults_text_txt">',
+        noResultsLimit: '<tmpl_var name="globalsearch_noresults_limit_txt">',
+        minChars: 0,
+        cssPrefix: 'df-',
+        fillSearchField: true,
+        fillSearchFieldWith: 'fill_text',
+        searchFieldWatermark: '',
+        resultBoxPosition: 'e'
+    });	
+</script>

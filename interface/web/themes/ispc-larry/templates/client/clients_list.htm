@@ -1,6 +1,6 @@
 <!-- begin: toolbar -->
 <div id="moduletoolbar">
-    <a class="button edit" onClick="loadContent('client/client_edit.php');" href="#" title="{tmpl_var name="add_new_record_txt"}">{tmpl_var name="add_new_record_txt"}</a>
+    <a class="button edit" onclick="loadContent('client/client_edit.php');" href="#" title="{tmpl_var name="add_new_record_txt"}">{tmpl_var name="add_new_record_txt"}</a>
 </div>
 <!-- end: toolbar -->
 
@@ -32,8 +32,8 @@
                     <td class="tbl_col_city"><input type="text" name="search_city" value="{tmpl_var name='search_city'}" /></td>
                     <td class="tbl_col_country"><select name="search_country" class="selectInput flags">{tmpl_var name='search_country'}</select></td>
                     <td class="tbl_col_buttons">
-                        <button type="button" class="button icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="submitForm('pageForm','client/client_list.php');"><span>{tmpl_var name="filter_txt"}</span></button>
-                        <button type="button" class="button icons16 icoFilterReset" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="#"><span>{tmpl_var name="filter_txt"}</span></button>
+                        <button type="button" class="button icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onclick="submitForm('pageForm','client/client_list.php');"><span>{tmpl_var name="filter_txt"}</span></button>
+                        <button type="button" class="button icons16 icoFilterReset" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onclick="#"><span>{tmpl_var name="filter_txt"}</span></button>
                     </td>
                 </tr>
             </thead>
@@ -42,7 +42,7 @@
                 <tr class="tbl_row_<tmpl_if name='__EVEN__'}even<tmpl_else>uneven</tmpl_if>">
                     <td class="tbl_col_client_pid">{tmpl_var name="client_id"}</td>
                     <td class="tbl_col_company_name">{tmpl_var name="company_name"}</td>
-                    <td class="tbl_col_contact_name"><a href="#" onClick="loadContent('client/client_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="contact_name"}</a></td>
+                    <td class="tbl_col_contact_name"><a href="#" onclick="loadContent('client/client_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="contact_name"}</a></td>
                     <td class="tbl_col_username"><div class="icons16 group-user"><span>User</span></div> <div class="group-icon"><a href="#">{tmpl_var name="username"}</a></div></td>
                     <td class="tbl_col_city">{tmpl_var name="city"}</td>
                     <td class="tbl_col_country">{tmpl_var name="country"}</td>

@@ -1,6 +1,6 @@
 <!-- begin: toolbar -->
 <div id="moduletoolbar">
-    <a class="button edit" onClick="loadContent('help/support_message_edit.php?reply={tmpl_var name='id'}');" href="#" title="{tmpl_var name="add_new_record_txt"}">{tmpl_var name='reply_txt'}</a>
+    <a class="button edit" onclick="loadContent('help/support_message_edit.php?reply={tmpl_var name='id'}');" href="#" title="{tmpl_var name="add_new_record_txt"}">{tmpl_var name='reply_txt'}</a>
 </div>
 <!-- end: toolbar -->
 
@@ -20,7 +20,7 @@
             <p>{tmpl_var name='message'}</p>
         </div>
         <div class="buttonHolder buttons">
-            <button class="positive iconstxt icoPositive" type="button" value="{tmpl_var name='reply_txt'}" onClick="loadContent('help/support_message_edit.php?reply={tmpl_var name='id'}');"><span>{tmpl_var name='reply_txt'}</span></button>
+            <button class="positive iconstxt icoPositive" type="button" value="{tmpl_var name='reply_txt'}" onclick="loadContent('help/support_message_edit.php?reply={tmpl_var name='id'}');"><span>{tmpl_var name='reply_txt'}</span></button>
         </div>
     </div><!-- end: modulecontent -->
 </div><!-- end: modulebody -->

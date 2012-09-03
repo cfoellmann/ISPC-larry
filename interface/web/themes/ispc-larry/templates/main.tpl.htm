@@ -1,21 +1,23 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="<tmpl_var name="language">-<tmpl_var name="country">">
+<html dir="ltr" lang="en-US">      
     <head>
+        <!--Possible? Vars in lang= ?-->
         <meta charset="<tmpl_var name="html_content_encoding">" />
         <title><tmpl_var name="app_title"></title>
+        <meta http-equiv="X-UA-Compatible" content="IE=9"/>
         <link rel="shortcut icon" href="/themes/ispc-larry/images/favicon.ico" type="image/x-icon" />
         <link href="themes/ispc-larry/styles.css" rel="stylesheet" media="screen" type="text/css" />
         <link href="themes/ispc-larry/print.css" rel="stylesheet" media="print" type="text/css" />
-        <!--[if IE 9]><link href="themes/ispc-larry/svggradients.css" rel="stylesheet" type="text/css" /><![endif]-->
-        <!--[if lte IE 8]><link href="themes/ispc-larry/iehacks.css" rel="stylesheet" type="text/css" /><![endif]-->
+        <!--[if IE 9]><link href="themes/ispc-larry/iehacks.css" rel="stylesheet" type="text/css" /><![endif]-->
+        <!--[if lte IE 8]><script type="text/javascript" src="themes/default/js/html5shiv.js"></script><![endif]-->
         <!--[if lte IE 7]><link href="themes/ispc-larry/ie7hacks.css" rel="stylesheet" type="text/css" /><![endif]-->
+        <link href="themes/ispc-larry/jquery-ui-1.8.16.custom.css" rel="stylesheet" type="text/css" />
         <script type="text/javascript" src="js/jquery-1.6.3.min.js"></script>
         <script type="text/javascript" src="js/jquery-ui-1.8.16.custom.min.js"></script>
         <script type="text/javascript" src="js/scrigo.js.php"></script>
         <script type="text/javascript" src="js/uni-form/uni-form.jquery.js"></script>
         <script type="text/javascript" src="js/jquery.ispconfigsearch.js"></script>
         <script type="text/javascript" src="js/jquery.tipsy.js"></script>
-        <script type="text/javascript" src="themes/ispc-larry/html5shiv.js"></script>
         <script language="JavaScript" type="text/javascript">
             jQuery(document).ready(function() {
                 loadInitContent();
@@ -71,6 +73,7 @@
                     event.preventDefault();
                     jQuery(".pnl_formsarea button.positive:first").trigger('click');
                 }
+            });
         </script>
     </head>
     <body>                  

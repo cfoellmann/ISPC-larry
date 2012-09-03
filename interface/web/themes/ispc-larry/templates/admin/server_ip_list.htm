@@ -1,6 +1,6 @@
 <!-- begin: toolbar -->
 <div id="moduletoolbar">
-    <a class="button edit" onClick="loadContent('admin/server_ip_edit.php');" href="#" title="{tmpl_var name="add_new_record_txt"}">{tmpl_var name="add_new_record_txt"}</a>
+    <a class="button edit" onclick="loadContent('admin/server_ip_edit.php');" href="#" title="{tmpl_var name="add_new_record_txt"}">{tmpl_var name="add_new_record_txt"}</a>
 </div>
 <!-- end: toolbar -->
 
@@ -32,8 +32,8 @@
                     <td class="tbl_col_virtualhost"><select name="search_virtualhost" class="withicons">{tmpl_var name='search_virtualhost'}</select></td>
                     <td class="tbl_col_virtualhost_port"><input type="text" name="search_virtualhost_port" value="{tmpl_var name='search_virtualhost_port'}" /></td>
                     <td class="tbl_col_buttons">
-                        <button type="button" class="button icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="submitForm('pageForm','admin/server_ip_list.php');"><span>{tmpl_var name="filter_txt"}</span></button>
-                        <button type="button" class="button icons16 icoFilterReset" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="#"><span>{tmpl_var name="filter_txt"}</span></button>
+                        <button type="button" class="button icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onclick="submitForm('pageForm','admin/server_ip_list.php');"><span>{tmpl_var name="filter_txt"}</span></button>
+                        <button type="button" class="button icons16 icoFilterReset" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onclick="#"><span>{tmpl_var name="filter_txt"}</span></button>
                     </td>
                 </tr>
             </thead>
@@ -43,7 +43,7 @@
                     <td class="tbl_col_server_id">{tmpl_var name="server_id"}</td>
                     <td class="tbl_col_clientname">{tmpl_var name="client_id"}</td>
                     <td class="tbl_col_ip_type">{tmpl_var name="ip_type"}</td>
-                    <td class="tbl_col_ip_address"><a href="#" onClick="loadContent('admin/server_ip_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="ip_address"}</a></td>
+                    <td class="tbl_col_ip_address"><a href="#" onclick="loadContent('admin/server_ip_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="ip_address"}</a></td>
                     <td class="tbl_col_virtualhost">{tmpl_var name="virtualhost"}</td>
                     <td class="tbl_col_virtualhost_port">{tmpl_var name="virtualhost_port"}</td>
                     <td class="tbl_col_buttons">

@@ -3,7 +3,7 @@
         <tmpl_if name="active">
             <a href="#" id="current" class="topnav button-<tmpl_var name='module'>"><span class="button-inner"><tmpl_var name="title"></span></a>
             <tmpl_else>
-                <a href="#" onClick="capp('<tmpl_var name='module'>')" class="topnav button-<tmpl_var name='module'>"><span class="button-inner"><tmpl_var name="title"></span></a>
+                <a href="#" onclick="capp('<tmpl_var name='module'>')" class="topnav button-<tmpl_var name='module'>"><span class="button-inner"><tmpl_var name="title"></span></a>
         </tmpl_if>
     </tmpl_loop>
 </ul>

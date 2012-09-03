@@ -1,6 +1,6 @@
 <!-- begin: toolbar -->
 <div id="moduletoolbar">
-    <a class="button edit" onClick="loadContent('billing/invoice_item_template_edit.php');" href="#" title="{tmpl_var name="add_new_record_txt"}">{tmpl_var name="add_new_record_txt"}</a>
+    <a class="button edit" onclick="loadContent('billing/invoice_item_template_edit.php');" href="#" title="{tmpl_var name="add_new_record_txt"}">{tmpl_var name="add_new_record_txt"}</a>
 </div>
 <!-- end: toolbar -->
 
@@ -26,8 +26,8 @@
                 <td class="tbl_col_price"><input type="text" name="search_price" value="{tmpl_var name='search_price'}" /></td>
                 <td class="tbl_col_vat"><input type="text" name="search_vat" value="{tmpl_var name='search_vat'}" /></td>
                 <td class="tbl_col_buttons">
-                    <button type="button" class="button icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="submitForm('pageForm','billing/invoice_item_template_list.php');"><span>{tmpl_var name="filter_txt"}</span></button>
-                    <button type="button" class="button icons16 icoFilterReset" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="#"><span>{tmpl_var name="filter_txt"}</span></button>
+                    <button type="button" class="button icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onclick="submitForm('pageForm','billing/invoice_item_template_list.php');"><span>{tmpl_var name="filter_txt"}</span></button>
+                    <button type="button" class="button icons16 icoFilterReset" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onclick="#"><span>{tmpl_var name="filter_txt"}</span></button>
                 </td>
             </tr>
             </thead>
@@ -35,7 +35,7 @@
             <tmpl_loop name="records">
                 <tr class="tbl_row_<tmpl_if name='__EVEN__'}even<tmpl_else>uneven</tmpl_if>">
                     <td class="tbl_col_type">{tmpl_var name="type"}</td>
-                    <td class="tbl_col_name"><a href="#" onClick="loadContent('billing/invoice_item_template_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="name"}</a></td>
+                    <td class="tbl_col_name"><a href="#" onclick="loadContent('billing/invoice_item_template_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="name"}</a></td>
                     <td class="tbl_col_price">{tmpl_var name="price"} {tmpl_var name='currency_txt'}</td>
                     <td class="tbl_col_vat">{tmpl_var name="vat"} %</td>
                     <td class="tbl_col_buttons">

@@ -16,11 +16,11 @@
 </div>
 
 <!-- begin: modulebody -->
-<div id="module-title"><h1><tmpl_var name="form_hint"></h1></div>
+<div id="module-title"><h1><tmpl_var name="list_head_txt"></h1></div>
 <div class="module-box boxlistcontent" id="modulecontainer">
 
     <!-- desc --> 
-    <div id="module-desc"><tmpl_var name="page_desc_txt"></div>
+    <div id="module-desc"><tmpl_var name=list_desc_txt"></div>
 
     <!-- messages/erros -->   
     <tmpl_if name="msg">
@@ -41,7 +41,18 @@
             </div>
             <div class="ctrlHolder">
                 <label for="stats_password">{tmpl_var name='stats_password_txt'}</label>
-                <input name="stats_password" id="stats_password" value="{tmpl_var name='stats_password'}" size="30" maxlength="255" type="password" class="textInput" />
+                <input name="stats_password" id="stats_password" value="{tmpl_var name='stats_password'}" size="15" maxlength="100" type="password" class="textInput" style="width:100px;" onkeyup="checkPassMatch('stats_password','repeat_password');" />&nbsp;<a href="javascript:void(0);" onclick="generatePassword('stats_password','repeat_password');">{tmpl_var name='generate_password_txt'}</a>
+            </div>
+            <div class="ctrlHolder">
+                <p class="label">{tmpl_var name='password_strength_txt'}</p>
+                <div id="passBar"></div>
+                <p class="formHint"><span id="passText">&nbsp;</span></p>
+            </div>
+            <div class="ctrlHolder">
+                <label for="repeat_password">{tmpl_var name='repeat_password_txt'}</label>
+                <input name="repeat_password" id="repeat_password" value="" size="15" maxlength="100" type="password" class="textInput" style="width:100px;" onkeyup="checkPassMatch('stats_password','repeat_password');" />
+                <div id="confirmpasswordError" style="display:none;" class="confirmpassworderror">{tmpl_var name='password_mismatch_txt'}</div>
+                <div id="confirmpasswordOK" style="display:none;" class="confirmpasswordok">{tmpl_var name='password_match_txt'}</div>
             </div>
             <div class="ctrlHolder">
                 <label for="stats_type">{tmpl_var name='stats_type_txt'}</label>

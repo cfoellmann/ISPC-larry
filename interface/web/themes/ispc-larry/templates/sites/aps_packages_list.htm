@@ -30,15 +30,15 @@
                     <td class="tbl_col_status"><select name="search_package_status" onChange="submitForm('pageForm','sites/aps_availablepackages_list.php');">{tmpl_var name='search_package_status'}</select></td>
                     </tmpl_if>
                     <td class="tbl_col_buttons">
-                        <button type="button" class="button icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name='filter_txt'}" onClick="submitForm('pageForm','sites/aps_availablepackages_list.php');"><span>{tmpl_var name='filter_txt'}</span></button>
-                        <button type="button" class="button icons16 icoFilterReset" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="#"><span>{tmpl_var name="filter_txt"}</span></button>
+                        <button type="button" class="button icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name='filter_txt'}" onclick="submitForm('pageForm','sites/aps_availablepackages_list.php');"><span>{tmpl_var name='filter_txt'}</span></button>
+                        <button type="button" class="button icons16 icoFilterReset" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onclick="#"><span>{tmpl_var name="filter_txt"}</span></button>
                     </td>
                 </tr>
             </thead>
             <tbody>
                 <tmpl_loop name='records'>
                 <tr class="tbl_row_<tmpl_if name='__EVEN__'}even<tmpl_else>uneven</tmpl_if>">
-                    <td class="tbl_col_name"><a href="#" onClick="loadContent('sites/aps_packagedetails_show.php?id={tmpl_var name='id'}');">{tmpl_var name='name'}</a></td>
+                    <td class="tbl_col_name"><a href="#" onclick="loadContent('sites/aps_packagedetails_show.php?id={tmpl_var name='id'}');">{tmpl_var name='name'}</a></td>
                     <td class="tbl_col_version">{tmpl_var name='version'}-{tmpl_var name='release'}</td>
                     <td class="tbl_col_category">{tmpl_var name='category'}</td>
                     <tmpl_if name='is_admin'>

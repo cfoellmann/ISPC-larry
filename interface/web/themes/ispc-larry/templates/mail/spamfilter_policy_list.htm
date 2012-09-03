@@ -1,6 +1,6 @@
 <!-- begin: toolbar -->
 <div id="moduletoolbar">
-    <a class="button edit" onClick="loadContent('mail/spamfilter_policy_edit.php');" href="#" title="{tmpl_var name="add_new_record_txt"}">{tmpl_var name="add_new_record_txt"}</a>
+    <a class="button edit" onclick="loadContent('mail/spamfilter_policy_edit.php');" href="#" title="{tmpl_var name="add_new_record_txt"}">{tmpl_var name="add_new_record_txt"}</a>
 </div>
 <!-- end: toolbar -->
 
@@ -28,15 +28,15 @@
                     <td class="tbl_col_banned_files_lover"><select name="search_banned_files_lover" class="withicons">{tmpl_var name='search_banned_files_lover'}</select></td>
                     <td class="tbl_col_bad_header_lover"><select name="search_bad_header_lover" class="withicons">{tmpl_var name='search_bad_header_lover'}</select></td>
                     <td class="tbl_col_buttons">
-                        <button type="button" class="button icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="submitForm('pageForm','mail/spamfilter_policy_list.php');"><span>{tmpl_var name="filter_txt"}</span></button>
-                        <button type="button" class="button icons16 icoFilterReset" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="#"><span>{tmpl_var name="filter_txt"}</span></button>
+                        <button type="button" class="button icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onclick="submitForm('pageForm','mail/spamfilter_policy_list.php');"><span>{tmpl_var name="filter_txt"}</span></button>
+                        <button type="button" class="button icons16 icoFilterReset" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onclick="#"><span>{tmpl_var name="filter_txt"}</span></button>
                     </td>
                 </tr>
             </thead>
             <tbody>
             <tmpl_loop name="records">
                 <tr class="tbl_row_<tmpl_if name='__EVEN__'}even<tmpl_else>uneven</tmpl_if>">
-                    <td class="tbl_col_policy_name"><a href="#" onClick="loadContent('mail/spamfilter_policy_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="policy_name"}</a></td>
+                    <td class="tbl_col_policy_name"><a href="#" onclick="loadContent('mail/spamfilter_policy_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="policy_name"}</a></td>
                     <td class="tbl_col_virus_lover">{tmpl_var name="virus_lover"}</td>
                     <td class="tbl_col_spam_lover">{tmpl_var name="spam_lover"}</td>
                     <td class="tbl_col_banned_files_lover">{tmpl_var name="banned_files_lover"}</td>
