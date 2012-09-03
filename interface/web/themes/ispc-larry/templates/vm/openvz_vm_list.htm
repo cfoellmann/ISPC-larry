@@ -7,7 +7,17 @@
 <!-- begin: modulebody -->
 <div id="module-title"><h1><tmpl_var name="list_head_txt"></h1></div>
 <div class="module-box boxlistcontent" id="modulecontainer">
+    
+    <!-- desc -->
     <div id="module-desc"><tmpl_var name="list_desc_txt"></div>
+
+    <!-- messages/erros -->  
+    <tmpl_if name="msg">
+        <div id="OKMsg"><p><tmpl_var name="msg"></p></div>
+    </tmpl_if>
+    <tmpl_if name="error">
+        <div id="errorMsg"><h3>ERROR</h3><ol><tmpl_var name="error"></ol></div>
+    </tmpl_if>
     
     <!-- begin: modulecontent -->
     <div class="panel panel_list_openvz_vm">

@@ -907,8 +907,6 @@ ul#submenu {
 /* layout/right/globalsearch
 -------------------------------------------------------------- */
 div.gs-container {
-    float:right;
-    margin-top:-2px;
 }
 
 div.gs-container * {
@@ -924,6 +922,7 @@ div.gs-container input {
     color:#444;
     height:22px;
     padding:2px 5px 2px 30px;
+    width: 100%;
 }
 
 div.gs-container input:focus {
@@ -1864,7 +1863,7 @@ p#loginbutton {
 }
 #login-form #errorMsg {  
 }
-
+/* OKMsg*/
 /* Splitter
 -------------------------------------------------------------- */
 .splitter {

@@ -16,11 +16,11 @@
 </div>
 
 <!-- begin: modulebody -->
-<div id="module-title"><h1><tmpl_var name="form_hint"></h1></div>
+<div id="module-title"><h1><tmpl_var name="list_head_txt"></h1></div>
 <div class="module-box boxlistcontent" id="modulecontainer">
-
-    <!-- desc --> 
-    <div id="module-desc"><tmpl_var name="page_desc_txt"></div>
+    
+    <!-- desc -->
+    <div id="module-desc"><tmpl_var name="list_desc_txt"></div>
 
     <!-- messages/erros -->  
     <tmpl_if name="msg">
@@ -36,11 +36,15 @@
         <div class="subsection">
             <div class="ctrlHolder">
                 <label for="server_id">{tmpl_var name='server_id_txt'}</label>
-                <select name="server_id" id="server_id" class="selectInput">{tmpl_var name='server_id'}</select>
+                <select name="server_id" id="server_id" class="selectInput">
+                    {tmpl_var name='server_id'}
+                </select>
             </div>
             <div class="ctrlHolder">
                 <label for="client_id">{tmpl_var name='client_id_txt'}</label>
-                <select name="client_id" id="client_id" class="selectInput">{tmpl_var name='client_id'}</select>
+                <select name="client_id" id="client_id" class="selectInput">
+                    {tmpl_var name='client_id'}
+                </select>
             </div>
             <div class="ctrlHolder">
                 <label for="name">{tmpl_var name='name_txt'}</label>

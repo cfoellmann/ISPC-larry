@@ -16,11 +16,11 @@
 </div>
 
 <!-- begin: modulebody -->
-<div id="module-title"><h1><tmpl_var name="form_hint"></h1></div>
+<div id="module-title"><h1><tmpl_var name="list_head_txt"></h1></div>
 <div class="module-box boxlistcontent" id="modulecontainer">
-
-    <!-- desc --> 
-    <div id="module-desc"><tmpl_var name="page_desc_txt"></div>
+    
+    <!-- desc -->
+    <div id="module-desc"><tmpl_var name="list_desc_txt"></div>
 
     <!-- messages/erros -->  
     <tmpl_if name="msg">
@@ -32,7 +32,7 @@
 
     <!-- begin: modulecontent -->
     <div class="panel panel_server_ip">
-        <div class="subsectiontoggle"><span class="showing"></span>IP<em class="showing"></em></div>
+        <div class="subsectiontoggle"><span class="showing"></span>IP Address<em class="showing"></em></div>
         <div class="subsection">
             <div class="ctrlHolder">
                 <label for="server_id">{tmpl_var name='server_id_txt'}</label>

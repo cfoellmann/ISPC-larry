@@ -16,11 +16,11 @@
 </div>
 
 <!-- begin: modulebody -->
-<div id="module-title"><h1><tmpl_var name="form_hint"></h1></div>
+<div id="module-title"><h1><tmpl_var name="list_head_txt"></h1></div>
 <div class="module-box boxlistcontent" id="modulecontainer">
 
-    <!-- desc --> 
-    <div id="module-desc"><tmpl_var name="page_desc_txt"></div>
+    <!-- desc -->
+    <div id="module-desc"><tmpl_var name="list_desc_txt"></div>
 
     <!-- messages/erros -->   
     <tmpl_if name="msg">
@@ -59,6 +59,10 @@
                     {tmpl_var name='website_symlinks_rel'}
                 </div>
             </div>
+            <div class="ctrlHolder">
+                <label for="website_autoalias">{tmpl_var name='website_autoalias_txt'}</label>
+                <input name="website_autoalias" id="website_autoalias" value="{tmpl_var name='website_autoalias'}" size="40" maxlength="255" type="text" class="textInput" />&nbsp;{tmpl_var name='website_autoalias_note_txt'}
+            </div>
             <div class="ctrlHolder apache">
                 <label for="vhost_conf_dir">{tmpl_var name='vhost_conf_dir_txt'}</label>
                 <input name="vhost_conf_dir" id="vhost_conf_dir" value="{tmpl_var name='vhost_conf_dir'}" size="40" maxlength="255" type="text" class="textInput" />
@@ -76,14 +80,6 @@
                 <input name="nginx_vhost_conf_enabled_dir" id="nginx_vhost_conf_enabled_dir" value="{tmpl_var name='nginx_vhost_conf_enabled_dir'}" size="40" maxlength="255" type="text" class="textInput" />
             </div>
             <div class="ctrlHolder">
-                <label for="CA_path">{tmpl_var name='CA_path_txt'}</label>
-                <input name="CA_path" id="CA_path" value="{tmpl_var name='CA_path'}" size="40" maxlength="255" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="CA_pass">{tmpl_var name='CA_pass_txt'}</label>
-                <input name="CA_pass" id="CA_pass" value="{tmpl_var name='CA_pass'}" size="40" maxlength="255" type="password" class="textInput" />
-            </div>
-            <div class="ctrlHolder">
                 <p class="label">{tmpl_var name='security_level_txt'}</p>
                 <div class="multiField">
                     <select name="security_level" id="security_level" class="selectInput">
@@ -97,6 +93,39 @@
                     {tmpl_var name='check_apache_config'}
                 </div>
             </div>
+            <div class="ctrlHolder apache">
+                <label for="user">{tmpl_var name='web_user_txt'}</label>
+                <input name="user" id="user" value="{tmpl_var name='user'}" size="40" maxlength="255" type="text" class="textInput" />
+            </div>
+            <div class="ctrlHolder apache">
+                <label for="group">{tmpl_var name='web_group_txt'}</label>
+                <input name="group" id="group" value="{tmpl_var name='group'}" size="40" maxlength="255" type="text" class="textInput" />
+            </div>
+            <div class="ctrlHolder nginx">
+                <label for="nginx_user">{tmpl_var name='nginx_user_txt'}</label>
+                <input name="nginx_user" id="nginx_user" value="{tmpl_var name='nginx_user'}" size="40" maxlength="255" type="text" class="textInput" />
+            </div>
+            <div class="ctrlHolder nginx">
+                <label for="nginx_group">{tmpl_var name='nginx_group_txt'}</label>
+                <input name="nginx_group" id="nginx_group" value="{tmpl_var name='nginx_group'}" size="40" maxlength="255" type="text" class="textInput" />
+            </div>
+            <div class="ctrlHolder nginx">
+                <label for="nginx_cgi_socket">{tmpl_var name='nginx_cgi_socket_txt'}</label>
+                <input name="nginx_cgi_socket" id="nginx_cgi_socket" value="{tmpl_var name='nginx_cgi_socket'}" size="40" maxlength="255" type="text" class="textInput" />
+            </div>
+            <div class="ctrlHolder apache">
+                <label for="htaccess_allow_override">{tmpl_var name='htaccess_allow_override_txt'}</label>
+                <input name="htaccess_allow_override" id="htaccess_allow_override" value="{tmpl_var name='htaccess_allow_override'}" size="40" maxlength="255" type="text" class="textInput" />
+            </div>
+            <div class="ctrlHolder">
+                <p class="label">{tmpl_var name='enable_ip_wildcard_txt'}</p>
+                <div class="multiField">
+                    {tmpl_var name='enable_ip_wildcard'}
+                </div>
+            </div>
+        </div>
+        <div class="subsectiontoggle"><span></span>{tmpl_var name='ssl_settings_txt'}<em></em></div>
+        <div class="subsection" style="display:none;">
             <div class="ctrlHolder">
                 <p class="label">{tmpl_var name='enable_sni_txt'}</p>
                 <div class="multiField">
@@ -104,9 +133,26 @@
                 </div>
             </div>
             <div class="ctrlHolder">
+                <label for="CA_path">{tmpl_var name='CA_path_txt'}</label>
+                <input name="CA_path" id="CA_path" value="{tmpl_var name='CA_path'}" size="40" maxlength="255" type="text" class="textInput" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="CA_pass">{tmpl_var name='CA_pass_txt'}</label>
+                <input name="CA_pass" id="CA_pass" value="{tmpl_var name='CA_pass'}" size="40" maxlength="255" type="password" class="textInput" />
+            </div>
+        </div>
+        <div class="subsectiontoggle"><span></span>{tmpl_var name='permissions_txt'}<em></em></div>
+        <div class="subsection" style="display:none;">
+            <div class="ctrlHolder">
                 <p class="label">{tmpl_var name='set_folder_permissions_on_update_txt'}</p>
                 <div class="multiField">
                     {tmpl_var name='set_folder_permissions_on_update'}
+                </div>
+            </div>
+            <div class="ctrlHolder">
+                <p class="label">{tmpl_var name='web_folder_protection_txt'}</p>
+                <div class="multiField">
+                    {tmpl_var name='web_folder_protection'}
                 </div>
             </div>
             <div class="ctrlHolder">
@@ -125,22 +171,9 @@
                 <label for="connect_userid_to_webid_start">{tmpl_var name='connect_userid_to_webid_start_txt'}</label>
                 <input name="connect_userid_to_webid_start" id="connect_userid_to_webid_start" value="{tmpl_var name='connect_userid_to_webid_start'}" size="40" maxlength="255" type="text" class="textInput" />
             </div>
-            <div class="ctrlHolder apache">
-                <label for="user">{tmpl_var name='web_user_txt'}</label>
-                <input name="user" id="user" value="{tmpl_var name='user'}" size="40" maxlength="255" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder apache">
-                <label for="group">{tmpl_var name='web_group_txt'}</label>
-                <input name="group" id="group" value="{tmpl_var name='group'}" size="40" maxlength="255" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder nginx">
-                <label for="nginx_user">{tmpl_var name='nginx_user_txt'}</label>
-                <input name="nginx_user" id="nginx_user" value="{tmpl_var name='nginx_user'}" size="40" maxlength="255" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder nginx">
-                <label for="nginx_group">{tmpl_var name='nginx_group_txt'}</label>
-                <input name="nginx_group" id="nginx_group" value="{tmpl_var name='nginx_group'}" size="40" maxlength="255" type="text" class="textInput" />
-            </div>
+        </div>
+        <div class="subsectiontoggle"><span></span>{tmpl_var name='php_settings_txt'}<em></em></div>
+        <div class="subsection" style="display:none;">
             <div class="ctrlHolder apache">
                 <label for="php_ini_path_apache">{tmpl_var name='php_ini_path_apache_txt'}</label>
                 <input name="php_ini_path_apache" id="php_ini_path_apache" value="{tmpl_var name='php_ini_path_apache'}" size="40" maxlength="255" type="text" class="textInput" />
@@ -149,23 +182,23 @@
                 <label for="php_ini_path_cgi">{tmpl_var name='php_ini_path_cgi_txt'}</label>
                 <input name="php_ini_path_cgi" id="php_ini_path_cgi" value="{tmpl_var name='php_ini_path_cgi'}" size="40" maxlength="255" type="text" class="textInput" />
             </div>
-            <div class="ctrlHolder nginx">
+            <div class="ctrlHolder">
                 <label for="php_fpm_init_script">{tmpl_var name='php_fpm_init_script_txt'}</label>
                 <input name="php_fpm_init_script" id="php_fpm_init_script" value="{tmpl_var name='php_fpm_init_script'}" size="40" maxlength="255" type="text" class="textInput" />
             </div>
-            <div class="ctrlHolder nginx">
+            <div class="ctrlHolder">
                 <label for="php_fpm_ini_path">{tmpl_var name='php_fpm_ini_path_txt'}</label>
                 <input name="php_fpm_ini_path" id="php_fpm_ini_path" value="{tmpl_var name='php_fpm_ini_path'}" size="40" maxlength="255" type="text" class="textInput" />
             </div>
-            <div class="ctrlHolder nginx">
+            <div class="ctrlHolder">
                 <label for="php_fpm_pool_dir">{tmpl_var name='php_fpm_pool_dir_txt'}</label>
                 <input name="php_fpm_pool_dir" id="php_fpm_pool_dir" value="{tmpl_var name='php_fpm_pool_dir'}" size="40" maxlength="255" type="text" class="textInput" />
             </div>
-            <div class="ctrlHolder nginx">
+            <div class="ctrlHolder">
                 <label for="php_fpm_start_port">{tmpl_var name='php_fpm_start_port_txt'}</label>
                 <input name="php_fpm_start_port" id="php_fpm_start_port" value="{tmpl_var name='php_fpm_start_port'}" size="40" maxlength="255" type="text" class="textInput" />
             </div>
-            <div class="ctrlHolder nginx">
+            <div class="ctrlHolder">
                 <label for="php_fpm_socket_dir">{tmpl_var name='php_fpm_socket_dir_txt'}</label>
                 <input name="php_fpm_socket_dir" id="php_fpm_socket_dir" value="{tmpl_var name='php_fpm_socket_dir'}" size="40" maxlength="255" type="text" class="textInput" />
             </div>
@@ -173,14 +206,9 @@
                 <label for="php_open_basedir">{tmpl_var name='php_open_basedir_txt'}</label>
                 <input name="php_open_basedir" id="php_open_basedir" value="{tmpl_var name='php_open_basedir'}" size="40" type="text" class="textInput" />
             </div>
-            <div class="ctrlHolder nginx">
-                <label for="nginx_cgi_socket">{tmpl_var name='nginx_cgi_socket_txt'}</label>
-                <input name="nginx_cgi_socket" id="nginx_cgi_socket" value="{tmpl_var name='nginx_cgi_socket'}" size="40" maxlength="255" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder apache">
-                <label for="htaccess_allow_override">{tmpl_var name='htaccess_allow_override_txt'}</label>
-                <input name="htaccess_allow_override" id="htaccess_allow_override" value="{tmpl_var name='htaccess_allow_override'}" size="40" maxlength="255" type="text" class="textInput" />
-            </div>
+        </div>
+        <div class="subsectiontoggle"><span></span>{tmpl_var name='apps_vhost_settings_txt'}<em></em></div>
+        <div class="subsection" style="display:none;">
             <div class="ctrlHolder">
                 <label for="apps_vhost_port">{tmpl_var name='apps_vhost_port_txt'}</label>
                 <input name="apps_vhost_port" id="apps_vhost_port" value="{tmpl_var name='apps_vhost_port'}" size="40" maxlength="255" type="text" class="textInput" />
@@ -193,6 +221,9 @@
                 <label for="apps_vhost_servername">{tmpl_var name='apps_vhost_servername_txt'}</label>
                 <input name="apps_vhost_servername" id="apps_vhost_servername" value="{tmpl_var name='apps_vhost_servername'}" size="40" maxlength="255" type="text" class="textInput" />
             </div>
+        </div>
+        <div class="subsectiontoggle"><span></span>{tmpl_var name='awstats_settings_txt'}<em></em></div>
+        <div class="subsection" style="display:none;">
             <div class="ctrlHolder">
                 <label for="awstats_conf_dir">{tmpl_var name='awstats_conf_dir_txt'}</label>
                 <input name="awstats_conf_dir" id="awstats_conf_dir" value="{tmpl_var name='awstats_conf_dir'}" size="40" maxlength="255" type="text" class="textInput" />

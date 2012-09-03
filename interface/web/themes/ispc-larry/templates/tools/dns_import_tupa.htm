@@ -17,11 +17,11 @@
 
 
 <!-- begin: modulebody -->
-<div id="module-title"><h1><tmpl_var name="form_hint">PowerDNS Tupa import</h1></div>
+<div id="module-title"><h1><tmpl_var name="list_head_txt">PowerDNS Tupa import</h1></div>
 <div class="module-box boxlistcontent" id="modulecontainer">
 
     <!-- desc -->
-    <div id="module-desc"><tmpl_var name="page_desc_txt"></div>
+    <div id="module-desc"><tmpl_var name="page_desc_txt">Import DNS recods from Tupa PowerDNS controlpanel</div>
 
     <!-- messages/erros -->  
     <tmpl_if name="msg">
@@ -32,10 +32,9 @@
     </tmpl_if>
 
     <!-- begin: modulecontent -->
-    <div class="panel panel_language_import">
-        <div class="subsectiontoggle"><span class="showing"></span>Circle Settings<em class="showing"></em></div>
+    <div class="panel panel_tupa_import">
+        <div class="subsectiontoggle"><span class="showing"></span>Tupa PowerDNS Data<em class="showing"></em></div>
         <div class="subsection">
-            <div id="module-desc">Import DNS recods from Tupa PowerDNS controlpanel<tmpl_var name="list_desc_txt"></div>
             <div class="ctrlHolder">
                 <p class="label">Tupa database hostname</p>
                 <div class="multiField">

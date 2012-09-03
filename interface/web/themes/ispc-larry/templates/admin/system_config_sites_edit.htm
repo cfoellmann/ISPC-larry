@@ -16,11 +16,11 @@
 </div>
 
 <!-- begin: modulebody -->
-<div id="module-title"><h1><tmpl_var name="form_hint"></h1></div>
+<div id="module-title"><h1><tmpl_var name="list_head_txt"></h1></div>
 <div class="module-box boxlistcontent" id="modulecontainer">
-
-    <!-- desc --> 
-    <div id="module-desc"><tmpl_var name="page_desc_txt"></div>
+    
+    <!-- desc -->
+    <div id="module-desc"><tmpl_var name="list_desc_txt"></div>
 
     <!-- messages/erros -->   
     <tmpl_if name="msg">
@@ -68,6 +68,11 @@
                 <label for="webftp_url">{tmpl_var name='webftp_url_txt'}</label>
                 <input name="webftp_url" id="webftp_url" value="{tmpl_var name='webftp_url'}" size="30" maxlength="255" type="text" class="textInput" />
             </div>
+            <div class="ctrlHolder">
+                <p class="label">{tmpl_var name='vhost_subdomains_txt'}</p>
+                <div class="multiField">
+                    {tmpl_var name='vhost_subdomains'}&nbsp;{tmpl_var name='vhost_subdomains_note_txt'}
+                </div>
         </div>
 
         <input type="hidden" name="id" value="{tmpl_var name='id'}">

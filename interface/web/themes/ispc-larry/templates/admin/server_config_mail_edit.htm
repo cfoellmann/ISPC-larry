@@ -16,11 +16,11 @@
 </div>
 
 <!-- begin: modulebody -->
-<div id="module-title"><h1><tmpl_var name="form_hint"></h1></div>
+<div id="module-title"><h1><tmpl_var name="list_head_txt"></h1></div>
 <div class="module-box boxlistcontent" id="modulecontainer">
-
-    <!-- desc --> 
-    <div id="module-desc"><tmpl_var name="page_desc_txt"></div>
+    
+    <!-- desc -->
+    <div id="module-desc"><tmpl_var name="list_desc_txt"></div>
 
     <!-- messages/erros -->   
     <tmpl_if name="msg">
@@ -99,6 +99,16 @@
             <div class="ctrlHolder">
                 <label for="message_size_limit">{tmpl_var name='message_size_limit_txt'}</label>
                 <input name="message_size_limit" id="message_size_limit" value="{tmpl_var name='message_size_limit'}" size="10" maxlength="15" type="text" class="textInput formLengthLimit" />&nbsp;MB
+            </div>
+            <div class="ctrlHolder">
+                <p class="label">{tmpl_var name='mailbox_quota_stats_txt'}</p>
+                <div class="multiField">
+                    {tmpl_var name='mailbox_quota_stats'}
+                </div>
+            </div>
+            <div class="ctrlHolder">
+                <label for="realtime_blackhole_list">{tmpl_var name='realtime_blackhole_list_txt'}</label>
+                <input name="realtime_blackhole_list" id="realtime_blackhole_list" value="{tmpl_var name='realtime_blackhole_list'}" size="40" maxlength="255" type="text" class="textInput" />&nbsp;{tmpl_var name='realtime_blackhole_list_note_txt'}
             </div>
         </div>
 

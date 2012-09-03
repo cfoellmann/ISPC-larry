@@ -16,11 +16,11 @@
 </div>
 
 <!-- begin: modulebody -->
-<div id="module-title"><h1><tmpl_var name="form_hint"></h1></div>
+<div id="module-title"><h1><tmpl_var name="list_head_txt"></h1></div>
 <div class="module-box boxlistcontent" id="modulecontainer">
 
     <!-- desc --> 
-    <div id="module-desc"><tmpl_var name="page_desc_txt"></div>
+    <div id="module-desc"><tmpl_var name="list_desc_txt"></div>
 
     <!-- messages/erros -->  
     <tmpl_if name="msg">
@@ -41,19 +41,19 @@
             </div>
             <div class="ctrlHolder">
                 <label for="remote_password">{tmpl_var name='password_txt'}</label>
-                <input name="remote_password" id="password" value="{tmpl_var name='remote_password'}" size="30" maxlength="255" type="password" class="textInput" onkeyup="pass_check(this.value)" />&nbsp;<a href="javascript:void(0);" onClick="generatePassword('passwort');">{tmpl_var name='generate_password_txt'}</a>
+                <input name="remote_password" id="password" value="{tmpl_var name='remote_password'}" size="30" maxlength="255" type="password" class="textInput" onkeyup="pass_check(this.value);checkPassMatch('password','repeat_password');" />&nbsp;<a href="javascript:void(0);" onClick="generatePassword('password','repeat_password');">{tmpl_var name='generate_password_txt'}</a>
             </div>
             <div class="ctrlHolder">
-                <label>{tmpl_var name='password_strength_txt'}</label>
+                <p class="label">{tmpl_var name='password_strength_txt'}</p>
                 <div id="passBar"></div>
                 <p class="formHint"><span id="passText">&nbsp;</span></p>
             </div>
             <div class="ctrlHolder">
                 <label for="repeat_password">{tmpl_var name='repeat_password_txt'}</label>
                 <input name="repeat_password" id="repeat_password" value="" size="15" maxlength="100" type="password" class="textInput" style="width:100px;"  onkeyup="checkPassMatch('password','repeat_password');" />
+                <div id="confirmpasswordError" style="display:none;" class="confirmpassworderror">{tmpl_var name='password_mismatch_txt'}</div>
+                <div id="confirmpasswordOK" style="display:none;" class="confirmpasswordok">{tmpl_var name='password_match_txt'}</div>
             </div>
-            <div id="confirmpasswordError" style="display:none;" class="confirmpassworderror">{tmpl_var name='password_mismatch_txt'}</div>
-            <div id="confirmpasswordOK" style="display:none;" class="confirmpasswordok">{tmpl_var name='password_match_txt'}</div>
         </div>
 
         <div class="subsectiontoggle"><span class="showing"></span>{tmpl_var name='function_txt'}<em class="showing"></em></div>

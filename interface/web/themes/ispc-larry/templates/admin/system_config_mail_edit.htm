@@ -16,11 +16,11 @@
 </div>
 
 <!-- begin: modulebody -->
-<div id="module-title"><h1><tmpl_var name="form_hint"></h1></div>
+<div id="module-title"><h1><tmpl_var name="list_head_txt"></h1></div>
 <div class="module-box boxlistcontent" id="modulecontainer">
-
-    <!-- desc --> 
-    <div id="module-desc"><tmpl_var name="page_desc_txt"></div>
+    
+    <!-- desc -->
+    <div id="module-desc"><tmpl_var name="list_desc_txt"></div>
 
     <!-- messages/erros --> 
     <tmpl_if name="msg">
@@ -68,7 +68,35 @@
                 <label for="admin_name">{tmpl_var name='admin_name_txt'}</label>
                 <input name="admin_name" id="admin_name" value="{tmpl_var name='admin_name'}" size="30" maxlength="255" type="text" class="textInput" />
             </div>
+            <div class="ctrlHolder">
+                <p class="label">{tmpl_var name='smtp_enabled_txt'}</p>
+                <div class="multiField">
+                    {tmpl_var name='smtp_enabled'}
+                </div>
         </div>
+            <div class="ctrlHolder">
+                <label for="smtp_host">{tmpl_var name='smtp_host_txt'}</label>
+                <input name="smtp_host" id="smtp_host" value="{tmpl_var name='smtp_host'}" size="30" maxlength="255" type="text" class="textInput" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="smtp_port">{tmpl_var name='smtp_port_txt'}</label>
+                <input name="smtp_port" id="smtp_port" value="{tmpl_var name='smtp_port'}" size="30" maxlength="255" type="text" class="textInput" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="smtp_user">{tmpl_var name='smtp_user_txt'}</label>
+                <input name="smtp_user" id="smtp_user" value="{tmpl_var name='smtp_user'}" size="30" maxlength="255" type="text" class="textInput" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="smtp_pass">{tmpl_var name='smtp_pass_txt'}</label>
+                <input name="smtp_pass" id="smtp_pass" value="{tmpl_var name='smtp_pass'}" size="30" maxlength="255" type="password" class="textInput" />
+            </div>
+            <div class="ctrlHolder">
+                <p class="label">{tmpl_var name='smtp_crypt_txt'}</p>
+                <div class="multiField">
+                    {tmpl_var name='smtp_crypt'}
+                </div>
+            </div>
+        </fieldset>
 
         <input type="hidden" name="id" value="{tmpl_var name='id'}">
 

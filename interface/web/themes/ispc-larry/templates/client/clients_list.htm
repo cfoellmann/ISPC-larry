@@ -7,6 +7,8 @@
 <!-- begin: modulebody -->
 <div id="module-title"><h1><tmpl_var name="list_head_txt"></h1></div>
 <div class="module-box boxlistcontent" id="modulecontainer">
+    
+    <!-- desc -->
     <div id="module-desc"><tmpl_var name="list_desc_txt"></div>
     
     <!-- begin: modulecontent -->
@@ -28,7 +30,7 @@
                     <td class="tbl_col_contact_name"><input type="text" name="search_contact_name" value="{tmpl_var name='search_contact_name'}" /></td>
                     <td class="tbl_col_username"><input type="text" name="search_username" value="{tmpl_var name='search_username'}" /></td>
                     <td class="tbl_col_city"><input type="text" name="search_city" value="{tmpl_var name='search_city'}" /></td>
-                    <td class="tbl_col_country"><select name="search_country">{tmpl_var name='search_country'}</select></td>
+                    <td class="tbl_col_country"><select name="search_country" class="selectInput flags">{tmpl_var name='search_country'}</select></td>
                     <td class="tbl_col_buttons">
                         <button type="button" class="button icons16 icoFilter" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="submitForm('pageForm','client/client_list.php');"><span>{tmpl_var name="filter_txt"}</span></button>
                         <button type="button" class="button icons16 icoFilterReset" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" onClick="#"><span>{tmpl_var name="filter_txt"}</span></button>
@@ -43,7 +45,7 @@
                     <td class="tbl_col_contact_name"><a href="#" onClick="loadContent('client/client_edit.php?id={tmpl_var name='id'}');">{tmpl_var name="contact_name"}</a></td>
                     <td class="tbl_col_username"><div class="icons16 group-user"><span>User</span></div> <div class="group-icon"><a href="#">{tmpl_var name="username"}</a></div></td>
                     <td class="tbl_col_city">{tmpl_var name="city"}</td>
-                    <td class="tbl_col_country"><div class="country-{tmpl_var name="country"}"><span>{tmpl_var name="country"}</span></div></td>
+                    <td class="tbl_col_country">{tmpl_var name="country"}</td>
                     <td class="tbl_col_buttons">
                         <a class="button icons16 icoEdit" href="javascript: loadContent('client/client_edit.php?id={tmpl_var name='id'}');"><span>{tmpl_var name='edit_txt'}</span></a>
                         <tmpl_if name="is_admin">

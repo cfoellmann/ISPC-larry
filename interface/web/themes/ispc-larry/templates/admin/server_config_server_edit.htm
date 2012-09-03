@@ -16,11 +16,11 @@
 </div>
 
 <!-- begin: modulebody -->
-<div id="module-title"><h1><tmpl_var name="form_hint"></h1></div>
+<div id="module-title"><h1><tmpl_var name="list_head_txt"></h1></div>
 <div class="module-box boxlistcontent" id="modulecontainer">
-
-    <!-- desc --> 
-    <div id="module-desc"><tmpl_var name="page_desc_txt"></div>
+    
+    <!-- desc -->
+    <div id="module-desc"><tmpl_var name="list_desc_txt"></div>
 
     <!-- messages/erros -->   
     <tmpl_if name="msg">
@@ -62,6 +62,12 @@
                 <p class="formHint">{tmpl_var name='nameservers_hint_txt'}</p>
             </div>
             <div class="ctrlHolder">
+                <label for="firewall">{tmpl_var name='firewall_txt'}</label>
+                <select name="firewall" id="firewall" class="selectInput">
+                    {tmpl_var name='firewall'}
+                </select>
+            </div>
+            <div class="ctrlHolder">
                 <label for="loglevel">{tmpl_var name='loglevel_txt'}</label>
                 <select name="loglevel" id="loglevel" class="selectInput">
                     {tmpl_var name='loglevel'}
@@ -72,9 +78,10 @@
                 <input name="backup_dir" id="backup_dir" value="{tmpl_var name='backup_dir'}" size="40" maxlength="255" type="text" class="textInput" />
             </div>
             <div class="ctrlHolder">
-                <p class="label">{tmpl_var name='backup_dir_ftpread_txt'}</p>
-                <div class="multiField">
-                    {tmpl_var name='backup_dir_ftpread'}
+                <label for="backup_mode">{tmpl_var name='backup_mode_txt'}</label>
+                <select name="backup_mode" id="backup_mode" class="selectInput">
+                    {tmpl_var name='backup_mode'}
+                </select>
                 </div>
             </div>
         </div>

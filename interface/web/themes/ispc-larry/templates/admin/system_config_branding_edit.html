@@ -10,8 +10,8 @@
         </tmpl_loop>
     </ul>
     <ul class="tabsbar-buttons">
-        <li><a href="javascript:submitForm('pageForm','admin/language_add.php');" title="{tmpl_var name='btn_save_txt'}" class="positive iconstxt icoPositive"><span>{tmpl_var name='btn_save_txt'}</span></a></li>
-        <li><a href="javascript:loadContent('admin/language_list.php');" title="{tmpl_var name='btn_cancel_txt'}" class="negative iconstxt icoNegative"><span>{tmpl_var name='btn_cancel_txt'}</span></a></li>
+        <li><a href="javascript:submitForm('pageForm','admin/system_config_edit.php');" title="{tmpl_var name='btn_save_txt'}" class="positive iconstxt icoPositive"><span>{tmpl_var name='btn_save_txt'}</span></a></li>
+        <li><a href="javascript:loadContent('admin/server_list.php');" title="{tmpl_var name='btn_cancel_txt'}" class="negative iconstxt icoNegative"><span>{tmpl_var name='btn_cancel_txt'}</span></a></li>
     </ul>
 </div>
 
@@ -19,9 +19,8 @@
 <div id="module-title"><h1><tmpl_var name="list_head_txt"></h1></div>
 <div class="module-box boxlistcontent" id="modulecontainer">
 
-
     <!-- desc -->
-    <div id="module-desc"><tmpl_var name="page_desc_txt"></div>
+    <div id="module-desc"><tmpl_var name="list_desc_txt"></div>
 
     <!-- messages/erros -->  
     <tmpl_if name="msg">
@@ -32,22 +31,15 @@
     </tmpl_if>
 
     <!-- begin: modulecontent -->
-    <div class="panel panel_language_add">
-        <div class="subsectiontoggle"><span class="showing"></span>Language Add<em class="showing"></em></div>
+    <div class="panel panel_system_config">
+        <div class="subsectiontoggle"><span class="showing"></span><tmpl_var name="branding_txt">Branding<em class="showing"></em></div>
         <div class="subsection">
             <div class="ctrlHolder">
-                <label for="lng_select">{tmpl_var name='language_select_txt'}</label>
-                <select name="lng_select" id="language" class="selectInput flags">
-                    {tmpl_var name='language_option'}
-                </select>
-            </div>
-            <div class="ctrlHolder">
-                <label for="lng_new">{tmpl_var name='language_new_txt'}</label>
-                <input name="lng_new" id="lng_new" value="" size="30" maxlength="255" type="text" class="textInput formLengthHalf" /> 
-            </div>
-            <div class="ctrlHolder">
-                <p class="formHint">{tmpl_var name='language_new_hint_txt'}</p>
-            </div>
+                <p class="label">{tmpl_var name='allow_themechange_txt'}Allow users to change theme</p>
+                <div class="multiField">
+                    {tmpl_var name='allow_themechange'}
+                </div>
+            </div>  
         </div>
 
         <input type="hidden" name="id" value="{tmpl_var name='id'}">
