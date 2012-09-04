@@ -1,34 +1,44 @@
 <!-- begin: toolbar -->
 <div id="moduletoolbar">
-    <a class="button edit" onclick="loadContent('sites/cron_edit.php');" href="#" title="{tmpl_var name='add_new_cron_txt'}">{tmpl_var name="add_new_cron_txt"}</a>
+    &nbsp;
 </div>
 <!-- end: toolbar -->
 
 <!-- begin: modulebody -->
-<div id="module-title"><h1><tmpl_var name="page_head_txt"></h1></div> 
+<div id="module-title"><h1><tmpl_var name="list_head_txt"></h1></div> 
 <div class="module-box boxlistcontent" id="modulecontainer">
-    <div id="module-desc"><tmpl_var name="page_desc_txt"></div>
+    
+    <!-- desc -->
+    <div id="module-desc"><tmpl_var name="list_desc_txt"></div>
     
     <!-- begin: modulecontent -->
-    <div class="panel panel_index_mailuser">
-        <div class="ctrlHolder">
-            <label for="password"><b>{tmpl_var name='email_txt'}</b></label>
-            {tmpl_var name='email'}
-        </div>
-        <div class="ctrlHolder">
-            <label for="password"><b>{tmpl_var name='login_txt'}</b></label>
-            {tmpl_var name='login'}
-        </div>
-        <div class="ctrlHolder">
-            <label for="password"><b>{tmpl_var name='quota_txt'}</b></label>
-            {tmpl_var name='quota'}
-        </div>
+    <div class="panel panel_mailuser">
+        <div class="subsectiontoggle"><span class="showing"></span><tmpl_var name="list_head_txt"><em class="showing"></em></div>
+        <div class="subsection">
             <div class="ctrlHolder">
-        <label for="password"><b>{tmpl_var name='cc_txt'}</b></label>
-            {tmpl_var name='cc'}
+                <p class="label">{tmpl_var name='email_txt'}</p>
+                <p class="value">{tmpl_var name='email'}</p>
+            </div>
+            <div class="ctrlHolder">
+                <p class="label">{tmpl_var name='login_txt'}</p>
+                <p class="value">{tmpl_var name='login'}</p>
+            </div>
+            <div class="ctrlHolder">
+                <p class="label">{tmpl_var name='server_address_txt'}</p>
+                <p class="value">{tmpl_var name='server_name'}</p>
+            </div>
+            <div class="ctrlHolder">
+                <p class="label">{tmpl_var name='quota_txt'}</p>
+                <p class="value">{tmpl_var name='quota'}</p>
+            </div>
+            <div class="ctrlHolder">
+                <p class="label">{tmpl_var name='cc_txt'}</p>
+                <p class="value">{tmpl_var name='cc'}</p>
+            </div>
+            <div class="buttonHolder buttons">
+                &nbsp;
+            </div>
         </div>
-        <div class="buttonHolder buttons">
-            &nbsp;
-        </div>
+        
     </div><!-- end: modulecontent -->
 </div><!-- end: modulebody -->

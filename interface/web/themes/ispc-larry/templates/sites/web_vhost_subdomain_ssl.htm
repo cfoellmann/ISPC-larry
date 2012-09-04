@@ -1,0 +1,92 @@
+<!-- tabs -->
+<div id="tabs">
+    <ul class="tabsbar">
+        <tmpl_loop name="formTab">
+            <tmpl_if name="active">
+                <li class="active"><a href="javascript:changeTab('<tmpl_var name='name'>','<tmpl_var name='app_module'>/<tmpl_var name='form_action'>')"><tmpl_var name='title'></a></li>
+                <tmpl_else>
+                    <li><a href="javascript:changeTab('<tmpl_var name='name'>','<tmpl_var name='app_module'>/<tmpl_var name='form_action'>')"><tmpl_var name='title'></a></li>
+            </tmpl_if>
+        </tmpl_loop>
+    </ul>
+    <ul class="tabsbar-buttons">
+        <li><a href="javascript:submitForm('pageForm','sites/web_vhost_subdomain_edit.php');" title="{tmpl_var name='btn_save_txt'}" class="positive iconstxt icoPositive"><span>{tmpl_var name='btn_save_txt'}</span></a></li>
+        <li><a href="javascript:loadContent('sites/web_vhost_subdomain_list.php');" title="{tmpl_var name='btn_cancel_txt'}" class="negative iconstxt icoNegative"><span>{tmpl_var name='btn_cancel_txt'}</span></a></li>
+    </ul>
+</div>
+
+<!-- begin: modulebody -->
+<div id="module-title"><h1><tmpl_var name="list_head_txt"></h1></div>
+<div class="module-box boxlistcontent" id="modulecontainer">
+
+    <!-- desc --> 
+    <div id="module-desc"><tmpl_var name="list_desc_txt"></div>
+
+    <!-- messages/erros -->  
+    <tmpl_if name="msg">
+        <div id="OKMsg"><p><tmpl_var name="msg"></p></div>
+    </tmpl_if>
+    <tmpl_if name="error">
+        <div id="errorMsg"><h3>ERROR</h3><ol><tmpl_var name="error"></ol></div>
+    </tmpl_if>
+
+    <!-- begin: modulecontent -->
+    <div class="panel panel_web_domain">
+        <div class="subsectiontoggle"><span class="showing"></span><tmpl_var name="list_head_txt"><em class="showing"></em></div>
+        <div class="subsection">
+            <div class="ctrlHolder">
+                <label for="ssl_state">{tmpl_var name='ssl_state_txt'}</label>
+                <input name="ssl_state" id="ssl_state" value="{tmpl_var name='ssl_state'}" size="30" maxlength="255" type="text" class="textInput" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="ssl_locality">{tmpl_var name='ssl_locality_txt'}</label>
+                <input name="ssl_locality" id="ssl_locality" value="{tmpl_var name='ssl_locality'}" size="30" maxlength="255" type="text" class="textInput" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="ssl_organisation">{tmpl_var name='ssl_organisation_txt'}</label>
+                <input name="ssl_organisation" id="ssl_organisation" value="{tmpl_var name='ssl_organisation'}" size="30" maxlength="255" type="text" class="textInput" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="ssl_organisation_unit">{tmpl_var name='ssl_organisation_unit_txt'}</label>
+                <input name="ssl_organisation_unit" id="ssl_organisation_unit" value="{tmpl_var name='ssl_organisation_unit'}" size="30" maxlength="255" type="text" class="textInput" />
+            </div>
+            <div class="ctrlHolder">
+                <label for="ssl_country">{tmpl_var name='ssl_country_txt'}</label>
+                <select name="ssl_country" id="ssl_country" class="selectInput flags">
+                    {tmpl_var name='ssl_country'}
+                </select>
+            </div>
+            <div class="ctrlHolder">
+                <label for="client_group_id">{tmpl_var name='ssl_domain_txt'}</label>
+                <select name="ssl_domain" id="ssl_domain" class="selectInput">
+                    {tmpl_var name='ssl_domain'}
+                </select>
+            </div>
+			<div class="ctrlHolder">
+                <label for="ssl_request">{tmpl_var name='ssl_key_txt'}</label>
+                <textarea name="ssl_key" id="ssl_key" rows='10' cols='30'>{tmpl_var name='ssl_key'}</textarea>
+            </div>
+            <div class="ctrlHolder">
+                <label for="ssl_request">{tmpl_var name='ssl_request_txt'}</label>
+                <textarea name="ssl_request" id="ssl_request" rows='10' cols='30'>{tmpl_var name='ssl_request'}</textarea>
+            </div>
+            <div class="ctrlHolder">
+                <label for="ssl_cert">{tmpl_var name='ssl_cert_txt'}</label>
+                <textarea name="ssl_cert" id="ssl_cert" rows='10' cols='30'>{tmpl_var name='ssl_cert'}</textarea>
+            </div>
+            <div class="ctrlHolder">
+                <label for="ssl_bundle">{tmpl_var name='ssl_bundle_txt'}</label>
+                <textarea name="ssl_bundle" id="ssl_bundle" rows='10' cols='30'>{tmpl_var name='ssl_bundle'}</textarea>
+            </div>
+            <div class="ctrlHolder">
+                <label for="ssl_action">{tmpl_var name='ssl_action_txt'}</label>
+                <select name="ssl_action" id="ssl_action" class="selectInput formLengthHalf">
+                    {tmpl_var name='ssl_action'}
+                </select>
+            </div>
+        </div>
+
+        <input type="hidden" name="id" value="{tmpl_var name='id'}">
+
+    </div><!-- end: modulecontent -->
+</div><!-- end: modulebody -->
