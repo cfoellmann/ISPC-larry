@@ -922,7 +922,7 @@ div.gs-container input {
     color:#444;
     height:22px;
     padding:2px 5px 2px 30px;
-    width: 100%;
+    width:215px;
 }
 
 div.gs-container input:focus {
@@ -943,6 +943,7 @@ ul.gs-resultbox {
     border:1px solid #777;
     box-shadow:2px 2px 5px 0 #c5c5c5;
     font-size:11px;
+    left:0!important;
     list-style:none;
     margin:0!important;
     max-height:500px;

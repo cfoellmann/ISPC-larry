@@ -86,7 +86,9 @@
                 </div>
                 <div class="topright">
                     <tmpl_if name="cpuser">
+                        <?php if(!isset($_SESSION["s"]["user"]["mailuser_id"])) { ?>
                         <a href="#" onclick="capp('tools')" class="button-settings" title="<tmpl_var name="toolsarea_head_txt">">Settings <tmpl_var name="toolsarea_head_txt"></a>
+                        <?php } ; ?>
                         <a href="#logout" onclick="loadContent('login/logout.php');" class="button-logout" title="Logout"><tmpl_var name="logout_txt"> <tmpl_var name="cpuser"></a>
                     </tmpl_if>
                 </div>
