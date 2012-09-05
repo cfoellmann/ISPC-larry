@@ -46,6 +46,14 @@
                         <td class="tbl_col_buttons">&nbsp;</td>
                 </tr>
             </tmpl_loop>
+                <tr class="tbl_row_<tmpl_if name='__EVEN__'}even<tmpl_else>uneven</tmpl_if>">
+                    <td class="tbl_col_domain">{tmpl_var name="sum_txt"}</td>
+                    <td class="tbl_col_this_month">{tmpl_var name="sum_this_month"} MB</td>
+                    <td class="tbl_col_last_month">{tmpl_var name="sum_last_month"} MB</td>
+                    <td class="tbl_col_this_year">{tmpl_var name="sum_this_year"} MB</td>
+                    <td class="tbl_col_last_year">{tmpl_var name="sum_last_year"} MB</td>
+                    <td class="tbl_col_buttons"></td>
+                </tr>
             </tbody>
             <tfoot>
                 <tr>
