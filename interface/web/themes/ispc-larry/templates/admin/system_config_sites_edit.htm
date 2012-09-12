@@ -16,11 +16,11 @@
 </div>
 
 <!-- begin: modulebody -->
-<div id="module-title"><h1><tmpl_var name="list_head_txt"></h1></div>
+<div id="module-title"><h1><tmpl_var name="server_config_head_txt"></h1></div>
 <div class="module-box boxlistcontent" id="modulecontainer">
     
     <!-- desc -->
-    <div id="module-desc"><tmpl_var name="list_desc_txt"></div>
+    <div id="module-desc"><tmpl_var name="server_config_desc_txt"></div>
 
     <!-- messages/erros -->   
     <tmpl_if name="msg">
@@ -32,47 +32,44 @@
 
     <!-- begin: modulecontent -->
     <div class="panel panel_system_config">
-        <div class="subsectiontoggle"><span class="showing"></span>Sites<em class="showing"></em></div>
-        <div class="subsection">
-            <div class="ctrlHolder">
-                <label for="dbname_prefix">{tmpl_var name='dbname_prefix_txt'}</label>
-                <input name="dbname_prefix" id="dbname_prefix" value="{tmpl_var name='dbname_prefix'}" size="30" maxlength="255" type="text" class="textInput formLengthHalf" />
+        <div class="ctrlHolder">
+            <label for="dbname_prefix">{tmpl_var name='dbname_prefix_txt'}</label>
+            <input name="dbname_prefix" id="dbname_prefix" value="{tmpl_var name='dbname_prefix'}" size="30" maxlength="255" type="text" class="textInput formLengthHalf" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="dbuser_prefix">{tmpl_var name='dbuser_prefix_txt'}</label>
+            <input name="dbuser_prefix" id="dbuser_prefix" value="{tmpl_var name='dbuser_prefix'}" size="30" maxlength="255" type="text" class="textInput formLengthHalf" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="ftpuser_prefix">{tmpl_var name='ftpuser_prefix_txt'}</label>
+            <input name="ftpuser_prefix" id="ftpuser_prefix" value="{tmpl_var name='ftpuser_prefix'}" size="30" maxlength="255" type="text" class="textInput formLengthHalf" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="shelluser_prefix">{tmpl_var name='shelluser_prefix_txt'}</label>
+            <input name="shelluser_prefix" id="shelluser_prefix" value="{tmpl_var name='shelluser_prefix'}" size="30" maxlength="255" type="text" class="textInput formLengthHalf" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="webdavuser_prefix">{tmpl_var name='webdavuser_prefix_txt'}</label>
+            <input name="webdavuser_prefix" id="webdavuser_prefix" value="{tmpl_var name='webdavuser_prefix'}" size="30" maxlength="255" type="text" class="textInput formLengthHalf" />
+        </div>
+        <div class="ctrlHolder">
+            <p class="label">{tmpl_var name='dblist_phpmyadmin_link_txt'}</p>
+            <div class="multiField">
+                {tmpl_var name='dblist_phpmyadmin_link'}
             </div>
-            <div class="ctrlHolder">
-                <label for="dbuser_prefix">{tmpl_var name='dbuser_prefix_txt'}</label>
-                <input name="dbuser_prefix" id="dbuser_prefix" value="{tmpl_var name='dbuser_prefix'}" size="30" maxlength="255" type="text" class="textInput formLengthHalf" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="ftpuser_prefix">{tmpl_var name='ftpuser_prefix_txt'}</label>
-                <input name="ftpuser_prefix" id="ftpuser_prefix" value="{tmpl_var name='ftpuser_prefix'}" size="30" maxlength="255" type="text" class="textInput formLengthHalf" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="shelluser_prefix">{tmpl_var name='shelluser_prefix_txt'}</label>
-                <input name="shelluser_prefix" id="shelluser_prefix" value="{tmpl_var name='shelluser_prefix'}" size="30" maxlength="255" type="text" class="textInput formLengthHalf" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="webdavuser_prefix">{tmpl_var name='webdavuser_prefix_txt'}</label>
-                <input name="webdavuser_prefix" id="webdavuser_prefix" value="{tmpl_var name='webdavuser_prefix'}" size="30" maxlength="255" type="text" class="textInput formLengthHalf" />
-            </div>
-            <div class="ctrlHolder">
-                <p class="label">{tmpl_var name='dblist_phpmyadmin_link_txt'}</p>
-                <div class="multiField">
-                    {tmpl_var name='dblist_phpmyadmin_link'}
-                </div>
-            </div>
-            <div class="ctrlHolder">
-                <label for="phpmyadmin_url">{tmpl_var name='phpmyadmin_url_txt'}</label>
-                <input name="phpmyadmin_url" id="phpmyadmin_url" value="{tmpl_var name='phpmyadmin_url'}" size="30" maxlength="255" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="webftp_url">{tmpl_var name='webftp_url_txt'}</label>
-                <input name="webftp_url" id="webftp_url" value="{tmpl_var name='webftp_url'}" size="30" maxlength="255" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder">
-                <p class="label">{tmpl_var name='vhost_subdomains_txt'}</p>
-                <div class="multiField">
-                    {tmpl_var name='vhost_subdomains'}&nbsp;{tmpl_var name='vhost_subdomains_note_txt'}
-                </div>
+        </div>
+        <div class="ctrlHolder">
+            <label for="phpmyadmin_url">{tmpl_var name='phpmyadmin_url_txt'}</label>
+            <input name="phpmyadmin_url" id="phpmyadmin_url" value="{tmpl_var name='phpmyadmin_url'}" size="30" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="webftp_url">{tmpl_var name='webftp_url_txt'}</label>
+            <input name="webftp_url" id="webftp_url" value="{tmpl_var name='webftp_url'}" size="30" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+            <p class="label">{tmpl_var name='vhost_subdomains_txt'}</p>
+            <div class="multiField">
+                {tmpl_var name='vhost_subdomains'}&nbsp;{tmpl_var name='vhost_subdomains_note_txt'}
         </div>
 
         <input type="hidden" name="id" value="{tmpl_var name='id'}">

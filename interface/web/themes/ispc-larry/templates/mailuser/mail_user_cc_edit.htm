@@ -32,16 +32,13 @@
 
     <!-- begin: modulecontent -->
     <div class="panel panel_mailuser_cc">
-        <div class="subsectiontoggle"><span class="showing"></span><tmpl_var name="list_head_txt"><em class="showing"></em></div>
-        <div class="subsection">
-            <div class="ctrlHolder">
-                <p class="label">{tmpl_var name='email_txt'}</p>
-                <p class="value">{tmpl_var name='email'}</p>
-            </div>
-            <div class="ctrlHolder">
-                <label for="name">{tmpl_var name='cc_txt'}</label>
-                <input name="cc" id="cc" value="{tmpl_var name='cc'}" size="30" maxlength="255" type="text" class="textInput" /> &nbsp; {tmpl_var name='name_optional_txt'}
-            </div>
+        <div class="ctrlHolder">
+            <p class="label">{tmpl_var name='email_txt'}</p>
+            <p class="value">{tmpl_var name='email'}</p>
+        </div>
+        <div class="ctrlHolder">
+            <label for="name">{tmpl_var name='cc_txt'}</label>
+            <input name="cc" id="cc" value="{tmpl_var name='cc'}" size="30" maxlength="255" type="text" class="textInput" /> &nbsp; {tmpl_var name='name_optional_txt'}
         </div>
 
         <input type="hidden" name="id" value="{tmpl_var name='id'}">

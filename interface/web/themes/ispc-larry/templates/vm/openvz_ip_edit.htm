@@ -32,29 +32,26 @@
 
     <!-- begin: modulecontent -->
     <div class="panel panel_openvz_ip">
-        <div class="subsectiontoggle"><span class="showing"></span>IP Settings<em class="showing"></em></div>
-        <div class="subsection">
-            <div class="ctrlHolder">
-                <label for="server_id">{tmpl_var name='server_id_txt'}</label>
-                <select name="server_id" id="server_id" class="selectInput">
-                    {tmpl_var name='server_id'}
-                </select>
-            </div>
-            <div class="ctrlHolder">
-                <label for="ip_address">{tmpl_var name='ip_address_txt'}</label>
-                <input name="ip_address" id="ip_address" value="{tmpl_var name='ip_address'}" size="15" maxlength="15" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="vm_id">{tmpl_var name='vm_id_txt'}</label>
-                <select name="vm_id" id="vm_id" class="selectInput" disabled="disabled">
-                    {tmpl_var name='vm_id'}
-                </select>
-            </div>
-            <div class="ctrlHolder">
-                <p class="label">{tmpl_var name='reserved_txt'}</p>
-                <div class="multiField">
-                    {tmpl_var name='reserved'}
-                </div>
+        <div class="ctrlHolder">
+            <label for="server_id">{tmpl_var name='server_id_txt'}</label>
+            <select name="server_id" id="server_id" class="selectInput">
+                {tmpl_var name='server_id'}
+            </select>
+        </div>
+        <div class="ctrlHolder">
+            <label for="ip_address">{tmpl_var name='ip_address_txt'}</label>
+            <input name="ip_address" id="ip_address" value="{tmpl_var name='ip_address'}" size="15" maxlength="15" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="vm_id">{tmpl_var name='vm_id_txt'}</label>
+            <select name="vm_id" id="vm_id" class="selectInput" disabled="disabled">
+                {tmpl_var name='vm_id'}
+            </select>
+        </div>
+        <div class="ctrlHolder">
+            <p class="label">{tmpl_var name='reserved_txt'}</p>
+            <div class="multiField">
+                {tmpl_var name='reserved'}
             </div>
         </div>
 

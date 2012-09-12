@@ -16,11 +16,11 @@
 </div>
 
 <!-- begin: modulebody -->
-<div id="module-title"><h1><tmpl_var name="form_hint"></h1></div>
+<div id="module-title"><h1><tmpl_var name="dns_soa_head_txt"></h1></div>
 <div class="module-box boxlistcontent" id="modulecontainer">
 
     <!-- desc -->
-    <div id="module-desc"><tmpl_var name="page_desc_txt"></div>
+    <div id="module-desc"><tmpl_var name="dns_soa_desc_txt"></div>
 
     <!-- messages/erros -->  
     <tmpl_if name="msg">
@@ -32,80 +32,77 @@
 
     <!-- begin: modulecontent -->
     <div class="panel panel_dns_soa">
-        <div class="subsectiontoggle"><span class="showing"></span>Zone Settings<em class="showing"></em></div>
-        <div class="subsection">
-            <tmpl_if name="is_admin">
-                <div class="ctrlHolder">
-                    <tmpl_if name="edit_disabled">
-                        <label for="server_id_disabled">{tmpl_var name='server_id_txt'}</label>
-                        <select name="server_id_disabled" id="server_id_disabled" class="selectInput" disabled="disabled">{tmpl_var name='server_id'}</select>
-                        <input type="hidden" name="server_id" value="{tmpl_var name='server_id_value'}" />
-                        <tmpl_else>
-                            <label for="server_id">{tmpl_var name='server_id_txt'}</label>
-                            <select name="server_id" id="server_id" class="selectInput">{tmpl_var name='server_id'}</select>
-                    </tmpl_if>
-                </div>
-                <div class="ctrlHolder">
-                    <label for="client_group_id">{tmpl_var name='client_txt'}</label>
-                    <select name="client_group_id" id="client_group_id" class="selectInput">{tmpl_var name='client_group_id'}</select>
-                </div>
-            </tmpl_if>
-            <tmpl_if name="is_reseller">
-                <div class="ctrlHolder">
-                    <label for="client_group_id">{tmpl_var name='client_txt'}</label>
-                    <select name="client_group_id" id="client_group_id" class="selectInput">{tmpl_var name='client_group_id'}</select>
-                </div>
-            </tmpl_if>
+        <tmpl_if name="is_admin">
             <div class="ctrlHolder">
-                <label for="origin">{tmpl_var name='origin_txt'}</label>
-                <input name="origin" id="origin" value="{tmpl_var name='origin'}" size="30" maxlength="255" type="text" class="textInput" /> {tmpl_var name='eg_domain_tld'}
+                <tmpl_if name="edit_disabled">
+                    <label for="server_id_disabled">{tmpl_var name='server_id_txt'}</label>
+                    <select name="server_id_disabled" id="server_id_disabled" class="selectInput" disabled="disabled">{tmpl_var name='server_id'}</select>
+                    <input type="hidden" name="server_id" value="{tmpl_var name='server_id_value'}" />
+                    <tmpl_else>
+                        <label for="server_id">{tmpl_var name='server_id_txt'}</label>
+                        <select name="server_id" id="server_id" class="selectInput">{tmpl_var name='server_id'}</select>
+                </tmpl_if>
             </div>
             <div class="ctrlHolder">
-                <label for="ns">{tmpl_var name='ns_txt'}</label>
-                <input name="ns" id="ns" value="{tmpl_var name='ns'}" size="30" maxlength="255" type="text" class="textInput" /> {tmpl_var name='eg_ns1_domain_tld'}
+                <label for="client_group_id">{tmpl_var name='client_txt'}</label>
+                <select name="client_group_id" id="client_group_id" class="selectInput">{tmpl_var name='client_group_id'}</select>
             </div>
+        </tmpl_if>
+        <tmpl_if name="is_reseller">
             <div class="ctrlHolder">
-                <label for="mbox">{tmpl_var name='mbox_txt'}</label>
-                <input name="mbox" id="mbox" value="{tmpl_var name='mbox'}" size="30" maxlength="255" type="text" class="textInput" /> {tmpl_var name='eg_webmaster_domain_tld'}
+                <label for="client_group_id">{tmpl_var name='client_txt'}</label>
+                <select name="client_group_id" id="client_group_id" class="selectInput">{tmpl_var name='client_group_id'}</select>
             </div>
-            <div class="ctrlHolder">
-                <label for="refresh">{tmpl_var name='refresh_txt'}</label>
-                <input name="refresh" id="refresh" value="{tmpl_var name='refresh'}" size="10" maxlength="10" type="text" class="textInput" />&nbsp;{tmpl_var name='seconds_txt'}
-            </div>
-            <div class="ctrlHolder">
-                <label for="retry">{tmpl_var name='retry_txt'}</label>
-                <input name="retry" id="retry" value="{tmpl_var name='retry'}" size="10" maxlength="10" type="text" class="textInput" />&nbsp;{tmpl_var name='seconds_txt'}
-            </div>
-            <div class="ctrlHolder">
-                <label for="expire">{tmpl_var name='expire_txt'}</label>
-                <input name="expire" id="expire" value="{tmpl_var name='expire'}" size="10" maxlength="10" type="text" class="textInput" />&nbsp;{tmpl_var name='seconds_txt'}
-            </div>
-            <div class="ctrlHolder">
-                <label for="minimum">{tmpl_var name='minimum_txt'}</label>
-                <input name="minimum" id="minimum" value="{tmpl_var name='minimum'}" size="10" maxlength="10" type="text" class="textInput" />&nbsp;{tmpl_var name='seconds_txt'}
-            </div>
-            <div class="ctrlHolder">
-                <label for="ttl">{tmpl_var name='ttl_txt'}</label>
-                <input name="ttl" id="ttl" value="{tmpl_var name='ttl'}" size="10" maxlength="10" type="text" class="textInput" />&nbsp;{tmpl_var name='seconds_txt'}
-            </div>
-            <div class="ctrlHolder">
-                <label for="xfer">{tmpl_var name='xfer_txt'}</label>
-                <input name="xfer" id="xfer" value="{tmpl_var name='xfer'}" size="30" maxlength="255" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="also_notify">{tmpl_var name='also_notify_txt'}</label>
-                <input name="also_notify" id="also_notify" value="{tmpl_var name='also_notify'}" size="30" maxlength="255" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="update_acl">{tmpl_var name='update_acl_txt'}</label>
-                <input name="update_acl" id="update_acl" value="{tmpl_var name='update_acl'}" size="30" maxlength="255" type="text" class="textInput" />
-            </div>
+        </tmpl_if>
+        <div class="ctrlHolder">
+            <label for="origin">{tmpl_var name='origin_txt'}</label>
+            <input name="origin" id="origin" value="{tmpl_var name='origin'}" size="30" maxlength="255" type="text" class="textInput" /> {tmpl_var name='eg_domain_tld'}
+        </div>
+        <div class="ctrlHolder">
+            <label for="ns">{tmpl_var name='ns_txt'}</label>
+            <input name="ns" id="ns" value="{tmpl_var name='ns'}" size="30" maxlength="255" type="text" class="textInput" /> {tmpl_var name='eg_ns1_domain_tld'}
+        </div>
+        <div class="ctrlHolder">
+            <label for="mbox">{tmpl_var name='mbox_txt'}</label>
+            <input name="mbox" id="mbox" value="{tmpl_var name='mbox'}" size="30" maxlength="255" type="text" class="textInput" /> {tmpl_var name='eg_webmaster_domain_tld'}
+        </div>
+        <div class="ctrlHolder">
+            <label for="refresh">{tmpl_var name='refresh_txt'}</label>
+            <input name="refresh" id="refresh" value="{tmpl_var name='refresh'}" size="10" maxlength="10" type="text" class="textInput" />&nbsp;{tmpl_var name='seconds_txt'}
+        </div>
+        <div class="ctrlHolder">
+            <label for="retry">{tmpl_var name='retry_txt'}</label>
+            <input name="retry" id="retry" value="{tmpl_var name='retry'}" size="10" maxlength="10" type="text" class="textInput" />&nbsp;{tmpl_var name='seconds_txt'}
+        </div>
+        <div class="ctrlHolder">
+            <label for="expire">{tmpl_var name='expire_txt'}</label>
+            <input name="expire" id="expire" value="{tmpl_var name='expire'}" size="10" maxlength="10" type="text" class="textInput" />&nbsp;{tmpl_var name='seconds_txt'}
+        </div>
+        <div class="ctrlHolder">
+            <label for="minimum">{tmpl_var name='minimum_txt'}</label>
+            <input name="minimum" id="minimum" value="{tmpl_var name='minimum'}" size="10" maxlength="10" type="text" class="textInput" />&nbsp;{tmpl_var name='seconds_txt'}
+        </div>
+        <div class="ctrlHolder">
+            <label for="ttl">{tmpl_var name='ttl_txt'}</label>
+            <input name="ttl" id="ttl" value="{tmpl_var name='ttl'}" size="10" maxlength="10" type="text" class="textInput" />&nbsp;{tmpl_var name='seconds_txt'}
+        </div>
+        <div class="ctrlHolder">
+            <label for="xfer">{tmpl_var name='xfer_txt'}</label>
+            <input name="xfer" id="xfer" value="{tmpl_var name='xfer'}" size="30" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="also_notify">{tmpl_var name='also_notify_txt'}</label>
+            <input name="also_notify" id="also_notify" value="{tmpl_var name='also_notify'}" size="30" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="update_acl">{tmpl_var name='update_acl_txt'}</label>
+            <input name="update_acl" id="update_acl" value="{tmpl_var name='update_acl'}" size="30" maxlength="255" type="text" class="textInput" />
+        </div>
 
-            <div class="ctrlHolder">
-                <p class="label">{tmpl_var name='active_txt'}</p>
-                <div class="multiField">
-                    {tmpl_var name='active'}
-                </div>
+        <div class="ctrlHolder">
+            <p class="label">{tmpl_var name='active_txt'}</p>
+            <div class="multiField">
+                {tmpl_var name='active'}
             </div>
         </div>
 

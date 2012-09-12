@@ -32,27 +32,24 @@
 
     <!-- begin: modulecontent -->
     <div class="panel panel_tools_tpl">
-        <div class="subsectiontoggle"><span class="showing"></span>ISPC-larry Theme options<em class="showing"></em></div>
-        <div class="subsection">
-            <div class="ctrlHolder">
-                <label for="startmodule">{tmpl_var name='startmodule_txt'}</label>
-                <select name="startmodule" id="startmodule" class="selectInput formLengthHalf">
-                    {tmpl_var name='startmodule'}
-                </select>
-            </div>
-            <div class="ctrlHolder">
-                <label for="language">{tmpl_var name='language_txt'}</label>
-                <select name="language" id="language" class="selectInput flags">
-                    {tmpl_var name='language'}
-                </select>
-            </div>
-            <!-- TODO: If user theme change is activated -->
-            <div class="ctrlHolder">
-                <label for="app_theme">{tmpl_var name='app_theme_txt'}</label>
-                <select name="app_theme" id="app_theme" class="selectInput formLengthHalf">
-                    {tmpl_var name='app_theme'}
-                </select>
-            </div>
+        <div class="ctrlHolder">
+            <label for="startmodule">{tmpl_var name='startmodule_txt'}</label>
+            <select name="startmodule" id="startmodule" class="selectInput formLengthHalf">
+                {tmpl_var name='startmodule'}
+            </select>
+        </div>
+        <div class="ctrlHolder">
+            <label for="language">{tmpl_var name='language_txt'}</label>
+            <select name="language" id="language" class="selectInput flags">
+                {tmpl_var name='language'}
+            </select>
+        </div>
+        <!-- TODO: If user theme change is activated -->
+        <div class="ctrlHolder">
+            <label for="app_theme">{tmpl_var name='app_theme_txt'}</label>
+            <select name="app_theme" id="app_theme" class="selectInput formLengthHalf">
+                {tmpl_var name='app_theme'}
+            </select>
         </div>
 
         <input type="hidden" name="id" value="{tmpl_var name='id'}">

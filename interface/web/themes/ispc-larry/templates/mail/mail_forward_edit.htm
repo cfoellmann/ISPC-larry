@@ -37,25 +37,22 @@
 
     <!-- begin: modulecontent -->
     <div class="panel panel_mail_forward">
-        <div class="subsectiontoggle"><span class="showing"></span>{tmpl_var name='email_txt'}<em class="showing"></em></div>
-        <div class="subsection">
-            <div class="ctrlHolder">
-                <p class="label"> {tmpl_var name='email_txt'} <em>*</em></p>
-                <div class="multiField">
-                    <label for="email_local_part" class="blockLabel">Alias<input type="text" id="email_local_part" name="email_local_part" size="20" value="{tmpl_var name='email_local_part'}" class="textInput" /></label>
-                    <label for="email_at" class="blockLabel email_at">&nbsp;<span id="email_at" name="email_at" />@</label>
-                    <label for="email_domain" class="blockLabel">{tmpl_var name='domain_txt'}<select name="email_domain" id="email_domain" class="selectInput">{tmpl_var name='email_domain'}</select></label>
-                </div>
+        <div class="ctrlHolder">
+            <p class="label"> {tmpl_var name='email_txt'} <em>*</em></p>
+            <div class="multiField">
+                <label for="email_local_part" class="blockLabel">Alias<input type="text" id="email_local_part" name="email_local_part" size="20" value="{tmpl_var name='email_local_part'}" class="textInput" /></label>
+                <label for="email_at" class="blockLabel email_at">&nbsp;<span id="email_at" name="email_at" />@</label>
+                <label for="email_domain" class="blockLabel">{tmpl_var name='domain_txt'}<select name="email_domain" id="email_domain" class="selectInput">{tmpl_var name='email_domain'}</select></label>
             </div>
-            <div class="ctrlHolder">
-                <label for="destination">{tmpl_var name='destination_txt'}</label>
-                <textarea rows="10" cols="40" name="destination" id="destination" type="text" class="textInput">{tmpl_var name='destination'}</textarea>
-            </div>
-            <div class="ctrlHolder">
-                <p class="label">{tmpl_var name='active_txt'}</p>
-                <div class="multiField">
-                    {tmpl_var name='active'}
-                </div>
+        </div>
+        <div class="ctrlHolder">
+            <label for="destination">{tmpl_var name='destination_txt'}</label>
+            <textarea rows="10" cols="40" name="destination" id="destination" type="text" class="textInput">{tmpl_var name='destination'}</textarea>
+        </div>
+        <div class="ctrlHolder">
+            <p class="label">{tmpl_var name='active_txt'}</p>
+            <div class="multiField">
+                {tmpl_var name='active'}
             </div>
         </div>
 

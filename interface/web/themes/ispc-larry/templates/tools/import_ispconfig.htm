@@ -39,77 +39,71 @@
 
     <!-- begin: modulecontent -->
     <div class="panel panel_language_import">
-        <div class="subsectiontoggle"><span class="showing"></span><tmpl_var name="list_head_txt"><em class="showing"></em></div>
-        <div class="subsection">
-            <div class="ctrlHolder">
-                <p class="label">Remote API URL</p>
-                <div class="multiField">
-                    <input id="remote_server" type="text" value="{tmpl_var name='remote_server'}" name="remote_server" /> (e.g. https://www.example.com:8080/remote/ )
-                </div>
+        <div class="ctrlHolder">
+            <p class="label">Remote API URL</p>
+            <div class="multiField">
+                <input id="remote_server" type="text" value="{tmpl_var name='remote_server'}" name="remote_server" /> (e.g. https://www.example.com:8080/remote/ )
             </div>
-            <div class="ctrlHolder">
-                <p class="label">Remote User</p>
-                <div class="multiField">
-                    <input id="remote_user" type="text" value="{tmpl_var name='remote_user'}" name="remote_user" />
-                </div>
+        </div>
+        <div class="ctrlHolder">
+            <p class="label">Remote User</p>
+            <div class="multiField">
+                <input id="remote_user" type="text" value="{tmpl_var name='remote_user'}" name="remote_user" />
             </div>
-            <div class="ctrlHolder">
-                <p class="label">Remote password</p>
-                <div class="multiField">
-                    <input id="remote_password" type="text" value="{tmpl_var name='remote_password'}" name="remote_password" />
-                </div>
+        </div>
+        <div class="ctrlHolder">
+            <p class="label">Remote password</p>
+            <div class="multiField">
+                <input id="remote_password" type="text" value="{tmpl_var name='remote_password'}" name="remote_password" />
             </div>
-        </div>     
+        </div>    
         <tmpl_if name="connected">
-            <div class="subsectiontoggle"><span class="showing"></span>{tmpl_var name="legend2_txt"}<em class="showing"></em></div>
-            <div class="subsection">
-                <div class="ctrlHolder">
-                    <label for="mail_domain">{tmpl_var name='mail_domain_txt'}</label>
-                    <select name="mail_domain" id="mail_domain" class="selectInput">
-                        {tmpl_var name='mail_domain'}
-                    </select>
+            <div class="ctrlHolder">
+                <label for="mail_domain">{tmpl_var name='mail_domain_txt'}</label>
+                <select name="mail_domain" id="mail_domain" class="selectInput">
+                    {tmpl_var name='mail_domain'}
+                </select>
+            </div>
+            <div class="ctrlHolder">
+                <label for="client_group_id">{tmpl_var name='client_group_id_txt'}</label>
+                <select name="client_group_id" id="client_group_id" class="selectInput">
+                    {tmpl_var name='client_group_id'}
+                </select>
+            </div>
+            <div class="ctrlHolder">
+                <p class="label">{tmpl_var name="import_mailbox_txt"}</p>
+                <div class="multiField">
+                    <input id="import_mailbox" type="checkbox" value="1" name="import_mailbox" checked="checked" />
                 </div>
-                <div class="ctrlHolder">
-                    <label for="client_group_id">{tmpl_var name='client_group_id_txt'}</label>
-                    <select name="client_group_id" id="client_group_id" class="selectInput">
-                        {tmpl_var name='client_group_id'}
-                    </select>
+            </div>
+            <div class="ctrlHolder">
+                <p class="label">{tmpl_var name="import_user_filter_txt"}</p>
+                <div class="multiField">
+                    <input id="import_user_filter" type="checkbox" value="1" name="import_user_filter" checked="checked" />
                 </div>
-                <div class="ctrlHolder">
-                    <p class="label">{tmpl_var name="import_mailbox_txt"}</p>
-                    <div class="multiField">
-                        <input id="import_mailbox" type="checkbox" value="1" name="import_mailbox" checked="checked" />
-                    </div>
+            </div>
+            <div class="ctrlHolder">
+                <p class="label">{tmpl_var name="import_spamfilter_txt"}</p>
+                <div class="multiField">
+                    <input id="import_spamfilter" type="checkbox" value="1" name="import_spamfilter" checked="checked" />
                 </div>
-                <div class="ctrlHolder">
-                    <p class="label">{tmpl_var name="import_user_filter_txt"}</p>
-                    <div class="multiField">
-                        <input id="import_user_filter" type="checkbox" value="1" name="import_user_filter" checked="checked" />
-                    </div>
+            </div>
+            <div class="ctrlHolder">
+                <p class="label">{tmpl_var name="import_alias_txt"}</p>
+                <div class="multiField">
+                    <input id="import_alias" type="checkbox" value="1" name="import_alias" checked="checked" />
                 </div>
-                <div class="ctrlHolder">
-                    <p class="label">{tmpl_var name="import_spamfilter_txt"}</p>
-                    <div class="multiField">
-                        <input id="import_spamfilter" type="checkbox" value="1" name="import_spamfilter" checked="checked" />
-                    </div>
+            </div>
+            <div class="ctrlHolder">
+                <p class="label">{tmpl_var name="import_forward_txt"}</p>
+                <div class="multiField">
+                    <input id="import_forward" type="checkbox" value="1" name="import_forward" checked="checked" />
                 </div>
-                <div class="ctrlHolder">
-                    <p class="label">{tmpl_var name="import_alias_txt"}</p>
-                    <div class="multiField">
-                        <input id="import_alias" type="checkbox" value="1" name="import_alias" checked="checked" />
-                    </div>
-                </div>
-                <div class="ctrlHolder">
-                    <p class="label">{tmpl_var name="import_forward_txt"}</p>
-                    <div class="multiField">
-                        <input id="import_forward" type="checkbox" value="1" name="import_forward" checked="checked" />
-                    </div>
-                </div>
-                <div class="ctrlHolder">
-                    <p class="label">{tmpl_var name="import_aliasdomain_txt"}</p>
-                    <div class="multiField">
-                        <input id="import_aliasdomain" type="checkbox" value="1" name="import_aliasdomain" checked="checked" />
-                    </div>
+            </div>
+            <div class="ctrlHolder">
+                <p class="label">{tmpl_var name="import_aliasdomain_txt"}</p>
+                <div class="multiField">
+                    <input id="import_aliasdomain" type="checkbox" value="1" name="import_aliasdomain" checked="checked" />
                 </div>
             </div>
         </tmpl_if>

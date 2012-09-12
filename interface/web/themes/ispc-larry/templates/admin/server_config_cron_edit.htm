@@ -16,7 +16,7 @@
 </div>
 
 <!-- begin: modulebody -->
-<div id="module-title"><h1><tmpl_var name="list_head_txt"></h1></div>
+<div id="module-title"><h1><tmpl_var name="form_hint"></h1></div>
 <div class="module-box boxlistcontent" id="modulecontainer">
     
     <!-- desc -->
@@ -32,8 +32,6 @@
 
     <!-- begin: modulecontent -->
     <div class="panel panel_server_config">
-        <div class="subsectiontoggle"><span class="showing"></span>Interface > Cron<em class="showing"></em></div>
-        <div class="subsection">
             <div class="ctrlHolder">
                 <label for="init_script">{tmpl_var name='init_script_txt'}</label>
                 <input name="init_script" id="init_script" value="{tmpl_var name='init_script'}" size="40" maxlength="255" type="text" class="textInput" />
@@ -46,7 +44,6 @@
                 <label for="wget">{tmpl_var name='wget_txt'}</label>
                 <input name="wget" id="wget" value="{tmpl_var name='wget'}" size="40" maxlength="255" type="text" class="textInput" />
             </div>
-        </div>
 
         <input type="hidden" name="id" value="{tmpl_var name='id'}">
 

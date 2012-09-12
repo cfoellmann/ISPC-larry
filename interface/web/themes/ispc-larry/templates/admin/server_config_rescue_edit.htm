@@ -16,7 +16,7 @@
 </div>
 
 <!-- begin: modulebody -->
-<div id="module-title"><h1><tmpl_var name="list_head_txt"></h1></div>
+<div id="module-title"><h1><tmpl_var name="form_hint"></h1></div>
 <div class="module-box boxlistcontent" id="modulecontainer">
     
     <!-- desc -->
@@ -32,34 +32,31 @@
 
     <!-- begin: modulecontent -->
     <div class="panel panel_server_config">
-        <div class="subsectiontoggle"><span class="showing"></span>Interface > Rescue<em class="showing"></em></div>
-        <div class="subsection">
-            <div class="ctrlHolder">
-                <p class="label">{tmpl_var name='try_rescue_txt'}</p>
-                <div class="multiField">
-                    {tmpl_var name='try_rescue'}
-                </div>
+        <div class="ctrlHolder">
+            <p class="label">{tmpl_var name='try_rescue_txt'}</p>
+            <div class="multiField">
+                {tmpl_var name='try_rescue'}
             </div>
-            <div class="ctrlHolder">
-                <p class="label">{tmpl_var name='do_not_try_rescue_httpd_txt'}</p>
-                <div class="multiField">
-                    {tmpl_var name='do_not_try_rescue_httpd'}
-                </div>
-            </div>
-            <div class="ctrlHolder">
-                <p class="label">{tmpl_var name='do_not_try_rescue_mysql_txt'}</p>
-                <div class="multiField">
-                    {tmpl_var name='do_not_try_rescue_mysql'}
-                </div>
-            </div>
-            <div class="ctrlHolder">
-                <p class="label">{tmpl_var name='do_not_try_rescue_mail_txt'}</p>
-                <div class="multiField">
-                    {tmpl_var name='do_not_try_rescue_mail'}
-                </div>
-            </div>
-            <tmpl_var name="rescue_description_txt">
         </div>
+        <div class="ctrlHolder">
+            <p class="label">{tmpl_var name='do_not_try_rescue_httpd_txt'}</p>
+            <div class="multiField">
+                {tmpl_var name='do_not_try_rescue_httpd'}
+            </div>
+        </div>
+        <div class="ctrlHolder">
+            <p class="label">{tmpl_var name='do_not_try_rescue_mysql_txt'}</p>
+            <div class="multiField">
+                {tmpl_var name='do_not_try_rescue_mysql'}
+            </div>
+        </div>
+        <div class="ctrlHolder">
+            <p class="label">{tmpl_var name='do_not_try_rescue_mail_txt'}</p>
+            <div class="multiField">
+                {tmpl_var name='do_not_try_rescue_mail'}
+            </div>
+        </div>
+        <tmpl_var name="rescue_description_txt">
 
         <input type="hidden" name="id" value="{tmpl_var name='id'}">
 

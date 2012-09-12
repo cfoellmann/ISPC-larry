@@ -32,54 +32,51 @@
 
     <!-- begin: modulecontent -->
     <div class="panel panel_openvz_vm">
-        <div class="subsectiontoggle"><span class="showing"></span>VM Advanced<em class="showing"></em></div>
-        <div class="subsection">
-            <div class="ctrlHolder">
-                <label for="veid">{tmpl_var name='veid_txt'}</label>
-                <input name="veid" id="veid" value="{tmpl_var name='veid'}" size="30" maxlength="255" type="text" class="textInput formLengthLimit" />
+        <div class="ctrlHolder">
+            <label for="veid">{tmpl_var name='veid_txt'}</label>
+            <input name="veid" id="veid" value="{tmpl_var name='veid'}" size="30" maxlength="255" type="text" class="textInput formLengthLimit" />
+        </div>
+        <div class="ctrlHolder">
+            <p class="label">{tmpl_var name='create_dns_txt'}</p>
+            <div class="multiField">
+                {tmpl_var name='create_dns'}
             </div>
-            <div class="ctrlHolder">
-                <p class="label">{tmpl_var name='create_dns_txt'}</p>
-                <div class="multiField">
-                    {tmpl_var name='create_dns'}
-                </div>
-            </div>
-            <div class="ctrlHolder">
-                <label for="diskspace">{tmpl_var name='diskspace_txt'}</label>
-                <input name="diskspace" id="diskspace" value="{tmpl_var name='diskspace'}" size="30" maxlength="255" type="text" class="textInput formLengthLimit" /> &nbsp;GB
-            </div>
-            <div class="ctrlHolder">
-                <label for="ram">{tmpl_var name='ram_txt'}</label>
-                <input name="ram" id="ram" value="{tmpl_var name='ram'}" size="30" maxlength="255" type="text" class="textInput formLengthLimit" /> &nbsp;MB
-            </div>
-            <div class="ctrlHolder">
-                <label for="ram_burst">{tmpl_var name='ram_burst_txt'}</label>
-                <input name="ram_burst" id="ram_burst" value="{tmpl_var name='ram_burst'}" size="30" maxlength="255" type="text" class="textInput formLengthLimit" /> &nbsp;MB
-            </div>
-            <div class="ctrlHolder">
-                <label for="cpu_units">{tmpl_var name='cpu_units_txt'}</label>
-                <input name="cpu_units" id="cpu_units" value="{tmpl_var name='cpu_units'}" size="30" maxlength="255" type="text" class="textInput formLengthLimit" />&nbsp;(8 - 500000)
-            </div>
-            <div class="ctrlHolder">
-                <label for="cpu_num">{tmpl_var name='cpu_num_txt'}</label>
-                <input name="cpu_num" id="cpu_num" value="{tmpl_var name='cpu_num'}" size="30" maxlength="255" type="text" class="textInput formLengthLimit" />&nbsp;(1 - 64)
-            </div>
-            <div class="ctrlHolder">
-                <label for="cpu_limit">{tmpl_var name='cpu_limit_txt'}</label>
-                <input name="cpu_limit" id="cpu_limit" value="{tmpl_var name='cpu_limit'}" size="30" maxlength="255" type="text" class="textInput formLengthLimit" />&nbsp;(10 - 6400)
-            </div>
-            <div class="ctrlHolder">
-                <label for="io_priority">{tmpl_var name='io_priority_txt'}</label>
-                <input name="io_priority" id="io_priority" value="{tmpl_var name='io_priority'}" size="30" maxlength="255" type="text" class="textInput formLengthLimit" />&nbsp;(0 - 7)
-            </div>
-            <div class="ctrlHolder">
-                <label for="nameserver">{tmpl_var name='nameserver_txt'}</label>
-                <input name="nameserver" id="nameserver" value="{tmpl_var name='nameserver'}" size="30" maxlength="255" type="text" class="textInput" />&nbsp;{tmpl_var name='nameserver_desc_txt'}
-            </div>
-            <div class="ctrlHolder">
-                <label for="capability">{tmpl_var name='capability_txt'}</label>
-                <input name="capability" id="capability" value="{tmpl_var name='capability'}" size="30" maxlength="255" type="text" class="textInput" />
-            </div>
+        </div>
+        <div class="ctrlHolder">
+            <label for="diskspace">{tmpl_var name='diskspace_txt'}</label>
+            <input name="diskspace" id="diskspace" value="{tmpl_var name='diskspace'}" size="30" maxlength="255" type="text" class="textInput formLengthLimit" /> &nbsp;GB
+        </div>
+        <div class="ctrlHolder">
+            <label for="ram">{tmpl_var name='ram_txt'}</label>
+            <input name="ram" id="ram" value="{tmpl_var name='ram'}" size="30" maxlength="255" type="text" class="textInput formLengthLimit" /> &nbsp;MB
+        </div>
+        <div class="ctrlHolder">
+            <label for="ram_burst">{tmpl_var name='ram_burst_txt'}</label>
+            <input name="ram_burst" id="ram_burst" value="{tmpl_var name='ram_burst'}" size="30" maxlength="255" type="text" class="textInput formLengthLimit" /> &nbsp;MB
+        </div>
+        <div class="ctrlHolder">
+            <label for="cpu_units">{tmpl_var name='cpu_units_txt'}</label>
+            <input name="cpu_units" id="cpu_units" value="{tmpl_var name='cpu_units'}" size="30" maxlength="255" type="text" class="textInput formLengthLimit" />&nbsp;(8 - 500000)
+        </div>
+        <div class="ctrlHolder">
+            <label for="cpu_num">{tmpl_var name='cpu_num_txt'}</label>
+            <input name="cpu_num" id="cpu_num" value="{tmpl_var name='cpu_num'}" size="30" maxlength="255" type="text" class="textInput formLengthLimit" />&nbsp;(1 - 64)
+        </div>
+        <div class="ctrlHolder">
+            <label for="cpu_limit">{tmpl_var name='cpu_limit_txt'}</label>
+            <input name="cpu_limit" id="cpu_limit" value="{tmpl_var name='cpu_limit'}" size="30" maxlength="255" type="text" class="textInput formLengthLimit" />&nbsp;(10 - 6400)
+        </div>
+        <div class="ctrlHolder">
+            <label for="io_priority">{tmpl_var name='io_priority_txt'}</label>
+            <input name="io_priority" id="io_priority" value="{tmpl_var name='io_priority'}" size="30" maxlength="255" type="text" class="textInput formLengthLimit" />&nbsp;(0 - 7)
+        </div>
+        <div class="ctrlHolder">
+            <label for="nameserver">{tmpl_var name='nameserver_txt'}</label>
+            <input name="nameserver" id="nameserver" value="{tmpl_var name='nameserver'}" size="30" maxlength="255" type="text" class="textInput" />&nbsp;{tmpl_var name='nameserver_desc_txt'}
+        </div>
+        <div class="ctrlHolder">
+            <label for="capability">{tmpl_var name='capability_txt'}</label>
+            <input name="capability" id="capability" value="{tmpl_var name='capability'}" size="30" maxlength="255" type="text" class="textInput" />
         </div>
 
         <input type="hidden" name="id" value="{tmpl_var name='id'}">

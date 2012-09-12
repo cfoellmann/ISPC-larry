@@ -10,8 +10,8 @@
         </tmpl_loop>
     </ul>
     <ul class="tabsbar-buttons">
-        <li><a href="javascript:submitForm('pageForm','help/faq_sections_edit.php');" title="{tmpl_var name='btn_save_txt'}" class="positive iconstxt icoPositive"><span>{tmpl_var name='btn_save_txt'}</span></a></li>
-        <li><a href="javascript:loadContent('help/faq_sections_list.php');" title="{tmpl_var name='btn_cancel_txt'}" class="negative iconstxt icoNegative"><span>{tmpl_var name='btn_cancel_txt'}</span></a></li>
+        <li><a href="#" onclick="submitForm('pageForm','help/faq_sections_edit.php');" title="{tmpl_var name='btn_save_txt'}" class="positive iconstxt icoPositive"><span>{tmpl_var name='btn_save_txt'}</span></a></li>
+        <li><a href="#" onclick="loadContent('help/faq_sections_list.php');" title="{tmpl_var name='btn_cancel_txt'}" class="negative iconstxt icoNegative"><span>{tmpl_var name='btn_cancel_txt'}</span></a></li>
     </ul>
 </div>
 
@@ -32,12 +32,9 @@
 
     <!-- begin: modulecontent -->
     <div class="panel panel_support_message">
-        <div class="subsectiontoggle"><span class="showing"></span>Import Details<em class="showing"></em></div>
-        <div class="subsection">
-            <div class="ctrlHolder">
-                <label for="hfs_name">{tmpl_var name='faq_section_name_txt'}</label>
-                <input name="hfs_name" id="hfs_name" value="{tmpl_var name='hfs_name'}" size="30" maxlength="255" type="text" class="textInput" />
-            </div>
+        <div class="ctrlHolder">
+            <label for="hfs_name">{tmpl_var name='faq_section_name_txt'}</label>
+            <input name="hfs_name" id="hfs_name" value="{tmpl_var name='hfs_name'}" size="30" maxlength="255" type="text" class="textInput" />
         </div>
 
         <input type="hidden" name="id" value="{tmpl_var name='id'}">

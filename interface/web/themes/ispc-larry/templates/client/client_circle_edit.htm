@@ -16,11 +16,11 @@
 </div>
 
 <!-- begin: modulebody -->
-<div id="module-title"><h1><tmpl_var name="form_hint"></h1></div>
+<div id="module-title"><h1><tmpl_var name="client_circle_head_txt"></h1></div>
 <div class="module-box boxlistcontent" id="modulecontainer">
 
     <!-- desc -->
-    <div id="module-desc"><tmpl_var name="page_desc_txt"></div>
+    <div id="module-desc"><tmpl_var name="client_circle_desc_txt"></div>
 
     <!-- messages/erros -->  
     <tmpl_if name="msg">
@@ -32,30 +32,27 @@
 
     <!-- begin: modulecontent -->
     <div class="panel panel_edit_circle">
-        <div class="subsectiontoggle"><span class="showing"></span>{tmpl_var name='circle_txt'}<em class="showing"></em></div>
-        <div class="subsection">
-            <div class="ctrlHolder">
-                <label for="circle_name">{tmpl_var name='circle_name_txt'}*</label>
-                <input name="circle_name" id="circle_name" value="{tmpl_var name='circle_name'}" size="30" maxlength="255" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder">
-                <p class="label">{tmpl_var name='client_ids_txt'}</p>
-                <div class="multiField">
-                    {tmpl_var name='client_ids'}
-                </div>
-            </div>
-            <div class="ctrlHolder">
-                <label for="description">{tmpl_var name='description_txt'}</label>
-                <textarea name="description" id="description" rows='10' cols='30'>{tmpl_var name='description'}</textarea>
-            </div>
-            <div class="ctrlHolder">
-                <p class="label">{tmpl_var name='active_txt'}</p>
-                <div class="multiField">
-                    {tmpl_var name='active'}
-                </div>
-            </div>
-            {tmpl_var name='required_fields_txt'}
+        <div class="ctrlHolder">
+            <label for="circle_name">{tmpl_var name='circle_name_txt'}*</label>
+            <input name="circle_name" id="circle_name" value="{tmpl_var name='circle_name'}" size="30" maxlength="255" type="text" class="textInput" />
         </div>
+        <div class="ctrlHolder">
+            <p class="label">{tmpl_var name='client_ids_txt'}</p>
+            <div class="multiField">
+                {tmpl_var name='client_ids'}
+            </div>
+        </div>
+        <div class="ctrlHolder">
+            <label for="description">{tmpl_var name='description_txt'}</label>
+            <textarea name="description" id="description" rows='10' cols='30'>{tmpl_var name='description'}</textarea>
+        </div>
+        <div class="ctrlHolder">
+            <p class="label">{tmpl_var name='active_txt'}</p>
+            <div class="multiField">
+                {tmpl_var name='active'}
+            </div>
+        </div>
+        {tmpl_var name='required_fields_txt'}
 
         <input type="hidden" name="id" value="{tmpl_var name='id'}">
 

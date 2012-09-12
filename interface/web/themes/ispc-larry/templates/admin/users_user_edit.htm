@@ -16,11 +16,11 @@
 </div>
 
 <!-- begin: modulebody -->
-<div id="module-title"><h1><tmpl_var name="list_head_txt"></h1></div>
+<div id="module-title"><h1><tmpl_var name="users_head_txt"></h1></div>
 <div class="module-box boxlistcontent" id="modulecontainer">
     
     <!-- desc -->
-    <div id="module-desc"><tmpl_var name="list_desc_txt"></div>
+    <div id="module-desc"><tmpl_var name=users_desc_txt"></div>
 
     <!-- messages/erros -->  
     <tmpl_if name="msg">
@@ -32,65 +32,63 @@
 
     <!-- begin: modulecontent -->
     <div class="panel panel_users">
-        <div class="subsectiontoggle"><span class="showing"></span>User Details<em class="showing"></em></div>
-        <div class="subsection">
-            <div class="ctrlHolder">
-                <label for="username">{tmpl_var name='username_txt'}</label>
-                <input name="username" id="username" value="{tmpl_var name='username'}" size="15" maxlength="30" type="text" class="textInput" />
+        <div class="ctrlHolder">
+            <label for="username">{tmpl_var name='username_txt'}</label>
+            <input name="username" id="username" value="{tmpl_var name='username'}" size="15" maxlength="30" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="passwort">{tmpl_var name='passwort_txt'}</label>
+            <input name="passwort" id="passwort" value="{tmpl_var name='passwort'}" size="15" maxlength="100" type="password" class="textInput"  onkeyup="pass_check(this.value);checkPassMatch('passwort','repeat_password');"/>&nbsp;<a href="javascript:void(0);" onclick="generatePassword('passwort','repeat_password');">{tmpl_var name='generate_password_txt'}</a>
+        </div>
+        <div class="ctrlHolder">
+            <p class="label">{tmpl_var name='password_strength_txt'}</p>
+            <div id="passBar"></div>
+            <p class="formHint"><span id="passText">&nbsp;</span></p>
+            <br style="clear:both;">
+        </div>
+        <div class="ctrlHolder">
+            <label for="repeat_password">{tmpl_var name='repeat_password_txt'}</label>
+            <input name="repeat_password" id="repeat_password" value="" size="15" maxlength="100" type="password" class="textInput" style="width:100px;"  onkeyup="checkPassMatch('passwort','repeat_password');" />
+            <div id="confirmpasswordError" style="display:none;" class="confirmpassworderror">{tmpl_var name='password_mismatch_txt'}</div>
+            <div id="confirmpasswordOK" style="display:none;" class="confirmpasswordok">{tmpl_var name='password_match_txt'}</div>
+        </div>
+        <div class="ctrlHolder">
+            <p class="label">{tmpl_var name='modules_txt'}</p>
+            <div class="multiField">
+                {tmpl_var name='modules'}
             </div>
-            <div class="ctrlHolder">
-                <label for="passwort">{tmpl_var name='passwort_txt'}</label>
-                <input name="passwort" id="passwort" value="{tmpl_var name='passwort'}" size="15" maxlength="100" type="password" class="textInput"  onkeyup="pass_check(this.value);checkPassMatch('passwort','repeat_password');"/>&nbsp;<a href="javascript:void(0);" onclick="generatePassword('passwort','repeat_password');">{tmpl_var name='generate_password_txt'}</a>
+        </div>
+        <div class="ctrlHolder">
+            <label for="startmodule">{tmpl_var name='startmodule_txt'}</label>
+            <select name="startmodule" id="startmodule" class="selectInput formLengthHalf">
+                {tmpl_var name='startmodule'}
+            </select>
+        </div>
+        <div class="ctrlHolder">
+            <p class="label">{tmpl_var name='app_theme_txt'}</p>
+            <div class="multiField">
+                {tmpl_var name='app_theme'}
             </div>
-            <div class="ctrlHolder">
-                <p class="label">{tmpl_var name='password_strength_txt'}</p>
-                <div id="passBar"></div>
-                <p class="formHint"><span id="passText">&nbsp;</span></p>
-                <br style="clear:both;">
+        </div>
+        <div class="ctrlHolder">
+            <p class="label">{tmpl_var name='typ_txt'}</p>
+            <div class="multiField">
+                {tmpl_var name='typ'}
             </div>
-            <div class="ctrlHolder">
-                <label for="repeat_password">{tmpl_var name='repeat_password_txt'}</label>
-                <input name="repeat_password" id="repeat_password" value="" size="15" maxlength="100" type="password" class="textInput" style="width:100px;"  onkeyup="checkPassMatch('passwort','repeat_password');" />
-                <div id="confirmpasswordError" style="display:none;" class="confirmpassworderror">{tmpl_var name='password_mismatch_txt'}</div>
-                <div id="confirmpasswordOK" style="display:none;" class="confirmpasswordok">{tmpl_var name='password_match_txt'}</div>
+        </div>
+        <div class="ctrlHolder">
+            <p class="label">{tmpl_var name='active_txt'}</p>
+            <div class="multiField">
+                {tmpl_var name='active'}
             </div>
-            <div class="ctrlHolder">
-                <p class="label">{tmpl_var name='modules_txt'}</p>
-                <div class="multiField">
-                    {tmpl_var name='modules'}
-                </div>
-            </div>
-            <div class="ctrlHolder">
-                <label for="startmodule">{tmpl_var name='startmodule_txt'}</label>
-                <select name="startmodule" id="startmodule" class="selectInput formLengthHalf">
-                    {tmpl_var name='startmodule'}
-                </select>
-            </div>
-            <div class="ctrlHolder">
-                <p class="label">{tmpl_var name='app_theme_txt'}</p>
-                <div class="multiField">
-                    {tmpl_var name='app_theme'}
-                </div>
-            </div>
-            <div class="ctrlHolder">
-                <p class="label">{tmpl_var name='typ_txt'}</p>
-                <div class="multiField">
-                    {tmpl_var name='typ'}
-                </div>
-            </div>
-            <div class="ctrlHolder">
-                <p class="label">{tmpl_var name='active_txt'}</p>
-                <div class="multiField">
-                    {tmpl_var name='active'}
-                </div>
-            </div>
-            <div class="ctrlHolder">
-                <label for="language">{tmpl_var name='language_txt'}</label>
-                <select name="language" id="language" class="selectInput flags">
-                    {tmpl_var name='language'}
-                </select>
-            </div>
-        </div>   
+        </div>
+        <div class="ctrlHolder">
+            <label for="language">{tmpl_var name='language_txt'}</label>
+            <select name="language" id="language" class="selectInput flags">
+                {tmpl_var name='language'}
+            </select>
+        </div>
+            
         <input type="hidden" name="id" value="{tmpl_var name='id'}">
 
     </div><!-- end: modulecontent -->

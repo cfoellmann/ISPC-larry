@@ -32,20 +32,17 @@
 
     <!-- begin: modulecontent -->
     <div class="panel panel_web_domain">
-        <div class="subsectiontoggle"><span class="showing"></span>Backup<em class="showing"></em></div>
-        <div class="subsection">
-            <div class="ctrlHolder">
-                <label for="backup_interval">{tmpl_var name='backup_interval_txt'}</label>
-                <select name="backup_interval" id="backup_interval" class="selectInput">
-                    {tmpl_var name='backup_interval'}
-                </select>
-            </div>
-            <div class="ctrlHolder">
-                <label for="backup_copies">{tmpl_var name='backup_copies_txt'}</label>
-                <select name="backup_copies" id="backup_copies" class="selectInput">
-                    {tmpl_var name='backup_copies'}
-                </select>
-            </div>
+        <div class="ctrlHolder">
+            <label for="backup_interval">{tmpl_var name='backup_interval_txt'}</label>
+            <select name="backup_interval" id="backup_interval" class="selectInput">
+                {tmpl_var name='backup_interval'}
+            </select>
+        </div>
+        <div class="ctrlHolder">
+            <label for="backup_copies">{tmpl_var name='backup_copies_txt'}</label>
+            <select name="backup_copies" id="backup_copies" class="selectInput">
+                {tmpl_var name='backup_copies'}
+            </select>
         </div>
 
         {tmpl_var name='backup_records'}

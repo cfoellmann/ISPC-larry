@@ -32,100 +32,97 @@
 
     <!-- begin: modulecontent -->
     <div class="panel panel_openvz_template">
-        <div class="subsectiontoggle"><span class="showing"></span>VM Template Advanced Settings<em class="showing"></em></div>
-        <div class="subsection">
-            <div class="ctrlHolder">
-                <label for="numproc">{tmpl_var name='numproc_txt'}</label>
-                <input name="numproc" id="numproc" value="{tmpl_var name='numproc'}" size="30" maxlength="255" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="numtcpsock">{tmpl_var name='numtcpsock_txt'}</label>
-                <input name="numtcpsock" id="numtcpsock" value="{tmpl_var name='numtcpsock'}" size="30" maxlength="255" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="numothersock">{tmpl_var name='numothersock_txt'}</label>
-                <input name="numothersock" id="numothersock" value="{tmpl_var name='numothersock'}" size="30" maxlength="255" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="vmguarpages">{tmpl_var name='vmguarpages_txt'}</label>
-                <input name="vmguarpages" id="vmguarpages" value="{tmpl_var name='vmguarpages'}" size="30" maxlength="255" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="kmemsize">{tmpl_var name='kmemsize_txt'}</label>
-                <input name="kmemsize" id="kmemsize" value="{tmpl_var name='kmemsize'}" size="30" maxlength="255" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="tcpsndbuf">{tmpl_var name='tcpsndbuf_txt'}</label>
-                <input name="tcpsndbuf" id="tcpsndbuf" value="{tmpl_var name='tcpsndbuf'}" size="30" maxlength="255" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="tcprcvbuf">{tmpl_var name='tcprcvbuf_txt'}</label>
-                <input name="tcprcvbuf" id="tcprcvbuf" value="{tmpl_var name='tcprcvbuf'}" size="30" maxlength="255" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="othersockbuf">{tmpl_var name='othersockbuf_txt'}</label>
-                <input name="othersockbuf" id="othersockbuf" value="{tmpl_var name='othersockbuf'}" size="30" maxlength="255" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="dgramrcvbuf">{tmpl_var name='dgramrcvbuf_txt'}</label>
-                <input name="dgramrcvbuf" id="dgramrcvbuf" value="{tmpl_var name='dgramrcvbuf'}" size="30" maxlength="255" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="oomguarpages">{tmpl_var name='oomguarpages_txt'}</label>
-                <input name="oomguarpages" id="oomguarpages" value="{tmpl_var name='oomguarpages'}" size="30" maxlength="255" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="privvmpages">{tmpl_var name='privvmpages_txt'}</label>
-                <input name="privvmpages" id="privvmpages" value="{tmpl_var name='privvmpages'}" size="30" maxlength="255" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="lockedpages">{tmpl_var name='lockedpages_txt'}</label>
-                <input name="lockedpages" id="lockedpages" value="{tmpl_var name='lockedpages'}" size="30" maxlength="255" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="shmpages">{tmpl_var name='shmpages_txt'}</label>
-                <input name="shmpages" id="shmpages" value="{tmpl_var name='shmpages'}" size="30" maxlength="255" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="physpages">{tmpl_var name='physpages_txt'}</label>
-                <input name="physpages" id="physpages" value="{tmpl_var name='physpages'}" size="30" maxlength="255" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="numfile">{tmpl_var name='numfile_txt'}</label>
-                <input name="numfile" id="numfile" value="{tmpl_var name='numfile'}" size="30" maxlength="255" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="avnumproc">{tmpl_var name='avnumproc_txt'}</label>
-                <input name="avnumproc" id="avnumproc" value="{tmpl_var name='avnumproc'}" size="30" maxlength="255" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="numflock">{tmpl_var name='numflock_txt'}</label>
-                <input name="numflock" id="numflock" value="{tmpl_var name='numflock'}" size="30" maxlength="255" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="numpty">{tmpl_var name='numpty_txt'}</label>
-                <input name="numpty" id="numpty" value="{tmpl_var name='numpty'}" size="30" maxlength="255" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="numsiginfo">{tmpl_var name='numsiginfo_txt'}</label>
-                <input name="numsiginfo" id="numsiginfo" value="{tmpl_var name='numsiginfo'}" size="30" maxlength="255" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="dcachesize">{tmpl_var name='dcachesize_txt'}</label>
-                <input name="dcachesize" id="dcachesize" value="{tmpl_var name='dcachesize'}" size="30" maxlength="255" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="numiptent">{tmpl_var name='numiptent_txt'}</label>
-                <input name="numiptent" id="numiptent" value="{tmpl_var name='numiptent'}" size="30" maxlength="255" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="swappages">{tmpl_var name='swappages_txt'}</label>
-                <input name="swappages" id="swappages" value="{tmpl_var name='swappages'}" size="30" maxlength="255" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="capability">{tmpl_var name='capability_txt'}</label>
-                <input name="capability" id="capability" value="{tmpl_var name='capability'}" size="30" maxlength="255" type="text" class="textInput" />
-            </div>
+        <div class="ctrlHolder">
+           <label for="numproc">{tmpl_var name='numproc_txt'}</label>
+           <input name="numproc" id="numproc" value="{tmpl_var name='numproc'}" size="30" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+           <label for="numtcpsock">{tmpl_var name='numtcpsock_txt'}</label>
+           <input name="numtcpsock" id="numtcpsock" value="{tmpl_var name='numtcpsock'}" size="30" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+           <label for="numothersock">{tmpl_var name='numothersock_txt'}</label>
+           <input name="numothersock" id="numothersock" value="{tmpl_var name='numothersock'}" size="30" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+           <label for="vmguarpages">{tmpl_var name='vmguarpages_txt'}</label>
+           <input name="vmguarpages" id="vmguarpages" value="{tmpl_var name='vmguarpages'}" size="30" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+           <label for="kmemsize">{tmpl_var name='kmemsize_txt'}</label>
+           <input name="kmemsize" id="kmemsize" value="{tmpl_var name='kmemsize'}" size="30" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+           <label for="tcpsndbuf">{tmpl_var name='tcpsndbuf_txt'}</label>
+           <input name="tcpsndbuf" id="tcpsndbuf" value="{tmpl_var name='tcpsndbuf'}" size="30" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+           <label for="tcprcvbuf">{tmpl_var name='tcprcvbuf_txt'}</label>
+           <input name="tcprcvbuf" id="tcprcvbuf" value="{tmpl_var name='tcprcvbuf'}" size="30" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+           <label for="othersockbuf">{tmpl_var name='othersockbuf_txt'}</label>
+           <input name="othersockbuf" id="othersockbuf" value="{tmpl_var name='othersockbuf'}" size="30" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+           <label for="dgramrcvbuf">{tmpl_var name='dgramrcvbuf_txt'}</label>
+           <input name="dgramrcvbuf" id="dgramrcvbuf" value="{tmpl_var name='dgramrcvbuf'}" size="30" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+           <label for="oomguarpages">{tmpl_var name='oomguarpages_txt'}</label>
+           <input name="oomguarpages" id="oomguarpages" value="{tmpl_var name='oomguarpages'}" size="30" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+           <label for="privvmpages">{tmpl_var name='privvmpages_txt'}</label>
+           <input name="privvmpages" id="privvmpages" value="{tmpl_var name='privvmpages'}" size="30" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+           <label for="lockedpages">{tmpl_var name='lockedpages_txt'}</label>
+           <input name="lockedpages" id="lockedpages" value="{tmpl_var name='lockedpages'}" size="30" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+           <label for="shmpages">{tmpl_var name='shmpages_txt'}</label>
+           <input name="shmpages" id="shmpages" value="{tmpl_var name='shmpages'}" size="30" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+           <label for="physpages">{tmpl_var name='physpages_txt'}</label>
+           <input name="physpages" id="physpages" value="{tmpl_var name='physpages'}" size="30" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+           <label for="numfile">{tmpl_var name='numfile_txt'}</label>
+           <input name="numfile" id="numfile" value="{tmpl_var name='numfile'}" size="30" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+           <label for="avnumproc">{tmpl_var name='avnumproc_txt'}</label>
+           <input name="avnumproc" id="avnumproc" value="{tmpl_var name='avnumproc'}" size="30" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+           <label for="numflock">{tmpl_var name='numflock_txt'}</label>
+           <input name="numflock" id="numflock" value="{tmpl_var name='numflock'}" size="30" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+           <label for="numpty">{tmpl_var name='numpty_txt'}</label>
+           <input name="numpty" id="numpty" value="{tmpl_var name='numpty'}" size="30" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+           <label for="numsiginfo">{tmpl_var name='numsiginfo_txt'}</label>
+           <input name="numsiginfo" id="numsiginfo" value="{tmpl_var name='numsiginfo'}" size="30" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+           <label for="dcachesize">{tmpl_var name='dcachesize_txt'}</label>
+           <input name="dcachesize" id="dcachesize" value="{tmpl_var name='dcachesize'}" size="30" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+           <label for="numiptent">{tmpl_var name='numiptent_txt'}</label>
+           <input name="numiptent" id="numiptent" value="{tmpl_var name='numiptent'}" size="30" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+           <label for="swappages">{tmpl_var name='swappages_txt'}</label>
+           <input name="swappages" id="swappages" value="{tmpl_var name='swappages'}" size="30" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+           <label for="capability">{tmpl_var name='capability_txt'}</label>
+           <input name="capability" id="capability" value="{tmpl_var name='capability'}" size="30" maxlength="255" type="text" class="textInput" />
         </div>
 
         <input type="hidden" name="id" value="{tmpl_var name='id'}">

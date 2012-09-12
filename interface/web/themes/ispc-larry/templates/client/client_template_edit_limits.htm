@@ -16,11 +16,11 @@
 </div>
 
 <!-- begin: modulebody -->
-<div id="module-title"><h1><tmpl_var name="form_hint"></h1></div>
+<div id="module-title"><h1><tmpl_var name="client_template_head_txt"></h1></div>
 <div class="module-box boxlistcontent" id="modulecontainer">
 
     <!-- desc -->
-    <div id="module-desc"><tmpl_var name="page_desc_txt"></div>
+    <div id="module-desc"><tmpl_var name="client_template_desc_txt"></div>
 
     <!-- messages/erros -->   
     <tmpl_if name="msg">
@@ -32,8 +32,8 @@
 
     <!-- begin: modulecontent -->
     <div class="panel panel_client_template">
-        <div class="subsectiontoggle"><span class="showing"></span>{tmpl_var name='web_limits_txt'}<em class="showing"></em></div>
-        <div class="subsection">
+        <div class="subsectiontoggle"><span></span>{tmpl_var name='web_limits_txt'}<em></em></div>
+        <div class="subsection" style="display:none;">
             <div class="ctrlHolder">
                 <label for="limit_web_domain">{tmpl_var name='limit_web_domain_txt'}</label>
                 <input name="limit_web_domain" id="limit_web_domain" value="{tmpl_var name='limit_web_domain'}" size="10" maxlength="10" type="text" class="textInput formLengthLimit" />

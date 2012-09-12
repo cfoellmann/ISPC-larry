@@ -32,94 +32,91 @@
 
     <!-- begin: modulecontent -->
     <div class="panel panel_openvz_vm">
-        <div class="subsectiontoggle"><span class="showing"></span>VM Settings<em class="showing"></em></div>
-        <div class="subsection">
-            <tmpl_if name="is_admin">
-                <div class="ctrlHolder">
-                    <tmpl_if name="edit_disabled">
-                        <label for="server_id_disabled">{tmpl_var name='server_id_txt'}</label>
-                        <select name="server_id_disabled" id="server_id_disabled" class="selectInput" disabled="disabled">
+        <tmpl_if name="is_admin">
+            <div class="ctrlHolder">
+                <tmpl_if name="edit_disabled">
+                    <label for="server_id_disabled">{tmpl_var name='server_id_txt'}</label>
+                    <select name="server_id_disabled" id="server_id_disabled" class="selectInput" disabled="disabled">
+                        {tmpl_var name='server_id'}
+                    </select>
+                    <input type="hidden" name="server_id" value="{tmpl_var name='server_id_value'}" />
+                    <tmpl_else>
+                        <label for="server_id">{tmpl_var name='server_id_txt'}</label>
+                        <select name="server_id" id="server_id" class="selectInput" onChange="loadOptionInto('ip_address','vm/ajax_get_ip.php?server_id='+document.getElementById('server_id').value)">
                             {tmpl_var name='server_id'}
                         </select>
-                        <input type="hidden" name="server_id" value="{tmpl_var name='server_id_value'}" />
-                        <tmpl_else>
-                            <label for="server_id">{tmpl_var name='server_id_txt'}</label>
-                            <select name="server_id" id="server_id" class="selectInput" onChange="loadOptionInto('ip_address','vm/ajax_get_ip.php?server_id='+document.getElementById('server_id').value)">
-                                {tmpl_var name='server_id'}
-                            </select>
-                    </tmpl_if>
-                </div>
+                </tmpl_if>
+            </div>
+            <div class="ctrlHolder">
+                <label for="client_group_id">{tmpl_var name='client_group_id_txt'}</label>
+                <select name="client_group_id" id="client_group_id" class="selectInput">
+                    {tmpl_var name='client_group_id'}
+                </select>
+            </div>
+        </tmpl_if>
+        <tmpl_if name="is_reseller">
+            <div class="ctrlHolder">
+                <label for="client_group_id">{tmpl_var name='client_group_id_txt'}</label>
+                <select name="client_group_id" id="client_group_id" class="selectInput">
+                    {tmpl_var name='client_group_id'}
+                </select>
+            </div>
+        </tmpl_if>
+        <tmpl_if name="edit_disabled">
+            <div class="ctrlHolder">
+                <label for="ostemplate_id_disabled">{tmpl_var name='ostemplate_id_txt'}</label>
+                <select name="ostemplate_id_disabled" id="ostemplate_id_disabled" class="selectInput" disabled="disabled">
+                    {tmpl_var name='ostemplate_id'}
+                </select>
+            </div>
+            <input type="hidden" name="ostemplate_id" value="{tmpl_var name='ostemplate_id_value'}">
+            <tmpl_else>
                 <div class="ctrlHolder">
-                    <label for="client_group_id">{tmpl_var name='client_group_id_txt'}</label>
-                    <select name="client_group_id" id="client_group_id" class="selectInput">
-                        {tmpl_var name='client_group_id'}
-                    </select>
-                </div>
-            </tmpl_if>
-            <tmpl_if name="is_reseller">
-                <div class="ctrlHolder">
-                    <label for="client_group_id">{tmpl_var name='client_group_id_txt'}</label>
-                    <select name="client_group_id" id="client_group_id" class="selectInput">
-                        {tmpl_var name='client_group_id'}
-                    </select>
-                </div>
-            </tmpl_if>
-            <tmpl_if name="edit_disabled">
-                <div class="ctrlHolder">
-                    <label for="ostemplate_id_disabled">{tmpl_var name='ostemplate_id_txt'}</label>
-                    <select name="ostemplate_id_disabled" id="ostemplate_id_disabled" class="selectInput" disabled="disabled">
+                    <label for="ostemplate_id">{tmpl_var name='ostemplate_id_txt'}</label>
+                    <select name="ostemplate_id" id="ostemplate_id" class="selectInput">
                         {tmpl_var name='ostemplate_id'}
                     </select>
                 </div>
-                <input type="hidden" name="ostemplate_id" value="{tmpl_var name='ostemplate_id_value'}">
-                <tmpl_else>
-                    <div class="ctrlHolder">
-                        <label for="ostemplate_id">{tmpl_var name='ostemplate_id_txt'}</label>
-                        <select name="ostemplate_id" id="ostemplate_id" class="selectInput">
-                            {tmpl_var name='ostemplate_id'}
-                        </select>
-                    </div>
-            </tmpl_if>
-            <div class="ctrlHolder">
-                <label for="template_id">{tmpl_var name='template_id_txt'}</label>
-                <select name="template_id" id="template_id" class="selectInput">
-                    {tmpl_var name='template_id_select'}
-                </select>
+        </tmpl_if>
+        <div class="ctrlHolder">
+            <label for="template_id">{tmpl_var name='template_id_txt'}</label>
+            <select name="template_id" id="template_id" class="selectInput">
+                {tmpl_var name='template_id_select'}
+            </select>
+        </div>
+        <div class="ctrlHolder">
+            <label for="ip_address">{tmpl_var name='ip_address_txt'}</label>
+            <select name="ip_address" id="ip_address" class="selectInput">
+                {tmpl_var name='ip_address'}
+            </select>
+        </div>
+        <div class="ctrlHolder">
+            <label for="hostname">{tmpl_var name='hostname_txt'}</label>
+            <input name="hostname" id="hostname" value="{tmpl_var name='hostname'}" size="30" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="vm_password">{tmpl_var name='vm_password_txt'}</label>
+            <input name="vm_password" id="vm_password" value="{tmpl_var name='vm_password'}" size="30" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+            <p class="label">{tmpl_var name='start_boot_txt'}</p>
+            <div class="multiField">
+                {tmpl_var name='start_boot'}
             </div>
-            <div class="ctrlHolder">
-                <label for="ip_address">{tmpl_var name='ip_address_txt'}</label>
-                <select name="ip_address" id="ip_address" class="selectInput">
-                    {tmpl_var name='ip_address'}
-                </select>
+        </div>
+        <div class="ctrlHolder">
+            <p class="label">{tmpl_var name='active_txt'}</p>
+            <div class="multiField">
+                {tmpl_var name='active'}
             </div>
-            <div class="ctrlHolder">
-                <label for="hostname">{tmpl_var name='hostname_txt'}</label>
-                <input name="hostname" id="hostname" value="{tmpl_var name='hostname'}" size="30" maxlength="255" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="vm_password">{tmpl_var name='vm_password_txt'}</label>
-                <input name="vm_password" id="vm_password" value="{tmpl_var name='vm_password'}" size="30" maxlength="255" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder">
-                <p class="label">{tmpl_var name='start_boot_txt'}</p>
-                <div class="multiField">
-                    {tmpl_var name='start_boot'}
-                </div>
-            </div>
-            <div class="ctrlHolder">
-                <p class="label">{tmpl_var name='active_txt'}</p>
-                <div class="multiField">
-                    {tmpl_var name='active'}
-                </div>
-            </div>
-            <div class="ctrlHolder">
-                <label for="active_until_date">{tmpl_var name='active_until_date_txt'}</label>
-                <input name="active_until_date" id="active_until_date" value="{tmpl_var name='active_until_date'}" size="30" maxlength="255" type="text" class="textInput formLengthDate" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="description">{tmpl_var name='description_txt'}</label>
-                <textarea name="description" id="description" rows='5' cols='30' style='height:60px;'>{tmpl_var name='description'}</textarea>
-            </div>
+        </div>
+        <div class="ctrlHolder">
+            <label for="active_until_date">{tmpl_var name='active_until_date_txt'}</label>
+            <input name="active_until_date" id="active_until_date" value="{tmpl_var name='active_until_date'}" size="30" maxlength="255" type="text" class="textInput formLengthDate" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="description">{tmpl_var name='description_txt'}</label>
+            <textarea name="description" id="description" rows='5' cols='30' style='height:60px;'>{tmpl_var name='description'}</textarea>
         </div>
 
         <input type="hidden" name="id" value="{tmpl_var name='id'}">

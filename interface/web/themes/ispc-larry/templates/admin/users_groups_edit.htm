@@ -16,11 +16,11 @@
 </div>
 
 <!-- begin: modulebody -->
-<div id="module-title"><h1><tmpl_var name="list_head_txt"></h1></div>
+<div id="module-title"><h1><tmpl_var name="users_head_txt"></h1></div>
 <div class="module-box boxlistcontent" id="modulecontainer">
     
     <!-- desc -->
-    <div id="module-desc"><tmpl_var name="list_desc_txt"></div>
+    <div id="module-desc"><tmpl_var name="users_desc_txt"></div>
 
     <!-- messages/erros -->  
     <tmpl_if name="msg">
@@ -32,19 +32,16 @@
 
     <!-- begin: modulecontent -->
     <div class="panel panel_users">
-        <div class="subsectiontoggle"><span class="showing"></span>User Groups<em class="showing"></em></div>
-        <div class="subsection">
-            <div class="ctrlHolder">
-                <label for="default_group">{tmpl_var name='default_group_txt'}</label>
-                <select name="default_group" id="default_group" class="selectInput">
-                    {tmpl_var name='default_group'}
-                </select>
-            </div>
-            <div class="ctrlHolder">
-                <p class="label">{tmpl_var name='groups_txt'}</p>
-                <div class="multiField">
-                    {tmpl_var name='groups'}
-                </div>
+        <div class="ctrlHolder">
+            <label for="default_group">{tmpl_var name='default_group_txt'}</label>
+            <select name="default_group" id="default_group" class="selectInput">
+                {tmpl_var name='default_group'}
+            </select>
+        </div>
+        <div class="ctrlHolder">
+            <p class="label">{tmpl_var name='groups_txt'}</p>
+            <div class="multiField">
+                {tmpl_var name='groups'}
             </div>
         </div>
 

@@ -642,8 +642,8 @@ nav a#current.button- span.button-inner { background-position: 3px -294px; }
 nav a.button- span.button-inner { background-position: 3px -330px; }
 nav a#current.button-help span.button-inner { background-position: 3px -366px; }
 nav a.button-help span.button-inner { background-position: 3px -402px; }
-nav a#current.button-mail span.button-inner { background-position: 3px -438px; }
-nav a.button-mail span.button-inner { background-position: 3px -474px; }
+nav a#current.button-mail span.button-inner, nav a#current.button-mailuser span.button-inner { background-position: 3px -438px; }
+nav a.button-mail span.button-inner, nav a.button-mailuser span.button-inner { background-position: 3px -474px; }
 nav a#current.button-vm span.button-inner { background-position: 3px -510px; }
 nav a.button-vm span.button-inner { background-position: 3px -546px; }
 nav a#current.button-domain span.button-inner { background-position: 3px -582px; }
@@ -879,8 +879,8 @@ ul#submenu {
 #mainscreen {
     position: absolute;
     top: 88px;
-    left: 290px;
-/*    left: 10px;*/
+/*    left: 290px;  SIDEBAR  */
+    left: 10px;
     right: 10px;
     bottom: 20px;
 }
@@ -1227,7 +1227,7 @@ div.subsection {
     left: 0;
     position: absolute;
     width: 100%;
-    background: url("images/bg_module.png") repeat;
+    background: url("images/dust.jpg") repeat #f4f4f4;
 }
 #module-title {
     overflow: auto;
@@ -1339,13 +1339,10 @@ label.inlineLabel {
 /* modules/tabsbar
 -------------------------------------------------------------- */
 #tabs {
-    float: left;
     position: relative;
     z-index: 9999;
 }
-
-ul.tabsbar,
-ul.tabsbar-buttons {
+ul.tabsbar {
     margin: 0 0 0 25px;
     padding: 0;
     list-style: none;
@@ -1354,10 +1351,6 @@ ul.tabsbar-buttons {
 .tabsbar li {
     display: inline;
     background: #EEEEEE;
-    border-radius: 0 0 5px 5px;
-}
-.tabsbar-buttons li {
-    display: inline;
     border-radius: 0 0 5px 5px;
 }
 .tabsbar li.active a {
@@ -1378,6 +1371,17 @@ ul.tabsbar-buttons {
     display: inline-block;
     height: 14px;
     padding: 5px 10px;
+}
+ul.tabsbar-buttons {
+    margin: 0 25px 0 0;
+    padding: 0;
+    list-style: none;
+    display: inline;
+    float: right;
+}
+.tabsbar-buttons li {
+    display: inline;
+    border-radius: 0 0 5px 5px;
 }
 .tabsbar-buttons li a {
     -khtml-border-radius:5px 5px 0 0;

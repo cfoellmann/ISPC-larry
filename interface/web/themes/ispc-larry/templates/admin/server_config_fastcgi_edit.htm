@@ -16,7 +16,7 @@
 </div>
 
 <!-- begin: modulebody -->
-<div id="module-title"><h1><tmpl_var name="list_head_txt"></h1></div>
+<div id="module-title"><h1><tmpl_var name="form_hint"></h1></div>
 <div class="module-box boxlistcontent" id="modulecontainer">
     
     <!-- desc -->
@@ -32,42 +32,39 @@
 
     <!-- begin: modulecontent -->
     <div class="panel panel_server_config">
-        <div class="subsectiontoggle"><span class="showing"></span>Interface > FastCGI<em class="showing"></em></div>
-        <div class="subsection">
-            <div class="ctrlHolder">
-                <label for="fastcgi_starter_path">{tmpl_var name='fastcgi_starter_path_txt'}</label>
-                <input name="fastcgi_starter_path" id="fastcgi_starter_path" value="{tmpl_var name='fastcgi_starter_path'}" size="40" maxlength="255" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="fastcgi_starter_script">{tmpl_var name='fastcgi_starter_script_txt'}</label>
-                <input name="fastcgi_starter_script" id="fastcgi_starter_script" value="{tmpl_var name='fastcgi_starter_script'}" size="40" maxlength="255" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="fastcgi_alias">{tmpl_var name='fastcgi_alias_txt'}</label>
-                <input name="fastcgi_alias" id="fastcgi_alias" value="{tmpl_var name='fastcgi_alias'}" size="40" maxlength="255" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="fastcgi_phpini_path">{tmpl_var name='fastcgi_phpini_path_txt'}</label>
-                <input name="fastcgi_phpini_path" id="fastcgi_phpini_path" value="{tmpl_var name='fastcgi_phpini_path'}" size="40" maxlength="255" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="fastcgi_children">{tmpl_var name='fastcgi_children_txt'}</label>
-                <input name="fastcgi_children" id="fastcgi_children" value="{tmpl_var name='fastcgi_children'}" size="40" maxlength="255" type="text" class="textInput formLengthLimit" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="fastcgi_max_requests">{tmpl_var name='fastcgi_max_requests_txt'}</label>
-                <input name="fastcgi_max_requests" id="fastcgi_max_requests" value="{tmpl_var name='fastcgi_max_requests'}" size="40" maxlength="255" type="text" class="textInput formLengthLimit" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="fastcgi_bin">{tmpl_var name='fastcgi_bin_txt'}</label>
-                <input name="fastcgi_bin" id="fastcgi_bin" value="{tmpl_var name='fastcgi_bin'}" size="40" maxlength="255" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="fastcgi_config_syntax">{tmpl_var name='fastcgi_config_syntax_txt'}</label>
-                <select name="fastcgi_config_syntax" id="fastcgi_config_syntax" class="selectInput">
-                    {tmpl_var name='fastcgi_config_syntax'}
-                </select>
-            </div>
+        <div class="ctrlHolder">
+            <label for="fastcgi_starter_path">{tmpl_var name='fastcgi_starter_path_txt'}</label>
+            <input name="fastcgi_starter_path" id="fastcgi_starter_path" value="{tmpl_var name='fastcgi_starter_path'}" size="40" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="fastcgi_starter_script">{tmpl_var name='fastcgi_starter_script_txt'}</label>
+            <input name="fastcgi_starter_script" id="fastcgi_starter_script" value="{tmpl_var name='fastcgi_starter_script'}" size="40" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="fastcgi_alias">{tmpl_var name='fastcgi_alias_txt'}</label>
+            <input name="fastcgi_alias" id="fastcgi_alias" value="{tmpl_var name='fastcgi_alias'}" size="40" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="fastcgi_phpini_path">{tmpl_var name='fastcgi_phpini_path_txt'}</label>
+            <input name="fastcgi_phpini_path" id="fastcgi_phpini_path" value="{tmpl_var name='fastcgi_phpini_path'}" size="40" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="fastcgi_children">{tmpl_var name='fastcgi_children_txt'}</label>
+            <input name="fastcgi_children" id="fastcgi_children" value="{tmpl_var name='fastcgi_children'}" size="40" maxlength="255" type="text" class="textInput formLengthLimit" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="fastcgi_max_requests">{tmpl_var name='fastcgi_max_requests_txt'}</label>
+            <input name="fastcgi_max_requests" id="fastcgi_max_requests" value="{tmpl_var name='fastcgi_max_requests'}" size="40" maxlength="255" type="text" class="textInput formLengthLimit" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="fastcgi_bin">{tmpl_var name='fastcgi_bin_txt'}</label>
+            <input name="fastcgi_bin" id="fastcgi_bin" value="{tmpl_var name='fastcgi_bin'}" size="40" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="fastcgi_config_syntax">{tmpl_var name='fastcgi_config_syntax_txt'}</label>
+            <select name="fastcgi_config_syntax" id="fastcgi_config_syntax" class="selectInput">
+                {tmpl_var name='fastcgi_config_syntax'}
+            </select>
         </div>
 
         <input type="hidden" name="id" value="{tmpl_var name='id'}">

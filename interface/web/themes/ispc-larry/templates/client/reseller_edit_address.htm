@@ -16,11 +16,11 @@
 </div>
 
 <!-- begin: modulebody -->
-<div id="module-title"><h1><tmpl_var name="form_hint"></h1></div>
+<div id="module-title"><h1><tmpl_var name="reseller_head_txt"></h1></div>
 <div class="module-box boxlistcontent" id="modulecontainer">
 
     <!-- desc --> 
-    <div id="module-desc"><tmpl_var name="page_desc_txt"></div>
+    <div id="module-desc"><tmpl_var name="reseller_desc_txt"></div>
 
     <!-- messages/erros -->   
     <tmpl_if name="msg">
@@ -32,115 +32,108 @@
 
     <!-- begin: modulecontent -->
     <div class="panel panel_reseller_edit">
-        <div class="subsectiontoggle"><span class="showing"></span>Reseller Details<em class="showing"></em></div>
-        <div class="subsection">
-            <div class="ctrlHolder">
-                <label for="company_name">{tmpl_var name='company_name_txt'}</label>
-                <input name="company_name" id="company_name" value="{tmpl_var name='company_name'}" size="30" maxlength="255" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="contact_name">{tmpl_var name='contact_name_txt'}&nbsp;<em>*</em></label>
-                <input name="contact_name" id="contact_name" value="{tmpl_var name='contact_name'}" size="30" maxlength="255" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="customer_no">{tmpl_var name='customer_no_txt'}</label>
-                <input name="customer_no" id="customer_no" value="{tmpl_var name='customer_no'}" size="30" maxlength="255" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="username">{tmpl_var name='username_txt'}&nbsp;<em>*</em></label>
-                <input name="username" id="username" value="{tmpl_var name='username'}" size="30" maxlength="255" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="password">{tmpl_var name='password_txt'}</label>
-                <input name="password" id="password" value="{tmpl_var name='password'}" size="30" maxlength="255" type="password" class="textInput" onkeyup="pass_check(this.value);checkPassMatch('password','repeat_password');" />&nbsp;<a href="javascript:void(0);" onclick="generatePassword('password','repeat_password');">{tmpl_var name='generate_password_txt'}</a>
-            </div>
-            <div class="ctrlHolder">
-                <p class="label">{tmpl_var name='password_strength_txt'}</p>
-                <div id="passBar"></div>
-                <p class="formHint"><span id="passText">&nbsp;</span></p>
-            </div>
-            <div class="ctrlHolder">
-                <label for="repeat_password">{tmpl_var name='repeat_password_txt'}</label>
-                <input name="repeat_password" id="repeat_password" value="" size="15" maxlength="100" type="password" class="textInput" style="width:100px;"  onkeyup="checkPassMatch('password','repeat_password');" />
-            </div>
-                <div id="confirmpasswordError" style="display:none;" class="confirmpassworderror">{tmpl_var name='password_mismatch_txt'}</div>
-                <div id="confirmpasswordOK" style="display:none;" class="confirmpasswordok">{tmpl_var name='password_match_txt'}</div>
-            </div>
-            <div class="ctrlHolder">
-                <label for="language">{tmpl_var name='language_txt'}</label>
-                <select name="language" id="language" class="selectInput flags">
-                    {tmpl_var name='language'}
-                </select>
-            </div>
-            <div class="ctrlHolder">
-                <label for="usertheme">{tmpl_var name='usertheme_txt'}</label>
-                <select name="usertheme" id="usertheme" class="selectInput">
-                    {tmpl_var name='usertheme'}
-                </select>
-            </div>
+        <div class="ctrlHolder">
+            <label for="company_name">{tmpl_var name='company_name_txt'}</label>
+            <input name="company_name" id="company_name" value="{tmpl_var name='company_name'}" size="30" maxlength="255" type="text" class="textInput" />
         </div>
-        <div class="subsectiontoggle"><span></span>Reseller Settings<em></em></div>
-        <div class="subsection" style="display:none;">
-            <div class="ctrlHolder">
-                <label for="street">{tmpl_var name='street_txt'}</label>
-                <input name="street" id="street" value="{tmpl_var name='street'}" size="30" maxlength="255" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="zip">{tmpl_var name='zip_txt'}</label>
-                <input name="zip" id="zip" value="{tmpl_var name='zip'}" size="10" maxlength="255" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="city">{tmpl_var name='city_txt'}</label>
-                <input name="city" id="city" value="{tmpl_var name='city'}" size="30" maxlength="255" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="state">{tmpl_var name='state_txt'}</label>
-                <input name="state" id="state" value="{tmpl_var name='state'}" size="30" maxlength="255" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="country">{tmpl_var name='country_txt'}</label>
-                <select name="country" id="country" class="selectInput flags">
-                    {tmpl_var name='country'}
-                </select>
-            </div>
-            <div class="ctrlHolder">
-                <label for="telephone">{tmpl_var name='telephone_txt'}</label>
-                <input name="telephone" id="telephone" value="{tmpl_var name='telephone'}" size="30" maxlength="255" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="mobile">{tmpl_var name='mobile_txt'}</label>
-                <input name="mobile" id="mobile" value="{tmpl_var name='mobile'}" size="30" maxlength="255" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="fax">{tmpl_var name='fax_txt'}</label>
-                <input name="fax" id="fax" value="{tmpl_var name='fax'}" size="30" maxlength="255" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="email">{tmpl_var name='email_txt'}</label>
-                <input name="email" id="email" value="{tmpl_var name='email'}" size="30" maxlength="255" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="internet">{tmpl_var name='internet_txt'}</label>
-                <input name="internet" id="internet" value="{tmpl_var name='internet'}" size="30" maxlength="255" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="icq">{tmpl_var name='icq_txt'}</label>
-                <input name="icq" id="icq" value="{tmpl_var name='icq'}" size="30" maxlength="255" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="vat_id">{tmpl_var name='vat_id_txt'}</label>
-                <input name="vat_id" id="vat_id" value="{tmpl_var name='vat_id'}" size="30" maxlength="255" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="notes">{tmpl_var name='notes_txt'}</label>
-                <textarea name="notes" id="notes" rows='10' cols='30'>{tmpl_var name='notes'}</textarea>
-            </div>
-            <div class="ctrlHolder">
-                <p class="label">&nbsp;</p>
-                {tmpl_var name='required_fields_txt'}
-            </div>
-        </div>        
-
+        <div class="ctrlHolder">
+            <label for="contact_name">{tmpl_var name='contact_name_txt'}&nbsp;<em>*</em></label>
+            <input name="contact_name" id="contact_name" value="{tmpl_var name='contact_name'}" size="30" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="customer_no">{tmpl_var name='customer_no_txt'}</label>
+            <input name="customer_no" id="customer_no" value="{tmpl_var name='customer_no'}" size="30" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="username">{tmpl_var name='username_txt'}&nbsp;<em>*</em></label>
+            <input name="username" id="username" value="{tmpl_var name='username'}" size="30" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="password">{tmpl_var name='password_txt'}</label>
+            <input name="password" id="password" value="{tmpl_var name='password'}" size="30" maxlength="255" type="password" class="textInput" onkeyup="pass_check(this.value);checkPassMatch('password','repeat_password');" />&nbsp;<a href="javascript:void(0);" onclick="generatePassword('password','repeat_password');">{tmpl_var name='generate_password_txt'}</a>
+        </div>
+        <div class="ctrlHolder">
+            <p class="label">{tmpl_var name='password_strength_txt'}</p>
+            <div id="passBar"></div>
+            <p class="formHint"><span id="passText">&nbsp;</span></p>
+        </div>
+        <div class="ctrlHolder">
+            <label for="repeat_password">{tmpl_var name='repeat_password_txt'}</label>
+            <input name="repeat_password" id="repeat_password" value="" size="15" maxlength="100" type="password" class="textInput" style="width:100px;"  onkeyup="checkPassMatch('password','repeat_password');" />
+            <div id="confirmpasswordError" style="display:none;" class="confirmpassworderror">{tmpl_var name='password_mismatch_txt'}</div>
+            <div id="confirmpasswordOK" style="display:none;" class="confirmpasswordok">{tmpl_var name='password_match_txt'}</div>
+        </div>
+        <div class="ctrlHolder">
+            <label for="language">{tmpl_var name='language_txt'}</label>
+            <select name="language" id="language" class="selectInput flags">
+                {tmpl_var name='language'}
+            </select>
+        </div>
+        <div class="ctrlHolder">
+            <label for="usertheme">{tmpl_var name='usertheme_txt'}</label>
+            <select name="usertheme" id="usertheme" class="selectInput">
+                {tmpl_var name='usertheme'}
+            </select>
+        </div>
+        <div class="ctrlHolder">
+            <label for="street">{tmpl_var name='street_txt'}</label>
+            <input name="street" id="street" value="{tmpl_var name='street'}" size="30" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="zip">{tmpl_var name='zip_txt'}</label>
+            <input name="zip" id="zip" value="{tmpl_var name='zip'}" size="10" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="city">{tmpl_var name='city_txt'}</label>
+            <input name="city" id="city" value="{tmpl_var name='city'}" size="30" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="state">{tmpl_var name='state_txt'}</label>
+            <input name="state" id="state" value="{tmpl_var name='state'}" size="30" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="country">{tmpl_var name='country_txt'}</label>
+            <select name="country" id="country" class="selectInput flags">
+                {tmpl_var name='country'}
+            </select>
+        </div>
+        <div class="ctrlHolder">
+            <label for="telephone">{tmpl_var name='telephone_txt'}</label>
+            <input name="telephone" id="telephone" value="{tmpl_var name='telephone'}" size="30" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="mobile">{tmpl_var name='mobile_txt'}</label>
+            <input name="mobile" id="mobile" value="{tmpl_var name='mobile'}" size="30" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="fax">{tmpl_var name='fax_txt'}</label>
+            <input name="fax" id="fax" value="{tmpl_var name='fax'}" size="30" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="email">{tmpl_var name='email_txt'}</label>
+            <input name="email" id="email" value="{tmpl_var name='email'}" size="30" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="internet">{tmpl_var name='internet_txt'}</label>
+            <input name="internet" id="internet" value="{tmpl_var name='internet'}" size="30" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="icq">{tmpl_var name='icq_txt'}</label>
+            <input name="icq" id="icq" value="{tmpl_var name='icq'}" size="30" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="vat_id">{tmpl_var name='vat_id_txt'}</label>
+            <input name="vat_id" id="vat_id" value="{tmpl_var name='vat_id'}" size="30" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="notes">{tmpl_var name='notes_txt'}</label>
+            <textarea name="notes" id="notes" rows='10' cols='30'>{tmpl_var name='notes'}</textarea>
+        </div>
+        <div class="ctrlHolder">
+            <p class="label">&nbsp;</p>
+            {tmpl_var name='required_fields_txt'}
+        </div>
+     
         <input type="hidden" name="id" value="{tmpl_var name='id'}">
 
     </div><!-- end: modulecontent -->

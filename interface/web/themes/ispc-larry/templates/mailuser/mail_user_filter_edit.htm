@@ -32,27 +32,24 @@
 
     <!-- begin: modulecontent -->
     <div class="panel panel_mailuser_filter">
-        <div class="subsectiontoggle"><span class="showing"></span><tmpl_var name="list_head_txt"><em class="showing"></em></div>
-        <div class="subsection">
-            <div class="ctrlHolder">
-                <label for="rulename" class="wf_preField">{tmpl_var name='rulename_txt'}</label>
-                <input type="text" id="rulename" name="rulename" value="{tmpl_var name='rulename'}" size="30" maxlength="255"  class="textInput">
-            </div>
-            <div class="ctrlHolder">
-                <label for="source" class="wf_preField">{tmpl_var name='source_txt'}</label>
-                <select id="source" name="source"  class="textInput formLengthHalf">{tmpl_var name='source'}</select>
-                <select id="op" name="op"  class="textInput formLengthHalf">{tmpl_var name='op'}</select>
-                <input type="text" id="searchterm" name="searchterm" value="{tmpl_var name='searchterm'}" size="30" maxlength="255"  class="textInput">
-            </div>
-            <div class="ctrlHolder">
-                <label for="action" class="wf_preField">{tmpl_var name='action_txt'}</label>
-                <select id="action" name="action" class="textInput formLengthHalf">{tmpl_var name='action'}</select>
-                <input type="text" id="target" name="target" value="{tmpl_var name='target'}" size="30" maxlength="255"  class="textInput formLengthHalf">
-            </div>
-            <div class="ctrlHolder">
-                <label for="active" class="wf_preField">{tmpl_var name='active_txt'}</label>
-                <span class="">{tmpl_var name='active'}</span>
-            </div>
+        <div class="ctrlHolder">
+            <label for="rulename" class="wf_preField">{tmpl_var name='rulename_txt'}</label>
+            <input type="text" id="rulename" name="rulename" value="{tmpl_var name='rulename'}" size="30" maxlength="255"  class="textInput">
+        </div>
+        <div class="ctrlHolder">
+            <label for="source" class="wf_preField">{tmpl_var name='source_txt'}</label>
+            <select id="source" name="source"  class="textInput formLengthHalf">{tmpl_var name='source'}</select>
+            <select id="op" name="op"  class="textInput formLengthHalf">{tmpl_var name='op'}</select>
+            <input type="text" id="searchterm" name="searchterm" value="{tmpl_var name='searchterm'}" size="30" maxlength="255"  class="textInput">
+        </div>
+        <div class="ctrlHolder">
+            <label for="action" class="wf_preField">{tmpl_var name='action_txt'}</label>
+            <select id="action" name="action" class="textInput formLengthHalf">{tmpl_var name='action'}</select>
+            <input type="text" id="target" name="target" value="{tmpl_var name='target'}" size="30" maxlength="255"  class="textInput formLengthHalf">
+        </div>
+        <div class="ctrlHolder">
+            <label for="active" class="wf_preField">{tmpl_var name='active_txt'}</label>
+            <span class="">{tmpl_var name='active'}</span>
         </div>
 
         <input type="hidden" name="id" value="{tmpl_var name='id'}">

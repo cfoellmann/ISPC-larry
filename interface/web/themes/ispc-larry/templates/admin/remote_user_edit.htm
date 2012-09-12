@@ -16,11 +16,11 @@
 </div>
 
 <!-- begin: modulebody -->
-<div id="module-title"><h1><tmpl_var name="list_head_txt"></h1></div>
+<div id="module-title"><h1><tmpl_var name="remote_user_head_txt"></h1></div>
 <div class="module-box boxlistcontent" id="modulecontainer">
 
     <!-- desc --> 
-    <div id="module-desc"><tmpl_var name="list_desc_txt"></div>
+    <div id="module-desc"><tmpl_var name="remote_user_desc_txt"></div>
 
     <!-- messages/erros -->  
     <tmpl_if name="msg">
@@ -32,8 +32,6 @@
 
     <!-- begin: modulecontent -->
     <div class="panel panel_remote_user">
-        <div class="subsectiontoggle"><span class="showing"></span>Remote User<em class="showing"></em></div>
-        <div class="subsection">
             <div class="ctrlHolder">
                 <label for="remote_username">{tmpl_var name='username_txt'}</label>
                 <p class="prefix">{tmpl_var name='username_prefix'}</p>
@@ -54,14 +52,13 @@
                 <div id="confirmpasswordError" style="display:none;" class="confirmpassworderror">{tmpl_var name='password_mismatch_txt'}</div>
                 <div id="confirmpasswordOK" style="display:none;" class="confirmpasswordok">{tmpl_var name='password_match_txt'}</div>
             </div>
-        </div>
 
         <div class="subsectiontoggle"><span class="showing"></span>{tmpl_var name='function_txt'}<em class="showing"></em></div>
         <div class="subsection">
             <div class="ctrlHolder">
                 <p class="label">{tmpl_var name='function_txt'}</p>
                 <div class="multiField">
-                    &nbsp; {tmpl_var name='remote_functions'}
+                    {tmpl_var name='remote_functions'}
                 </div>
             </div>
         </div>

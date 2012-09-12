@@ -32,40 +32,37 @@
 
     <!-- begin: modulecontent -->
     <div class="panel panel_ftp_user">
-        <div class="subsectiontoggle"><span class="showing"></span>FTP User<em class="showing"></em></div>
-        <div class="subsection">
-            <div class="ctrlHolder">
-                <label for="uid">{tmpl_var name='uid_txt'}</label>
-                <input name="uid" id="uid" value="{tmpl_var name='uid'}" size="30" maxlength="255" type="text" class="textInput formLengthHalf" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="gid">{tmpl_var name='gid_txt'}</label>
-                <input name="gid" id="gid" value="{tmpl_var name='gid'}" size="30" maxlength="255" type="text" class="textInput formLengthHalf" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="dir">{tmpl_var name='dir_txt'}</label>
-                <input name="dir" id="dir" value="{tmpl_var name='dir'}" size="30" maxlength="255" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="quota_files">{tmpl_var name='quota_files_txt'}</label>
-                <input name="quota_files" id="quota_files" value="{tmpl_var name='quota_files'}" size="7" maxlength="7" type="text" class="textInput formLengthLimit" />&nbsp;{tmpl_var name='quota_files_unity_txt'} (-1 &Rightarrow; &infin;)
-            </div>
-            <div class="ctrlHolder">
-                <label for="ul_ratio">{tmpl_var name='ul_ratio_txt'}</label>
-                <input name="ul_ratio" id="ul_ratio" value="{tmpl_var name='ul_ratio'}" size="7" maxlength="7" type="text" class="textInput formLengthLimit" />&nbsp;MB (-1 &Rightarrow; &infin;)
-            </div>
-            <div class="ctrlHolder">
-                <label for="dl_ratio">{tmpl_var name='dl_ratio_txt'}</label>
-                <input name="dl_ratio" id="dl_ratio" value="{tmpl_var name='dl_ratio'}" size="7" maxlength="7" type="text" class="textInput formLengthLimit" />&nbsp;MB (-1 &Rightarrow; &infin;)
-            </div>
-            <div class="ctrlHolder">
-                <label for="ul_bandwidth">{tmpl_var name='ul_bandwidth_txt'}</label>
-                <input name="ul_bandwidth" id="ul_bandwidth" value="{tmpl_var name='ul_bandwidth'}" size="7" maxlength="7" type="text" class="textInput formLengthLimit" />&nbsp;kb/s (-1 &Rightarrow; &infin;)
-            </div>
-            <div class="ctrlHolder">
-                <label for="dl_bandwidth">{tmpl_var name='dl_bandwidth_txt'}</label>
-                <input name="dl_bandwidth" id="dl_bandwidth" value="{tmpl_var name='dl_bandwidth'}" size="7" maxlength="7" type="text" class="textInput formLengthLimit" />&nbsp;kb/s (-1 &Rightarrow; &infin;)
-            </div>
+        <div class="ctrlHolder">
+            <label for="uid">{tmpl_var name='uid_txt'}</label>
+            <input name="uid" id="uid" value="{tmpl_var name='uid'}" size="30" maxlength="255" type="text" class="textInput formLengthHalf" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="gid">{tmpl_var name='gid_txt'}</label>
+            <input name="gid" id="gid" value="{tmpl_var name='gid'}" size="30" maxlength="255" type="text" class="textInput formLengthHalf" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="dir">{tmpl_var name='dir_txt'}</label>
+            <input name="dir" id="dir" value="{tmpl_var name='dir'}" size="30" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="quota_files">{tmpl_var name='quota_files_txt'}</label>
+            <input name="quota_files" id="quota_files" value="{tmpl_var name='quota_files'}" size="7" maxlength="7" type="text" class="textInput formLengthLimit" />&nbsp;{tmpl_var name='quota_files_unity_txt'} (-1 &Rightarrow; &infin;)
+        </div>
+        <div class="ctrlHolder">
+            <label for="ul_ratio">{tmpl_var name='ul_ratio_txt'}</label>
+            <input name="ul_ratio" id="ul_ratio" value="{tmpl_var name='ul_ratio'}" size="7" maxlength="7" type="text" class="textInput formLengthLimit" />&nbsp;MB (-1 &Rightarrow; &infin;)
+        </div>
+        <div class="ctrlHolder">
+            <label for="dl_ratio">{tmpl_var name='dl_ratio_txt'}</label>
+            <input name="dl_ratio" id="dl_ratio" value="{tmpl_var name='dl_ratio'}" size="7" maxlength="7" type="text" class="textInput formLengthLimit" />&nbsp;MB (-1 &Rightarrow; &infin;)
+        </div>
+        <div class="ctrlHolder">
+            <label for="ul_bandwidth">{tmpl_var name='ul_bandwidth_txt'}</label>
+            <input name="ul_bandwidth" id="ul_bandwidth" value="{tmpl_var name='ul_bandwidth'}" size="7" maxlength="7" type="text" class="textInput formLengthLimit" />&nbsp;kb/s (-1 &Rightarrow; &infin;)
+        </div>
+        <div class="ctrlHolder">
+            <label for="dl_bandwidth">{tmpl_var name='dl_bandwidth_txt'}</label>
+            <input name="dl_bandwidth" id="dl_bandwidth" value="{tmpl_var name='dl_bandwidth'}" size="7" maxlength="7" type="text" class="textInput formLengthLimit" />&nbsp;kb/s (-1 &Rightarrow; &infin;)
         </div>
 
         <input type="hidden" name="id" value="{tmpl_var name='id'}">

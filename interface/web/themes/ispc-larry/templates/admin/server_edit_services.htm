@@ -16,7 +16,7 @@
 </div>
 
 <!-- begin: modulebody -->
-<div id="module-title"><h1><tmpl_var name="list_head_txt"></h1></div>
+<div id="module-title"><h1><tmpl_var name="form_hint"> : <tmpl_var name='server_name'></h1></div>
 <div class="module-box boxlistcontent" id="modulecontainer">
 
     <!-- desc --> 
@@ -32,8 +32,6 @@
 
     <!-- begin: modulecontent -->
     <div class="panel panel_server">
-        <div class="subsectiontoggle"><span class="showing"></span>Services<em class="showing"></em></div>
-        <div class="subsection">
             <div class="ctrlHolder">
                 <label for="server_name">{tmpl_var name='server_name_txt'}</label>
                 <input name="server_name" id="server_name" value="{tmpl_var name='server_name'}" size="30" maxlength="255" type="text" class="textInput" />
@@ -86,7 +84,6 @@
                     {tmpl_var name='active'}
                 </select>
             </div>
-        </div>
 
         <input type="hidden" name="id" value="{tmpl_var name='id'}">
 

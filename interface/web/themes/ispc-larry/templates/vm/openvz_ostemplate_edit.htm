@@ -32,38 +32,35 @@
 
     <!-- begin: modulecontent -->
     <div class="panel panel_openvz_ostemplate">
-        <div class="subsectiontoggle"><span class="showing"></span>VM OS Template<em class="showing"></em></div>
-        <div class="subsection">
-            <div class="ctrlHolder">
-                <label for="template_name">{tmpl_var name='template_name_txt'}</label>
-                <input name="template_name" id="template_name" value="{tmpl_var name='template_name'}" size="30" maxlength="255" type="text" class="textInput" />
+        <div class="ctrlHolder">
+            <label for="template_name">{tmpl_var name='template_name_txt'}</label>
+            <input name="template_name" id="template_name" value="{tmpl_var name='template_name'}" size="30" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="template_file">{tmpl_var name='template_file_txt'}</label>
+            <input name="template_file" id="template_file" value="{tmpl_var name='template_file'}" size="30" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="server_id">{tmpl_var name='server_id_txt'}</label>
+            <select name="server_id" id="server_id" class="selectInput">
+                {tmpl_var name='server_id'}
+            </select>
+        </div>
+        <div class="ctrlHolder">
+            <p class="label">{tmpl_var name='allservers_txt'}</p>
+            <div class="multiField">
+                {tmpl_var name='allservers'}
             </div>
-            <div class="ctrlHolder">
-                <label for="template_file">{tmpl_var name='template_file_txt'}</label>
-                <input name="template_file" id="template_file" value="{tmpl_var name='template_file'}" size="30" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+            <p class="label">{tmpl_var name='active_txt'}</p>
+            <div class="multiField">
+                {tmpl_var name='active'}
             </div>
-            <div class="ctrlHolder">
-                <label for="server_id">{tmpl_var name='server_id_txt'}</label>
-                <select name="server_id" id="server_id" class="selectInput">
-                    {tmpl_var name='server_id'}
-                </select>
-            </div>
-            <div class="ctrlHolder">
-                <p class="label">{tmpl_var name='allservers_txt'}</p>
-                <div class="multiField">
-                    {tmpl_var name='allservers'}
-                </div>
-            </div>
-            <div class="ctrlHolder">
-                <p class="label">{tmpl_var name='active_txt'}</p>
-                <div class="multiField">
-                    {tmpl_var name='active'}
-                </div>
-            </div>
-            <div class="ctrlHolder">
-                <label for="description">{tmpl_var name='description_txt'}</label>
-                <textarea name="description" id="description" rows='10' cols='30'>{tmpl_var name='description'}</textarea>
-            </div>
+        </div>
+        <div class="ctrlHolder">
+            <label for="description">{tmpl_var name='description_txt'}</label>
+            <textarea name="description" id="description" rows='10' cols='30'>{tmpl_var name='description'}</textarea>
         </div>
 
         <input type="hidden" name="id" value="{tmpl_var name='id'}">

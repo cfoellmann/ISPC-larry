@@ -16,11 +16,11 @@
 </div>
 
 <!-- begin: modulebody -->
-<div id="module-title"><h1><tmpl_var name="list_head_txt"></h1></div>
+<div id="module-title"><h1><tmpl_var name="server_config_head_txt"></h1></div>
 <div class="module-box boxlistcontent" id="modulecontainer">
     
     <!-- desc -->
-    <div id="module-desc"><tmpl_var name="list_desc_txt"></div>
+    <div id="module-desc"><tmpl_var name="server_config_desc_txt"></div>
 
     <!-- messages/erros -->   
     <tmpl_if name="msg">
@@ -32,41 +32,38 @@
 
     <!-- begin: modulecontent -->
     <div class="panel panel_system_config">
-        <div class="subsectiontoggle"><span class="showing"></span>Misc<em class="showing"></em></div>
-        <div class="subsection">
-            <div class="ctrlHolder">
-                <label for="dashboard_atom_url_admin">{tmpl_var name='dashboard_atom_url_admin_txt'}</label>
-                <input name="dashboard_atom_url_admin" id="dashboard_atom_url_admin" value="{tmpl_var name='dashboard_atom_url_admin'}" size="50" maxlength="" type="text" class="textInput" />
+        <div class="ctrlHolder">
+            <label for="dashboard_atom_url_admin">{tmpl_var name='dashboard_atom_url_admin_txt'}</label>
+            <input name="dashboard_atom_url_admin" id="dashboard_atom_url_admin" value="{tmpl_var name='dashboard_atom_url_admin'}" size="50" maxlength="" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="dashboard_atom_url_reseller">{tmpl_var name='dashboard_atom_url_reseller_txt'}</label>
+            <input name="dashboard_atom_url_reseller" id="dashboard_atom_url_reseller" value="{tmpl_var name='dashboard_atom_url_reseller'}" size="50" maxlength="" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="dashboard_atom_url_client">{tmpl_var name='dashboard_atom_url_client_txt'}</label>
+            <input name="dashboard_atom_url_client" id="dashboard_atom_url_client" value="{tmpl_var name='dashboard_atom_url_client'}" size="50" maxlength="" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="monitor_key">{tmpl_var name='monitor_key_txt'}</label>
+            <input name="monitor_key" id="monitor_key" value="{tmpl_var name='monitor_key'}" size="50" maxlength="" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+            <p class="label">{tmpl_var name='tab_change_discard_txt'}</p>
+            <div class="multiField">
+                {tmpl_var name='tab_change_discard'}
             </div>
-            <div class="ctrlHolder">
-                <label for="dashboard_atom_url_reseller">{tmpl_var name='dashboard_atom_url_reseller_txt'}</label>
-                <input name="dashboard_atom_url_reseller" id="dashboard_atom_url_reseller" value="{tmpl_var name='dashboard_atom_url_reseller'}" size="50" maxlength="" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+            <p class="label">{tmpl_var name='tab_change_warning_txt'}</p>
+            <div class="multiField">
+                {tmpl_var name='tab_change_warning'}<br/>{tmpl_var name='tab_change_warning_note_txt'}
             </div>
-            <div class="ctrlHolder">
-                <label for="dashboard_atom_url_client">{tmpl_var name='dashboard_atom_url_client_txt'}</label>
-                <input name="dashboard_atom_url_client" id="dashboard_atom_url_client" value="{tmpl_var name='dashboard_atom_url_client'}" size="50" maxlength="" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="monitor_key">{tmpl_var name='monitor_key_txt'}</label>
-                <input name="monitor_key" id="monitor_key" value="{tmpl_var name='monitor_key'}" size="50" maxlength="" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder">
-                <p class="label">{tmpl_var name='tab_change_discard_txt'}</p>
-                <div class="multiField">
-                    {tmpl_var name='tab_change_discard'}
-                </div>
-            </div>
-            <div class="ctrlHolder">
-                <p class="label">{tmpl_var name='tab_change_warning_txt'}</p>
-                <div class="multiField">
-                    {tmpl_var name='tab_change_warning'}<br/>{tmpl_var name='tab_change_warning_note_txt'}
-                </div>
-            </div>
-            <div class="ctrlHolder">
-                <p class="label">{tmpl_var name='maintenance_mode_txt'}</p>
-                <div class="multiField">
-                    {tmpl_var name='maintenance_mode'}
-                </div>
+        </div>
+        <div class="ctrlHolder">
+            <p class="label">{tmpl_var name='maintenance_mode_txt'}</p>
+            <div class="multiField">
+                {tmpl_var name='maintenance_mode'}
         </div>
 
         <input type="hidden" name="id" value="{tmpl_var name='id'}">

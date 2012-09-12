@@ -32,45 +32,42 @@
 
     <!-- begin: modulecontent -->
     <div class="panel panel_web_domain">
-        <div class="subsectiontoggle"><span class="showing"></span><tmpl_var name="list_head_txt"><em class="showing"></em></div>
-        <div class="subsection">
-            <div class="ctrlHolder">
-                <label for="domain">{tmpl_var name='domain_txt'}</label>
-                <tmpl_if name="domain_option">
-                    <select name="domain" id="domain" class="selectInput">
-                        {tmpl_var name='domain_option'}
-                    </select>
-                    <tmpl_else>
-                        <input name="domain" id="domain" value="{tmpl_var name='domain'}" size="30" maxlength="255" type="text" class="textInput" />
-                </tmpl_if>
-            </div>
-            <div class="ctrlHolder">
-                <label for="parent_domain_id">{tmpl_var name='parent_domain_id_txt'}</label>
-                <select name="parent_domain_id" id="parent_domain_id" class="selectInput">
-                    {tmpl_var name='parent_domain_id'}
+        <div class="ctrlHolder">
+            <label for="domain">{tmpl_var name='domain_txt'}</label>
+            <tmpl_if name="domain_option">
+                <select name="domain" id="domain" class="selectInput">
+                    {tmpl_var name='domain_option'}
                 </select>
-            </div>
-            <div class="ctrlHolder">
-                <label for="redirect_type">{tmpl_var name='redirect_type_txt'}</label>
-                <select name="redirect_type" id="redirect_type" class="selectInput formLengthHalf">
-                    {tmpl_var name='redirect_type'}
-                </select>
-            </div>
-            <div class="ctrlHolder">
-                <label for="redirect_path">{tmpl_var name='redirect_path_txt'}</label>
-                <input name="redirect_path" id="redirect_path" value="{tmpl_var name='redirect_path'}" size="30" maxlength="255" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="subdomain">{tmpl_var name='subdomain_txt'}</label>
-                <select name="subdomain" id="subdomain" class="selectInput formLengthHalf">
-                    {tmpl_var name='subdomain'}
-                </select>
-            </div>
-            <div class="ctrlHolder">
-                <p class="label">{tmpl_var name='active_txt'}</p>
-                <div class="multiField">
-                    {tmpl_var name='active'}
-                </div>
+                <tmpl_else>
+                    <input name="domain" id="domain" value="{tmpl_var name='domain'}" size="30" maxlength="255" type="text" class="textInput" />
+            </tmpl_if>
+        </div>
+        <div class="ctrlHolder">
+            <label for="parent_domain_id">{tmpl_var name='parent_domain_id_txt'}</label>
+            <select name="parent_domain_id" id="parent_domain_id" class="selectInput">
+                {tmpl_var name='parent_domain_id'}
+            </select>
+        </div>
+        <div class="ctrlHolder">
+            <label for="redirect_type">{tmpl_var name='redirect_type_txt'}</label>
+            <select name="redirect_type" id="redirect_type" class="selectInput formLengthHalf">
+                {tmpl_var name='redirect_type'}
+            </select>
+        </div>
+        <div class="ctrlHolder">
+            <label for="redirect_path">{tmpl_var name='redirect_path_txt'}</label>
+            <input name="redirect_path" id="redirect_path" value="{tmpl_var name='redirect_path'}" size="30" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="subdomain">{tmpl_var name='subdomain_txt'}</label>
+            <select name="subdomain" id="subdomain" class="selectInput formLengthHalf">
+                {tmpl_var name='subdomain'}
+            </select>
+        </div>
+        <div class="ctrlHolder">
+            <p class="label">{tmpl_var name='active_txt'}</p>
+            <div class="multiField">
+                {tmpl_var name='active'}
             </div>
         </div>
 

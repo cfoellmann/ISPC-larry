@@ -32,35 +32,29 @@
 
     <!-- begin: modulecontent -->
     <div class="panel panel_web_domain">
-        <div class="subsectiontoggle"><span class="showing"></span><tmpl_var name="list_head_txt"><em class="showing"></em></div>
-        <div class="subsection">
-            <div class="ctrlHolder">
-                <p class="label">{tmpl_var name='stats_user_txt'}</p><p class="value">admin</p>
-            </div>
-            <div class="ctrlHolder">
-                <label for="stats_password">{tmpl_var name='stats_password_txt'}</label>
-                <input name="stats_password" id="stats_password" value="{tmpl_var name='stats_password'}" size="15" maxlength="100" type="password" class="textInput" style="width:100px;" onkeyup="checkPassMatch('stats_password','repeat_password');" />&nbsp;<a href="javascript:void(0);" onclick="generatePassword('stats_password','repeat_password');">{tmpl_var name='generate_password_txt'}</a>
-            </div>
-            <div class="ctrlHolder">
-                <label for="repeat_password">{tmpl_var name='repeat_password_txt'}</label>
-                <input name="repeat_password" id="repeat_password" value="" size="15" maxlength="100" type="password" class="textInput" style="width:100px;"  onkeyup="checkPassMatch('stats_password','repeat_password');" />
-                <div id="confirmpasswordError" style="display:none;" class="confirmpassworderror">{tmpl_var name='password_mismatch_txt'}</div>
-                <div id="confirmpasswordOK" style="display:none;" class="confirmpasswordok">{tmpl_var name='password_match_txt'}</div>
-            </div>        
-            <div class="ctrlHolder">
-                <label for="stats_type">{tmpl_var name='stats_type_txt'}</label>
-                <select name="stats_type" id="stats_type" class="selectInput" >
-                    {tmpl_var name='stats_type'}
-                </select>
-            </div>
-        </fieldset>
+        <div class="ctrlHolder">
+            <label>{tmpl_var name='stats_user_txt'}</label>
+            <p class="value">admin</p>
+            <br style="clear: both;" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="stats_password">{tmpl_var name='stats_password_txt'}</label>
+            <input name="stats_password" id="stats_password" value="{tmpl_var name='stats_password'}" size="15" maxlength="100" type="password" class="textInput" style="width:100px;" onkeyup="checkPassMatch('stats_password','repeat_password');" />&nbsp;<a href="javascript:void(0);" onclick="generatePassword('stats_password','repeat_password');">{tmpl_var name='generate_password_txt'}</a>
+        </div>
+        <div class="ctrlHolder">
+            <label for="repeat_password">{tmpl_var name='repeat_password_txt'}</label>
+            <input name="repeat_password" id="repeat_password" value="" size="15" maxlength="100" type="password" class="textInput" style="width:100px;"  onkeyup="checkPassMatch('stats_password','repeat_password');" />
+            <div id="confirmpasswordError" style="display:none;" class="confirmpassworderror">{tmpl_var name='password_mismatch_txt'}</div>
+            <div id="confirmpasswordOK" style="display:none;" class="confirmpasswordok">{tmpl_var name='password_match_txt'}</div>
+        </div>        
+        <div class="ctrlHolder">
+            <label for="stats_type">{tmpl_var name='stats_type_txt'}</label>
+            <select name="stats_type" id="stats_type" class="selectInput" >
+                {tmpl_var name='stats_type'}
+            </select>
+        </div>
 
         <input type="hidden" name="id" value="{tmpl_var name='id'}">
 
-        <div class="buttonHolder buttons">
-            <button class="positive iconstxt icoPositive" type="button" value="{tmpl_var name='btn_save_txt'}" onclick="submitForm('pageForm','sites/web_domain_edit.php');"><span>{tmpl_var name='btn_save_txt'}</span></button>
-            <button class="negative iconstxt icoNegative" type="button" value="{tmpl_var name='btn_cancel_txt'}" onclick="loadContent('sites/web_domain_list.php');"><span>{tmpl_var name='btn_cancel_txt'}</span></button>
-        </div>
-    </div>
-
-</div>
+    </div><!-- end: modulecontent -->
+</div><!-- end: modulebody -->

@@ -32,73 +32,69 @@
 
     <!-- begin: modulecontent -->
     <div class="panel panel_mail_mailinglist">
-        <div class="subsectiontoggle"><span class="showing"></span>User Groups<em class="showing"></em></div>
-        <div class="subsection">
-            <tmpl_if name="is_admin">
-                <div class="ctrlHolder">
-                    <label for="client_group_id">{tmpl_var name='client_txt'}</label>
-                    <select name="client_group_id" id="client_group_id" class="selectInput">
-                        {tmpl_var name='client_group_id'}
-                    </select>
-                </div>
-            </tmpl_if>
-
-            <tmpl_if name="is_reseller">
-                <div class="ctrlHolder">
-                    <label for="client_group_id">{tmpl_var name='client_txt'}</label>
-                    <select name="client_group_id" id="client_group_id" class="selectInput">
-                        {tmpl_var name='client_group_id'}
-                    </select>
-                </div>
-            </tmpl_if>
-
-            <tmpl_if name="edit_disabled">
-                <div class="ctrlHolder">
-                    <label for="domain_disabled">{tmpl_var name='domain_txt'}</label>
-                    <select name="domain_disabled" id="domain_disabled" class="selectInput" disabled="disabled">{tmpl_var name='domain_option'}</select>
-                    <input type="hidden" name="domain" value="{tmpl_var name='domain_value'}" />
-                </div>
-
-                <div class="ctrlHolder">
-                    <label for="listname_disabled">{tmpl_var name='listname_txt'}</label>
-                    <input name="listname_disabled" id="listname_disabled" value="{tmpl_var name='listname'}" size="30" maxlength="255" type="text" class="textInput" disabled="disabled" />
-                    <input type="hidden" name="listname" value="{tmpl_var name='listname_value'}" />
-                </div>
-                <div class="ctrlHolder">
-                    <label for="email_disabled">{tmpl_var name='email_txt'}</label>
-                    <input name="email_disabled" id="email_disabled" value="{tmpl_var name='email'}" size="30" maxlength="255" type="text" class="textInput" disabled="disabled" />
-                    <input type="hidden" name="email" value="{tmpl_var name='email_value'}" />
-                </div>
-                <tmpl_else>
-                    <div class="ctrlHolder">
-                        <label for="domain">{tmpl_var name='domain_txt'}</label>
-                        <select name="domain" id="domain" class="selectInput">{tmpl_var name='domain_option'}</select>
-                    </div>
-                    <div class="ctrlHolder">
-                        <label for="listname">{tmpl_var name='listname_txt'}</label>
-                        <input name="listname" id="listname" value="{tmpl_var name='listname'}" size="30" maxlength="255" type="text" class="textInput" />
-                    </div>
-                    <div class="ctrlHolder">
-                        <label for="email">{tmpl_var name='email_txt'}</label>
-                        <input name="email" id="email" value="{tmpl_var name='email'}" size="30" maxlength="255" type="text" class="textInput" />
-                    </div>
-            </tmpl_if>
+        <tmpl_if name="is_admin">
             <div class="ctrlHolder">
-                <label for="password">{tmpl_var name='password_txt'}</label>
-                <input name="password" id="password" value="{tmpl_var name='password'}" size="30" maxlength="255" type="password" class="textInput" onkeyup="pass_check(this.value);checkPassMatch('password','repeat_password');" />&nbsp;<a href="javascript:void(0);" onclick="generatePassword('password','repeat_password');">{tmpl_var name='generate_password_txt'}</a>
+                <label for="client_group_id">{tmpl_var name='client_txt'}</label>
+                <select name="client_group_id" id="client_group_id" class="selectInput">
+                    {tmpl_var name='client_group_id'}
+                </select>
+            </div>
+        </tmpl_if>
+
+        <tmpl_if name="is_reseller">
+            <div class="ctrlHolder">
+                <label for="client_group_id">{tmpl_var name='client_txt'}</label>
+                <select name="client_group_id" id="client_group_id" class="selectInput">
+                    {tmpl_var name='client_group_id'}
+                </select>
+            </div>
+        </tmpl_if>
+
+        <tmpl_if name="edit_disabled">
+            <div class="ctrlHolder">
+                <label for="domain_disabled">{tmpl_var name='domain_txt'}</label>
+                <select name="domain_disabled" id="domain_disabled" class="selectInput" disabled="disabled">{tmpl_var name='domain_option'}</select>
+                <input type="hidden" name="domain" value="{tmpl_var name='domain_value'}" />
+            </div>
+
+            <div class="ctrlHolder">
+                <label for="listname_disabled">{tmpl_var name='listname_txt'}</label>
+                <input name="listname_disabled" id="listname_disabled" value="{tmpl_var name='listname'}" size="30" maxlength="255" type="text" class="textInput" disabled="disabled" />
+                <input type="hidden" name="listname" value="{tmpl_var name='listname_value'}" />
             </div>
             <div class="ctrlHolder">
-                <p class="label">{tmpl_var name='password_strength_txt'}</p>
-                <div id="passBar"></div>
-                <p class="formHint"><span id="passText">&nbsp;</span></p>
+                <label for="email_disabled">{tmpl_var name='email_txt'}</label>
+                <input name="email_disabled" id="email_disabled" value="{tmpl_var name='email'}" size="30" maxlength="255" type="text" class="textInput" disabled="disabled" />
+                <input type="hidden" name="email" value="{tmpl_var name='email_value'}" />
             </div>
-            <div class="ctrlHolder">
-                <label for="repeat_password">{tmpl_var name='repeat_password_txt'}</label>
-                <input name="repeat_password" id="repeat_password" value="" size="15" maxlength="100" type="password" class="textInput" style="width:100px;"  onkeyup="checkPassMatch('password','repeat_password');" />
-                <div id="confirmpasswordError" style="display:none;" class="confirmpassworderror">{tmpl_var name='password_mismatch_txt'}</div>
-                <div id="confirmpasswordOK" style="display:none;" class="confirmpasswordok">{tmpl_var name='password_match_txt'}</div>
-            </div>
-            
+            <tmpl_else>
+                <div class="ctrlHolder">
+                    <label for="domain">{tmpl_var name='domain_txt'}</label>
+                    <select name="domain" id="domain" class="selectInput">{tmpl_var name='domain_option'}</select>
+                </div>
+                <div class="ctrlHolder">
+                    <label for="listname">{tmpl_var name='listname_txt'}</label>
+                    <input name="listname" id="listname" value="{tmpl_var name='listname'}" size="30" maxlength="255" type="text" class="textInput" />
+                </div>
+                <div class="ctrlHolder">
+                    <label for="email">{tmpl_var name='email_txt'}</label>
+                    <input name="email" id="email" value="{tmpl_var name='email'}" size="30" maxlength="255" type="text" class="textInput" />
+                </div>
+        </tmpl_if>
+        <div class="ctrlHolder">
+            <label for="password">{tmpl_var name='password_txt'}</label>
+            <input name="password" id="password" value="{tmpl_var name='password'}" size="30" maxlength="255" type="password" class="textInput" onkeyup="pass_check(this.value);checkPassMatch('password','repeat_password');" />&nbsp;<a href="javascript:void(0);" onclick="generatePassword('password','repeat_password');">{tmpl_var name='generate_password_txt'}</a>
+        </div>
+        <div class="ctrlHolder">
+            <p class="label">{tmpl_var name='password_strength_txt'}</p>
+            <div id="passBar"></div>
+            <p class="formHint"><span id="passText">&nbsp;</span></p>
+        </div>
+        <div class="ctrlHolder">
+            <label for="repeat_password">{tmpl_var name='repeat_password_txt'}</label>
+            <input name="repeat_password" id="repeat_password" value="" size="15" maxlength="100" type="password" class="textInput" style="width:100px;"  onkeyup="checkPassMatch('password','repeat_password');" />
+            <div id="confirmpasswordError" style="display:none;" class="confirmpassworderror">{tmpl_var name='password_mismatch_txt'}</div>
+            <div id="confirmpasswordOK" style="display:none;" class="confirmpasswordok">{tmpl_var name='password_match_txt'}</div>
         </div>
 
         <input type="hidden" name="id" value="{tmpl_var name='id'}">

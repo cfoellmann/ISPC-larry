@@ -16,11 +16,11 @@
 </div>
 
 <!-- begin: modulebody -->
-<div id="module-title"><h1><tmpl_var name="form_hint"></h1></div>
+<div id="module-title"><h1><tmpl_var name="reseller_head_txt"> &gt; <tmpl_var name="limits_txt"></h1></div>
 <div class="module-box boxlistcontent" id="modulecontainer">
 
     <!-- desc -->
-    <div id="module-desc"><tmpl_var name="page_desc_txt"></div>
+    <div id="module-desc"><tmpl_var name="reseller_desc_txt"></div>
 
     <!-- messages/erros -->  
     <tmpl_if name="msg">
@@ -53,15 +53,12 @@
                       </div>
             </tmpl_if>
         -->
-        <div class="subsectiontoggle"><span class="showing"></span>Customer Limits<em class="showing"></em></div>
-        <div class="subsection">
-            <div class="ctrlHolder">
-                <label for="limit_client">{tmpl_var name='limit_client_txt'}</label>
-                <input name="limit_client" id="limit_client" value="{tmpl_var name='limit_client'}" size="10" maxlength="10" type="text" class="textInput formLengthLimit" />
-            </div>
+        <div class="ctrlHolder">
+            <label for="limit_client">{tmpl_var name='limit_client_txt'}</label>
+            <input name="limit_client" id="limit_client" value="{tmpl_var name='limit_client'}" size="10" maxlength="10" type="text" class="textInput formLengthLimit" />
         </div>
-        <div class="subsectiontoggle"><span class="showing"></span>{tmpl_var name='web_limits_txt'}<em class="showing"></em></div>
-        <div class="subsection">
+        <div class="subsectiontoggle"><span></span>{tmpl_var name='web_limits_txt'}<em></em></div>
+        <div class="subsection" style="display:none;">
             <div class="ctrlHolder">
                 <label for="default_webserver">{tmpl_var name='default_webserver_txt'}</label>
                 <select name="default_webserver" id="default_webserver" class="selectInput">

@@ -33,29 +33,26 @@
 
     <!-- begin: modulecontent -->
     <div class="panel panel_spamfilter_config">
-        <div class="subsectiontoggle"><span class="showing"></span>Firewall<em class="showing"></em></div>
-        <div class="subsection">
-            <span class="wf_oneField">
+            <div class="ctrlHolder">
                 <label for="ip_address" class="wf_preField">{tmpl_var name='ip_address_txt'}</label>
                 <input type="text" id="ip_address" name="ip_address" value="{tmpl_var name='ip_address'}" size="15" maxlength="255">
-            </span>
-            <span class="wf_oneField">
+            </div>
+            <div class="ctrlHolder">
                 <label for="netmask" class="wf_preField">{tmpl_var name='netmask_txt'}</label>
                 <input type="text" id="netmask" name="netmask" value="{tmpl_var name='netmask'}" size="15" maxlength="255">
-            </span>
-            <span class="wf_oneField">
+            </div>
+            <div class="ctrlHolder">
                 <label for="gateway" class="wf_preField">{tmpl_var name='gateway_txt'}</label>
                 <input type="text" id="gateway" name="gateway" value="{tmpl_var name='gateway'}" size="15" maxlength="255">
-            </span>
-            <span class="wf_oneField">
+            </div>
+            <div class="ctrlHolder">
                 <label for="hostname" class="wf_preField">{tmpl_var name='hostname_txt'}</label>
                 <input type="text" id="hostname" name="hostname" value="{tmpl_var name='hostname'}" size="40" maxlength="255">
-            </span>
-            <span class="wf_oneField">
+            </div>
+            <div class="ctrlHolder">
                 <label for="nameservers" class="wf_preField">{tmpl_var name='nameservers_txt'}</label>
                 <input type="text" id="nameservers" name="nameservers" value="{tmpl_var name='nameservers'}" size="40" maxlength="255">
-            </span>
-        </div>
+            </div>
 
         <input type="hidden" name="id" value="{tmpl_var name='id'}">
 

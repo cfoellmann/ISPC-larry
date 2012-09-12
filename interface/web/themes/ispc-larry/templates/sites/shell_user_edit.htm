@@ -32,62 +32,59 @@
 
     <!-- begin: modulecontent -->
     <div class="panel panel_shell_user">
-        <div class="subsectiontoggle"><span class="showing"></span><tmpl_var name="list_head_txt"><em class="showing"></em></div>
-        <div class="subsection">
-            <div class="ctrlHolder">
-                <tmpl_if name="edit_disabled">
+        <div class="ctrlHolder">
+            <tmpl_if name="edit_disabled">
+                <label for="parent_domain_id">{tmpl_var name='parent_domain_id_txt'}</label>
+                <select name="parent_domain_id" id="parent_domain_id" class="selectInput" disabled="disabled">
+                    {tmpl_var name='parent_domain_id'}
+                </select>
+                <input type="hidden" name="parent_domain_id" value="{tmpl_var name='parent_domain_id_value'}" />
+                <tmpl_else>
                     <label for="parent_domain_id">{tmpl_var name='parent_domain_id_txt'}</label>
-                    <select name="parent_domain_id" id="parent_domain_id" class="selectInput" disabled="disabled">
+                    <select name="parent_domain_id" id="parent_domain_id" class="selectInput">
                         {tmpl_var name='parent_domain_id'}
                     </select>
-                    <input type="hidden" name="parent_domain_id" value="{tmpl_var name='parent_domain_id_value'}" />
-                    <tmpl_else>
-                        <label for="parent_domain_id">{tmpl_var name='parent_domain_id_txt'}</label>
-                        <select name="parent_domain_id" id="parent_domain_id" class="selectInput">
-                            {tmpl_var name='parent_domain_id'}
-                        </select>
-                </tmpl_if>
-            </div>
-            <div class="ctrlHolder">
-                <label for="username">{tmpl_var name='username_txt'}</label>
-                <p class="prefix">{tmpl_var name='username_prefix'}</p>
-                <input name="username" id="username" value="{tmpl_var name='username'}" size="30" maxlength="255" type="text" class="textInput formLengthFourth"/>
-            </div>
-            <div class="ctrlHolder">
-                <label for="password">{tmpl_var name='password_txt'}</label>
-                <input name="password" id="password" value="{tmpl_var name='password'}" size="30" maxlength="255" type="password" class="textInput" onkeyup="pass_check(this.value);checkPassMatch('password','repeat_password');" />&nbsp;<a href="javascript:void(0);" onclick="generatePassword('password','repeat_password');">{tmpl_var name='generate_password_txt'}</a>
-            </div>
-            <div class="ctrlHolder">
-                <p class="label">{tmpl_var name='password_strength_txt'}</p>
-                <div id="passBar"></div>
-                <p class="formHint"><span id="passText">&nbsp;</span></p>
-                <br style="clear:both;" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="repeat_password">{tmpl_var name='repeat_password_txt'}</label>
-                <input name="repeat_password" id="repeat_password" value="" size="30" maxlength="100" type="password" class="textInput" onkeyup="checkPassMatch('password','repeat_password');" />
-                <div id="confirmpasswordError" style="display:none;" class="confirmpassworderror">{tmpl_var name='password_mismatch_txt'}</div>
-                <div id="confirmpasswordOK" style="display:none;" class="confirmpasswordok">{tmpl_var name='password_match_txt'}</div>
-            </div>
-            <div class="ctrlHolder">
-                <label for="chroot">{tmpl_var name='chroot_txt'}</label>
-                <select name="chroot" id="chroot" class="selectInput formLengthHalf">
-                    {tmpl_var name='chroot'}
-                </select>
-            </div>
-            <div class="ctrlHolder">
-                <label for="quota_size">{tmpl_var name='quota_size_txt'}</label>
-                <input name="quota_size" id="quota_size" value="{tmpl_var name='quota_size'}" size="7" maxlength="7" type="text" class="textInput formLengthLimit" />&nbsp;MB (-1 &Rightarrow; &infin;)
-            </div>
-            <div class="ctrlHolder">
-                <label for="ssh_rsa">{tmpl_var name='ssh_rsa_txt'}</label>
-                <textarea name="ssh_rsa" id="ssh_rsa" rows="10" cols="30">{tmpl_var name='ssh_rsa'}</textarea>
-            </div>
-            <div class="ctrlHolder">
-                <p class="label">{tmpl_var name='active_txt'}</p>
-                <div class="multiField">
-                    {tmpl_var name='active'}
-                </div>
+            </tmpl_if>
+        </div>
+        <div class="ctrlHolder">
+            <label for="username">{tmpl_var name='username_txt'}</label>
+            <p class="prefix">{tmpl_var name='username_prefix'}</p>
+            <input name="username" id="username" value="{tmpl_var name='username'}" size="30" maxlength="255" type="text" class="textInput formLengthFourth"/>
+        </div>
+        <div class="ctrlHolder">
+            <label for="password">{tmpl_var name='password_txt'}</label>
+            <input name="password" id="password" value="{tmpl_var name='password'}" size="30" maxlength="255" type="password" class="textInput" onkeyup="pass_check(this.value);checkPassMatch('password','repeat_password');" />&nbsp;<a href="javascript:void(0);" onclick="generatePassword('password','repeat_password');">{tmpl_var name='generate_password_txt'}</a>
+        </div>
+        <div class="ctrlHolder">
+            <p class="label">{tmpl_var name='password_strength_txt'}</p>
+            <div id="passBar"></div>
+            <p class="formHint"><span id="passText">&nbsp;</span></p>
+            <br style="clear:both;" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="repeat_password">{tmpl_var name='repeat_password_txt'}</label>
+            <input name="repeat_password" id="repeat_password" value="" size="30" maxlength="100" type="password" class="textInput" onkeyup="checkPassMatch('password','repeat_password');" />
+            <div id="confirmpasswordError" style="display:none;" class="confirmpassworderror">{tmpl_var name='password_mismatch_txt'}</div>
+            <div id="confirmpasswordOK" style="display:none;" class="confirmpasswordok">{tmpl_var name='password_match_txt'}</div>
+        </div>
+        <div class="ctrlHolder">
+            <label for="chroot">{tmpl_var name='chroot_txt'}</label>
+            <select name="chroot" id="chroot" class="selectInput formLengthHalf">
+                {tmpl_var name='chroot'}
+            </select>
+        </div>
+        <div class="ctrlHolder">
+            <label for="quota_size">{tmpl_var name='quota_size_txt'}</label>
+            <input name="quota_size" id="quota_size" value="{tmpl_var name='quota_size'}" size="7" maxlength="7" type="text" class="textInput formLengthLimit" />&nbsp;MB (-1 &Rightarrow; &infin;)
+        </div>
+        <div class="ctrlHolder">
+            <label for="ssh_rsa">{tmpl_var name='ssh_rsa_txt'}</label>
+            <textarea name="ssh_rsa" id="ssh_rsa" rows="10" cols="30">{tmpl_var name='ssh_rsa'}</textarea>
+        </div>
+        <div class="ctrlHolder">
+            <p class="label">{tmpl_var name='active_txt'}</p>
+            <div class="multiField">
+                {tmpl_var name='active'}
             </div>
         </div>
 

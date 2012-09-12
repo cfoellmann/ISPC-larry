@@ -16,7 +16,7 @@
 </div>
 
 <!-- begin: modulebody -->
-<div id="module-title"><h1><tmpl_var name="list_head_txt"></h1></div>
+<div id="module-title"><h1><tmpl_var name="form_hint"></h1></div>
 <div class="module-box boxlistcontent" id="modulecontainer">
 
     <!-- desc -->
@@ -32,110 +32,108 @@
 
     <!-- begin: modulecontent -->
     <div class="panel panel_server_config">
-        <div class="subsectiontoggle"><span class="showing"></span>Interface > Web<em class="showing"></em></div>
-        <div class="subsection">
-            <div class="ctrlHolder serverType">
-                <p class="label">{tmpl_var name='server_type_txt'}</p>           
-                <select name="server_type" id="server_type" class="selectInput">
-                    {tmpl_var name='server_type'}
-                </select>
-                <br style="clear: both;" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="website_basedir">{tmpl_var name='website_basedir_txt'}</label>
-                <input name="website_basedir" id="website_basedir" value="{tmpl_var name='website_basedir'}" size="40" maxlength="255" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="website_path">{tmpl_var name='website_path_txt'}</label>
-                <input name="website_path" id="website_path" value="{tmpl_var name='website_path'}" size="40" maxlength="255" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="website_symlinks">{tmpl_var name='website_symlinks_txt'}</label>
-                <input name="website_symlinks" id="website_symlinks" value="{tmpl_var name='website_symlinks'}" size="40" maxlength="255" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="website_symlinks_rel">{tmpl_var name='website_symlinks_rel_txt'}</label>
-                <div class="multiField">
-                    {tmpl_var name='website_symlinks_rel'}
-                </div>
-            </div>
-            <div class="ctrlHolder">
-                <label for="website_autoalias">{tmpl_var name='website_autoalias_txt'}</label>
-                <input name="website_autoalias" id="website_autoalias" value="{tmpl_var name='website_autoalias'}" size="40" maxlength="255" type="text" class="textInput" />&nbsp;{tmpl_var name='website_autoalias_note_txt'}
-            </div>
-            <div class="ctrlHolder apache">
-                <label for="vhost_conf_dir">{tmpl_var name='vhost_conf_dir_txt'}</label>
-                <input name="vhost_conf_dir" id="vhost_conf_dir" value="{tmpl_var name='vhost_conf_dir'}" size="40" maxlength="255" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder apache">
-                <label for="vhost_conf_enabled_dir">{tmpl_var name='vhost_conf_enabled_dir_txt'}</label>
-                <input name="vhost_conf_enabled_dir" id="vhost_conf_enabled_dir" value="{tmpl_var name='vhost_conf_enabled_dir'}" size="40" maxlength="255" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder nginx">
-                <label for="nginx_vhost_conf_dir">{tmpl_var name='nginx_vhost_conf_dir_txt'}</label>
-                <input name="nginx_vhost_conf_dir" id="nginx_vhost_conf_dir" value="{tmpl_var name='nginx_vhost_conf_dir'}" size="40" maxlength="255" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder nginx">
-                <label for="nginx_vhost_conf_enabled_dir">{tmpl_var name='nginx_vhost_conf_enabled_dir_txt'}</label>
-                <input name="nginx_vhost_conf_enabled_dir" id="nginx_vhost_conf_enabled_dir" value="{tmpl_var name='nginx_vhost_conf_enabled_dir'}" size="40" maxlength="255" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder">
-                <p class="label">{tmpl_var name='security_level_txt'}</p>
-                <div class="multiField">
-                    <select name="security_level" id="security_level" class="selectInput">
-                        {tmpl_var name='security_level'}
-                    </select>
-                </div>
-            </div>
-            <div class="ctrlHolder apache">
-                <p class="label">{tmpl_var name='check_apache_config_txt'}</p>
-                <div class="multiField">
-                    {tmpl_var name='check_apache_config'}
-                </div>
-            </div>
-            <div class="ctrlHolder apache">
-                <label for="user">{tmpl_var name='web_user_txt'}</label>
-                <input name="user" id="user" value="{tmpl_var name='user'}" size="40" maxlength="255" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder apache">
-                <label for="group">{tmpl_var name='web_group_txt'}</label>
-                <input name="group" id="group" value="{tmpl_var name='group'}" size="40" maxlength="255" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder nginx">
-                <label for="nginx_user">{tmpl_var name='nginx_user_txt'}</label>
-                <input name="nginx_user" id="nginx_user" value="{tmpl_var name='nginx_user'}" size="40" maxlength="255" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder nginx">
-                <label for="nginx_group">{tmpl_var name='nginx_group_txt'}</label>
-                <input name="nginx_group" id="nginx_group" value="{tmpl_var name='nginx_group'}" size="40" maxlength="255" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder nginx">
-                <label for="nginx_cgi_socket">{tmpl_var name='nginx_cgi_socket_txt'}</label>
-                <input name="nginx_cgi_socket" id="nginx_cgi_socket" value="{tmpl_var name='nginx_cgi_socket'}" size="40" maxlength="255" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder apache">
-                <label for="htaccess_allow_override">{tmpl_var name='htaccess_allow_override_txt'}</label>
-                <input name="htaccess_allow_override" id="htaccess_allow_override" value="{tmpl_var name='htaccess_allow_override'}" size="40" maxlength="255" type="text" class="textInput" />
-            </div>
-            <div class="ctrlHolder">
-                <p class="label">{tmpl_var name='enable_ip_wildcard_txt'}</p>
-                <div class="multiField">
-                    {tmpl_var name='enable_ip_wildcard'}
-                </div>
-            </div>
-            <div class="ctrlHolder">
-                <p class="label">{tmpl_var name='overtraffic_notify_admin_txt'}</p>
-                <div class="multiField">
-                    {tmpl_var name='overtraffic_notify_admin'}
-                </div>
-            </div>
-            <div class="ctrlHolder">
-                <p class="label">{tmpl_var name='overtraffic_notify_client_txt'}</p>
-                <div class="multiField">
-                    {tmpl_var name='overtraffic_notify_client'}
-                </div>
+        <div class="ctrlHolder serverType">
+            <p class="label">{tmpl_var name='server_type_txt'}</p>           
+            <select name="server_type" id="server_type" class="selectInput">
+                {tmpl_var name='server_type'}
+            </select>
+            <br style="clear: both;" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="website_basedir">{tmpl_var name='website_basedir_txt'}</label>
+            <input name="website_basedir" id="website_basedir" value="{tmpl_var name='website_basedir'}" size="40" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="website_path">{tmpl_var name='website_path_txt'}</label>
+            <input name="website_path" id="website_path" value="{tmpl_var name='website_path'}" size="40" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="website_symlinks">{tmpl_var name='website_symlinks_txt'}</label>
+            <input name="website_symlinks" id="website_symlinks" value="{tmpl_var name='website_symlinks'}" size="40" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="website_symlinks_rel">{tmpl_var name='website_symlinks_rel_txt'}</label>
+            <div class="multiField">
+                {tmpl_var name='website_symlinks_rel'}
             </div>
         </div>
+        <div class="ctrlHolder">
+            <label for="website_autoalias">{tmpl_var name='website_autoalias_txt'}</label>
+            <input name="website_autoalias" id="website_autoalias" value="{tmpl_var name='website_autoalias'}" size="40" maxlength="255" type="text" class="textInput" />&nbsp;{tmpl_var name='website_autoalias_note_txt'}
+        </div>
+        <div class="ctrlHolder apache">
+            <label for="vhost_conf_dir">{tmpl_var name='vhost_conf_dir_txt'}</label>
+            <input name="vhost_conf_dir" id="vhost_conf_dir" value="{tmpl_var name='vhost_conf_dir'}" size="40" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder apache">
+            <label for="vhost_conf_enabled_dir">{tmpl_var name='vhost_conf_enabled_dir_txt'}</label>
+            <input name="vhost_conf_enabled_dir" id="vhost_conf_enabled_dir" value="{tmpl_var name='vhost_conf_enabled_dir'}" size="40" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder nginx">
+            <label for="nginx_vhost_conf_dir">{tmpl_var name='nginx_vhost_conf_dir_txt'}</label>
+            <input name="nginx_vhost_conf_dir" id="nginx_vhost_conf_dir" value="{tmpl_var name='nginx_vhost_conf_dir'}" size="40" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder nginx">
+            <label for="nginx_vhost_conf_enabled_dir">{tmpl_var name='nginx_vhost_conf_enabled_dir_txt'}</label>
+            <input name="nginx_vhost_conf_enabled_dir" id="nginx_vhost_conf_enabled_dir" value="{tmpl_var name='nginx_vhost_conf_enabled_dir'}" size="40" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+            <p class="label">{tmpl_var name='security_level_txt'}</p>
+            <div class="multiField">
+                <select name="security_level" id="security_level" class="selectInput">
+                    {tmpl_var name='security_level'}
+                </select>
+            </div>
+        </div>
+        <div class="ctrlHolder apache">
+            <p class="label">{tmpl_var name='check_apache_config_txt'}</p>
+            <div class="multiField">
+                {tmpl_var name='check_apache_config'}
+            </div>
+        </div>
+        <div class="ctrlHolder apache">
+            <label for="user">{tmpl_var name='web_user_txt'}</label>
+            <input name="user" id="user" value="{tmpl_var name='user'}" size="40" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder apache">
+            <label for="group">{tmpl_var name='web_group_txt'}</label>
+            <input name="group" id="group" value="{tmpl_var name='group'}" size="40" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder nginx">
+            <label for="nginx_user">{tmpl_var name='nginx_user_txt'}</label>
+            <input name="nginx_user" id="nginx_user" value="{tmpl_var name='nginx_user'}" size="40" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder nginx">
+            <label for="nginx_group">{tmpl_var name='nginx_group_txt'}</label>
+            <input name="nginx_group" id="nginx_group" value="{tmpl_var name='nginx_group'}" size="40" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder nginx">
+            <label for="nginx_cgi_socket">{tmpl_var name='nginx_cgi_socket_txt'}</label>
+            <input name="nginx_cgi_socket" id="nginx_cgi_socket" value="{tmpl_var name='nginx_cgi_socket'}" size="40" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder apache">
+            <label for="htaccess_allow_override">{tmpl_var name='htaccess_allow_override_txt'}</label>
+            <input name="htaccess_allow_override" id="htaccess_allow_override" value="{tmpl_var name='htaccess_allow_override'}" size="40" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+            <p class="label">{tmpl_var name='enable_ip_wildcard_txt'}</p>
+            <div class="multiField">
+                {tmpl_var name='enable_ip_wildcard'}
+            </div>
+        </div>
+        <div class="ctrlHolder">
+            <p class="label">{tmpl_var name='overtraffic_notify_admin_txt'}</p>
+            <div class="multiField">
+                {tmpl_var name='overtraffic_notify_admin'}
+            </div>
+        </div>
+        <div class="ctrlHolder">
+            <p class="label">{tmpl_var name='overtraffic_notify_client_txt'}</p>
+            <div class="multiField">
+                {tmpl_var name='overtraffic_notify_client'}
+            </div>
+        </div>
+
         <div class="subsectiontoggle"><span></span>{tmpl_var name='ssl_settings_txt'}<em></em></div>
         <div class="subsection" style="display:none;">
             <div class="ctrlHolder">

@@ -16,7 +16,7 @@
 </div>
 
 <!-- begin: modulebody -->
-<div id="module-title"><h1><tmpl_var name="list_head_txt"></h1></div>
+<div id="module-title"><h1><tmpl_var name="form_hint"></h1></div>
 <div class="module-box boxlistcontent" id="modulecontainer">
     
     <!-- desc -->
@@ -32,84 +32,81 @@
 
     <!-- begin: modulecontent -->
     <div class="panel panel_server_config">
-        <div class="subsectiontoggle"><span class="showing"></span>Interface > Mail<em class="showing"></em></div>
-        <div class="subsection">
-            <div class="ctrlHolder">
-                <label for="module">{tmpl_var name='module_txt'}</label>
-                <select name="module" id="module" class="selectInput formLengthHalf">
-                    {tmpl_var name='module'}
+        <div class="ctrlHolder">
+            <label for="module">{tmpl_var name='module_txt'}</label>
+            <select name="module" id="module" class="selectInput formLengthHalf">
+                {tmpl_var name='module'}
+            </select>
+        </div>
+        <div class="ctrlHolder">
+            <label for="maildir_path">{tmpl_var name='maildir_path_txt'}</label>
+            <input name="maildir_path" id="maildir_path" value="{tmpl_var name='maildir_path'}" size="40" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="homedir_path">{tmpl_var name='homedir_path_txt'}</label>
+            <input name="homedir_path" id="homedir_path" value="{tmpl_var name='homedir_path'}" size="40" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+            <p class="label">{tmpl_var name='pop3_imap_daemon_txt'}</p>
+            <div class="multiField">
+                <select name="pop3_imap_daemon" id="pop3_imap_daemon" class="selectInput">
+                    {tmpl_var name='pop3_imap_daemon'}
                 </select>
             </div>
-            <div class="ctrlHolder">
-                <label for="maildir_path">{tmpl_var name='maildir_path_txt'}</label>
-                <input name="maildir_path" id="maildir_path" value="{tmpl_var name='maildir_path'}" size="40" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+            <p class="label">{tmpl_var name='mail_filter_syntax_txt'}</p>
+            <div class="multiField">
+                <select name="mail_filter_syntax" id="mail_filter_syntax" class="selectInput">
+                    {tmpl_var name='mail_filter_syntax'}
+                </select>
             </div>
-            <div class="ctrlHolder">
-                <label for="homedir_path">{tmpl_var name='homedir_path_txt'}</label>
-                <input name="homedir_path" id="homedir_path" value="{tmpl_var name='homedir_path'}" size="40" maxlength="255" type="text" class="textInput" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="mailuser_uid">{tmpl_var name='mailuser_uid_txt'}</label>
+            <input name="mailuser_uid" id="mailuser_uid" value="{tmpl_var name='mailuser_uid'}" size="10" maxlength="255" type="text" class="textInput formLengthHalf" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="mailuser_gid">{tmpl_var name='mailuser_gid_txt'}</label>
+            <input name="mailuser_gid" id="mailuser_gid" value="{tmpl_var name='mailuser_gid'}" size="10" maxlength="255" type="text" class="textInput formLengthHalf" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="mailuser_name">{tmpl_var name='mailuser_name_txt'}</label>
+            <input name="mailuser_name" id="mailuser_name" value="{tmpl_var name='mailuser_name'}" size="10" maxlength="255" type="text" class="textInput formLengthHalf" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="mailuser_group">{tmpl_var name='mailuser_group_txt'}</label>
+            <input name="mailuser_group" id="mailuser_group" value="{tmpl_var name='mailuser_group'}" size="10" maxlength="255" type="text" class="textInput formLengthHalf" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="relayhost">{tmpl_var name='relayhost_txt'}</label>
+            <input name="relayhost" id="relayhost" value="{tmpl_var name='relayhost'}" size="40" maxlength="255" type="text" class="textInput formLengthHalf" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="relayhost_user">{tmpl_var name='relayhost_user_txt'}</label>
+            <input name="relayhost_user" id="relayhost_user" value="{tmpl_var name='relayhost_user'}" size="40" maxlength="255" type="text" class="textInput formLengthHalf" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="relayhost_password">{tmpl_var name='relayhost_password_txt'}</label>
+            <input name="relayhost_password" id="relayhost_password" value="{tmpl_var name='relayhost_password'}" size="40" maxlength="255" type="password" class="textInput formLengthHalf" />
+        </div>
+        <div class="ctrlHolder">
+            <label for="mailbox_size_limit">{tmpl_var name='mailbox_size_limit_txt'}</label>
+            <input name="mailbox_size_limit" id="mailbox_size_limit" value="{tmpl_var name='mailbox_size_limit'}" size="10" maxlength="15" type="text" class="textInput formLengthLimit" />&nbsp;MB
+        </div>
+        <div class="ctrlHolder">
+            <label for="message_size_limit">{tmpl_var name='message_size_limit_txt'}</label>
+            <input name="message_size_limit" id="message_size_limit" value="{tmpl_var name='message_size_limit'}" size="10" maxlength="15" type="text" class="textInput formLengthLimit" />&nbsp;MB
+        </div>
+        <div class="ctrlHolder">
+            <p class="label">{tmpl_var name='mailbox_quota_stats_txt'}</p>
+            <div class="multiField">
+                {tmpl_var name='mailbox_quota_stats'}
             </div>
-            <div class="ctrlHolder">
-                <p class="label">{tmpl_var name='pop3_imap_daemon_txt'}</p>
-                <div class="multiField">
-                    <select name="pop3_imap_daemon" id="pop3_imap_daemon" class="selectInput">
-                        {tmpl_var name='pop3_imap_daemon'}
-                    </select>
-                </div>
-            </div>
-            <div class="ctrlHolder">
-                <p class="label">{tmpl_var name='mail_filter_syntax_txt'}</p>
-                <div class="multiField">
-                    <select name="mail_filter_syntax" id="mail_filter_syntax" class="selectInput">
-                        {tmpl_var name='mail_filter_syntax'}
-                    </select>
-                </div>
-            </div>
-            <div class="ctrlHolder">
-                <label for="mailuser_uid">{tmpl_var name='mailuser_uid_txt'}</label>
-                <input name="mailuser_uid" id="mailuser_uid" value="{tmpl_var name='mailuser_uid'}" size="10" maxlength="255" type="text" class="textInput formLengthHalf" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="mailuser_gid">{tmpl_var name='mailuser_gid_txt'}</label>
-                <input name="mailuser_gid" id="mailuser_gid" value="{tmpl_var name='mailuser_gid'}" size="10" maxlength="255" type="text" class="textInput formLengthHalf" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="mailuser_name">{tmpl_var name='mailuser_name_txt'}</label>
-                <input name="mailuser_name" id="mailuser_name" value="{tmpl_var name='mailuser_name'}" size="10" maxlength="255" type="text" class="textInput formLengthHalf" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="mailuser_group">{tmpl_var name='mailuser_group_txt'}</label>
-                <input name="mailuser_group" id="mailuser_group" value="{tmpl_var name='mailuser_group'}" size="10" maxlength="255" type="text" class="textInput formLengthHalf" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="relayhost">{tmpl_var name='relayhost_txt'}</label>
-                <input name="relayhost" id="relayhost" value="{tmpl_var name='relayhost'}" size="40" maxlength="255" type="text" class="textInput formLengthHalf" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="relayhost_user">{tmpl_var name='relayhost_user_txt'}</label>
-                <input name="relayhost_user" id="relayhost_user" value="{tmpl_var name='relayhost_user'}" size="40" maxlength="255" type="text" class="textInput formLengthHalf" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="relayhost_password">{tmpl_var name='relayhost_password_txt'}</label>
-                <input name="relayhost_password" id="relayhost_password" value="{tmpl_var name='relayhost_password'}" size="40" maxlength="255" type="password" class="textInput formLengthHalf" />
-            </div>
-            <div class="ctrlHolder">
-                <label for="mailbox_size_limit">{tmpl_var name='mailbox_size_limit_txt'}</label>
-                <input name="mailbox_size_limit" id="mailbox_size_limit" value="{tmpl_var name='mailbox_size_limit'}" size="10" maxlength="15" type="text" class="textInput formLengthLimit" />&nbsp;MB
-            </div>
-            <div class="ctrlHolder">
-                <label for="message_size_limit">{tmpl_var name='message_size_limit_txt'}</label>
-                <input name="message_size_limit" id="message_size_limit" value="{tmpl_var name='message_size_limit'}" size="10" maxlength="15" type="text" class="textInput formLengthLimit" />&nbsp;MB
-            </div>
-            <div class="ctrlHolder">
-                <p class="label">{tmpl_var name='mailbox_quota_stats_txt'}</p>
-                <div class="multiField">
-                    {tmpl_var name='mailbox_quota_stats'}
-                </div>
-            </div>
-            <div class="ctrlHolder">
-                <label for="realtime_blackhole_list">{tmpl_var name='realtime_blackhole_list_txt'}</label>
-                <input name="realtime_blackhole_list" id="realtime_blackhole_list" value="{tmpl_var name='realtime_blackhole_list'}" size="40" maxlength="255" type="text" class="textInput" />&nbsp;{tmpl_var name='realtime_blackhole_list_note_txt'}
-            </div>
+        </div>
+        <div class="ctrlHolder">
+            <label for="realtime_blackhole_list">{tmpl_var name='realtime_blackhole_list_txt'}</label>
+            <input name="realtime_blackhole_list" id="realtime_blackhole_list" value="{tmpl_var name='realtime_blackhole_list'}" size="40" maxlength="255" type="text" class="textInput" />&nbsp;{tmpl_var name='realtime_blackhole_list_note_txt'}
         </div>
 
         <input type="hidden" name="id" value="{tmpl_var name='id'}">
