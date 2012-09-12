@@ -25,7 +25,7 @@ Resources/Basis
 
 Main characteristics
 -----------------------
--   HTML5 (since v0.0.1)
+-   HTML5 (since v0.0.1) + HTML5-compatibility in IE7 + IE8
 -   Deployment via ISPC repository feature (http://ispc.foe-services.de) (planned)
 -   Look and feel of "Roundcube larry" in desktop browsers
 -   Responsive design OR native iPhone support as web-app (planned)
