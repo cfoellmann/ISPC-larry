@@ -9,7 +9,6 @@
 About
 --------
 The aim of this project is the conversion of the new Roundcube Webmail Skin 'Larry' into a theme for ISPConfig
-For discussions please go to http://www.howtoforge.com/forums/showthread.php?p=278359  
 
 Resources/Basis
 ------------------
