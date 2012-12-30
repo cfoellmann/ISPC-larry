@@ -1,10 +1,9 @@
 /*
  +--------------------------------------------------------------------------+
- | ISPC-larry :: Roundcube-Larry-like Theme                                 |
- | for ISPConfig 3.x                                                        |
+ | ISPC-larry :: Responsive-Frontend for ISPConfig 3.0.5.x                  |
  +--------------------------------------------------------------------------+  
  |                                                                          |                         
- | https://github.com/foe-services/ispc-larry                               |
+ | https://github.com/Foe-Services-Labs/ISPC-larry                          |
  | Version information can be found in the README.md file                   |
  |                                                                          |
  | The contents of the theme folder (interface/web/themes/ispc-larry) is    |

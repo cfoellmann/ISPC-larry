@@ -1,11 +1,10 @@
-# ISPC-larry :: Roundcube-Larry-like Theme for ISPConfig 3.x
+# ISPC-larry :: Responsive-Frontend for ISPConfig 3.0.5.x
 
-[Info@GitHub](https://github.com/foe-services/ispc-larry) | 
-[Discussion](http://www.howtoforge.com/forums/showthread.php?t=57106) |
-[Wiki](https://github.com/foe-services/ispc-larry/wiki) | 
-[Issue-Tracker](https://github.com/foe-services/ispc-larry/issues) | 
-[Timeline/Roadmap](https://github.com/foe-services/ispc-larry/issues/milestones) | 
-[Foe Services Open-Source-Projects](http://open-source.foe-services.de/)
+[Info@GitHub](https://github.com/Foe-Services-Labs/ISPC-larry) | 
+[Issues](https://github.com/Foe-Services-Labs/ISPC-larry/issues) | 
+[Wiki](https://github.com/Foe-Services-Labs/ISPC-larry/wiki) | 
+[Timeline/Roadmap](https://github.com/Foe-Services-Labs/ISPC-larry/issues/milestones) | 
+[Foe Services Labs](http://labs.foe-services.com/)
 
 About
 --------
@@ -14,19 +13,19 @@ For discussions please go to http://www.howtoforge.com/forums/showthread.php?p=2
 
 Resources/Basis
 ------------------
--   ispc-larry is a direct derivate of Roundcube Webmail Skin 'Larry' by FLINT / Büro für Gestaltung, Bern, Switzerland / http://bueroflint.com
--   ispc-larry is using structures, elements and code from the ISPConfig default-theme created by Martin Henne (red-ray.de) which is based on:
+-   ISPC-larry is a direct derivate of Roundcube Webmail Skin 'Larry' by FLINT / Büro für Gestaltung, Bern, Switzerland / http://bueroflint.com
+-   ISPC-larry is using structures, elements and code from the ISPConfig default-theme created by Martin Henne (red-ray.de) which is based on:
     -   Templates: http://www.yaml.de
     -   Web-Forms: http://www.sprawsm.com/uni-form/
     -   Icons: http://www.pinvoke.com and http://www.randomjabber.com/static/sizcons
     -   Know-How: http://particletree.com/features/rediscovering-the-button-element
--   ispc-larry-specific resources:
+-   ISPC-larry-specific resources:
     -   Icons: [Entypo](http://www.entypo.com/)
 
 Main characteristics
 -----------------------
 -   HTML5 (since v0.0.1) + HTML5-compatibility in IE7 + IE8
--   Deployment via ISPC repository feature (http://ispc.foe-services.de) (planned)
+-   Deployment via ISPC repository feature (planned)
 -   Look and feel of "Roundcube larry" in desktop browsers
 -   Responsive design OR native iPhone support as web-app (planned)
  
@@ -39,7 +38,7 @@ Limitations
 License
 --------------
 -   Theme files: [Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)](https://creativecommons.org/licenses/by-sa/3.0/)
--   Code: [BSD License] (https://github.com/foe-services/ispc-larry/blob/master/BSD-LICENSE)
+-   Code: [BSD License] (https://github.com/Foe-Services-Labs/ISPC-larry/blob/master/BSD-LICENSE)
   
 Developers
 -------------
