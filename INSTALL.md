@@ -1,4 +1,3 @@
-
 [System Requirements](https://github.com/foe-services/ispc-larry/wiki/System-Requirements)
 ------------------------------------------------------------------------------------------
 
@@ -6,5 +5,5 @@
 -   PHP >= 5.3 recommended.
 
 
-[Installation instructions](https://github.com/foe-services/ispc-larry/wiki/Installation)
+[Installation instructions](https://github.com/Foe-Services-Labs/ispc-larry/wiki/Installation)
 -------------------------
