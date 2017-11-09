@@ -1,10 +1,11 @@
+```
+The project is abandoned and archived.
+Use as a reference point only.
+```
+
 # ISPC-larry :: Responsive-Frontend for ISPConfig 3.0.5.x
 
-[Info@GitHub](https://github.com/Foe-Services-Labs/ISPC-larry) | 
-[Issues](https://github.com/Foe-Services-Labs/ISPC-larry/issues) | 
-[Wiki](https://github.com/Foe-Services-Labs/ISPC-larry/wiki) | 
-[Timeline/Roadmap](https://github.com/Foe-Services-Labs/ISPC-larry/issues/milestones) | 
-[Foe Services Labs](http://labs.foe-services.com/)
+[Info@GitHub](https://github.com/cfoellmann/ISPC-larry)
 
 About
 --------
@@ -37,10 +38,8 @@ Limitations
 License
 --------------
 -   Theme files: [Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)](https://creativecommons.org/licenses/by-sa/3.0/)
--   Code: [BSD License] (https://github.com/Foe-Services-Labs/ISPC-larry/blob/master/BSD-LICENSE)
+-   Code: [BSD License] (https://github.com/cfoellmann/ISPC-larry/blob/master/BSD-LICENSE)
   
 Developers
 -------------
 -   Christian Foellmann: [Github](https://github.com/cfoellmann) | [Web](http://www.foe-services.de) | [Mail](mailto:foellmann@foe-services.de)
-
-### Contributations are always welcome
